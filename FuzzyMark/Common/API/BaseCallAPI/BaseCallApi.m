@@ -10,7 +10,7 @@
 
 @interface BaseCallApi()
 
-@property (nonatomic, strong) NSMutableArray *arrayOfTasks;
+@property (nonatomic, strong) NSMutableArray *listTask;
 
 @end
 
@@ -24,33 +24,33 @@
       //  self.requestSerializer.timeoutInterval = kNetworkingTimeout;
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", nil];
         self.securityPolicy.allowInvalidCertificates = YES;
-        _arrayOfTasks = [NSMutableArray new];
+        self.listTask = [NSMutableArray new];
     }
     return self;
 }
 
 - (void)postDataWithPath:(NSString *)path
                 andParam:(NSDictionary*)param
-        showFailureAlert:(BOOL)failureAlert
-               withBlock:(void(^)(id))block
-           withFailBlock:(void(^)(id))failBlock {
+        isShowfailureAlert:(BOOL)isShowfailureAlert
+               withSuccessBlock:(void(^)(id))successBlock
+           withFailBlock:(void(^)(id))failureBlock {
     
    // __weak NSString *savePath = path;
-    NSDictionary *newParams = [self makeParamsWithDeviceInfo:param];
+    NSDictionary *newParams = [self createCommonParam:param];
     
     NSURLSessionDataTask *task = [self POST:path parameters:newParams progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        block ? block(responseObject) : 0;
+        successBlock ? successBlock(responseObject) : 0;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        failBlock ? failBlock(error) : nil;
+        failureBlock ? failureBlock(error) : nil;
     }];
     
-    [_arrayOfTasks addObject:task];
+    [self.listTask addObject:task];
 }
 
-- (NSDictionary *)makeParamsWithDeviceInfo:(NSDictionary *)params {
-    NSMutableDictionary *mutableParams = params.mutableCopy;
-    [mutableParams setObject:@"ios" forKey:@"os_type"];
-    return mutableParams;
+- (NSDictionary *)createCommonParam:(NSDictionary *)commonParam {
+    NSMutableDictionary *listParam = commonParam.mutableCopy;
+    [listParam setObject:@"" forKey:@""];
+    return listParam;
 }
 
 @end

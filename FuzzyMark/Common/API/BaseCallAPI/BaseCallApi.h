@@ -12,9 +12,10 @@
 @interface BaseCallApi : AFHTTPSessionManager
 
 - (instancetype)initWithBaseURL:(NSString *) baseUrl;
+
 - (void)postDataWithPath:(NSString *)path
                 andParam:(NSDictionary*)param
-        showFailureAlert:(BOOL)failureAlert
-               withBlock:(void(^)(id))block
-           withFailBlock:(void(^)(id))failBlock;
+      isShowfailureAlert:(BOOL)isShowfailureAlert
+   withSuccessBlock:(void(^)(id))successBlock
+           withFailBlock:(void(^)(id))failureBlock;
 @end

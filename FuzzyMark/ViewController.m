@@ -23,12 +23,12 @@
 
 - (void)testApi {
     BaseCallApi *http = [[BaseCallApi alloc] initWithBaseURL:@"https://devtools-ntt.herokuapp.com/api/MyViettel/"];
-    [http postDataWithPath:@"apiMediaOne/get-province" andParam:nil showFailureAlert:YES withBlock:^(id response) {
-        if (response) {
+    [http postDataWithPath:@"apiMediaOne/get-province" andParam:nil isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        if (responseData) {
             
         }
-    } withFailBlock:^(id failBlock) {
-        if (failBlock) {
+    } withFailBlock:^(id error) {
+        if (error) {
             
         }
     }];
