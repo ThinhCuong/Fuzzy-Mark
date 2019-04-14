@@ -26,16 +26,14 @@
 		5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910282263492A008BEA62 /* AFSecurityPolicy.m */; };
 		5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39103D226349F8008BEA62 /* BaseCallApi.m */; };
 		5C6BFADA225D668600A26400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAD9225D668600A26400 /* AppDelegate.m */; };
-		5C6BFADD225D668600A26400 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFADC225D668600A26400 /* ViewController.m */; };
-		5C6BFAE0225D668600A26400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFADE225D668600A26400 /* Main.storyboard */; };
 		5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE1225D668600A26400 /* FuzzyMark.xcdatamodeld */; };
 		5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE4225D668800A26400 /* Assets.xcassets */; };
 		5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */; };
 		5C6BFAEB225D668800A26400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAEA225D668800A26400 /* main.m */; };
 		5C6BFAF5225D668900A26400 /* FuzzyMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAF4225D668900A26400 /* FuzzyMarkTests.m */; };
 		5C6BFB00225D668900A26400 /* FuzzyMarkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */; };
-		5C8EC2A0226361A600C124CE /* FZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EC29E226361A600C124CE /* FZHomeViewController.m */; };
-		5C8EC2A1226361A600C124CE /* FZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8EC29F226361A600C124CE /* FZHomeViewController.xib */; };
+		5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AD2263664000C124CE /* FZHomeViewController.m */; };
+		5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,9 +94,6 @@
 		5C6BFAD5225D668600A26400 /* FuzzyMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAD8225D668600A26400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C6BFAD9225D668600A26400 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5C6BFADB225D668600A26400 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5C6BFADC225D668600A26400 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5C6BFADF225D668600A26400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C6BFAE2225D668600A26400 /* FuzzyMark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuzzyMark.xcdatamodel; sourceTree = "<group>"; };
 		5C6BFAE4225D668800A26400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6BFAE7225D668800A26400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,9 +105,9 @@
 		5C6BFAFB225D668900A26400 /* FuzzyMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzyMarkUITests.m; sourceTree = "<group>"; };
 		5C6BFB01225D668900A26400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C8EC29D226361A600C124CE /* FZHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeViewController.h; sourceTree = "<group>"; };
-		5C8EC29E226361A600C124CE /* FZHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeViewController.m; sourceTree = "<group>"; };
-		5C8EC29F226361A600C124CE /* FZHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHomeViewController.xib; sourceTree = "<group>"; };
+		5C8EC2AC2263664000C124CE /* FZHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeViewController.h; sourceTree = "<group>"; };
+		5C8EC2AD2263664000C124CE /* FZHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeViewController.m; sourceTree = "<group>"; };
+		5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,9 +246,6 @@
 				5C8EC29B2263614C00C124CE /* ViewController */,
 				5C6BFAD8225D668600A26400 /* AppDelegate.h */,
 				5C6BFAD9225D668600A26400 /* AppDelegate.m */,
-				5C6BFADB225D668600A26400 /* ViewController.h */,
-				5C6BFADC225D668600A26400 /* ViewController.m */,
-				5C6BFADE225D668600A26400 /* Main.storyboard */,
 				5C6BFAE4225D668800A26400 /* Assets.xcassets */,
 				5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */,
 				5C6BFAE9225D668800A26400 /* Info.plist */,
@@ -292,9 +284,9 @@
 		5C8EC29C2263616900C124CE /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5C8EC29D226361A600C124CE /* FZHomeViewController.h */,
-				5C8EC29E226361A600C124CE /* FZHomeViewController.m */,
-				5C8EC29F226361A600C124CE /* FZHomeViewController.xib */,
+				5C8EC2AC2263664000C124CE /* FZHomeViewController.h */,
+				5C8EC2AD2263664000C124CE /* FZHomeViewController.m */,
+				5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -405,9 +397,8 @@
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
-				5C8EC2A1226361A600C124CE /* FZHomeViewController.xib in Resources */,
+				5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */,
 				5C39102A2263492A008BEA62 /* LICENSE in Resources */,
-				5C6BFAE0225D668600A26400 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,13 +424,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
-				5C6BFADD225D668600A26400 /* ViewController.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
-				5C8EC2A0226361A600C124CE /* FZHomeViewController.m in Sources */,
+				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
@@ -488,14 +478,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5C6BFADE225D668600A26400 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5C6BFADF225D668600A26400 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
