@@ -34,6 +34,15 @@
 		5C6BFB00225D668900A26400 /* FuzzyMarkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */; };
 		5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AD2263664000C124CE /* FZHomeViewController.m */; };
 		5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */; };
+		5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9862882264CBE700545DCC /* FZHomeModel.m */; };
+		5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C98629A2264D7EB00545DCC /* HomeAssets.xcassets */; };
+		5C98629F2264D8FB00545DCC /* FZHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C98629D2264D8FB00545DCC /* FZHomeHeaderView.m */; };
+		5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C98629E2264D8FB00545DCC /* FZHomeHeaderView.xib */; };
+		5C9862A32264DC8100545DCC /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9862A22264DC8100545DCC /* CustomView.swift */; };
+		5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9862AB2264E45D00545DCC /* FZMenuHomeTableViewCell.m */; };
+		5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9862AC2264E45D00545DCC /* FZMenuHomeTableViewCell.xib */; };
+		5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */; };
+		5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +117,19 @@
 		5C8EC2AC2263664000C124CE /* FZHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeViewController.h; sourceTree = "<group>"; };
 		5C8EC2AD2263664000C124CE /* FZHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeViewController.m; sourceTree = "<group>"; };
 		5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHomeViewController.xib; sourceTree = "<group>"; };
+		5C9862872264CBE700545DCC /* FZHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeModel.h; sourceTree = "<group>"; };
+		5C9862882264CBE700545DCC /* FZHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeModel.m; sourceTree = "<group>"; };
+		5C98629A2264D7EB00545DCC /* HomeAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HomeAssets.xcassets; sourceTree = "<group>"; };
+		5C98629C2264D8FB00545DCC /* FZHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeHeaderView.h; sourceTree = "<group>"; };
+		5C98629D2264D8FB00545DCC /* FZHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeHeaderView.m; sourceTree = "<group>"; };
+		5C98629E2264D8FB00545DCC /* FZHomeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHomeHeaderView.xib; sourceTree = "<group>"; };
+		5C9862A22264DC8100545DCC /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		5C9862AA2264E45D00545DCC /* FZMenuHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZMenuHomeTableViewCell.h; sourceTree = "<group>"; };
+		5C9862AB2264E45D00545DCC /* FZMenuHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZMenuHomeTableViewCell.m; sourceTree = "<group>"; };
+		5C9862AC2264E45D00545DCC /* FZMenuHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeTableViewCell.xib; sourceTree = "<group>"; };
+		5C9862B02264E4BE00545DCC /* FZItemMenuHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemMenuHomeTableViewCell.h; sourceTree = "<group>"; };
+		5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemMenuHomeTableViewCell.m; sourceTree = "<group>"; };
+		5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemMenuHomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +160,7 @@
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5C9862A12264DC1900545DCC /* CustomeView */,
 				5C39100322634914008BEA62 /* API */,
 			);
 			path = Common;
@@ -243,7 +266,9 @@
 			isa = PBXGroup;
 			children = (
 				5C3910022263490B008BEA62 /* Common */,
+				5C98628A2264D45700545DCC /* Cell */,
 				5C8EC29B2263614C00C124CE /* ViewController */,
+				5C9862832264CB1E00545DCC /* Model */,
 				5C6BFAD8225D668600A26400 /* AppDelegate.h */,
 				5C6BFAD9225D668600A26400 /* AppDelegate.m */,
 				5C6BFAE4225D668800A26400 /* Assets.xcassets */,
@@ -287,6 +312,80 @@
 				5C8EC2AC2263664000C124CE /* FZHomeViewController.h */,
 				5C8EC2AD2263664000C124CE /* FZHomeViewController.m */,
 				5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */,
+				5C98629A2264D7EB00545DCC /* HomeAssets.xcassets */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5C9862832264CB1E00545DCC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5C9862872264CBE700545DCC /* FZHomeModel.h */,
+				5C9862882264CBE700545DCC /* FZHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5C98628A2264D45700545DCC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C9862A52264E38700545DCC /* FooterCell */,
+				5C98628B2264D46F00545DCC /* HeaderCell */,
+				5C9862A42264E35900545DCC /* Cell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5C98628B2264D46F00545DCC /* HeaderCell */ = {
+			isa = PBXGroup;
+			children = (
+				5C98628C2264D47E00545DCC /* Home */,
+			);
+			path = HeaderCell;
+			sourceTree = "<group>";
+		};
+		5C98628C2264D47E00545DCC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C98629C2264D8FB00545DCC /* FZHomeHeaderView.h */,
+				5C98629D2264D8FB00545DCC /* FZHomeHeaderView.m */,
+				5C98629E2264D8FB00545DCC /* FZHomeHeaderView.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5C9862A12264DC1900545DCC /* CustomeView */ = {
+			isa = PBXGroup;
+			children = (
+				5C9862A22264DC8100545DCC /* CustomView.swift */,
+			);
+			path = CustomeView;
+			sourceTree = "<group>";
+		};
+		5C9862A42264E35900545DCC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5C9862AF2264E49900545DCC /* Home */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		5C9862A52264E38700545DCC /* FooterCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FooterCell;
+			sourceTree = "<group>";
+		};
+		5C9862AF2264E49900545DCC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C9862AA2264E45D00545DCC /* FZMenuHomeTableViewCell.h */,
+				5C9862AB2264E45D00545DCC /* FZMenuHomeTableViewCell.m */,
+				5C9862AC2264E45D00545DCC /* FZMenuHomeTableViewCell.xib */,
+				5C9862B02264E4BE00545DCC /* FZItemMenuHomeTableViewCell.h */,
+				5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */,
+				5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -358,6 +457,7 @@
 				TargetAttributes = {
 					5C6BFAD4225D668600A26400 = {
 						CreatedOnToolsVersion = 10.2;
+						LastSwiftMigration = 1020;
 					};
 					5C6BFAEF225D668900A26400 = {
 						CreatedOnToolsVersion = 10.2;
@@ -394,9 +494,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
+				5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */,
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
+				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
+				5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */,
 				5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */,
 				5C39102A2263492A008BEA62 /* LICENSE in Resources */,
 			);
@@ -431,16 +535,21 @@
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,
+				5C9862A32264DC8100545DCC /* CustomView.swift in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
+				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
+				5C98629F2264D8FB00545DCC /* FZHomeHeaderView.m in Sources */,
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				5C6BFADA225D668600A26400 /* AppDelegate.m in Sources */,
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
+				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
 			);
@@ -605,6 +714,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -615,6 +725,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CuongNguyen.FuzzyMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -623,6 +735,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -633,6 +746,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = CuongNguyen.FuzzyMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -640,6 +754,7 @@
 		5C6BFB08225D668900A26400 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
@@ -659,6 +774,7 @@
 		5C6BFB09225D668900A26400 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
@@ -678,6 +794,7 @@
 		5C6BFB0B225D668900A26400 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
 				INFOPLIST_FILE = FuzzyMarkUITests/Info.plist;
@@ -696,6 +813,7 @@
 		5C6BFB0C225D668900A26400 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
 				INFOPLIST_FILE = FuzzyMarkUITests/Info.plist;
