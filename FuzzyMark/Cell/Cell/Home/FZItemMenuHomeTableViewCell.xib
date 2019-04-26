@@ -70,6 +70,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="itemMenuCollectionView" destination="8l6-wu-h7o" id="F09-xD-2gS"/>
+                <outlet property="menuCollectionView" destination="r8D-Xa-wm6" id="ShG-SA-QQb"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="141.62946428571428"/>
         </tableViewCell>
     </objects>

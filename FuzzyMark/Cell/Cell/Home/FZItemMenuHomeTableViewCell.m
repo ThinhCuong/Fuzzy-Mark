@@ -7,12 +7,20 @@
 //
 
 #import "FZItemMenuHomeTableViewCell.h"
+#import "FZMenuHomeCollectionViewCell.h"
+
+@interface FZItemMenuHomeTableViewCell()
+@property (strong, nonatomic) IBOutlet UICollectionView *menuCollectionView;
+@property (strong, nonatomic) IBOutlet UICollectionView *itemMenuCollectionView;
+
+@end
 
 @implementation FZItemMenuHomeTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self.menuCollectionView registerNib:[UINib nibWithNibName:@"FZMenuHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FZMenuHomeCollectionViewCell"];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
