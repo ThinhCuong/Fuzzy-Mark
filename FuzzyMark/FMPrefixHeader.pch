@@ -1,0 +1,18 @@
+//
+//  FMPrefixHeader.pch
+//  FuzzyMark
+//
+//  Created by Tu Tran on 4/14/19.
+//  Copyright © 2019 Tu Tran. All rights reserved.
+//
+
+#ifndef FMPrefixHeader_pch
+#define FMPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* FMPrefixHeader_pch */
+
+#import <UIKit/UIKit.h>
+#import "CommonFunction.h"

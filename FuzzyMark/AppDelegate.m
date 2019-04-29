@@ -2,12 +2,11 @@
 //  AppDelegate.m
 //  FuzzyMark
 //
-//  Created by Nguyen Cuong on 4/10/19.
-//  Copyright © 2019 Nguyen Cuong. All rights reserved.
+//  Created by Tu Tran on 4/11/19.
+//  Copyright © 2019 Tu Tran. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "FZHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,10 +18,61 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.homeViewController = [[FZHomeViewController alloc] initWithNibName:@"FZHomeViewController" bundle:nil];
-    self.window.rootViewController = self.homeViewController;
+    self.window.backgroundColor = UIColor.whiteColor;
+    [self gotoTabbarController];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)gotoTabbarController {
+    
+    [self initViewController];
+    
+    NSArray *listViewController = @[self.FMNaviHomeController, self.FMNaviSearchController, self.FMNaviCameraController, self.naviNotifiController, self.naviUserInforController];
+    
+    [self.tabbarController setViewControllers:listViewController];
+    
+    self.window.rootViewController = self.tabbarController;
+    
+}
+
+- (void)initViewController {
+    // init tabbar
+    self.tabbarController = [[FMTabBarController alloc] init];
+    
+    // init Home
+    self.homeViewController = [[FZHomeViewController alloc] init];
+    self.FMNaviHomeController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
+    UITabBarItem *tabbarItemHome = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_home_tb"] selectedImage:[UIImage imageNamed:@"ic_home_tb"]];
+    self.FMNaviHomeController.tabBarItem = tabbarItemHome;
+    
+    // init Search
+    self.FMSearchViewController = [[UIViewController alloc] init];
+    self.FMNaviSearchController = [[UINavigationController alloc] initWithRootViewController:self.FMSearchViewController];
+    UITabBarItem *tabbarItemSeach = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_search_selected_tb"] selectedImage:[UIImage imageNamed:@"ic_search_selected_tb"]];
+    self.FMNaviSearchController.tabBarItem = tabbarItemSeach;
+    
+    // init Camera
+    self.FMCameraViewController = [[UIViewController alloc] init];
+    self.FMNaviCameraController = [[UINavigationController alloc] initWithRootViewController:self.FMNaviCameraController];
+    UITabBarItem *tabbarItemCamera = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_camera_tb"] selectedImage:[UIImage imageNamed:@"ic_camera_tb"]];
+    self.FMNaviCameraController.tabBarItem = tabbarItemCamera;
+    
+    // init Notifi
+    self.notifiViewController = [[FMNotifiViewController alloc] initWithNibName:@"FMNotifiViewController" bundle:nil];
+    self.naviNotifiController = [[UINavigationController alloc] initWithRootViewController:self.notifiViewController];
+    UITabBarItem *tabbarItemNotifi = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_bell_tb"] selectedImage:[UIImage imageNamed:@"ic_bell_tb"]];
+    self.naviNotifiController.tabBarItem = tabbarItemNotifi;
+    
+    // init User
+    self.userInforViewController = [[FMUserInforViewController alloc] initWithNibName:@"FMUserInforViewController" bundle:nil];
+    self.naviUserInforController = [[UINavigationController alloc] initWithRootViewController:self.userInforViewController];
+    UITabBarItem *tabbarItemUserInfor = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_user_tb"] selectedImage:[UIImage imageNamed:@"ic_user_tb"]];
+    self.userInforViewController.tabBarItem = tabbarItemUserInfor;
+    
+    NSArray *listViewController = @[self.FMNaviHomeController, self.FMNaviSearchController, self.FMNaviCameraController, self.naviNotifiController, self.naviUserInforController];
+    
+    [self.tabbarController setViewControllers:listViewController];
 }
 
 
@@ -59,36 +109,28 @@
 
 @synthesize persistentContainer = _persistentContainer;
 
-- (NSPersistentContainer *)persistentContainer  API_AVAILABLE(ios(10.0)){
+- (NSPersistentContainer *)persistentContainer {
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
-            if (@available(iOS 10.0, *)) {
-                _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"FuzzyMark"];
-            } else {
-                // Fallback on earlier versions
-            }
-            if (@available(iOS 10.0, *)) {
-                [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
-                    if (error != nil) {
-                        // Replace this implementation with code to handle the error appropriately.
-                        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                        
-                        /*
-                         Typical reasons for an error here include:
-                         * The parent directory does not exist, cannot be created, or disallows writing.
-                         * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                         * The device is out of space.
-                         * The store could not be migrated to the current model version.
-                         Check the error message to determine what the actual problem was.
-                         */
-                        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
-                        abort();
-                    }
-                }];
-            } else {
-                // Fallback on earlier versions
-            }
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"FuzzyMark"];
+            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
+                if (error != nil) {
+                    // Replace this implementation with code to handle the error appropriately.
+                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                    
+                    /*
+                     Typical reasons for an error here include:
+                     * The parent directory does not exist, cannot be created, or disallows writing.
+                     * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+                     * The device is out of space.
+                     * The store could not be migrated to the current model version.
+                     Check the error message to determine what the actual problem was.
+                    */
+                    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
+                    abort();
+                }
+            }];
         }
     }
     

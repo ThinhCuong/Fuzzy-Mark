@@ -7,6 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3182276E8F300DF7173 /* AppDelegate.m */; };
+		4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */; };
+		4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */; };
+		4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3662276E9A700DF7173 /* FMMenuTabbleViewCell.xib */; };
+		4F50F3912276E9A700DF7173 /* FMStackViewShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3692276E9A700DF7173 /* FMStackViewShadow.m */; };
+		4F50F3922276E9A700DF7173 /* FMUserInforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */; };
+		4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */; };
+		4F50F3942276E9A700DF7173 /* FMUserInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F36D2276E9A700DF7173 /* FMUserInforViewController.xib */; };
+		4F50F3972276E9A700DF7173 /* FMNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3742276E9A700DF7173 /* FMNewsViewController.m */; };
+		4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3752276E9A700DF7173 /* FMNewsViewController.xib */; };
+		4F50F3992276E9A700DF7173 /* FMSecondsNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3782276E9A700DF7173 /* FMSecondsNewsTableViewCell.m */; };
+		4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3792276E9A700DF7173 /* FMFirstNewsTableViewCell.m */; };
+		4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F37B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib */; };
+		4F50F39C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F37C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib */; };
+		4F50F39D2276E9A700DF7173 /* FMNewsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F37F2276E9A700DF7173 /* FMNewsCollectionViewCell.m */; };
+		4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3802276E9A700DF7173 /* FMNewsCollectionViewCell.xib */; };
+		4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3822276E9A700DF7173 /* FMNotifiViewController.xib */; };
+		4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3832276E9A700DF7173 /* FMNotifiViewController.m */; };
+		4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */; };
+		4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */; };
+		4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F38A2276E9A700DF7173 /* FMMiddleButton.m */; };
+		4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F38D2276E9A700DF7173 /* FMTabBarController.m */; };
+		4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3A62276EA5B00DF7173 /* CommonFunction.m */; };
+		4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3AA2276EB0800DF7173 /* UserInfor.xcassets */; };
+		4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3F52276EDBC00DF7173 /* Muli-ExtraLight.ttf */; };
+		4F50F4012276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3F62276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf */; };
+		4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3F72276EDBC00DF7173 /* Muli-BoldItalic.ttf */; };
+		4F50F4032276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3F82276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf */; };
+		4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3F92276EDBC00DF7173 /* Muli-Bold.ttf */; };
+		4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FA2276EDBC00DF7173 /* Muli-Italic.ttf */; };
+		4F50F4062276EDBD00DF7173 /* Muli-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FB2276EDBC00DF7173 /* Muli-SemiBold.ttf */; };
+		4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FC2276EDBC00DF7173 /* Muli-Light.ttf */; };
+		4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FD2276EDBC00DF7173 /* Muli.ttf */; };
+		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
+		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
 		5C39102A2263492A008BEA62 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910052263492A008BEA62 /* LICENSE */; };
 		5C39102B2263492A008BEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910062263492A008BEA62 /* README.md */; };
 		5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */; };
@@ -25,7 +60,6 @@
 		5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910272263492A008BEA62 /* AFNetworkReachabilityManager.m */; };
 		5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910282263492A008BEA62 /* AFSecurityPolicy.m */; };
 		5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39103D226349F8008BEA62 /* BaseCallApi.m */; };
-		5C6BFADA225D668600A26400 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAD9225D668600A26400 /* AppDelegate.m */; };
 		5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE1225D668600A26400 /* FuzzyMark.xcdatamodeld */; };
 		5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE4225D668800A26400 /* Assets.xcassets */; };
 		5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */; };
@@ -67,6 +101,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F50F3172276E8F300DF7173 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F50F3182276E8F300DF7173 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMUserInforViewController.m; sourceTree = "<group>"; };
+		4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMUserInforTableViewCell.m; sourceTree = "<group>"; };
+		4F50F3652276E9A700DF7173 /* FMMenuTabbleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMenuTabbleViewCell.h; sourceTree = "<group>"; };
+		4F50F3662276E9A700DF7173 /* FMMenuTabbleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMMenuTabbleViewCell.xib; sourceTree = "<group>"; };
+		4F50F3672276E9A700DF7173 /* FMUserInforTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMUserInforTableViewCell.h; sourceTree = "<group>"; };
+		4F50F3692276E9A700DF7173 /* FMStackViewShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStackViewShadow.m; sourceTree = "<group>"; };
+		4F50F36A2276E9A700DF7173 /* FMStackViewShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStackViewShadow.h; sourceTree = "<group>"; };
+		4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMUserInforTableViewCell.xib; sourceTree = "<group>"; };
+		4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMenuTabbleViewCell.m; sourceTree = "<group>"; };
+		4F50F36D2276E9A700DF7173 /* FMUserInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMUserInforViewController.xib; sourceTree = "<group>"; };
+		4F50F3712276E9A700DF7173 /* FMUserInforViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMUserInforViewController.h; sourceTree = "<group>"; };
+		4F50F3742276E9A700DF7173 /* FMNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNewsViewController.m; sourceTree = "<group>"; };
+		4F50F3752276E9A700DF7173 /* FMNewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMNewsViewController.xib; sourceTree = "<group>"; };
+		4F50F3762276E9A700DF7173 /* FMNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNewsViewController.h; sourceTree = "<group>"; };
+		4F50F3782276E9A700DF7173 /* FMSecondsNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMSecondsNewsTableViewCell.m; sourceTree = "<group>"; };
+		4F50F3792276E9A700DF7173 /* FMFirstNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMFirstNewsTableViewCell.m; sourceTree = "<group>"; };
+		4F50F37A2276E9A700DF7173 /* FMNewsCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNewsCollectionViewCell.h; sourceTree = "<group>"; };
+		4F50F37B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMSecondsNewsTableViewCell.xib; sourceTree = "<group>"; };
+		4F50F37C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMFirstNewsTableViewCell.xib; sourceTree = "<group>"; };
+		4F50F37D2276E9A700DF7173 /* FMFirstNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMFirstNewsTableViewCell.h; sourceTree = "<group>"; };
+		4F50F37E2276E9A700DF7173 /* FMSecondsNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMSecondsNewsTableViewCell.h; sourceTree = "<group>"; };
+		4F50F37F2276E9A700DF7173 /* FMNewsCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNewsCollectionViewCell.m; sourceTree = "<group>"; };
+		4F50F3802276E9A700DF7173 /* FMNewsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMNewsCollectionViewCell.xib; sourceTree = "<group>"; };
+		4F50F3822276E9A700DF7173 /* FMNotifiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMNotifiViewController.xib; sourceTree = "<group>"; };
+		4F50F3832276E9A700DF7173 /* FMNotifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNotifiViewController.m; sourceTree = "<group>"; };
+		4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMNotifiTableViewCell.xib; sourceTree = "<group>"; };
+		4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNotifiTableViewCell.m; sourceTree = "<group>"; };
+		4F50F3872276E9A700DF7173 /* FMNotifiTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNotifiTableViewCell.h; sourceTree = "<group>"; };
+		4F50F3882276E9A700DF7173 /* FMNotifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNotifiViewController.h; sourceTree = "<group>"; };
+		4F50F38A2276E9A700DF7173 /* FMMiddleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMiddleButton.m; sourceTree = "<group>"; };
+		4F50F38B2276E9A700DF7173 /* FMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMTabBarController.h; sourceTree = "<group>"; };
+		4F50F38C2276E9A700DF7173 /* FMMiddleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMiddleButton.h; sourceTree = "<group>"; };
+		4F50F38D2276E9A700DF7173 /* FMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMTabBarController.m; sourceTree = "<group>"; };
+		4F50F3A62276EA5B00DF7173 /* CommonFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonFunction.m; sourceTree = "<group>"; };
+		4F50F3A72276EA5B00DF7173 /* CommonFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonFunction.h; sourceTree = "<group>"; };
+		4F50F3AA2276EB0800DF7173 /* UserInfor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UserInfor.xcassets; sourceTree = "<group>"; };
+		4F50F3F52276EDBC00DF7173 /* Muli-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4F50F3F62276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4F50F3F72276EDBC00DF7173 /* Muli-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4F50F3F82276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Semi-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4F50F3F92276EDBC00DF7173 /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
+		4F50F3FA2276EDBC00DF7173 /* Muli-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Italic.ttf"; sourceTree = "<group>"; };
+		4F50F3FB2276EDBC00DF7173 /* Muli-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-SemiBold.ttf"; sourceTree = "<group>"; };
+		4F50F3FC2276EDBC00DF7173 /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
+		4F50F3FD2276EDBC00DF7173 /* Muli.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Muli.ttf; sourceTree = "<group>"; };
+		4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
+		4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
+		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
 		5C3910052263492A008BEA62 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5C3910062263492A008BEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -105,8 +189,6 @@
 		5C39103C226349F8008BEA62 /* BaseCallApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCallApi.h; sourceTree = "<group>"; };
 		5C39103D226349F8008BEA62 /* BaseCallApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCallApi.m; sourceTree = "<group>"; };
 		5C6BFAD5225D668600A26400 /* FuzzyMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C6BFAD8225D668600A26400 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5C6BFAD9225D668600A26400 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5C6BFAE2225D668600A26400 /* FuzzyMark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuzzyMark.xcdatamodel; sourceTree = "<group>"; };
 		5C6BFAE4225D668800A26400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C6BFAE7225D668800A26400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,9 +249,126 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F50F3602276E9A700DF7173 /* UserInfor */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3712276E9A700DF7173 /* FMUserInforViewController.h */,
+				4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */,
+				4F50F36D2276E9A700DF7173 /* FMUserInforViewController.xib */,
+				4F50F3AA2276EB0800DF7173 /* UserInfor.xcassets */,
+			);
+			path = UserInfor;
+			sourceTree = "<group>";
+		};
+		4F50F3732276E9A700DF7173 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3762276E9A700DF7173 /* FMNewsViewController.h */,
+				4F50F3742276E9A700DF7173 /* FMNewsViewController.m */,
+				4F50F3752276E9A700DF7173 /* FMNewsViewController.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		4F50F3812276E9A700DF7173 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3882276E9A700DF7173 /* FMNotifiViewController.h */,
+				4F50F3832276E9A700DF7173 /* FMNotifiViewController.m */,
+				4F50F3822276E9A700DF7173 /* FMNotifiViewController.xib */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4F50F3892276E9A700DF7173 /* CustomTabbar */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F38C2276E9A700DF7173 /* FMMiddleButton.h */,
+				4F50F38A2276E9A700DF7173 /* FMMiddleButton.m */,
+				4F50F38B2276E9A700DF7173 /* FMTabBarController.h */,
+				4F50F38D2276E9A700DF7173 /* FMTabBarController.m */,
+			);
+			path = CustomTabbar;
+			sourceTree = "<group>";
+		};
+		4F50F3A52276EA5B00DF7173 /* CommonFunction */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3A62276EA5B00DF7173 /* CommonFunction.m */,
+				4F50F3A72276EA5B00DF7173 /* CommonFunction.h */,
+			);
+			path = CommonFunction;
+			sourceTree = "<group>";
+		};
+		4F50F3A92276EA9400DF7173 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3782276E9A700DF7173 /* FMSecondsNewsTableViewCell.m */,
+				4F50F3792276E9A700DF7173 /* FMFirstNewsTableViewCell.m */,
+				4F50F37A2276E9A700DF7173 /* FMNewsCollectionViewCell.h */,
+				4F50F37B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib */,
+				4F50F37C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib */,
+				4F50F37D2276E9A700DF7173 /* FMFirstNewsTableViewCell.h */,
+				4F50F37E2276E9A700DF7173 /* FMSecondsNewsTableViewCell.h */,
+				4F50F37F2276E9A700DF7173 /* FMNewsCollectionViewCell.m */,
+				4F50F3802276E9A700DF7173 /* FMNewsCollectionViewCell.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		4F50F3F12276EBE000DF7173 /* UserInfor */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */,
+				4F50F3652276E9A700DF7173 /* FMMenuTabbleViewCell.h */,
+				4F50F3662276E9A700DF7173 /* FMMenuTabbleViewCell.xib */,
+				4F50F3672276E9A700DF7173 /* FMUserInforTableViewCell.h */,
+				4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */,
+				4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */,
+			);
+			path = UserInfor;
+			sourceTree = "<group>";
+		};
+		4F50F3F22276EC3200DF7173 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */,
+				4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */,
+				4F50F3872276E9A700DF7173 /* FMNotifiTableViewCell.h */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		4F50F3F32276EDBC00DF7173 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3F42276EDBC00DF7173 /* SystemThemes */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		4F50F3F42276EDBC00DF7173 /* SystemThemes */ = {
+			isa = PBXGroup;
+			children = (
+				4F50F3F52276EDBC00DF7173 /* Muli-ExtraLight.ttf */,
+				4F50F3F62276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf */,
+				4F50F3F72276EDBC00DF7173 /* Muli-BoldItalic.ttf */,
+				4F50F3F82276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf */,
+				4F50F3F92276EDBC00DF7173 /* Muli-Bold.ttf */,
+				4F50F3FA2276EDBC00DF7173 /* Muli-Italic.ttf */,
+				4F50F3FB2276EDBC00DF7173 /* Muli-SemiBold.ttf */,
+				4F50F3FC2276EDBC00DF7173 /* Muli-Light.ttf */,
+				4F50F3FD2276EDBC00DF7173 /* Muli.ttf */,
+				4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */,
+				4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */,
+			);
+			path = SystemThemes;
+			sourceTree = "<group>";
+		};
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4F50F3A52276EA5B00DF7173 /* CommonFunction */,
 				5C9862A12264DC1900545DCC /* CustomeView */,
 				5C39100322634914008BEA62 /* API */,
 			);
@@ -275,17 +474,19 @@
 		5C6BFAD7225D668600A26400 /* FuzzyMark */ = {
 			isa = PBXGroup;
 			children = (
+				4F50F3F32276EDBC00DF7173 /* Themes */,
 				5C3910022263490B008BEA62 /* Common */,
 				5C98628A2264D45700545DCC /* Cell */,
 				5C8EC29B2263614C00C124CE /* ViewController */,
 				5C9862832264CB1E00545DCC /* Model */,
-				5C6BFAD8225D668600A26400 /* AppDelegate.h */,
-				5C6BFAD9225D668600A26400 /* AppDelegate.m */,
 				5C6BFAE4225D668800A26400 /* Assets.xcassets */,
+				4F50F3172276E8F300DF7173 /* AppDelegate.h */,
+				4F50F3182276E8F300DF7173 /* AppDelegate.m */,
 				5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */,
 				5C6BFAE9225D668800A26400 /* Info.plist */,
 				5C6BFAEA225D668800A26400 /* main.m */,
 				5C6BFAE1225D668600A26400 /* FuzzyMark.xcdatamodeld */,
+				4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */,
 			);
 			path = FuzzyMark;
 			sourceTree = "<group>";
@@ -311,6 +512,10 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4F50F3892276E9A700DF7173 /* CustomTabbar */,
+				4F50F3732276E9A700DF7173 /* News */,
+				4F50F3812276E9A700DF7173 /* Notification */,
+				4F50F3602276E9A700DF7173 /* UserInfor */,
 				5C8EC29C2263616900C124CE /* Home */,
 			);
 			path = ViewController;
@@ -367,6 +572,8 @@
 		5C9862A12264DC1900545DCC /* CustomeView */ = {
 			isa = PBXGroup;
 			children = (
+				4F50F3692276E9A700DF7173 /* FMStackViewShadow.m */,
+				4F50F36A2276E9A700DF7173 /* FMStackViewShadow.h */,
 				5C9862A22264DC8100545DCC /* CustomView.swift */,
 			);
 			path = CustomeView;
@@ -375,6 +582,9 @@
 		5C9862A42264E35900545DCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4F50F3F22276EC3200DF7173 /* Notification */,
+				4F50F3F12276EBE000DF7173 /* UserInfor */,
+				4F50F3A92276EA9400DF7173 /* News */,
 				5C9862AF2264E49900545DCC /* Home */,
 			);
 			path = Cell;
@@ -510,13 +720,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F50F39C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib in Resources */,
+				4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */,
+				4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */,
+				4F50F4032276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf in Resources */,
+				4F50F4062276EDBD00DF7173 /* Muli-SemiBold.ttf in Resources */,
+				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
+				4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */,
 				5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */,
+				4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */,
+				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
+				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
+				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
 				5CF618532268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib in Resources */,
+				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
+				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
+				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
+				4F50F4012276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf in Resources */,
 				5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */,
+				4F50F3922276E9A700DF7173 /* FMUserInforTableViewCell.xib in Resources */,
+				4F50F3942276E9A700DF7173 /* FMUserInforViewController.xib in Resources */,
+				4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */,
+				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
+				4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */,
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
+				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
 				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
 				5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */,
 				5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */,
@@ -546,28 +777,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
+				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
+				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
+				4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */,
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
+				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
+				4F50F3912276E9A700DF7173 /* FMStackViewShadow.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
+				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
 				5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */,
+				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
+				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
+				4F50F3992276E9A700DF7173 /* FMSecondsNewsTableViewCell.m in Sources */,
+				4F50F39D2276E9A700DF7173 /* FMNewsCollectionViewCell.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,
 				5C9862A32264DC8100545DCC /* CustomView.swift in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
+				4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
+				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
 				5C98629F2264D8FB00545DCC /* FZHomeHeaderView.m in Sources */,
+				4F50F3972276E9A700DF7173 /* FMNewsViewController.m in Sources */,
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				5C6BFADA225D668600A26400 /* AppDelegate.m in Sources */,
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
+				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
@@ -737,6 +981,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -758,6 +1004,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9X92A5RB95;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
