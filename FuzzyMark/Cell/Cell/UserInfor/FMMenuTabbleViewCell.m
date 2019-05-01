@@ -8,17 +8,23 @@
 
 #import "FMMenuTabbleViewCell.h"
 
+@interface FMMenuTabbleViewCell ()
+@property (weak, nonatomic) IBOutlet UIView *bottomLineView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgIcon;
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
+
+@end
 @implementation FMMenuTabbleViewCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
+- (void)setHideBotomLine:(BOOL)hideBotomLine {
+    _hideBotomLine = hideBotomLine;
+    self.bottomLineView.hidden = hideBotomLine;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)binDataWith:(FMCellBlockObject *) model {
+    self.imgIcon.image = model.image;
+    self.lblTitle.text = model.title;
+    self.typeBlock = model.typeBlock;
 }
 
 @end

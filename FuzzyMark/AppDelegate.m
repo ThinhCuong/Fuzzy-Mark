@@ -28,7 +28,7 @@
     
     [self initViewController];
     
-    NSArray *listViewController = @[self.FMNaviHomeController, self.FMNaviSearchController, self.FMNaviCameraController, self.naviNotifiController, self.naviUserInforController];
+    NSArray *listViewController = @[self.naviHomeController, self.FMNaviSearchController, self.FMNaviCameraController, self.naviNotifiController, self.naviUserInforController];
     
     [self.tabbarController setViewControllers:listViewController];
     
@@ -42,9 +42,10 @@
     
     // init Home
     self.homeViewController = [[FZHomeViewController alloc] init];
-    self.FMNaviHomeController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
+    self.naviHomeController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     UITabBarItem *tabbarItemHome = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_home_tb"] selectedImage:[UIImage imageNamed:@"ic_home_tb"]];
-    self.FMNaviHomeController.tabBarItem = tabbarItemHome;
+    self.naviHomeController.tabBarItem = tabbarItemHome;
+    self.naviHomeController.delegate = self;
     
     // init Search
     self.FMSearchViewController = [[UIViewController alloc] init];
@@ -63,16 +64,14 @@
     self.naviNotifiController = [[UINavigationController alloc] initWithRootViewController:self.notifiViewController];
     UITabBarItem *tabbarItemNotifi = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_bell_tb"] selectedImage:[UIImage imageNamed:@"ic_bell_tb"]];
     self.naviNotifiController.tabBarItem = tabbarItemNotifi;
+    self.naviNotifiController.delegate = self;
     
     // init User
     self.userInforViewController = [[FMUserInforViewController alloc] initWithNibName:@"FMUserInforViewController" bundle:nil];
     self.naviUserInforController = [[UINavigationController alloc] initWithRootViewController:self.userInforViewController];
     UITabBarItem *tabbarItemUserInfor = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_user_tb"] selectedImage:[UIImage imageNamed:@"ic_user_tb"]];
-    self.userInforViewController.tabBarItem = tabbarItemUserInfor;
-    
-    NSArray *listViewController = @[self.FMNaviHomeController, self.FMNaviSearchController, self.FMNaviCameraController, self.naviNotifiController, self.naviUserInforController];
-    
-    [self.tabbarController setViewControllers:listViewController];
+    self.naviUserInforController.tabBarItem = tabbarItemUserInfor;
+    self.naviUserInforController.delegate = self;
 }
 
 
@@ -135,6 +134,16 @@
     }
     
     return _persistentContainer;
+}
+
+#pragma mark - UINavigationBarDelegate
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if([viewController isKindOfClass: FMBaseViewController.class]) {
+        FMBaseViewController *vc = (FMBaseViewController *) viewController;
+        [navigationController setNavigationBarHidden:vc.isHideNavigationBar];
+    } else {
+        return;
+    }
 }
 
 #pragma mark - Core Data Saving support

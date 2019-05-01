@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isHideNavigationBar = YES;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     self.dataModel = [[FZHomeModel alloc] init];

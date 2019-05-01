@@ -24,6 +24,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="51.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdO-M2-9Ti">
+                        <rect key="frame" x="16" y="51" width="288" height="0.5"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="fke-EJ-Jmc"/>
+                        </constraints>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="uZz-rI-6wo">
                         <rect key="frame" x="26" y="16" width="20" height="20"/>
                     </imageView>
@@ -33,26 +40,24 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Fl-sS-fIk" userLabel="line">
-                        <rect key="frame" x="16" y="51" width="288" height="0.5"/>
-                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="Mjk-Sy-3Xm"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="63q-hl-Gyh"/>
-                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="XdO-M2-9Ti" secondAttribute="bottom" id="FRF-KV-6aL"/>
                     <constraint firstItem="tU3-gu-A4u" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="LPb-8u-2JM"/>
-                    <constraint firstAttribute="bottom" secondItem="5Fl-sS-fIk" secondAttribute="bottom" id="WMe-uu-esN"/>
                     <constraint firstItem="uZz-rI-6wo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Wo8-X1-lL5"/>
                     <constraint firstItem="tU3-gu-A4u" firstAttribute="leading" secondItem="uZz-rI-6wo" secondAttribute="trailing" constant="30" id="Xjf-Ya-vYc"/>
                     <constraint firstItem="uZz-rI-6wo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="fNU-fS-M8x"/>
-                    <constraint firstItem="5Fl-sS-fIk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qbM-HA-1Tf"/>
-                    <constraint firstAttribute="trailing" secondItem="5Fl-sS-fIk" secondAttribute="trailing" constant="16" id="qtX-NP-qfd"/>
+                    <constraint firstAttribute="trailing" secondItem="XdO-M2-9Ti" secondAttribute="trailing" constant="16" id="hFN-NE-Vvj"/>
+                    <constraint firstItem="XdO-M2-9Ti" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zh5-bV-BEh"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+            <connections>
+                <outlet property="bottomLineView" destination="XdO-M2-9Ti" id="ik8-x9-8de"/>
+                <outlet property="imgIcon" destination="uZz-rI-6wo" id="Zfh-0x-OiG"/>
+                <outlet property="lblTitle" destination="tU3-gu-A4u" id="Ybp-vu-bUR"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="118.86160714285714"/>
         </tableViewCell>
     </objects>

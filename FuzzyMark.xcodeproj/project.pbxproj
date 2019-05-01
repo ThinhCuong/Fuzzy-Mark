@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F00C81E227A06FF0073B583 /* FMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C81D227A06FF0073B583 /* FMBaseViewController.m */; };
+		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
+		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
 		4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3182276E8F300DF7173 /* AppDelegate.m */; };
 		4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */; };
 		4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */; };
 		4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3662276E9A700DF7173 /* FMMenuTabbleViewCell.xib */; };
-		4F50F3912276E9A700DF7173 /* FMStackViewShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3692276E9A700DF7173 /* FMStackViewShadow.m */; };
+		4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3692276E9A700DF7173 /* FMViewShadow.m */; };
 		4F50F3922276E9A700DF7173 /* FMUserInforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */; };
 		4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */; };
 		4F50F3942276E9A700DF7173 /* FMUserInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F36D2276E9A700DF7173 /* FMUserInforViewController.xib */; };
@@ -101,6 +104,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F00C81C227A06FF0073B583 /* FMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseViewController.h; sourceTree = "<group>"; };
+		4F00C81D227A06FF0073B583 /* FMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseViewController.m; sourceTree = "<group>"; };
+		4F00C81F227A246C0073B583 /* FMUserInforModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUserInforModel.h; sourceTree = "<group>"; };
+		4F00C820227A246C0073B583 /* FMUserInforModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUserInforModel.m; sourceTree = "<group>"; };
+		4F00C822227A2D580073B583 /* FMCellBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCellBlockObject.h; sourceTree = "<group>"; };
+		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
 		4F50F3172276E8F300DF7173 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F50F3182276E8F300DF7173 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMUserInforViewController.m; sourceTree = "<group>"; };
@@ -108,8 +117,8 @@
 		4F50F3652276E9A700DF7173 /* FMMenuTabbleViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMenuTabbleViewCell.h; sourceTree = "<group>"; };
 		4F50F3662276E9A700DF7173 /* FMMenuTabbleViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMMenuTabbleViewCell.xib; sourceTree = "<group>"; };
 		4F50F3672276E9A700DF7173 /* FMUserInforTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMUserInforTableViewCell.h; sourceTree = "<group>"; };
-		4F50F3692276E9A700DF7173 /* FMStackViewShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStackViewShadow.m; sourceTree = "<group>"; };
-		4F50F36A2276E9A700DF7173 /* FMStackViewShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStackViewShadow.h; sourceTree = "<group>"; };
+		4F50F3692276E9A700DF7173 /* FMViewShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMViewShadow.m; sourceTree = "<group>"; };
+		4F50F36A2276E9A700DF7173 /* FMViewShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMViewShadow.h; sourceTree = "<group>"; };
 		4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMUserInforTableViewCell.xib; sourceTree = "<group>"; };
 		4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMMenuTabbleViewCell.m; sourceTree = "<group>"; };
 		4F50F36D2276E9A700DF7173 /* FMUserInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMUserInforViewController.xib; sourceTree = "<group>"; };
@@ -249,12 +258,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F00C81B227A06C30073B583 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4F00C81C227A06FF0073B583 /* FMBaseViewController.h */,
+				4F00C81D227A06FF0073B583 /* FMBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		4F50F3602276E9A700DF7173 /* UserInfor */ = {
 			isa = PBXGroup;
 			children = (
 				4F50F3712276E9A700DF7173 /* FMUserInforViewController.h */,
 				4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */,
 				4F50F36D2276E9A700DF7173 /* FMUserInforViewController.xib */,
+				4F00C81F227A246C0073B583 /* FMUserInforModel.h */,
+				4F00C820227A246C0073B583 /* FMUserInforModel.m */,
+				4F00C822227A2D580073B583 /* FMCellBlockObject.h */,
+				4F00C823227A2D580073B583 /* FMCellBlockObject.m */,
 				4F50F3AA2276EB0800DF7173 /* UserInfor.xcassets */,
 			);
 			path = UserInfor;
@@ -319,11 +341,11 @@
 		4F50F3F12276EBE000DF7173 /* UserInfor */ = {
 			isa = PBXGroup;
 			children = (
-				4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */,
 				4F50F3652276E9A700DF7173 /* FMMenuTabbleViewCell.h */,
+				4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */,
 				4F50F3662276E9A700DF7173 /* FMMenuTabbleViewCell.xib */,
 				4F50F3672276E9A700DF7173 /* FMUserInforTableViewCell.h */,
-				4F50F36C2276E9A700DF7173 /* FMMenuTabbleViewCell.m */,
+				4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */,
 				4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */,
 			);
 			path = UserInfor;
@@ -512,6 +534,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4F00C81B227A06C30073B583 /* Base */,
 				4F50F3892276E9A700DF7173 /* CustomTabbar */,
 				4F50F3732276E9A700DF7173 /* News */,
 				4F50F3812276E9A700DF7173 /* Notification */,
@@ -572,8 +595,8 @@
 		5C9862A12264DC1900545DCC /* CustomeView */ = {
 			isa = PBXGroup;
 			children = (
-				4F50F3692276E9A700DF7173 /* FMStackViewShadow.m */,
-				4F50F36A2276E9A700DF7173 /* FMStackViewShadow.h */,
+				4F50F36A2276E9A700DF7173 /* FMViewShadow.h */,
+				4F50F3692276E9A700DF7173 /* FMViewShadow.m */,
 				5C9862A22264DC8100545DCC /* CustomView.swift */,
 			);
 			path = CustomeView;
@@ -782,8 +805,10 @@
 				4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */,
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
 				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
-				4F50F3912276E9A700DF7173 /* FMStackViewShadow.m in Sources */,
+				4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
+				4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */,
+				4F00C81E227A06FF0073B583 /* FMBaseViewController.m in Sources */,
 				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
 				5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */,
 				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
@@ -793,6 +818,7 @@
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
 				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
+				4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */,
 				4F50F3992276E9A700DF7173 /* FMSecondsNewsTableViewCell.m in Sources */,
 				4F50F39D2276E9A700DF7173 /* FMNewsCollectionViewCell.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,

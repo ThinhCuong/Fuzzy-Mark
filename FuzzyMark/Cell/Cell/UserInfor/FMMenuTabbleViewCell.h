@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMCellBlockObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMMenuTabbleViewCell : UITableViewCell
-
+@property (assign, nonatomic, getter=isHideBotomLine) BOOL hideBotomLine;
+@property (assign, nonatomic, getter=isTypeBlock) FMTableViewCellBlock typeBlock;
+- (void)binDataWith:(FMCellBlockObject *) model;
 @end
 
 NS_ASSUME_NONNULL_END
