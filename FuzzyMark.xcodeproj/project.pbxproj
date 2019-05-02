@@ -84,6 +84,9 @@
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
 		5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF618502268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m */; };
 		5CF618532268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF618512268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib */; };
+		665FD50ADF305E3C1AAC1673 /* Pods_FuzzyMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */; };
+		6E9502D3BD7037924ED9F965 /* Pods_FuzzyMarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */; };
+		F7A38270E28A20FBC8BC0939 /* Pods_FuzzyMarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B298CECD2FAA81B68FE1F00 /* Pods_FuzzyMarkUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +107,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2717E9883C035E891B763CA5 /* Pods-FuzzyMarkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMarkUITests.debug.xcconfig"; path = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2B298CECD2FAA81B68FE1F00 /* Pods_FuzzyMarkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMarkUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F00C81C227A06FF0073B583 /* FMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseViewController.h; sourceTree = "<group>"; };
 		4F00C81D227A06FF0073B583 /* FMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseViewController.m; sourceTree = "<group>"; };
 		4F00C81F227A246C0073B583 /* FMUserInforModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUserInforModel.h; sourceTree = "<group>"; };
@@ -231,6 +236,13 @@
 		5CF6184F2268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		5CF618502268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		5CF618512268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMarkUITests.release.xcconfig"; path = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3F0B1E353FB9438C39E8867 /* Pods-FuzzyMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMark.debug.xcconfig"; path = "Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark.debug.xcconfig"; sourceTree = "<group>"; };
+		B7339E9B6C85359D70719D12 /* Pods-FuzzyMark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMark.release.xcconfig"; path = "Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark.release.xcconfig"; sourceTree = "<group>"; };
+		D25F9973A4CFE816A1B1B8C8 /* Pods-FuzzyMarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMarkTests.release.xcconfig"; path = "Target Support Files/Pods-FuzzyMarkTests/Pods-FuzzyMarkTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDBB129FEA32E96656DE26C8 /* Pods-FuzzyMarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMarkTests.debug.xcconfig"; path = "Target Support Files/Pods-FuzzyMarkTests/Pods-FuzzyMarkTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +250,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				665FD50ADF305E3C1AAC1673 /* Pods_FuzzyMark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E9502D3BD7037924ED9F965 /* Pods_FuzzyMarkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,12 +266,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A38270E28A20FBC8BC0939 /* Pods_FuzzyMarkUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D2F08ED7F71978C286E10D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */,
+				712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */,
+				2B298CECD2FAA81B68FE1F00 /* Pods_FuzzyMarkUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4F00C81B227A06C30073B583 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +505,8 @@
 				5C6BFAF3225D668900A26400 /* FuzzyMarkTests */,
 				5C6BFAFE225D668900A26400 /* FuzzyMarkUITests */,
 				5C6BFAD6225D668600A26400 /* Products */,
+				7F35BB9EDF179AE356C403A2 /* Pods */,
+				1D2F08ED7F71978C286E10D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -639,6 +666,20 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		7F35BB9EDF179AE356C403A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B3F0B1E353FB9438C39E8867 /* Pods-FuzzyMark.debug.xcconfig */,
+				B7339E9B6C85359D70719D12 /* Pods-FuzzyMark.release.xcconfig */,
+				FDBB129FEA32E96656DE26C8 /* Pods-FuzzyMarkTests.debug.xcconfig */,
+				D25F9973A4CFE816A1B1B8C8 /* Pods-FuzzyMarkTests.release.xcconfig */,
+				2717E9883C035E891B763CA5 /* Pods-FuzzyMarkUITests.debug.xcconfig */,
+				6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -646,9 +687,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6BFB04225D668900A26400 /* Build configuration list for PBXNativeTarget "FuzzyMark" */;
 			buildPhases = (
+				C040F0761BAA1CDD4F5FAA52 /* [CP] Check Pods Manifest.lock */,
 				5C6BFAD1225D668600A26400 /* Sources */,
 				5C6BFAD2225D668600A26400 /* Frameworks */,
 				5C6BFAD3225D668600A26400 /* Resources */,
+				84FF4B7DD4D07BF0E4D770FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -663,6 +706,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6BFB07225D668900A26400 /* Build configuration list for PBXNativeTarget "FuzzyMarkTests" */;
 			buildPhases = (
+				7203D1D1F60BEF7D88432505 /* [CP] Check Pods Manifest.lock */,
 				5C6BFAEC225D668900A26400 /* Sources */,
 				5C6BFAED225D668900A26400 /* Frameworks */,
 				5C6BFAEE225D668900A26400 /* Resources */,
@@ -681,6 +725,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C6BFB0A225D668900A26400 /* Build configuration list for PBXNativeTarget "FuzzyMarkUITests" */;
 			buildPhases = (
+				953D4D167C63D550DB91DE5D /* [CP] Check Pods Manifest.lock */,
 				5C6BFAF7225D668900A26400 /* Sources */,
 				5C6BFAF8225D668900A26400 /* Frameworks */,
 				5C6BFAF9225D668900A26400 /* Resources */,
@@ -793,6 +838,97 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7203D1D1F60BEF7D88432505 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FuzzyMarkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84FF4B7DD4D07BF0E4D770FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		953D4D167C63D550DB91DE5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FuzzyMarkUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C040F0761BAA1CDD4F5FAA52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FuzzyMark-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C6BFAD1225D668600A26400 /* Sources */ = {
@@ -1002,6 +1138,7 @@
 		};
 		5C6BFB05225D668900A26400 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3F0B1E353FB9438C39E8867 /* Pods-FuzzyMark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1025,6 +1162,7 @@
 		};
 		5C6BFB06225D668900A26400 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7339E9B6C85359D70719D12 /* Pods-FuzzyMark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1047,6 +1185,7 @@
 		};
 		5C6BFB08225D668900A26400 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDBB129FEA32E96656DE26C8 /* Pods-FuzzyMarkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1067,6 +1206,7 @@
 		};
 		5C6BFB09225D668900A26400 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D25F9973A4CFE816A1B1B8C8 /* Pods-FuzzyMarkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1087,6 +1227,7 @@
 		};
 		5C6BFB0B225D668900A26400 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2717E9883C035E891B763CA5 /* Pods-FuzzyMarkUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1106,6 +1247,7 @@
 		};
 		5C6BFB0C225D668900A26400 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

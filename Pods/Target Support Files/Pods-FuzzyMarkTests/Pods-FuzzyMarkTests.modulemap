@@ -1,0 +1,6 @@
+framework module Pods_FuzzyMarkTests {
+  umbrella header "Pods-FuzzyMarkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

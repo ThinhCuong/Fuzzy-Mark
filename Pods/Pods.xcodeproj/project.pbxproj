@@ -1,0 +1,965 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0570791023DF35860A41E06BE0F3DE66 /* HMSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 649D0F1D6C5BABC6D0864829B4C18219 /* HMSegmentedControl-dummy.m */; };
+		2DA2307F22289A64158A2A954B754DD1 /* Pods-FuzzyMark-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A46964480F5DDA4331BAF17B94AC645 /* Pods-FuzzyMark-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		326500D02FC82CF05958145C36DA37E8 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D3A8D3F9130F4B5B833495BC85ECA0 /* HMSegmentedControl.m */; };
+		67CE6976BC21EBCF73A48B3E03F09DAE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CC5787C4D7225262138F10874B1FB4 /* QuartzCore.framework */; };
+		8310431B5EBF528A4A76BFCF36241D34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A87EFC1E3074BF96CE56BFE8D51A20 /* Foundation.framework */; };
+		8A31DD2F177B736727CBF77CC28534B1 /* Pods-FuzzyMarkTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 459D2EACC1F5957853F3CB9997C9A936 /* Pods-FuzzyMarkTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EE46B6B60877ECFD442329A22A2AAF4 /* HMSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 905D3DF91B11325C1133EAEFC676FEF1 /* HMSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91FF4E412753F483C56C38BCFF09DE80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A87EFC1E3074BF96CE56BFE8D51A20 /* Foundation.framework */; };
+		9E0C027184F97931703EBB9183BC1B52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A87EFC1E3074BF96CE56BFE8D51A20 /* Foundation.framework */; };
+		A3E03F258857DE3622EC6D93861AAAE2 /* HMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = FC2112C44BC439F99815E223DF56C5ED /* HMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACAC7E18D1C45E8D9CAA31B16006A924 /* Pods-FuzzyMarkTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A2FC254762C071B0C24982059A878D /* Pods-FuzzyMarkTests-dummy.m */; };
+		BA701362112E0B17088D1D602D048207 /* Pods-FuzzyMark-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 822EF7D42EE2EC06D0A246417D874533 /* Pods-FuzzyMark-dummy.m */; };
+		BA839F6065807DD67C95CDA62A838D48 /* Pods-FuzzyMarkUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDE4C3247A1B91F92A0F0A5978895AA5 /* Pods-FuzzyMarkUITests-dummy.m */; };
+		E53A43C6096E25838C20DC5085D391A6 /* Pods-FuzzyMarkUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04D95A41CFA90E5546C4CB8159043E62 /* Pods-FuzzyMarkUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E92755434766F8FB9D350E4841BA843D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73A87EFC1E3074BF96CE56BFE8D51A20 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F7DF95B4D269C8637E11A5F29C4F02C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BFD7EEE6B2CF60FB29D9EAE56843B24;
+			remoteInfo = "Pods-FuzzyMark";
+		};
+		A7273E5B8D5338BCDDD43CE36CED52E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BFD7EEE6B2CF60FB29D9EAE56843B24;
+			remoteInfo = "Pods-FuzzyMark";
+		};
+		B8C614EECD821101F7F80A5901242E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 961C7525A1325085BE6717E1C5DDA214;
+			remoteInfo = HMSegmentedControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A1B10511086D3E25ACE19532B6B8AC /* Pods-FuzzyMarkTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FuzzyMarkTests.modulemap"; sourceTree = "<group>"; };
+		04D95A41CFA90E5546C4CB8159043E62 /* Pods-FuzzyMarkUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FuzzyMarkUITests-umbrella.h"; sourceTree = "<group>"; };
+		107DED70FE7730585840BF2F4421645C /* HMSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HMSegmentedControl.xcconfig; sourceTree = "<group>"; };
+		23137759F1566E1F3C38E8DAB6A5027B /* Pods_FuzzyMarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FuzzyMarkTests.framework; path = "Pods-FuzzyMarkTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		307DA2B08290D37478CC60FF7EF5FD32 /* Pods-FuzzyMark-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FuzzyMark-Info.plist"; sourceTree = "<group>"; };
+		3CBC4349C436F7C802A1F57E5D5EF102 /* Pods-FuzzyMarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMarkTests.release.xcconfig"; sourceTree = "<group>"; };
+		4113D4F2A342AB37BBEAE58C321F90AC /* HMSegmentedControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HMSegmentedControl-Info.plist"; sourceTree = "<group>"; };
+		43560C9D1ABC30F3D3B262D856BFA1B4 /* Pods-FuzzyMark.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FuzzyMark.modulemap"; sourceTree = "<group>"; };
+		459D2EACC1F5957853F3CB9997C9A936 /* Pods-FuzzyMarkTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FuzzyMarkTests-umbrella.h"; sourceTree = "<group>"; };
+		499A215E317E24FDFEFCFE6349AF771A /* Pods-FuzzyMarkUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMarkUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		531831E36FAC4AC82DB25D63D3D73161 /* Pods-FuzzyMark-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FuzzyMark-frameworks.sh"; sourceTree = "<group>"; };
+		54F2B72534268A9CBFB5C5BD3E4249FE /* Pods-FuzzyMark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMark.debug.xcconfig"; sourceTree = "<group>"; };
+		55CB7744980FD3F83212703B96434093 /* Pods-FuzzyMarkUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FuzzyMarkUITests.modulemap"; sourceTree = "<group>"; };
+		649D0F1D6C5BABC6D0864829B4C18219 /* HMSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HMSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		71D3A8D3F9130F4B5B833495BC85ECA0 /* HMSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMSegmentedControl.m; path = HMSegmentedControl/HMSegmentedControl.m; sourceTree = "<group>"; };
+		73A87EFC1E3074BF96CE56BFE8D51A20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7981F67BB7A9F95405C6EBD0091C230E /* HMSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HMSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		7A46964480F5DDA4331BAF17B94AC645 /* Pods-FuzzyMark-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FuzzyMark-umbrella.h"; sourceTree = "<group>"; };
+		7C4939BCE427D53E919064478F70CD2B /* HMSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HMSegmentedControl.framework; path = HMSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		822EF7D42EE2EC06D0A246417D874533 /* Pods-FuzzyMark-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FuzzyMark-dummy.m"; sourceTree = "<group>"; };
+		82E4D51569DC48B13065A25433F50505 /* Pods_FuzzyMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FuzzyMark.framework; path = "Pods-FuzzyMark.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87C7BA6B18CA06E4AF3F225E88AD61FC /* Pods-FuzzyMarkTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FuzzyMarkTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		905D3DF91B11325C1133EAEFC676FEF1 /* HMSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HMSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
+		93CC5787C4D7225262138F10874B1FB4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		9977D34C25D92A60077D964B4651BBA2 /* Pods-FuzzyMark-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FuzzyMark-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AE0290B483841A0540A6630F7B6B8164 /* Pods-FuzzyMarkUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FuzzyMarkUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B06498F54FBED4221506DEA3CB2E2724 /* Pods-FuzzyMark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMark.release.xcconfig"; sourceTree = "<group>"; };
+		B2A2FC254762C071B0C24982059A878D /* Pods-FuzzyMarkTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FuzzyMarkTests-dummy.m"; sourceTree = "<group>"; };
+		B57FF88A9FCA6E619B740C7393551D02 /* Pods-FuzzyMarkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMarkUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF021A28E900A006B2BECC902222B794 /* Pods_FuzzyMarkUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FuzzyMarkUITests.framework; path = "Pods-FuzzyMarkUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9AE7D53FB6FBDEC7D3AF2DA14ECE29A /* Pods-FuzzyMarkUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FuzzyMarkUITests-Info.plist"; sourceTree = "<group>"; };
+		D586AAF1805A4AD02C446D9E37EB3635 /* Pods-FuzzyMarkTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FuzzyMarkTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E0C3CA143BB2878F69ADEDA09779B7EA /* Pods-FuzzyMarkUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FuzzyMarkUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E37A48EAE5099D81060AA170788CBB09 /* HMSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HMSegmentedControl.modulemap; sourceTree = "<group>"; };
+		E794D28276CCAD5C642EB548A87E302C /* Pods-FuzzyMarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FuzzyMarkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F455057680B2C3E26844A59835D11221 /* Pods-FuzzyMark-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FuzzyMark-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FC2112C44BC439F99815E223DF56C5ED /* HMSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = HMSegmentedControl/HMSegmentedControl.h; sourceTree = "<group>"; };
+		FDE4C3247A1B91F92A0F0A5978895AA5 /* Pods-FuzzyMarkUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FuzzyMarkUITests-dummy.m"; sourceTree = "<group>"; };
+		FE4E8B82AA3524954314B35E6332E50C /* Pods-FuzzyMarkTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FuzzyMarkTests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34A418FE53D46D9C8D8DB9E5A1E47AF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8310431B5EBF528A4A76BFCF36241D34 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8335A022987FE22DB61CB71D43BB1784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91FF4E412753F483C56C38BCFF09DE80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981408FB76307D8588D2D109383C2392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E0C027184F97931703EBB9183BC1B52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4076798492B76B0C36B787090E2ACEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92755434766F8FB9D350E4841BA843D /* Foundation.framework in Frameworks */,
+				67CE6976BC21EBCF73A48B3E03F09DAE /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8F027EABB5DE31B30353EB43BD9916 /* Pods-FuzzyMarkUITests */ = {
+			isa = PBXGroup;
+			children = (
+				55CB7744980FD3F83212703B96434093 /* Pods-FuzzyMarkUITests.modulemap */,
+				AE0290B483841A0540A6630F7B6B8164 /* Pods-FuzzyMarkUITests-acknowledgements.markdown */,
+				E0C3CA143BB2878F69ADEDA09779B7EA /* Pods-FuzzyMarkUITests-acknowledgements.plist */,
+				FDE4C3247A1B91F92A0F0A5978895AA5 /* Pods-FuzzyMarkUITests-dummy.m */,
+				C9AE7D53FB6FBDEC7D3AF2DA14ECE29A /* Pods-FuzzyMarkUITests-Info.plist */,
+				04D95A41CFA90E5546C4CB8159043E62 /* Pods-FuzzyMarkUITests-umbrella.h */,
+				499A215E317E24FDFEFCFE6349AF771A /* Pods-FuzzyMarkUITests.debug.xcconfig */,
+				B57FF88A9FCA6E619B740C7393551D02 /* Pods-FuzzyMarkUITests.release.xcconfig */,
+			);
+			name = "Pods-FuzzyMarkUITests";
+			path = "Target Support Files/Pods-FuzzyMarkUITests";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				882A293BD79D4DA49D52A901C0171109 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5988A5A0D1AFC85FAC50D5F53B2A986A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F5A81965299CB2E2DBA7AF973BFF4C2 /* HMSegmentedControl */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5F5A81965299CB2E2DBA7AF973BFF4C2 /* HMSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				FC2112C44BC439F99815E223DF56C5ED /* HMSegmentedControl.h */,
+				71D3A8D3F9130F4B5B833495BC85ECA0 /* HMSegmentedControl.m */,
+				A3C6E292947677129ED461A80B0CAFC8 /* Support Files */,
+			);
+			name = HMSegmentedControl;
+			path = HMSegmentedControl;
+			sourceTree = "<group>";
+		};
+		64EF16297D40EBD962EE90E5EEC5C39F /* Pods-FuzzyMark */ = {
+			isa = PBXGroup;
+			children = (
+				43560C9D1ABC30F3D3B262D856BFA1B4 /* Pods-FuzzyMark.modulemap */,
+				F455057680B2C3E26844A59835D11221 /* Pods-FuzzyMark-acknowledgements.markdown */,
+				9977D34C25D92A60077D964B4651BBA2 /* Pods-FuzzyMark-acknowledgements.plist */,
+				822EF7D42EE2EC06D0A246417D874533 /* Pods-FuzzyMark-dummy.m */,
+				531831E36FAC4AC82DB25D63D3D73161 /* Pods-FuzzyMark-frameworks.sh */,
+				307DA2B08290D37478CC60FF7EF5FD32 /* Pods-FuzzyMark-Info.plist */,
+				7A46964480F5DDA4331BAF17B94AC645 /* Pods-FuzzyMark-umbrella.h */,
+				54F2B72534268A9CBFB5C5BD3E4249FE /* Pods-FuzzyMark.debug.xcconfig */,
+				B06498F54FBED4221506DEA3CB2E2724 /* Pods-FuzzyMark.release.xcconfig */,
+			);
+			name = "Pods-FuzzyMark";
+			path = "Target Support Files/Pods-FuzzyMark";
+			sourceTree = "<group>";
+		};
+		70C19E78B0E447E6A8B31179122FAE20 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				64EF16297D40EBD962EE90E5EEC5C39F /* Pods-FuzzyMark */,
+				7FE943D4274E3D392DE804CAFA3A4DA6 /* Pods-FuzzyMarkTests */,
+				0F8F027EABB5DE31B30353EB43BD9916 /* Pods-FuzzyMarkUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7FE943D4274E3D392DE804CAFA3A4DA6 /* Pods-FuzzyMarkTests */ = {
+			isa = PBXGroup;
+			children = (
+				00A1B10511086D3E25ACE19532B6B8AC /* Pods-FuzzyMarkTests.modulemap */,
+				87C7BA6B18CA06E4AF3F225E88AD61FC /* Pods-FuzzyMarkTests-acknowledgements.markdown */,
+				D586AAF1805A4AD02C446D9E37EB3635 /* Pods-FuzzyMarkTests-acknowledgements.plist */,
+				B2A2FC254762C071B0C24982059A878D /* Pods-FuzzyMarkTests-dummy.m */,
+				FE4E8B82AA3524954314B35E6332E50C /* Pods-FuzzyMarkTests-Info.plist */,
+				459D2EACC1F5957853F3CB9997C9A936 /* Pods-FuzzyMarkTests-umbrella.h */,
+				E794D28276CCAD5C642EB548A87E302C /* Pods-FuzzyMarkTests.debug.xcconfig */,
+				3CBC4349C436F7C802A1F57E5D5EF102 /* Pods-FuzzyMarkTests.release.xcconfig */,
+			);
+			name = "Pods-FuzzyMarkTests";
+			path = "Target Support Files/Pods-FuzzyMarkTests";
+			sourceTree = "<group>";
+		};
+		882A293BD79D4DA49D52A901C0171109 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73A87EFC1E3074BF96CE56BFE8D51A20 /* Foundation.framework */,
+				93CC5787C4D7225262138F10874B1FB4 /* QuartzCore.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A3C6E292947677129ED461A80B0CAFC8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E37A48EAE5099D81060AA170788CBB09 /* HMSegmentedControl.modulemap */,
+				107DED70FE7730585840BF2F4421645C /* HMSegmentedControl.xcconfig */,
+				649D0F1D6C5BABC6D0864829B4C18219 /* HMSegmentedControl-dummy.m */,
+				4113D4F2A342AB37BBEAE58C321F90AC /* HMSegmentedControl-Info.plist */,
+				7981F67BB7A9F95405C6EBD0091C230E /* HMSegmentedControl-prefix.pch */,
+				905D3DF91B11325C1133EAEFC676FEF1 /* HMSegmentedControl-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HMSegmentedControl";
+			sourceTree = "<group>";
+		};
+		C17E568D790BC06E5FF38C24D6CE35CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7C4939BCE427D53E919064478F70CD2B /* HMSegmentedControl.framework */,
+				82E4D51569DC48B13065A25433F50505 /* Pods_FuzzyMark.framework */,
+				23137759F1566E1F3C38E8DAB6A5027B /* Pods_FuzzyMarkTests.framework */,
+				BF021A28E900A006B2BECC902222B794 /* Pods_FuzzyMarkUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				5988A5A0D1AFC85FAC50D5F53B2A986A /* Pods */,
+				C17E568D790BC06E5FF38C24D6CE35CE /* Products */,
+				70C19E78B0E447E6A8B31179122FAE20 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		041D9FF9499C5BC0E8322F91D2D989DF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53A43C6096E25838C20DC5085D391A6 /* Pods-FuzzyMarkUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B0823B5F09F01D990CBD395C53642D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EE46B6B60877ECFD442329A22A2AAF4 /* HMSegmentedControl-umbrella.h in Headers */,
+				A3E03F258857DE3622EC6D93861AAAE2 /* HMSegmentedControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34090848D20B40795FEF148DDB7F498E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A31DD2F177B736727CBF77CC28534B1 /* Pods-FuzzyMarkTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58B9CF99848AB1BDD4CC938207945831 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DA2307F22289A64158A2A954B754DD1 /* Pods-FuzzyMark-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2BFD7EEE6B2CF60FB29D9EAE56843B24 /* Pods-FuzzyMark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5FED55D24358BFB8C6432D9C1D2B188 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMark" */;
+			buildPhases = (
+				58B9CF99848AB1BDD4CC938207945831 /* Headers */,
+				88197CCE572C6B0831656499C50AAFCD /* Sources */,
+				8335A022987FE22DB61CB71D43BB1784 /* Frameworks */,
+				B948B9FFD18A2E6228D2326FE769B6F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50267ABF4660C4463B7974C96BB85F1F /* PBXTargetDependency */,
+			);
+			name = "Pods-FuzzyMark";
+			productName = "Pods-FuzzyMark";
+			productReference = 82E4D51569DC48B13065A25433F50505 /* Pods_FuzzyMark.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		53B294BDAC31F63BF3EA4B14829A2EF5 /* Pods-FuzzyMarkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EC3338969A44DF98DD1975F8CF5EEE5 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMarkTests" */;
+			buildPhases = (
+				34090848D20B40795FEF148DDB7F498E /* Headers */,
+				C75A096F8E5B3C027FF1E6F3141ACD00 /* Sources */,
+				34A418FE53D46D9C8D8DB9E5A1E47AF4 /* Frameworks */,
+				1702C1D770A00F49A6800F0B8CE8D51E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DC1C0E8E6BA803D29191635B516DF8F /* PBXTargetDependency */,
+			);
+			name = "Pods-FuzzyMarkTests";
+			productName = "Pods-FuzzyMarkTests";
+			productReference = 23137759F1566E1F3C38E8DAB6A5027B /* Pods_FuzzyMarkTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		961C7525A1325085BE6717E1C5DDA214 /* HMSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 588AA5F05E1731EEFAB348A2776B7BB9 /* Build configuration list for PBXNativeTarget "HMSegmentedControl" */;
+			buildPhases = (
+				2B0823B5F09F01D990CBD395C53642D5 /* Headers */,
+				5F4B7E405371225A4003F265820749B8 /* Sources */,
+				C4076798492B76B0C36B787090E2ACEA /* Frameworks */,
+				F06094CB27F566FAA0D96290F90FC3AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMSegmentedControl;
+			productName = HMSegmentedControl;
+			productReference = 7C4939BCE427D53E919064478F70CD2B /* HMSegmentedControl.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8D24F650BB1CA5ACE971C0CBDA55F02 /* Pods-FuzzyMarkUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 412257263F7A694E21EA1980187DEC82 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMarkUITests" */;
+			buildPhases = (
+				041D9FF9499C5BC0E8322F91D2D989DF /* Headers */,
+				8C51470F2E94E42FBF5B75B7B692D254 /* Sources */,
+				981408FB76307D8588D2D109383C2392 /* Frameworks */,
+				ACEBF2C5F6EB9575B0E158B1AB478A5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC887D570BE9B8D228C82283E83BBA58 /* PBXTargetDependency */,
+			);
+			name = "Pods-FuzzyMarkUITests";
+			productName = "Pods-FuzzyMarkUITests";
+			productReference = BF021A28E900A006B2BECC902222B794 /* Pods_FuzzyMarkUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C17E568D790BC06E5FF38C24D6CE35CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				961C7525A1325085BE6717E1C5DDA214 /* HMSegmentedControl */,
+				2BFD7EEE6B2CF60FB29D9EAE56843B24 /* Pods-FuzzyMark */,
+				53B294BDAC31F63BF3EA4B14829A2EF5 /* Pods-FuzzyMarkTests */,
+				D8D24F650BB1CA5ACE971C0CBDA55F02 /* Pods-FuzzyMarkUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1702C1D770A00F49A6800F0B8CE8D51E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACEBF2C5F6EB9575B0E158B1AB478A5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B948B9FFD18A2E6228D2326FE769B6F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06094CB27F566FAA0D96290F90FC3AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F4B7E405371225A4003F265820749B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0570791023DF35860A41E06BE0F3DE66 /* HMSegmentedControl-dummy.m in Sources */,
+				326500D02FC82CF05958145C36DA37E8 /* HMSegmentedControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88197CCE572C6B0831656499C50AAFCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA701362112E0B17088D1D602D048207 /* Pods-FuzzyMark-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C51470F2E94E42FBF5B75B7B692D254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA839F6065807DD67C95CDA62A838D48 /* Pods-FuzzyMarkUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C75A096F8E5B3C027FF1E6F3141ACD00 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACAC7E18D1C45E8D9CAA31B16006A924 /* Pods-FuzzyMarkTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DC1C0E8E6BA803D29191635B516DF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FuzzyMark";
+			target = 2BFD7EEE6B2CF60FB29D9EAE56843B24 /* Pods-FuzzyMark */;
+			targetProxy = 7F7DF95B4D269C8637E11A5F29C4F02C /* PBXContainerItemProxy */;
+		};
+		50267ABF4660C4463B7974C96BB85F1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HMSegmentedControl;
+			target = 961C7525A1325085BE6717E1C5DDA214 /* HMSegmentedControl */;
+			targetProxy = B8C614EECD821101F7F80A5901242E33 /* PBXContainerItemProxy */;
+		};
+		AC887D570BE9B8D228C82283E83BBA58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FuzzyMark";
+			target = 2BFD7EEE6B2CF60FB29D9EAE56843B24 /* Pods-FuzzyMark */;
+			targetProxy = A7273E5B8D5338BCDDD43CE36CED52E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		040FF015AB62CE0317057FAA737D1AB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E794D28276CCAD5C642EB548A87E302C /* Pods-FuzzyMarkTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMarkTests/Pods-FuzzyMarkTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMarkTests/Pods-FuzzyMarkTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		07488D4657FB0A78086563621D425F8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		41AEC53D6E72CE408A99701BA6517A84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54F2B72534268A9CBFB5C5BD3E4249FE /* Pods-FuzzyMark.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6051E8E530008FA53EC79CEDB7481911 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CBC4349C436F7C802A1F57E5D5EF102 /* Pods-FuzzyMarkTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMarkTests/Pods-FuzzyMarkTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMarkTests/Pods-FuzzyMarkTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7ED8A1FFDE63444FFF9944169621339B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 107DED70FE7730585840BF2F4421645C /* HMSegmentedControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HMSegmentedControl/HMSegmentedControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HMSegmentedControl/HMSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = HMSegmentedControl;
+				PRODUCT_NAME = HMSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A1962E6FF39BBAC201A2E5DDF99557DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A7B98FB3519F2CB8E0685028208F7313 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B06498F54FBED4221506DEA3CB2E2724 /* Pods-FuzzyMark.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBF3EE7E438B38A0710395FC1C298810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B57FF88A9FCA6E619B740C7393551D02 /* Pods-FuzzyMarkUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E3D46B5F07691D9CE44E73F73B650B52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 499A215E317E24FDFEFCFE6349AF771A /* Pods-FuzzyMarkUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E89D1FEA1DBFFF2FEBE3EE442E730D7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 107DED70FE7730585840BF2F4421645C /* HMSegmentedControl.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HMSegmentedControl/HMSegmentedControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HMSegmentedControl/HMSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = HMSegmentedControl;
+				PRODUCT_NAME = HMSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EC3338969A44DF98DD1975F8CF5EEE5 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMarkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				040FF015AB62CE0317057FAA737D1AB3 /* Debug */,
+				6051E8E530008FA53EC79CEDB7481911 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		412257263F7A694E21EA1980187DEC82 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMarkUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3D46B5F07691D9CE44E73F73B650B52 /* Debug */,
+				BBF3EE7E438B38A0710395FC1C298810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07488D4657FB0A78086563621D425F8A /* Debug */,
+				A1962E6FF39BBAC201A2E5DDF99557DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		588AA5F05E1731EEFAB348A2776B7BB9 /* Build configuration list for PBXNativeTarget "HMSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7ED8A1FFDE63444FFF9944169621339B /* Debug */,
+				E89D1FEA1DBFFF2FEBE3EE442E730D7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5FED55D24358BFB8C6432D9C1D2B188 /* Build configuration list for PBXNativeTarget "Pods-FuzzyMark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41AEC53D6E72CE408A99701BA6517A84 /* Debug */,
+				A7B98FB3519F2CB8E0685028208F7313 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
