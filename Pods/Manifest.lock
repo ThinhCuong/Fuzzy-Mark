@@ -1,20 +1,26 @@
 PODS:
   - HMSegmentedControl (1.5.5)
   - JSONModel (1.8.0)
+  - SDWebImage (5.0.0):
+    - SDWebImage/Core (= 5.0.0)
+  - SDWebImage/Core (5.0.0)
 
 DEPENDENCIES:
   - HMSegmentedControl
   - JSONModel
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - HMSegmentedControl
     - JSONModel
+    - SDWebImage
 
 SPEC CHECKSUMS:
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
 
-PODFILE CHECKSUM: c49644fd03f67075297af25af98d3cc07cbd497c
+PODFILE CHECKSUM: 1888d950afaabefb90be0acf5572c26c69c4a959
 
 COCOAPODS: 1.6.1
