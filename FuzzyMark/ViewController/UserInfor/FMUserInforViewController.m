@@ -11,7 +11,7 @@
 #import "FMMenuTabbleViewCell.h"
 #import "FMUserInforTableViewCell.h"
 
-@interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
 @property (strong, nonatomic) FMUserInforModel *model;
 @end
@@ -60,8 +60,44 @@
     [self.tableViewContent endUpdates];
 }
 
-#pragma mark - IBAction
-- (IBAction)didSelectBackButton:(id)sender {
+- (void)didSelectBlockCell:(FMMenuTabbleViewCell *) cell {
+    if(!cell) {
+        return;
+    }
+    switch (cell.typeBlock) {
+        case FMTableViewCellBlockFavoritePlaces:
+            
+            break;
+        case FMTableViewCellBlockUserInfor:
+            
+            break;
+        case FMTableViewCellBlockChangePassWord:
+            
+            break;
+        case FMTableViewCellBlockChangePhoneNumber:
+            
+            break;
+        case FMTableViewCellBlockPoliciesAndTerms:
+            
+            break;
+        case FMTableViewCellBlockLogOut:
+            
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - FMUserInforTableViewCellProtocol
+- (void)didSelectButtonHistory {
+    
+}
+
+- (void)didSelectButtonPoint {
+    
+}
+
+- (void)didSelectButtonAddImageUser {
     
 }
 
@@ -122,6 +158,13 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // Click Cell User
+    if(indexPath.section == 0 && indexPath.row == 0) {
+        return;
+    }
+    // Click Cell Block
+    [self didSelectBlockCell:[tableView cellForRowAtIndexPath:indexPath]];
+    
 }
 
 @end

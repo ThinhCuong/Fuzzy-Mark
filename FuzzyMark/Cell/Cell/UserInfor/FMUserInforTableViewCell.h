@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol FMUserInforTableViewCellProtocol <NSObject>
+- (void)didSelectButtonHistory;
+- (void)didSelectButtonPoint;
+- (void)didSelectButtonAddImageUser;
+@end
 
 @interface FMUserInforTableViewCell : UITableViewCell
-
+@property (assign, nonatomic) id<FMUserInforTableViewCellProtocol> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

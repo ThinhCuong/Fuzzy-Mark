@@ -48,6 +48,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3o-tx-ewv">
                                 <rect key="frame" x="78" y="0.0" width="30" height="30"/>
                                 <state key="normal" image="ic_add"/>
+                                <connections>
+                                    <action selector="didSelectButtonAddImageUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ibb-5t-cGP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,15 +133,25 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sg7-pw-9Fr">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="81"/>
+                                        <connections>
+                                            <action selector="didSelectButtonHistory:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="M5e-3I-oN2"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="sg7-pw-9Fr" secondAttribute="bottom" id="3Cy-Z7-EvF"/>
                                     <constraint firstAttribute="bottom" secondItem="y4P-qd-abF" secondAttribute="bottom" constant="5" id="4p1-gK-R8C"/>
                                     <constraint firstAttribute="height" constant="81" id="9tG-lG-cbh"/>
                                     <constraint firstItem="abY-I1-epW" firstAttribute="centerX" secondItem="vqK-LF-aNO" secondAttribute="centerX" id="Ep0-3Y-k2L"/>
                                     <constraint firstItem="abY-I1-epW" firstAttribute="top" secondItem="vqK-LF-aNO" secondAttribute="top" constant="12" id="F1t-fL-ik4"/>
                                     <constraint firstAttribute="width" constant="152" id="Jtx-MB-TGU"/>
                                     <constraint firstItem="y4P-qd-abF" firstAttribute="top" secondItem="abY-I1-epW" secondAttribute="bottom" constant="4" id="Xdm-s5-1ov"/>
+                                    <constraint firstItem="sg7-pw-9Fr" firstAttribute="leading" secondItem="vqK-LF-aNO" secondAttribute="leading" id="pPi-CH-Lca"/>
+                                    <constraint firstAttribute="trailing" secondItem="sg7-pw-9Fr" secondAttribute="trailing" id="pwJ-5c-PZc"/>
+                                    <constraint firstItem="sg7-pw-9Fr" firstAttribute="top" secondItem="vqK-LF-aNO" secondAttribute="top" id="s3W-cq-Lro"/>
                                     <constraint firstItem="y4P-qd-abF" firstAttribute="centerX" secondItem="vqK-LF-aNO" secondAttribute="centerX" id="x0D-N3-SwI"/>
                                 </constraints>
                             </view>
@@ -175,15 +188,25 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eJ-De-T0t">
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="81"/>
+                                        <connections>
+                                            <action selector="didSelectButtonPoint:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Rfx-tu-TrJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="4eJ-De-T0t" firstAttribute="top" secondItem="TPn-7x-vXU" secondAttribute="top" id="1Ku-9v-udC"/>
                                     <constraint firstAttribute="height" constant="81" id="4Ci-KU-v6i"/>
                                     <constraint firstAttribute="bottom" secondItem="h2b-nR-6SP" secondAttribute="bottom" constant="5" id="4VJ-dD-1F4"/>
                                     <constraint firstItem="h2b-nR-6SP" firstAttribute="centerX" secondItem="TPn-7x-vXU" secondAttribute="centerX" id="EVV-cr-TaD"/>
                                     <constraint firstItem="syN-CP-iaR" firstAttribute="centerX" secondItem="TPn-7x-vXU" secondAttribute="centerX" id="fq8-gm-71h"/>
                                     <constraint firstAttribute="width" constant="152" id="guS-cE-bwg"/>
+                                    <constraint firstItem="4eJ-De-T0t" firstAttribute="leading" secondItem="TPn-7x-vXU" secondAttribute="leading" id="igh-8J-1KA"/>
+                                    <constraint firstAttribute="trailing" secondItem="4eJ-De-T0t" secondAttribute="trailing" id="lpx-aB-iuK"/>
                                     <constraint firstItem="h2b-nR-6SP" firstAttribute="top" secondItem="syN-CP-iaR" secondAttribute="bottom" constant="4" id="syO-GR-9bp"/>
+                                    <constraint firstAttribute="bottom" secondItem="4eJ-De-T0t" secondAttribute="bottom" id="ucG-Ws-jc6"/>
                                     <constraint firstItem="syN-CP-iaR" firstAttribute="top" secondItem="TPn-7x-vXU" secondAttribute="top" constant="12" id="v3R-oE-VKb"/>
                                 </constraints>
                             </view>
@@ -209,6 +232,15 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="btnAddImageUser" destination="G3o-tx-ewv" id="sgf-Ft-ewo"/>
+                <outlet property="imgUser" destination="pMV-U8-8wc" id="mrR-sT-IjK"/>
+                <outlet property="lblEmail" destination="bZ5-3I-I1r" id="Z13-CL-wiM"/>
+                <outlet property="lblNumberBill" destination="oLp-PV-4yD" id="vvE-Yz-41w"/>
+                <outlet property="lblPhone" destination="yCD-48-Vjl" id="MAi-ap-giq"/>
+                <outlet property="lblPoint" destination="aGq-Vu-A7E" id="HAB-u4-llR"/>
+                <outlet property="lblUserName" destination="1Hq-7n-j8K" id="zsc-ef-UQc"/>
+            </connections>
             <point key="canvasLocation" x="208.125" y="17.95774647887324"/>
         </tableViewCell>
     </objects>

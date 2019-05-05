@@ -1,15 +1,15 @@
 //
-//  FMRegisterPromotionsModel.m
+//  FMItemHistoryBillModel.m
 //  FuzzyMark
 //
-//  Created by Tu Tran on 5/4/19.
+//  Created by Tu Tran on 5/6/19.
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
-#import "FMRegisterPromotionsModel.h"
+#import "FMItemHistoryBillModel.h"
 #import "RegisterPromotion.h"
 
-@implementation FMRegisterPromotionsModel {
+@implementation FMItemHistoryBillModel {
     BaseCallApi *_httpClient;
 }
 
@@ -18,7 +18,6 @@
     self = [super init];
     if (self) {
         _httpClient = [[BaseCallApi alloc] initWithBaseURL];
-        self.listData = [[NSMutableArray alloc] init];
     }
     return self;
 }

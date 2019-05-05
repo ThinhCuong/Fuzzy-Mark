@@ -10,6 +10,7 @@
 #import "RegisterPromotionsTableViewCell.h"
 #import "RegisterPromotionsHeaderViewCell.h"
 #import "FMRegisterPromotionsModel.h"
+#import "RegisterPromotion.h"
 
 @interface FMRegisterPromotionsVC () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
@@ -17,7 +18,9 @@
 
 @end
 
-@implementation FMRegisterPromotionsVC
+@implementation FMRegisterPromotionsVC {
+    NSArray <RegisterPromotion *> *_listHistoriesCapture;
+}
 
 - (instancetype)init
 {
@@ -57,6 +60,18 @@
     self.contentTableView.dataSource = self;
     [self.contentTableView registerNib:[UINib nibWithNibName:@"RegisterPromotionsTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.contentTableView registerNib:[UINib nibWithNibName:@"RegisterPromotionsHeaderViewCell" bundle:nil] forHeaderFooterViewReuseIdentifier:@"header"];
+    
+    [self.model.listData removeAllObjects];
+    [self getDataTableView];
+}
+
+- (void)getDataTableView {
+    [self.model getListHistoryCaptureWithSuccessBlock:^(id data) {
+        if(data) {
+            self->_listHistoriesCapture = (NSArray *) data;
+            [self.contentTableView reloadData];
+        }
+    }];
 }
 
 #pragma mark - UITableViewDataSource

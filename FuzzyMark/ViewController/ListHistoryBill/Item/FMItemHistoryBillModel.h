@@ -1,8 +1,8 @@
 //
-//  FMRegisterPromotionsModel.h
+//  FMItemHistoryBillModel.h
 //  FuzzyMark
 //
-//  Created by Tu Tran on 5/4/19.
+//  Created by Tu Tran on 5/6/19.
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
@@ -10,10 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMRegisterPromotionsModel : NSObject
+@interface FMItemHistoryBillModel : NSObject
 @property (strong, nonatomic) NSMutableArray *listData;
 - (void)getListHistoryCaptureWithSuccessBlock: (void(^)(id)) successBlock;
-
 @end
 
 NS_ASSUME_NONNULL_END
