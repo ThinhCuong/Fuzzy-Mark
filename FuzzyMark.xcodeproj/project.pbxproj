@@ -45,6 +45,17 @@
 		4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FD2276EDBC00DF7173 /* Muli.ttf */; };
 		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
 		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
+		4F6553D1227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6553D0227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m */; };
+		4FF2BD77227BD9F70008BA69 /* FMCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */; };
+		4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD76227BD9F70008BA69 /* FMCameraViewController.xib */; };
+		4FF2BD7A227BDA390008BA69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2BD79227BDA390008BA69 /* AVFoundation.framework */; };
+		4FF2BD7F227BDF8E0008BA69 /* FMRegisterPromotionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2BD7D227BDF8E0008BA69 /* FMRegisterPromotionsVC.m */; };
+		4FF2BD80227BDF8E0008BA69 /* FMRegisterPromotionsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD7E227BDF8E0008BA69 /* FMRegisterPromotionsVC.xib */; };
+		4FF2BD85227BE83B0008BA69 /* RegisterPromotionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2BD83227BE83B0008BA69 /* RegisterPromotionsTableViewCell.m */; };
+		4FF2BD86227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD84227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib */; };
+		4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD87227BEC230008BA69 /* Camera.xcassets */; };
+		4FF2BD8B227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2BD8A227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.m */; };
+		4FF2BD8D227C24C30008BA69 /* RegisterPromotionsHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD8C227C24C30008BA69 /* RegisterPromotionsHeaderViewCell.xib */; };
 		5C39102A2263492A008BEA62 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910052263492A008BEA62 /* LICENSE */; };
 		5C39102B2263492A008BEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910062263492A008BEA62 /* README.md */; };
 		5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */; };
@@ -165,6 +176,22 @@
 		4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
 		4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
 		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
+		4F6553CF227DF9CE0076DEC6 /* FMRegisterPromotionsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRegisterPromotionsModel.h; sourceTree = "<group>"; };
+		4F6553D0227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRegisterPromotionsModel.m; sourceTree = "<group>"; };
+		4FF2BD74227BD9F70008BA69 /* FMCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCameraViewController.h; sourceTree = "<group>"; };
+		4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCameraViewController.m; sourceTree = "<group>"; };
+		4FF2BD76227BD9F70008BA69 /* FMCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMCameraViewController.xib; sourceTree = "<group>"; };
+		4FF2BD79227BDA390008BA69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4FF2BD7C227BDF8E0008BA69 /* FMRegisterPromotionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRegisterPromotionsVC.h; sourceTree = "<group>"; };
+		4FF2BD7D227BDF8E0008BA69 /* FMRegisterPromotionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRegisterPromotionsVC.m; sourceTree = "<group>"; };
+		4FF2BD7E227BDF8E0008BA69 /* FMRegisterPromotionsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMRegisterPromotionsVC.xib; sourceTree = "<group>"; };
+		4FF2BD82227BE83B0008BA69 /* RegisterPromotionsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPromotionsTableViewCell.h; sourceTree = "<group>"; };
+		4FF2BD83227BE83B0008BA69 /* RegisterPromotionsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPromotionsTableViewCell.m; sourceTree = "<group>"; };
+		4FF2BD84227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPromotionsTableViewCell.xib; sourceTree = "<group>"; };
+		4FF2BD87227BEC230008BA69 /* Camera.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Camera.xcassets; sourceTree = "<group>"; };
+		4FF2BD89227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPromotionsHeaderViewCell.h; sourceTree = "<group>"; };
+		4FF2BD8A227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPromotionsHeaderViewCell.m; sourceTree = "<group>"; };
+		4FF2BD8C227C24C30008BA69 /* RegisterPromotionsHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPromotionsHeaderViewCell.xib; sourceTree = "<group>"; };
 		5C3910052263492A008BEA62 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5C3910062263492A008BEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -250,6 +277,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF2BD7A227BDA390008BA69 /* AVFoundation.framework in Frameworks */,
 				665FD50ADF305E3C1AAC1673 /* Pods_FuzzyMark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +304,7 @@
 		1D2F08ED7F71978C286E10D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4FF2BD79227BDA390008BA69 /* AVFoundation.framework */,
 				6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */,
 				712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */,
 				2B298CECD2FAA81B68FE1F00 /* Pods_FuzzyMarkUITests.framework */,
@@ -379,9 +408,9 @@
 		4F50F3F22276EC3200DF7173 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
-				4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */,
-				4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */,
 				4F50F3872276E9A700DF7173 /* FMNotifiTableViewCell.h */,
+				4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */,
+				4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -410,6 +439,43 @@
 				4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */,
 			);
 			path = SystemThemes;
+			sourceTree = "<group>";
+		};
+		4FF2BD73227BD9BE0008BA69 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2BD7B227BDEA50008BA69 /* ListRegisterPromotion */,
+				4FF2BD74227BD9F70008BA69 /* FMCameraViewController.h */,
+				4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */,
+				4FF2BD76227BD9F70008BA69 /* FMCameraViewController.xib */,
+				4FF2BD87227BEC230008BA69 /* Camera.xcassets */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		4FF2BD7B227BDEA50008BA69 /* ListRegisterPromotion */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2BD7C227BDF8E0008BA69 /* FMRegisterPromotionsVC.h */,
+				4FF2BD7D227BDF8E0008BA69 /* FMRegisterPromotionsVC.m */,
+				4FF2BD7E227BDF8E0008BA69 /* FMRegisterPromotionsVC.xib */,
+				4F6553CF227DF9CE0076DEC6 /* FMRegisterPromotionsModel.h */,
+				4F6553D0227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m */,
+			);
+			path = ListRegisterPromotion;
+			sourceTree = "<group>";
+		};
+		4FF2BD81227BE7E10008BA69 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				4FF2BD82227BE83B0008BA69 /* RegisterPromotionsTableViewCell.h */,
+				4FF2BD83227BE83B0008BA69 /* RegisterPromotionsTableViewCell.m */,
+				4FF2BD84227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib */,
+				4FF2BD89227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.h */,
+				4FF2BD8A227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.m */,
+				4FF2BD8C227C24C30008BA69 /* RegisterPromotionsHeaderViewCell.xib */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		5C3910022263490B008BEA62 /* Common */ = {
@@ -563,6 +629,7 @@
 			children = (
 				4F00C81B227A06C30073B583 /* Base */,
 				4F50F3892276E9A700DF7173 /* CustomTabbar */,
+				4FF2BD73227BD9BE0008BA69 /* Camera */,
 				4F50F3732276E9A700DF7173 /* News */,
 				4F50F3812276E9A700DF7173 /* Notification */,
 				4F50F3602276E9A700DF7173 /* UserInfor */,
@@ -632,6 +699,7 @@
 		5C9862A42264E35900545DCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				4FF2BD81227BE7E10008BA69 /* Camera */,
 				4F50F3F22276EC3200DF7173 /* Notification */,
 				4F50F3F12276EBE000DF7173 /* UserInfor */,
 				4F50F3A92276EA9400DF7173 /* News */,
@@ -676,7 +744,6 @@
 				2717E9883C035E891B763CA5 /* Pods-FuzzyMarkUITests.debug.xcconfig */,
 				6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -788,6 +855,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF2BD80227BDF8E0008BA69 /* FMRegisterPromotionsVC.xib in Resources */,
 				4F50F39C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib in Resources */,
 				4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */,
 				4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */,
@@ -796,12 +864,15 @@
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
 				4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */,
 				5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */,
+				4FF2BD86227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib in Resources */,
+				4FF2BD8D227C24C30008BA69 /* RegisterPromotionsHeaderViewCell.xib in Resources */,
 				4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */,
 				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
 				5CF618532268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib in Resources */,
+				4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */,
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
@@ -814,6 +885,7 @@
 				4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */,
 				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
 				4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */,
+				4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */,
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
 				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
 				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
@@ -953,22 +1025,27 @@
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
 				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,
+				4FF2BD77227BD9F70008BA69 /* FMCameraViewController.m in Sources */,
+				4FF2BD7F227BDF8E0008BA69 /* FMRegisterPromotionsVC.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
 				4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */,
 				4F50F3992276E9A700DF7173 /* FMSecondsNewsTableViewCell.m in Sources */,
 				4F50F39D2276E9A700DF7173 /* FMNewsCollectionViewCell.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,
+				4F6553D1227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m in Sources */,
 				5C9862A32264DC8100545DCC /* CustomView.swift in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
 				4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */,
+				4FF2BD8B227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
 				5C98629F2264D8FB00545DCC /* FZHomeHeaderView.m in Sources */,
 				4F50F3972276E9A700DF7173 /* FMNewsViewController.m in Sources */,
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
+				4FF2BD85227BE83B0008BA69 /* RegisterPromotionsTableViewCell.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
