@@ -46,6 +46,11 @@
 		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
 		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
 		4F6553D1227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6553D0227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m */; };
+		4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */; };
+		4FF0149C227EA3EC0063093C /* RegisterPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149B227EA3EC0063093C /* RegisterPromotion.m */; };
+		4FF0149F227EEDAB0063093C /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149E227EEDAB0063093C /* Voucher.m */; };
+		4FF014A3227EEEBC0063093C /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF014A2227EEEBC0063093C /* Page.m */; };
+		4FF014A6227EEF6A0063093C /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF014A5227EEF6A0063093C /* Location.m */; };
 		4FF2BD77227BD9F70008BA69 /* FMCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */; };
 		4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD76227BD9F70008BA69 /* FMCameraViewController.xib */; };
 		4FF2BD7A227BDA390008BA69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2BD79227BDA390008BA69 /* AVFoundation.framework */; };
@@ -178,6 +183,17 @@
 		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
 		4F6553CF227DF9CE0076DEC6 /* FMRegisterPromotionsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRegisterPromotionsModel.h; sourceTree = "<group>"; };
 		4F6553D0227DF9CE0076DEC6 /* FMRegisterPromotionsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRegisterPromotionsModel.m; sourceTree = "<group>"; };
+		4FDACCE4227EFBCE00A8571E /* BTParseJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTParseJSON.h; sourceTree = "<group>"; };
+		4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTParseJSON.m; sourceTree = "<group>"; };
+		4FF0149A227EA3EC0063093C /* RegisterPromotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPromotion.h; sourceTree = "<group>"; };
+		4FF0149B227EA3EC0063093C /* RegisterPromotion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPromotion.m; sourceTree = "<group>"; };
+		4FF0149D227EEDAB0063093C /* Voucher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
+		4FF0149E227EEDAB0063093C /* Voucher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
+		4FF014A1227EEEBC0063093C /* Page.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
+		4FF014A2227EEEBC0063093C /* Page.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
+		4FF014A4227EEF6A0063093C /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		4FF014A5227EEF6A0063093C /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		4FF014A9227EF4FF0063093C /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		4FF2BD74227BD9F70008BA69 /* FMCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCameraViewController.h; sourceTree = "<group>"; };
 		4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCameraViewController.m; sourceTree = "<group>"; };
 		4FF2BD76227BD9F70008BA69 /* FMCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMCameraViewController.xib; sourceTree = "<group>"; };
@@ -441,9 +457,42 @@
 			path = SystemThemes;
 			sourceTree = "<group>";
 		};
+		4FDACCE1227EF55500A8571E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4FF014A9227EF4FF0063093C /* Constant.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		4FDACCE3227EFB9E00A8571E /* ParseJson */ = {
+			isa = PBXGroup;
+			children = (
+				4FDACCE4227EFBCE00A8571E /* BTParseJSON.h */,
+				4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */,
+			);
+			path = ParseJson;
+			sourceTree = "<group>";
+		};
+		4FF01499227EA39D0063093C /* Obj */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0149A227EA3EC0063093C /* RegisterPromotion.h */,
+				4FF0149B227EA3EC0063093C /* RegisterPromotion.m */,
+				4FF0149D227EEDAB0063093C /* Voucher.h */,
+				4FF0149E227EEDAB0063093C /* Voucher.m */,
+				4FF014A1227EEEBC0063093C /* Page.h */,
+				4FF014A2227EEEBC0063093C /* Page.m */,
+				4FF014A4227EEF6A0063093C /* Location.h */,
+				4FF014A5227EEF6A0063093C /* Location.m */,
+			);
+			path = Obj;
+			sourceTree = "<group>";
+		};
 		4FF2BD73227BD9BE0008BA69 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				4FF01499227EA39D0063093C /* Obj */,
 				4FF2BD7B227BDEA50008BA69 /* ListRegisterPromotion */,
 				4FF2BD74227BD9F70008BA69 /* FMCameraViewController.h */,
 				4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */,
@@ -481,6 +530,8 @@
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4FDACCE3227EFB9E00A8571E /* ParseJson */,
+				4FDACCE1227EF55500A8571E /* Constant */,
 				4F50F3A52276EA5B00DF7173 /* CommonFunction */,
 				5C9862A12264DC1900545DCC /* CustomeView */,
 				5C39100322634914008BEA62 /* API */,
@@ -1020,8 +1071,10 @@
 				4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */,
 				4F00C81E227A06FF0073B583 /* FMBaseViewController.m in Sources */,
 				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
+				4FF0149C227EA3EC0063093C /* RegisterPromotion.m in Sources */,
 				5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */,
 				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
+				4FF014A6227EEF6A0063093C /* Location.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
@@ -1040,9 +1093,11 @@
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
 				4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */,
+				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,
 				4FF2BD8B227C248D0008BA69 /* RegisterPromotionsHeaderViewCell.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
+				4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */,
 				5C98629F2264D8FB00545DCC /* FZHomeHeaderView.m in Sources */,
 				4F50F3972276E9A700DF7173 /* FMNewsViewController.m in Sources */,
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
@@ -1052,6 +1107,7 @@
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
+				4FF014A3227EEEBC0063093C /* Page.m in Sources */,
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,

@@ -9,13 +9,24 @@
 #import "FMRegisterPromotionsVC.h"
 #import "RegisterPromotionsTableViewCell.h"
 #import "RegisterPromotionsHeaderViewCell.h"
+#import "FMRegisterPromotionsModel.h"
 
 @interface FMRegisterPromotionsVC () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
+@property (strong, nonatomic) FMRegisterPromotionsModel *model;
 
 @end
 
 @implementation FMRegisterPromotionsVC
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.model = [[FMRegisterPromotionsModel alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
