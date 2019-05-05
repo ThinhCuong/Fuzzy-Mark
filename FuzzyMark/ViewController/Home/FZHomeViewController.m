@@ -9,11 +9,13 @@
 #import "FZHomeViewController.h"
 #import "FZHomeModel.h"
 #import "FZHomeHeaderView.h"
+#import "BaseCallApi.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
+
 @end
 
 @implementation FZHomeViewController
@@ -25,6 +27,7 @@
     self.tableView.delegate = self;
     self.dataModel = [[FZHomeModel alloc] init];
     [self.dataModel registerCellForTableView:self.tableView];
+    [self testApi];
     
 }
 
@@ -70,6 +73,20 @@
         return 5;
     }
     return 0;
+}
+
+- (void)testApi {
+    BaseCallApi *temp = [[BaseCallApi alloc] initWithBaseURL];
+    NSDictionary *params = @{
+                             @"token": @"abd",
+                             };
+    [temp getDataWithPath:@"vouchers/search" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        if (responseData) {
+            
+        }
+    } withFailBlock:^(id responseError) {
+        
+    }];
 }
 
 @end
