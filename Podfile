@@ -20,3 +20,4 @@ target 'FuzzyMark' do
 end
 
 pod 'HMSegmentedControl'
+pod 'JSONModel'

@@ -1,16 +1,20 @@
 PODS:
   - HMSegmentedControl (1.5.5)
+  - JSONModel (1.8.0)
 
 DEPENDENCIES:
   - HMSegmentedControl
+  - JSONModel
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - HMSegmentedControl
+    - JSONModel
 
 SPEC CHECKSUMS:
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
 
-PODFILE CHECKSUM: d7d08c48c28a825fb5b95836a67a490b89e84a35
+PODFILE CHECKSUM: c49644fd03f67075297af25af98d3cc07cbd497c
 
 COCOAPODS: 1.6.1
