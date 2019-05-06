@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[FMUserInforViewController didSelectButtonHistory]:FMUserInforViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FMHistoryBillViewController setupSegmentControl]:FMHistoryBillViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.contentSegmentView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMTableViewCell binData:]:FMTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "self.lblName.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__64-[FMItemHistoryBillModel getListHistoryCaptureWithSuccessBlock:]_block_invoke:FMItemHistoryBillModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listData">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMItemHistoryBillVC tableView:cellForRowAtIndexPath:]:FMItemHistoryBillVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FMTableViewCell initWithCoder:]:FMTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imgBanner">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMUserInforViewController didSelectBlockCell:]:FMUserInforViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "cell.typeBlock">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

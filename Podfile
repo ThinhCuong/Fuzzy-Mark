@@ -20,3 +20,6 @@ target 'FuzzyMark' do
 end
 
 pod 'HMSegmentedControl'
+pod 'JSONModel'
+platform :ios, '8.0'
+pod 'SDWebImage', '~> 5.0'

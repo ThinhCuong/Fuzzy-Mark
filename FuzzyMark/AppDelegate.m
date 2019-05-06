@@ -28,7 +28,7 @@
     
     [self initViewController];
     
-    NSArray *listViewController = @[self.naviHomeController, self.FMNaviSearchController, self.FMNaviCameraController, self.naviNotifiController, self.naviUserInforController];
+    NSArray *listViewController = @[self.naviHomeController, self.FMNaviSearchController, self.naviRegisterPromotions, self.naviNotifiController, self.naviUserInforController];
     
     [self.tabbarController setViewControllers:listViewController];
     
@@ -54,20 +54,21 @@
     self.FMNaviSearchController.tabBarItem = tabbarItemSeach;
     
     // init Camera
-    self.FMCameraViewController = [[UIViewController alloc] init];
-    self.FMNaviCameraController = [[UINavigationController alloc] initWithRootViewController:self.FMNaviCameraController];
+    self.registerPromotiosVC = [[UIViewController alloc] init];
+    self.naviRegisterPromotions = [[UINavigationController alloc] initWithRootViewController:self.registerPromotiosVC];
     UITabBarItem *tabbarItemCamera = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_camera_tb"] selectedImage:[UIImage imageNamed:@"ic_camera_tb"]];
-    self.FMNaviCameraController.tabBarItem = tabbarItemCamera;
+    self.naviRegisterPromotions.tabBarItem = tabbarItemCamera;
+    self.naviRegisterPromotions.delegate = self;
     
     // init Notifi
-    self.notifiViewController = [[FMNotifiViewController alloc] initWithNibName:@"FMNotifiViewController" bundle:nil];
+    self.notifiViewController = [[FMNotifiViewController alloc] init];
     self.naviNotifiController = [[UINavigationController alloc] initWithRootViewController:self.notifiViewController];
     UITabBarItem *tabbarItemNotifi = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_bell_tb"] selectedImage:[UIImage imageNamed:@"ic_bell_tb"]];
     self.naviNotifiController.tabBarItem = tabbarItemNotifi;
     self.naviNotifiController.delegate = self;
     
     // init User
-    self.userInforViewController = [[FMUserInforViewController alloc] initWithNibName:@"FMUserInforViewController" bundle:nil];
+    self.userInforViewController = [[FMUserInforViewController alloc] init];
     self.naviUserInforController = [[UINavigationController alloc] initWithRootViewController:self.userInforViewController];
     UITabBarItem *tabbarItemUserInfor = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_user_tb"] selectedImage:[UIImage imageNamed:@"ic_user_tb"]];
     self.naviUserInforController.tabBarItem = tabbarItemUserInfor;

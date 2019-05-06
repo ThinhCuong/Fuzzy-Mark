@@ -23,7 +23,7 @@
         // Fallback on earlier versions
     }
     UINavigationBar.appearance.titleTextAttributes = @{NSFontAttributeName:[UIFont setBoldFontMuliWithSize:14], NSForegroundColorAttributeName:[UIColor blackColor]};
-    UIImage *backImage = [UIImage imageNamed:@"ic_back"];
+    UIImage *backImage = [UIImage imageNamed:@"ic_back_nv"];
     backImage = [backImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UINavigationBar.appearance.barTintColor = UIColor.whiteColor;
     UINavigationBar.appearance.backIndicatorImage = backImage;

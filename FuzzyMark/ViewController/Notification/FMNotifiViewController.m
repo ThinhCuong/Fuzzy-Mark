@@ -25,6 +25,7 @@
 
 #pragma mark - private
 - (void)setNavigationBar {
+    self.isHideNavigationBar = NO;
     self.navigationItem.title = @"Thông báo";
     [self addRightButtonNavigationBar];
 }

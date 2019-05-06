@@ -10,8 +10,9 @@
 #import "FMUserInforModel.h"
 #import "FMMenuTabbleViewCell.h"
 #import "FMUserInforTableViewCell.h"
+#import "FMHistoryBillViewController.h"
 
-@interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
 @property (strong, nonatomic) FMUserInforModel *model;
 @end
@@ -60,8 +61,46 @@
     [self.tableViewContent endUpdates];
 }
 
-#pragma mark - IBAction
-- (IBAction)didSelectBackButton:(id)sender {
+- (void)didSelectBlockCell:(FMMenuTabbleViewCell *) cell {
+    if(!cell) {
+        return;
+    }
+    switch (cell.typeBlock) {
+        case FMTableViewCellBlockFavoritePlaces:
+            
+            break;
+        case FMTableViewCellBlockUserInfor:
+            
+            break;
+        case FMTableViewCellBlockChangePassWord:
+            
+            break;
+        case FMTableViewCellBlockChangePhoneNumber:
+            
+            break;
+        case FMTableViewCellBlockPoliciesAndTerms:
+            
+            break;
+        case FMTableViewCellBlockLogOut:
+            
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - FMUserInforTableViewCellProtocol
+- (void)didSelectButtonHistory {
+    FMHistoryBillViewController *vc = [[FMHistoryBillViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)didSelectButtonPoint {
+    
+}
+
+- (void)didSelectButtonAddImageUser {
     
 }
 
@@ -84,7 +123,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return [tableView dequeueReusableCellWithIdentifier:@"cellUser"];
+        FMUserInforTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellUser"];
+        cell.delegate = self;
+        return cell;
     } else {
         FMMenuTabbleViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellMenu"];
         [cell binDataWith:_listMenuBlock[indexPath.section - 1][indexPath.row]];
@@ -122,6 +163,13 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // Click Cell User
+    if(indexPath.section == 0 && indexPath.row == 0) {
+        return;
+    }
+    // Click Cell Block
+    [self didSelectBlockCell:[tableView cellForRowAtIndexPath:indexPath]];
+    
 }
 
 @end

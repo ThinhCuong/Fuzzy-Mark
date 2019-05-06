@@ -27,14 +27,14 @@ API_AVAILABLE(ios(10.0))
 @property (strong, nonatomic) FMTabBarController *tabbarController;
 @property (strong, nonatomic) UINavigationController *naviHomeController;
 @property (strong, nonatomic) UINavigationController *FMNaviSearchController;
-@property (strong, nonatomic) UINavigationController *FMNaviCameraController;
+@property (strong, nonatomic) UINavigationController *naviRegisterPromotions;
 @property (strong, nonatomic) UINavigationController *naviNotifiController;
 @property (strong, nonatomic) UINavigationController *naviUserInforController;
 
 // UIViewController
 @property (strong, nonatomic) FZHomeViewController *homeViewController;
 @property (strong, nonatomic) UIViewController *FMSearchViewController;
-@property (strong, nonatomic) UIViewController *FMCameraViewController;
+@property (strong, nonatomic) UIViewController *registerPromotiosVC;
 @property (strong, nonatomic) FMNotifiViewController *notifiViewController;
 @property (strong, nonatomic) FMUserInforViewController *userInforViewController;
 
