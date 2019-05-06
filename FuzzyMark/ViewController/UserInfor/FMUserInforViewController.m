@@ -10,6 +10,7 @@
 #import "FMUserInforModel.h"
 #import "FMMenuTabbleViewCell.h"
 #import "FMUserInforTableViewCell.h"
+#import "FMHistoryBillViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -90,7 +91,9 @@
 
 #pragma mark - FMUserInforTableViewCellProtocol
 - (void)didSelectButtonHistory {
-    
+    FMHistoryBillViewController *vc = [[FMHistoryBillViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didSelectButtonPoint {
@@ -120,7 +123,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return [tableView dequeueReusableCellWithIdentifier:@"cellUser"];
+        FMUserInforTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellUser"];
+        cell.delegate = self;
+        return cell;
     } else {
         FMMenuTabbleViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellMenu"];
         [cell binDataWith:_listMenuBlock[indexPath.section - 1][indexPath.row]];

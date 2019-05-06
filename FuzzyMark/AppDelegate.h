@@ -13,7 +13,6 @@
 #import "FMNotifiViewController.h"
 #import "FMUserInforViewController.h"
 #import "FZHomeViewController.h"
-#import "FMRegisterPromotionsVC.h"
 
 API_AVAILABLE(ios(10.0))
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
@@ -35,7 +34,7 @@ API_AVAILABLE(ios(10.0))
 // UIViewController
 @property (strong, nonatomic) FZHomeViewController *homeViewController;
 @property (strong, nonatomic) UIViewController *FMSearchViewController;
-@property (strong, nonatomic) FMRegisterPromotionsVC *registerPromotiosVC;
+@property (strong, nonatomic) UIViewController *registerPromotiosVC;
 @property (strong, nonatomic) FMNotifiViewController *notifiViewController;
 @property (strong, nonatomic) FMUserInforViewController *userInforViewController;
 

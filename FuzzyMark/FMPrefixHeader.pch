@@ -21,3 +21,4 @@
 #import "JSONModel.h"
 #import "BTParseJSON.h"
 #import "FMBaseViewController.h"
+#import <SDWebImage/SDWebImage.h>

@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RegisterPromotion : JSONModel
+@interface HistoryBill : JSONModel
 
 @property (strong, nonatomic) NSString <Optional> *transaction_id;
 @property (strong, nonatomic) NSNumber <Optional> *status;

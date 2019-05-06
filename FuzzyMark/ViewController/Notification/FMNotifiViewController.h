@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMNotifiViewController : UIViewController
+@interface FMNotifiViewController : FMBaseViewController
 
 @end
 

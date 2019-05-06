@@ -7,7 +7,7 @@
 //
 
 #import "FMItemHistoryBillModel.h"
-#import "RegisterPromotion.h"
+#import "HistoryBill.h"
 
 @implementation FMItemHistoryBillModel {
     BaseCallApi *_httpClient;
@@ -18,6 +18,7 @@
     self = [super init];
     if (self) {
         _httpClient = [[BaseCallApi alloc] initWithBaseURL];
+        self.listData = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -31,7 +32,7 @@
                 NSArray *data = [json arrayForKey:@"data"];
                 if(data.count > 0 && data) {
                     for (NSDictionary *dict in data) {
-                        RegisterPromotion *item = [[RegisterPromotion alloc] initWithDictionary:dict error:nil];
+                        HistoryBill *item = [[HistoryBill alloc] initWithDictionary:dict error:nil];
                         [self.listData addObject:item];
                     }
                 }

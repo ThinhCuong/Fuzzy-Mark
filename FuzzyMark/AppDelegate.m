@@ -54,7 +54,7 @@
     self.FMNaviSearchController.tabBarItem = tabbarItemSeach;
     
     // init Camera
-    self.registerPromotiosVC = [[FMRegisterPromotionsVC alloc] init];
+    self.registerPromotiosVC = [[UIViewController alloc] init];
     self.naviRegisterPromotions = [[UINavigationController alloc] initWithRootViewController:self.registerPromotiosVC];
     UITabBarItem *tabbarItemCamera = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_camera_tb"] selectedImage:[UIImage imageNamed:@"ic_camera_tb"]];
     self.naviRegisterPromotions.tabBarItem = tabbarItemCamera;

@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RegisterPromotion.h"
+#import "HistoryBill.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMTableViewCell : UITableViewCell
-
+- (void)binData:(HistoryBill *) model;
 @end
 
 NS_ASSUME_NONNULL_END

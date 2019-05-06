@@ -6,8 +6,8 @@
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
-#import "RegisterPromotion.h"
+#import "HistoryBill.h"
 
-@implementation RegisterPromotion
+@implementation HistoryBill
 
 @end
