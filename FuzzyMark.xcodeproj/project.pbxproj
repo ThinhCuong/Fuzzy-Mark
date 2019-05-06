@@ -69,6 +69,8 @@
 		5C6BFAEB225D668800A26400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAEA225D668800A26400 /* main.m */; };
 		5C6BFAF5225D668900A26400 /* FuzzyMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAF4225D668900A26400 /* FuzzyMarkTests.m */; };
 		5C6BFB00225D668900A26400 /* FuzzyMarkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */; };
+		5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */; };
+		5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */; };
 		5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AD2263664000C124CE /* FZHomeViewController.m */; };
 		5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */; };
 		5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9862882264CBE700545DCC /* FZHomeModel.m */; };
@@ -82,8 +84,6 @@
 		5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */; };
 		5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */; };
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
-		5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF618502268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m */; };
-		5CF618532268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF618512268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib */; };
 		665FD50ADF305E3C1AAC1673 /* Pods_FuzzyMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */; };
 		6E9502D3BD7037924ED9F965 /* Pods_FuzzyMarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */; };
 		F7A38270E28A20FBC8BC0939 /* Pods_FuzzyMarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B298CECD2FAA81B68FE1F00 /* Pods_FuzzyMarkUITests.framework */; };
@@ -214,6 +214,9 @@
 		5C6BFAFB225D668900A26400 /* FuzzyMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzyMarkUITests.m; sourceTree = "<group>"; };
 		5C6BFB01225D668900A26400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C87BDD1227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemMenuVerticalTableViewCell.h; sourceTree = "<group>"; };
+		5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemMenuVerticalTableViewCell.m; sourceTree = "<group>"; };
+		5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemMenuVerticalTableViewCell.xib; sourceTree = "<group>"; };
 		5C8EC2AC2263664000C124CE /* FZHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeViewController.h; sourceTree = "<group>"; };
 		5C8EC2AD2263664000C124CE /* FZHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeViewController.m; sourceTree = "<group>"; };
 		5C8EC2AE2263664000C124CE /* FZHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHomeViewController.xib; sourceTree = "<group>"; };
@@ -233,9 +236,6 @@
 		5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		5CF6184F2268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
-		5CF618502268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
-		5CF618512268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMarkUITests.release.xcconfig"; path = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests.release.xcconfig"; sourceTree = "<group>"; };
 		712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -659,9 +659,9 @@
 				5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */,
 				5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */,
 				5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */,
-				5CF6184F2268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.h */,
-				5CF618502268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m */,
-				5CF618512268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib */,
+				5C87BDD1227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.h */,
+				5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */,
+				5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -676,7 +676,6 @@
 				2717E9883C035E891B763CA5 /* Pods-FuzzyMarkUITests.debug.xcconfig */,
 				6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -801,11 +800,11 @@
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
-				5CF618532268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib in Resources */,
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
+				5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */,
 				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
 				4F50F4012276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf in Resources */,
 				5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */,
@@ -946,7 +945,6 @@
 				4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */,
 				4F00C81E227A06FF0073B583 /* FMBaseViewController.m in Sources */,
 				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
-				5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */,
 				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
@@ -974,6 +972,7 @@
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
+				5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,

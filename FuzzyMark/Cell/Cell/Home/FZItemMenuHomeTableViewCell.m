@@ -8,10 +8,14 @@
 
 #import "FZItemMenuHomeTableViewCell.h"
 #import "FZMenuHomeCollectionViewCell.h"
+#import "FZItemMenuVerticalTableViewCell.h"
 
-@interface FZItemMenuHomeTableViewCell()
+@interface FZItemMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate>
+
 @property (strong, nonatomic) IBOutlet UICollectionView *menuCollectionView;
-@property (strong, nonatomic) IBOutlet UICollectionView *itemMenuCollectionView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *heightOfColectionView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *heightOfTableView;
 
 @end
 
@@ -21,12 +25,47 @@
     [super awakeFromNib];
     // Initialization code
     [self.menuCollectionView registerNib:[UINib nibWithNibName:@"FZMenuHomeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FZMenuHomeCollectionViewCell"];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"FZItemMenuVerticalTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuVerticalTableViewCell"];
+    
+    self.menuCollectionView.dataSource = self;
+    self.menuCollectionView.delegate = self;
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+}
+
+- (void)bindData {
+    _heightOfTableView.constant = 95 * 2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    FZMenuHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FZMenuHomeCollectionViewCell" forIndexPath:indexPath];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGSize cellSize = CGSizeMake(collectionView.bounds.size.width - 100, collectionView.bounds.size.height);
+    return cellSize;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    FZItemMenuVerticalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuVerticalTableViewCell"];
+    return cell;
 }
 
 @end

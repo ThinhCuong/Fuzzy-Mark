@@ -9,6 +9,7 @@
 #import "FZHomeModel.h"
 #import "FZMenuHomeTableViewCell.h"
 #import "FZItemMenuHomeTableViewCell.h"
+#import "FZItemMenuVerticalTableViewCell.h"
 
 @implementation FZHomeModel
 
@@ -25,6 +26,7 @@
     [tableView registerNib:[UINib nibWithNibName:@"FZHomeHeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:@"FZHomeHeaderView"];
     [tableView registerNib:[UINib nibWithNibName:@"FZMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZMenuHomeTableViewCell"];
     [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuHomeTableViewCell"];
+    [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuVerticalTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuVerticalTableViewCell"];
 }
 
 - (NSInteger )numberOfSectionsInTableView {
@@ -36,9 +38,8 @@
         case 0:
             return 1;
             break;
-            
         default:
-            return 1;
+            return 2;
             break;
     }
 }
@@ -49,6 +50,7 @@
         return menuHomeCell;
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];
+        [itemMenuHomeCell bindData];
         return itemMenuHomeCell;
     }
 }

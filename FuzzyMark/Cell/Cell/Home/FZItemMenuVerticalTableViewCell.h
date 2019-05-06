@@ -1,8 +1,8 @@
 //
-//  FZItemMenuHomeCollectionViewCell.h
+//  FZItemMenuVerticalTableViewCell.h
 //  FuzzyMark
 //
-//  Created by Nguyen Cuong on 4/18/19.
+//  Created by Nguyen Cuong on 5/5/19.
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FZItemMenuHomeCollectionViewCell : UICollectionViewCell
+@interface FZItemMenuVerticalTableViewCell : UITableViewCell
 
 @end
 

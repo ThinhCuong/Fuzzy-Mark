@@ -82,7 +82,7 @@
                              };
     [temp getDataWithPath:@"vouchers/search" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
         if (responseData) {
-            
+            [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {
         
