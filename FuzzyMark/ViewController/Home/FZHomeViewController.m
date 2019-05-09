@@ -10,11 +10,14 @@
 #import "FZHomeModel.h"
 #import "FZHomeHeaderView.h"
 #import "BaseCallApi.h"
+#import "FZHomeJsonModel.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
+@property (strong, nonatomic) NSArray *listBanner;
+@property (nonatomic, strong) NSMutableArray<FZGroupJsonModel> *groups;
 
 @end
 
@@ -80,8 +83,9 @@
     NSDictionary *params = @{
                              @"token": @"abd",
                              };
-    [temp getDataWithPath:@"vouchers/search" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+    [temp getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
         if (responseData) {
+            FZHomeJsonModel *dataTemp = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {

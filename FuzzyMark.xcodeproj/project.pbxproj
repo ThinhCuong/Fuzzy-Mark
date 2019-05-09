@@ -86,6 +86,7 @@
 		5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910272263492A008BEA62 /* AFNetworkReachabilityManager.m */; };
 		5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910282263492A008BEA62 /* AFSecurityPolicy.m */; };
 		5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39103D226349F8008BEA62 /* BaseCallApi.m */; };
+		5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */; };
 		5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE1225D668600A26400 /* FuzzyMark.xcdatamodeld */; };
 		5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE4225D668800A26400 /* Assets.xcassets */; };
 		5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */; };
@@ -261,6 +262,8 @@
 		5C3910292263492A008BEA62 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		5C39103C226349F8008BEA62 /* BaseCallApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCallApi.h; sourceTree = "<group>"; };
 		5C39103D226349F8008BEA62 /* BaseCallApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCallApi.m; sourceTree = "<group>"; };
+		5C61443E227FDF2600582AF7 /* FZHomeJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeJsonModel.h; sourceTree = "<group>"; };
+		5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeJsonModel.m; sourceTree = "<group>"; };
 		5C6BFAD5225D668600A26400 /* FuzzyMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAE2225D668600A26400 /* FuzzyMark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuzzyMark.xcdatamodel; sourceTree = "<group>"; };
 		5C6BFAE4225D668800A26400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -559,6 +562,8 @@
 			children = (
 				5C9862872264CBE700545DCC /* FZHomeModel.h */,
 				5C9862882264CBE700545DCC /* FZHomeModel.m */,
+				5C61443E227FDF2600582AF7 /* FZHomeJsonModel.h */,
+				5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -994,7 +999,6 @@
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
-				5CF618532268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.xib in Resources */,
 				4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */,
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
@@ -1141,6 +1145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */,
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
@@ -1152,7 +1157,6 @@
 				4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */,
 				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
 				4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */,
-				5CF618522268BEDE00E31155 /* FZItemMenuHomeCollectionViewCell.m in Sources */,
 				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
 				4FF014A6227EEF6A0063093C /* Location.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
