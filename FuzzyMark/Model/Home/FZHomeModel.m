@@ -11,6 +11,11 @@
 #import "FZItemMenuHomeTableViewCell.h"
 #import "FZItemMenuVerticalTableViewCell.h"
 
+@interface FZHomeModel() {
+    FZHomeJsonModel *_homeData;
+}
+
+@end
 @implementation FZHomeModel
 
 - (instancetype)init
@@ -27,6 +32,10 @@
     [tableView registerNib:[UINib nibWithNibName:@"FZMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZMenuHomeTableViewCell"];
     [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuHomeTableViewCell"];
     [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuVerticalTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuVerticalTableViewCell"];
+}
+
+- (void)bindData:(FZHomeJsonModel *)homeData {
+    _homeData = homeData;
 }
 
 - (NSInteger )numberOfSectionsInTableView {
@@ -47,6 +56,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FZMenuHomeTableViewCell *menuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZMenuHomeTableViewCell"];
+        [menuHomeCell bindData:_homeData.banners];
         return menuHomeCell;
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];

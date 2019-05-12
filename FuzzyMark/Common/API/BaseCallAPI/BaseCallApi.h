@@ -11,7 +11,9 @@
 
 @interface BaseCallApi : AFHTTPSessionManager
 
-- (instancetype)initWithBaseURL;
++ (BaseCallApi *)defaultInitWithBaseURL;
+
+- (instancetype)initWithBaseURL:(NSString *)baseUrl;
 
 - (void)getDataWithPath:(NSString *)path
                andParam:(NSDictionary*)param

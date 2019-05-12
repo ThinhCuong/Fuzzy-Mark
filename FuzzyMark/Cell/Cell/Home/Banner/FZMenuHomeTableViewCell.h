@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FZHomeJsonModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
+
+- (void)bindData:(NSArray<FZBannerModel> *)listBanner;
 
 @end
 

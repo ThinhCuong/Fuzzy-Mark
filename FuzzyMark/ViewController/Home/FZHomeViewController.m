@@ -12,6 +12,7 @@
 #import "BaseCallApi.h"
 #import "FZHomeJsonModel.h"
 
+
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -28,9 +29,9 @@
     self.isHideNavigationBar = YES;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    [self testApi];
     self.dataModel = [[FZHomeModel alloc] init];
     [self.dataModel registerCellForTableView:self.tableView];
-    [self testApi];
     
 }
 
@@ -79,13 +80,15 @@
 }
 
 - (void)testApi {
-    BaseCallApi *temp = [[BaseCallApi alloc] initWithBaseURL];
+    
     NSDictionary *params = @{
                              @"token": @"abd",
                              };
-    [temp getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+    
+    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
         if (responseData) {
-            FZHomeJsonModel *dataTemp = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
+            FZHomeJsonModel *homeData = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
+            [self.dataModel bindData:homeData];
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {

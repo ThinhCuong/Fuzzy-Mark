@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FZHomeViewController.h"
+#import "FZHomeJsonModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger )numberOfSectionsInTableView;
 - (NSInteger )numberOfRowsInSection:(NSInteger )section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+
+- (void)bindData:(FZHomeJsonModel *)homeData;
 
 @end
 

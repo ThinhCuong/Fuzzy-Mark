@@ -19,19 +19,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="402.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eIk-43-iEa">
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eIk-43-iEa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
-                        <color key="backgroundColor" red="0.20000000000000001" green="1" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="1L1-XG-V2A"/>
                         </constraints>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8ky-bM-xHg">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jzs-2n-BIU">
                             <size key="itemSize" width="50" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" defersCurrentPageDisplay="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="aeO-ho-VAu">
+                        <rect key="frame" x="140.5" y="76" width="39" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="BWd-T3-MF2"/>
+                        </constraints>
+                        <color key="pageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="currentPageIndicatorTintColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                    </pageControl>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l58-LW-4gp">
                         <rect key="frame" x="0.0" y="96" width="320" height="85"/>
                         <subviews>
@@ -363,6 +370,8 @@
                     <constraint firstItem="hiZ-Vq-u55" firstAttribute="top" secondItem="aGI-05-BiU" secondAttribute="bottom" constant="5" id="fi3-Md-UzX"/>
                     <constraint firstItem="l58-LW-4gp" firstAttribute="leading" secondItem="eIk-43-iEa" secondAttribute="leading" id="j23-nw-fbZ"/>
                     <constraint firstItem="l58-LW-4gp" firstAttribute="trailing" secondItem="eIk-43-iEa" secondAttribute="trailing" id="kk3-fs-wWT"/>
+                    <constraint firstItem="aeO-ho-VAu" firstAttribute="centerX" secondItem="eIk-43-iEa" secondAttribute="centerX" id="lff-GP-LrR"/>
+                    <constraint firstItem="aeO-ho-VAu" firstAttribute="bottom" secondItem="eIk-43-iEa" secondAttribute="bottom" id="oAH-n5-MXM"/>
                     <constraint firstItem="aGI-05-BiU" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-32" id="xQU-0H-Ghk"/>
                     <constraint firstItem="eIk-43-iEa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xrB-Wx-79S"/>
                 </constraints>
@@ -370,6 +379,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="bannerCollectionView" destination="eIk-43-iEa" id="ieJ-UU-ro4"/>
+                <outlet property="pageControl" destination="aeO-ho-VAu" id="o1G-yJ-jWo"/>
             </connections>
             <point key="canvasLocation" x="139.13043478260872" y="184.48660714285714"/>
         </tableViewCell>

@@ -16,8 +16,17 @@
 
 @implementation BaseCallApi
 
-- (instancetype)initWithBaseURL {
-    self = [super initWithBaseURL:[NSURL URLWithString:@"https://devtools-ntt.herokuapp.com/api/FuzzyMark/"]];
++ (BaseCallApi *)defaultInitWithBaseURL {
+    static BaseCallApi *defaultInitWithBaseURL = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"https://devtools-ntt.herokuapp.com/api/FuzzyMark/"];
+    });
+    return defaultInitWithBaseURL;
+}
+
+- (instancetype)initWithBaseURL:(NSString *)baseUrl{
+    self = [super initWithBaseURL:[NSURL URLWithString:baseUrl]];
     if (self) {
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
