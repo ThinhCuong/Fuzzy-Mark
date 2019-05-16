@@ -33,11 +33,13 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     _segmentedControl.frame = self.contentSegmentView.bounds;
+    _pageViewController.view.frame = self.contentPageView.bounds;
 }
 
 - (void)setNavigationBar {
     self.navigationItem.title = @"Lịch sử chụp hoá đơn";
     self.navigationController.navigationBar.topItem.title = @"";
+    self.isHideNavigationBar = NO;
     [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
 }
