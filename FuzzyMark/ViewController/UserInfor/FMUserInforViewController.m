@@ -11,6 +11,7 @@
 #import "FMMenuTabbleViewCell.h"
 #import "FMUserInforTableViewCell.h"
 #import "FMHistoryBillViewController.h"
+#import "FMHistoryPointViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -97,7 +98,9 @@
 }
 
 - (void)didSelectButtonPoint {
-    
+    FMHistoryPointViewController *vc = [[FMHistoryPointViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didSelectButtonAddImageUser {

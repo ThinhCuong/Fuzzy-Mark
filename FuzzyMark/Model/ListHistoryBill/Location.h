@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Location : JSONModel
 
-@property (strong, nonatomic) NSNumber <Optional> *lat;
-@property (strong, nonatomic) NSNumber <Optional> *lng;
+@property (nonatomic) CGFloat lat;
+@property (nonatomic) CGFloat lng;
 
 @end
 

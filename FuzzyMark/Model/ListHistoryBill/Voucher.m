@@ -9,12 +9,11 @@
 #import "Voucher.h"
 
 @implementation Voucher
-- (instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
-    self = [super initWithDictionary:dict error:err];
-    if(self) {
-        self.descriptions = dict[@"description"]?:@"";
-    }
-    return self;
+
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"idVoucher": @"id", @"descriptionVoucher": @"description"
+                                                                  }];
 }
 
 

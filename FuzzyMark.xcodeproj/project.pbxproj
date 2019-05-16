@@ -44,12 +44,19 @@
 		4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FD2276EDBC00DF7173 /* Muli.ttf */; };
 		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
 		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
+		4FBD3D83228D974300E76E2A /* FMHistoryPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D81228D974300E76E2A /* FMHistoryPointViewController.m */; };
+		4FBD3D84228D974300E76E2A /* FMHistoryPointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D82228D974300E76E2A /* FMHistoryPointViewController.xib */; };
+		4FBD3D8C228D9A5100E76E2A /* HistoryPointTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D8A228D9A5100E76E2A /* HistoryPointTableViewCell.m */; };
+		4FBD3D8D228D9A5100E76E2A /* HistoryPointTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D8B228D9A5100E76E2A /* HistoryPointTableViewCell.xib */; };
+		4FBD3D90228D9C8800E76E2A /* FMHistoryPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D8F228D9C8800E76E2A /* FMHistoryPointModel.m */; };
+		4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D92228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m */; };
+		4FBD3D95228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D93228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib */; };
 		4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */; };
 		4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCF4227F577200A8571E /* FMHistoryBillViewController.m */; };
 		4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACCF5227F577200A8571E /* FMHistoryBillViewController.xib */; };
 		4FDACCFC227F5A0100A8571E /* FMItemHistoryBillVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */; };
 		4FDACCFD227F5A0100A8571E /* FMItemHistoryBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACCFB227F5A0100A8571E /* FMItemHistoryBillVC.xib */; };
-		4FDACD02227F5AA500A8571E /* FMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD00227F5AA500A8571E /* FMTableViewCell.m */; };
+		4FDACD02227F5AA500A8571E /* HistoryBillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD00227F5AA500A8571E /* HistoryBillTableViewCell.m */; };
 		4FDACD03227F5AA500A8571E /* HistoryBillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD01227F5AA500A8571E /* HistoryBillTableViewCell.xib */; };
 		4FDACD05227F5BE000A8571E /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD04227F5BE000A8571E /* Muli-Black.ttf */; };
 		4FDACD08227F5D0F00A8571E /* FMHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD07227F5D0F00A8571E /* FMHeaderViewCell.m */; };
@@ -189,6 +196,17 @@
 		4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
 		4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
 		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
+		4FBD3D80228D974300E76E2A /* FMHistoryPointViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHistoryPointViewController.h; sourceTree = "<group>"; };
+		4FBD3D81228D974300E76E2A /* FMHistoryPointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMHistoryPointViewController.m; sourceTree = "<group>"; };
+		4FBD3D82228D974300E76E2A /* FMHistoryPointViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMHistoryPointViewController.xib; sourceTree = "<group>"; };
+		4FBD3D89228D9A5100E76E2A /* HistoryPointTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryPointTableViewCell.h; sourceTree = "<group>"; };
+		4FBD3D8A228D9A5100E76E2A /* HistoryPointTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryPointTableViewCell.m; sourceTree = "<group>"; };
+		4FBD3D8B228D9A5100E76E2A /* HistoryPointTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPointTableViewCell.xib; sourceTree = "<group>"; };
+		4FBD3D8E228D9C8800E76E2A /* FMHistoryPointModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHistoryPointModel.h; sourceTree = "<group>"; };
+		4FBD3D8F228D9C8800E76E2A /* FMHistoryPointModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMHistoryPointModel.m; sourceTree = "<group>"; };
+		4FBD3D91228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryPointHeaderTableViewCell.h; sourceTree = "<group>"; };
+		4FBD3D92228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryPointHeaderTableViewCell.m; sourceTree = "<group>"; };
+		4FBD3D93228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPointHeaderTableViewCell.xib; sourceTree = "<group>"; };
 		4FDACCE4227EFBCE00A8571E /* BTParseJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTParseJSON.h; sourceTree = "<group>"; };
 		4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTParseJSON.m; sourceTree = "<group>"; };
 		4FDACCF3227F577200A8571E /* FMHistoryBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHistoryBillViewController.h; sourceTree = "<group>"; };
@@ -197,8 +215,8 @@
 		4FDACCF9227F5A0100A8571E /* FMItemHistoryBillVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMItemHistoryBillVC.h; sourceTree = "<group>"; };
 		4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMItemHistoryBillVC.m; sourceTree = "<group>"; };
 		4FDACCFB227F5A0100A8571E /* FMItemHistoryBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMItemHistoryBillVC.xib; sourceTree = "<group>"; };
-		4FDACCFF227F5AA500A8571E /* FMTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMTableViewCell.h; sourceTree = "<group>"; };
-		4FDACD00227F5AA500A8571E /* FMTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMTableViewCell.m; sourceTree = "<group>"; };
+		4FDACCFF227F5AA500A8571E /* HistoryBillTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBillTableViewCell.h; sourceTree = "<group>"; };
+		4FDACD00227F5AA500A8571E /* HistoryBillTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBillTableViewCell.m; sourceTree = "<group>"; };
 		4FDACD01227F5AA500A8571E /* HistoryBillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryBillTableViewCell.xib; sourceTree = "<group>"; };
 		4FDACD04227F5BE000A8571E /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Black.ttf"; sourceTree = "<group>"; };
 		4FDACD06227F5D0F00A8571E /* FMHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHeaderViewCell.h; sourceTree = "<group>"; };
@@ -480,6 +498,31 @@
 			path = SystemThemes;
 			sourceTree = "<group>";
 		};
+		4FBD3D7F228D970600E76E2A /* ListHistoryPoint */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD3D80228D974300E76E2A /* FMHistoryPointViewController.h */,
+				4FBD3D81228D974300E76E2A /* FMHistoryPointViewController.m */,
+				4FBD3D82228D974300E76E2A /* FMHistoryPointViewController.xib */,
+				4FBD3D8E228D9C8800E76E2A /* FMHistoryPointModel.h */,
+				4FBD3D8F228D9C8800E76E2A /* FMHistoryPointModel.m */,
+			);
+			path = ListHistoryPoint;
+			sourceTree = "<group>";
+		};
+		4FBD3D88228D9A0300E76E2A /* ListHistoryPoint */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD3D89228D9A5100E76E2A /* HistoryPointTableViewCell.h */,
+				4FBD3D8A228D9A5100E76E2A /* HistoryPointTableViewCell.m */,
+				4FBD3D8B228D9A5100E76E2A /* HistoryPointTableViewCell.xib */,
+				4FBD3D91228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.h */,
+				4FBD3D92228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m */,
+				4FBD3D93228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib */,
+			);
+			path = ListHistoryPoint;
+			sourceTree = "<group>";
+		};
 		4FDACCE1227EF55500A8571E /* Constant */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,8 +575,9 @@
 		4FDACCFE227F5A5800A8571E /* ListHistoryBill */ = {
 			isa = PBXGroup;
 			children = (
+				4FDACCFF227F5AA500A8571E /* HistoryBillTableViewCell.h */,
+				4FDACD00227F5AA500A8571E /* HistoryBillTableViewCell.m */,
 				4FDACD01227F5AA500A8571E /* HistoryBillTableViewCell.xib */,
-				4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */,
 			);
 			path = ListHistoryBill;
 			sourceTree = "<group>";
@@ -541,7 +585,6 @@
 		4FDACD15227F738200A8571E /* ListHistoryBill */ = {
 			isa = PBXGroup;
 			children = (
-				4FDACD0C227F5D4200A8571E /* HistoryBillHeaderCell.xib */,
 			);
 			path = ListHistoryBill;
 			sourceTree = "<group>";
@@ -758,6 +801,7 @@
 				4F50F3602276E9A700DF7173 /* UserInfor */,
 				5C8EC29C2263616900C124CE /* Home */,
 				4FDACCF2227F46E600A8571E /* ListHistoryBill */,
+				4FBD3D7F228D970600E76E2A /* ListHistoryPoint */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -798,6 +842,8 @@
 			children = (
 				4FDACD06227F5D0F00A8571E /* FMHeaderViewCell.h */,
 				4FDACD07227F5D0F00A8571E /* FMHeaderViewCell.m */,
+				4FDACD0C227F5D4200A8571E /* HistoryBillHeaderCell.xib */,
+				4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */,
 				4FDACD15227F738200A8571E /* ListHistoryBill */,
 				5C98628C2264D47E00545DCC /* Home */,
 			);
@@ -827,10 +873,9 @@
 		5C9862A42264E35900545DCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				4FDACCFF227F5AA500A8571E /* FMTableViewCell.h */,
-				4FDACD00227F5AA500A8571E /* FMTableViewCell.m */,
 				4FDACD1A227F744900A8571E /* ListRegisterPromotion */,
 				4FDACCFE227F5A5800A8571E /* ListHistoryBill */,
+				4FBD3D88228D9A0300E76E2A /* ListHistoryPoint */,
 				4F50F3F22276EC3200DF7173 /* Notification */,
 				4F50F3F12276EBE000DF7173 /* UserInfor */,
 				4F50F3A92276EA9400DF7173 /* News */,
@@ -1000,6 +1045,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FBD3D8D228D9A5100E76E2A /* HistoryPointTableViewCell.xib in Resources */,
 				4F50F39C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib in Resources */,
 				4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */,
 				4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */,
@@ -1019,9 +1065,11 @@
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
+				4FBD3D95228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
 				5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */,
 				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
+				4FBD3D84228D974300E76E2A /* FMHistoryPointViewController.xib in Resources */,
 				4F50F4012276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf in Resources */,
 				5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */,
 				4FDACD0D227F5D4200A8571E /* HistoryBillHeaderCell.xib in Resources */,
@@ -1180,6 +1228,7 @@
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
+				4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */,
 				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,
 				4FF2BD77227BD9F70008BA69 /* FMCameraViewController.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
@@ -1188,7 +1237,7 @@
 				4F50F39D2276E9A700DF7173 /* FMNewsCollectionViewCell.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,
 				5C9862A32264DC8100545DCC /* CustomView.swift in Sources */,
-				4FDACD02227F5AA500A8571E /* FMTableViewCell.m in Sources */,
+				4FDACD02227F5AA500A8571E /* HistoryBillTableViewCell.m in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
@@ -1214,11 +1263,14 @@
 				5CD3A76C22887D7C0020A0DE /* FZBannerCollectionViewCell.m in Sources */,
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
 				5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */,
+				4FBD3D90228D9C8800E76E2A /* FMHistoryPointModel.m in Sources */,
+				4FBD3D8C228D9A5100E76E2A /* HistoryPointTableViewCell.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
 				4FDACD08227F5D0F00A8571E /* FMHeaderViewCell.m in Sources */,
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
+				4FBD3D83228D974300E76E2A /* FMHistoryPointViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
