@@ -40,8 +40,6 @@
     self.navigationItem.title = @"Lịch sử chụp hoá đơn";
     self.navigationController.navigationBar.topItem.title = @"";
     self.isHideNavigationBar = NO;
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
 }
 
 - (void)setupSegmentControl {

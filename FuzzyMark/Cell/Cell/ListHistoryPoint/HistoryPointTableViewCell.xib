@@ -45,6 +45,13 @@
                         <color key="textColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w01-R2-vu7">
+                        <rect key="frame" x="16" y="79.5" width="288" height="0.5"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="zzK-V8-eZg"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="fAQ-Ab-beT" secondAttribute="trailing" constant="16" id="ARz-nC-g3e"/>
@@ -53,6 +60,9 @@
                     <constraint firstItem="Fwo-gF-I06" firstAttribute="trailing" secondItem="dfV-fW-m2u" secondAttribute="trailing" id="VQp-Y9-DfG"/>
                     <constraint firstItem="dfV-fW-m2u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="au4-ni-mF0"/>
                     <constraint firstItem="Fwo-gF-I06" firstAttribute="top" secondItem="dfV-fW-m2u" secondAttribute="bottom" constant="6" id="khD-eC-U3H"/>
+                    <constraint firstAttribute="bottom" secondItem="w01-R2-vu7" secondAttribute="bottom" id="lax-1v-CUK"/>
+                    <constraint firstAttribute="trailing" secondItem="w01-R2-vu7" secondAttribute="trailing" constant="16" id="p9N-Hn-dlm"/>
+                    <constraint firstItem="w01-R2-vu7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="qyr-Zh-k2j"/>
                     <constraint firstItem="fAQ-Ab-beT" firstAttribute="centerY" secondItem="dfV-fW-m2u" secondAttribute="centerY" id="uxu-8n-EmX"/>
                     <constraint firstAttribute="bottom" secondItem="Fwo-gF-I06" secondAttribute="bottom" constant="16" id="vMH-3Q-2gH"/>
                 </constraints>

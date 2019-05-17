@@ -43,6 +43,7 @@
 - (void)setTableViewContent {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
     [self.tableView registerNib:[UINib nibWithNibName:@"LocationFavoriteTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
@@ -70,7 +71,7 @@
     }
 }
 
-#pragma mark - Table view data source
+#pragma mark - TableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -83,4 +84,10 @@
     LocationFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     return cell;
 }
+
+#pragma mark - TableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 @end

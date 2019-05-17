@@ -50,13 +50,23 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1fp-xY-Plo">
+                                <rect key="frame" x="0.0" y="125.5" width="320" height="4"/>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="oT9-aR-bPw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PYu-2N-ltV" firstAttribute="centerX" secondItem="tgt-e5-0iF" secondAttribute="centerX" id="4Ly-jS-HxF"/>
+                            <constraint firstAttribute="trailing" secondItem="1fp-xY-Plo" secondAttribute="trailing" id="BJe-Xl-svL"/>
                             <constraint firstItem="HWe-49-QdQ" firstAttribute="top" secondItem="PYu-2N-ltV" secondAttribute="bottom" constant="11" id="GQS-sp-Qx1"/>
                             <constraint firstItem="HWe-49-QdQ" firstAttribute="centerX" secondItem="tgt-e5-0iF" secondAttribute="centerX" id="PFZ-wN-5Px"/>
+                            <constraint firstAttribute="bottom" secondItem="1fp-xY-Plo" secondAttribute="bottom" id="hj2-tG-9j4"/>
                             <constraint firstAttribute="height" constant="129" id="j9I-Gh-BfW"/>
+                            <constraint firstItem="1fp-xY-Plo" firstAttribute="leading" secondItem="tgt-e5-0iF" secondAttribute="leading" id="n4J-ll-CvB"/>
                             <constraint firstItem="PYu-2N-ltV" firstAttribute="top" secondItem="tgt-e5-0iF" secondAttribute="top" constant="36" id="sle-K9-ZBw"/>
                         </constraints>
                     </view>
