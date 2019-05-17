@@ -1,4 +1,5 @@
 PODS:
+  - BEMCheckBox (1.4.1)
   - HMSegmentedControl (1.5.5)
   - JSONModel (1.8.0)
   - SDWebImage (5.0.0):
@@ -7,6 +8,7 @@ PODS:
   - TLFloatLabelTextField (0.1.3)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - HMSegmentedControl
   - JSONModel
   - SDWebImage (~> 5.0)
@@ -14,17 +16,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - BEMCheckBox
     - HMSegmentedControl
     - JSONModel
     - SDWebImage
     - TLFloatLabelTextField
 
 SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
   TLFloatLabelTextField: 3e2bb61eeb4d9d23d0704bbded7bb1ccf1ae8c6b
 
-PODFILE CHECKSUM: c1e5d96866e4b9588afc42725a8762d5bd0808bd
+PODFILE CHECKSUM: f56c7ccafc94a19bc6f447da4f21caae87468854
 
 COCOAPODS: 1.6.1
