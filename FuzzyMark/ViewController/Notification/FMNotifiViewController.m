@@ -37,7 +37,7 @@
 }
 
 - (void)addRightButtonNavigationBar {
-    UIImage *imgButton = [UIImage imageNamed:@"ic_menu"];
+    UIImage *imgButton = [UIImage imageNamed:@"ic_menu_nv"];
     imgButton = [imgButton imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithImage:imgButton style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightButton)];
     self.navigationItem.rightBarButtonItem = rightBarButton;

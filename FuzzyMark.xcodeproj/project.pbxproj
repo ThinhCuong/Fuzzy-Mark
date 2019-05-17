@@ -51,6 +51,12 @@
 		4FBD3D90228D9C8800E76E2A /* FMHistoryPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D8F228D9C8800E76E2A /* FMHistoryPointModel.m */; };
 		4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D92228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m */; };
 		4FBD3D95228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D93228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib */; };
+		4FBD3D97228DBC7E00E76E2A /* HistoryPoint.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D96228DBC7E00E76E2A /* HistoryPoint.xcassets */; };
+		4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D9A228DBFBA00E76E2A /* FMLocationFavoriteViewController.m */; };
+		4FBD3D9D228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D9B228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib */; };
+		4FBD3DA2228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3DA0228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m */; };
+		4FBD3DA3228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3DA1228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib */; };
+		4FBD3DA5228DDE2C00E76E2A /* LocationFavorite.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3DA4228DDE2C00E76E2A /* LocationFavorite.xcassets */; };
 		4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */; };
 		4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCF4227F577200A8571E /* FMHistoryBillViewController.m */; };
 		4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACCF5227F577200A8571E /* FMHistoryBillViewController.xib */; };
@@ -207,6 +213,14 @@
 		4FBD3D91228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryPointHeaderTableViewCell.h; sourceTree = "<group>"; };
 		4FBD3D92228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryPointHeaderTableViewCell.m; sourceTree = "<group>"; };
 		4FBD3D93228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryPointHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		4FBD3D96228DBC7E00E76E2A /* HistoryPoint.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = HistoryPoint.xcassets; sourceTree = "<group>"; };
+		4FBD3D99228DBFBA00E76E2A /* FMLocationFavoriteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLocationFavoriteViewController.h; sourceTree = "<group>"; };
+		4FBD3D9A228DBFBA00E76E2A /* FMLocationFavoriteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLocationFavoriteViewController.m; sourceTree = "<group>"; };
+		4FBD3D9B228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMLocationFavoriteViewController.xib; sourceTree = "<group>"; };
+		4FBD3D9F228DDA5C00E76E2A /* LocationFavoriteTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationFavoriteTableViewCell.h; sourceTree = "<group>"; };
+		4FBD3DA0228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationFavoriteTableViewCell.m; sourceTree = "<group>"; };
+		4FBD3DA1228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationFavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		4FBD3DA4228DDE2C00E76E2A /* LocationFavorite.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LocationFavorite.xcassets; sourceTree = "<group>"; };
 		4FDACCE4227EFBCE00A8571E /* BTParseJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTParseJSON.h; sourceTree = "<group>"; };
 		4FDACCE5227EFBCE00A8571E /* BTParseJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTParseJSON.m; sourceTree = "<group>"; };
 		4FDACCF3227F577200A8571E /* FMHistoryBillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHistoryBillViewController.h; sourceTree = "<group>"; };
@@ -506,6 +520,7 @@
 				4FBD3D82228D974300E76E2A /* FMHistoryPointViewController.xib */,
 				4FBD3D8E228D9C8800E76E2A /* FMHistoryPointModel.h */,
 				4FBD3D8F228D9C8800E76E2A /* FMHistoryPointModel.m */,
+				4FBD3D96228DBC7E00E76E2A /* HistoryPoint.xcassets */,
 			);
 			path = ListHistoryPoint;
 			sourceTree = "<group>";
@@ -521,6 +536,27 @@
 				4FBD3D93228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib */,
 			);
 			path = ListHistoryPoint;
+			sourceTree = "<group>";
+		};
+		4FBD3D98228DBF5C00E76E2A /* LocationFavorite */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD3D99228DBFBA00E76E2A /* FMLocationFavoriteViewController.h */,
+				4FBD3D9A228DBFBA00E76E2A /* FMLocationFavoriteViewController.m */,
+				4FBD3D9B228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib */,
+				4FBD3DA4228DDE2C00E76E2A /* LocationFavorite.xcassets */,
+			);
+			path = LocationFavorite;
+			sourceTree = "<group>";
+		};
+		4FBD3D9E228DDA1100E76E2A /* LocationFavorite */ = {
+			isa = PBXGroup;
+			children = (
+				4FBD3D9F228DDA5C00E76E2A /* LocationFavoriteTableViewCell.h */,
+				4FBD3DA0228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m */,
+				4FBD3DA1228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib */,
+			);
+			path = LocationFavorite;
 			sourceTree = "<group>";
 		};
 		4FDACCE1227EF55500A8571E /* Constant */ = {
@@ -802,6 +838,7 @@
 				5C8EC29C2263616900C124CE /* Home */,
 				4FDACCF2227F46E600A8571E /* ListHistoryBill */,
 				4FBD3D7F228D970600E76E2A /* ListHistoryPoint */,
+				4FBD3D98228DBF5C00E76E2A /* LocationFavorite */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -874,6 +911,7 @@
 			isa = PBXGroup;
 			children = (
 				4FDACD1A227F744900A8571E /* ListRegisterPromotion */,
+				4FBD3D9E228DDA1100E76E2A /* LocationFavorite */,
 				4FDACCFE227F5A5800A8571E /* ListHistoryBill */,
 				4FBD3D88228D9A0300E76E2A /* ListHistoryPoint */,
 				4F50F3F22276EC3200DF7173 /* Notification */,
@@ -1057,19 +1095,23 @@
 				4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */,
 				4FF2BD86227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib in Resources */,
 				4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */,
+				4FBD3DA5228DDE2C00E76E2A /* LocationFavorite.xcassets in Resources */,
 				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
+				4FBD3D97228DBC7E00E76E2A /* HistoryPoint.xcassets in Resources */,
 				4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */,
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
 				4FBD3D95228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
+				4FBD3D9D228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib in Resources */,
 				5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */,
 				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
 				4FBD3D84228D974300E76E2A /* FMHistoryPointViewController.xib in Resources */,
+				4FBD3DA3228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib in Resources */,
 				4F50F4012276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf in Resources */,
 				5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */,
 				4FDACD0D227F5D4200A8571E /* HistoryBillHeaderCell.xib in Resources */,
@@ -1259,6 +1301,7 @@
 				4FDACD26227FCC7500A8571E /* FMBaseViewController.m in Sources */,
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
 				4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */,
+				4FBD3DA2228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m in Sources */,
 				4FF014A3227EEEBC0063093C /* Page.m in Sources */,
 				5CD3A76C22887D7C0020A0DE /* FZBannerCollectionViewCell.m in Sources */,
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
@@ -1270,6 +1313,7 @@
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
+				4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */,
 				4FBD3D83228D974300E76E2A /* FMHistoryPointViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

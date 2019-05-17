@@ -12,6 +12,7 @@
 #import "FMUserInforTableViewCell.h"
 #import "FMHistoryBillViewController.h"
 #import "FMHistoryPointViewController.h"
+#import "FMLocationFavoriteViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -67,9 +68,11 @@
         return;
     }
     switch (cell.typeBlock) {
-        case FMTableViewCellBlockFavoritePlaces:
-            
+        case FMTableViewCellBlockFavoritePlaces: {
+            FMLocationFavoriteViewController *vc = [[FMLocationFavoriteViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
+        }
         case FMTableViewCellBlockUserInfor:
             
             break;

@@ -56,6 +56,11 @@
     self.navigationItem.title = @"Lịch sử nhận điểm thưởng";
     self.navigationController.navigationBar.topItem.title = @"";
     self.isHideNavigationBar = NO;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ic_info"] style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightBarButtonItem)];
+}
+
+- (void)didSelectRightBarButtonItem {
+    NSLog(@"right barbutton");
 }
 
 - (void)reloadData:(id) data {
