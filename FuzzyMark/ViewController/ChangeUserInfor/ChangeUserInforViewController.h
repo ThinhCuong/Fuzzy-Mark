@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChangeUserInforViewController : UIViewController
+@interface ChangeUserInforViewController : FMBaseViewController
 
 @end
 

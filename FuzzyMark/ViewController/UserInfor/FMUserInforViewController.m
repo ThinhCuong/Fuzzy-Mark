@@ -13,6 +13,7 @@
 #import "FMHistoryBillViewController.h"
 #import "FMHistoryPointViewController.h"
 #import "FMLocationFavoriteViewController.h"
+#import "ChangeUserInforViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -73,9 +74,11 @@
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
-        case FMTableViewCellBlockUserInfor:
-            
+        case FMTableViewCellBlockUserInfor: {
+            ChangeUserInforViewController *vc = [[ChangeUserInforViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
             break;
+        }
         case FMTableViewCellBlockChangePassWord:
             
             break;

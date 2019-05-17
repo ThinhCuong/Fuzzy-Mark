@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
         <array key="Muli.ttf">
             <string>Muli</string>
         </array>
@@ -17,6 +20,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeUserInforViewController">
             <connections>
+                <outlet property="CBFemaleView" destination="9IW-0c-6YD" id="dqV-Eg-IsO"/>
+                <outlet property="CBMaleView" destination="qJt-03-hqR" id="XPr-kb-6OZ"/>
+                <outlet property="btnSave" destination="8XP-3E-BCk" id="QCA-2o-FIY"/>
+                <outlet property="txtBirthday" destination="amV-Ia-L0a" id="ts6-sm-3fI"/>
+                <outlet property="txtName" destination="rsP-Bx-fmn" id="lqX-an-5CS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,12 +34,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ &amp; tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-RY-kHS">
-                    <rect key="frame" x="24" y="36" width="43" height="15"/>
+                    <rect key="frame" x="24" y="36" width="42.5" height="15"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                     <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Phạm Sĩ Mạnh" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-Bx-fmn" customClass="TLFloatLabelTextField" customModule="TLFloatLabelTextField">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" text="Phạm Sĩ Mạnh" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-Bx-fmn" customClass="TLFloatLabelTextField" customModule="TLFloatLabelTextField">
                     <rect key="frame" x="24" y="51" width="272" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="2Gv-1t-z0v"/>
@@ -39,6 +47,11 @@
                     <color key="textColor" red="0.011764705882352941" green="0.011764705882352941" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
+                            <color key="value" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày sinh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nob-pV-m6i">
                     <rect key="frame" x="24" y="103" width="48" height="15"/>
@@ -46,7 +59,7 @@
                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Thêm ngày sinh" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amV-Ia-L0a" customClass="TLFloatLabelTextField" customModule="TLFloatLabelTextField">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Thêm ngày sinh" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amV-Ia-L0a" customClass="TLFloatLabelTextField" customModule="TLFloatLabelTextField">
                     <rect key="frame" x="24" y="118" width="272" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="Hu7-g1-Q4H"/>
@@ -54,6 +67,11 @@
                     <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
+                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giới tính" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-mm-g8Y">
                     <rect key="frame" x="24" y="170" width="41" height="15"/>
@@ -61,23 +79,115 @@
                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Y6-xij">
+                    <rect key="frame" x="164" y="171.5" width="132" height="12"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-03-hqR" customClass="BEMCheckBox">
+                            <rect key="frame" x="0.0" y="0.0" width="55" height="12"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiM-pR-kqm">
+                            <rect key="frame" x="22" y="-4.5" width="33" height="21"/>
+                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-0c-6YD" customClass="BEMCheckBox">
+                            <rect key="frame" x="89" y="0.0" width="43" height="12"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                    <real key="value" value="0.5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="NO"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
+                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzE-u0-zHT">
+                            <rect key="frame" x="111" y="-4.5" width="21" height="21"/>
+                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="BzE-u0-zHT" firstAttribute="centerY" secondItem="9IW-0c-6YD" secondAttribute="centerY" id="1BU-J5-hpf"/>
+                        <constraint firstItem="qJt-03-hqR" firstAttribute="leading" secondItem="06x-3u-blz" secondAttribute="leading" id="I8V-H2-B0s"/>
+                        <constraint firstItem="9IW-0c-6YD" firstAttribute="top" secondItem="06x-3u-blz" secondAttribute="top" id="J03-WU-pUP"/>
+                        <constraint firstItem="qJt-03-hqR" firstAttribute="top" secondItem="06x-3u-blz" secondAttribute="top" id="JA3-cW-ymt"/>
+                        <constraint firstItem="BzE-u0-zHT" firstAttribute="trailing" secondItem="9IW-0c-6YD" secondAttribute="trailing" id="PyO-zF-3vh"/>
+                        <constraint firstItem="GiM-pR-kqm" firstAttribute="centerY" secondItem="qJt-03-hqR" secondAttribute="centerY" id="Q59-Yt-DtF"/>
+                        <constraint firstItem="qJt-03-hqR" firstAttribute="bottom" secondItem="06x-3u-blz" secondAttribute="bottom" id="QsP-T6-ymC"/>
+                        <constraint firstItem="9IW-0c-6YD" firstAttribute="leading" secondItem="GiM-pR-kqm" secondAttribute="trailing" constant="34" id="cnc-k6-51C"/>
+                        <constraint firstItem="9IW-0c-6YD" firstAttribute="bottom" secondItem="06x-3u-blz" secondAttribute="bottom" id="etK-UD-VYz"/>
+                        <constraint firstItem="GiM-pR-kqm" firstAttribute="trailing" secondItem="qJt-03-hqR" secondAttribute="trailing" id="hn8-KO-yVl"/>
+                        <constraint firstItem="BzE-u0-zHT" firstAttribute="leading" secondItem="GiM-pR-kqm" secondAttribute="trailing" constant="56" id="jJD-qi-OuM"/>
+                        <constraint firstItem="GiM-pR-kqm" firstAttribute="leading" secondItem="kVl-Y6-xij" secondAttribute="leading" constant="22" id="sne-UB-LIQ"/>
+                        <constraint firstAttribute="trailing" secondItem="BzE-u0-zHT" secondAttribute="trailing" id="vuX-ta-zVl"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="06x-3u-blz"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-DX-YDd" userLabel="Line">
+                    <rect key="frame" x="24" y="201" width="272" height="0.5"/>
+                    <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="uzC-KB-WJA"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XP-3E-BCk">
+                    <rect key="frame" x="16" y="225.5" width="288" height="44"/>
+                    <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="yH3-ZJ-dRd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                    <state key="normal" title="Lưu thông tin">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="8XP-3E-BCk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="0qf-cK-JT2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kVl-Y6-xij" secondAttribute="trailing" constant="24" id="1OS-9t-RKU"/>
+                <constraint firstItem="kVl-Y6-xij" firstAttribute="centerY" secondItem="qi9-mm-g8Y" secondAttribute="centerY" id="89J-ar-KPp"/>
                 <constraint firstItem="rsP-Bx-fmn" firstAttribute="top" secondItem="bqj-RY-kHS" secondAttribute="bottom" id="8ka-I5-2cg"/>
                 <constraint firstItem="qi9-mm-g8Y" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="CdP-Ng-DYc"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rsP-Bx-fmn" secondAttribute="trailing" constant="24" id="Fuk-mt-isD"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="amV-Ia-L0a" secondAttribute="trailing" constant="24" id="JRO-ge-kFe"/>
+                <constraint firstItem="Pmx-DX-YDd" firstAttribute="top" secondItem="qi9-mm-g8Y" secondAttribute="bottom" constant="16" id="KJY-th-H7c"/>
                 <constraint firstItem="nob-pV-m6i" firstAttribute="top" secondItem="rsP-Bx-fmn" secondAttribute="bottom" constant="16" id="LM7-rp-jX7"/>
                 <constraint firstItem="qi9-mm-g8Y" firstAttribute="top" secondItem="amV-Ia-L0a" secondAttribute="bottom" constant="16" id="OSx-lB-hTB"/>
                 <constraint firstItem="rsP-Bx-fmn" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="UxA-kF-VdL"/>
                 <constraint firstItem="amV-Ia-L0a" firstAttribute="top" secondItem="nob-pV-m6i" secondAttribute="bottom" id="YwA-0L-iVJ"/>
+                <constraint firstItem="8XP-3E-BCk" firstAttribute="top" secondItem="Pmx-DX-YDd" secondAttribute="bottom" constant="24" id="cIN-0q-Vcr"/>
                 <constraint firstItem="bqj-RY-kHS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="dAe-78-ySr"/>
+                <constraint firstItem="Pmx-DX-YDd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="qJS-sQ-8lh"/>
                 <constraint firstItem="bqj-RY-kHS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="qjQ-iW-tyK"/>
                 <constraint firstItem="amV-Ia-L0a" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="vut-ze-m0A"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Pmx-DX-YDd" secondAttribute="trailing" constant="24" id="ywI-fU-Qbh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8XP-3E-BCk" secondAttribute="trailing" constant="16" id="z4a-yZ-MsZ"/>
                 <constraint firstItem="nob-pV-m6i" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="zr7-9v-yj6"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="41.25" y="92.957746478873247"/>
         </view>
     </objects>
 </document>
