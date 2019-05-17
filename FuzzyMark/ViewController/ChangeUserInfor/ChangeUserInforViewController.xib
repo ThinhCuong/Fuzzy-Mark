@@ -39,7 +39,7 @@
                     <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" text="Phạm Sĩ Mạnh" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-Bx-fmn" customClass="TLFloatLabelTextField" customModule="TLFloatLabelTextField">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" text="Phạm Sĩ Mạnh" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-Bx-fmn" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                     <rect key="frame" x="24" y="51" width="272" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="2Gv-1t-z0v"/>
@@ -59,7 +59,7 @@
                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Thêm ngày sinh" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amV-Ia-L0a" customClass="TLFloatLabelTextField" customModule="TLFloatLabelTextField">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Thêm ngày sinh" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amV-Ia-L0a" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                     <rect key="frame" x="24" y="118" width="272" height="36"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="36" id="Hu7-g1-Q4H"/>
@@ -70,6 +70,9 @@
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
                             <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                            <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </textField>

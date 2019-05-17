@@ -44,6 +44,7 @@
 		4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FD2276EDBC00DF7173 /* Muli.ttf */; };
 		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
 		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
+		4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */; };
 		4FBD3D83228D974300E76E2A /* FMHistoryPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D81228D974300E76E2A /* FMHistoryPointViewController.m */; };
 		4FBD3D84228D974300E76E2A /* FMHistoryPointViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FBD3D82228D974300E76E2A /* FMHistoryPointViewController.xib */; };
 		4FBD3D8C228D9A5100E76E2A /* HistoryPointTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FBD3D8A228D9A5100E76E2A /* HistoryPointTableViewCell.m */; };
@@ -204,6 +205,7 @@
 		4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
 		4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
 		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
+		4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
 		4FBD3D80228D974300E76E2A /* FMHistoryPointViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHistoryPointViewController.h; sourceTree = "<group>"; };
 		4FBD3D81228D974300E76E2A /* FMHistoryPointViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMHistoryPointViewController.m; sourceTree = "<group>"; };
 		4FBD3D82228D974300E76E2A /* FMHistoryPointViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMHistoryPointViewController.xib; sourceTree = "<group>"; };
@@ -916,6 +918,7 @@
 		5C9862A12264DC1900545DCC /* CustomeView */ = {
 			isa = PBXGroup;
 			children = (
+				4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */,
 				4F50F36A2276E9A700DF7173 /* FMViewShadow.h */,
 				4F50F3692276E9A700DF7173 /* FMViewShadow.m */,
 				5C9862A22264DC8100545DCC /* CustomView.swift */,
@@ -1205,7 +1208,6 @@
 				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TLFloatLabelTextField/TLFloatLabelTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -1215,7 +1217,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TLFloatLabelTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1290,6 +1291,7 @@
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
+				4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
 				4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */,
 				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,

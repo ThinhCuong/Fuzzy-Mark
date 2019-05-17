@@ -7,12 +7,11 @@
 //
 
 #import "ChangeUserInforViewController.h"
-#import <TLFloatLabelTextField-Swift.h>
 #import "BEMCheckBox.h"
 
 @interface ChangeUserInforViewController () <BEMCheckBoxDelegate>
-@property (weak, nonatomic) IBOutlet TLFloatLabelTextField *txtName;
-@property (weak, nonatomic) IBOutlet TLFloatLabelTextField *txtBirthday;
+@property (weak, nonatomic) IBOutlet UITextView *txtName;
+@property (weak, nonatomic) IBOutlet UITextView *txtBirthday;
 @property (weak, nonatomic) IBOutlet BEMCheckBox *CBMaleView;
 @property (weak, nonatomic) IBOutlet BEMCheckBox *CBFemaleView;
 @property (weak, nonatomic) IBOutlet UIButton *btnSave;
@@ -43,8 +42,6 @@
     self.CBFemaleView.delegate = self;
     _groupSex = [BEMCheckBoxGroup groupWithCheckBoxes:@[self.CBMaleView,self.CBFemaleView]];
     _groupSex.mustHaveSelection = YES;
-    
-    self.txtBirthday.
 }
 
 - (void)setNavigationBar {
