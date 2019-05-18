@@ -22,6 +22,7 @@
 		4F472D4C229083CB00F93D39 /* FMChangePhoneNumberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D4A229083CB00F93D39 /* FMChangePhoneNumberViewController.xib */; };
 		4F472D4F22908A7500F93D39 /* FMNotifiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D4E22908A7500F93D39 /* FMNotifiModel.m */; };
 		4F472D5322908C8A00F93D39 /* Notifi.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D5222908C8A00F93D39 /* Notifi.m */; };
+		4F472D572290B42000F93D39 /* Notifi.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D562290B42000F93D39 /* Notifi.xcassets */; };
 		4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3182276E8F300DF7173 /* AppDelegate.m */; };
 		4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */; };
 		4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */; };
@@ -191,6 +192,7 @@
 		4F472D4E22908A7500F93D39 /* FMNotifiModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNotifiModel.m; sourceTree = "<group>"; };
 		4F472D5122908C8A00F93D39 /* Notifi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notifi.h; sourceTree = "<group>"; };
 		4F472D5222908C8A00F93D39 /* Notifi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notifi.m; sourceTree = "<group>"; };
+		4F472D562290B42000F93D39 /* Notifi.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Notifi.xcassets; sourceTree = "<group>"; };
 		4F50F3172276E8F300DF7173 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4F50F3182276E8F300DF7173 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMUserInforViewController.m; sourceTree = "<group>"; };
@@ -592,6 +594,7 @@
 				4F50F3872276E9A700DF7173 /* FMNotifiTableViewCell.h */,
 				4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */,
 				4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */,
+				4F472D562290B42000F93D39 /* Notifi.xcassets */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -1250,6 +1253,7 @@
 				4F6D65C1228FC9520092CA53 /* DatePickerViewController.xib in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
 				4FBD3D95228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib in Resources */,
+				4F472D572290B42000F93D39 /* Notifi.xcassets in Resources */,
 				4F472D4C229083CB00F93D39 /* FMChangePhoneNumberViewController.xib in Resources */,
 				4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,

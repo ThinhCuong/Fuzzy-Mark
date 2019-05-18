@@ -9,14 +9,18 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FMNotifiModel <NSObject>
+@protocol FMNotifiModelDelegate <NSObject>
 
-- (void)updateData:(NSArray *) listData;
+- (void)updateViewDataSuccess:(NSArray *) listData;
+- (void)updateViewDataEmpty;
+- (void)updateViewDataError;
 
 @end
 @interface FMNotifiModel : NSObject
 
-@property (assign, nonatomic) id<FMNotifiModel> delegate;
+@property (assign, nonatomic) id<FMNotifiModelDelegate> delegate;
+- (void)actionLoadMoreData;
+- (void)actionPullToRefreshData;
 
 @end
 

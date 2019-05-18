@@ -38,6 +38,7 @@
 
 - (void)actionLoadMoreData {
     if(!_isLoadMore) {
+        [self.delegate updateViewDataEmpty];
         return;
     }
     NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @(self.listItem.count)};
@@ -56,19 +57,17 @@
                     Notifi *noti = [[Notifi alloc] initWithDictionary:dict error:&err];
                     [self.listItem addObject:noti];
                 }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            } else {
+                [self.delegate updateViewDataEmpty];
             }
-            [self updateDataController];
+        } else {
+            [self.delegate updateViewDataError];
         }
+        
     } withFailBlock:^(id fail) {
-        [self updateDataController];
+        [self.delegate updateViewDataError];
     }];
-}
-
-- (void)updateDataController {
-    if(![self.delegate respondsToSelector:@selector(updateData:)]) {
-        return;
-    }
-    [self.delegate updateData:self.listItem];
 }
 
 @end

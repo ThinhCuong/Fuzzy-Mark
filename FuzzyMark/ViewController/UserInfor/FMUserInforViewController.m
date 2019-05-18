@@ -53,7 +53,7 @@
     self.tableViewContent.dataSource = self;
     [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMUserInforTableViewCell" bundle:nil] forCellReuseIdentifier:@"cellUser"];
     [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMMenuTabbleViewCell" bundle:nil] forCellReuseIdentifier:@"cellMenu"];
-    self.tableViewContent.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
+    self.tableViewContent.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
 - (void)reloadBlockCell:(NSArray *) listMenuBlock {

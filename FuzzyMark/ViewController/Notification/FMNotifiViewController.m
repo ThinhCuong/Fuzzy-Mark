@@ -8,13 +8,31 @@
 
 #import "FMNotifiViewController.h"
 #import "FMNotifiTableViewCell.h"
+#import "FMNotifiModel.h"
+#import "Notifi.h"
+#import <CCBottomRefreshControl-umbrella.h>
 
-@interface FMNotifiViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface FMNotifiViewController () <UITableViewDelegate, UITableViewDataSource, FMNotifiModelDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
-
+@property (strong, nonatomic) FMNotifiModel *model;
 @end
 
-@implementation FMNotifiViewController
+@implementation FMNotifiViewController {
+    NSArray <Notifi*> *_listData;
+    UIRefreshControl *_topRFControl;
+    UIRefreshControl *_bottomRFControl;
+    BOOL _isRefresh;
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.model = [[FMNotifiModel alloc] init];
+        self.model.delegate = self;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +52,19 @@
     self.contentTableView.delegate = self;
     self.contentTableView.dataSource = self;
     [self.contentTableView registerNib:[UINib nibWithNibName:@"FMNotifiTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+     
+    _topRFControl = [[UIRefreshControl alloc] init];
+    [_topRFControl addTarget:self action:@selector(callDataRefresh) forControlEvents:UIControlEventValueChanged];
+    if (@available(iOS 10.0, *)) {
+        self.contentTableView.refreshControl = _topRFControl;
+    } else {
+        [self.contentTableView addSubview:_topRFControl];
+    }
+    
+    _bottomRFControl = [UIRefreshControl new];
+    [_bottomRFControl addTarget:self action:@selector(callDataLoadMore) forControlEvents:UIControlEventValueChanged];
+    self.contentTableView.bottomRefreshControl = _bottomRFControl;
+    self.contentTableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
 - (void)addRightButtonNavigationBar {
@@ -43,24 +74,70 @@
     self.navigationItem.rightBarButtonItem = rightBarButton;
 }
 
+- (void)callDataLoadMore {
+    if([self checkIsRefresh]) {
+        [self stopAnimationRefresh];
+        return;
+    }
+    _isRefresh = YES;
+    [self.model actionLoadMoreData];
+}
+
+- (void)callDataRefresh {
+    if([self checkIsRefresh]) {
+        [self stopAnimationRefresh];
+        return;
+    }
+    _isRefresh = YES;
+    [self.model actionPullToRefreshData];
+}
+
+- (BOOL)checkIsRefresh {
+    return _isRefresh;
+}
+
+- (void)stopAnimationRefresh {
+    if(_topRFControl.isRefreshing) {
+        [_topRFControl endRefreshing];
+    }
+    if(_bottomRFControl.isRefreshing) {
+        [_bottomRFControl endRefreshing];
+    }
+    _isRefresh = NO;
+}
+
 - (void)didSelectRightButton {
     
 }
 
+#pragma mark - FMNotifiModelDelegate
+- (void)updateViewDataSuccess:(NSMutableArray *) listData {
+    [self stopAnimationRefresh];
+    _listData = listData.copy;
+    [self.contentTableView reloadData];
+}
+
+- (void)updateViewDataEmpty {
+    [self stopAnimationRefresh];
+}
+
+- (void)updateViewDataError {
+    [self stopAnimationRefresh];
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return _listData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FMNotifiTableViewCell *cell = [self.contentTableView dequeueReusableCellWithIdentifier:@"cell"];
-    [cell binData:@""];
+    [cell binData:_listData[indexPath.row]];
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"row: %ld",(long)indexPath.row);
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
