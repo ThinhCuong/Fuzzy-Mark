@@ -1,5 +1,6 @@
 PODS:
   - BEMCheckBox (1.4.1)
+  - CCBottomRefreshControl (0.5.2)
   - HMSegmentedControl (1.5.5)
   - JSONModel (1.8.0)
   - SDWebImage (5.0.0):
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - BEMCheckBox
+  - CCBottomRefreshControl
   - HMSegmentedControl
   - JSONModel
   - SDWebImage (~> 5.0)
@@ -15,16 +17,18 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BEMCheckBox
+    - CCBottomRefreshControl
     - HMSegmentedControl
     - JSONModel
     - SDWebImage
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
 
-PODFILE CHECKSUM: 96d5d6b6d7c142e53f55705d00ffe49af677c405
+PODFILE CHECKSUM: 55618b991ac25a63499ce20edec2c8cca8ae97d3
 
 COCOAPODS: 1.6.1
