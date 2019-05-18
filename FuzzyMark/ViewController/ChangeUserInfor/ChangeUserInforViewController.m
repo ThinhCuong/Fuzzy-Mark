@@ -42,6 +42,8 @@
     self.CBFemaleView.delegate = self;
     _groupSex = [BEMCheckBoxGroup groupWithCheckBoxes:@[self.CBMaleView,self.CBFemaleView]];
     _groupSex.mustHaveSelection = YES;
+    
+//    [self hideDatePicker];
 }
 
 - (void)setNavigationBar {
@@ -49,5 +51,32 @@
     self.navigationController.navigationBar.topItem.title = @"";
     self.isHideNavigationBar = NO;
 }
+
+#pragma mark - IBAction
+- (IBAction)didSelectChangeBirthday:(id)sender {
+//    [self showDatePicker];
+}
+
+- (IBAction)didSelectSave:(id)sender {
+    
+}
+
+- (IBAction)didSelectCancle:(id)sender {
+//    [self hideDatePicker];
+}
+
+//#pragma mark - private
+//- (void)showDatePicker {
+//    [UIView animateWithDuration:0.3 animations:^{
+//        self.viewDatePicker.hidden = NO;
+//    }];
+//}
+//
+//- (void)hideDatePicker {
+//    [UIView animateWithDuration:0.3 animations:^{
+//        self.viewDatePicker.hidden = YES;
+//    }];
+//}
+
 
 @end

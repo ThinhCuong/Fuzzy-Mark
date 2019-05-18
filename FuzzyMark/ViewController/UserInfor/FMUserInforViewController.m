@@ -71,11 +71,13 @@
     switch (cell.typeBlock) {
         case FMTableViewCellBlockFavoritePlaces: {
             FMLocationFavoriteViewController *vc = [[FMLocationFavoriteViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }
         case FMTableViewCellBlockUserInfor: {
             ChangeUserInforViewController *vc = [[ChangeUserInforViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
             break;
         }

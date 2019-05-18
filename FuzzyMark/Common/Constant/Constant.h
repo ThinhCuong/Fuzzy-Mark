@@ -13,3 +13,5 @@
 #endif /* Constant_h */
 
 #define GET_HISTORIES_CAPTURE  @"user/histories-capture"
+#define GET_USER_NOTIFICATIONS @"user/notifications"
+#define NUMBER_ITEM_CALL_API   @50
