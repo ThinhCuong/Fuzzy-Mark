@@ -11,7 +11,7 @@
 
 @implementation FMItemHistoryBillModel
 
-- (void)getUserNotifications:(NSDictionary *) params {
+- (void)getDataTableView:(NSDictionary *) params {
     [self.httpClient getDataWithPath:GET_HISTORIES_CAPTURE andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];

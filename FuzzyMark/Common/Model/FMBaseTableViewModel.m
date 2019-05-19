@@ -23,7 +23,7 @@
 - (void)actionPullToRefreshData {
     [self.listItem removeAllObjects];
     NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @0};
-    [self getUserNotifications:params];
+    [self getDataTableView:params];
 }
 
 - (void)actionLoadMoreData {
@@ -32,10 +32,10 @@
         return;
     }
     NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @(self.listItem.count)};
-    [self getUserNotifications:params];
+    [self getDataTableView:params];
 }
 
-- (void)getUserNotifications:(NSDictionary *) params {
+- (void)getDataTableView:(NSDictionary *) params {
     
 }
 

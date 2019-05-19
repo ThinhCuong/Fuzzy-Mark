@@ -111,7 +111,7 @@
 }
 
 - (void)didSelectRightButton {
-    
+    [self.model putUserNotifiReadAll];
 }
 
 #pragma mark - FMUpdateDataProtocol
@@ -143,6 +143,9 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(!_listData[indexPath.row].is_read) {
+        [self.model putUserNotifiRead:@{@"id": @(_listData[indexPath.section].idNoti)}];
+    }
 }
 
 @end

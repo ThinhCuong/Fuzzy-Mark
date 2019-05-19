@@ -11,7 +11,7 @@
 
 @implementation FMNotifiModel
 
-- (void)getUserNotifications:(NSDictionary *) params {
+- (void)getDataTableView:(NSDictionary *) params {
     [self.httpClient getDataWithPath:GET_USER_NOTIFICATIONS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];
@@ -33,6 +33,41 @@
         
     } withFailBlock:^(id fail) {
         [self.delegate updateViewDataError];
+    }];
+}
+
+- (void)putUserNotifiRead:(NSDictionary *) prams {
+    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ andParam:prams isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        if(success) {
+            if([success[@"error_code"] integerValue] == 0) {
+                for (Notifi *item in self.listItem) {
+                    if(item.idNoti == [prams[@"id"] integerValue]) {
+                        item.is_read = YES;
+                        break;
+                    }
+                }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            }
+        }
+    } withFailBlock:^(id fail) {
+        
+    }];
+}
+
+- (void)putUserNotifiReadAll {
+    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ_ALL andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        if(success) {
+            if([success[@"error_code"] integerValue] == 0) {
+                for (Notifi *item in self.listItem) {
+                    if(!item.is_read) {
+                        item.is_read = YES;
+                    }
+                }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            }
+        }
+    } withFailBlock:^(id fail) {
+        
     }];
 }
 

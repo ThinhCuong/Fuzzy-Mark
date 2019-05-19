@@ -12,6 +12,11 @@
 
 #endif /* Constant_h */
 
-#define GET_HISTORIES_CAPTURE  @"user/histories-capture"
-#define GET_USER_NOTIFICATIONS @"user/notifications"
+/* Name API */
+#define GET_HISTORIES_CAPTURE                @"user/histories-capture"
+#define GET_USER_NOTIFICATIONS               @"user/notifications"
+#define PUT_USER_NOTIFICATIONS_READ          @"user/notifications/read"
+#define PUT_USER_NOTIFICATIONS_READ_ALL      @"user/notifications/read-all"
+
+/* Value */
 #define NUMBER_ITEM_CALL_API   @50

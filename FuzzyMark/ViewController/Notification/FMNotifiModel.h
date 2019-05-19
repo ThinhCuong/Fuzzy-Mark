@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMNotifiModel : FMBaseTableViewModel
 
+- (void)putUserNotifiRead:(NSDictionary *) prams;
+- (void)putUserNotifiReadAll;
+
 @end
 
 NS_ASSUME_NONNULL_END
