@@ -6,6 +6,7 @@ PODS:
   - SDWebImage (5.0.0):
     - SDWebImage/Core (= 5.0.0)
   - SDWebImage/Core (5.0.0)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - BEMCheckBox
@@ -13,6 +14,7 @@ DEPENDENCIES:
   - HMSegmentedControl
   - JSONModel
   - SDWebImage (~> 5.0)
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - HMSegmentedControl
     - JSONModel
     - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 55618b991ac25a63499ce20edec2c8cca8ae97d3
+PODFILE CHECKSUM: ec0520495bb09c9c8d2768bac439abec07470953
 
 COCOAPODS: 1.6.1
