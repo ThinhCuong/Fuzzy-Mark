@@ -13,18 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Page : JSONModel
 
-@property (strong, nonatomic) NSNumber <Optional> *id;
-@property (strong, nonatomic) NSString <Optional> *name;
-@property (strong, nonatomic) Location <Optional> *location;
-@property (strong, nonatomic) NSString <Optional> *address;
-@property (strong, nonatomic) NSNumber <Optional> *rate_count;
-@property (strong, nonatomic) NSNumber <Optional> *total_rate;
-@property (strong, nonatomic) NSString <Optional> *image;
-@property (strong, nonatomic) NSString <Optional> *open_time;
-@property (strong, nonatomic) NSString <Optional> *close_time;
-@property (strong, nonatomic) NSString <Optional> *hotline;
-@property (strong, nonatomic) NSNumber <Optional> *min_price;
-@property (strong, nonatomic) NSNumber <Optional> *max_price;
+@property (nonatomic) NSInteger idPage;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *address;
+@property (nonatomic) NSInteger rate_count;
+@property (nonatomic) NSInteger total_rate;
+@property (nonatomic) NSString *image;
+@property (nonatomic) NSString *open_time;
+@property (nonatomic) NSString *close_time;
+@property (nonatomic) NSString *hotline;
+@property (nonatomic) NSInteger min_price;
+@property (nonatomic) NSInteger max_price;
 
 @end
 

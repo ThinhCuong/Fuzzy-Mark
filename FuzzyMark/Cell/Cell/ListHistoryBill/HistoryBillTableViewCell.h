@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMTableViewCell : UITableViewCell
+@interface HistoryBillTableViewCell : UITableViewCell
 - (void)binData:(HistoryBill *) model;
 @end
 

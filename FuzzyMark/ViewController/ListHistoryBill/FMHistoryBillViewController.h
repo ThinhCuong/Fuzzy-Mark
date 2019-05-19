@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMHistoryBillViewController : UIViewController
+@interface FMHistoryBillViewController : FMBaseViewController
 
 @end
 

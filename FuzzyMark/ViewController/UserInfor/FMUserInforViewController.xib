@@ -22,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="o2a-Rg-XWr">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="1" width="375" height="666"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
@@ -30,7 +30,7 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="o2a-Rg-XWr" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="75T-03-lBT"/>
-                <constraint firstItem="o2a-Rg-XWr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KE9-Jx-TgU"/>
+                <constraint firstItem="o2a-Rg-XWr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="1" id="KE9-Jx-TgU"/>
                 <constraint firstItem="o2a-Rg-XWr" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="ORU-Ni-D8a"/>
                 <constraint firstItem="o2a-Rg-XWr" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="yLJ-c8-bpE"/>
             </constraints>

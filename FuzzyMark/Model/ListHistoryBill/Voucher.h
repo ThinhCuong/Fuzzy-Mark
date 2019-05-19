@@ -13,13 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Voucher : JSONModel
 
-@property (strong, nonatomic) NSNumber <Optional> *id;
-@property (strong, nonatomic) NSString <Optional> *name;
-@property (strong, nonatomic) NSString <Optional> *image;
-@property (strong, nonatomic) NSString <Optional> *logo;
-@property (strong, nonatomic) NSString <Optional> *descriptions;
-@property (strong, nonatomic) NSNumber <Optional> *percent_discount;
-@property (strong, nonatomic) Page <Optional> *page;
+@property (nonatomic) NSInteger idVoucher;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *image;
+@property (nonatomic) NSString <Optional> *logo;
+@property (nonatomic) NSString *descriptionVoucher;
+@property (nonatomic) NSNumber <Optional> *percent_discount;
+@property (nonatomic) Page <Optional> *page;
 
 @end
 

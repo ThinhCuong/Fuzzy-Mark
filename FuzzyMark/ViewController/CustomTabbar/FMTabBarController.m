@@ -56,9 +56,8 @@
     CGRect frame;
     frame.size.width = 49;
     frame.size.height = 49;
-    frame.origin.x = self.view.bounds.size.width / 2 - frame.size.width / 2;
-    frame.origin.y = self.tabBar.frame.origin.y - frame.size.height / 2 + 10;
     self.middleButton.frame = frame;
+    self.middleButton.center = CGPointMake(self.tabBar.bounds.size.width / 2, 10);
     
     self.middleButton.layer.cornerRadius = self.middleButton.frame.size.height / 2;
     self.middleButton.clipsToBounds = YES;
@@ -69,8 +68,8 @@
     
     [self.middleButton addTarget:self action:@selector(didSelectMiddleButton) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.view addSubview:self.middleButton];
-    [self.middleButton bringSubviewToFront:self.view];
+    [self.tabBar addSubview:self.middleButton];
+    [self.middleButton bringSubviewToFront:self.tabBar];
 }
 
 - (void)gradientBoderColorMiddleButton {

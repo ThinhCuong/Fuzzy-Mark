@@ -3,13 +3,21 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[FMUserInforViewController didSelectButtonHistory]:FMUserInforViewController.m">
+         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
       </ContextState>
       <ContextState
          contextName = "-[FMHistoryBillViewController setupSegmentControl]:FMHistoryBillViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.contentSegmentView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__38-[FMNotifiModel getUserNotifications:]_block_invoke:FMNotifiModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -52,7 +60,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
+         contextName = "-[FMUserInforViewController didSelectButtonHistory]:FMUserInforViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

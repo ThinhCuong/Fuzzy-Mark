@@ -10,4 +10,10 @@
 
 @implementation Page
 
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+                                                                  @"idPage": @"id"
+                                                                  }];
+}
+
 @end

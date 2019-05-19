@@ -9,7 +9,7 @@
 #import "FMItemHistoryBillVC.h"
 #import "FMItemHistoryBillModel.h"
 #import "FMHeaderViewCell.h"
-#import "FMTableViewCell.h"
+#import "HistoryBillTableViewCell.h"
 #import "FMFooterViewCell.h"
 
 @interface FMItemHistoryBillVC ()
@@ -69,13 +69,10 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    HistoryBillTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     [cell binData:_listHistoryBill[indexPath.section]];
     return cell;
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 100;
-//}
 
 @end

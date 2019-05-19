@@ -11,6 +11,9 @@
 #import "FMMenuTabbleViewCell.h"
 #import "FMUserInforTableViewCell.h"
 #import "FMHistoryBillViewController.h"
+#import "FMHistoryPointViewController.h"
+#import "FMLocationFavoriteViewController.h"
+#import "ChangeUserInforViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -50,7 +53,7 @@
     self.tableViewContent.dataSource = self;
     [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMUserInforTableViewCell" bundle:nil] forCellReuseIdentifier:@"cellUser"];
     [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMMenuTabbleViewCell" bundle:nil] forCellReuseIdentifier:@"cellMenu"];
-    self.tableViewContent.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
+    self.tableViewContent.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
 - (void)reloadBlockCell:(NSArray *) listMenuBlock {
@@ -66,12 +69,18 @@
         return;
     }
     switch (cell.typeBlock) {
-        case FMTableViewCellBlockFavoritePlaces:
-            
+        case FMTableViewCellBlockFavoritePlaces: {
+            FMLocationFavoriteViewController *vc = [[FMLocationFavoriteViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
-        case FMTableViewCellBlockUserInfor:
-            
+        }
+        case FMTableViewCellBlockUserInfor: {
+            ChangeUserInforViewController *vc = [[ChangeUserInforViewController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
             break;
+        }
         case FMTableViewCellBlockChangePassWord:
             
             break;
@@ -97,7 +106,9 @@
 }
 
 - (void)didSelectButtonPoint {
-    
+    FMHistoryPointViewController *vc = [[FMHistoryPointViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didSelectButtonAddImageUser {

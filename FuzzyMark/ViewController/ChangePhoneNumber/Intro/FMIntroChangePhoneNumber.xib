@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMIntroChangePhoneNumber">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_update_number" translatesAutoresizingMaskIntoConstraints="NO" id="61o-II-TqN">
+                    <rect key="frame" x="85" y="29" width="150" height="116.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KHI ĐỔI SỐ ĐIỆN THOẠI" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-eU-K3r">
+                    <rect key="frame" x="78.5" y="159.5" width="163" height="21"/>
+                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhU-nz-mUd">
+                    <rect key="frame" x="16" y="354" width="288" height="44"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="MqJ-JB-IU6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                    <state key="normal" title="Tiếp tục...">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JG2-Um-Mtg">
+                    <rect key="frame" x="25" y="199.5" width="270" height="41.5"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checked" translatesAutoresizingMaskIntoConstraints="NO" id="hL9-rz-pUc">
+                            <rect key="frame" x="0.0" y="9" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="hL9-rz-pUc" secondAttribute="height" multiplier="1:1" id="1em-rQ-hGO"/>
+                                <constraint firstAttribute="height" constant="24" id="U9P-IX-T1S"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn có thể đăng nhập app bằng số điện thoại mới" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfb-vJ-Nsm">
+                            <rect key="frame" x="39" y="0.0" width="231" height="41.5"/>
+                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DdZ-GY-QDx">
+                    <rect key="frame" x="25" y="256" width="270" height="62"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_checked" translatesAutoresizingMaskIntoConstraints="NO" id="iyO-wu-P3E">
+                            <rect key="frame" x="0.0" y="19" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="iyO-wu-P3E" secondAttribute="height" multiplier="1:1" id="5og-If-emM"/>
+                                <constraint firstAttribute="height" constant="24" id="tPL-Lk-AaT"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin tài khoản, số dư, lịch sử giao dịch sẽ được chuyển sang số điện thoại mới" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaC-Av-rKo">
+                            <rect key="frame" x="39" y="0.0" width="231" height="62"/>
+                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="MhU-nz-mUd" secondAttribute="trailing" constant="16" id="2RO-JR-wWu"/>
+                <constraint firstItem="DdZ-GY-QDx" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="25" id="GSS-2R-MEE"/>
+                <constraint firstItem="61o-II-TqN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KQy-Qw-nG5"/>
+                <constraint firstItem="zQe-eU-K3r" firstAttribute="top" secondItem="61o-II-TqN" secondAttribute="bottom" constant="14" id="Sl7-fX-phR"/>
+                <constraint firstItem="JG2-Um-Mtg" firstAttribute="top" secondItem="zQe-eU-K3r" secondAttribute="bottom" constant="19" id="Ufx-5h-0ae"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="DdZ-GY-QDx" secondAttribute="trailing" constant="25" id="UqI-xr-qUV"/>
+                <constraint firstItem="zQe-eU-K3r" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XOf-ng-O6b"/>
+                <constraint firstItem="JG2-Um-Mtg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="az5-7n-36X"/>
+                <constraint firstItem="MhU-nz-mUd" firstAttribute="top" secondItem="DdZ-GY-QDx" secondAttribute="bottom" constant="36" id="k7n-a0-kPa"/>
+                <constraint firstItem="MhU-nz-mUd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="l5B-di-ymb"/>
+                <constraint firstItem="DdZ-GY-QDx" firstAttribute="top" secondItem="JG2-Um-Mtg" secondAttribute="bottom" constant="15" id="o2S-sR-ZJV"/>
+                <constraint firstItem="61o-II-TqN" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="9" id="rTW-9H-hfT"/>
+                <constraint firstAttribute="trailing" secondItem="JG2-Um-Mtg" secondAttribute="trailing" constant="25" id="zaa-IE-K5N"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_checked" width="24" height="24"/>
+        <image name="img_update_number" width="150" height="116.5"/>
+    </resources>
+</document>

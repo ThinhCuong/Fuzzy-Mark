@@ -17,7 +17,7 @@
 {
     self = [super init];
     if (self) {
-       // _httpClient = [[BaseCallApi alloc] initWithBaseURL];
+        _httpClient = [BaseCallApi defaultInitWithBaseURL];
         self.listData = [[NSMutableArray alloc] init];
     }
     return self;
@@ -25,7 +25,7 @@
 
 - (void)getListHistoryCaptureWithSuccessBlock: (void(^)(id)) successBlock {
     NSDictionary *param = @{@"limit": @"50", @"offset": @(self.listData.count)};
-    
+
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_HISTORIES_CAPTURE andParam:param isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];
@@ -33,7 +33,8 @@
                 NSArray *data = [json arrayForKey:@"data"];
                 if(data.count > 0 && data) {
                     for (NSDictionary *dict in data) {
-                        HistoryBill *item = [[HistoryBill alloc] initWithDictionary:dict error:nil];
+                        NSError *error;
+                        HistoryBill *item = [[HistoryBill alloc] initWithDictionary:dict error:&error];
                         [self.listData addObject:item];
                     }
                 }

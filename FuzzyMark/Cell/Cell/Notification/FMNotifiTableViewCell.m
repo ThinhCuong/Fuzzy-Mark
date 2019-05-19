@@ -7,11 +7,15 @@
 //
 
 #import "FMNotifiTableViewCell.h"
+#import "Notifi.h"
+
 @interface FMNotifiTableViewCell ()
+
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (weak, nonatomic) IBOutlet UILabel *lblContent;
 @property (weak, nonatomic) IBOutlet UILabel *lblTime;
 @property (weak, nonatomic) IBOutlet UIImageView *imgIcon;
+
 @end
 @implementation FMNotifiTableViewCell
 
@@ -22,7 +26,7 @@
     self.imgIcon.clipsToBounds = YES;
     
     self.selectedBackgroundView = [[UIView alloc] init];
-    self.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:238/255.0 green:248/255.0 blue:254/255.0 alpha:1.0];
+    self.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -31,11 +35,24 @@
     // Configure the view for the selected state
 }
 
-- (void)binData:(id) model {
-    self.lblTitle.text = @"Hoàn tiền 15% cho hóa đơn Hải sản 4 mùa";
-    self.lblContent.text = @"Số tiền hoàn lại: 15.000đ đã được cộng vào ví tài khoản. Cảm ơn quý khách đã sử dụng dịch vụ của Clingcling";
-    self.lblTime.text = @"12:00, 20/12/2019";
-    self.imgIcon.image =  [UIImage imageNamed:@"ic_home"];
+- (void)binData:(Notifi *) model {
+    self.lblTitle.text = model.title ?: @"";
+    self.lblContent.text = model.descriptions ?: @"";
+    self.lblTime.text = model.time ?: @"";
+    if(!model.is_read) {
+        self.backgroundColor = [UIColor colorWithRed:237/255.0 green:248/255.0 blue:255/255.0 alpha:1.0];
+    } else {
+        self.backgroundColor = [UIColor whiteColor];
+    }
+    if(model.idNoti == 1) {
+        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+    } else if (model.idNoti == 2) {
+        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+    } else if (model.idNoti == 3) {
+        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+    } else {
+        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+    }
 }
 
 @end
