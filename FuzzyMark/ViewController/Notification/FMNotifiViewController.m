@@ -12,7 +12,7 @@
 #import "Notifi.h"
 #import <CCBottomRefreshControl-umbrella.h>
 
-@interface FMNotifiViewController () <UITableViewDelegate, UITableViewDataSource, FMNotifiModelDelegate>
+@interface FMNotifiViewController () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 @property (strong, nonatomic) FMNotifiModel *model;
 @end
@@ -114,7 +114,7 @@
     
 }
 
-#pragma mark - FMNotifiModelDelegate
+#pragma mark - FMUpdateDataProtocol
 - (void)updateViewDataSuccess:(NSMutableArray *) listData {
     [self stopAnimationRefresh];
     _listData = listData.copy;
@@ -144,15 +144,5 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -81,12 +81,10 @@
 		4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCF4227F577200A8571E /* FMHistoryBillViewController.m */; };
 		4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACCF5227F577200A8571E /* FMHistoryBillViewController.xib */; };
 		4FDACCFC227F5A0100A8571E /* FMItemHistoryBillVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */; };
-		4FDACCFD227F5A0100A8571E /* FMItemHistoryBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACCFB227F5A0100A8571E /* FMItemHistoryBillVC.xib */; };
 		4FDACD02227F5AA500A8571E /* HistoryBillTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD00227F5AA500A8571E /* HistoryBillTableViewCell.m */; };
 		4FDACD03227F5AA500A8571E /* HistoryBillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD01227F5AA500A8571E /* HistoryBillTableViewCell.xib */; };
 		4FDACD05227F5BE000A8571E /* Muli-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD04227F5BE000A8571E /* Muli-Black.ttf */; };
-		4FDACD08227F5D0F00A8571E /* FMHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD07227F5D0F00A8571E /* FMHeaderViewCell.m */; };
-		4FDACD0B227F5D2500A8571E /* FMFooterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD0A227F5D2500A8571E /* FMFooterViewCell.m */; };
+		4FDACD0B227F5D2500A8571E /* HistoryBillFooterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD0A227F5D2500A8571E /* HistoryBillFooterCell.m */; };
 		4FDACD0D227F5D4200A8571E /* HistoryBillHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD0C227F5D4200A8571E /* HistoryBillHeaderCell.xib */; };
 		4FDACD0F227F5D5B00A8571E /* HistoryBillFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD0E227F5D5B00A8571E /* HistoryBillFooterCell.xib */; };
 		4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */; };
@@ -101,6 +99,10 @@
 		4FF2BD7A227BDA390008BA69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2BD79227BDA390008BA69 /* AVFoundation.framework */; };
 		4FF2BD86227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD84227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib */; };
 		4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD87227BEC230008BA69 /* Camera.xcassets */; };
+		4FF9C3BA2290F31F00D3AD81 /* FMBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */; };
+		4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */; };
+		4FF9C3BF22910A7600D3AD81 /* HistoryBillHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */; };
+		4FF9C3C0229116C700D3AD81 /* FMItemHistoryBillVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */; };
 		5C39102A2263492A008BEA62 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910052263492A008BEA62 /* LICENSE */; };
 		5C39102B2263492A008BEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910062263492A008BEA62 /* README.md */; };
 		5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */; };
@@ -277,15 +279,12 @@
 		4FDACCF5227F577200A8571E /* FMHistoryBillViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMHistoryBillViewController.xib; sourceTree = "<group>"; };
 		4FDACCF9227F5A0100A8571E /* FMItemHistoryBillVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMItemHistoryBillVC.h; sourceTree = "<group>"; };
 		4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMItemHistoryBillVC.m; sourceTree = "<group>"; };
-		4FDACCFB227F5A0100A8571E /* FMItemHistoryBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMItemHistoryBillVC.xib; sourceTree = "<group>"; };
 		4FDACCFF227F5AA500A8571E /* HistoryBillTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBillTableViewCell.h; sourceTree = "<group>"; };
 		4FDACD00227F5AA500A8571E /* HistoryBillTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBillTableViewCell.m; sourceTree = "<group>"; };
 		4FDACD01227F5AA500A8571E /* HistoryBillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryBillTableViewCell.xib; sourceTree = "<group>"; };
 		4FDACD04227F5BE000A8571E /* Muli-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Black.ttf"; sourceTree = "<group>"; };
-		4FDACD06227F5D0F00A8571E /* FMHeaderViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMHeaderViewCell.h; sourceTree = "<group>"; };
-		4FDACD07227F5D0F00A8571E /* FMHeaderViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMHeaderViewCell.m; sourceTree = "<group>"; };
-		4FDACD09227F5D2500A8571E /* FMFooterViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMFooterViewCell.h; sourceTree = "<group>"; };
-		4FDACD0A227F5D2500A8571E /* FMFooterViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMFooterViewCell.m; sourceTree = "<group>"; };
+		4FDACD09227F5D2500A8571E /* HistoryBillFooterCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBillFooterCell.h; sourceTree = "<group>"; };
+		4FDACD0A227F5D2500A8571E /* HistoryBillFooterCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBillFooterCell.m; sourceTree = "<group>"; };
 		4FDACD0C227F5D4200A8571E /* HistoryBillHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryBillHeaderCell.xib; sourceTree = "<group>"; };
 		4FDACD0E227F5D5B00A8571E /* HistoryBillFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryBillFooterCell.xib; sourceTree = "<group>"; };
 		4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPromotionHeaderCell.xib; sourceTree = "<group>"; };
@@ -308,6 +307,12 @@
 		4FF2BD79227BDA390008BA69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4FF2BD84227BE83B0008BA69 /* RegisterPromotionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPromotionsTableViewCell.xib; sourceTree = "<group>"; };
 		4FF2BD87227BEC230008BA69 /* Camera.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Camera.xcassets; sourceTree = "<group>"; };
+		4FF9C3B62290F05000D3AD81 /* FMUpdateTableDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUpdateTableDataProtocol.h; sourceTree = "<group>"; };
+		4FF9C3B82290F31F00D3AD81 /* FMBaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseTableViewModel.h; sourceTree = "<group>"; };
+		4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseTableViewModel.m; sourceTree = "<group>"; };
+		4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMItemHistoryBillVC.xib; sourceTree = "<group>"; };
+		4FF9C3BD22910A7600D3AD81 /* HistoryBillHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBillHeaderCell.h; sourceTree = "<group>"; };
+		4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBillHeaderCell.m; sourceTree = "<group>"; };
 		5C3910052263492A008BEA62 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5C3910062263492A008BEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -737,7 +742,7 @@
 			children = (
 				4FDACCF9227F5A0100A8571E /* FMItemHistoryBillVC.h */,
 				4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */,
-				4FDACCFB227F5A0100A8571E /* FMItemHistoryBillVC.xib */,
+				4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */,
 				4FDACD12227F67F100A8571E /* FMItemHistoryBillModel.h */,
 				4FDACD13227F67F100A8571E /* FMItemHistoryBillModel.m */,
 			);
@@ -757,6 +762,9 @@
 		4FDACD15227F738200A8571E /* ListHistoryBill */ = {
 			isa = PBXGroup;
 			children = (
+				4FF9C3BD22910A7600D3AD81 /* HistoryBillHeaderCell.h */,
+				4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */,
+				4FDACD0C227F5D4200A8571E /* HistoryBillHeaderCell.xib */,
 			);
 			path = ListHistoryBill;
 			sourceTree = "<group>";
@@ -764,6 +772,8 @@
 		4FDACD19227F73B700A8571E /* ListHistoryBill */ = {
 			isa = PBXGroup;
 			children = (
+				4FDACD09227F5D2500A8571E /* HistoryBillFooterCell.h */,
+				4FDACD0A227F5D2500A8571E /* HistoryBillFooterCell.m */,
 				4FDACD0E227F5D5B00A8571E /* HistoryBillFooterCell.xib */,
 			);
 			path = ListHistoryBill;
@@ -814,9 +824,28 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		4FF9C3B52290EFF200D3AD81 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				4FF9C3B62290F05000D3AD81 /* FMUpdateTableDataProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4FF9C3B72290F30300D3AD81 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4FF9C3B82290F31F00D3AD81 /* FMBaseTableViewModel.h */,
+				4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4FF9C3B72290F30300D3AD81 /* Model */,
+				4FF9C3B52290EFF200D3AD81 /* Protocol */,
 				4FDACCE3227EFB9E00A8571E /* ParseJson */,
 				4FDACCE1227EF55500A8571E /* Constant */,
 				4F50F3A52276EA5B00DF7173 /* CommonFunction */,
@@ -1018,9 +1047,6 @@
 		5C98628B2264D46F00545DCC /* HeaderCell */ = {
 			isa = PBXGroup;
 			children = (
-				4FDACD06227F5D0F00A8571E /* FMHeaderViewCell.h */,
-				4FDACD07227F5D0F00A8571E /* FMHeaderViewCell.m */,
-				4FDACD0C227F5D4200A8571E /* HistoryBillHeaderCell.xib */,
 				4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */,
 				4FDACD15227F738200A8571E /* ListHistoryBill */,
 				5C98628C2264D47E00545DCC /* Home */,
@@ -1067,8 +1093,6 @@
 		5C9862A52264E38700545DCC /* FooterCell */ = {
 			isa = PBXGroup;
 			children = (
-				4FDACD09227F5D2500A8571E /* FMFooterViewCell.h */,
-				4FDACD0A227F5D2500A8571E /* FMFooterViewCell.m */,
 				4FDACD19227F73B700A8571E /* ListHistoryBill */,
 			);
 			path = FooterCell;
@@ -1241,6 +1265,7 @@
 				4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */,
 				4FBD3DA5228DDE2C00E76E2A /* LocationFavorite.xcassets in Resources */,
 				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
+				4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F472D3B22907A9300F93D39 /* FMChangePasswordViewController.xib in Resources */,
@@ -1268,7 +1293,6 @@
 				4FDACD0D227F5D4200A8571E /* HistoryBillHeaderCell.xib in Resources */,
 				4F50F3922276E9A700DF7173 /* FMUserInforTableViewCell.xib in Resources */,
 				4F50F3942276E9A700DF7173 /* FMUserInforViewController.xib in Resources */,
-				4FDACCFD227F5A0100A8571E /* FMItemHistoryBillVC.xib in Resources */,
 				4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */,
 				5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */,
 				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
@@ -1417,6 +1441,7 @@
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
 				4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */,
 				4F472D4B229083CB00F93D39 /* FMChangePhoneNumberViewController.m in Sources */,
+				4FF9C3BA2290F31F00D3AD81 /* FMBaseTableViewModel.m in Sources */,
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
 				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
 				4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */,
@@ -1456,12 +1481,13 @@
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
 				4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */,
+				4FF9C3BF22910A7600D3AD81 /* HistoryBillHeaderCell.m in Sources */,
 				5C98629F2264D8FB00545DCC /* FZHomeHeaderView.m in Sources */,
 				4F50F3972276E9A700DF7173 /* FMNewsViewController.m in Sources */,
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				4FDACD0B227F5D2500A8571E /* FMFooterViewCell.m in Sources */,
+				4FDACD0B227F5D2500A8571E /* HistoryBillFooterCell.m in Sources */,
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4FDACD26227FCC7500A8571E /* FMBaseViewController.m in Sources */,
@@ -1476,7 +1502,6 @@
 				4FBD3D90228D9C8800E76E2A /* FMHistoryPointModel.m in Sources */,
 				4FBD3D8C228D9A5100E76E2A /* HistoryPointTableViewCell.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
-				4FDACD08227F5D0F00A8571E /* FMHeaderViewCell.m in Sources */,
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
@@ -1490,6 +1515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF9C3C0229116C700D3AD81 /* FMItemHistoryBillVC.m in Sources */,
 				5C6BFAF5225D668900A26400 /* FuzzyMarkTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

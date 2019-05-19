@@ -9,48 +9,14 @@
 #import "FMNotifiModel.h"
 #import "Notifi.h"
 
-@interface FMNotifiModel ()
-
-@property (strong, nonatomic) NSMutableArray <Notifi*> *listItem;
-
-@end
-
-@implementation FMNotifiModel {
-    BaseCallApi *_httpClient;
-    BOOL _isLoadMore;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _httpClient = [BaseCallApi defaultInitWithBaseURL];
-        self.listItem = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
-
-- (void)actionPullToRefreshData {
-    [self.listItem removeAllObjects];
-    NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @0};
-    [self getUserNotifications:params];
-}
-
-- (void)actionLoadMoreData {
-    if(!_isLoadMore) {
-        [self.delegate updateViewDataEmpty];
-        return;
-    }
-    NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @(self.listItem.count)};
-    [self getUserNotifications:params];
-}
+@implementation FMNotifiModel
 
 - (void)getUserNotifications:(NSDictionary *) params {
-    [_httpClient getDataWithPath:GET_USER_NOTIFICATIONS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [self.httpClient getDataWithPath:GET_USER_NOTIFICATIONS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];
             NSInteger numberItem = [json arrayForKey:@"data"].count;
-            self->_isLoadMore = numberItem >= 50;
+            self.isLoadMore = numberItem >= 50;
             if(numberItem > 0) {
                 for (NSDictionary *dict in [json arrayForKey:@"data"]) {
                     NSError *err;

@@ -1,5 +1,5 @@
 //
-//  FMNotifiModel.h
+//  FMUpdateDataProtocol.h
 //  FuzzyMark
 //
 //  Created by Tu Tran on 5/19/19.
@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "FMBaseTableViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMNotifiModel : FMBaseTableViewModel
+@protocol FMUpdateTableDataProtocol <NSObject>
+
+- (void)updateViewDataSuccess:(NSArray *) listData;
+- (void)updateViewDataEmpty;
+- (void)updateViewDataError;
 
 @end
 

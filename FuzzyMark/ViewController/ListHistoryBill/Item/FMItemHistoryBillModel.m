@@ -9,42 +9,30 @@
 #import "FMItemHistoryBillModel.h"
 #import "HistoryBill.h"
 
-@implementation FMItemHistoryBillModel {
-    BaseCallApi *_httpClient;
-}
+@implementation FMItemHistoryBillModel
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _httpClient = [BaseCallApi defaultInitWithBaseURL];
-        self.listData = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
-
-- (void)getListHistoryCaptureWithSuccessBlock: (void(^)(id)) successBlock {
-    NSDictionary *param = @{@"limit": @"50", @"offset": @(self.listData.count)};
-
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_HISTORIES_CAPTURE andParam:param isShowfailureAlert:YES withSuccessBlock:^(id success) {
+- (void)getUserNotifications:(NSDictionary *) params {
+    [self.httpClient getDataWithPath:GET_HISTORIES_CAPTURE andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];
-            if([json arrayForKey:@"data"]) {
-                NSArray *data = [json arrayForKey:@"data"];
-                if(data.count > 0 && data) {
-                    for (NSDictionary *dict in data) {
-                        NSError *error;
-                        HistoryBill *item = [[HistoryBill alloc] initWithDictionary:dict error:&error];
-                        [self.listData addObject:item];
-                    }
+            NSInteger numberItem = [json arrayForKey:@"data"].count;
+            self.isLoadMore = numberItem >= 50;
+            if(numberItem > 0) {
+                for (NSDictionary *dict in [json arrayForKey:@"data"]) {
+                    NSError *err;
+                    HistoryBill *bill = [[HistoryBill alloc] initWithDictionary:dict error:&err];
+                    [self.listItem addObject:bill];
                 }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            } else {
+                [self.delegate updateViewDataEmpty];
             }
-            successBlock(self.listData);
         } else {
-            successBlock(nil);
+            [self.delegate updateViewDataError];
         }
+        
     } withFailBlock:^(id fail) {
-        successBlock(nil);
+        [self.delegate updateViewDataError];
     }];
 }
 

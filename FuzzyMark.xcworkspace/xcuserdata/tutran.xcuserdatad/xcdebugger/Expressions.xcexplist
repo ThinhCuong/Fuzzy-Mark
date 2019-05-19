@@ -3,7 +3,20 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
+         contextName = "-[FMTableViewCell initWithCoder:]:FMTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imgBanner">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMItemHistoryBillVC viewDidLoad]:FMItemHistoryBillVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.tableView">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[FMHistoryBillViewController setupSegmentControl]:FMHistoryBillViewController.m">
@@ -14,23 +27,23 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__38-[FMNotifiModel getUserNotifications:]_block_invoke:FMNotifiModel.m">
+         contextName = "-[FMItemHistoryBillVC init]:FMItemHistoryBillVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.listItem">
+               value = "self.tableView">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FMTableViewCell binData:]:FMTableViewCell.m">
+         contextName = "-[FMUserInforViewController didSelectBlockCell:]:FMUserInforViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "">
-            </PersistentString>
-            <PersistentString
-               value = "self.lblName.text">
+               value = "cell.typeBlock">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
       </ContextState>
       <ContextState
          contextName = "__64-[FMItemHistoryBillModel getListHistoryCaptureWithSuccessBlock:]_block_invoke:FMItemHistoryBillModel.m">
@@ -44,23 +57,29 @@
          contextName = "-[FMItemHistoryBillVC tableView:cellForRowAtIndexPath:]:FMItemHistoryBillVC.m">
       </ContextState>
       <ContextState
-         contextName = "-[FMTableViewCell initWithCoder:]:FMTableViewCell.m">
+         contextName = "-[FMTableViewCell binData:]:FMTableViewCell.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.imgBanner">
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "self.lblName.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FMUserInforViewController didSelectBlockCell:]:FMUserInforViewController.m">
+         contextName = "__38-[FMNotifiModel getUserNotifications:]_block_invoke:FMNotifiModel.m">
          <PersistentStrings>
             <PersistentString
-               value = "cell.typeBlock">
+               value = "self.listItem">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[FMUserInforViewController didSelectButtonHistory]:FMUserInforViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__47-[FMItemHistoryBillModel getUserNotifications:]_block_invoke:FMItemHistoryBillModel.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
