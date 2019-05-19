@@ -103,6 +103,9 @@
 		4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */; };
 		4FF9C3BF22910A7600D3AD81 /* HistoryBillHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */; };
 		4FF9C3C0229116C700D3AD81 /* FMItemHistoryBillVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACCFA227F5A0100A8571E /* FMItemHistoryBillVC.m */; };
+		4FF9C3C52291373200D3AD81 /* FMDetailHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3C32291373200D3AD81 /* FMDetailHistoryViewController.m */; };
+		4FF9C3C62291373200D3AD81 /* FMDetailHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3C42291373200D3AD81 /* FMDetailHistoryViewController.xib */; };
+		4FF9C3C82291397500D3AD81 /* DetailHistoryBill.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3C72291397500D3AD81 /* DetailHistoryBill.xcassets */; };
 		5C39102A2263492A008BEA62 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910052263492A008BEA62 /* LICENSE */; };
 		5C39102B2263492A008BEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910062263492A008BEA62 /* README.md */; };
 		5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */; };
@@ -313,6 +316,10 @@
 		4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMItemHistoryBillVC.xib; sourceTree = "<group>"; };
 		4FF9C3BD22910A7600D3AD81 /* HistoryBillHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBillHeaderCell.h; sourceTree = "<group>"; };
 		4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBillHeaderCell.m; sourceTree = "<group>"; };
+		4FF9C3C22291373200D3AD81 /* FMDetailHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDetailHistoryViewController.h; sourceTree = "<group>"; };
+		4FF9C3C32291373200D3AD81 /* FMDetailHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDetailHistoryViewController.m; sourceTree = "<group>"; };
+		4FF9C3C42291373200D3AD81 /* FMDetailHistoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMDetailHistoryViewController.xib; sourceTree = "<group>"; };
+		4FF9C3C72291397500D3AD81 /* DetailHistoryBill.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DetailHistoryBill.xcassets; sourceTree = "<group>"; };
 		5C3910052263492A008BEA62 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5C3910062263492A008BEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -540,6 +547,7 @@
 				4F50F3822276E9A700DF7173 /* FMNotifiViewController.xib */,
 				4F472D4D22908A7500F93D39 /* FMNotifiModel.h */,
 				4F472D4E22908A7500F93D39 /* FMNotifiModel.m */,
+				4F472D562290B42000F93D39 /* Notifi.xcassets */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -599,7 +607,6 @@
 				4F50F3872276E9A700DF7173 /* FMNotifiTableViewCell.h */,
 				4F50F3862276E9A700DF7173 /* FMNotifiTableViewCell.m */,
 				4F50F3852276E9A700DF7173 /* FMNotifiTableViewCell.xib */,
-				4F472D562290B42000F93D39 /* Notifi.xcassets */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -729,6 +736,7 @@
 		4FDACCF2227F46E600A8571E /* ListHistoryBill */ = {
 			isa = PBXGroup;
 			children = (
+				4FF9C3C1229136A400D3AD81 /* DetailHistoryBill */,
 				4FDACCF8227F59A300A8571E /* Item */,
 				4FDACCF3227F577200A8571E /* FMHistoryBillViewController.h */,
 				4FDACCF4227F577200A8571E /* FMHistoryBillViewController.m */,
@@ -839,6 +847,17 @@
 				4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4FF9C3C1229136A400D3AD81 /* DetailHistoryBill */ = {
+			isa = PBXGroup;
+			children = (
+				4FF9C3C22291373200D3AD81 /* FMDetailHistoryViewController.h */,
+				4FF9C3C32291373200D3AD81 /* FMDetailHistoryViewController.m */,
+				4FF9C3C42291373200D3AD81 /* FMDetailHistoryViewController.xib */,
+				4FF9C3C72291397500D3AD81 /* DetailHistoryBill.xcassets */,
+			);
+			path = DetailHistoryBill;
 			sourceTree = "<group>";
 		};
 		5C3910022263490B008BEA62 /* Common */ = {
@@ -1297,9 +1316,11 @@
 				5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */,
 				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
 				4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */,
+				4FF9C3C62291373200D3AD81 /* FMDetailHistoryViewController.xib in Resources */,
 				4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */,
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
 				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
+				4FF9C3C82291397500D3AD81 /* DetailHistoryBill.xcassets in Resources */,
 				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
 				4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */,
 				5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */,
@@ -1446,6 +1467,7 @@
 				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
 				4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
+				4FF9C3C52291373200D3AD81 /* FMDetailHistoryViewController.m in Sources */,
 				4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */,
 				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
 				4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */,

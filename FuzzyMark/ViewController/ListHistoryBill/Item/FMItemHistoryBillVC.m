@@ -12,6 +12,7 @@
 #import "HistoryBillFooterCell.h"
 #import "HistoryBillTableViewCell.h"
 #import <CCBottomRefreshControl-umbrella.h>
+#import "FMDetailHistoryViewController.h"
 
 @interface FMItemHistoryBillVC () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
 
@@ -123,7 +124,7 @@
     [self stopAnimationRefresh];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return _listData.count;
 }
@@ -172,6 +173,12 @@
     footer.contentView.backgroundColor = [UIColor whiteColor];
 }
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FMDetailHistoryViewController *vc = [[FMDetailHistoryViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 
 @end

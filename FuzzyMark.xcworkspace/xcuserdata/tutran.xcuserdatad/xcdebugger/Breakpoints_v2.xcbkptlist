@@ -20,28 +20,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FuzzyMark/ViewController/Notification/FMNotifiModel.m"
-            timestampString = "579941043.3691781"
+            timestampString = "579950685.162074"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
             landmarkName = "-putUserNotifiRead:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FuzzyMark/Cell/Cell/Notification/FMNotifiTableViewCell.m"
-            timestampString = "579941043.369548"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-binData:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

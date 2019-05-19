@@ -44,6 +44,11 @@
     }];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+}
+
 #pragma mark - private
 - (void)setTableViewContent {
     self.tableView.delegate = self;
