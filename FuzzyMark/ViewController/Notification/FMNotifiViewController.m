@@ -39,6 +39,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setNavigationBar];
     [self setTableView];
+    [self callDataRefresh];
 }
 
 #pragma mark - private
