@@ -39,6 +39,8 @@
     // Do any additional setup after loading the view from its nib.
     [self setNavigationBar];
     [self setTableView];
+    [SVProgressHUD setContainerView:self.view];
+    [SVProgressHUD show];
     [self callDataRefresh];
 }
 
@@ -104,6 +106,7 @@
     if(_bottomRFControl.isRefreshing) {
         [_bottomRFControl endRefreshing];
     }
+    [SVProgressHUD dismiss];
     _isRefresh = NO;
 }
 
