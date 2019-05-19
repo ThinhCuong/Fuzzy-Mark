@@ -21,7 +21,21 @@
     self.window.backgroundColor = UIColor.whiteColor;
     [self gotoTabbarController];
     [self.window makeKeyAndVisible];
+    [self setupGlobalAppearance];
     return YES;
+}
+
+//func setupGlobalAppearance(){
+//    //global Appearance settings
+//    let customFont = UIFont.appRegularFontWith(size: 17)
+//    UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: customFont], for: .normal)
+//    UITextField.appearance().substituteFontName = Constants.App.regularFont
+//    UILabel.appearance().substituteFontName = Constants.App.regularFont
+//    UILabel.appearance().substituteFontNameBold = Constants.App.boldFont
+//}
+
+- (void)setupGlobalAppearance {
+  // [[UILabel appearance] setFont:[UIFont fontWithName:@"Muli-Regular" size:14]];
 }
 
 - (void)gotoTabbarController {

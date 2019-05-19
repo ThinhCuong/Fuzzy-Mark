@@ -747,6 +747,22 @@
 			path = FuzzyMarkUITests;
 			sourceTree = "<group>";
 		};
+		5C771A232288F9BB00675AA0 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				5C9862B02264E4BE00545DCC /* FZItemMenuHomeTableViewCell.h */,
+				5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */,
+				5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */,
+				5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */,
+				5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */,
+				5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */,
+				5C87BDD1227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.h */,
+				5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */,
+				5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -853,15 +869,7 @@
 			isa = PBXGroup;
 			children = (
 				5CD3A76E22887F800020A0DE /* Banner */,
-				5C9862B02264E4BE00545DCC /* FZItemMenuHomeTableViewCell.h */,
-				5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */,
-				5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */,
-				5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */,
-				5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */,
-				5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */,
-				5C87BDD1227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.h */,
-				5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */,
-				5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */,
+				5C771A232288F9BB00675AA0 /* Groups */,
 			);
 			path = Home;
 			sourceTree = "<group>";

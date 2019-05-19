@@ -21,6 +21,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eIk-43-iEa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="96" id="1L1-XG-V2A"/>
                         </constraints>
@@ -161,7 +162,7 @@
                             <constraint firstAttribute="trailing" secondItem="RWF-33-brD" secondAttribute="trailing" id="jQ6-OE-iZW"/>
                         </constraints>
                     </view>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-05-BiU">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-05-BiU">
                         <rect key="frame" x="16" y="189" width="288" height="56"/>
                         <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -379,6 +380,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="bannerCollectionView" destination="eIk-43-iEa" id="ieJ-UU-ro4"/>
+                <outlet property="fixadImage" destination="aGI-05-BiU" id="RCI-LO-fR2"/>
                 <outlet property="pageControl" destination="aeO-ho-VAu" id="o1G-yJ-jWo"/>
             </connections>
             <point key="canvasLocation" x="139.13043478260872" y="184.48660714285714"/>

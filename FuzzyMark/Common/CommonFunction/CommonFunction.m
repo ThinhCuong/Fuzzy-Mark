@@ -10,6 +10,10 @@
 
 @implementation CommonFunction
 
++ (void)setCornerRadiusUIImageView:(UIImageView *)imageView cornerRadiusValue:(float )cornerRadiusValue {
+    imageView.layer.cornerRadius = 5;
+    imageView.clipsToBounds = YES;
+}
 
 @end
 

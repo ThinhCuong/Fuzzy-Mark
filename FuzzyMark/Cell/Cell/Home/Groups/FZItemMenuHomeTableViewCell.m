@@ -10,7 +10,10 @@
 #import "FZMenuHomeCollectionViewCell.h"
 #import "FZItemMenuVerticalTableViewCell.h"
 
-@interface FZItemMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate>
+@interface FZItemMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate> {
+    NSArray<FZGroupInfoJsonModel> *_listVoucherVertical;
+    NSArray<FZGroupInfoJsonModel> *_listVoucherHorizontal;
+}
 
 @property (strong, nonatomic) IBOutlet UICollectionView *menuCollectionView;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *heightOfColectionView;
@@ -35,36 +38,40 @@
     self.tableView.delegate = self;
 }
 
-- (void)bindData {
-    _heightOfTableView.constant = 95 * 2;
+- (void)bindData:(NSArray<FZGroupInfoJsonModel> *)listVoucherVertical listVoucherHorizontal:(NSArray<FZGroupInfoJsonModel> *)listVoucherHorizontal {
+    _listVoucherVertical = listVoucherVertical;
+    _listVoucherHorizontal = listVoucherHorizontal;
+    _heightOfTableView.constant = 95 * listVoucherVertical.count;
+    [self.menuCollectionView reloadData];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 2;
+    return _listVoucherHorizontal.count;
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FZMenuHomeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FZMenuHomeCollectionViewCell" forIndexPath:indexPath];
+    [cell bindData:_listVoucherHorizontal[indexPath.row]];
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize cellSize = CGSizeMake(collectionView.bounds.size.width - 100, collectionView.bounds.size.height);
+    CGSize cellSize = CGSizeMake((collectionView.bounds.size.width - 32) * 216 / 360, 191);
     return cellSize;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    return _listVoucherVertical.count;
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FZItemMenuVerticalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuVerticalTableViewCell"];
+    [cell bindData:_listVoucherVertical[indexPath.row]];
     return cell;
 }
 
