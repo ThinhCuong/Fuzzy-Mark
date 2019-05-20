@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
-- (void)bindData:(NSArray<FZBannerModel> *)listBanner;
+- (void)bindData:(FZHomeJsonModel *)homeData;
 
 @end
 

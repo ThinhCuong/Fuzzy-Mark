@@ -9,7 +9,6 @@
 #import "FZHomeModel.h"
 #import "FZMenuHomeTableViewCell.h"
 #import "FZItemMenuHomeTableViewCell.h"
-#import "FZItemMenuVerticalTableViewCell.h"
 
 @interface FZHomeModel() {
     FZHomeJsonModel *_homeData;
@@ -31,7 +30,6 @@
     [tableView registerNib:[UINib nibWithNibName:@"FZHomeHeaderView" bundle:nil] forHeaderFooterViewReuseIdentifier:@"FZHomeHeaderView"];
     [tableView registerNib:[UINib nibWithNibName:@"FZMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZMenuHomeTableViewCell"];
     [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuHomeTableViewCell"];
-    [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuVerticalTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuVerticalTableViewCell"];
 }
 
 - (void)bindData:(FZHomeJsonModel *)homeData {
@@ -48,7 +46,7 @@
             return 1;
             break;
         default:
-            return 2;
+            return _homeData.groups.count;
             break;
     }
 }
@@ -56,11 +54,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FZMenuHomeTableViewCell *menuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZMenuHomeTableViewCell"];
-        [menuHomeCell bindData:_homeData.banners];
+        [menuHomeCell bindData:_homeData];
         return menuHomeCell;
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];
-        [itemMenuHomeCell bindData];
+        [itemMenuHomeCell bindData:_homeData.groups[indexPath.row].vouchers_vertical listVoucherHorizontal:_homeData.groups[indexPath.row].vouchers_horizontal];
         return itemMenuHomeCell;
     }
 }

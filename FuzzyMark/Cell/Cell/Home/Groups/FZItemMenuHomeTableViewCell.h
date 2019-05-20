@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FZHomeJsonModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FZItemMenuHomeTableViewCell : UITableViewCell
-- (void)bindData;
+
+- (void)bindData:(NSArray<FZGroupInfoJsonModel> *)listVoucherVertical listVoucherHorizontal:(NSArray<FZGroupInfoJsonModel> *)listVoucherHorizontal;
+
 @end
 
 NS_ASSUME_NONNULL_END

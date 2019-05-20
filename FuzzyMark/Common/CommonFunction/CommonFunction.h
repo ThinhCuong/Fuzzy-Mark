@@ -11,6 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CommonFunction : NSObject
+// set corner radius image view
++ (void)setCornerRadiusUIImageView:(UIImageView *)imageView cornerRadiusValue:(float )cornerRadiusValue;
 
 @end
 
@@ -22,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (UIFont *)setItalicFontMuliWithSize:(CGFloat)fontSize;
 + (UIFont *)setBoldItalicFontMuliWithSize:(CGFloat)fontSize;
 + (UIFont *)setLightItalicFontMuliWithSize:(CGFloat)fontSize;
+
 @end
 
 NS_ASSUME_NONNULL_END

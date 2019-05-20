@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UICollectionView *bannerCollectionView;
 @property (nonatomic, weak) NSTimer *timer;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (strong, nonatomic) IBOutlet UIImageView *fixadImage;
 
 @end
 
@@ -29,6 +30,9 @@
     
     self.bannerCollectionView.dataSource = self;
     self.bannerCollectionView.delegate = self;
+    
+    self.fixadImage.layer.cornerRadius = 5;
+    self.fixadImage.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -37,8 +41,10 @@
     // Configure the view for the selected state
 }
 
-- (void)bindData:(NSArray<FZBannerModel> *) listBanner {
-    _listBanner = listBanner;
+- (void)bindData:(FZHomeJsonModel *)homeData {
+    _listBanner = homeData.banners;
+    FZFixedAdsJsonModel *temp = homeData.fixed_ads[0];
+    [self.fixadImage sd_setImageWithURL:[NSURL URLWithString:temp.image]];
     [self.bannerCollectionView reloadData];
     [self stopTimer];
     [self startTimer];

@@ -13,12 +13,22 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.image.layer.cornerRadius = 72/2;
+    self.image.clipsToBounds = YES;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)bindData:(FZGroupInfoJsonModel *)groupInfo {
+    [self.image sd_setImageWithURL:[NSURL URLWithString:groupInfo.image]];
+    self.nameLabel.text = groupInfo.name;
+    self.groupInfoDescriptionLabel.text = groupInfo.groupInfoDescription;
+    self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percent_discount, @"%"];
 }
 
 @end
