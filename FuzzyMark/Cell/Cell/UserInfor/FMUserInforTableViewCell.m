@@ -20,6 +20,11 @@
 
 @implementation FMUserInforTableViewCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+}
+
 - (IBAction)didSelectButtonAddImageUser:(id)sender {
     if([self.delegate respondsToSelector:@selector(didSelectButtonAddImageUser)]) {
         [self.delegate didSelectButtonAddImageUser];
