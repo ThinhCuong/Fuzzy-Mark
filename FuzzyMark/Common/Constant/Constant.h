@@ -12,6 +12,20 @@
 
 #endif /* Constant_h */
 
+/* Enum */
+typedef NS_ENUM(NSInteger, CameraControllerError) {
+    CaptureSessionAlreadyRunning = 0,
+    CaptureSessionIsMissing,
+    InputsAreInvalid,
+    InvalidOperation,
+    Unknown
+};
+
+typedef NS_ENUM(NSInteger, CameraPosition) {
+    CameraPositionFront,
+    CameraPositionRear
+};
+
 /* Name API */
 #define GET_HISTORIES_CAPTURE                @"user/histories-capture"
 #define GET_USER_NOTIFICATIONS               @"user/notifications"

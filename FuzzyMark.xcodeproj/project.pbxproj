@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
 		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
+		4F27544522931E870086A46C /* FMCameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F27544422931E870086A46C /* FMCameraModel.m */; };
 		4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */; };
 		4F472D2C229072F600F93D39 /* FMChangeEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */; };
 		4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2E229073A900F93D39 /* ChangeEmail.xcassets */; };
@@ -182,6 +183,8 @@
 		4F00C820227A246C0073B583 /* FMUserInforModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUserInforModel.m; sourceTree = "<group>"; };
 		4F00C822227A2D580073B583 /* FMCellBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCellBlockObject.h; sourceTree = "<group>"; };
 		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
+		4F27544322931E870086A46C /* FMCameraModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCameraModel.h; sourceTree = "<group>"; };
+		4F27544422931E870086A46C /* FMCameraModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCameraModel.m; sourceTree = "<group>"; };
 		4F472D28229072F600F93D39 /* FMChangeEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMChangeEmailViewController.h; sourceTree = "<group>"; };
 		4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMChangeEmailViewController.m; sourceTree = "<group>"; };
 		4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMChangeEmailViewController.xib; sourceTree = "<group>"; };
@@ -854,6 +857,8 @@
 				4FF2BD74227BD9F70008BA69 /* FMCameraViewController.h */,
 				4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */,
 				4FF2BD76227BD9F70008BA69 /* FMCameraViewController.xib */,
+				4F27544322931E870086A46C /* FMCameraModel.h */,
+				4F27544422931E870086A46C /* FMCameraModel.m */,
 				4FF2BD87227BEC230008BA69 /* Camera.xcassets */,
 			);
 			path = Camera;
@@ -1559,6 +1564,7 @@
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
 				4FF9C3D12291A2BC00D3AD81 /* FMRegisterPromotionViewController.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
+				4F27544522931E870086A46C /* FMCameraModel.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4FDACD0B227F5D2500A8571E /* HistoryBillFooterCell.m in Sources */,
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
@@ -1750,7 +1756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9X92A5RB95;
+				DEVELOPMENT_TEAM = 5VR7C6YPUT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -1759,7 +1765,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CuongNguyen.FuzzyMark;
+				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -1774,7 +1780,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9X92A5RB95;
+				DEVELOPMENT_TEAM = 5VR7C6YPUT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -1783,7 +1789,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = CuongNguyen.FuzzyMark;
+				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

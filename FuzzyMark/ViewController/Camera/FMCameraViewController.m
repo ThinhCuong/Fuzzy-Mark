@@ -7,10 +7,9 @@
 //
 
 #import "FMCameraViewController.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface FMCameraViewController ()
-
+@property (weak, nonatomic) IBOutlet UIView *previewView;
 @end
 
 @implementation FMCameraViewController
@@ -20,14 +19,17 @@
     // Do any additional setup after loading the view from its nib.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark IBAction
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didSelectTakePhoto:(id)sender {
 }
-*/
+
+- (IBAction)didSelectGoBack:(id)sender {
+}
+
+- (IBAction)didSelectIntro:(id)sender {
+}
+
+
 
 @end
