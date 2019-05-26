@@ -11,6 +11,7 @@
 #import "FMRegisterPromotionModel.h"
 #import "RegisterPromotionCell.h"
 #import "RegisterPromotionHeaderCell.h"
+#import "FMCameraViewController.h"
 
 @interface FMRegisterPromotionViewController () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
 
@@ -145,6 +146,8 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
+    FMCameraViewController *vc = [[FMCameraViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
