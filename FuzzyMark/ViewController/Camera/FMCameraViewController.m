@@ -10,6 +10,11 @@
 
 @interface FMCameraViewController () <AVCapturePhotoCaptureDelegate>
 @property (weak, nonatomic) IBOutlet UIView *previewView;
+@property (weak, nonatomic) IBOutlet UIView *blurView;
+@property (weak, nonatomic) IBOutlet UIView *middleView;
+@property (weak, nonatomic) IBOutlet UIView *introView;
+
+
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (strong, nonatomic) AVCapturePhotoOutput *stillImageOutput;
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
@@ -21,6 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [self.introView setAlpha:0.0];
     [self setNavigationBar];
 }
 
@@ -36,6 +42,23 @@
 }
 
 #pragma mark private
+- (void)setBlurView {
+    UIBezierPath *transparentPath = [UIBezierPath bezierPathWithRect:self.middleView.frame];
+    UIBezierPath *overlayPath = [UIBezierPath bezierPathWithRect:self.previewView.frame];
+    [overlayPath appendPath:transparentPath];
+    [overlayPath setUsesEvenOddFillRule:YES];
+    
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.path = overlayPath.CGPath;
+    maskLayer.fillRule = kCAFillRuleEvenOdd;
+    maskLayer.fillColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.54].CGColor;
+    [self.blurView.layer addSublayer:maskLayer];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.introView setAlpha:1.0];
+    }];
+}
+
 - (void)setNavigationBar {
     self.isHideNavigationBar = YES;
 }
@@ -67,7 +90,7 @@
     self.videoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     if(self.videoPreviewLayer) {
         
-        self.videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspect;
+        self.videoPreviewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
         self.videoPreviewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
         [self.previewView.layer addSublayer:self.videoPreviewLayer];
         
@@ -77,6 +100,7 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.videoPreviewLayer.frame = self.previewView.bounds;
+                [self setBlurView];
             });
             
         });
