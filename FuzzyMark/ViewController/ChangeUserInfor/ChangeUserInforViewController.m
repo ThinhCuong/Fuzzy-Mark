@@ -7,11 +7,12 @@
 //
 
 #import "ChangeUserInforViewController.h"
+#import "FuzzyMark-Swift.h"
 #import "BEMCheckBox.h"
 
 @interface ChangeUserInforViewController () <BEMCheckBoxDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *txtName;
-@property (weak, nonatomic) IBOutlet UITextView *txtBirthday;
+@property (weak, nonatomic) IBOutlet TJTextField *txtName;
+@property (weak, nonatomic) IBOutlet TJTextField *txtBirthday;
 @property (weak, nonatomic) IBOutlet BEMCheckBox *CBMaleView;
 @property (weak, nonatomic) IBOutlet BEMCheckBox *CBFemaleView;
 @property (weak, nonatomic) IBOutlet UIButton *btnSave;

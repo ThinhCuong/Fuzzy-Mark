@@ -23,8 +23,8 @@
                 <outlet property="CBFemaleView" destination="9IW-0c-6YD" id="dqV-Eg-IsO"/>
                 <outlet property="CBMaleView" destination="qJt-03-hqR" id="XPr-kb-6OZ"/>
                 <outlet property="btnSave" destination="8XP-3E-BCk" id="QCA-2o-FIY"/>
-                <outlet property="txtBirthday" destination="amV-Ia-L0a" id="ts6-sm-3fI"/>
-                <outlet property="txtName" destination="rsP-Bx-fmn" id="lqX-an-5CS"/>
+                <outlet property="txtBirthday" destination="amV-Ia-L0a" id="VMp-46-gP3"/>
+                <outlet property="txtName" destination="rsP-Bx-fmn" id="vYo-CQ-sOS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +34,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ &amp; tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-RY-kHS">
-                    <rect key="frame" x="24" y="36" width="42.5" height="15"/>
+                    <rect key="frame" x="24" y="36" width="43" height="15"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                     <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -144,20 +144,19 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="BzE-u0-zHT" firstAttribute="centerY" secondItem="9IW-0c-6YD" secondAttribute="centerY" id="1BU-J5-hpf"/>
-                        <constraint firstItem="qJt-03-hqR" firstAttribute="leading" secondItem="06x-3u-blz" secondAttribute="leading" id="I8V-H2-B0s"/>
-                        <constraint firstItem="9IW-0c-6YD" firstAttribute="top" secondItem="06x-3u-blz" secondAttribute="top" id="J03-WU-pUP"/>
-                        <constraint firstItem="qJt-03-hqR" firstAttribute="top" secondItem="06x-3u-blz" secondAttribute="top" id="JA3-cW-ymt"/>
+                        <constraint firstItem="qJt-03-hqR" firstAttribute="leading" secondItem="kVl-Y6-xij" secondAttribute="leading" id="I8V-H2-B0s"/>
+                        <constraint firstItem="9IW-0c-6YD" firstAttribute="top" secondItem="kVl-Y6-xij" secondAttribute="top" id="J03-WU-pUP"/>
+                        <constraint firstItem="qJt-03-hqR" firstAttribute="top" secondItem="kVl-Y6-xij" secondAttribute="top" id="JA3-cW-ymt"/>
                         <constraint firstItem="BzE-u0-zHT" firstAttribute="trailing" secondItem="9IW-0c-6YD" secondAttribute="trailing" id="PyO-zF-3vh"/>
                         <constraint firstItem="GiM-pR-kqm" firstAttribute="centerY" secondItem="qJt-03-hqR" secondAttribute="centerY" id="Q59-Yt-DtF"/>
-                        <constraint firstItem="qJt-03-hqR" firstAttribute="bottom" secondItem="06x-3u-blz" secondAttribute="bottom" id="QsP-T6-ymC"/>
+                        <constraint firstItem="qJt-03-hqR" firstAttribute="bottom" secondItem="kVl-Y6-xij" secondAttribute="bottom" id="QsP-T6-ymC"/>
                         <constraint firstItem="9IW-0c-6YD" firstAttribute="leading" secondItem="GiM-pR-kqm" secondAttribute="trailing" constant="34" id="cnc-k6-51C"/>
-                        <constraint firstItem="9IW-0c-6YD" firstAttribute="bottom" secondItem="06x-3u-blz" secondAttribute="bottom" id="etK-UD-VYz"/>
+                        <constraint firstItem="9IW-0c-6YD" firstAttribute="bottom" secondItem="kVl-Y6-xij" secondAttribute="bottom" id="etK-UD-VYz"/>
                         <constraint firstItem="GiM-pR-kqm" firstAttribute="trailing" secondItem="qJt-03-hqR" secondAttribute="trailing" id="hn8-KO-yVl"/>
                         <constraint firstItem="BzE-u0-zHT" firstAttribute="leading" secondItem="GiM-pR-kqm" secondAttribute="trailing" constant="56" id="jJD-qi-OuM"/>
                         <constraint firstItem="GiM-pR-kqm" firstAttribute="leading" secondItem="kVl-Y6-xij" secondAttribute="leading" constant="22" id="sne-UB-LIQ"/>
                         <constraint firstAttribute="trailing" secondItem="BzE-u0-zHT" secondAttribute="trailing" id="vuX-ta-zVl"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="06x-3u-blz"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-DX-YDd" userLabel="Line">
                     <rect key="frame" x="24" y="201" width="272" height="0.5"/>
