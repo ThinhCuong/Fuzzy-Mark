@@ -30,15 +30,6 @@
 }
 
 - (void)setUI {
-    // Set shadow button Save
-    self.btnSave.layer.cornerRadius = 10;
-    self.btnSave.clipsToBounds = YES;
-    self.btnSave.layer.masksToBounds = NO;
-    self.btnSave.layer.shadowOffset = CGSizeMake(0, 5);
-    self.btnSave.layer.shadowColor = [UIColor colorWithRed:0.31 green:0.72 blue:1.0 alpha:0.3].CGColor;
-    self.btnSave.layer.shadowRadius = 5;
-    self.btnSave.layer.shadowOpacity = 1.0;
-    
     self.CBMaleView.delegate = self;
     self.CBFemaleView.delegate = self;
     _groupSex = [BEMCheckBoxGroup groupWithCheckBoxes:@[self.CBMaleView,self.CBFemaleView]];
