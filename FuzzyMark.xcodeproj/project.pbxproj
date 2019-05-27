@@ -10,6 +10,7 @@
 		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
 		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
 		4F27544522931E870086A46C /* FMCameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F27544422931E870086A46C /* FMCameraModel.m */; };
+		4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B50229C496C0029F188 /* UITabBar+FMMiddleButton.m */; };
 		4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */; };
 		4F472D2C229072F600F93D39 /* FMChangeEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */; };
 		4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2E229073A900F93D39 /* ChangeEmail.xcassets */; };
@@ -185,6 +186,8 @@
 		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
 		4F27544322931E870086A46C /* FMCameraModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCameraModel.h; sourceTree = "<group>"; };
 		4F27544422931E870086A46C /* FMCameraModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCameraModel.m; sourceTree = "<group>"; };
+		4F2F5B4F229C496C0029F188 /* UITabBar+FMMiddleButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+FMMiddleButton.h"; sourceTree = "<group>"; };
+		4F2F5B50229C496C0029F188 /* UITabBar+FMMiddleButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+FMMiddleButton.m"; sourceTree = "<group>"; };
 		4F472D28229072F600F93D39 /* FMChangeEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMChangeEmailViewController.h; sourceTree = "<group>"; };
 		4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMChangeEmailViewController.m; sourceTree = "<group>"; };
 		4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMChangeEmailViewController.xib; sourceTree = "<group>"; };
@@ -576,6 +579,8 @@
 				4F50F38A2276E9A700DF7173 /* FMMiddleButton.m */,
 				4F50F38B2276E9A700DF7173 /* FMTabBarController.h */,
 				4F50F38D2276E9A700DF7173 /* FMTabBarController.m */,
+				4F2F5B4F229C496C0029F188 /* UITabBar+FMMiddleButton.h */,
+				4F2F5B50229C496C0029F188 /* UITabBar+FMMiddleButton.m */,
 			);
 			path = CustomTabbar;
 			sourceTree = "<group>";
@@ -1556,6 +1561,7 @@
 				4F472D5322908C8A00F93D39 /* Notifi.m in Sources */,
 				4FDACD02227F5AA500A8571E /* HistoryBillTableViewCell.m in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
+				4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */,
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
 				4FDACCFC227F5A0100A8571E /* FMItemHistoryBillVC.m in Sources */,
