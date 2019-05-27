@@ -1,5 +1,4 @@
 PODS:
-  - BEMCheckBox (1.4.1)
   - CCBottomRefreshControl (0.5.2)
   - CHIPageControl/Jaloro (0.1.7)
   - HMSegmentedControl (1.5.5)
@@ -10,7 +9,6 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - BEMCheckBox
   - CCBottomRefreshControl
   - CHIPageControl/Jaloro
   - HMSegmentedControl
@@ -20,7 +18,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - BEMCheckBox
     - CCBottomRefreshControl
     - CHIPageControl
     - HMSegmentedControl
@@ -29,7 +26,6 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   CHIPageControl: bbe1ddd0c688c02ec65b7f7e7d34551a3d16f37c
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
@@ -37,6 +33,6 @@ SPEC CHECKSUMS:
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 21aeffe5b42e7d5caa71a2d5d5e56bbd9261a74b
+PODFILE CHECKSUM: cb1435222e7b0b516ba9857e201800e8266f977f
 
 COCOAPODS: 1.6.1
