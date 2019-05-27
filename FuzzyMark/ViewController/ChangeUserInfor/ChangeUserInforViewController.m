@@ -8,19 +8,16 @@
 
 #import "ChangeUserInforViewController.h"
 #import "FuzzyMark-Swift.h"
-#import "BEMCheckBox.h"
 
-@interface ChangeUserInforViewController () <BEMCheckBoxDelegate>
+@interface ChangeUserInforViewController ()
 @property (weak, nonatomic) IBOutlet TJTextField *txtName;
 @property (weak, nonatomic) IBOutlet TJTextField *txtBirthday;
-@property (weak, nonatomic) IBOutlet BEMCheckBox *CBMaleView;
-@property (weak, nonatomic) IBOutlet BEMCheckBox *CBFemaleView;
 @property (weak, nonatomic) IBOutlet UIButton *btnSave;
 
 @end
 
 @implementation ChangeUserInforViewController {
-    BEMCheckBoxGroup *_groupSex;
+    
 }
 
 - (void)viewDidLoad {
@@ -30,12 +27,7 @@
 }
 
 - (void)setUI {
-    self.CBMaleView.delegate = self;
-    self.CBFemaleView.delegate = self;
-    _groupSex = [BEMCheckBoxGroup groupWithCheckBoxes:@[self.CBMaleView,self.CBFemaleView]];
-    _groupSex.mustHaveSelection = YES;
-    
-//    [self hideDatePicker];
+  
 }
 
 - (void)setNavigationBar {

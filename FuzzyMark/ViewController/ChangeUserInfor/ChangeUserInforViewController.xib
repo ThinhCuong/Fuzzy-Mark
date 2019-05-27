@@ -20,8 +20,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeUserInforViewController">
             <connections>
-                <outlet property="CBFemaleView" destination="9IW-0c-6YD" id="dqV-Eg-IsO"/>
-                <outlet property="CBMaleView" destination="qJt-03-hqR" id="XPr-kb-6OZ"/>
                 <outlet property="btnSave" destination="8XP-3E-BCk" id="QCA-2o-FIY"/>
                 <outlet property="txtBirthday" destination="amV-Ia-L0a" id="VMp-46-gP3"/>
                 <outlet property="txtName" destination="rsP-Bx-fmn" id="vYo-CQ-sOS"/>
@@ -94,10 +92,10 @@
                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Y6-xij">
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Y6-xij">
                     <rect key="frame" x="164" y="171.5" width="132" height="12"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-03-hqR" customClass="BEMCheckBox">
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-03-hqR">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="12"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
@@ -112,13 +110,13 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiM-pR-kqm">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiM-pR-kqm">
                             <rect key="frame" x="22" y="-4.5" width="33" height="21"/>
                             <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-0c-6YD" customClass="BEMCheckBox">
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-0c-6YD">
                             <rect key="frame" x="89" y="0.0" width="43" height="12"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <userDefinedRuntimeAttributes>
@@ -134,7 +132,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzE-u0-zHT">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzE-u0-zHT">
                             <rect key="frame" x="111" y="-4.5" width="21" height="21"/>
                             <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
                             <nil key="textColor"/>
