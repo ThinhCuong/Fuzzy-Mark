@@ -12,7 +12,7 @@
 @implementation UITabBar (FMMiddleButton)
 
 - (void)setMiddleButton:(FMMiddleButton *)middleButton {
-    objc_setAssociatedObject(self, @selector(middleButton), middleButton, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, @selector(middleButton), middleButton, OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (FMMiddleButton *)middleButton {
@@ -20,7 +20,7 @@
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    if(CGRectContainsPoint(self.middleButton.frame, point)) {
+    if(self.middleButton && CGRectContainsPoint(self.middleButton.frame, point)) {
         return self.middleButton;
     }
     return [super hitTest:point withEvent:event];
