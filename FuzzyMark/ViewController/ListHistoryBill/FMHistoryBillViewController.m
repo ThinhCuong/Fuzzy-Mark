@@ -30,8 +30,8 @@
     [self setupPageVC];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     _segmentedControl.frame = self.contentSegmentView.bounds;
     _pageViewController.view.frame = self.contentPageView.bounds;
 }
