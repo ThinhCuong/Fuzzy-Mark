@@ -20,7 +20,9 @@
 @end
 
 @implementation ChangeUserInforViewController {
-    
+    TNCircularCheckBoxData *_maleData;
+    TNCircularCheckBoxData *_femaleData;
+    TNCheckBoxGroup *_sexGroup;
 }
 
 - (void)viewDidLoad {
@@ -30,36 +32,36 @@
 }
 
 - (void)setUI {
-    TNCircularCheckBoxData *maleData = [[TNCircularCheckBoxData alloc] init];
-    maleData.identifier = @"male";
-    maleData.labelText = @"Nam";
-    maleData.labelFont = [UIFont setFontMuliWithSize:14];
-    maleData.checked = YES;
-    maleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
-    maleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
-    maleData.borderRadius = 20;
-    maleData.circleRadius = 15;
+    _maleData = [[TNCircularCheckBoxData alloc] init];
+    _maleData.identifier = @"male";
+    _maleData.labelText = @"Nam";
+    _maleData.labelFont = [UIFont setFontMuliWithSize:14];
+    _maleData.checked = YES;
+    _maleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _maleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _maleData.borderRadius = 20;
+    _maleData.circleRadius = 15;
     
-    TNCircularCheckBoxData *femaleData = [[TNCircularCheckBoxData alloc] init];
-    femaleData.identifier = @"male";
-    femaleData.labelText = @"Nữ";
-    femaleData.labelFont = [UIFont setFontMuliWithSize:14];
-    femaleData.checked = NO;
-    femaleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
-    femaleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
-    femaleData.borderRadius = 20;
-    femaleData.circleRadius = 15;
+    _femaleData = [[TNCircularCheckBoxData alloc] init];
+    _femaleData.identifier = @"male";
+    _femaleData.labelText = @"Nữ";
+    _femaleData.labelFont = [UIFont setFontMuliWithSize:14];
+    _femaleData.checked = NO;
+    _femaleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _femaleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _femaleData.borderRadius = 20;
+    _femaleData.circleRadius = 15;
     
-    TNCheckBoxGroup *sex = [[TNCheckBoxGroup alloc] initWithCheckBoxData:@[maleData, femaleData] style:TNCheckBoxLayoutHorizontal];
-    [sex create];
-    sex.position = CGPointMake(0, 0);
-    
-    [self.checkBoxView addSubview:sex];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupChanged:) name:GROUP_CHANGED object:sex];
+    _sexGroup = [[TNCheckBoxGroup alloc] initWithCheckBoxData:@[_maleData, _femaleData] style:TNCheckBoxLayoutHorizontal];
+    [_sexGroup create];
+    _sexGroup.position = CGPointMake(0, 0);
+//    _sexGroup.
+    [self.checkBoxView addSubview:_sexGroup];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupChanged) name:GROUP_CHANGED object:nil];
 }
 
-- (void)sexGroupChanged:(NSNotification *) notication {
-    
+- (void)sexGroupChanged {
+//    _sexGroup.checkedCheckBoxes
 }
 
 - (void)setNavigationBar {
