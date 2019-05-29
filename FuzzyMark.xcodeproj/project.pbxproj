@@ -119,6 +119,10 @@
 		5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910272263492A008BEA62 /* AFNetworkReachabilityManager.m */; };
 		5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910282263492A008BEA62 /* AFSecurityPolicy.m */; };
 		5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C39103D226349F8008BEA62 /* BaseCallApi.m */; };
+		5C5BA895229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BA893229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.m */; };
+		5C5BA896229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5BA894229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib */; };
+		5C5BA89A229E24400090AE7B /* FZHeaderItemCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5BA898229E24400090AE7B /* FZHeaderItemCollectionViewCell.m */; };
+		5C5BA89B229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5BA899229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib */; };
 		5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */; };
 		5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE1225D668600A26400 /* FuzzyMark.xcdatamodeld */; };
 		5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE4225D668800A26400 /* Assets.xcassets */; };
@@ -139,10 +143,17 @@
 		5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9862AC2264E45D00545DCC /* FZMenuHomeTableViewCell.xib */; };
 		5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */; };
 		5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */; };
+		5CC572C3229D8E1200E613AE /* FZItemSearchCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC572C1229D8E1200E613AE /* FZItemSearchCollectionViewCell.m */; };
+		5CC572C4229D8E1200E613AE /* FZItemSearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC572C2229D8E1200E613AE /* FZItemSearchCollectionViewCell.xib */; };
+		5CC572C8229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC572C6229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.m */; };
+		5CC572C9229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC572C7229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.xib */; };
 		5CD3A76C22887D7C0020A0DE /* FZBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD3A76A22887D7C0020A0DE /* FZBannerCollectionViewCell.m */; };
 		5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */; };
 		5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */; };
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
+		5CFF9237229B1A560053A2A5 /* FZSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF9236229B1A560053A2A5 /* FZSearchModel.m */; };
+		5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */; };
+		5CFF923D229B1FE10053A2A5 /* FZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */; };
 		665FD50ADF305E3C1AAC1673 /* Pods_FuzzyMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */; };
 		6E9502D3BD7037924ED9F965 /* Pods_FuzzyMarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */; };
 		F7A38270E28A20FBC8BC0939 /* Pods_FuzzyMarkUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B298CECD2FAA81B68FE1F00 /* Pods_FuzzyMarkUITests.framework */; };
@@ -345,6 +356,12 @@
 		5C3910292263492A008BEA62 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 		5C39103C226349F8008BEA62 /* BaseCallApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseCallApi.h; sourceTree = "<group>"; };
 		5C39103D226349F8008BEA62 /* BaseCallApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseCallApi.m; sourceTree = "<group>"; };
+		5C5BA892229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHeaderSearchTableViewCell.h; sourceTree = "<group>"; };
+		5C5BA893229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHeaderSearchTableViewCell.m; sourceTree = "<group>"; };
+		5C5BA894229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHeaderSearchTableViewCell.xib; sourceTree = "<group>"; };
+		5C5BA897229E24400090AE7B /* FZHeaderItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHeaderItemCollectionViewCell.h; sourceTree = "<group>"; };
+		5C5BA898229E24400090AE7B /* FZHeaderItemCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHeaderItemCollectionViewCell.m; sourceTree = "<group>"; };
+		5C5BA899229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHeaderItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		5C61443E227FDF2600582AF7 /* FZHomeJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeJsonModel.h; sourceTree = "<group>"; };
 		5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeJsonModel.m; sourceTree = "<group>"; };
 		5C6BFAD5225D668600A26400 /* FuzzyMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,12 +395,23 @@
 		5C9862B02264E4BE00545DCC /* FZItemMenuHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemMenuHomeTableViewCell.h; sourceTree = "<group>"; };
 		5C9862B12264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemMenuHomeTableViewCell.m; sourceTree = "<group>"; };
 		5C9862B22264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemMenuHomeTableViewCell.xib; sourceTree = "<group>"; };
+		5CC572C0229D8E1200E613AE /* FZItemSearchCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemSearchCollectionViewCell.h; sourceTree = "<group>"; };
+		5CC572C1229D8E1200E613AE /* FZItemSearchCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemSearchCollectionViewCell.m; sourceTree = "<group>"; };
+		5CC572C2229D8E1200E613AE /* FZItemSearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemSearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CC572C5229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZTitleHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		5CC572C6229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZTitleHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		5CC572C7229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZTitleHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		5CD3A76922887D7C0020A0DE /* FZBannerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZBannerCollectionViewCell.h; sourceTree = "<group>"; };
 		5CD3A76A22887D7C0020A0DE /* FZBannerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZBannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CFF9235229B1A560053A2A5 /* FZSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZSearchModel.h; sourceTree = "<group>"; };
+		5CFF9236229B1A560053A2A5 /* FZSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZSearchModel.m; sourceTree = "<group>"; };
+		5CFF9239229B1FE10053A2A5 /* FZSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZSearchViewController.h; sourceTree = "<group>"; };
+		5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZSearchViewController.m; sourceTree = "<group>"; };
+		5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZSearchViewController.xib; sourceTree = "<group>"; };
 		6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6899B0BE875F7FBF8FB73778 /* Pods-FuzzyMarkUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuzzyMarkUITests.release.xcconfig"; path = "Target Support Files/Pods-FuzzyMarkUITests/Pods-FuzzyMarkUITests.release.xcconfig"; sourceTree = "<group>"; };
 		712F85A57206B81E6AC05888 /* Pods_FuzzyMarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuzzyMarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -902,6 +930,32 @@
 			path = BaseCallAPI;
 			sourceTree = "<group>";
 		};
+		5C5BA890229E1D7A0090AE7B /* ListItem */ = {
+			isa = PBXGroup;
+			children = (
+				5CC572C0229D8E1200E613AE /* FZItemSearchCollectionViewCell.h */,
+				5CC572C1229D8E1200E613AE /* FZItemSearchCollectionViewCell.m */,
+				5CC572C2229D8E1200E613AE /* FZItemSearchCollectionViewCell.xib */,
+				5CC572C5229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.h */,
+				5CC572C6229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.m */,
+				5CC572C7229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.xib */,
+			);
+			path = ListItem;
+			sourceTree = "<group>";
+		};
+		5C5BA891229E1D9E0090AE7B /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				5C5BA892229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.h */,
+				5C5BA893229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.m */,
+				5C5BA894229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib */,
+				5C5BA897229E24400090AE7B /* FZHeaderItemCollectionViewCell.h */,
+				5C5BA898229E24400090AE7B /* FZHeaderItemCollectionViewCell.m */,
+				5C5BA899229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		5C6BFACC225D668600A26400 = {
 			isa = PBXGroup;
 			children = (
@@ -981,6 +1035,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5CFF9238229B1FC00053A2A5 /* Search */,
 				4F00C81B227A06C30073B583 /* Base */,
 				4F50F3892276E9A700DF7173 /* CustomTabbar */,
 				4FF2BD73227BD9BE0008BA69 /* Camera */,
@@ -1013,6 +1068,7 @@
 		5C9862832264CB1E00545DCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5CFF9232229B19970053A2A5 /* Search */,
 				4F472D5022908C6A00F93D39 /* Notification */,
 				4FDACD1B227F765C00A8571E /* Home */,
 				4FF01499227EA39D0063093C /* ListHistoryBill */,
@@ -1068,6 +1124,7 @@
 		5C9862A42264E35900545DCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				5CFF923E229B23FE0053A2A5 /* Search */,
 				4FDACD1A227F744900A8571E /* ListRegisterPromotion */,
 				4FBD3D9E228DDA1100E76E2A /* LocationFavorite */,
 				4FDACCFE227F5A5800A8571E /* ListHistoryBill */,
@@ -1110,6 +1167,34 @@
 				5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		5CFF9232229B19970053A2A5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5CFF9235229B1A560053A2A5 /* FZSearchModel.h */,
+				5CFF9236229B1A560053A2A5 /* FZSearchModel.m */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5CFF9238229B1FC00053A2A5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5CFF9239229B1FE10053A2A5 /* FZSearchViewController.h */,
+				5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */,
+				5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5CFF923E229B23FE0053A2A5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5C5BA891229E1D9E0090AE7B /* Header */,
+				5C5BA890229E1D7A0090AE7B /* ListItem */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		7F35BB9EDF179AE356C403A2 /* Pods */ = {
@@ -1239,6 +1324,7 @@
 				4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */,
 				4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */,
 				4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */,
+				5CC572C9229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.xib in Resources */,
 				4F50F4032276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf in Resources */,
 				4F50F4062276EDBD00DF7173 /* Muli-SemiBold.ttf in Resources */,
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
@@ -1249,10 +1335,13 @@
 				4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */,
 				4FBD3DA5228DDE2C00E76E2A /* LocationFavorite.xcassets in Resources */,
 				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
+				5C5BA89B229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
+				5C5BA896229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F472D3B22907A9300F93D39 /* FMChangePasswordViewController.xib in Resources */,
 				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
+				5CC572C4229D8E1200E613AE /* FZItemSearchCollectionViewCell.xib in Resources */,
 				4FBD3D97228DBC7E00E76E2A /* HistoryPoint.xcassets in Resources */,
 				4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */,
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
@@ -1286,6 +1375,7 @@
 				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
 				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
 				4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */,
+				5CFF923D229B1FE10053A2A5 /* FZSearchViewController.xib in Resources */,
 				5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */,
 				4FDACD0F227F5D5B00A8571E /* HistoryBillFooterCell.xib in Resources */,
 				4FDACD03227F5AA500A8571E /* HistoryBillTableViewCell.xib in Resources */,
@@ -1428,12 +1518,14 @@
 				4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
 				4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */,
+				5CC572C8229DBA3000E613AE /* FZTitleHeaderCollectionReusableView.m in Sources */,
 				4F50F3932276E9A700DF7173 /* FMMenuTabbleViewCell.m in Sources */,
 				4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */,
 				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
 				4FF014A6227EEF6A0063093C /* Location.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
+				5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
@@ -1456,9 +1548,12 @@
 				4F472D3A22907A9300F93D39 /* FMChangePasswordViewController.m in Sources */,
 				4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */,
 				4FBF8ACC228E6136001C7B9C /* ChangeUserInforViewController.m in Sources */,
+				5CC572C3229D8E1200E613AE /* FZItemSearchCollectionViewCell.m in Sources */,
 				4F472D4F22908A7500F93D39 /* FMNotifiModel.m in Sources */,
+				5CFF9237229B1A560053A2A5 /* FZSearchModel.m in Sources */,
 				4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */,
 				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,
+				5C5BA89A229E24400090AE7B /* FZHeaderItemCollectionViewCell.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
 				4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */,
@@ -1486,6 +1581,7 @@
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
+				5C5BA895229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.m in Sources */,
 				4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */,
 				4FBD3D83228D974300E76E2A /* FMHistoryPointViewController.m in Sources */,
 				4F472D402290801B00F93D39 /* FMIntroChangePhoneNumber.m in Sources */,
