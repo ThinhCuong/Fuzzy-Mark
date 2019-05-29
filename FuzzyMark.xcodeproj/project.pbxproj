@@ -12,6 +12,10 @@
 		4F27544522931E870086A46C /* FMCameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F27544422931E870086A46C /* FMCameraModel.m */; };
 		4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B50229C496C0029F188 /* UITabBar+FMMiddleButton.m */; };
 		4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B54229C615F0029F188 /* FMButtonNext.m */; };
+		4F45EEFB229EADBA004556F9 /* FMIntroCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */; };
+		4F45EEFC229EADBA004556F9 /* FMIntroCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */; };
+		4F45EF01229EB22B004556F9 /* FMIntroCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEFF229EB22B004556F9 /* FMIntroCameraCell.m */; };
+		4F45EF02229EB22B004556F9 /* FMIntroCameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F45EF00229EB22B004556F9 /* FMIntroCameraCell.xib */; };
 		4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */; };
 		4F472D2C229072F600F93D39 /* FMChangeEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */; };
 		4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2E229073A900F93D39 /* ChangeEmail.xcassets */; };
@@ -192,6 +196,12 @@
 		4F2F5B52229C56C50029F188 /* FuzzyMark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FuzzyMark-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F2F5B53229C615F0029F188 /* FMButtonNext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMButtonNext.h; sourceTree = "<group>"; };
 		4F2F5B54229C615F0029F188 /* FMButtonNext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMButtonNext.m; sourceTree = "<group>"; };
+		4F45EEF8229EADBA004556F9 /* FMIntroCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMIntroCameraViewController.h; sourceTree = SOURCE_ROOT; };
+		4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMIntroCameraViewController.m; sourceTree = SOURCE_ROOT; };
+		4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMIntroCameraViewController.xib; sourceTree = SOURCE_ROOT; };
+		4F45EEFE229EB22B004556F9 /* FMIntroCameraCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMIntroCameraCell.h; sourceTree = "<group>"; };
+		4F45EEFF229EB22B004556F9 /* FMIntroCameraCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMIntroCameraCell.m; sourceTree = "<group>"; };
+		4F45EF00229EB22B004556F9 /* FMIntroCameraCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMIntroCameraCell.xib; sourceTree = "<group>"; };
 		4F472D28229072F600F93D39 /* FMChangeEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMChangeEmailViewController.h; sourceTree = "<group>"; };
 		4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMChangeEmailViewController.m; sourceTree = "<group>"; };
 		4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMChangeEmailViewController.xib; sourceTree = "<group>"; };
@@ -478,6 +488,16 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		4F45EEFD229EB1F7004556F9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F45EEFE229EB22B004556F9 /* FMIntroCameraCell.h */,
+				4F45EEFF229EB22B004556F9 /* FMIntroCameraCell.m */,
+				4F45EF00229EB22B004556F9 /* FMIntroCameraCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4F472D27229072D000F93D39 /* ChangeEmail */ = {
 			isa = PBXGroup;
 			children = (
@@ -677,6 +697,10 @@
 		4F7A57C8229A72C5008AE602 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
+				4F45EEFD229EB1F7004556F9 /* Cell */,
+				4F45EEF8229EADBA004556F9 /* FMIntroCameraViewController.h */,
+				4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */,
+				4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */,
 			);
 			path = Intro;
 			sourceTree = "<group>";
@@ -1347,6 +1371,7 @@
 				4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */,
 				4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */,
 				4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */,
+				4F45EF02229EB22B004556F9 /* FMIntroCameraCell.xib in Resources */,
 				4F50F4032276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf in Resources */,
 				4F50F4062276EDBD00DF7173 /* Muli-SemiBold.ttf in Resources */,
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
@@ -1396,6 +1421,7 @@
 				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
 				4FF9C3C82291397500D3AD81 /* DetailHistoryBill.xcassets in Resources */,
 				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
+				4F45EEFC229EADBA004556F9 /* FMIntroCameraViewController.xib in Resources */,
 				4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */,
 				5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */,
 				4FDACD0F227F5D5B00A8571E /* HistoryBillFooterCell.xib in Resources */,
@@ -1553,6 +1579,7 @@
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
+				4F45EF01229EB22B004556F9 /* FMIntroCameraCell.m in Sources */,
 				4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
 				4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */,
@@ -1612,6 +1639,7 @@
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
 				4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */,
 				4FBD3D83228D974300E76E2A /* FMHistoryPointViewController.m in Sources */,
+				4F45EEFB229EADBA004556F9 /* FMIntroCameraViewController.m in Sources */,
 				4F472D402290801B00F93D39 /* FMIntroChangePhoneNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

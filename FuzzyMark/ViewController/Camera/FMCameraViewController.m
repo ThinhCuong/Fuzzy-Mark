@@ -7,6 +7,7 @@
 //
 
 #import "FMCameraViewController.h"
+#import "FMIntroCameraViewController.h"
 
 @interface FMCameraViewController () <AVCapturePhotoCaptureDelegate>
 @property (weak, nonatomic) IBOutlet UIView *previewView;
@@ -119,7 +120,8 @@
 }
 
 - (IBAction)didSelectIntro:(id)sender {
-    
+    FMIntroCameraViewController *vc = [[FMIntroCameraViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma mark - AVCapturePhotoCaptureDelegate

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMIntroCameraViewController">
+            <connections>
+                <outlet property="collectionContent" destination="gAb-Pc-LHj" id="cNz-G9-wOL"/>
+                <outlet property="pageControll" destination="2u3-CG-V4N" id="Euv-qr-Tik"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hướng dẫn chụp hoá đơn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7l-lK-cpd">
+                    <rect key="frame" x="98.5" y="39" width="178.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIU-MP-dSa">
+                    <rect key="frame" x="16" y="39" width="16" height="22"/>
+                    <state key="normal" image="ic_close"/>
+                    <connections>
+                        <action selector="close:" destination="-1" eventType="touchUpInside" id="pQK-4K-xOT"/>
+                    </connections>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-Pc-LHj">
+                    <rect key="frame" x="36" y="76" width="303" height="498"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BFX-Fy-cz0">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2u3-CG-V4N">
+                    <rect key="frame" x="168" y="597" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gAb-Pc-LHj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JvM-bQ-IiY"/>
+                <constraint firstItem="gAb-Pc-LHj" firstAttribute="top" secondItem="J7l-lK-cpd" secondAttribute="bottom" constant="16" id="LNt-IS-5ki"/>
+                <constraint firstItem="IIU-MP-dSa" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="19" id="MIn-j5-sbn"/>
+                <constraint firstItem="2u3-CG-V4N" firstAttribute="top" secondItem="gAb-Pc-LHj" secondAttribute="bottom" constant="23" id="RUw-zB-NR8"/>
+                <constraint firstItem="J7l-lK-cpd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y8h-GD-WTx"/>
+                <constraint firstItem="IIU-MP-dSa" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="f9M-VY-2pV"/>
+                <constraint firstItem="2u3-CG-V4N" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oKB-Ut-VIQ"/>
+                <constraint firstItem="J7l-lK-cpd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="19" id="tGs-j2-Izu"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="2u3-CG-V4N" secondAttribute="bottom" constant="33" id="tIt-a3-rGm"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gAb-Pc-LHj" secondAttribute="trailing" constant="36" id="uTk-bh-YV2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.75" y="105.63380281690141"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_close" width="16" height="16"/>
+    </resources>
+</document>
