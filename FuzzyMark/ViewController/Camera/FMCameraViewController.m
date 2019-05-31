@@ -21,7 +21,9 @@
 @property (strong, nonatomic) AVCaptureVideoPreviewLayer *videoPreviewLayer;
 @end
 
-@implementation FMCameraViewController
+@implementation FMCameraViewController {
+    NSMutableArray *_listImage;
+}
 
 #pragma mark - life cycle
 - (void)viewDidLoad {
@@ -29,6 +31,7 @@
     // Do any additional setup after loading the view from its nib.
     [self.introView setAlpha:0.0];
     [self setNavigationBar];
+    _listImage = [[NSMutableArray alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -130,7 +133,13 @@
     NSData *imageData = photo.fileDataRepresentation;
     if (imageData) {
         UIImage *image = [UIImage imageWithData:imageData];
+        [_listImage addObject:image];
         // Add the image to captureImageView here...
+        if(!self.showImageVC) {
+            self.showImageVC = [[FMCameraShowImageVC alloc] init];
+        }
+        self.showImageVC.listImage = _listImage;
+        [self presentViewController:self.showImageVC animated:YES completion:nil];
     }
 }
 

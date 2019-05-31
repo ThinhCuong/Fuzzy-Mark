@@ -97,6 +97,10 @@
 		4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */; };
 		4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD13227F67F100A8571E /* FMItemHistoryBillModel.m */; };
 		4FDACD26227FCC7500A8571E /* FMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD25227FCC7400A8571E /* FMBaseViewController.m */; };
+		4FDC204922A0CF24003B755C /* FMCameraShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC204622A0CF24003B755C /* FMCameraShowImageVC.m */; };
+		4FDC204A22A0CF24003B755C /* FMCameraShowImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC204722A0CF24003B755C /* FMCameraShowImageVC.xib */; };
+		4FDC204F22A0D9FB003B755C /* CameraShowImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC204D22A0D9FB003B755C /* CameraShowImageCell.m */; };
+		4FDC205022A0D9FB003B755C /* CameraShowImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC204E22A0D9FB003B755C /* CameraShowImageCell.xib */; };
 		4FEEE6502292F48B00E337F2 /* RegisterPromotionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEE64E2292F48B00E337F2 /* RegisterPromotionCell.m */; };
 		4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149B227EA3EC0063093C /* HistoryBill.m */; };
 		4FF0149F227EEDAB0063093C /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149E227EEDAB0063093C /* Voucher.m */; };
@@ -320,6 +324,12 @@
 		4FDACD13227F67F100A8571E /* FMItemHistoryBillModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMItemHistoryBillModel.m; sourceTree = "<group>"; };
 		4FDACD24227FCC7400A8571E /* FMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseViewController.h; sourceTree = "<group>"; };
 		4FDACD25227FCC7400A8571E /* FMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseViewController.m; sourceTree = "<group>"; };
+		4FDC204622A0CF24003B755C /* FMCameraShowImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCameraShowImageVC.m; sourceTree = "<group>"; };
+		4FDC204722A0CF24003B755C /* FMCameraShowImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMCameraShowImageVC.xib; sourceTree = "<group>"; };
+		4FDC204822A0CF24003B755C /* FMCameraShowImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCameraShowImageVC.h; sourceTree = "<group>"; };
+		4FDC204C22A0D9FB003B755C /* CameraShowImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraShowImageCell.h; sourceTree = "<group>"; };
+		4FDC204D22A0D9FB003B755C /* CameraShowImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraShowImageCell.m; sourceTree = "<group>"; };
+		4FDC204E22A0D9FB003B755C /* CameraShowImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraShowImageCell.xib; sourceTree = "<group>"; };
 		4FEEE64D2292F48B00E337F2 /* RegisterPromotionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPromotionCell.h; sourceTree = "<group>"; };
 		4FEEE64E2292F48B00E337F2 /* RegisterPromotionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPromotionCell.m; sourceTree = "<group>"; };
 		4FF0149A227EA3EC0063093C /* HistoryBill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBill.h; sourceTree = "<group>"; };
@@ -855,6 +865,27 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		4FDC204522A0CF03003B755C /* ShowImage */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC204B22A0D670003B755C /* cell */,
+				4FDC204822A0CF24003B755C /* FMCameraShowImageVC.h */,
+				4FDC204622A0CF24003B755C /* FMCameraShowImageVC.m */,
+				4FDC204722A0CF24003B755C /* FMCameraShowImageVC.xib */,
+			);
+			path = ShowImage;
+			sourceTree = "<group>";
+		};
+		4FDC204B22A0D670003B755C /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FDC204C22A0D9FB003B755C /* CameraShowImageCell.h */,
+				4FDC204D22A0D9FB003B755C /* CameraShowImageCell.m */,
+				4FDC204E22A0D9FB003B755C /* CameraShowImageCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		4FEEE64B2292F2EA00E337F2 /* RegisterPromotion */ = {
 			isa = PBXGroup;
 			children = (
@@ -894,6 +925,7 @@
 		4FF2BD73227BD9BE0008BA69 /* Camera */ = {
 			isa = PBXGroup;
 			children = (
+				4FDC204522A0CF03003B755C /* ShowImage */,
 				4F7A57C8229A72C5008AE602 /* Intro */,
 				4FF2BD74227BD9F70008BA69 /* FMCameraViewController.h */,
 				4FF2BD75227BD9F70008BA69 /* FMCameraViewController.m */,
@@ -1407,11 +1439,13 @@
 				4FBD3DA3228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib in Resources */,
 				4F50F4012276EDBC00DF7173 /* Muli-ExtraLightItalic.ttf in Resources */,
 				5C98629B2264D7EB00545DCC /* HomeAssets.xcassets in Resources */,
+				4FDC205022A0D9FB003B755C /* CameraShowImageCell.xib in Resources */,
 				4FDACD0D227F5D4200A8571E /* HistoryBillHeaderCell.xib in Resources */,
 				4F50F3922276E9A700DF7173 /* FMUserInforTableViewCell.xib in Resources */,
 				4F50F3942276E9A700DF7173 /* FMUserInforViewController.xib in Resources */,
 				4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */,
 				5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */,
+				4FDC204A22A0CF24003B755C /* FMCameraShowImageVC.xib in Resources */,
 				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
 				4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */,
 				4FF9C3C62291373200D3AD81 /* FMDetailHistoryViewController.xib in Resources */,
@@ -1568,6 +1602,7 @@
 				4FF9C3BA2290F31F00D3AD81 /* FMBaseTableViewModel.m in Sources */,
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
 				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
+				4FDC204922A0CF24003B755C /* FMCameraShowImageVC.m in Sources */,
 				4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
 				4FF9C3C52291373200D3AD81 /* FMDetailHistoryViewController.m in Sources */,
@@ -1603,6 +1638,7 @@
 				4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */,
 				4FBF8ACC228E6136001C7B9C /* ChangeUserInforViewController.m in Sources */,
 				4F472D4F22908A7500F93D39 /* FMNotifiModel.m in Sources */,
+				4FDC204F22A0D9FB003B755C /* CameraShowImageCell.m in Sources */,
 				4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */,
 				4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */,
 				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,
@@ -1809,7 +1845,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9X92A5RB95;
+				DEVELOPMENT_TEAM = 5VR7C6YPUT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -1818,7 +1854,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark10;
+				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1835,7 +1871,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9X92A5RB95;
+				DEVELOPMENT_TEAM = 5VR7C6YPUT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -1844,7 +1880,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark10;
+				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

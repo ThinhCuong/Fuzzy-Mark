@@ -46,6 +46,14 @@
          contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
       </ContextState>
       <ContextState
+         contextName = "-[FMCameraShowImageVC collectionView:numberOfItemsInSection:]:FMCameraShowImageVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listImage.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__64-[FMItemHistoryBillModel getListHistoryCaptureWithSuccessBlock:]_block_invoke:FMItemHistoryBillModel.m">
          <PersistentStrings>
             <PersistentString
@@ -65,15 +73,15 @@
          contextName = "-[FMItemHistoryBillVC tableView:cellForRowAtIndexPath:]:FMItemHistoryBillVC.m">
       </ContextState>
       <ContextState
-         contextName = "__35-[FMNotifiModel putUserNotifiRead:]_block_invoke:FMNotifiModel.m">
-      </ContextState>
-      <ContextState
          contextName = "-[FMCameraViewController setBlurView]:FMCameraViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.middleView.bounds">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__35-[FMNotifiModel putUserNotifiRead:]_block_invoke:FMNotifiModel.m">
       </ContextState>
       <ContextState
          contextName = "-[FMTableViewCell binData:]:FMTableViewCell.m">
