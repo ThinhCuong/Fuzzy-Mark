@@ -89,14 +89,18 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
-    NSIndexPath *middleIndexPath = [indexPaths objectAtIndex:([indexPaths count] / [indexPaths count])];//you must check if indexPaths >=2 or <2
-      NSLog(@"Section :%ld",(long)middleIndexPath.section);
+   // NSIndexPath *middleIndexPath = [indexPaths objectAtIndex:([indexPaths count] / [indexPaths count])];//you must check if indexPaths >=2 or <2
+     // NSLog(@"Section :%ld",(long)middleIndexPath.section);
+    
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingSupplementaryView:(UICollectionReusableView *)view forElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
-      //NSLog(@"Section :%ld",(long)indexPath.section);
+      NSLog(@"Section :%ld",(long)indexPath.section);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
+     NSLog(@"will section :%ld",(long)indexPath.section);
+}
 - (void)callGroupsApi {
     
     NSDictionary *params = @{

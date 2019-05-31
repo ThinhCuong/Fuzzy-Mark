@@ -2,7 +2,7 @@
 //  FZHeaderItemCollectionViewCell.m
 //  FuzzyMark
 //
-//  Created by Nguyen Cuong on 5/29/19.
+//  Created by Nguyen Cuong on 5/30/19.
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
@@ -16,7 +16,7 @@
 }
 
 - (void)bindData:(GroupObject *)groupInfo {
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:groupInfo.icon]];
+    [self.iconImage sd_setImageWithURL: [NSURL URLWithString:groupInfo.icon]];
 }
 
 @end
