@@ -28,8 +28,8 @@
     [super viewWillAppear:animated];
     [self.collectionViewContent reloadData];
     if(_listImage.count > 1) {
-        CGFloat y = self.collectionViewContent.contentSize.height - self.collectionViewContent.frame.size.height / 2;
-        [self.collectionViewContent setContentOffset:CGPointMake(0, y)];
+        CGFloat x = self.collectionViewContent.contentSize.width - self.collectionViewContent.frame.size.width / 2;
+        [self.collectionViewContent setContentOffset:CGPointMake(x, 0)];
     } else {
         [self.collectionViewContent setContentOffset:CGPointMake(0, 0)];
     }
