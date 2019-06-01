@@ -8,6 +8,7 @@ PODS:
   - SDWebImage/Core (5.0.0)
   - SVProgressHUD (2.2.5)
   - TNCheckBoxGroup (0.1)
+  - Toast (4.0.0)
 
 DEPENDENCIES:
   - CCBottomRefreshControl
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - SDWebImage (~> 5.0)
   - SVProgressHUD
   - TNCheckBoxGroup
+  - Toast (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - SDWebImage
     - SVProgressHUD
     - TNCheckBoxGroup
+    - Toast
 
 SPEC CHECKSUMS:
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
@@ -36,7 +39,8 @@ SPEC CHECKSUMS:
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TNCheckBoxGroup: a68af5c69d292dcdf963bfab9496ed8e3f73689f
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 4fc99b24981354271bf1cd714b27a588508bbcda
+PODFILE CHECKSUM: 9a5b1ea177a04f0c6891740a714a884d20664f27
 
 COCOAPODS: 1.6.1

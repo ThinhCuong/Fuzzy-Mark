@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4345FA02E2EB1601977D172CEB97F551"
+               BlueprintIdentifier = "5C0E8B6F09DF16068936A7A3FC47A827"
                BuildableName = "TNCheckBoxGroup.framework"
                BlueprintName = "TNCheckBoxGroup"
                ReferencedContainer = "container:Pods.xcodeproj">
