@@ -12,7 +12,7 @@
 #import "Notifi.h"
 #import <CCBottomRefreshControl-umbrella.h>
 
-@interface FMNotifiViewController () <UITableViewDelegate, UITableViewDataSource, FMNotifiModelDelegate>
+@interface FMNotifiViewController () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
 @property (strong, nonatomic) FMNotifiModel *model;
 @end
@@ -39,6 +39,8 @@
     // Do any additional setup after loading the view from its nib.
     [self setNavigationBar];
     [self setTableView];
+    [SVProgressHUD setContainerView:self.view];
+    [SVProgressHUD show];
     [self callDataRefresh];
 }
 
@@ -104,14 +106,15 @@
     if(_bottomRFControl.isRefreshing) {
         [_bottomRFControl endRefreshing];
     }
+    [SVProgressHUD dismiss];
     _isRefresh = NO;
 }
 
 - (void)didSelectRightButton {
-    
+    [self.model putUserNotifiReadAll];
 }
 
-#pragma mark - FMNotifiModelDelegate
+#pragma mark - FMUpdateDataProtocol
 - (void)updateViewDataSuccess:(NSMutableArray *) listData {
     [self stopAnimationRefresh];
     _listData = listData.copy;
@@ -140,16 +143,9 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(!_listData[indexPath.row].is_read) {
+        [self.model putUserNotifiRead:@{@"id": @(_listData[indexPath.section].idNoti)}];
+    }
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

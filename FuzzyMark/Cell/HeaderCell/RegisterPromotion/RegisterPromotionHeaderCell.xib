@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RegisterPromotionHeaderCell">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="42"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hôm nay (25/3/2019)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iTR-jS-oWD">
+                    <rect key="frame" x="18" y="12" width="145" height="18"/>
+                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                    <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXc-qt-W6p">
+                    <rect key="frame" x="0.0" y="38" width="487" height="4"/>
+                    <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="4" id="FKY-K9-KLY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="eXc-qt-W6p" secondAttribute="bottom" id="ChW-VD-9z9"/>
+                <constraint firstAttribute="trailing" secondItem="eXc-qt-W6p" secondAttribute="trailing" id="DWd-Fk-BvV"/>
+                <constraint firstAttribute="bottom" secondItem="iTR-jS-oWD" secondAttribute="bottom" constant="12" id="ao4-IV-kMv"/>
+                <constraint firstItem="iTR-jS-oWD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="dE6-cL-0CM"/>
+                <constraint firstItem="iTR-jS-oWD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="keY-zR-6TU"/>
+                <constraint firstItem="eXc-qt-W6p" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ydQ-Yk-IBQ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="WwG-64-hyN"/>
+            <point key="canvasLocation" x="125.36231884057972" y="-218.30357142857142"/>
+        </view>
+    </objects>
+</document>

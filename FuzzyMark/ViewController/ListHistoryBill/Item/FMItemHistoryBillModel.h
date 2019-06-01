@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMBaseTableViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMItemHistoryBillModel : NSObject
-@property (strong, nonatomic) NSMutableArray *listData;
-- (void)getListHistoryCaptureWithSuccessBlock: (void(^)(id)) successBlock;
+@interface FMItemHistoryBillModel : FMBaseTableViewModel
+
+
 @end
 
 NS_ASSUME_NONNULL_END

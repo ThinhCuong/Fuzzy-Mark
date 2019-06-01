@@ -69,6 +69,7 @@
     [self.middleButton addTarget:self action:@selector(didSelectMiddleButton) forControlEvents:UIControlEventTouchUpInside];
     
     [self.tabBar addSubview:self.middleButton];
+    self.tabBar.middleButton = self.middleButton;
     [self.middleButton bringSubviewToFront:self.tabBar];
 }
 
@@ -104,15 +105,5 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     [self.middleButton unselectedButton];
 }
-    
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

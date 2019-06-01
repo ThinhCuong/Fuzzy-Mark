@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didSelectButtonHistory;
 - (void)didSelectButtonPoint;
 - (void)didSelectButtonAddImageUser;
+- (void)didSelectEmailView;
+- (void)didSelectPhoneView;
 @end
 
 @interface FMUserInforTableViewCell : UITableViewCell

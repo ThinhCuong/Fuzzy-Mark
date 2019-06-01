@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMItemHistoryBillVC : UITableViewController
+@interface FMItemHistoryBillVC : UIViewController
 
 @end
 

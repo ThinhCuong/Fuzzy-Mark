@@ -9,48 +9,14 @@
 #import "FMNotifiModel.h"
 #import "Notifi.h"
 
-@interface FMNotifiModel ()
+@implementation FMNotifiModel
 
-@property (strong, nonatomic) NSMutableArray <Notifi*> *listItem;
-
-@end
-
-@implementation FMNotifiModel {
-    BaseCallApi *_httpClient;
-    BOOL _isLoadMore;
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _httpClient = [BaseCallApi defaultInitWithBaseURL];
-        self.listItem = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
-
-- (void)actionPullToRefreshData {
-    [self.listItem removeAllObjects];
-    NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @0};
-    [self getUserNotifications:params];
-}
-
-- (void)actionLoadMoreData {
-    if(!_isLoadMore) {
-        [self.delegate updateViewDataEmpty];
-        return;
-    }
-    NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @(self.listItem.count)};
-    [self getUserNotifications:params];
-}
-
-- (void)getUserNotifications:(NSDictionary *) params {
-    [_httpClient getDataWithPath:GET_USER_NOTIFICATIONS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+- (void)getDataTableView:(NSDictionary *) params {
+    [self.httpClient getDataWithPath:GET_USER_NOTIFICATIONS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];
             NSInteger numberItem = [json arrayForKey:@"data"].count;
-            self->_isLoadMore = numberItem >= 50;
+            self.isLoadMore = numberItem >= 50;
             if(numberItem > 0) {
                 for (NSDictionary *dict in [json arrayForKey:@"data"]) {
                     NSError *err;
@@ -67,6 +33,41 @@
         
     } withFailBlock:^(id fail) {
         [self.delegate updateViewDataError];
+    }];
+}
+
+- (void)putUserNotifiRead:(NSDictionary *) prams {
+    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ andParam:prams isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        if(success) {
+            if([success[@"error_code"] integerValue] == 0) {
+                for (Notifi *item in self.listItem) {
+                    if(item.idNoti == [prams[@"id"] integerValue]) {
+                        item.is_read = YES;
+                        break;
+                    }
+                }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            }
+        }
+    } withFailBlock:^(id fail) {
+        
+    }];
+}
+
+- (void)putUserNotifiReadAll {
+    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ_ALL andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        if(success) {
+            if([success[@"error_code"] integerValue] == 0) {
+                for (Notifi *item in self.listItem) {
+                    if(!item.is_read) {
+                        item.is_read = YES;
+                    }
+                }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            }
+        }
+    } withFailBlock:^(id fail) {
+        
     }];
 }
 

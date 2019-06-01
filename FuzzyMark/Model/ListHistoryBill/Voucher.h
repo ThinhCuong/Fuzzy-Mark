@@ -16,10 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSInteger idVoucher;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *image;
-@property (nonatomic) NSString <Optional> *logo;
+@property (nonatomic) NSString *logo;
 @property (nonatomic) NSString *descriptionVoucher;
-@property (nonatomic) NSNumber <Optional> *percent_discount;
-@property (nonatomic) Page <Optional> *page;
+@property (nonatomic) NSInteger percent_discount;
+@property (nonatomic) Page *page;
 
 @end
 

@@ -20,11 +20,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChangeUserInforViewController">
             <connections>
-                <outlet property="CBFemaleView" destination="9IW-0c-6YD" id="dqV-Eg-IsO"/>
-                <outlet property="CBMaleView" destination="qJt-03-hqR" id="XPr-kb-6OZ"/>
                 <outlet property="btnSave" destination="8XP-3E-BCk" id="QCA-2o-FIY"/>
-                <outlet property="txtBirthday" destination="amV-Ia-L0a" id="ts6-sm-3fI"/>
-                <outlet property="txtName" destination="rsP-Bx-fmn" id="lqX-an-5CS"/>
+                <outlet property="checkBoxView" destination="kVl-Y6-xij" id="4Yp-Fq-yNC"/>
+                <outlet property="txtBirthday" destination="amV-Ia-L0a" id="VMp-46-gP3"/>
+                <outlet property="txtName" destination="rsP-Bx-fmn" id="vYo-CQ-sOS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,7 +33,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Họ &amp; tên" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqj-RY-kHS">
-                    <rect key="frame" x="24" y="36" width="42.5" height="15"/>
+                    <rect key="frame" x="24" y="36" width="43" height="15"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                     <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -95,69 +94,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kVl-Y6-xij">
-                    <rect key="frame" x="164" y="171.5" width="132" height="12"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-03-hqR" customClass="BEMCheckBox">
-                            <rect key="frame" x="0.0" y="0.0" width="55" height="12"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                    <real key="value" value="0.5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
-                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
-                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GiM-pR-kqm">
-                            <rect key="frame" x="22" y="-4.5" width="33" height="21"/>
-                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IW-0c-6YD" customClass="BEMCheckBox">
-                            <rect key="frame" x="89" y="0.0" width="43" height="12"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                    <real key="value" value="0.5"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="on" value="NO"/>
-                                <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
-                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="color" keyPath="onCheckColor">
-                                    <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                                </userDefinedRuntimeAttribute>
-                            </userDefinedRuntimeAttributes>
-                        </view>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nữ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzE-u0-zHT">
-                            <rect key="frame" x="111" y="-4.5" width="21" height="21"/>
-                            <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
+                    <rect key="frame" x="164" y="171" width="132" height="13"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="BzE-u0-zHT" firstAttribute="centerY" secondItem="9IW-0c-6YD" secondAttribute="centerY" id="1BU-J5-hpf"/>
-                        <constraint firstItem="qJt-03-hqR" firstAttribute="leading" secondItem="06x-3u-blz" secondAttribute="leading" id="I8V-H2-B0s"/>
-                        <constraint firstItem="9IW-0c-6YD" firstAttribute="top" secondItem="06x-3u-blz" secondAttribute="top" id="J03-WU-pUP"/>
-                        <constraint firstItem="qJt-03-hqR" firstAttribute="top" secondItem="06x-3u-blz" secondAttribute="top" id="JA3-cW-ymt"/>
-                        <constraint firstItem="BzE-u0-zHT" firstAttribute="trailing" secondItem="9IW-0c-6YD" secondAttribute="trailing" id="PyO-zF-3vh"/>
-                        <constraint firstItem="GiM-pR-kqm" firstAttribute="centerY" secondItem="qJt-03-hqR" secondAttribute="centerY" id="Q59-Yt-DtF"/>
-                        <constraint firstItem="qJt-03-hqR" firstAttribute="bottom" secondItem="06x-3u-blz" secondAttribute="bottom" id="QsP-T6-ymC"/>
-                        <constraint firstItem="9IW-0c-6YD" firstAttribute="leading" secondItem="GiM-pR-kqm" secondAttribute="trailing" constant="34" id="cnc-k6-51C"/>
-                        <constraint firstItem="9IW-0c-6YD" firstAttribute="bottom" secondItem="06x-3u-blz" secondAttribute="bottom" id="etK-UD-VYz"/>
-                        <constraint firstItem="GiM-pR-kqm" firstAttribute="trailing" secondItem="qJt-03-hqR" secondAttribute="trailing" id="hn8-KO-yVl"/>
-                        <constraint firstItem="BzE-u0-zHT" firstAttribute="leading" secondItem="GiM-pR-kqm" secondAttribute="trailing" constant="56" id="jJD-qi-OuM"/>
-                        <constraint firstItem="GiM-pR-kqm" firstAttribute="leading" secondItem="kVl-Y6-xij" secondAttribute="leading" constant="22" id="sne-UB-LIQ"/>
-                        <constraint firstAttribute="trailing" secondItem="BzE-u0-zHT" secondAttribute="trailing" id="vuX-ta-zVl"/>
+                        <constraint firstAttribute="width" constant="132" id="UrO-tI-Tts"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="06x-3u-blz"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pmx-DX-YDd" userLabel="Line">
                     <rect key="frame" x="24" y="201" width="272" height="0.5"/>
@@ -166,7 +107,7 @@
                         <constraint firstAttribute="height" constant="0.5" id="uzC-KB-WJA"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XP-3E-BCk">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XP-3E-BCk" customClass="FMButtonNext">
                     <rect key="frame" x="16" y="225.5" width="288" height="44"/>
                     <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -177,6 +118,13 @@
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
+                <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-S2-bEm">
+                    <rect key="frame" x="0.0" y="352" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="580673790.75087404">
+                        <!--2019-05-27 18:16:30 +0000-->
+                    </date>
+                </datePicker>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -199,6 +147,7 @@
                 <constraint firstItem="amV-Ia-L0a" firstAttribute="top" secondItem="nob-pV-m6i" secondAttribute="bottom" constant="6" id="YwA-0L-iVJ"/>
                 <constraint firstItem="8XP-3E-BCk" firstAttribute="top" secondItem="Pmx-DX-YDd" secondAttribute="bottom" constant="24" id="cIN-0q-Vcr"/>
                 <constraint firstItem="bqj-RY-kHS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="dAe-78-ySr"/>
+                <constraint firstItem="Pmx-DX-YDd" firstAttribute="top" secondItem="kVl-Y6-xij" secondAttribute="bottom" constant="17" id="oJc-J0-Pti"/>
                 <constraint firstItem="Pmx-DX-YDd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="qJS-sQ-8lh"/>
                 <constraint firstItem="bqj-RY-kHS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="qjQ-iW-tyK"/>
                 <constraint firstItem="hMA-1J-JhV" firstAttribute="bottom" secondItem="amV-Ia-L0a" secondAttribute="bottom" id="tjs-v0-Rrt"/>

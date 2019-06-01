@@ -7,19 +7,22 @@
 //
 
 #import "ChangeUserInforViewController.h"
-#import "BEMCheckBox.h"
+#import "FuzzyMark-Swift.h"
+#import <TNCheckBoxGroup/TNCheckBoxGroup.h>
 
-@interface ChangeUserInforViewController () <BEMCheckBoxDelegate>
-@property (weak, nonatomic) IBOutlet UITextView *txtName;
-@property (weak, nonatomic) IBOutlet UITextView *txtBirthday;
-@property (weak, nonatomic) IBOutlet BEMCheckBox *CBMaleView;
-@property (weak, nonatomic) IBOutlet BEMCheckBox *CBFemaleView;
+@interface ChangeUserInforViewController ()
+@property (weak, nonatomic) IBOutlet TJTextField *txtName;
+@property (weak, nonatomic) IBOutlet TJTextField *txtBirthday;
 @property (weak, nonatomic) IBOutlet UIButton *btnSave;
+@property (weak, nonatomic) IBOutlet UIView *checkBoxView;
+
 
 @end
 
 @implementation ChangeUserInforViewController {
-    BEMCheckBoxGroup *_groupSex;
+    TNCircularCheckBoxData *_maleData;
+    TNCircularCheckBoxData *_femaleData;
+    TNCheckBoxGroup *_sexGroup;
 }
 
 - (void)viewDidLoad {
@@ -29,21 +32,36 @@
 }
 
 - (void)setUI {
-    // Set shadow button Save
-    self.btnSave.layer.cornerRadius = 10;
-    self.btnSave.clipsToBounds = YES;
-    self.btnSave.layer.masksToBounds = NO;
-    self.btnSave.layer.shadowOffset = CGSizeMake(0, 5);
-    self.btnSave.layer.shadowColor = [UIColor colorWithRed:0.31 green:0.72 blue:1.0 alpha:0.3].CGColor;
-    self.btnSave.layer.shadowRadius = 5;
-    self.btnSave.layer.shadowOpacity = 1.0;
+    _maleData = [[TNCircularCheckBoxData alloc] init];
+    _maleData.identifier = @"male";
+    _maleData.labelText = @"Nam";
+    _maleData.labelFont = [UIFont setFontMuliWithSize:14];
+    _maleData.checked = YES;
+    _maleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _maleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _maleData.borderRadius = 20;
+    _maleData.circleRadius = 15;
     
-    self.CBMaleView.delegate = self;
-    self.CBFemaleView.delegate = self;
-    _groupSex = [BEMCheckBoxGroup groupWithCheckBoxes:@[self.CBMaleView,self.CBFemaleView]];
-    _groupSex.mustHaveSelection = YES;
+    _femaleData = [[TNCircularCheckBoxData alloc] init];
+    _femaleData.identifier = @"male";
+    _femaleData.labelText = @"Nữ";
+    _femaleData.labelFont = [UIFont setFontMuliWithSize:14];
+    _femaleData.checked = NO;
+    _femaleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _femaleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
+    _femaleData.borderRadius = 20;
+    _femaleData.circleRadius = 15;
     
-//    [self hideDatePicker];
+    _sexGroup = [[TNCheckBoxGroup alloc] initWithCheckBoxData:@[_maleData, _femaleData] style:TNCheckBoxLayoutHorizontal];
+    [_sexGroup create];
+    _sexGroup.position = CGPointMake(0, 0);
+//    _sexGroup.
+    [self.checkBoxView addSubview:_sexGroup];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupChanged) name:GROUP_CHANGED object:nil];
+}
+
+- (void)sexGroupChanged {
+//    _sexGroup.checkedCheckBoxes
 }
 
 - (void)setNavigationBar {

@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+#import <UIKit/UIKit.h>
+#import "FMCameraShowImageVC.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMCameraViewController : FMBaseViewController
+@property (strong, nonatomic) FMCameraShowImageVC *showImageVC;
 
 @end
 

@@ -24,9 +24,6 @@
     // Initialization code
     self.imgIcon.layer.cornerRadius = 10;
     self.imgIcon.clipsToBounds = YES;
-    
-    self.selectedBackgroundView = [[UIView alloc] init];
-    self.selectedBackgroundView.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

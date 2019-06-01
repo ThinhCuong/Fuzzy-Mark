@@ -30,16 +30,22 @@
     [self setupPageVC];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     _segmentedControl.frame = self.contentSegmentView.bounds;
     _pageViewController.view.frame = self.contentPageView.bounds;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.clipsToBounds = NO;
 }
 
 - (void)setNavigationBar {
     self.navigationItem.title = @"Lịch sử chụp hoá đơn";
     self.navigationController.navigationBar.topItem.title = @"";
     self.isHideNavigationBar = NO;
+    self.navigationController.navigationBar.clipsToBounds = YES;
 }
 
 - (void)setupSegmentControl {

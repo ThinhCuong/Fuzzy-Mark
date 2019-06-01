@@ -1,34 +1,46 @@
 PODS:
-  - BEMCheckBox (1.4.1)
   - CCBottomRefreshControl (0.5.2)
+  - CHIPageControl/Jaloro (0.1.7)
   - HMSegmentedControl (1.5.5)
   - JSONModel (1.8.0)
   - SDWebImage (5.0.0):
     - SDWebImage/Core (= 5.0.0)
   - SDWebImage/Core (5.0.0)
+  - SVProgressHUD (2.2.5)
+  - TNCheckBoxGroup (0.1)
+  - Toast (4.0.0)
 
 DEPENDENCIES:
-  - BEMCheckBox
   - CCBottomRefreshControl
+  - CHIPageControl/Jaloro
   - HMSegmentedControl
   - JSONModel
   - SDWebImage (~> 5.0)
+  - SVProgressHUD
+  - TNCheckBoxGroup
+  - Toast (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - BEMCheckBox
     - CCBottomRefreshControl
+    - CHIPageControl
     - HMSegmentedControl
     - JSONModel
     - SDWebImage
+    - SVProgressHUD
+    - TNCheckBoxGroup
+    - Toast
 
 SPEC CHECKSUMS:
-  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
+  CHIPageControl: bbe1ddd0c688c02ec65b7f7e7d34551a3d16f37c
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TNCheckBoxGroup: a68af5c69d292dcdf963bfab9496ed8e3f73689f
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
 
-PODFILE CHECKSUM: 55618b991ac25a63499ce20edec2c8cca8ae97d3
+PODFILE CHECKSUM: 9a5b1ea177a04f0c6891740a714a884d20664f27
 
 COCOAPODS: 1.6.1

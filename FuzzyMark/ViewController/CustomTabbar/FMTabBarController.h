@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FMMiddleButton.h"
+#import "UITabBar+FMMiddleButton.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

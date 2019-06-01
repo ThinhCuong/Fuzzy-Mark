@@ -7,20 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMBaseTableViewModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FMNotifiModelDelegate <NSObject>
 
-- (void)updateViewDataSuccess:(NSArray *) listData;
-- (void)updateViewDataEmpty;
-- (void)updateViewDataError;
+@interface FMNotifiModel : FMBaseTableViewModel
 
-@end
-@interface FMNotifiModel : NSObject
-
-@property (assign, nonatomic) id<FMNotifiModelDelegate> delegate;
-- (void)actionLoadMoreData;
-- (void)actionPullToRefreshData;
+- (void)putUserNotifiRead:(NSDictionary *) prams;
+- (void)putUserNotifiReadAll;
 
 @end
 

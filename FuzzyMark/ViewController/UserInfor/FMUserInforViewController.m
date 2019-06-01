@@ -115,6 +115,14 @@
     
 }
 
+- (void)didSelectEmailView {
+    
+}
+
+- (void)didSelectPhoneView {
+    
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
