@@ -18,7 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMIntroCameraViewController">
             <connections>
                 <outlet property="collectionContent" destination="gAb-Pc-LHj" id="cNz-G9-wOL"/>
-                <outlet property="pageControll" destination="2u3-CG-V4N" id="Euv-qr-Tik"/>
+                <outlet property="pageControll" destination="Z51-TW-R0n" id="hXV-3t-JyZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -41,7 +41,7 @@
                     </connections>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gAb-Pc-LHj">
-                    <rect key="frame" x="36" y="76" width="303" height="498"/>
+                    <rect key="frame" x="36" y="93" width="303" height="481"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BFX-Fy-cz0">
                         <size key="itemSize" width="50" height="50"/>
@@ -50,27 +50,57 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="2u3-CG-V4N">
-                    <rect key="frame" x="168" y="597" width="39" height="37"/>
-                    <color key="pageIndicatorTintColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="currentPageIndicatorTintColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
-                </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z51-TW-R0n" customClass="CHIPageControlJaloro" customModule="CHIPageControl">
+                    <rect key="frame" x="0.0" y="574" width="375" height="93"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="93" id="2TL-K0-wbU"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                            <color key="value" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="elementWidth">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="elementHeight">
+                            <real key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="Z51-TW-R0n" secondAttribute="trailing" id="1hu-ui-ijl"/>
+                <constraint firstItem="Z51-TW-R0n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G3N-m2-ZqT"/>
                 <constraint firstItem="gAb-Pc-LHj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JvM-bQ-IiY"/>
-                <constraint firstItem="gAb-Pc-LHj" firstAttribute="top" secondItem="J7l-lK-cpd" secondAttribute="bottom" constant="16" id="LNt-IS-5ki"/>
+                <constraint firstItem="gAb-Pc-LHj" firstAttribute="top" secondItem="J7l-lK-cpd" secondAttribute="bottom" constant="33" id="LNt-IS-5ki"/>
                 <constraint firstItem="IIU-MP-dSa" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="19" id="MIn-j5-sbn"/>
-                <constraint firstItem="2u3-CG-V4N" firstAttribute="top" secondItem="gAb-Pc-LHj" secondAttribute="bottom" constant="23" id="RUw-zB-NR8"/>
+                <constraint firstItem="Z51-TW-R0n" firstAttribute="top" secondItem="gAb-Pc-LHj" secondAttribute="bottom" id="V4P-H9-YlZ"/>
                 <constraint firstItem="J7l-lK-cpd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Y8h-GD-WTx"/>
                 <constraint firstItem="IIU-MP-dSa" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="f9M-VY-2pV"/>
-                <constraint firstItem="2u3-CG-V4N" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oKB-Ut-VIQ"/>
                 <constraint firstItem="J7l-lK-cpd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="19" id="tGs-j2-Izu"/>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="2u3-CG-V4N" secondAttribute="bottom" constant="33" id="tIt-a3-rGm"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gAb-Pc-LHj" secondAttribute="trailing" constant="36" id="uTk-bh-YV2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Z51-TW-R0n" secondAttribute="bottom" id="wQV-Ag-t0e"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="138.75" y="105.63380281690141"/>
+            <point key="canvasLocation" x="138.40000000000001" y="104.7976011994003"/>
         </view>
     </objects>
     <resources>

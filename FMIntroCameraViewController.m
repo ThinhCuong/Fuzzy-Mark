@@ -8,10 +8,11 @@
 
 #import "FMIntroCameraViewController.h"
 #import "FMIntroCameraCell.h"
-
+#import <CHIPageControl-Swift.h>
 @interface FMIntroCameraViewController () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionContent;
-@property (weak, nonatomic) IBOutlet UIPageControl *pageControll;
+@property (weak, nonatomic) IBOutlet CHIPageControlJaloro *pageControll;
+
 
 @end
 
@@ -26,7 +27,7 @@
     self.collectionContent.delegate = self;
     self.collectionContent.dataSource = self;
     [self.collectionContent registerNib:[UINib nibWithNibName:@"FMIntroCameraCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    listImage = [NSArray arrayWithObjects:@"img_bill_1", @"img_bill_1", @"img_bill_1",nil];
+    listImage = [NSArray arrayWithObjects:@"img_bill_1", @"img_bill_2", @"img_bill_3",nil];
     listText = [NSArray arrayWithObjects:@"Chụp từ mép trên của hoá đơn Căn chỉnh hoá đơn vừa khớp khung hình chụp", @"Trường hợp hoá đơn quá dài, bạn có thể chụp nhiều hình cho đến hết chiều dài hoá đơn.", @"Hình ảnh sau khi chụp xong phải đầy đủ thông tin của hoá đơn. Không bị lệch hay chồng chéo",nil];
 }
 
@@ -58,7 +59,7 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSInteger index = (NSInteger)scrollView.contentOffset.x / (NSInteger)scrollView.frame.size.width;
-    self.pageControll.currentPage = index;
+    [self.pageControll setProgress:index];
 }
 
 @end

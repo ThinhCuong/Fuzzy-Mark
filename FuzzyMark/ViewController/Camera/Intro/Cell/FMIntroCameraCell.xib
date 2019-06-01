@@ -32,7 +32,7 @@ Căn chỉnh hoá đơn vừa khớp khung hình chụp</string>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_bill_1" translatesAutoresizingMaskIntoConstraints="NO" id="IM3-lc-mkE">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="img_bill_1" translatesAutoresizingMaskIntoConstraints="NO" id="IM3-lc-mkE">
                         <rect key="frame" x="0.0" y="51.5" width="288" height="406.5"/>
                     </imageView>
                 </subviews>
@@ -56,6 +56,6 @@ Căn chỉnh hoá đơn vừa khớp khung hình chụp</string>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="img_bill_1" width="316" height="439"/>
+        <image name="img_bill_1" width="288" height="411"/>
     </resources>
 </document>

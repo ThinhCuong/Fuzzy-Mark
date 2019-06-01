@@ -126,7 +126,7 @@
     if(!backCamera) {
         NSLog(@"Thiet bi khong co Camera");
         [self.view makeToast:@"Không tìm thấy Camera trên thiết bị" duration:4.0 position:CSToastPositionCenter];
-        [self popViewControllerAfterWithTime:4.0];
+        [self popViewControllerAfterWithTime:2.0];
         return;
     }
     NSError *error;
@@ -141,7 +141,7 @@
     } else {
         NSLog(@"Xẩy ra lỗi: %@", error.localizedDescription);
         [self.view makeToast:@"Rất tiếc. Có sự cố không mong muốn xẩy ra" duration:4.0 position:CSToastPositionCenter];
-        [self popViewControllerAfterWithTime:4.0];
+        [self popViewControllerAfterWithTime:2.0];
     }
 }
 
