@@ -9,29 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FuzzyMark/ViewController/Camera/ShowImage/FMCameraShowImageVC.m"
-            timestampString = "580987543.705795"
+            filePath = "FuzzyMark/ViewController/Camera/FMCameraViewController.m"
+            timestampString = "581063144.65922"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-collectionView:numberOfItemsInSection:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FuzzyMark/ViewController/Camera/ShowImage/FMCameraShowImageVC.m"
-            timestampString = "580987543.706637"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-checkPermissionsCamera"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -37,7 +37,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     // Setup your camera here...
-    [self greateNewSession];
+    [self checkPermissionsCamera];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -46,6 +46,10 @@
 }
 
 #pragma mark private
+- (void)setNavigationBar {
+    self.isHideNavigationBar = YES;
+}
+
 - (void)setBlurView {
     UIBezierPath *transparentPath = [UIBezierPath bezierPathWithRect:self.middleView.frame];
     UIBezierPath *overlayPath = [UIBezierPath bezierPathWithRect:self.previewView.frame];
@@ -63,10 +67,51 @@
     }];
 }
 
-- (void)setNavigationBar {
-    self.isHideNavigationBar = YES;
+- (void)checkPermissionsCamera {
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    switch (authStatus) {
+        case AVAuthorizationStatusAuthorized: {
+            if(!self.session) {
+                [self greateNewSession];
+            } else {
+                [self.session startRunning];
+            }
+            break;
+        }
+        case AVAuthorizationStatusDenied:
+        case AVAuthorizationStatusRestricted: {
+            NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+            if ([[UIApplication sharedApplication] canOpenURL:url]) {
+                
+                UIAlertController *alertController = [UIAlertController alertControllerWithTitle: @"Bạn cần cho phép FuzzyMark truy cập Camera để thực hiện chức năng này" message: @"Chuyển tới: Settings > Privacy > Camera để bật"  preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
+                }];
+                UIAlertAction *cancleAction = [UIAlertAction actionWithTitle:@"Cancle" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                    [self popViewControllerAfterWithTime:0.0];
+                }];
+                [alertController addAction:OKAction];
+                [alertController addAction:cancleAction];
+                
+                [self presentViewController:alertController animated:YES completion:nil];
+            break;
+            }
+        }
+        case AVAuthorizationStatusNotDetermined: {
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                if(granted) {
+                    [self greateNewSession];
+                } else {
+                    [self popViewControllerAfterWithTime:0.0];
+                }
+            }];
+            break;
+        }
+        default:
+            break;
+    }
 }
-
 
 - (void)greateNewSession {
     self.session = [AVCaptureSession new];
@@ -74,6 +119,8 @@
     AVCaptureDevice *backCamera = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     if(!backCamera) {
         NSLog(@"Thiet bi khong co Camera");
+        [self.view makeToast:@"Không tìm thấy Camera trên thiết bị" duration:4.0 position:CSToastPositionCenter];
+        [self popViewControllerAfterWithTime:4.0];
         return;
     }
     NSError *error;
@@ -87,7 +134,16 @@
         }
     } else {
         NSLog(@"Xẩy ra lỗi: %@", error.localizedDescription);
+        [self.view makeToast:@"Rất tiếc. Có sự cố không mong muốn xẩy ra" duration:4.0 position:CSToastPositionCenter];
+        [self popViewControllerAfterWithTime:4.0];
     }
+}
+
+- (void)popViewControllerAfterWithTime:(double) seconds {
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(seconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 
 - (void)setupLivePreview {

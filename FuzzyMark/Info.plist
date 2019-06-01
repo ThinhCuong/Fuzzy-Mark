@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>Bạn cần cho phép FuzzyMark truy cập Camera để thực hiện chức năng này</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
+	<string>Bạn cần cho phép FuzzyMark truy cập Ảnh để thực hiện chức năng này</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
