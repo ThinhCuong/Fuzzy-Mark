@@ -62,10 +62,11 @@
     self.naviHomeController.delegate = self;
     
     // init Search
-    self.FMSearchViewController = [[UIViewController alloc] init];
+    self.FMSearchViewController = [[FZSearchViewController alloc] init];
     self.FMNaviSearchController = [[UINavigationController alloc] initWithRootViewController:self.FMSearchViewController];
     UITabBarItem *tabbarItemSeach = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_search_selected_tb"] selectedImage:[UIImage imageNamed:@"ic_search_selected_tb"]];
     self.FMNaviSearchController.tabBarItem = tabbarItemSeach;
+    self.FMNaviSearchController.delegate = self;
     
     // init Camera
     self.registerPromotiosVC = [[FMRegisterPromotionViewController alloc] init];
