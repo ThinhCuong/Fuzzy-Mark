@@ -27,6 +27,12 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.collectionViewContent reloadData];
+    if(_listImage.count > 1) {
+        CGFloat y = self.collectionViewContent.contentSize.height - self.collectionViewContent.frame.size.height / 2;
+        [self.collectionViewContent setContentOffset:CGPointMake(0, y)];
+    } else {
+        [self.collectionViewContent setContentOffset:CGPointMake(0, 0)];
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -65,6 +71,7 @@
 }
 
 - (IBAction)didSelectBack:(id)sender {
+    [self.listImage removeAllObjects];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
