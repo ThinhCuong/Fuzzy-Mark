@@ -23,12 +23,14 @@
 
 @implementation FMCameraViewController {
     NSMutableArray *_listImage;
+    BOOL _firstLoad;
 }
 
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    _firstLoad = YES;
     [self.introView setAlpha:0.0];
     [self setNavigationBar];
     _listImage = [[NSMutableArray alloc] init];
@@ -37,6 +39,10 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     // Setup your camera here...
+    if(_firstLoad) {
+        [self setBlurView];
+        _firstLoad = NO;
+    }
     [self checkPermissionsCamera];
 }
 
@@ -160,7 +166,6 @@
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.videoPreviewLayer.frame = self.previewView.bounds;
-                [self setBlurView];
             });
             
         });
