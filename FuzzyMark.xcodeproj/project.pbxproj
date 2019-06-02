@@ -1292,7 +1292,6 @@
 			children = (
 				4FEEE64B2292F2EA00E337F2 /* RegisterPromotion */,
 				5CFF923E229B23FE0053A2A5 /* Search */,
-				4FDACD1A227F744900A8571E /* ListRegisterPromotion */,
 				4FBD3D9E228DDA1100E76E2A /* LocationFavorite */,
 				4FDACCFE227F5A5800A8571E /* ListHistoryBill */,
 				4FBD3D88228D9A0300E76E2A /* ListHistoryPoint */,
@@ -1948,12 +1947,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark;
+				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1974,12 +1973,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark;
+				PRODUCT_BUNDLE_IDENTIFIER = VietTu.FuzzyMark.1.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

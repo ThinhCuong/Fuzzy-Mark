@@ -91,12 +91,13 @@
 }
 
 - (void)callDataRefresh {
-    if([self checkIsRefresh]) {
-        [self stopAnimationRefresh];
-        return;
-    }
-    _isRefresh = YES;
-    [self.model actionPullToRefreshData];
+    [self stopAnimationRefresh];
+//    if([self checkIsRefresh]) {
+//        [self stopAnimationRefresh];
+//        return;
+//    }
+//    _isRefresh = YES;
+//    [self.model actionPullToRefreshData];
 }
 
 - (BOOL)checkIsRefresh {
@@ -162,6 +163,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
     return 42;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *) view;
+    header.contentView.backgroundColor = [UIColor whiteColor];
 }
 
 @end

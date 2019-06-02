@@ -42,13 +42,13 @@
         self.backgroundColor = [UIColor whiteColor];
     }
     if(model.idNoti == 1) {
-        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+        self.imgIcon.image = [UIImage imageNamed:@"Test"];
     } else if (model.idNoti == 2) {
-        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+        self.imgIcon.image = [UIImage imageNamed:@"Test"];
     } else if (model.idNoti == 3) {
-        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+        self.imgIcon.image = [UIImage imageNamed:@"Test"];
     } else {
-        self.imgIcon.image = [UIImage imageNamed:@"icon_no_image"];
+        self.imgIcon.image = [UIImage imageNamed:@"Test"];
     }
 }
 
