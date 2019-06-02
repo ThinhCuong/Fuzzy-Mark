@@ -84,15 +84,17 @@
     NSDictionary *params = @{
                              @"token": @"abd",
                              };
-    
+    [SVProgressHUD setContainerView:self.view];
+    [SVProgressHUD show];
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        [SVProgressHUD dismiss];
         if (responseData) {
             FZHomeJsonModel *homeData = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
             [self.dataModel bindData:homeData];
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
 

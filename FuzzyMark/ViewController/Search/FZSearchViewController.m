@@ -106,8 +106,10 @@
     NSDictionary *params = @{
                              @"token": @"abd",
                              };
-    
+    [SVProgressHUD setContainerView:self.view];
+    [SVProgressHUD show];
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"groups" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        [SVProgressHUD dismiss];
         if (responseData) {
             FZSearchModel *homeData = [[FZSearchModel alloc] initWithDictionary:responseData error:nil];
             self.listGroup = homeData.data;
@@ -115,7 +117,7 @@
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {
-        
+        [SVProgressHUD dismiss];
     }];
 }
 
