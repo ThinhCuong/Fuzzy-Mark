@@ -31,6 +31,7 @@
     self.tableView.delegate = self;
     [self testApi];
     self.dataModel = [[FZHomeModel alloc] init];
+    self.dataModel.homeViewController = self;
     [self.dataModel registerCellForTableView:self.tableView];
     
 }

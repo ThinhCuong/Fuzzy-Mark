@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)bindData:(NSArray *)listGroup;
 
+@property (assign, nonatomic) NSInteger sectionIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END

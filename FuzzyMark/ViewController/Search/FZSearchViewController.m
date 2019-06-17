@@ -11,14 +11,22 @@
 #import "FZItemSearchCollectionViewCell.h"
 #import "FZTitleHeaderCollectionReusableView.h"
 #import "FZHeaderSearchTableViewCell.h"
+#import "FZFooterCollectionReusableView.h"
 
-@interface FZSearchViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface FZSearchViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
+    NSInteger _selectedIndex;
+    NSInteger _willSectionIndex;
+    NSInteger _didSectionIndex;
+    BOOL _isWillIndexEqualDidIndex;
+    BOOL _isWill;
+}
 
 @property(nonatomic) NSArray<GroupObject *> *listGroup;
 @property(nonatomic) NSArray<GroupObject *> *listCategory;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) CGFloat lastContentOffset;
 
 @end
 
@@ -37,6 +45,9 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"FZTitleHeaderCollectionReusableView" bundle:nil]
           forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                  withReuseIdentifier:@"FZTitleHeaderCollectionReusableView"];
+    [self.collectionView registerNib:[UINib nibWithNibName:@"FZFooterCollectionReusableView" bundle:nil]
+          forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
+                 withReuseIdentifier:@"FZFooterCollectionReusableView"];
     
     [self.collectionView registerNib:[UINib nibWithNibName:@"FZItemSearchCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FZItemSearchCollectionViewCell"];
     
@@ -44,9 +55,14 @@
     self.collectionView.delegate = self;
     
     [self callGroupsApi];
+    
 }
 
-
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, self.collectionView.contentSize.height / 2.3, 0);
+    self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 180, 0);
+}
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
@@ -54,6 +70,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FZHeaderSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZHeaderSearchTableViewCell"];
     [cell bindData:self.listGroup];
+    cell.sectionIndex = _selectedIndex;
     return cell;
 }
 
@@ -72,13 +89,24 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
-    FZTitleHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionHeader withReuseIdentifier:@"FZTitleHeaderCollectionReusableView" forIndexPath:indexPath];
-    [headerView bindData:self.listGroup[indexPath.section].title];
-    return headerView;
+    if(kind == UICollectionElementKindSectionHeader)
+    {
+        FZTitleHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionHeader withReuseIdentifier:@"FZTitleHeaderCollectionReusableView" forIndexPath:indexPath];
+        [headerView bindData:self.listGroup[indexPath.section].title];
+        return headerView;
+    } else {
+        FZFooterCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionFooter withReuseIdentifier:@"FZFooterCollectionReusableView" forIndexPath:indexPath];
+        return headerView;
+    }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     CGSize cellSize = CGSizeMake(self.collectionView.bounds.size.width , 50);
+    return cellSize;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    CGSize cellSize = CGSizeMake(self.collectionView.bounds.size.width , 5);
     return cellSize;
 }
 
@@ -88,19 +116,29 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    NSArray *indexPaths = [self.collectionView indexPathsForVisibleItems];
-   // NSIndexPath *middleIndexPath = [indexPaths objectAtIndex:([indexPaths count] / [indexPaths count])];//you must check if indexPaths >=2 or <2
-     // NSLog(@"Section :%ld",(long)middleIndexPath.section);
+    if (self.lastContentOffset > scrollView.contentOffset.y) {
+        _selectedIndex = _willSectionIndex;
+        [self.tableView reloadData];
+        NSLog(@"Scrolling Up");
+    } else if (self.lastContentOffset < scrollView.contentOffset.y) {
+        if (_willSectionIndex > _didSectionIndex) {
+            _selectedIndex = _didSectionIndex;
+            [self.tableView reloadData];
+        }
+        NSLog(@"Scrolling Down");
+    }
     
+    self.lastContentOffset = scrollView.contentOffset.y;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingSupplementaryView:(UICollectionReusableView *)view forElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
-      NSLog(@"Section :%ld",(long)indexPath.section);
+    _didSectionIndex = indexPath.section;;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
-     NSLog(@"will section :%ld",(long)indexPath.section);
+    _willSectionIndex = indexPath.section;
 }
+
 - (void)callGroupsApi {
     
     NSDictionary *params = @{

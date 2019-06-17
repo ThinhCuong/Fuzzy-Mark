@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -191,12 +193,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvO-Kp-vba">
+                                                <rect key="frame" x="0.0" y="0.0" width="106.5" height="72.5"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="n0f-uO-Vi7" firstAttribute="centerX" secondItem="bD8-Yg-RcL" secondAttribute="centerX" id="04h-Qb-gMs"/>
+                                            <constraint firstItem="bvO-Kp-vba" firstAttribute="centerY" secondItem="bD8-Yg-RcL" secondAttribute="centerY" id="BWR-c4-tbD"/>
                                             <constraint firstItem="n0f-uO-Vi7" firstAttribute="width" secondItem="bD8-Yg-RcL" secondAttribute="width" id="Er2-Hn-Ww3"/>
+                                            <constraint firstItem="bvO-Kp-vba" firstAttribute="centerX" secondItem="bD8-Yg-RcL" secondAttribute="centerX" id="NdL-AQ-Zzm"/>
                                             <constraint firstItem="Hc3-gY-ryR" firstAttribute="top" secondItem="bD8-Yg-RcL" secondAttribute="top" constant="15" id="RM7-Kl-aJB"/>
+                                            <constraint firstItem="bvO-Kp-vba" firstAttribute="height" secondItem="bD8-Yg-RcL" secondAttribute="height" id="RwK-Lv-hwb"/>
+                                            <constraint firstItem="bvO-Kp-vba" firstAttribute="width" secondItem="bD8-Yg-RcL" secondAttribute="width" id="bH6-br-yDg"/>
                                             <constraint firstItem="Hc3-gY-ryR" firstAttribute="centerX" secondItem="bD8-Yg-RcL" secondAttribute="centerX" id="kNy-CU-np7"/>
                                             <constraint firstItem="n0f-uO-Vi7" firstAttribute="top" secondItem="Hc3-gY-ryR" secondAttribute="bottom" constant="5" id="s20-AX-2kB"/>
                                             <constraint firstAttribute="bottom" secondItem="n0f-uO-Vi7" secondAttribute="bottom" constant="7.5" id="wAf-mu-qsx"/>
@@ -382,6 +391,7 @@
                 <outlet property="bannerCollectionView" destination="eIk-43-iEa" id="ieJ-UU-ro4"/>
                 <outlet property="fixadImage" destination="aGI-05-BiU" id="RCI-LO-fR2"/>
                 <outlet property="pageControl" destination="aeO-ho-VAu" id="o1G-yJ-jWo"/>
+                <outlet property="restaurentButton" destination="bvO-Kp-vba" id="w8R-Mm-URM"/>
             </connections>
             <point key="canvasLocation" x="139.13043478260872" y="184.48660714285714"/>
         </tableViewCell>

@@ -26,6 +26,7 @@
     
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
+    self.sectionIndex = 0;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -44,6 +45,8 @@
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FZHeaderItemCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FZHeaderItemCollectionViewCell" forIndexPath:indexPath];
     [cell bindData:_listGroup[indexPath.row]];
+    cell.backgroundIcon.backgroundColor = self.sectionIndex == indexPath.row ? [UIColor colorWithRed:204.0f/255.0f green:233.0f/255.0f blue:255.0f/255.0f alpha:1] : UIColor.whiteColor;
+    cell.selectedLineView.backgroundColor = self.sectionIndex == indexPath.row ? [UIColor colorWithRed:43.0f/255.0f green:132.0f/255.0f blue:210.0f/255.0f alpha:1] : UIColor.whiteColor;
     return cell;
 }
 

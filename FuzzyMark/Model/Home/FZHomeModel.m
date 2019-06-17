@@ -9,6 +9,7 @@
 #import "FZHomeModel.h"
 #import "FZMenuHomeTableViewCell.h"
 #import "FZItemMenuHomeTableViewCell.h"
+#import "FZVourchersSearchViewController.h"
 
 @interface FZHomeModel() {
     FZHomeJsonModel *_homeData;
@@ -36,6 +37,12 @@
     _homeData = homeData;
 }
 
+- (void)goVourchersSearchScreen {
+    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithNibName:@"FZVourchersSearchViewController" bundle:nil];
+    rewardInfoVC.hidesBottomBarWhenPushed = YES;
+    [self.homeViewController.navigationController pushViewController:rewardInfoVC animated:YES];
+}
+
 - (NSInteger )numberOfSectionsInTableView {
     return 2;
 }
@@ -55,6 +62,7 @@
     if (indexPath.section == 0) {
         FZMenuHomeTableViewCell *menuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZMenuHomeTableViewCell"];
         [menuHomeCell bindData:_homeData];
+        [menuHomeCell.restaurentButton addTarget:self action:@selector(goVourchersSearchScreen) forControlEvents:UIControlEventTouchUpInside];
         return menuHomeCell;
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];

@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FZHeaderItemCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *iconImage;
+@property (strong, nonatomic) IBOutlet UIButton *backgroundIcon;
+@property (strong, nonatomic) IBOutlet UIView *selectedLineView;
 
 - (void)bindData:(GroupObject *)groupInfo;
 

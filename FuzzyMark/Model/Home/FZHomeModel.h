@@ -19,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSInteger )numberOfRowsInSection:(NSInteger )section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
+@property (strong, nonatomic) FZHomeViewController *homeViewController;
+
 - (void)bindData:(FZHomeJsonModel *)homeData;
 
 @end

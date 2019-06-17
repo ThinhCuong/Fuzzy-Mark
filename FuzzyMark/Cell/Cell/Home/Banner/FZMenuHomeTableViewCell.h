@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIButton *restaurentButton;
+
 - (void)bindData:(FZHomeJsonModel *)homeData;
 
 @end

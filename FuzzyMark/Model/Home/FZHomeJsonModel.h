@@ -102,4 +102,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSInteger lng;
 
 @end
+
+@protocol FZGroupInfoJsonModel;
+@class FZGroupInfoJsonModel;
+
+@interface FzVourcherSearch : JSONModel
+
+@property (nonatomic) NSArray <FZGroupInfoJsonModel *> <FZGroupInfoJsonModel> *data;
+
+@end
+
 NS_ASSUME_NONNULL_END

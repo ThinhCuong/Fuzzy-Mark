@@ -46,3 +46,8 @@
 @implementation FZLocationJsonModel
 
 @end
+
+@implementation FzVourcherSearch
+
+@end
+
