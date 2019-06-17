@@ -111,6 +111,7 @@
 		4FF2BD7A227BDA390008BA69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2BD79227BDA390008BA69 /* AVFoundation.framework */; };
 		4FF2BD86227BE83B0008BA69 /* RegisterPromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD84227BE83B0008BA69 /* RegisterPromotionCell.xib */; };
 		4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD87227BEC230008BA69 /* Camera.xcassets */; };
+		4FF44BDC22B690E600604202 /* MVPromotionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF44BDB22B690E600604202 /* MVPromotionDetailModel.m */; };
 		4FF9C3BA2290F31F00D3AD81 /* FMBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */; };
 		4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */; };
 		4FF9C3BF22910A7600D3AD81 /* HistoryBillHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */; };
@@ -125,6 +126,9 @@
 		5C127AF722A48D20002ADFE9 /* FZFooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C127AF522A48D20002ADFE9 /* FZFooterCollectionReusableView.m */; };
 		5C127AF822A48D20002ADFE9 /* FZFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C127AF622A48D20002ADFE9 /* FZFooterCollectionReusableView.xib */; };
 		5C1585EF22A5DDC5008F06AB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1585EE22A5DDC5008F06AB /* CustomButton.swift */; };
+		4FFC65CD22B5763900056AE2 /* MVPromotionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC65CB22B5763900056AE2 /* MVPromotionDetailVC.m */; };
+		4FFC65CE22B5763900056AE2 /* MVPromotionDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFC65CC22B5763900056AE2 /* MVPromotionDetailVC.xib */; };
+		4FFC65D022B57F8200056AE2 /* PromotionDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFC65CF22B57F8200056AE2 /* PromotionDetail.xcassets */; };
 		5C39102A2263492A008BEA62 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910052263492A008BEA62 /* LICENSE */; };
 		5C39102B2263492A008BEA62 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C3910062263492A008BEA62 /* README.md */; };
 		5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */; };
@@ -365,6 +369,8 @@
 		4FF2BD79227BDA390008BA69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4FF2BD84227BE83B0008BA69 /* RegisterPromotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPromotionCell.xib; sourceTree = "<group>"; };
 		4FF2BD87227BEC230008BA69 /* Camera.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Camera.xcassets; sourceTree = "<group>"; };
+		4FF44BDA22B690E600604202 /* MVPromotionDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPromotionDetailModel.h; sourceTree = "<group>"; };
+		4FF44BDB22B690E600604202 /* MVPromotionDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPromotionDetailModel.m; sourceTree = "<group>"; };
 		4FF9C3B62290F05000D3AD81 /* FMUpdateTableDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUpdateTableDataProtocol.h; sourceTree = "<group>"; };
 		4FF9C3B82290F31F00D3AD81 /* FMBaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseTableViewModel.h; sourceTree = "<group>"; };
 		4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseTableViewModel.m; sourceTree = "<group>"; };
@@ -386,6 +392,10 @@
 		5C127AF522A48D20002ADFE9 /* FZFooterCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZFooterCollectionReusableView.m; sourceTree = "<group>"; };
 		5C127AF622A48D20002ADFE9 /* FZFooterCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZFooterCollectionReusableView.xib; sourceTree = "<group>"; };
 		5C1585EE22A5DDC5008F06AB /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		4FFC65CA22B5763900056AE2 /* MVPromotionDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVPromotionDetailVC.h; sourceTree = "<group>"; };
+		4FFC65CB22B5763900056AE2 /* MVPromotionDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPromotionDetailVC.m; sourceTree = "<group>"; };
+		4FFC65CC22B5763900056AE2 /* MVPromotionDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVPromotionDetailVC.xib; sourceTree = "<group>"; };
+		4FFC65CF22B57F8200056AE2 /* PromotionDetail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PromotionDetail.xcassets; sourceTree = "<group>"; };
 		5C3910052263492A008BEA62 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		5C3910062263492A008BEA62 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5C3910082263492A008BEA62 /* UIProgressView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIProgressView+AFNetworking.m"; sourceTree = "<group>"; };
@@ -1022,6 +1032,19 @@
 			path = RegisterPromotions;
 			sourceTree = "<group>";
 		};
+		4FFC65C922B575C900056AE2 /* PromotionDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4FFC65CA22B5763900056AE2 /* MVPromotionDetailVC.h */,
+				4FFC65CB22B5763900056AE2 /* MVPromotionDetailVC.m */,
+				4FFC65CC22B5763900056AE2 /* MVPromotionDetailVC.xib */,
+				4FFC65CF22B57F8200056AE2 /* PromotionDetail.xcassets */,
+				4FF44BDA22B690E600604202 /* MVPromotionDetailModel.h */,
+				4FF44BDB22B690E600604202 /* MVPromotionDetailModel.m */,
+			);
+			path = PromotionDetail;
+			sourceTree = "<group>";
+		};
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -1233,6 +1256,7 @@
 			children = (
 				5C563DD222B16C62006AB186 /* VouchersSearch */,
 				5CFF9238229B1FC00053A2A5 /* Search */,
+				4FFC65C922B575C900056AE2 /* PromotionDetail */,
 				4F00C81B227A06C30073B583 /* Base */,
 				4F50F3892276E9A700DF7173 /* CustomTabbar */,
 				4FF2BD73227BD9BE0008BA69 /* Camera */,
@@ -1577,7 +1601,9 @@
 				4FDACD0D227F5D4200A8571E /* HistoryBillHeaderCell.xib in Resources */,
 				4F50F3922276E9A700DF7173 /* FMUserInforTableViewCell.xib in Resources */,
 				4F50F3942276E9A700DF7173 /* FMUserInforViewController.xib in Resources */,
+				4FFC65CE22B5763900056AE2 /* MVPromotionDetailVC.xib in Resources */,
 				4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */,
+				4FFC65D022B57F8200056AE2 /* PromotionDetail.xcassets in Resources */,
 				5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */,
 				4FDC204A22A0CF24003B755C /* FMCameraShowImageVC.xib in Resources */,
 				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
@@ -1809,7 +1835,9 @@
 				4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */,
 				4FBD3DA2228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m in Sources */,
 				4FF014A3227EEEBC0063093C /* Page.m in Sources */,
+				4FFC65CD22B5763900056AE2 /* MVPromotionDetailVC.m in Sources */,
 				4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */,
+				4FF44BDC22B690E600604202 /* MVPromotionDetailModel.m in Sources */,
 				5CD3A76C22887D7C0020A0DE /* FZBannerCollectionViewCell.m in Sources */,
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
 				5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */,
