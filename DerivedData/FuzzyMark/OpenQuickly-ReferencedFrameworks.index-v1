@@ -23,14 +23,14 @@
 	<string>Foundation</string>
 	<string>mach</string>
 	<string>QuartzCore</string>
-	<string>Security</string>
 	<string>AppKit</string>
+	<string>Security</string>
 	<string>JSONModel</string>
 	<string>WebImage</string>
 	<string>netinet</string>
 	<string>SystemConfiguration</string>
-	<string>HMSegmentedControl</string>
 	<string>CoreGraphics</string>
+	<string>HMSegmentedControl</string>
 	<string>SVProgressHUD</string>
 	<string>UIKit</string>
 </array>
