@@ -1,0 +1,6 @@
+framework module Pods_FuzzyMark {
+  umbrella header "Pods-FuzzyMark-umbrella.h"
+
+  export *
+  module * { export * }
+}

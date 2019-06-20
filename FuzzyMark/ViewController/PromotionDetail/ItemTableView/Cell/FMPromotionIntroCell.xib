@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="404" id="KGk-i7-Jjw" customClass="FMPromotionIntroCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="404"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="403.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_placeholder_black" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-73-zRH">
+                        <rect key="frame" x="18" y="19" width="13" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="OWy-UI-el1"/>
+                            <constraint firstAttribute="width" constant="13" id="XCS-fP-zHN"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8A Hàng Tre, Phường Lý Thái Tổ, Quận Hoàn Kiếm, Hà Nội" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKH-Uq-smu">
+                        <rect key="frame" x="43" y="8.5" width="196" height="35.5"/>
+                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fM-yo-ok7">
+                        <rect key="frame" x="265" y="8.5" width="38" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="TGN-lZ-WVe"/>
+                            <constraint firstAttribute="height" constant="38" id="YXh-H7-WZa"/>
+                        </constraints>
+                        <state key="normal" image="ic_goto"/>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_telephone" translatesAutoresizingMaskIntoConstraints="NO" id="vXw-IW-2Lh">
+                        <rect key="frame" x="19" y="55.5" width="13" height="13"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(024) 8880 8888" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jg-sl-fdx">
+                        <rect key="frame" x="42" y="53" width="94" height="18"/>
+                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
+                        <color key="textColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_dollar" translatesAutoresizingMaskIntoConstraints="NO" id="ZHu-k3-57u">
+                        <rect key="frame" x="18" y="80.5" width="13" height="13"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mức giá: 200.000đ - 300.000đ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmk-Bn-pSB">
+                        <rect key="frame" x="41" y="78" width="173" height="18"/>
+                        <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQ8-jc-AM5">
+                        <rect key="frame" x="16" y="117" width="288" height="270.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_quotes_right" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-KC-JnH">
+                                <rect key="frame" x="132.5" y="15" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="23" id="9fP-hT-wfn"/>
+                                    <constraint firstAttribute="height" constant="23" id="u2F-Xj-JHz"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVG-Io-g2q">
+                                <rect key="frame" x="8" y="49" width="272" height="176.5"/>
+                                <string key="text">GoGi House (Quán thịt nướng Hàn Quốc) sẽ đưa bạn đến Seoul, nơi những con phố bình dị, những quán ăn đã trở nên quen thuộc và gắn bó với người dân xứ Hàn. Nếu đã một lần thưởng thức thịt nướng tại GoGi House, bạn sẽ không thể quên được hương vị “ngất ngây” của những món sườn non bò Mỹ, nạc vai bò Mỹ, dẻ sườn tươi…. khi hòa quyện vào với các loại gia vị đặc trưng của xứ sở Kimchi đã trở nên hấp dẫn đến thế nào. Ngoài ra, những món ăn kèm không thể bỏ qua như cơm trộn, mỳ lạnh, canh Kimchi và các loại lẩu cũng sẽ làm bạn ấn tượng thêm về nền ẩm thực Hàn Quốc</string>
+                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_quotes_left" translatesAutoresizingMaskIntoConstraints="NO" id="ySp-gC-lve">
+                                <rect key="frame" x="132.5" y="236.5" width="23" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="8ch-nq-ZgB"/>
+                                    <constraint firstAttribute="width" constant="23" id="pxN-HZ-6Ex"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.97647058823529409" blue="0.99607843137254903" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ySp-gC-lve" firstAttribute="top" secondItem="JVG-Io-g2q" secondAttribute="bottom" constant="11" id="B1D-pj-jOM"/>
+                            <constraint firstItem="JVG-Io-g2q" firstAttribute="top" secondItem="HWN-KC-JnH" secondAttribute="bottom" constant="11" id="HTR-hH-WBX"/>
+                            <constraint firstItem="JVG-Io-g2q" firstAttribute="leading" secondItem="oQ8-jc-AM5" secondAttribute="leading" constant="8" id="M5Q-3S-rep"/>
+                            <constraint firstItem="ySp-gC-lve" firstAttribute="centerX" secondItem="oQ8-jc-AM5" secondAttribute="centerX" id="SW8-i4-gGF"/>
+                            <constraint firstAttribute="bottom" secondItem="ySp-gC-lve" secondAttribute="bottom" constant="11" id="VtY-QA-yeG"/>
+                            <constraint firstItem="HWN-KC-JnH" firstAttribute="top" secondItem="oQ8-jc-AM5" secondAttribute="top" constant="15" id="avG-Md-Egb"/>
+                            <constraint firstAttribute="trailing" secondItem="JVG-Io-g2q" secondAttribute="trailing" constant="8" id="kZk-rN-u5z"/>
+                            <constraint firstItem="HWN-KC-JnH" firstAttribute="centerX" secondItem="oQ8-jc-AM5" secondAttribute="centerX" id="nzV-Gj-E3K"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1fM-yo-ok7" firstAttribute="leading" secondItem="KKH-Uq-smu" secondAttribute="trailing" constant="26" id="0oP-dB-Kbm"/>
+                    <constraint firstItem="1fM-yo-ok7" firstAttribute="top" secondItem="KKH-Uq-smu" secondAttribute="top" id="Io4-uy-165"/>
+                    <constraint firstItem="4jg-sl-fdx" firstAttribute="top" secondItem="KKH-Uq-smu" secondAttribute="bottom" constant="9" id="KJT-rr-zcQ"/>
+                    <constraint firstItem="KKH-Uq-smu" firstAttribute="centerY" secondItem="6rN-73-zRH" secondAttribute="centerY" id="NLC-rp-XwI"/>
+                    <constraint firstItem="6rN-73-zRH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="S86-cY-prr"/>
+                    <constraint firstItem="4jg-sl-fdx" firstAttribute="centerY" secondItem="vXw-IW-2Lh" secondAttribute="centerY" id="Ur0-R6-wg1"/>
+                    <constraint firstItem="mmk-Bn-pSB" firstAttribute="leading" secondItem="ZHu-k3-57u" secondAttribute="trailing" constant="10" id="aPx-bY-oDO"/>
+                    <constraint firstAttribute="trailing" secondItem="oQ8-jc-AM5" secondAttribute="trailing" constant="16" id="aT9-vK-zrt"/>
+                    <constraint firstAttribute="bottom" secondItem="oQ8-jc-AM5" secondAttribute="bottom" constant="16" id="aUC-Ri-mp5"/>
+                    <constraint firstItem="oQ8-jc-AM5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="b3b-VE-lQA"/>
+                    <constraint firstItem="vXw-IW-2Lh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="bBL-x5-slf"/>
+                    <constraint firstItem="4jg-sl-fdx" firstAttribute="leading" secondItem="vXw-IW-2Lh" secondAttribute="trailing" constant="10" id="bPt-fA-91i"/>
+                    <constraint firstItem="KKH-Uq-smu" firstAttribute="leading" secondItem="6rN-73-zRH" secondAttribute="trailing" constant="12" id="kyr-Dv-VmD"/>
+                    <constraint firstItem="ZHu-k3-57u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="t1T-YG-0V7"/>
+                    <constraint firstItem="ZHu-k3-57u" firstAttribute="top" secondItem="vXw-IW-2Lh" secondAttribute="bottom" constant="12" id="tt7-Jp-9dr"/>
+                    <constraint firstAttribute="trailing" secondItem="1fM-yo-ok7" secondAttribute="trailing" constant="17" id="u9r-HX-rmU"/>
+                    <constraint firstItem="mmk-Bn-pSB" firstAttribute="centerY" secondItem="ZHu-k3-57u" secondAttribute="centerY" id="vS8-5f-Vx6"/>
+                    <constraint firstItem="6rN-73-zRH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="vSa-6w-GB4"/>
+                    <constraint firstItem="oQ8-jc-AM5" firstAttribute="top" secondItem="mmk-Bn-pSB" secondAttribute="bottom" constant="21" id="ymX-Pc-4Wr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="lblDesc" destination="JVG-Io-g2q" id="nfI-y5-O0S"/>
+                <outlet property="lblLocation" destination="KKH-Uq-smu" id="i5A-qI-ePn"/>
+                <outlet property="lblMoney" destination="mmk-Bn-pSB" id="XUR-vN-m31"/>
+                <outlet property="lblPhone" destination="4jg-sl-fdx" id="A1Z-Po-Cf5"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="81.026785714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_dollar" width="13" height="13"/>
+        <image name="ic_goto" width="38" height="38"/>
+        <image name="ic_placeholder_black" width="13" height="14"/>
+        <image name="ic_quotes_left" width="23" height="23"/>
+        <image name="ic_quotes_right" width="23" height="23"/>
+        <image name="ic_telephone" width="13" height="13"/>
+    </resources>
+</document>

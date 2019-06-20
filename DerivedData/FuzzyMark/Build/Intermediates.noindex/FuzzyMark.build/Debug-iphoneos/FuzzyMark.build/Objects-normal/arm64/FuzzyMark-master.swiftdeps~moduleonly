@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
+options: "374d359e3b068650e9460ef81f69bc08"
+build_time: [1560983827, 307844000]
+inputs:
+  "/Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/Common/CustomeView/TJTextField.swift": [1559294922, 757945227]
+  "/Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/Common/CustomeView/CustomView.swift": [1558877603, 289967875]
+  "/Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/Common/CustomeView/CustomButton.swift": [1560784228, 461760522]

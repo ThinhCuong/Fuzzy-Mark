@@ -43,15 +43,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
-      </ContextState>
-      <ContextState
          contextName = "-[FMCameraShowImageVC collectionView:numberOfItemsInSection:]:FMCameraShowImageVC.m">
          <PersistentStrings>
             <PersistentString
                value = "self.listImage.count">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__50-[FMRegisterPromotionsModel getListHistoryCapture]_block_invoke:FMRegisterPromotionsModel.m">
       </ContextState>
       <ContextState
          contextName = "__64-[FMItemHistoryBillModel getListHistoryCaptureWithSuccessBlock:]_block_invoke:FMItemHistoryBillModel.m">
@@ -95,6 +95,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__55-[MVPromotionDetailModel getVouchersInfoWithIDVoucher:]_block_invoke:MVPromotionDetailModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "success[@&quot;data&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__38-[FMNotifiModel getUserNotifications:]_block_invoke:FMNotifiModel.m">
          <PersistentStrings>
             <PersistentString
@@ -107,6 +115,20 @@
       </ContextState>
       <ContextState
          contextName = "__47-[FMItemHistoryBillModel getUserNotifications:]_block_invoke:FMItemHistoryBillModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[MVPromotionDetailVC getDataSuccess:]:MVPromotionDetailVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_data.voucher.percent_discount">
+            </PersistentString>
+            <PersistentString
+               value = "_data.voucher.image">
+            </PersistentString>
+            <PersistentString
+               value = "_data.voucher.logo">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

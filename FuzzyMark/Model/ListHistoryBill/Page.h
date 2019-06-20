@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol Page;
 @interface Page : JSONModel
 
 @property (nonatomic) NSInteger idPage;

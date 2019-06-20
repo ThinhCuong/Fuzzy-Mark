@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol Voucher;
 @interface Voucher : JSONModel
 
 @property (nonatomic) NSInteger idVoucher;
@@ -20,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *descriptionVoucher;
 @property (nonatomic) NSInteger percent_discount;
 @property (nonatomic) Page *page;
+@property (nonatomic) NSInteger count_down;
 
 @end
 

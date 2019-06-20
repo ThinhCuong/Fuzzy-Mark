@@ -11,6 +11,7 @@
 #import "FZHomeHeaderView.h"
 #import "BaseCallApi.h"
 #import "FZHomeJsonModel.h"
+#import "FMPromotionDetailVC.h"
 
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -80,6 +81,12 @@
     return 0;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)testApi {
     
     NSDictionary *params = @{
@@ -89,6 +96,7 @@
     [SVProgressHUD show];
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
         [SVProgressHUD dismiss];
+        [SVProgressHUD setBackgroundLayerColor:UIColor.redColor];
         if (responseData) {
             FZHomeJsonModel *homeData = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
             [self.dataModel bindData:homeData];
