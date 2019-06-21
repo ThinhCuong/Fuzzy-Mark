@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>55F0F489-BDBC-4B55-8E0C-5AAD1727C0E7</key>
+		<key>48D4E066-0D2A-4BAA-9F38-A0A9C0798C73</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>55F0F489-BDBC-4B55-8E0C-5AAD1727C0E7.xcactivitylog</string>
+			<string>48D4E066-0D2A-4BAA-9F38-A0A9C0798C73.xcactivitylog</string>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
@@ -30,13 +30,109 @@
 			<key>signature</key>
 			<string>Debug FuzzyMark</string>
 			<key>timeStartedRecording</key>
-			<real>582676841.12561095</real>
+			<real>582744278.82837498</real>
 			<key>timeStoppedRecording</key>
-			<real>582676912.88341105</real>
+			<real>582744497.66870105</real>
 			<key>title</key>
 			<string>Debug FuzzyMark</string>
 			<key>uniqueIdentifier</key>
-			<string>55F0F489-BDBC-4B55-8E0C-5AAD1727C0E7</string>
+			<string>48D4E066-0D2A-4BAA-9F38-A0A9C0798C73</string>
+		</dict>
+		<key>7854142D-1343-4E81-BD48-073F0BCCD024</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7854142D-1343-4E81-BD48-073F0BCCD024.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FuzzyMark project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FuzzyMark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FuzzyMark</string>
+			<key>timeStartedRecording</key>
+			<real>582744109.97902</real>
+			<key>timeStoppedRecording</key>
+			<real>582744110.88011897</real>
+			<key>title</key>
+			<string>Debug FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>7854142D-1343-4E81-BD48-073F0BCCD024</string>
+		</dict>
+		<key>8FC3F9D1-2535-4DF5-BB67-624B5092962B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>8FC3F9D1-2535-4DF5-BB67-624B5092962B.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FuzzyMark project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FuzzyMark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FuzzyMark</string>
+			<key>timeStartedRecording</key>
+			<real>582742545.71660101</real>
+			<key>timeStoppedRecording</key>
+			<real>582742828.88225806</real>
+			<key>title</key>
+			<string>Debug FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>8FC3F9D1-2535-4DF5-BB67-624B5092962B</string>
+		</dict>
+		<key>A9FE7461-024C-4322-8409-1836CC293084</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>A9FE7461-024C-4322-8409-1836CC293084.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FuzzyMark project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FuzzyMark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Debug FuzzyMark</string>
+			<key>timeStartedRecording</key>
+			<real>582744614.78622997</real>
+			<key>timeStoppedRecording</key>
+			<real>582744895.82329297</real>
+			<key>title</key>
+			<string>Debug FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>A9FE7461-024C-4322-8409-1836CC293084</string>
 		</dict>
 	</dict>
 </dict>

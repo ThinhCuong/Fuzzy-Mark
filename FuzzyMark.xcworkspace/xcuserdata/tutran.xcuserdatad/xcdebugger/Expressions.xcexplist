@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[FMTableViewCell initWithCoder:]:FMTableViewCell.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.imgBanner">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "-[FMItemHistoryBillVC viewDidLoad]:FMItemHistoryBillVC.m">
          <PersistentStrings>
             <PersistentString
@@ -27,6 +19,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "__47-[FMItemHistoryBillModel getUserNotifications:]_block_invoke:FMItemHistoryBillModel.m">
+      </ContextState>
+      <ContextState
          contextName = "-[FMItemHistoryBillVC init]:FMItemHistoryBillVC.m">
          <PersistentStrings>
             <PersistentString
@@ -35,10 +30,43 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FMUserInforViewController didSelectBlockCell:]:FMUserInforViewController.m">
+         contextName = "-[FMItemHistoryBillVC tableView:cellForRowAtIndexPath:]:FMItemHistoryBillVC.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FMTableViewCell initWithCoder:]:FMTableViewCell.m">
          <PersistentStrings>
             <PersistentString
-               value = "cell.typeBlock">
+               value = "self.imgBanner">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMNotifiViewController tableView:didSelectRowAtIndexPath:]:FMNotifiViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_listData[indexPath.section].is_read">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__38-[FMNotifiModel getUserNotifications:]_block_invoke:FMNotifiModel.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.listItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[MVPromotionDetailVC getDataSuccess:]:MVPromotionDetailVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "_data.voucher.logo">
+            </PersistentString>
+            <PersistentString
+               value = "_data.voucher.image">
+            </PersistentString>
+            <PersistentString
+               value = "_data.voucher.percent_discount">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -47,6 +75,17 @@
          <PersistentStrings>
             <PersistentString
                value = "self.listImage.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMTableViewCell binData:]:FMTableViewCell.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+            <PersistentString
+               value = "self.lblName.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -62,35 +101,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FMNotifiViewController tableView:didSelectRowAtIndexPath:]:FMNotifiViewController.m">
+         contextName = "__35-[FMNotifiModel putUserNotifiRead:]_block_invoke:FMNotifiModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FMListItemLocationVC viewDidAppear:]:FMListItemLocationVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_listData[indexPath.section].is_read">
+               value = "self.view.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FMItemHistoryBillVC tableView:cellForRowAtIndexPath:]:FMItemHistoryBillVC.m">
+         contextName = "__55-[FMPromotionDetailModel getVouchersInfoWithIDVoucher:]_block_invoke:FMPromotionDetailModel.m">
       </ContextState>
       <ContextState
          contextName = "-[FMCameraViewController setBlurView]:FMCameraViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "self.middleView.bounds">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "__35-[FMNotifiModel putUserNotifiRead:]_block_invoke:FMNotifiModel.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[FMTableViewCell binData:]:FMTableViewCell.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "">
-            </PersistentString>
-            <PersistentString
-               value = "self.lblName.text">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -103,32 +131,15 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "__38-[FMNotifiModel getUserNotifications:]_block_invoke:FMNotifiModel.m">
+         contextName = "-[FMUserInforViewController didSelectBlockCell:]:FMUserInforViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "self.listItem">
+               value = "cell.typeBlock">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[FMUserInforViewController didSelectButtonHistory]:FMUserInforViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "__47-[FMItemHistoryBillModel getUserNotifications:]_block_invoke:FMItemHistoryBillModel.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[MVPromotionDetailVC getDataSuccess:]:MVPromotionDetailVC.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "_data.voucher.percent_discount">
-            </PersistentString>
-            <PersistentString
-               value = "_data.voucher.image">
-            </PersistentString>
-            <PersistentString
-               value = "_data.voucher.logo">
-            </PersistentString>
-         </PersistentStrings>
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -9,10 +9,6 @@
 #import "FMListItemIntroduceVC.h"
 #import "FMPromotionIntroCell.h"
 
-@interface FMListItemIntroduceVC ()
-@property (weak, nonatomic) IBOutlet UITableView *contentTableVIew;
-@end
-
 @implementation FMListItemIntroduceVC {
     VoucherInfoJsonModel *_jsonModel;
     NSArray <Page *> *_listData;
@@ -30,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.contentTableVIew registerNib:[UINib nibWithNibName:@"FMPromotionIntroCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self.contentTableView registerNib:[UINib nibWithNibName:@"FMPromotionIntroCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
 #pragma mark - UITableViewDelegate
@@ -50,7 +46,7 @@
 
 #pragma mark - UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

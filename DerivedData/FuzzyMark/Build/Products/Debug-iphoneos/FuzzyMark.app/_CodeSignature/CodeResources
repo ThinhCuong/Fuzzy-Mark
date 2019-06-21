@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		46BFOpuspFyFdBlYmUw+DasAwO8=
+		pvq3+u7HXEH5xtTyX1bHVV1qyl4=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -138,27 +138,27 @@
 		</data>
 		<key>FMListItemGiftVC.nib/objects-11.0+.nib</key>
 		<data>
-		6b/f2VS5ZLaroOuPZ0rkGEdkkM4=
+		4mizQzj26ajRIyzwv1KY7lgoruc=
 		</data>
 		<key>FMListItemGiftVC.nib/runtime.nib</key>
 		<data>
-		osENTPsXm8OZ/aHncP1jihbU3MA=
+		M2d1YTp+Ho0FvlF4AT1Y5S2JiZI=
 		</data>
 		<key>FMListItemIntroduceVC.nib/objects-11.0+.nib</key>
 		<data>
-		Ht5n7Xs3DV2/MGSPCGWwbprOR6U=
+		GvtvypmhShPZz+WBDJgY225gC+E=
 		</data>
 		<key>FMListItemIntroduceVC.nib/runtime.nib</key>
 		<data>
-		s2eDCPJL/3f0kyMG1B2z1IP3Hhc=
+		nS4DYH9hFbqwB0KGyYF1aJGD408=
 		</data>
 		<key>FMListItemLocationVC.nib/objects-11.0+.nib</key>
 		<data>
-		Cgh3B8toYCddWfrPeH9r3ejlJAs=
+		Pa9ooLBvIxGHV3VEZ2DU586Nsfk=
 		</data>
 		<key>FMListItemLocationVC.nib/runtime.nib</key>
 		<data>
-		psYx7ujaB4FMH51VtEzA6Bfszi0=
+		57fq+jwrZo0o82WTZHIfoaWqmEk=
 		</data>
 		<key>FMLocationFavoriteViewController.nib/objects-11.0+.nib</key>
 		<data>
@@ -206,15 +206,15 @@
 		</data>
 		<key>FMPromotionDetailVC.nib/objects-11.0+.nib</key>
 		<data>
-		42mQZZ0WBheh9hMQK8oqUlxP8Hg=
+		vTNqi02ss4cr03UnrTbkQAC54aM=
 		</data>
 		<key>FMPromotionDetailVC.nib/runtime.nib</key>
 		<data>
-		4AGF5tAFJhTAoCWNwgsFAyCR7vM=
+		fyULQ5qWjFVJrO/4m9mvByL66ZE=
 		</data>
 		<key>FMPromotionGiftCell.nib</key>
 		<data>
-		ntDMVSU3eWK3lKgJ5mt7MlGilo4=
+		UCUtavmBUQFfNuS31PMECe2dOQg=
 		</data>
 		<key>FMPromotionIntroCell.nib</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>FMPromotionLocationCell.nib</key>
 		<data>
-		ZBie0GyK5TwXYdTqfXNp8/KeJPQ=
+		EXpvk+5D+uHu9YTGSnG07feC1/Y=
 		</data>
 		<key>FMRegisterPromotionViewController.nib/objects-11.0+.nib</key>
 		<data>
@@ -338,7 +338,7 @@
 		</data>
 		<key>Frameworks/CCBottomRefreshControl.framework/CCBottomRefreshControl</key>
 		<data>
-		LWBbL5oUcWDnTJvcWE/vVkaND4A=
+		LQzuEd6EYaGsh+dGWSLaI8vsjoc=
 		</data>
 		<key>Frameworks/CCBottomRefreshControl.framework/Info.plist</key>
 		<data>
@@ -350,7 +350,7 @@
 		</data>
 		<key>Frameworks/CHIPageControl.framework/CHIPageControl</key>
 		<data>
-		KaEf9uHGjHo8QXN4/9CSy5fy3eA=
+		15uoXM/VXbl0juP7lrH7yxOkea0=
 		</data>
 		<key>Frameworks/CHIPageControl.framework/Info.plist</key>
 		<data>
@@ -362,7 +362,7 @@
 		</data>
 		<key>Frameworks/HMSegmentedControl.framework/HMSegmentedControl</key>
 		<data>
-		0EWimUMmuTbHaK5BidgfAZZlnU4=
+		gaDNHgezaRNm8J6E3qtq9h/yCbw=
 		</data>
 		<key>Frameworks/HMSegmentedControl.framework/Info.plist</key>
 		<data>
@@ -378,7 +378,7 @@
 		</data>
 		<key>Frameworks/JSONModel.framework/JSONModel</key>
 		<data>
-		D/iQnOQogU5jfUGSehNENmh5rK8=
+		guxflpt4a26p2V+PCYrW/xZR56E=
 		</data>
 		<key>Frameworks/JSONModel.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -390,7 +390,7 @@
 		</data>
 		<key>Frameworks/SDWebImage.framework/SDWebImage</key>
 		<data>
-		OcrHd76bI/kjr2nMTWSUlfP7zkM=
+		oTxo+iiuF/E5yls/lReijUDuhvs=
 		</data>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -402,7 +402,7 @@
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD</key>
 		<data>
-		n1y0DCkCoXP5GCLgKRhDSsJw5Uo=
+		eoXSQ3zj+AjCM1R1PGL4J7emBqQ=
 		</data>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
 		<data>
@@ -462,7 +462,7 @@
 		</data>
 		<key>Frameworks/TNCheckBoxGroup.framework/TNCheckBoxGroup</key>
 		<data>
-		72TBeEyVPVP733yke/i4evgAUYU=
+		WF6zTQPpppCfvPkghzdDATiWEos=
 		</data>
 		<key>Frameworks/TNCheckBoxGroup.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -474,7 +474,7 @@
 		</data>
 		<key>Frameworks/Toast.framework/Toast</key>
 		<data>
-		lIFLyvFEYp/EWTyz1AMqyg4ImYE=
+		IIwRVKB/mQZ5HOqFrFzEKWBb+9Y=
 		</data>
 		<key>Frameworks/Toast.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -659,11 +659,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			46BFOpuspFyFdBlYmUw+DasAwO8=
+			pvq3+u7HXEH5xtTyX1bHVV1qyl4=
 			</data>
 			<key>hash2</key>
 			<data>
-			egYkTYX8AMgS1r+Y1Xcms9MZ2BJjoIfSR1BsDxfZY/8=
+			wFBhpTmBPnsmwuTGDSjQsBOgI217yCPidzI3fRGZIfI=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -1022,66 +1022,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6b/f2VS5ZLaroOuPZ0rkGEdkkM4=
+			4mizQzj26ajRIyzwv1KY7lgoruc=
 			</data>
 			<key>hash2</key>
 			<data>
-			ibH8iFpWUr9SBlbhIexsBa7h+poGuXAVdWC6Wa+yh3A=
+			wC0lgSfZEbYsp7lIYBuMWotoBFa+mLhCfPYGNtOYpJg=
 			</data>
 		</dict>
 		<key>FMListItemGiftVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			osENTPsXm8OZ/aHncP1jihbU3MA=
+			M2d1YTp+Ho0FvlF4AT1Y5S2JiZI=
 			</data>
 			<key>hash2</key>
 			<data>
-			+tTHEoSTM2/uHe4lxPs8F/LaBmJft5QvHxiZlrpOP44=
+			7LVbLSMynLYPcQFzvef48M/Ft2OzQxqgbYN3ZgQb+8Y=
 			</data>
 		</dict>
 		<key>FMListItemIntroduceVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ht5n7Xs3DV2/MGSPCGWwbprOR6U=
+			GvtvypmhShPZz+WBDJgY225gC+E=
 			</data>
 			<key>hash2</key>
 			<data>
-			CkEsrAqfA3PpcPKBRUY0+ncd3HSYLBizsPF9D7ytxRU=
+			D1l6flajSWrqe9ZqsMosUeoMJCESQJNQtCcdXx+4qbM=
 			</data>
 		</dict>
 		<key>FMListItemIntroduceVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			s2eDCPJL/3f0kyMG1B2z1IP3Hhc=
+			nS4DYH9hFbqwB0KGyYF1aJGD408=
 			</data>
 			<key>hash2</key>
 			<data>
-			QjnaLbSPhYL7YzZaXG+v63fsIdJicPxdlgYqWeAcDFs=
+			ufKXaOJTOiwBlTposOPz0jLvreUa3aJFHc8uMMZevIE=
 			</data>
 		</dict>
 		<key>FMListItemLocationVC.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Cgh3B8toYCddWfrPeH9r3ejlJAs=
+			Pa9ooLBvIxGHV3VEZ2DU586Nsfk=
 			</data>
 			<key>hash2</key>
 			<data>
-			g+WybYBaFF7oA2Ugmxkg/K3yB2hAWJxXFyjCJ8SdAy0=
+			uMTU3WbV4E7HipM7pYFMmovtQQ4r+3HjMMVA3SOG5kI=
 			</data>
 		</dict>
 		<key>FMListItemLocationVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			psYx7ujaB4FMH51VtEzA6Bfszi0=
+			57fq+jwrZo0o82WTZHIfoaWqmEk=
 			</data>
 			<key>hash2</key>
 			<data>
-			EQRKcjMAe2vgv73b32rfZW4PTGK683PxWGFRKqXF3rU=
+			4aoBcfjtSoo1FhTwc0a2gwSM8bGUdmDEiqLau4/yHes=
 			</data>
 		</dict>
 		<key>FMLocationFavoriteViewController.nib/objects-11.0+.nib</key>
@@ -1209,33 +1209,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			42mQZZ0WBheh9hMQK8oqUlxP8Hg=
+			vTNqi02ss4cr03UnrTbkQAC54aM=
 			</data>
 			<key>hash2</key>
 			<data>
-			mOv0KWli8T4V6/FERF/iRBkkaMEDD8GlIn6x/kFJNHk=
+			2+MejYG69HgR7v/2R1Y43ctE5RA9Wlhk0O4iUQT0Ttw=
 			</data>
 		</dict>
 		<key>FMPromotionDetailVC.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4AGF5tAFJhTAoCWNwgsFAyCR7vM=
+			fyULQ5qWjFVJrO/4m9mvByL66ZE=
 			</data>
 			<key>hash2</key>
 			<data>
-			eFeTzWIucfrjAphM7qLmnjh9M7MWf97f2RiEKPDBlF0=
+			45e4EDV8PjeqgyDvAnlM2opKDLDQpIK/hi3NP/koIG4=
 			</data>
 		</dict>
 		<key>FMPromotionGiftCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ntDMVSU3eWK3lKgJ5mt7MlGilo4=
+			UCUtavmBUQFfNuS31PMECe2dOQg=
 			</data>
 			<key>hash2</key>
 			<data>
-			n8SKKvVSnzmTELZmlwo5Lj2YEQ5M7qCpXZkj1W31cr0=
+			nkejmSD4qVFg6Kr52I8p6YFH/vM6lCR7UGmfi9lW53M=
 			</data>
 		</dict>
 		<key>FMPromotionIntroCell.nib</key>
@@ -1253,11 +1253,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZBie0GyK5TwXYdTqfXNp8/KeJPQ=
+			EXpvk+5D+uHu9YTGSnG07feC1/Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			XGYM4axC2Ql5LyQ4aWKgdbfUtf8cro7XjNNywtPD35U=
+			pSQWodCvkUVAEIhIPVCaeP/XiIaFhUBpSP0Qo+OX9yg=
 			</data>
 		</dict>
 		<key>FMRegisterPromotionViewController.nib/objects-11.0+.nib</key>
@@ -1572,11 +1572,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			LWBbL5oUcWDnTJvcWE/vVkaND4A=
+			LQzuEd6EYaGsh+dGWSLaI8vsjoc=
 			</data>
 			<key>hash2</key>
 			<data>
-			DFiRENGsTqb8ifDjCCqRN79/L8y8rcFbDoLG4rtjbBQ=
+			DvPM/0NaekcQh7AzraqhNIo9ep/7RykmwHfp8LPXOF4=
 			</data>
 		</dict>
 		<key>Frameworks/CCBottomRefreshControl.framework/Info.plist</key>
@@ -1605,11 +1605,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KaEf9uHGjHo8QXN4/9CSy5fy3eA=
+			15uoXM/VXbl0juP7lrH7yxOkea0=
 			</data>
 			<key>hash2</key>
 			<data>
-			IUGpwSmcbtxKjPktbG9U6srEaSITqfzD6gapP0kCLmA=
+			I45HO97MWfTSHMSjSfYPZvszzRJ79qkOTeVs6qtlih4=
 			</data>
 		</dict>
 		<key>Frameworks/CHIPageControl.framework/Info.plist</key>
@@ -1638,11 +1638,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0EWimUMmuTbHaK5BidgfAZZlnU4=
+			gaDNHgezaRNm8J6E3qtq9h/yCbw=
 			</data>
 			<key>hash2</key>
 			<data>
-			qlg3rdaTg8yXRAamD91vamHwh7av3SVVscqfAcYfFTw=
+			8e8oH+YUW5Fhins8LoemhaBr2sTZ6fCqzKudZcT7vDY=
 			</data>
 		</dict>
 		<key>Frameworks/HMSegmentedControl.framework/Info.plist</key>
@@ -1682,11 +1682,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			D/iQnOQogU5jfUGSehNENmh5rK8=
+			guxflpt4a26p2V+PCYrW/xZR56E=
 			</data>
 			<key>hash2</key>
 			<data>
-			7XtLfKhwj5eRgvrbHDvilhF5J+0180a9W6icXDMk41Y=
+			Ur3r+uTu27nt11p1JWA8qZb4Z64X3bqYxa4BbUZUCaE=
 			</data>
 		</dict>
 		<key>Frameworks/JSONModel.framework/_CodeSignature/CodeResources</key>
@@ -1715,11 +1715,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OcrHd76bI/kjr2nMTWSUlfP7zkM=
+			oTxo+iiuF/E5yls/lReijUDuhvs=
 			</data>
 			<key>hash2</key>
 			<data>
-			Wo8aHPf+vMrGlxaoL1QDoDuO22+MtW/9NdIcA4IJijM=
+			IRPT7gz3A70wBPMIFlbscll1jVon3g95oJk5hQ9onKE=
 			</data>
 		</dict>
 		<key>Frameworks/SDWebImage.framework/_CodeSignature/CodeResources</key>
@@ -1748,11 +1748,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			n1y0DCkCoXP5GCLgKRhDSsJw5Uo=
+			eoXSQ3zj+AjCM1R1PGL4J7emBqQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			LsKZOaLpFGgXalaoA8OHUGBbGOMpqzRB3XBfsZq7mLs=
+			wTV3Cb8Yi9H0OPxWKY/wYMGxI0cXpijekiQMjo9BZ18=
 			</data>
 		</dict>
 		<key>Frameworks/SVProgressHUD.framework/SVProgressHUD.bundle/angle-mask.png</key>
@@ -1913,11 +1913,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			72TBeEyVPVP733yke/i4evgAUYU=
+			WF6zTQPpppCfvPkghzdDATiWEos=
 			</data>
 			<key>hash2</key>
 			<data>
-			kmjPF7GQRxjD3R4xtmMXWP5uTwP6HJhIwseAArQqDF0=
+			+Iyb4J8foUy5GJYM/tku5gIUqYq6twp3aQPj9XL7zW8=
 			</data>
 		</dict>
 		<key>Frameworks/TNCheckBoxGroup.framework/_CodeSignature/CodeResources</key>
@@ -1946,11 +1946,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			lIFLyvFEYp/EWTyz1AMqyg4ImYE=
+			IIwRVKB/mQZ5HOqFrFzEKWBb+9Y=
 			</data>
 			<key>hash2</key>
 			<data>
-			bIjJst9EqqFewPtUzCOjJ4Q+FeUZ7QvsZ3dR1k2YrjE=
+			kq+GbEBHAZmNtmhSdap7xKrYO4f0X9AY9W+9od+aTZY=
 			</data>
 		</dict>
 		<key>Frameworks/Toast.framework/_CodeSignature/CodeResources</key>

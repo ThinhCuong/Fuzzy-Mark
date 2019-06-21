@@ -9,13 +9,9 @@
 #import "FMListItemGiftVC.h"
 #import "FMPromotionGiftCell.h"
 
-@interface FMListItemGiftVC ()
-@property (weak, nonatomic) IBOutlet UITableView *contentTableVIew;
-@end
-
 @implementation FMListItemGiftVC {
-VoucherInfoJsonModel *_jsonModel;
-NSArray <Voucher *> *_listData;
+    VoucherInfoJsonModel *_jsonModel;
+    NSArray <Voucher *> *_listData;
 }
 
 - (instancetype)initWithVoucherDataJson:(VoucherInfoJsonModel *) jsonModel
@@ -23,14 +19,14 @@ NSArray <Voucher *> *_listData;
     self = [super init];
     if (self) {
         _jsonModel = jsonModel;
-        _listData = jsonModel.accepted_page;
+        _listData = jsonModel.related_vouchers;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.contentTableVIew registerNib:[UINib nibWithNibName:@"FMPromotionGiftCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    [self.contentTableView registerNib:[UINib nibWithNibName:@"FMPromotionGiftCell" bundle:nil] forCellReuseIdentifier:@"cell"];
 }
 
 #pragma mark - UITableViewDelegate
@@ -50,7 +46,7 @@ NSArray <Voucher *> *_listData;
 
 #pragma mark - UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

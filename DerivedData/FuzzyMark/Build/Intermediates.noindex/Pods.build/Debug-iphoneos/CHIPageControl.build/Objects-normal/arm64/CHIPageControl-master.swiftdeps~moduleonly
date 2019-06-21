@@ -1,6 +1,6 @@
 version: "Apple Swift version 5.0 (swiftlang-1001.0.69.5 clang-1001.0.46.3)"
 options: "079f8a506390a03aff7409656fd18cb9"
-build_time: [1561037993, 445481000]
+build_time: [1561050685, 658367000]
 inputs:
   "/Users/tutran/Documents/Fuzzy-Mark/Pods/CHIPageControl/CHIPageControl/Core/CHIBasePageControl.swift": [1560784207, 821685393]
   "/Users/tutran/Documents/Fuzzy-Mark/Pods/CHIPageControl/CHIPageControl/Core/CHILayer.swift": [1560784207, 822436080]

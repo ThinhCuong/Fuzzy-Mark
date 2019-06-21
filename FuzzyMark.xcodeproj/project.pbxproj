@@ -71,6 +71,7 @@
 		4F50F4082276EDBD00DF7173 /* Muli.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FD2276EDBC00DF7173 /* Muli.ttf */; };
 		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
 		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
+		4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AD98F22BBF5BB007537A4 /* FMBaseListItemVC.m */; };
 		4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */; };
 		4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */; };
 		4F6D65C0228FC9520092CA53 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65BE228FC9520092CA53 /* DatePickerViewController.m */; };
@@ -321,6 +322,8 @@
 		4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-LightItalic.ttf"; sourceTree = "<group>"; };
 		4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sharefonts.net.txt; sourceTree = "<group>"; };
 		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
+		4F5AD98E22BBF5BA007537A4 /* FMBaseListItemVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseListItemVC.h; sourceTree = "<group>"; };
+		4F5AD98F22BBF5BB007537A4 /* FMBaseListItemVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseListItemVC.m; sourceTree = "<group>"; };
 		4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
 		4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChangeUserInfor.xcassets; sourceTree = "<group>"; };
 		4F6D65BD228FC9520092CA53 /* DatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
@@ -816,6 +819,8 @@
 				4F25D6E722BAEF3C00C27190 /* FMListItemGiftVC.h */,
 				4F25D6E822BAEF3C00C27190 /* FMListItemGiftVC.m */,
 				4F25D6E922BAEF3C00C27190 /* FMListItemGiftVC.xib */,
+				4F5AD98E22BBF5BA007537A4 /* FMBaseListItemVC.h */,
+				4F5AD98F22BBF5BB007537A4 /* FMBaseListItemVC.m */,
 			);
 			path = ItemTableView;
 			sourceTree = "<group>";
@@ -1843,6 +1848,7 @@
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
+				4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */,
 				4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */,
 				4F25D6E522BAE64800C27190 /* FMListItemIntroduceVC.m in Sources */,
 				4FF9C3D52291A2E300D3AD81 /* FMRegisterPromotionModel.m in Sources */,

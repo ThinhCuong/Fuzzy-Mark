@@ -57,13 +57,23 @@
                             <action selector="didSelectGoto:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wgE-ND-UVu"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncU-9f-pcy">
+                        <rect key="frame" x="16" y="93" width="328" height="0.5"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="Xov-fs-Uk0"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="ncU-9f-pcy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="0f1-hQ-aLm"/>
                     <constraint firstAttribute="bottom" secondItem="ptP-kB-vCr" secondAttribute="bottom" constant="15" id="5bA-pR-ELs"/>
                     <constraint firstItem="ptP-kB-vCr" firstAttribute="top" secondItem="2ut-RX-6x5" secondAttribute="bottom" constant="9" id="6nn-BN-dbM"/>
                     <constraint firstItem="2ut-RX-6x5" firstAttribute="leading" secondItem="GcK-Gx-UE4" secondAttribute="trailing" constant="12" id="JyV-38-uZ9"/>
+                    <constraint firstAttribute="bottom" secondItem="ncU-9f-pcy" secondAttribute="bottom" id="O3I-03-YJZ"/>
                     <constraint firstItem="eMd-av-AY6" firstAttribute="leading" secondItem="2ut-RX-6x5" secondAttribute="trailing" constant="26" id="Qyb-dU-6Nk"/>
                     <constraint firstItem="iNf-Fu-mUl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="U2V-Tb-jao"/>
+                    <constraint firstAttribute="trailing" secondItem="ncU-9f-pcy" secondAttribute="trailing" constant="16" id="Unc-R2-SKY"/>
                     <constraint firstItem="ptP-kB-vCr" firstAttribute="leading" secondItem="iNf-Fu-mUl" secondAttribute="trailing" constant="10" id="WSw-Ly-Pnj"/>
                     <constraint firstItem="ptP-kB-vCr" firstAttribute="centerY" secondItem="iNf-Fu-mUl" secondAttribute="centerY" id="grV-jF-sX6"/>
                     <constraint firstAttribute="trailing" secondItem="eMd-av-AY6" secondAttribute="trailing" constant="17" id="hKW-8B-Cz1"/>

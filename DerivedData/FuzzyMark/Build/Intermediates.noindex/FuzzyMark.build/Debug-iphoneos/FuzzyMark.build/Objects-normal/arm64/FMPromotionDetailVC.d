@@ -89,5 +89,6 @@ dependencies: \
   /Users/tutran/Documents/Fuzzy-Mark/DerivedData/FuzzyMark/Build/Products/Debug-iphoneos/HMSegmentedControl/HMSegmentedControl.framework/Headers/HMSegmentedControl.h \
   /Users/tutran/Documents/Fuzzy-Mark/DerivedData/FuzzyMark/Build/Products/Debug-iphoneos/HMSegmentedControl/HMSegmentedControl.framework/Headers/HMSegmentedControl-umbrella.h \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/ViewController/PromotionDetail/ItemTableView/FMListItemLocationVC.h \
+  /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/ViewController/PromotionDetail/ItemTableView/FMBaseListItemVC.h \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/ViewController/PromotionDetail/ItemTableView/FMListItemIntroduceVC.h \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/ViewController/PromotionDetail/ItemTableView/FMListItemGiftVC.h

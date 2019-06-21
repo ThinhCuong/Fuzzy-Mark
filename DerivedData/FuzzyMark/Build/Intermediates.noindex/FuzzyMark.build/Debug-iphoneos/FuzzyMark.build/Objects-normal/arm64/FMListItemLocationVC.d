@@ -82,4 +82,5 @@ dependencies: \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/Model/ListHistoryBill/Voucher.h \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/Model/ListHistoryBill/Page.h \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/Model/ListHistoryBill/Location.h \
+  /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/ViewController/PromotionDetail/ItemTableView/FMBaseListItemVC.h \
   /Users/tutran/Documents/Fuzzy-Mark/FuzzyMark/ViewController/PromotionDetail/ItemTableView/Cell/FMPromotionLocationCell.h
