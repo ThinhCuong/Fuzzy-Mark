@@ -230,6 +230,38 @@
 			<key>uniqueIdentifier</key>
 			<string>3AE9E69B-024A-4972-892D-4891D14A4816</string>
 		</dict>
+		<key>4401A77B-9EB7-497B-82B1-446E081F046D</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4401A77B-9EB7-497B-82B1-446E081F046D.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FuzzyMark project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FuzzyMark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FuzzyMark</string>
+			<key>timeStartedRecording</key>
+			<real>582885915.841151</real>
+			<key>timeStoppedRecording</key>
+			<real>582885916.11964905</real>
+			<key>title</key>
+			<string>Build FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>4401A77B-9EB7-497B-82B1-446E081F046D</string>
+		</dict>
 		<key>442AAD99-0D09-4478-99A3-528966E250C5</key>
 		<dict>
 			<key>className</key>
@@ -1030,6 +1062,38 @@
 			<key>uniqueIdentifier</key>
 			<string>CBBC7C2F-0C4F-448A-AAB6-2C7B7AD61886</string>
 		</dict>
+		<key>CF953D7B-3F66-43BB-B446-90DE18761F43</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>CF953D7B-3F66-43BB-B446-90DE18761F43.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FuzzyMark project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FuzzyMark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FuzzyMark</string>
+			<key>timeStartedRecording</key>
+			<real>582885888.28396797</real>
+			<key>timeStoppedRecording</key>
+			<real>582885888.91456103</real>
+			<key>title</key>
+			<string>Build FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>CF953D7B-3F66-43BB-B446-90DE18761F43</string>
+		</dict>
 		<key>D7F72D64-C12D-4DBE-8ABC-9415F1533001</key>
 		<dict>
 			<key>className</key>
@@ -1157,6 +1221,38 @@
 			<string>Build FuzzyMark</string>
 			<key>uniqueIdentifier</key>
 			<string>F45B24AB-EBC3-4761-B5BE-4641A45744E7</string>
+		</dict>
+		<key>FA7C39CF-A1C8-4C31-9E43-01E996426DAC</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FA7C39CF-A1C8-4C31-9E43-01E996426DAC.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>FuzzyMark project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>FuzzyMark</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build FuzzyMark</string>
+			<key>timeStartedRecording</key>
+			<real>582885892.499596</real>
+			<key>timeStoppedRecording</key>
+			<real>582885892.77558196</real>
+			<key>title</key>
+			<string>Build FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>FA7C39CF-A1C8-4C31-9E43-01E996426DAC</string>
 		</dict>
 	</dict>
 </dict>
