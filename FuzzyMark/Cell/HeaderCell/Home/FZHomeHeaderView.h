@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol FZHomeHeaderDelegate <NSObject>
+
+- (void)showPickerChooseLocation;
+
+@end
+
 @interface FZHomeHeaderView : UITableViewHeaderFooterView
+
+@property (assign, nonatomic) id<FZHomeHeaderDelegate> delegate;
 
 @end
 

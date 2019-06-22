@@ -15,4 +15,8 @@
     // Initialization code
 }
 
+- (IBAction)didSelectButtonChaneLocation:(id)sender {
+    [self.delegate showPickerChooseLocation];
+}
+
 @end
