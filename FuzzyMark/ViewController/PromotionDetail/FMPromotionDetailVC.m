@@ -72,7 +72,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     _viewDisplayed = YES;
-    _minHeightPageView == 0 ? _minHeightPageView = self.contentPageView.frame.size.height : 0;
+    _minHeightPageView == 0 ? _minHeightPageView = self.contentPageView.frame.size.height + 10 : 0;
     [self setDataListView];
 }
 
