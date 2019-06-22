@@ -23,47 +23,56 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="FMPromotionGiftCell">
             <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="390" height="99.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8l5-h4-8ke">
-                        <rect key="frame" x="16" y="14.5" width="104" height="72"/>
+                        <rect key="frame" x="16" y="13" width="104" height="72"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="72" id="BXB-kd-yt9"/>
                             <constraint firstAttribute="width" secondItem="8l5-h4-8ke" secondAttribute="height" multiplier="104:72" id="Z2g-su-OhK"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tôm hùm chiên bơ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-zW-rb8">
-                        <rect key="frame" x="128" y="14.5" width="246" height="16.5"/>
+                        <rect key="frame" x="128" y="14" width="246" height="16.5"/>
                         <fontDescription key="fontDescription" name="Muli-Black" family="Muli" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Khang, Cầu Giấy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6k-1w-bNw">
-                        <rect key="frame" x="128" y="35" width="246" height="19.5"/>
+                        <rect key="frame" x="128" y="34.5" width="246" height="19.5"/>
                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="13"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoàn tiền %10" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNq-0a-BIW">
-                        <rect key="frame" x="128" y="59.5" width="226" height="15"/>
+                        <rect key="frame" x="128" y="59" width="226" height="15"/>
                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                         <color key="textColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hwa-Ga-ncz">
+                        <rect key="frame" x="16" y="99" width="358" height="0.5"/>
+                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="ZLx-A8-xcQ"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="N6k-1w-bNw" secondAttribute="trailing" constant="16" id="0ph-16-4lS"/>
                     <constraint firstAttribute="trailingMargin" secondItem="UNq-0a-BIW" secondAttribute="trailing" constant="16" id="4CH-lz-tgx"/>
+                    <constraint firstAttribute="bottom" secondItem="hwa-Ga-ncz" secondAttribute="bottom" id="AlQ-MO-Luo"/>
                     <constraint firstItem="8l5-h4-8ke" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="NBG-hS-y7r"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UNq-0a-BIW" secondAttribute="bottom" constant="14" id="VrX-Og-DXT"/>
                     <constraint firstItem="dhc-zW-rb8" firstAttribute="leading" secondItem="8l5-h4-8ke" secondAttribute="trailing" constant="8" id="Xc8-mu-DGg"/>
                     <constraint firstItem="UNq-0a-BIW" firstAttribute="leading" secondItem="8l5-h4-8ke" secondAttribute="trailing" constant="8" id="YKN-7D-IFo"/>
+                    <constraint firstItem="hwa-Ga-ncz" firstAttribute="top" secondItem="8l5-h4-8ke" secondAttribute="bottom" constant="14" id="bif-2I-Ufb"/>
+                    <constraint firstAttribute="trailing" secondItem="hwa-Ga-ncz" secondAttribute="trailing" constant="16" id="gWD-Bw-nm7"/>
                     <constraint firstItem="UNq-0a-BIW" firstAttribute="top" secondItem="N6k-1w-bNw" secondAttribute="bottom" constant="5" id="k91-dq-RXp"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8l5-h4-8ke" secondAttribute="bottom" constant="14" id="kCH-Zn-8Gm"/>
                     <constraint firstItem="N6k-1w-bNw" firstAttribute="leading" secondItem="8l5-h4-8ke" secondAttribute="trailing" constant="8" id="lMp-lG-230"/>
-                    <constraint firstItem="8l5-h4-8ke" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="mWJ-c5-vv8"/>
+                    <constraint firstItem="hwa-Ga-ncz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ocF-GM-A2V"/>
                     <constraint firstItem="N6k-1w-bNw" firstAttribute="top" secondItem="dhc-zW-rb8" secondAttribute="bottom" constant="4" id="qTC-rh-gTT"/>
                     <constraint firstItem="dhc-zW-rb8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="rCG-5X-9xb"/>
+                    <constraint firstItem="hwa-Ga-ncz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UNq-0a-BIW" secondAttribute="bottom" constant="14" id="v1s-yM-8O1"/>
                     <constraint firstAttribute="trailing" secondItem="dhc-zW-rb8" secondAttribute="trailing" constant="16" id="xeW-Pj-FLE"/>
                 </constraints>
             </tableViewCellContentView>

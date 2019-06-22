@@ -19,6 +19,28 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[FMPromotionDetailVC updateContraintHeightPage:]:FMPromotionDetailVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "heightContentTableView">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FMPromotionDetailVC scrollViewDidScroll:]:FMPromotionDetailVC.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "scrollView.bounds.size.height">
+            </PersistentString>
+            <PersistentString
+               value = "scrollView.contentOffset.y">
+            </PersistentString>
+            <PersistentString
+               value = "scrollView.contentSize.height">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "__47-[FMItemHistoryBillModel getUserNotifications:]_block_invoke:FMItemHistoryBillModel.m">
       </ContextState>
       <ContextState
@@ -60,10 +82,10 @@
          contextName = "-[MVPromotionDetailVC getDataSuccess:]:MVPromotionDetailVC.m">
          <PersistentStrings>
             <PersistentString
-               value = "_data.voucher.logo">
+               value = "_data.voucher.image">
             </PersistentString>
             <PersistentString
-               value = "_data.voucher.image">
+               value = "_data.voucher.logo">
             </PersistentString>
             <PersistentString
                value = "_data.voucher.percent_discount">

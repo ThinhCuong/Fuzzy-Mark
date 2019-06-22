@@ -15,13 +15,14 @@
 #import "FMListItemGiftVC.h"
 
 
-@interface FMPromotionDetailVC () <FMPromotionDetailModelDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate>
+@interface FMPromotionDetailVC () <FMPromotionDetailModelDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgBanner;
 @property (weak, nonatomic) IBOutlet UIImageView *imgVoucher;
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
 @property (weak, nonatomic) IBOutlet UILabel *lblTime;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
-@property (weak, nonatomic) IBOutlet UIButton *btnSale;
+@property (weak, nonatomic) IBOutlet UIButton *btnSaleTop;
+@property (weak, nonatomic) IBOutlet UIButton *btnSaleBottom;
 @property (weak, nonatomic) IBOutlet UILabel *lblSale;
 @property (weak, nonatomic) IBOutlet UILabel *lblDesc;
 @property (weak, nonatomic) IBOutlet UIView *contentSegmentView;
@@ -40,6 +41,9 @@
     NSArray <UIViewController *> *_childTableVCs;
     NSInteger _currentIndex;
     NSTimer *_timer;
+    BOOL _callAPISuccess;
+    BOOL _viewDisplayed;
+    CGFloat _minHeightPageView;
 }
 
 #pragma mark - life cycle
@@ -65,6 +69,13 @@
     [self.model getVouchersInfoWithIDVoucher:_idVoucher];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    _viewDisplayed = YES;
+    _minHeightPageView == 0 ? _minHeightPageView = self.contentPageView.frame.size.height : 0;
+    [self setDataListView];
+}
+
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     _segmentedControl.frame = self.contentSegmentView.bounds;
@@ -75,7 +86,23 @@
 - (void)setUI {
     [SVProgressHUD setContainerView:self.view];
     self.isHideNavigationBar = YES;
-    self.btnSale.layer.cornerRadius = self.btnSale.frame.size.height / 2;
+    self.btnSaleTop.layer.cornerRadius = self.btnSaleTop.frame.size.height / 2;
+    self.btnSaleBottom.layer.cornerRadius = self.btnSaleBottom.frame.size.height / 2;
+    [self showButtonSaleTop];
+}
+
+- (void)showButtonSaleTop {
+    [UIView animateWithDuration:0.5f animations:^{
+        self.btnSaleTop.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0);
+        self.btnSaleBottom.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0, 0);
+    }];
+}
+
+- (void)showButtonSaleBottom {
+    [UIView animateWithDuration:0.5f animations:^{
+        self.btnSaleTop.transform = CGAffineTransformScale(CGAffineTransformIdentity, 0, 0);
+        self.btnSaleBottom.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0);
+    }];
 }
 
 - (void)setData {
@@ -93,12 +120,14 @@
 }
 
 - (void)binData {
+    _callAPISuccess = YES;
     // bin Data label+buton
     [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:_voucherInfo.voucher.image]];
     [self.imgVoucher sd_setImageWithURL:[NSURL URLWithString:_voucherInfo.voucher.logo]];
     self.lblName.text = _voucherInfo.voucher.name ?: @"";
     self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", (long)_voucherInfo.voucher.percent_discount] ?: @"";
-    [self.btnSale setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percent_discount, @"%"] forState:UIControlStateNormal];
+    [self.btnSaleTop setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percent_discount, @"%"] forState:UIControlStateNormal];
+    [self.btnSaleBottom setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percent_discount, @"%"] forState:UIControlStateNormal];
     self.lblDesc.text = _voucherInfo.voucher.descriptionVoucher ?: @"";
     self.lblTitle.text = [NSString stringWithFormat:@"Hiện đã có %ld người sử dụng voucher này", (long)_voucherInfo.count_received];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLabelWithCountdownTime) userInfo:nil repeats: YES];
@@ -108,6 +137,10 @@
 }
 
 - (void)setDataListView {
+    if(!_callAPISuccess || !_viewDisplayed) {
+        return;
+    }
+    
     FMListItemLocationVC *firstVC = [[FMListItemLocationVC alloc] initWithVoucherDataJson:_voucherInfo];
     firstVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
@@ -121,11 +154,17 @@
         [self updateContraintHeightPage:heightContentTableView];
     };
     _childTableVCs = [NSArray arrayWithObjects: firstVC, secondVC, thirdVC, nil];
-    [_pageViewController setViewControllers:@[_childTableVCs[0]] direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+    [_pageViewController setViewControllers:@[_childTableVCs[_currentIndex]] direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
+    [_segmentedControl setSelectedSegmentIndex:_currentIndex animated:YES];
 }
 
 - (void)updateContraintHeightPage:(CGFloat) heightContentTableView {
-    self.constraintHeightPageView.constant = heightContentTableView;
+    if (_minHeightPageView > heightContentTableView) {
+        heightContentTableView = _minHeightPageView;
+    }
+    [UIView animateWithDuration:0.3 animations:^{
+       self.constraintHeightPageView.constant = heightContentTableView;
+    }];
 }
 
 - (void)updateLabelWithCountdownTime {
@@ -166,7 +205,6 @@
     _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Địa điểm áp dụng", @"Giới thiệu", @"Thêm quà"]];
     _segmentedControl.segmentWidthStyle = HMSegmentedControlSegmentWidthStyleFixed;
     _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
-    [_segmentedControl setSelectedSegmentIndex:0 animated:YES];
     _segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0], NSFontAttributeName : [UIFont fontWithName:@"Muli-SemiBold" size:14]};
     _segmentedControl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0], NSFontAttributeName : [UIFont fontWithName:@"Muli-SemiBold" size:14]};
     _segmentedControl.selectionIndicatorColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
@@ -260,5 +298,16 @@
     }
 }
 
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if (scrollView.contentOffset.y < 0){
+        [self showButtonSaleTop];
+    }
+    
+    if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
+        [self showButtonSaleBottom];
+    }
+}
 
 @end

@@ -58,32 +58,6 @@
 			<key>uniqueIdentifier</key>
 			<string>0E982B20-50C3-4CCA-806A-B79C31F7AB29</string>
 		</dict>
-		<key>2368C7EE-03CB-459C-AC63-CA4BFDB78DD9</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>2368C7EE-03CB-459C-AC63-CA4BFDB78DD9.xcactivitylog</string>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>signature</key>
-			<string>FuzzyMark-ezuoqinpjrmpfaghiculbmjwlfai</string>
-			<key>timeStartedRecording</key>
-			<real>582744610.86881101</real>
-			<key>timeStoppedRecording</key>
-			<real>582744614.77393603</real>
-			<key>title</key>
-			<string>Build target FuzzyMark</string>
-			<key>uniqueIdentifier</key>
-			<string>2368C7EE-03CB-459C-AC63-CA4BFDB78DD9</string>
-		</dict>
 		<key>23DB63B4-A21C-4F7D-B097-0ACCE3B6BE96</key>
 		<dict>
 			<key>className</key>
@@ -265,6 +239,32 @@
 			<string>Build target Toast</string>
 			<key>uniqueIdentifier</key>
 			<string>A07588A6-F3F2-4871-8B0A-9ADF27E2B8E8</string>
+		</dict>
+		<key>C140A72F-4BC0-4157-8F6F-2B646E9A12D2</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>C140A72F-4BC0-4157-8F6F-2B646E9A12D2.xcactivitylog</string>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>FuzzyMark-ezuoqinpjrmpfaghiculbmjwlfai</string>
+			<key>timeStartedRecording</key>
+			<real>582875642.23852706</real>
+			<key>timeStoppedRecording</key>
+			<real>582875649.55028903</real>
+			<key>title</key>
+			<string>Build target FuzzyMark</string>
+			<key>uniqueIdentifier</key>
+			<string>C140A72F-4BC0-4157-8F6F-2B646E9A12D2</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

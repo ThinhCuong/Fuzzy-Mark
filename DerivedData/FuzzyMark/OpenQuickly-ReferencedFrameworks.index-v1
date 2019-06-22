@@ -19,18 +19,18 @@
 	<string>CoreVideo</string>
 	<string>XCTest</string>
 	<string>WatchKit</string>
-	<string>TNCheckBoxGroup</string>
 	<string>Foundation</string>
 	<string>mach</string>
 	<string>QuartzCore</string>
-	<string>AppKit</string>
 	<string>Security</string>
+	<string>AppKit</string>
+	<string>TNCheckBoxGroup</string>
 	<string>JSONModel</string>
 	<string>WebImage</string>
 	<string>netinet</string>
 	<string>SystemConfiguration</string>
-	<string>CoreGraphics</string>
 	<string>HMSegmentedControl</string>
+	<string>CoreGraphics</string>
 	<string>SVProgressHUD</string>
 	<string>UIKit</string>
 </array>
