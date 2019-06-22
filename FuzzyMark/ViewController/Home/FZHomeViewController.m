@@ -12,9 +12,12 @@
 #import "BaseCallApi.h"
 #import "FZHomeJsonModel.h"
 #import "FMPromotionDetailVC.h"
+#import "FZMenuHomeTableViewCell.h"
+#import "FZItemMenuHomeTableViewCell.h"
+#import "FZVourchersSearchViewController.h"
 
 
-@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
@@ -52,6 +55,7 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (section == 0) {
         FZHomeHeaderView *heardView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"FZHomeHeaderView"];
+        heardView.delegate = self;
         return heardView;
     }
     return [UIView new];
@@ -82,9 +86,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
-    [self.navigationController pushViewController:vc animated:YES];
+    return;
 }
 
 - (void)testApi {
@@ -105,6 +107,40 @@
     } withFailBlock:^(id responseError) {
         [SVProgressHUD dismiss];
     }];
+}
+
+- (void)didSelectChooseItemWithIDVoucher:(NSString *) idVoucher {
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)didSelectSuportList:(SuportList ) indexChoose {
+    switch (indexChoose) {
+        case 0: {
+            FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithNibName:@"FZVourchersSearchViewController" bundle:nil];
+            rewardInfoVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:rewardInfoVC animated:YES];
+            break;
+        }
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)didSelectCategoryList:(CategoryList ) indexChoose {
+    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithNibName:@"FZVourchersSearchViewController" bundle:nil];
+    rewardInfoVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:rewardInfoVC animated:YES];
 }
 
 @end

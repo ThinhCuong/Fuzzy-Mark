@@ -9,6 +9,7 @@
 #import "FZVourchersSearchViewController.h"
 #import "FZVourcherSearchTableViewCell.h"
 #import "FZHomeModel.h"
+#import "FMPromotionDetailVC.h"
 
 @interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray <FZGroupInfoJsonModel> *listVourcher;
@@ -39,6 +40,12 @@
     FZVourcherSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZVourcherSearchTableViewCell"];
     [cell bindData:self.listVourcher[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)callVouchersSearch {

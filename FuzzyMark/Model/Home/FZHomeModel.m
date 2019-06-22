@@ -37,12 +37,6 @@
     _homeData = homeData;
 }
 
-- (void)goVourchersSearchScreen {
-    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithNibName:@"FZVourchersSearchViewController" bundle:nil];
-    rewardInfoVC.hidesBottomBarWhenPushed = YES;
-    [self.homeViewController.navigationController pushViewController:rewardInfoVC animated:YES];
-}
-
 - (NSInteger )numberOfSectionsInTableView {
     return 2;
 }
@@ -61,11 +55,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FZMenuHomeTableViewCell *menuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZMenuHomeTableViewCell"];
+        menuHomeCell.delegate = self.homeViewController;
         [menuHomeCell bindData:_homeData];
-        [menuHomeCell.restaurentButton addTarget:self action:@selector(goVourchersSearchScreen) forControlEvents:UIControlEventTouchUpInside];
         return menuHomeCell;
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];
+        itemMenuHomeCell.delegate = self.homeViewController;
         [itemMenuHomeCell bindData:_homeData.groups[indexPath.row].vouchers_vertical listVoucherHorizontal:_homeData.groups[indexPath.row].vouchers_horizontal];
         return itemMenuHomeCell;
     }

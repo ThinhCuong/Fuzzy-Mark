@@ -9,12 +9,33 @@
 #import <UIKit/UIKit.h>
 #import "FZHomeJsonModel.h"
 
+typedef NS_ENUM(NSUInteger, SuportList) {
+    Category = 0,
+    Sale,
+    Hotline,
+    SNews
+};
+
+typedef NS_ENUM(NSUInteger, CategoryList) {
+    Restaurant = 0,
+    Hotel,
+    Travel,
+    Store,
+    News,
+    Map
+};
+
 NS_ASSUME_NONNULL_BEGIN
+@protocol FZMenuHomeTableViewDelegate <NSObject>
+
+- (void)didSelectSuportList:(SuportList ) indexChoose;
+- (void)didSelectCategoryList:(CategoryList ) indexChoose;
+
+@end
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UIButton *restaurentButton;
-
+@property (assign, nonatomic) id<FZMenuHomeTableViewDelegate> delegate;
 - (void)bindData:(FZHomeJsonModel *)homeData;
 
 @end

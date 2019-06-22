@@ -11,8 +11,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol FZItemMenuHomeTableViewDelegate <NSObject>
+
+- (void)didSelectChooseItemWithIDVoucher:(NSString *) idVoucher;
+
+@end
+
 @interface FZItemMenuHomeTableViewCell : UITableViewCell
 
+@property (assign, nonatomic) id<FZItemMenuHomeTableViewDelegate> delegate;
 - (void)bindData:(NSArray<FZGroupInfoJsonModel> *)listVoucherVertical listVoucherHorizontal:(NSArray<FZGroupInfoJsonModel> *)listVoucherHorizontal;
 
 @end

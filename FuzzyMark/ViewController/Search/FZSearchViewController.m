@@ -12,6 +12,7 @@
 #import "FZTitleHeaderCollectionReusableView.h"
 #import "FZHeaderSearchTableViewCell.h"
 #import "FZFooterCollectionReusableView.h"
+#import "FMPromotionDetailVC.h"
 
 @interface FZSearchViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
     NSInteger _selectedIndex;
@@ -113,6 +114,12 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize cellSize = CGSizeMake(self.collectionView.bounds.size.width / 5 , 108);
     return cellSize;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{

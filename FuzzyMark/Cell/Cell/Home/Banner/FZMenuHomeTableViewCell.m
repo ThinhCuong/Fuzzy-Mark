@@ -91,4 +91,14 @@
     }
 }
 
+- (IBAction)didSelectChooseListSuport:(UIButton *)sender {
+    [self.delegate didSelectSuportList:sender.tag];
+}
+
+- (IBAction)didSelectChooseCategory:(UIButton *)sender {
+    [self.delegate didSelectCategoryList:sender.tag];
+}
+
+
+
 @end

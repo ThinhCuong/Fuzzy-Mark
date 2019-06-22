@@ -60,6 +60,11 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    [self didSelectChooseItemWithVoucher:@"fix"];
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize cellSize = CGSizeMake((collectionView.bounds.size.width - 32) * 216 / 360, 191);
     return cellSize;
@@ -73,6 +78,15 @@
     FZItemMenuVerticalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuVerticalTableViewCell"];
     [cell bindData:_listVoucherVertical[indexPath.row]];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self didSelectChooseItemWithVoucher:@"fix"];
+}
+
+- (void)didSelectChooseItemWithVoucher:(NSString *) voucherID {
+    [self.delegate didSelectChooseItemWithIDVoucher:voucherID];
 }
 
 @end
