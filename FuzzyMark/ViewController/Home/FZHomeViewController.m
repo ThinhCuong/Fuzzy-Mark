@@ -15,7 +15,7 @@
 #import "FZMenuHomeTableViewCell.h"
 #import "FZItemMenuHomeTableViewCell.h"
 #import "FZVourchersSearchViewController.h"
-
+#import "FZHotlineViewController.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
@@ -143,4 +143,9 @@
     [self.navigationController pushViewController:rewardInfoVC animated:YES];
 }
 
+- (void)clickToHotline {
+    FZHotlineViewController *hotlineViewController = [[FZHotlineViewController alloc] initWithNibName:@"FZHotlineViewController" bundle:nil];
+    hotlineViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:hotlineViewController animated:YES];
+}
 @end

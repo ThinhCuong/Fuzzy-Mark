@@ -99,6 +99,9 @@
     [self.delegate didSelectCategoryList:sender.tag];
 }
 
+- (IBAction)clickToHoline:(UIButton *)sender {
+    [self.delegate clickToHotline];
+}
 
 
 @end

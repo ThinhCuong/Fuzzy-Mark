@@ -136,6 +136,7 @@
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mT-Fe-uWU">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="85"/>
                                                 <connections>
+                                                    <action selector="clickToHoline:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s1X-mx-rx8"/>
                                                     <action selector="didSelectChooseListSuport:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="B0m-2i-quJ"/>
                                                 </connections>
                                             </button>

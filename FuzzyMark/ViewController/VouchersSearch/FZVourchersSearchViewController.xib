@@ -32,7 +32,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMv-Xd-q3C" customClass="CustomView">
                             <rect key="frame" x="32" y="10" width="272" height="40"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cửa hàng gần đây" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T66-Iu-3uo">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Cửa hàng gần đây" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T66-Iu-3uo">
                                     <rect key="frame" x="30" y="10" width="242" height="18"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
@@ -112,8 +112,15 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ZL-1V-1RL">
                                     <rect key="frame" x="240" y="0.0" width="80" height="35"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56h-S1-MJD">
+                                            <rect key="frame" x="0.0" y="3" width="0.5" height="29"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="0.5" id="mj3-XS-2wG"/>
+                                            </constraints>
+                                        </view>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1KG-Rz-Hm4" customClass="CustomeButton" customModule="FuzzyMark" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="10.5" width="14" height="14"/>
+                                            <rect key="frame" x="3.5" y="10.5" width="14" height="14"/>
                                             <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="14" id="99K-5X-8If"/>
@@ -130,7 +137,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bộ lọc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dok-ND-QS3">
-                                            <rect key="frame" x="19" y="5" width="34.5" height="25"/>
+                                            <rect key="frame" x="22.5" y="5" width="31" height="25"/>
                                             <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -145,6 +152,9 @@
                                     </subviews>
                                     <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
+                                        <constraint firstItem="1KG-Rz-Hm4" firstAttribute="leading" secondItem="56h-S1-MJD" secondAttribute="trailing" constant="3" id="CNH-hw-XNM"/>
+                                        <constraint firstItem="56h-S1-MJD" firstAttribute="top" secondItem="5ZL-1V-1RL" secondAttribute="top" constant="3" id="CV1-Kl-OBO"/>
+                                        <constraint firstAttribute="bottom" secondItem="56h-S1-MJD" secondAttribute="bottom" constant="3" id="I8u-YY-TJr"/>
                                         <constraint firstItem="BsH-AL-Y69" firstAttribute="centerY" secondItem="dok-ND-QS3" secondAttribute="centerY" id="III-VC-OKT"/>
                                         <constraint firstItem="BsH-AL-Y69" firstAttribute="leading" secondItem="dok-ND-QS3" secondAttribute="trailing" constant="2" id="TmC-hy-JT5"/>
                                         <constraint firstItem="dok-ND-QS3" firstAttribute="leading" secondItem="1KG-Rz-Hm4" secondAttribute="trailing" constant="5" id="UAF-VM-fVG"/>
@@ -152,7 +162,7 @@
                                         <constraint firstAttribute="trailing" secondItem="BsH-AL-Y69" secondAttribute="trailing" constant="14.5" id="a9X-AD-ACV"/>
                                         <constraint firstAttribute="bottom" secondItem="dok-ND-QS3" secondAttribute="bottom" constant="5" id="diS-ad-vXj"/>
                                         <constraint firstItem="1KG-Rz-Hm4" firstAttribute="centerY" secondItem="dok-ND-QS3" secondAttribute="centerY" id="hXe-lJ-q27"/>
-                                        <constraint firstItem="1KG-Rz-Hm4" firstAttribute="leading" secondItem="5ZL-1V-1RL" secondAttribute="leading" id="ud3-MD-Su7"/>
+                                        <constraint firstItem="56h-S1-MJD" firstAttribute="leading" secondItem="5ZL-1V-1RL" secondAttribute="leading" id="tHv-jg-4ln"/>
                                     </constraints>
                                 </view>
                             </subviews>

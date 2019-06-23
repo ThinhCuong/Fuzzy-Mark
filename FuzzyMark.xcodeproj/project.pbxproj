@@ -176,6 +176,10 @@
 		5C6BFAEB225D668800A26400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAEA225D668800A26400 /* main.m */; };
 		5C6BFAF5225D668900A26400 /* FuzzyMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAF4225D668900A26400 /* FuzzyMarkTests.m */; };
 		5C6BFB00225D668900A26400 /* FuzzyMarkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */; };
+		5C76FBCA22BFDB080006D59D /* FZHotlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76FBC822BFDB080006D59D /* FZHotlineViewController.m */; };
+		5C76FBCB22BFDB080006D59D /* FZHotlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76FBC922BFDB080006D59D /* FZHotlineViewController.xib */; };
+		5C76FBD122BFE1870006D59D /* MVHotlineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76FBCF22BFE1870006D59D /* MVHotlineCollectionViewCell.m */; };
+		5C76FBD222BFE1870006D59D /* MVHotlineCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76FBD022BFE1870006D59D /* MVHotlineCollectionViewCell.xib */; };
 		5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */; };
 		5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */; };
 		5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8EC2AD2263664000C124CE /* FZHomeViewController.m */; };
@@ -495,6 +499,12 @@
 		5C6BFAFB225D668900A26400 /* FuzzyMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzyMarkUITests.m; sourceTree = "<group>"; };
 		5C6BFB01225D668900A26400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C76FBC722BFDB080006D59D /* FZHotlineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHotlineViewController.h; sourceTree = "<group>"; };
+		5C76FBC822BFDB080006D59D /* FZHotlineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHotlineViewController.m; sourceTree = "<group>"; };
+		5C76FBC922BFDB080006D59D /* FZHotlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHotlineViewController.xib; sourceTree = "<group>"; };
+		5C76FBCE22BFE1870006D59D /* MVHotlineCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVHotlineCollectionViewCell.h; sourceTree = "<group>"; };
+		5C76FBCF22BFE1870006D59D /* MVHotlineCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVHotlineCollectionViewCell.m; sourceTree = "<group>"; };
+		5C76FBD022BFE1870006D59D /* MVHotlineCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVHotlineCollectionViewCell.xib; sourceTree = "<group>"; };
 		5C87BDD1227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZItemMenuVerticalTableViewCell.h; sourceTree = "<group>"; };
 		5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZItemMenuVerticalTableViewCell.m; sourceTree = "<group>"; };
 		5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZItemMenuVerticalTableViewCell.xib; sourceTree = "<group>"; };
@@ -1316,6 +1326,26 @@
 			path = FuzzyMarkUITests;
 			sourceTree = "<group>";
 		};
+		5C76FBCC22BFDB0F0006D59D /* Hotline */ = {
+			isa = PBXGroup;
+			children = (
+				5C76FBC722BFDB080006D59D /* FZHotlineViewController.h */,
+				5C76FBC822BFDB080006D59D /* FZHotlineViewController.m */,
+				5C76FBC922BFDB080006D59D /* FZHotlineViewController.xib */,
+			);
+			path = Hotline;
+			sourceTree = "<group>";
+		};
+		5C76FBCD22BFE1630006D59D /* Hotline */ = {
+			isa = PBXGroup;
+			children = (
+				5C76FBCE22BFE1870006D59D /* MVHotlineCollectionViewCell.h */,
+				5C76FBCF22BFE1870006D59D /* MVHotlineCollectionViewCell.m */,
+				5C76FBD022BFE1870006D59D /* MVHotlineCollectionViewCell.xib */,
+			);
+			path = Hotline;
+			sourceTree = "<group>";
+		};
 		5C771A232288F9BB00675AA0 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
@@ -1335,6 +1365,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5C76FBCC22BFDB0F0006D59D /* Hotline */,
 				5C563DD222B16C62006AB186 /* VouchersSearch */,
 				5CFF9238229B1FC00053A2A5 /* Search */,
 				4FFC65C922B575C900056AE2 /* PromotionDetail */,
@@ -1428,6 +1459,7 @@
 		5C9862A42264E35900545DCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				5C76FBCD22BFE1630006D59D /* Hotline */,
 				5C9BDEC822B30AC60019BA12 /* VourcherSearch */,
 				4FEEE64B2292F2EA00E337F2 /* RegisterPromotion */,
 				5CFF923E229B23FE0053A2A5 /* Search */,
@@ -1631,6 +1663,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C76FBD222BFE1870006D59D /* MVHotlineCollectionViewCell.xib in Resources */,
 				4F472D2C229072F600F93D39 /* FMChangeEmailViewController.xib in Resources */,
 				4FBD3D8D228D9A5100E76E2A /* HistoryPointTableViewCell.xib in Resources */,
 				4F50F39C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib in Resources */,
@@ -1641,6 +1674,7 @@
 				4F50F4032276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf in Resources */,
 				5C5E9160229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib in Resources */,
 				4F50F4062276EDBD00DF7173 /* Muli-SemiBold.ttf in Resources */,
+				5C76FBCB22BFDB080006D59D /* FZHotlineViewController.xib in Resources */,
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
 				4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */,
 				4F25D6E622BAE64800C27190 /* FMListItemIntroduceVC.xib in Resources */,
@@ -1877,6 +1911,7 @@
 				4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */,
 				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,
 				4FF2BD77227BD9F70008BA69 /* FMCameraViewController.m in Sources */,
+				5C76FBCA22BFDB080006D59D /* FZHotlineViewController.m in Sources */,
 				4F6D65C0228FC9520092CA53 /* DatePickerViewController.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
 				4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */,
@@ -1943,6 +1978,7 @@
 				4FB0B27E22B9AA9E00487D66 /* FMPromotionIntroCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
+				5C76FBD122BFE1870006D59D /* MVHotlineCollectionViewCell.m in Sources */,
 				4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */,
 				4FB0B27922B9A63700487D66 /* FMPromotionLocationCell.m in Sources */,
 				5C1585EF22A5DDC5008F06AB /* CustomButton.swift in Sources */,
@@ -2117,7 +2153,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5VR7C6YPUT;
+				DEVELOPMENT_TEAM = 9X92A5RB95;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -2126,7 +2162,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tutv;
+				PRODUCT_BUNDLE_IDENTIFIER = cuongnt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2143,7 +2179,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5VR7C6YPUT;
+				DEVELOPMENT_TEAM = 9X92A5RB95;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -2152,7 +2188,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tutv;
+				PRODUCT_BUNDLE_IDENTIFIER = cuongnt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

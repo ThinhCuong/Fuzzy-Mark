@@ -30,8 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)didSelectSuportList:(SuportList ) indexChoose;
 - (void)didSelectCategoryList:(CategoryList ) indexChoose;
+- (void)clickToHotline;
 
 @end
+
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
