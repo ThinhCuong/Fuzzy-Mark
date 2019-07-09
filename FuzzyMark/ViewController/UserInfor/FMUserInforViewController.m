@@ -13,7 +13,7 @@
 #import "FMHistoryBillViewController.h"
 #import "FMHistoryPointViewController.h"
 #import "FMLocationFavoriteViewController.h"
-#import "ChangeUserInforViewController.h"
+#import "FMChangeUserInforViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -76,7 +76,7 @@
             break;
         }
         case FMTableViewCellBlockUserInfor: {
-            ChangeUserInforViewController *vc = [[ChangeUserInforViewController alloc] init];
+            FMChangeUserInforViewController *vc = [[FMChangeUserInforViewController alloc] init];
             vc.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:vc animated:YES];
             break;
