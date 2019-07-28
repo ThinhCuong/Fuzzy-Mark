@@ -14,7 +14,8 @@
 #import "FMHistoryPointViewController.h"
 #import "FMLocationFavoriteViewController.h"
 #import "FMChangeUserInforViewController.h"
-#import "FMRegisterAccountViewController.h"
+#import "FMInputEmailVC.h"
+#import "FMLoginAccountViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -125,9 +126,9 @@
 }
 
 - (void)didSelectLogin {
-    FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    FMLoginAccountViewController *vc = [[FMLoginAccountViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:navi animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource

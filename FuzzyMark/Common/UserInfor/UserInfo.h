@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UserInformation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 typedef enum {
@@ -16,6 +17,9 @@ typedef enum {
 } MVUserState;
 
 @interface UserInfo : NSObject
++ (void)setUserInforWithUserModel:(UserInformation *) userModel;
++ (UserInformation *)getUserInforModel;
+
 + (void)setUserID:(NSInteger) userID;
 + (NSInteger)getUserID;
 

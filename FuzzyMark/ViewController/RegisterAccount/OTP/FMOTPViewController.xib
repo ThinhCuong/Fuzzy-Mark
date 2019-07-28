@@ -22,6 +22,7 @@
             <connections>
                 <outlet property="btnSuccess" destination="NnR-En-Er5" id="deL-hf-dfF"/>
                 <outlet property="btnTime" destination="yI9-fS-jqD" id="OPa-Co-8KD"/>
+                <outlet property="lbTitle" destination="Q4v-W7-4sg" id="Cmb-en-p2G"/>
                 <outlet property="tfFirst" destination="Yka-xS-ehM" id="eor-26-qei"/>
                 <outlet property="tfFourth" destination="JTk-3U-YbO" id="4IQ-sJ-IU4"/>
                 <outlet property="tfSecond" destination="ehs-Qo-Vnk" id="duo-wY-pqr"/>
@@ -34,14 +35,14 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-W7-4sg">
-                    <rect key="frame" x="19" y="60" width="282" height="0.0"/>
-                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ĐĂNG KÝ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z30-1U-zjp">
+                    <rect key="frame" x="128" y="40" width="64.5" height="21"/>
+                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                    <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdG-iO-XJD">
-                    <rect key="frame" x="32" y="90" width="256" height="30"/>
+                    <rect key="frame" x="32" y="107" width="256" height="30"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yka-xS-ehM" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
@@ -131,16 +132,19 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-En-Er5" customClass="FMButtonNext">
-                    <rect key="frame" x="16" y="202" width="288" height="44"/>
+                    <rect key="frame" x="16" y="219" width="288" height="44"/>
                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="dI8-2H-919"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <state key="normal" title="Tiếp tục..."/>
+                    <connections>
+                        <action selector="didSelectBtnSendOTP:" destination="-1" eventType="touchUpInside" id="dmK-YJ-tXh"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI9-fS-jqD">
-                    <rect key="frame" x="60" y="139" width="200" height="47"/>
+                    <rect key="frame" x="60" y="156" width="200" height="47"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="47" id="BXj-JP-rBY"/>
                         <constraint firstAttribute="width" constant="200" id="XMF-RU-M2T"/>
@@ -149,17 +153,28 @@
                     <state key="normal" title="Gửi lại (56s)">
                         <color key="titleColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="didSelectBtnResendOTP:" destination="-1" eventType="touchUpInside" id="dvJ-Ok-PvA"/>
+                    </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-W7-4sg">
+                    <rect key="frame" x="19" y="77" width="282" height="0.0"/>
+                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="yI9-fS-jqD" firstAttribute="top" secondItem="ZdG-iO-XJD" secondAttribute="bottom" constant="19" id="5Lm-aN-iRI"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="NnR-En-Er5" secondAttribute="trailing" constant="16" id="5bq-rU-WK5"/>
                 <constraint firstItem="NnR-En-Er5" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="8Rj-5o-oN6"/>
+                <constraint firstItem="z30-1U-zjp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Es2-Kf-ACT"/>
                 <constraint firstItem="Q4v-W7-4sg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="19" id="GjU-gm-L96"/>
+                <constraint firstItem="z30-1U-zjp" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="RA4-U0-wUp"/>
+                <constraint firstItem="Q4v-W7-4sg" firstAttribute="top" secondItem="z30-1U-zjp" secondAttribute="bottom" constant="16" id="Rhj-9h-D7X"/>
                 <constraint firstItem="NnR-En-Er5" firstAttribute="top" secondItem="yI9-fS-jqD" secondAttribute="bottom" constant="16" id="WVJ-Ir-R4k"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Q4v-W7-4sg" secondAttribute="trailing" constant="19" id="cTV-ng-siQ"/>
-                <constraint firstItem="Q4v-W7-4sg" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="ekg-Gh-Rzf"/>
                 <constraint firstItem="NnR-En-Er5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gEs-NT-69x"/>
                 <constraint firstItem="ZdG-iO-XJD" firstAttribute="top" secondItem="Q4v-W7-4sg" secondAttribute="bottom" constant="30" id="kJG-F4-Dvl"/>
                 <constraint firstItem="yI9-fS-jqD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mul-Lc-RGa"/>

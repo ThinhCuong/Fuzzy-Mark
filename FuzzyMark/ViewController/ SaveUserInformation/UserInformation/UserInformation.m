@@ -8,10 +8,14 @@
 
 #import "UserInformation.h"
 
-@implementation UserInformation
+@implementation UseView
 + (JSONKeyMapper *)keyMapper {
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
                                                                   @"idUser": @"id"
                                                                   }];
 }
+@end
+
+@implementation UserInformation
+
 @end

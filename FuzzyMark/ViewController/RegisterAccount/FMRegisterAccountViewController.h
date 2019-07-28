@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInformation.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMRegisterAccountViewController : FMBaseViewController
-
+@property (nonatomic, copy) void(^registerSuccess)(void);
+- (instancetype)initWithUser:(UserInformation *) userModel;
 @end
 
 NS_ASSUME_NONNULL_END
