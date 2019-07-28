@@ -39,8 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZFixedAdsJsonModel : JSONModel
 
-@property (nonatomic) NSString *url;
-@property (nonatomic) NSString *image;
+@property (nonatomic) NSString *url_ads;
+@property (nonatomic) NSString *image_ads;
 
 @end
 

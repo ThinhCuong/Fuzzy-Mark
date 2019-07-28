@@ -12,7 +12,7 @@
 #import "FZVourchersSearchViewController.h"
 
 @interface FZHomeModel() {
-    FZHomeJsonModel *_homeData;
+    FZHomeObject *_homeData;
 }
 
 @end
@@ -33,7 +33,7 @@
     [tableView registerNib:[UINib nibWithNibName:@"FZItemMenuHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZItemMenuHomeTableViewCell"];
 }
 
-- (void)bindData:(FZHomeJsonModel *)homeData {
+- (void)bindData:(FZHomeObject *)homeData {
     _homeData = homeData;
 }
 
@@ -61,7 +61,7 @@
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];
         itemMenuHomeCell.delegate = self.homeViewController;
-        [itemMenuHomeCell bindData:_homeData.groups[indexPath.row].vouchers_vertical listVoucherHorizontal:_homeData.groups[indexPath.row].vouchers_horizontal];
+        [itemMenuHomeCell bindData:_homeData.groups[indexPath.row].vouchersVertical listVoucherHorizontal:_homeData.groups[indexPath.row].vouchersHorizontal];
         return itemMenuHomeCell;
     }
 }

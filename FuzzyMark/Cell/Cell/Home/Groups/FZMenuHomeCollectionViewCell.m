@@ -17,11 +17,11 @@
     [CommonFunction setCornerRadiusUIImageView:self.groupImage cornerRadiusValue:5];
 }
 
-- (void)bindData:(FZGroupInfoJsonModel *)groupInfo {
+- (void)bindData:(RewardObject *)groupInfo {
     [self.groupImage sd_setImageWithURL:[NSURL URLWithString:groupInfo.image]];
     self.nameLabel.text = groupInfo.name;
-    self.groupInfoDescriptionLabel.text = groupInfo.groupInfoDescription;
-    self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percent_discount, @"%"];
+    self.groupInfoDescriptionLabel.text = groupInfo.rewardDescription;
+    self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percentDiscount, @"%"];
 }
 
 @end

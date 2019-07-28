@@ -24,11 +24,11 @@
     // Configure the view for the selected state
 }
 
-- (void)bindData:(FZGroupInfoJsonModel *)groupInfo {
+- (void)bindData:(RewardObject *)groupInfo {
     [self.image sd_setImageWithURL:[NSURL URLWithString:groupInfo.image]];
     self.nameLabel.text = groupInfo.name;
-    self.groupInfoDescriptionLabel.text = groupInfo.groupInfoDescription;
-    self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percent_discount, @"%"];
+    self.groupInfoDescriptionLabel.text = groupInfo.rewardDescription;
+    self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percentDiscount, @"%"];
 }
 
 @end

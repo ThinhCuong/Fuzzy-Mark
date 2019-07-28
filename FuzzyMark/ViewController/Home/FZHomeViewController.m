@@ -16,6 +16,7 @@
 #import "FZItemMenuHomeTableViewCell.h"
 #import "FZVourchersSearchViewController.h"
 #import "FZHotlineViewController.h"
+#import "FZHomeObject.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
@@ -90,18 +91,17 @@
 }
 
 - (void)testApi {
+    NSDictionary *params = @{};
     
-    NSDictionary *params = @{
-                             @"token": @"abd",
-                             };
     [SVProgressHUD setContainerView:self.view];
     [SVProgressHUD show];
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
         [SVProgressHUD dismiss];
         [SVProgressHUD setBackgroundLayerColor:UIColor.redColor];
         if (responseData) {
-            FZHomeJsonModel *homeData = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
-            [self.dataModel bindData:homeData];
+            FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
+//            FZHomeJsonModel *homeData = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
+            [self.dataModel bindData:data];
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {
