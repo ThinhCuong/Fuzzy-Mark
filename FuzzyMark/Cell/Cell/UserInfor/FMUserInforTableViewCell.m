@@ -43,4 +43,10 @@
     }
 }
 
+- (IBAction)didSelectButtonLogin:(id)sender {
+    if([self.delegate respondsToSelector:@selector(didSelectLogin)]) {
+        [self.delegate didSelectLogin];
+    }
+}
+
 @end

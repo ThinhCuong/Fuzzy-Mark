@@ -18,8 +18,14 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMOTPChangeEmailViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMOTPViewController">
             <connections>
+                <outlet property="btnSuccess" destination="NnR-En-Er5" id="deL-hf-dfF"/>
+                <outlet property="btnTime" destination="yI9-fS-jqD" id="OPa-Co-8KD"/>
+                <outlet property="tfFirst" destination="Yka-xS-ehM" id="eor-26-qei"/>
+                <outlet property="tfFourth" destination="JTk-3U-YbO" id="4IQ-sJ-IU4"/>
+                <outlet property="tfSecond" destination="ehs-Qo-Vnk" id="duo-wY-pqr"/>
+                <outlet property="tfThird" destination="qta-a2-GFy" id="lRp-Mw-jVm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,70 +34,82 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập dãy 4 chữ số vừa được gửi vào email cho bạn để xác nhận" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-W7-4sg">
-                    <rect key="frame" x="19" y="60" width="282" height="41.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4v-W7-4sg">
+                    <rect key="frame" x="19" y="60" width="282" height="0.0"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZdG-iO-XJD">
-                    <rect key="frame" x="32" y="131.5" width="256" height="30"/>
+                    <rect key="frame" x="32" y="90" width="256" height="30"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yka-xS-ehM" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yka-xS-ehM" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="52" id="K19-YG-kUO"/>
                             </constraints>
                             <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                     <color key="value" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="i0U-vL-wLK"/>
+                            </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehs-Qo-Vnk" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ehs-Qo-Vnk" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                             <rect key="frame" x="68" y="0.0" width="52" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="52" id="K34-yC-crb"/>
                             </constraints>
                             <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                     <color key="value" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="EEZ-xy-E6f"/>
+                            </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qta-a2-GFy" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qta-a2-GFy" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                             <rect key="frame" x="136" y="0.0" width="52" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="52" id="cjd-Md-L1y"/>
                             </constraints>
                             <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                     <color key="value" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Vao-Q9-Mkk"/>
+                            </connections>
                         </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JTk-3U-YbO" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JTk-3U-YbO" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                             <rect key="frame" x="204" y="0.0" width="52" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="52" id="eOp-L5-2Xg"/>
                             </constraints>
                             <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
                                     <color key="value" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <outlet property="delegate" destination="-1" id="Tm0-Ij-GdI"/>
+                            </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -112,34 +130,40 @@
                         <constraint firstItem="JTk-3U-YbO" firstAttribute="top" secondItem="ZdG-iO-XJD" secondAttribute="top" id="y5D-lS-HVC"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gửi lại (56s)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-cZ-Ujf">
-                    <rect key="frame" x="119" y="180.5" width="82.5" height="21"/>
-                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
-                    <color key="textColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-En-Er5">
-                    <rect key="frame" x="16" y="217.5" width="288" height="44"/>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnR-En-Er5" customClass="FMButtonNext">
+                    <rect key="frame" x="16" y="202" width="288" height="44"/>
                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="dI8-2H-919"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <state key="normal" title="Tiếp tục..."/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yI9-fS-jqD">
+                    <rect key="frame" x="60" y="139" width="200" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="BXj-JP-rBY"/>
+                        <constraint firstAttribute="width" constant="200" id="XMF-RU-M2T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                    <state key="normal" title="Gửi lại (56s)">
+                        <color key="titleColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="yI9-fS-jqD" firstAttribute="top" secondItem="ZdG-iO-XJD" secondAttribute="bottom" constant="19" id="5Lm-aN-iRI"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="NnR-En-Er5" secondAttribute="trailing" constant="16" id="5bq-rU-WK5"/>
                 <constraint firstItem="NnR-En-Er5" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="8Rj-5o-oN6"/>
                 <constraint firstItem="Q4v-W7-4sg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="19" id="GjU-gm-L96"/>
-                <constraint firstItem="gcw-cZ-Ujf" firstAttribute="top" secondItem="ZdG-iO-XJD" secondAttribute="bottom" constant="19" id="Lci-CE-0Vu"/>
-                <constraint firstItem="NnR-En-Er5" firstAttribute="top" secondItem="gcw-cZ-Ujf" secondAttribute="bottom" constant="16" id="TaG-aH-sxL"/>
+                <constraint firstItem="NnR-En-Er5" firstAttribute="top" secondItem="yI9-fS-jqD" secondAttribute="bottom" constant="16" id="WVJ-Ir-R4k"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Q4v-W7-4sg" secondAttribute="trailing" constant="19" id="cTV-ng-siQ"/>
                 <constraint firstItem="Q4v-W7-4sg" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="40" id="ekg-Gh-Rzf"/>
                 <constraint firstItem="NnR-En-Er5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gEs-NT-69x"/>
                 <constraint firstItem="ZdG-iO-XJD" firstAttribute="top" secondItem="Q4v-W7-4sg" secondAttribute="bottom" constant="30" id="kJG-F4-Dvl"/>
+                <constraint firstItem="yI9-fS-jqD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mul-Lc-RGa"/>
                 <constraint firstItem="ZdG-iO-XJD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nTr-cG-83i"/>
-                <constraint firstItem="gcw-cZ-Ujf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="zCG-h1-iBx"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="78.75" y="55.985915492957744"/>

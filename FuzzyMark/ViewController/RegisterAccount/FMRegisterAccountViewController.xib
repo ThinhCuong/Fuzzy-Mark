@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Muli-Bold.ttf">
+            <string>Muli-Bold</string>
+        </array>
+        <array key="Muli-Italic.ttf">
+            <string>Muli-Italic</string>
+        </array>
+        <array key="Muli.ttf">
+            <string>Muli</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMRegisterAccountViewController">
+            <connections>
+                <outlet property="btnShowPass" destination="pwG-0x-LTh" id="cZe-A4-U5t"/>
+                <outlet property="btnSuccess" destination="VWf-2P-IJQ" id="hPR-QU-YNI"/>
+                <outlet property="tfEmail" destination="kdd-qb-gyk" id="bDK-Nc-GY2"/>
+                <outlet property="tfFullName" destination="8l8-Xt-CXC" id="yhB-t8-YHm"/>
+                <outlet property="tfPassword" destination="Fon-aO-vpQ" id="yjG-sz-yLA"/>
+                <outlet property="tfRepassWord" destination="Ujg-KY-z0F" id="Nyq-pi-5aW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yG-l2-tyk">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRu-Lx-aX1">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="529.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ĐĂNG KÝ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqU-lO-nZ4">
+                                    <rect key="frame" x="173.5" y="20" width="64.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng nhập họ tên và mật khẩu để hoàn tất đăng ký" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-cN-AX5">
+                                    <rect key="frame" x="29.5" y="57" width="364.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imo-Hc-CPj">
+                                    <rect key="frame" x="19" y="93" width="373" height="72.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chú ý: Nhập đúng tên thật. Chúng tôi sẽ đối chiếu thông tin này với thông tin in trên hoá đơn mua sắm khi xét duyệt hoàn tiền." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuC-0s-5WM">
+                                            <rect key="frame" x="11" y="9" width="349" height="53.5"/>
+                                            <fontDescription key="fontDescription" name="Muli-Italic" family="Muli" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.99215686274509807" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="AuC-0s-5WM" secondAttribute="bottom" constant="10" id="FXf-eY-sh8"/>
+                                        <constraint firstAttribute="trailing" secondItem="AuC-0s-5WM" secondAttribute="trailing" constant="13" id="Gqm-pl-98g"/>
+                                        <constraint firstItem="AuC-0s-5WM" firstAttribute="leading" secondItem="imo-Hc-CPj" secondAttribute="leading" constant="11" id="kEz-uO-zo8"/>
+                                        <constraint firstItem="AuC-0s-5WM" firstAttribute="top" secondItem="imo-Hc-CPj" secondAttribute="top" constant="9" id="oVY-JU-YZA"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-Wa-rgB">
+                                    <rect key="frame" x="28" y="189.5" width="30.5" height="15"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
+                                    <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Nhập Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-qb-gyk" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                                    <rect key="frame" x="28" y="210.5" width="366" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="uax-O0-VLM"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HỌ &amp; TÊN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zW-As-xdl">
+                                    <rect key="frame" x="28" y="256.5" width="48" height="15"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
+                                    <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Nhập Họ và Tên" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8l8-Xt-CXC" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                                    <rect key="frame" x="28" y="277.5" width="366" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="dmV-Od-xN2"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MẬT KHẨU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE9-g0-sl9">
+                                    <rect key="frame" x="28" y="323.5" width="52" height="15"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
+                                    <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Nhập Mật Khẩu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fon-aO-vpQ" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                                    <rect key="frame" x="28" y="344.5" width="366" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="518-1b-iEi"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-0x-LTh">
+                                    <rect key="frame" x="363" y="344.5" width="31" height="30"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
+                                    <state key="normal" title="HIỆN"/>
+                                    <connections>
+                                        <action selector="didSelectShowPassword:" destination="-1" eventType="touchUpInside" id="23R-PT-q2j"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NHẬP LẠI MẬT KHẨU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-ch-or7">
+                                    <rect key="frame" x="28" y="390.5" width="102" height="15"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
+                                    <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Xác nhận mật khẩu" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ujg-KY-z0F" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                                    <rect key="frame" x="28" y="411.5" width="366" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="hdk-RY-sf0"/>
+                                    </constraints>
+                                    <color key="textColor" red="0.01176470588" green="0.01176470588" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="titleTextColour">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                            <color key="value" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWf-2P-IJQ" customClass="FMButtonNext">
+                                    <rect key="frame" x="16" y="465.5" width="379" height="44"/>
+                                    <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="C7D-lc-dkJ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
+                                    <state key="normal" title="Lưu thông tin">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="didSelectButtonSuccess:" destination="-1" eventType="touchUpInside" id="40e-tY-FD3"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="kdd-qb-gyk" firstAttribute="top" secondItem="Uz6-Wa-rgB" secondAttribute="bottom" constant="6" id="36b-Ch-KJJ"/>
+                                <constraint firstItem="pwG-0x-LTh" firstAttribute="trailing" secondItem="Fon-aO-vpQ" secondAttribute="trailing" id="6Ah-7y-r8d"/>
+                                <constraint firstAttribute="trailing" secondItem="Ujg-KY-z0F" secondAttribute="trailing" constant="20" id="78r-UK-vCf"/>
+                                <constraint firstItem="Ujg-KY-z0F" firstAttribute="top" secondItem="df9-ch-or7" secondAttribute="bottom" constant="6" id="8d7-vY-pzK"/>
+                                <constraint firstItem="VWf-2P-IJQ" firstAttribute="centerX" secondItem="kRu-Lx-aX1" secondAttribute="centerX" constant="-1.5" id="9C5-KW-Jtz"/>
+                                <constraint firstItem="8l8-Xt-CXC" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="9iQ-YW-G9K"/>
+                                <constraint firstItem="pwG-0x-LTh" firstAttribute="centerY" secondItem="Fon-aO-vpQ" secondAttribute="centerY" id="BKe-9b-x6a"/>
+                                <constraint firstItem="mE9-g0-sl9" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="Csb-6s-7HR"/>
+                                <constraint firstAttribute="trailing" secondItem="8l8-Xt-CXC" secondAttribute="trailing" constant="20" id="DXK-2z-pd6"/>
+                                <constraint firstItem="8l8-Xt-CXC" firstAttribute="top" secondItem="4zW-As-xdl" secondAttribute="bottom" constant="6" id="EDr-9O-k6p"/>
+                                <constraint firstItem="imo-Hc-CPj" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="19" id="F18-ew-eYf"/>
+                                <constraint firstAttribute="trailing" secondItem="Fon-aO-vpQ" secondAttribute="trailing" constant="20" id="Fd4-vY-AyR"/>
+                                <constraint firstItem="kdd-qb-gyk" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="GFG-L3-caj"/>
+                                <constraint firstItem="7fO-cN-AX5" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="29.5" id="JhT-T2-dtA"/>
+                                <constraint firstAttribute="trailing" secondItem="kdd-qb-gyk" secondAttribute="trailing" constant="20" id="KID-D0-nsr"/>
+                                <constraint firstItem="imo-Hc-CPj" firstAttribute="centerX" secondItem="kRu-Lx-aX1" secondAttribute="centerX" constant="-1.5" id="MPz-FA-kdG"/>
+                                <constraint firstItem="4zW-As-xdl" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="NMi-bS-7DC"/>
+                                <constraint firstItem="Uz6-Wa-rgB" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="QOh-O2-9RG"/>
+                                <constraint firstAttribute="bottom" secondItem="VWf-2P-IJQ" secondAttribute="bottom" constant="20" id="Sly-LK-sPh"/>
+                                <constraint firstItem="VWf-2P-IJQ" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="16" id="TpR-bJ-Xp4"/>
+                                <constraint firstItem="VWf-2P-IJQ" firstAttribute="top" secondItem="Ujg-KY-z0F" secondAttribute="bottom" constant="24" id="UFd-x5-8iY"/>
+                                <constraint firstItem="4zW-As-xdl" firstAttribute="top" secondItem="kdd-qb-gyk" secondAttribute="bottom" constant="16" id="VgX-L8-ihm"/>
+                                <constraint firstItem="df9-ch-or7" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="XUU-M7-tee"/>
+                                <constraint firstItem="7fO-cN-AX5" firstAttribute="top" secondItem="eqU-lO-nZ4" secondAttribute="bottom" constant="16" id="aHD-4o-eH7"/>
+                                <constraint firstItem="Fon-aO-vpQ" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="aqG-Ge-zvZ"/>
+                                <constraint firstItem="Ujg-KY-z0F" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="bi9-gc-trc"/>
+                                <constraint firstItem="Uz6-Wa-rgB" firstAttribute="top" secondItem="imo-Hc-CPj" secondAttribute="bottom" constant="24" id="dlA-5s-XZn"/>
+                                <constraint firstItem="eqU-lO-nZ4" firstAttribute="centerX" secondItem="kRu-Lx-aX1" secondAttribute="centerX" constant="-1.25" id="k93-ud-tKN"/>
+                                <constraint firstItem="eqU-lO-nZ4" firstAttribute="top" secondItem="kRu-Lx-aX1" secondAttribute="top" constant="20" id="nac-vB-5nv"/>
+                                <constraint firstItem="mE9-g0-sl9" firstAttribute="top" secondItem="8l8-Xt-CXC" secondAttribute="bottom" constant="16" id="o5l-BZ-fmB"/>
+                                <constraint firstItem="imo-Hc-CPj" firstAttribute="top" secondItem="7fO-cN-AX5" secondAttribute="bottom" constant="15" id="vCV-mQ-gTf"/>
+                                <constraint firstAttribute="trailing" secondItem="7fO-cN-AX5" secondAttribute="trailing" constant="20" id="wdE-an-Cys"/>
+                                <constraint firstItem="Fon-aO-vpQ" firstAttribute="top" secondItem="mE9-g0-sl9" secondAttribute="bottom" constant="6" id="x2O-3X-ipP"/>
+                                <constraint firstItem="df9-ch-or7" firstAttribute="top" secondItem="Fon-aO-vpQ" secondAttribute="bottom" constant="16" id="xPt-5K-jo4"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kRu-Lx-aX1" secondAttribute="trailing" id="0Dh-UK-fpr"/>
+                        <constraint firstItem="kRu-Lx-aX1" firstAttribute="top" secondItem="4yG-l2-tyk" secondAttribute="top" id="68b-o8-68o"/>
+                        <constraint firstItem="kRu-Lx-aX1" firstAttribute="width" secondItem="4yG-l2-tyk" secondAttribute="width" id="AjB-b6-d1F"/>
+                        <constraint firstAttribute="bottom" secondItem="kRu-Lx-aX1" secondAttribute="bottom" id="jn8-5a-ucN"/>
+                        <constraint firstItem="kRu-Lx-aX1" firstAttribute="leading" secondItem="4yG-l2-tyk" secondAttribute="leading" id="kw3-uX-WdF"/>
+                        <constraint firstItem="kRu-Lx-aX1" firstAttribute="height" secondItem="4yG-l2-tyk" secondAttribute="height" priority="250" id="sy0-Ym-caF"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4yG-l2-tyk" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="4ly-Lc-7oX"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="4yG-l2-tyk" secondAttribute="bottom" id="UHz-vQ-PoR"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="4yG-l2-tyk" secondAttribute="trailing" id="nKR-yc-z0A"/>
+                <constraint firstItem="4yG-l2-tyk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="pjD-vL-n2w"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

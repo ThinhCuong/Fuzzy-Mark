@@ -22,7 +22,6 @@
             <connections>
                 <outlet property="btnSave" destination="8XP-3E-BCk" id="QCA-2o-FIY"/>
                 <outlet property="checkBoxView" destination="kVl-Y6-xij" id="4Yp-Fq-yNC"/>
-                <outlet property="datePicker" destination="yaM-S2-bEm" id="wza-Wy-KRN"/>
                 <outlet property="txtBirthday" destination="amV-Ia-L0a" id="VMp-46-gP3"/>
                 <outlet property="txtName" destination="rsP-Bx-fmn" id="vYo-CQ-sOS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -39,7 +38,7 @@
                     <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" text="Phạm Sĩ Mạnh" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-Bx-fmn" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Thêm Họ tên" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsP-Bx-fmn" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
                     <rect key="frame" x="24" y="57" width="272" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="sYZ-Hc-wg3"/>
@@ -80,15 +79,8 @@
                     </userDefinedRuntimeAttributes>
                 </textField>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_edit" translatesAutoresizingMaskIntoConstraints="NO" id="ip8-LW-QlQ">
-                    <rect key="frame" x="280" y="125" width="16" height="16"/>
+                    <rect key="frame" x="280" y="131" width="16" height="16"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hMA-1J-JhV">
-                    <rect key="frame" x="24" y="124" width="272" height="30"/>
-                    <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
-                    <connections>
-                        <action selector="didSelectChangeBirthday:" destination="-1" eventType="touchUpInside" id="Q7S-VI-WaP"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GIỚI TÍNH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-mm-g8Y">
                     <rect key="frame" x="24" y="170" width="49.5" height="15"/>
                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
@@ -119,43 +111,33 @@
                     <state key="normal" title="Lưu thông tin">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="didSelectSave:" destination="-1" eventType="touchUpInside" id="qM8-8H-Pla"/>
+                    </connections>
                 </button>
-                <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yaM-S2-bEm">
-                    <rect key="frame" x="0.0" y="352" width="320" height="216"/>
-                    <date key="date" timeIntervalSinceReferenceDate="580673790.75087404">
-                        <!--2019-05-27 18:16:30 +0000-->
-                    </date>
-                </datePicker>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="hMA-1J-JhV" firstAttribute="leading" secondItem="amV-Ia-L0a" secondAttribute="leading" id="0Y4-Re-TOA"/>
                 <constraint firstItem="8XP-3E-BCk" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="0qf-cK-JT2"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="kVl-Y6-xij" secondAttribute="trailing" constant="24" id="1OS-9t-RKU"/>
-                <constraint firstItem="yaM-S2-bEm" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="351-Re-2aW"/>
-                <constraint firstItem="yaM-S2-bEm" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="5Vf-s6-2B8"/>
                 <constraint firstItem="kVl-Y6-xij" firstAttribute="centerY" secondItem="qi9-mm-g8Y" secondAttribute="centerY" id="89J-ar-KPp"/>
                 <constraint firstItem="rsP-Bx-fmn" firstAttribute="top" secondItem="bqj-RY-kHS" secondAttribute="bottom" constant="6" id="8ka-I5-2cg"/>
                 <constraint firstItem="qi9-mm-g8Y" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="CdP-Ng-DYc"/>
-                <constraint firstItem="ip8-LW-QlQ" firstAttribute="trailing" secondItem="hMA-1J-JhV" secondAttribute="trailing" id="Fjh-G3-RGA"/>
-                <constraint firstItem="hMA-1J-JhV" firstAttribute="top" secondItem="amV-Ia-L0a" secondAttribute="top" id="Ftw-qg-OFt"/>
+                <constraint firstItem="ip8-LW-QlQ" firstAttribute="trailing" secondItem="amV-Ia-L0a" secondAttribute="trailing" id="FUq-2w-Nat"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rsP-Bx-fmn" secondAttribute="trailing" constant="24" id="Fuk-mt-isD"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="amV-Ia-L0a" secondAttribute="trailing" constant="24" id="JRO-ge-kFe"/>
                 <constraint firstItem="Pmx-DX-YDd" firstAttribute="top" secondItem="qi9-mm-g8Y" secondAttribute="bottom" constant="16" id="KJY-th-H7c"/>
                 <constraint firstItem="nob-pV-m6i" firstAttribute="top" secondItem="rsP-Bx-fmn" secondAttribute="bottom" constant="16" id="LM7-rp-jX7"/>
                 <constraint firstItem="qi9-mm-g8Y" firstAttribute="top" secondItem="amV-Ia-L0a" secondAttribute="bottom" constant="16" id="OSx-lB-hTB"/>
-                <constraint firstItem="ip8-LW-QlQ" firstAttribute="top" secondItem="hMA-1J-JhV" secondAttribute="top" constant="1" id="Qa6-ZS-D4E"/>
                 <constraint firstItem="rsP-Bx-fmn" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="UxA-kF-VdL"/>
-                <constraint firstItem="hMA-1J-JhV" firstAttribute="trailing" secondItem="amV-Ia-L0a" secondAttribute="trailing" id="XNP-4J-8JC"/>
                 <constraint firstItem="amV-Ia-L0a" firstAttribute="top" secondItem="nob-pV-m6i" secondAttribute="bottom" constant="6" id="YwA-0L-iVJ"/>
                 <constraint firstItem="8XP-3E-BCk" firstAttribute="top" secondItem="Pmx-DX-YDd" secondAttribute="bottom" constant="24" id="cIN-0q-Vcr"/>
                 <constraint firstItem="bqj-RY-kHS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="dAe-78-ySr"/>
+                <constraint firstItem="ip8-LW-QlQ" firstAttribute="centerY" secondItem="amV-Ia-L0a" secondAttribute="centerY" id="gF2-1a-yAX"/>
                 <constraint firstItem="Pmx-DX-YDd" firstAttribute="top" secondItem="kVl-Y6-xij" secondAttribute="bottom" constant="17" id="oJc-J0-Pti"/>
                 <constraint firstItem="Pmx-DX-YDd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="qJS-sQ-8lh"/>
                 <constraint firstItem="bqj-RY-kHS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="16" id="qjQ-iW-tyK"/>
-                <constraint firstItem="hMA-1J-JhV" firstAttribute="bottom" secondItem="amV-Ia-L0a" secondAttribute="bottom" id="tjs-v0-Rrt"/>
                 <constraint firstItem="amV-Ia-L0a" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="vut-ze-m0A"/>
-                <constraint firstItem="yaM-S2-bEm" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="vwH-r8-de8"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Pmx-DX-YDd" secondAttribute="trailing" constant="24" id="ywI-fU-Qbh"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="8XP-3E-BCk" secondAttribute="trailing" constant="16" id="z4a-yZ-MsZ"/>
                 <constraint firstItem="nob-pV-m6i" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="24" id="zr7-9v-yj6"/>

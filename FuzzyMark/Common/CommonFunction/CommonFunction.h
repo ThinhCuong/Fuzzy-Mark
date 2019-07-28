@@ -13,6 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CommonFunction : NSObject
 // set corner radius image view
 + (void)setCornerRadiusUIImageView:(UIImageView *)imageView cornerRadiusValue:(float )cornerRadiusValue;
++ (void)showLoadingView;
++ (void)showLoadingViewInView:(UIView *) view;
++ (void)hideLoadingView;
++ (void)showToast:(NSString *) toast;
++ (void)showToast:(NSString *) toast inView:(UIView *) view;
 
 @end
 

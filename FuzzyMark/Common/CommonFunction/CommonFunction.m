@@ -7,12 +7,37 @@
 //
 
 #import "CommonFunction.h"
+#import "AppDelegate.h"
 
 @implementation CommonFunction
 
 + (void)setCornerRadiusUIImageView:(UIImageView *)imageView cornerRadiusValue:(float )cornerRadiusValue {
     imageView.layer.cornerRadius = cornerRadiusValue;
     imageView.clipsToBounds = YES;
+}
+
++ (void)showLoadingView {
+    [self showLoadingViewInView:appDelegate.window.rootViewController.view];
+}
+
++ (void)showLoadingViewInView:(UIView *) view {
+    [SVProgressHUD setContainerView:view];
+    [SVProgressHUD show];
+}
+
++ (void)hideLoadingView {
+    [SVProgressHUD dismiss];
+}
+
++ (void)showToast:(NSString *) toast {
+    [self showToast:toast inView:appDelegate.window.rootViewController.view];
+}
+
++ (void)showToast:(NSString *) toast inView:(UIView *) view {
+    if (toast.length == 0) {
+        return;
+    }
+    [SVProgressHUD showWithStatus:toast];
 }
 
 @end

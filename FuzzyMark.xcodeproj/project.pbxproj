@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
 		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
+		4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBD722ECB88100466B51 /* UIImage+Support.m */; };
+		4F1BCBDF22ECED0B00466B51 /* NSDictionary+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */; };
 		4F25D6E022BAE15300C27190 /* FMListItemLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D6DE22BAE15300C27190 /* FMListItemLocationVC.m */; };
 		4F25D6E122BAE15300C27190 /* FMListItemLocationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F25D6DF22BAE15300C27190 /* FMListItemLocationVC.xib */; };
 		4F25D6E522BAE64800C27190 /* FMListItemIntroduceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D6E322BAE64800C27190 /* FMListItemIntroduceVC.m */; };
@@ -25,8 +27,8 @@
 		4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */; };
 		4F472D2C229072F600F93D39 /* FMChangeEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */; };
 		4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D2E229073A900F93D39 /* ChangeEmail.xcassets */; };
-		4F472D33229076C900F93D39 /* FMOTPChangeEmailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D31229076C900F93D39 /* FMOTPChangeEmailViewController.m */; };
-		4F472D34229076C900F93D39 /* FMOTPChangeEmailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D32229076C900F93D39 /* FMOTPChangeEmailViewController.xib */; };
+		4F472D33229076C900F93D39 /* FMOTPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D31229076C900F93D39 /* FMOTPViewController.m */; };
+		4F472D34229076C900F93D39 /* FMOTPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D32229076C900F93D39 /* FMOTPViewController.xib */; };
 		4F472D3A22907A9300F93D39 /* FMChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D3822907A9300F93D39 /* FMChangePasswordViewController.m */; };
 		4F472D3B22907A9300F93D39 /* FMChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F472D3922907A9300F93D39 /* FMChangePasswordViewController.xib */; };
 		4F472D402290801B00F93D39 /* FMIntroChangePhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F472D3E2290801B00F93D39 /* FMIntroChangePhoneNumber.m */; };
@@ -114,6 +116,10 @@
 		4FDC204F22A0D9FB003B755C /* CameraShowImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC204D22A0D9FB003B755C /* CameraShowImageCell.m */; };
 		4FDC205022A0D9FB003B755C /* CameraShowImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC204E22A0D9FB003B755C /* CameraShowImageCell.xib */; };
 		4FDC27B422D4FBEA001FFA00 /* FMChangeUserInforViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC27B322D4FBEA001FFA00 /* FMChangeUserInforViewController.xib */; };
+		4FDEEA3F22E45AFC00A72BC1 /* UserInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEEA3E22E45AFC00A72BC1 /* UserInformation.m */; };
+		4FDEEA4A22E4649800A72BC1 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEEA4922E4649800A72BC1 /* UserInfo.m */; };
+		4FDEEA5022E47F2E00A72BC1 /* FMRegisterAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEEA4E22E47F2E00A72BC1 /* FMRegisterAccountViewController.m */; };
+		4FDEEA5122E47F2E00A72BC1 /* FMRegisterAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEEA4F22E47F2E00A72BC1 /* FMRegisterAccountViewController.xib */; };
 		4FEEE6502292F48B00E337F2 /* RegisterPromotionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEE64E2292F48B00E337F2 /* RegisterPromotionCell.m */; };
 		4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149B227EA3EC0063093C /* HistoryBill.m */; };
 		4FF0149F227EEDAB0063093C /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149E227EEDAB0063093C /* Voucher.m */; };
@@ -235,6 +241,10 @@
 		4F00C820227A246C0073B583 /* FMUserInforModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUserInforModel.m; sourceTree = "<group>"; };
 		4F00C822227A2D580073B583 /* FMCellBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCellBlockObject.h; sourceTree = "<group>"; };
 		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
+		4F1BCBD622ECB88100466B51 /* UIImage+Support.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Support.h"; sourceTree = "<group>"; };
+		4F1BCBD722ECB88100466B51 /* UIImage+Support.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Support.m"; sourceTree = "<group>"; };
+		4F1BCBDD22ECED0B00466B51 /* NSDictionary+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helper.h"; sourceTree = "<group>"; };
+		4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Helper.m"; sourceTree = "<group>"; };
 		4F25D6DD22BAE15300C27190 /* FMListItemLocationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMListItemLocationVC.h; sourceTree = "<group>"; };
 		4F25D6DE22BAE15300C27190 /* FMListItemLocationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMListItemLocationVC.m; sourceTree = "<group>"; };
 		4F25D6DF22BAE15300C27190 /* FMListItemLocationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMListItemLocationVC.xib; sourceTree = "<group>"; };
@@ -261,9 +271,9 @@
 		4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMChangeEmailViewController.m; sourceTree = "<group>"; };
 		4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMChangeEmailViewController.xib; sourceTree = "<group>"; };
 		4F472D2E229073A900F93D39 /* ChangeEmail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChangeEmail.xcassets; sourceTree = "<group>"; };
-		4F472D30229076C900F93D39 /* FMOTPChangeEmailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMOTPChangeEmailViewController.h; sourceTree = "<group>"; };
-		4F472D31229076C900F93D39 /* FMOTPChangeEmailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMOTPChangeEmailViewController.m; sourceTree = "<group>"; };
-		4F472D32229076C900F93D39 /* FMOTPChangeEmailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMOTPChangeEmailViewController.xib; sourceTree = "<group>"; };
+		4F472D30229076C900F93D39 /* FMOTPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMOTPViewController.h; sourceTree = "<group>"; };
+		4F472D31229076C900F93D39 /* FMOTPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMOTPViewController.m; sourceTree = "<group>"; };
+		4F472D32229076C900F93D39 /* FMOTPViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMOTPViewController.xib; sourceTree = "<group>"; };
 		4F472D3722907A9300F93D39 /* FMChangePasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMChangePasswordViewController.h; sourceTree = "<group>"; };
 		4F472D3822907A9300F93D39 /* FMChangePasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMChangePasswordViewController.m; sourceTree = "<group>"; };
 		4F472D3922907A9300F93D39 /* FMChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMChangePasswordViewController.xib; sourceTree = "<group>"; };
@@ -392,6 +402,14 @@
 		4FDC204D22A0D9FB003B755C /* CameraShowImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraShowImageCell.m; sourceTree = "<group>"; };
 		4FDC204E22A0D9FB003B755C /* CameraShowImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraShowImageCell.xib; sourceTree = "<group>"; };
 		4FDC27B322D4FBEA001FFA00 /* FMChangeUserInforViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMChangeUserInforViewController.xib; sourceTree = "<group>"; };
+		4FDEEA3D22E45AFC00A72BC1 /* UserInformation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInformation.h; sourceTree = "<group>"; };
+		4FDEEA3E22E45AFC00A72BC1 /* UserInformation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInformation.m; sourceTree = "<group>"; };
+		4FDEEA4822E4649800A72BC1 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		4FDEEA4922E4649800A72BC1 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		4FDEEA4B22E46D0900A72BC1 /* ConstantUserInfor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantUserInfor.h; sourceTree = "<group>"; };
+		4FDEEA4D22E47F2E00A72BC1 /* FMRegisterAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRegisterAccountViewController.h; sourceTree = "<group>"; };
+		4FDEEA4E22E47F2E00A72BC1 /* FMRegisterAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRegisterAccountViewController.m; sourceTree = "<group>"; };
+		4FDEEA4F22E47F2E00A72BC1 /* FMRegisterAccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMRegisterAccountViewController.xib; sourceTree = "<group>"; };
 		4FEEE64D2292F48B00E337F2 /* RegisterPromotionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPromotionCell.h; sourceTree = "<group>"; };
 		4FEEE64E2292F48B00E337F2 /* RegisterPromotionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPromotionCell.m; sourceTree = "<group>"; };
 		4FF0149A227EA3EC0063093C /* HistoryBill.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryBill.h; sourceTree = "<group>"; };
@@ -630,9 +648,9 @@
 		4F472D35229076D400F93D39 /* OTP */ = {
 			isa = PBXGroup;
 			children = (
-				4F472D30229076C900F93D39 /* FMOTPChangeEmailViewController.h */,
-				4F472D31229076C900F93D39 /* FMOTPChangeEmailViewController.m */,
-				4F472D32229076C900F93D39 /* FMOTPChangeEmailViewController.xib */,
+				4F472D30229076C900F93D39 /* FMOTPViewController.h */,
+				4F472D31229076C900F93D39 /* FMOTPViewController.m */,
+				4F472D32229076C900F93D39 /* FMOTPViewController.xib */,
 			);
 			path = OTP;
 			sourceTree = "<group>";
@@ -729,8 +747,10 @@
 		4F50F3A52276EA5B00DF7173 /* CommonFunction */ = {
 			isa = PBXGroup;
 			children = (
-				4F50F3A62276EA5B00DF7173 /* CommonFunction.m */,
+				4F1BCBDD22ECED0B00466B51 /* NSDictionary+Helper.h */,
+				4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */,
 				4F50F3A72276EA5B00DF7173 /* CommonFunction.h */,
+				4F50F3A62276EA5B00DF7173 /* CommonFunction.m */,
 			);
 			path = CommonFunction;
 			sourceTree = "<group>";
@@ -904,7 +924,7 @@
 			path = LocationFavorite;
 			sourceTree = "<group>";
 		};
-		4FBF8AC3228E5DCD001C7B9C /* ChangeUserInfor */ = {
+		4FBF8AC3228E5DCD001C7B9C /* ChangeUserView */ = {
 			isa = PBXGroup;
 			children = (
 				4FF27D9B22D5165B0077A36E /* CustomCheckBox */,
@@ -914,7 +934,7 @@
 				4FDC27B322D4FBEA001FFA00 /* FMChangeUserInforViewController.xib */,
 				4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */,
 			);
-			path = ChangeUserInfor;
+			path = ChangeUserView;
 			sourceTree = "<group>";
 		};
 		4FDACCE1227EF55500A8571E /* Constant */ = {
@@ -1027,6 +1047,47 @@
 				4FDC204E22A0D9FB003B755C /* CameraShowImageCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		4FDEEA3B22E459A100A72BC1 /*  SaveUserInformation */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEEA3C22E45A7A00A72BC1 /* UserInformation */,
+				4FBF8AC3228E5DCD001C7B9C /* ChangeUserView */,
+				4F472D27229072D000F93D39 /* ChangeEmail */,
+				4F472D3622907A6600F93D39 /* ChangePassword */,
+				4F472D3C22907FF500F93D39 /* ChangePhoneNumber */,
+			);
+			path = " SaveUserInformation";
+			sourceTree = "<group>";
+		};
+		4FDEEA3C22E45A7A00A72BC1 /* UserInformation */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEEA3D22E45AFC00A72BC1 /* UserInformation.h */,
+				4FDEEA3E22E45AFC00A72BC1 /* UserInformation.m */,
+			);
+			path = UserInformation;
+			sourceTree = "<group>";
+		};
+		4FDEEA4722E4647C00A72BC1 /* UserInfor */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEEA4822E4649800A72BC1 /* UserInfo.h */,
+				4FDEEA4922E4649800A72BC1 /* UserInfo.m */,
+				4FDEEA4B22E46D0900A72BC1 /* ConstantUserInfor.h */,
+			);
+			path = UserInfor;
+			sourceTree = "<group>";
+		};
+		4FDEEA4C22E47D9C00A72BC1 /* RegisterAccount */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEEA4D22E47F2E00A72BC1 /* FMRegisterAccountViewController.h */,
+				4FDEEA4E22E47F2E00A72BC1 /* FMRegisterAccountViewController.m */,
+				4FDEEA4F22E47F2E00A72BC1 /* FMRegisterAccountViewController.xib */,
+			);
+			path = RegisterAccount;
 			sourceTree = "<group>";
 		};
 		4FEEE64B2292F2EA00E337F2 /* RegisterPromotion */ = {
@@ -1157,6 +1218,7 @@
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4FDEEA4722E4647C00A72BC1 /* UserInfor */,
 				4FF9C3B72290F30300D3AD81 /* Model */,
 				4FF9C3B52290EFF200D3AD81 /* Protocol */,
 				4FDACCE3227EFB9E00A8571E /* ParseJson */,
@@ -1383,6 +1445,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4FDEEA4C22E47D9C00A72BC1 /* RegisterAccount */,
 				5C76FBCC22BFDB0F0006D59D /* Hotline */,
 				5C563DD222B16C62006AB186 /* VouchersSearch */,
 				5CFF9238229B1FC00053A2A5 /* Search */,
@@ -1398,10 +1461,7 @@
 				4FDACCF2227F46E600A8571E /* ListHistoryBill */,
 				4FBD3D7F228D970600E76E2A /* ListHistoryPoint */,
 				4FBD3D98228DBF5C00E76E2A /* LocationFavorite */,
-				4FBF8AC3228E5DCD001C7B9C /* ChangeUserInfor */,
-				4F472D27229072D000F93D39 /* ChangeEmail */,
-				4F472D3622907A6600F93D39 /* ChangePassword */,
-				4F472D3C22907FF500F93D39 /* ChangePhoneNumber */,
+				4FDEEA3B22E459A100A72BC1 /*  SaveUserInformation */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1470,6 +1530,8 @@
 				5C9862A22264DC8100545DCC /* CustomView.swift */,
 				4F2F5B53229C615F0029F188 /* FMButtonNext.h */,
 				4F2F5B54229C615F0029F188 /* FMButtonNext.m */,
+				4F1BCBD622ECB88100466B51 /* UIImage+Support.h */,
+				4F1BCBD722ECB88100466B51 /* UIImage+Support.m */,
 			);
 			path = CustomeView;
 			sourceTree = "<group>";
@@ -1727,7 +1789,7 @@
 				4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
 				4FBD3D9D228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib in Resources */,
-				4F472D34229076C900F93D39 /* FMOTPChangeEmailViewController.xib in Resources */,
+				4F472D34229076C900F93D39 /* FMOTPViewController.xib in Resources */,
 				4F25D6EB22BAEF3C00C27190 /* FMListItemGiftVC.xib in Resources */,
 				5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */,
 				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
@@ -1751,6 +1813,7 @@
 				4FF9C3C62291373200D3AD81 /* FMDetailHistoryViewController.xib in Resources */,
 				4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */,
 				4FF9C3D22291A2BC00D3AD81 /* FMRegisterPromotionViewController.xib in Resources */,
+				4FDEEA5122E47F2E00A72BC1 /* FMRegisterAccountViewController.xib in Resources */,
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
 				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
 				4FF9C3C82291397500D3AD81 /* DetailHistoryBill.xcassets in Resources */,
@@ -1814,30 +1877,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CCBottomRefreshControl/CCBottomRefreshControl.framework",
-				"${BUILT_PRODUCTS_DIR}/CHIPageControl/CHIPageControl.framework",
-				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
-				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/TNCheckBoxGroup/TNCheckBoxGroup.framework",
-				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CCBottomRefreshControl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CHIPageControl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TNCheckBoxGroup.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1895,7 +1939,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F472D33229076C900F93D39 /* FMOTPChangeEmailViewController.m in Sources */,
+				4F472D33229076C900F93D39 /* FMOTPViewController.m in Sources */,
+				4FDEEA3F22E45AFC00A72BC1 /* UserInformation.m in Sources */,
 				5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */,
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
@@ -1909,6 +1954,7 @@
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
 				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
 				4F25D6EA22BAEF3C00C27190 /* FMListItemGiftVC.m in Sources */,
+				4FDEEA5022E47F2E00A72BC1 /* FMRegisterAccountViewController.m in Sources */,
 				4FDC204922A0CF24003B755C /* FMCameraShowImageVC.m in Sources */,
 				4F50F3912276E9A700DF7173 /* FMViewShadow.m in Sources */,
 				5C3910302263492A008BEA62 /* UIButton+AFNetworking.m in Sources */,
@@ -1942,6 +1988,7 @@
 				4FDACD02227F5AA500A8571E /* HistoryBillTableViewCell.m in Sources */,
 				5C127AF722A48D20002ADFE9 /* FZFooterCollectionReusableView.m in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
+				4FDEEA4A22E4649800A72BC1 /* UserInfo.m in Sources */,
 				4F25D6E022BAE15300C27190 /* FMListItemLocationVC.m in Sources */,
 				4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */,
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
@@ -1980,6 +2027,7 @@
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4FEEE6502292F48B00E337F2 /* RegisterPromotionCell.m in Sources */,
 				4FDACD26227FCC7500A8571E /* FMBaseViewController.m in Sources */,
+				4F1BCBDF22ECED0B00466B51 /* NSDictionary+Helper.m in Sources */,
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
 				4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */,
 				4FBD3DA2228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m in Sources */,
@@ -1993,6 +2041,7 @@
 				4FBD3D90228D9C8800E76E2A /* FMHistoryPointModel.m in Sources */,
 				4FBD3D8C228D9A5100E76E2A /* HistoryPointTableViewCell.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
+				4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */,
 				4FF9C3D82291A78800D3AD81 /* RegisterPromotionHeaderCell.m in Sources */,
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				4FB0B27E22B9AA9E00487D66 /* FMPromotionIntroCell.m in Sources */,
@@ -2177,7 +2226,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2203,7 +2252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

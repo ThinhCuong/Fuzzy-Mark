@@ -24,3 +24,4 @@
 #import <SDWebImage/SDWebImage.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Toast/Toast.h>
+#import "UserInfo.h"

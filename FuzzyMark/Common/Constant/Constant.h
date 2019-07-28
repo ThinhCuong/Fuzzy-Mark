@@ -34,3 +34,9 @@ typedef NS_ENUM(NSInteger, CameraPosition) {
 
 /* Value */
 #define NUMBER_ITEM_CALL_API   @50
+
+/* Color */
+#define klineColorNormal            [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0]
+#define klineColorSuccess           [UIColor colorWithRed:0.161 green:0.631 blue:0.612 alpha:1.0]
+#define klineColorError             [UIColor colorWithRed:1.0 green:0.086 blue:0.117 alpha:1.0]
+

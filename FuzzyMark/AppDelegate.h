@@ -16,7 +16,8 @@
 #import "FMRegisterPromotionViewController.h"
 #import "FZSearchViewController.h"
 
-API_AVAILABLE(ios(10.0))
+#define appDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

@@ -1,5 +1,5 @@
 //
-//  FMOTPChangeEmailViewController.h
+//  FMChangeEmailViewController.h
 //  FuzzyMark
 //
 //  Created by Tu Tran on 5/19/19.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMOTPChangeEmailViewController : UIViewController
+@interface FMChangeEmailViewController : FMBaseViewController
 
 @end
 

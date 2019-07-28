@@ -1,8 +1,8 @@
 //
-//  FMChangeEmailViewController.h
+//  FMRegisterAccountViewController.h
 //  FuzzyMark
 //
-//  Created by Tu Tran on 5/19/19.
+//  Created by Tu Tran on 7/21/19.
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMChangeEmailViewController : UIViewController
+@interface FMRegisterAccountViewController : FMBaseViewController
 
 @end
 
