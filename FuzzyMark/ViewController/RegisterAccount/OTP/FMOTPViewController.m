@@ -147,7 +147,7 @@
     [CommonFunction showLoadingView];
     [_httpClient postDataWithPath:@"user/resend-otp" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
-        if (![success isKindOfClass:NSDictionary.class]) {
+        if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
                 self.lbTitle.attributedText = self->_attributedString;
             } else {
