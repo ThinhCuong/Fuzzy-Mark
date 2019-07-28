@@ -21,6 +21,29 @@
     [UserInfo resetIntergerNSUserDefaultWithKey:USER_HISTORY_COUNT];
 }
 
++ (void)setUserInforWithUserModel:(UserInformation *) userModel {
+    [UserInfo setUserID:userModel.user_view.idUser];
+    [UserInfo setUserName:userModel.user_view.name];
+    [UserInfo setUserEmail:userModel.email];
+    [UserInfo setUserAvatar:userModel.user_view.avatar];
+    [UserInfo setUserPhone:userModel.phone];
+    [UserInfo setUserPointReward:userModel.point_reward];
+    [UserInfo setUserHistoryCount:userModel.history_count];
+    [UserInfo setUserToken:userModel.token];
+}
++ (UserInformation *)getUserInforModel {
+    UserInformation *userModel = [UserInformation new];
+    userModel.user_view.idUser = [UserInfo getUserID];
+    userModel.user_view.name = [UserInfo getUserName];
+    userModel.user_view.avatar = [UserInfo getUserAvatar];
+    userModel.email = [UserInfo getUserEmail];
+    userModel.phone = [UserInfo getUserPhone];
+    userModel.point_reward = [UserInfo getUserPointReward];
+    userModel.history_count = [UserInfo getUserHistoryCount];
+    userModel.token = [UserInfo getUserToken];
+    return userModel;
+}
+
 + (void)setUserID:(NSInteger) userID {
     [UserInfo setIntergerNSUserDefaultsWithInterger:userID andKey:USER_ID];
 }
@@ -78,11 +101,17 @@
 }
 
 + (void)setStringNSUserDefaultsWithString:(NSString *) string andKey:(NSString *) key {
+    if (key.length == 0) {
+        key = @"";
+    }
     [[NSUserDefaults standardUserDefaults] setObject:string forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 + (NSString *)getStringNSUserDefaultsWithKey:(NSString *) key {
     NSString *reg = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+    if (reg.length == 0) {
+        reg = @"";
+    }
     return reg;
 }
 + (void)resetStringNSUserDefaultWithKey:(NSString *) key {

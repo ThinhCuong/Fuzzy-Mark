@@ -134,6 +134,8 @@
 		4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD87227BEC230008BA69 /* Camera.xcassets */; };
 		4FF44BDC22B690E600604202 /* FMPromotionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF44BDB22B690E600604202 /* FMPromotionDetailModel.m */; };
 		4FF5AF2722B7EC6C009A613E /* VoucherInfoJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */; };
+		4FF727FB22ED544A000C8AB8 /* FMInputEmailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727F922ED544A000C8AB8 /* FMInputEmailVC.m */; };
+		4FF727FC22ED544A000C8AB8 /* FMInputEmailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF727FA22ED544A000C8AB8 /* FMInputEmailVC.xib */; };
 		4FF9C3BA2290F31F00D3AD81 /* FMBaseTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */; };
 		4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BB2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib */; };
 		4FF9C3BF22910A7600D3AD81 /* HistoryBillHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3BE22910A7600D3AD81 /* HistoryBillHeaderCell.m */; };
@@ -435,6 +437,9 @@
 		4FF44BDB22B690E600604202 /* FMPromotionDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionDetailModel.m; sourceTree = "<group>"; };
 		4FF5AF2522B7EC6C009A613E /* VoucherInfoJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoucherInfoJsonModel.h; sourceTree = "<group>"; };
 		4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoucherInfoJsonModel.m; sourceTree = "<group>"; };
+		4FF727F822ED544A000C8AB8 /* FMInputEmailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMInputEmailVC.h; sourceTree = "<group>"; };
+		4FF727F922ED544A000C8AB8 /* FMInputEmailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMInputEmailVC.m; sourceTree = "<group>"; };
+		4FF727FA22ED544A000C8AB8 /* FMInputEmailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMInputEmailVC.xib; sourceTree = "<group>"; };
 		4FF9C3B62290F05000D3AD81 /* FMUpdateTableDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMUpdateTableDataProtocol.h; sourceTree = "<group>"; };
 		4FF9C3B82290F31F00D3AD81 /* FMBaseTableViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseTableViewModel.h; sourceTree = "<group>"; };
 		4FF9C3B92290F31F00D3AD81 /* FMBaseTableViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseTableViewModel.m; sourceTree = "<group>"; };
@@ -639,7 +644,6 @@
 				4F472D28229072F600F93D39 /* FMChangeEmailViewController.h */,
 				4F472D29229072F600F93D39 /* FMChangeEmailViewController.m */,
 				4F472D2A229072F600F93D39 /* FMChangeEmailViewController.xib */,
-				4F472D35229076D400F93D39 /* OTP */,
 				4F472D2E229073A900F93D39 /* ChangeEmail.xcassets */,
 			);
 			path = ChangeEmail;
@@ -1086,6 +1090,10 @@
 				4FDEEA4D22E47F2E00A72BC1 /* FMRegisterAccountViewController.h */,
 				4FDEEA4E22E47F2E00A72BC1 /* FMRegisterAccountViewController.m */,
 				4FDEEA4F22E47F2E00A72BC1 /* FMRegisterAccountViewController.xib */,
+				4FF727F822ED544A000C8AB8 /* FMInputEmailVC.h */,
+				4FF727F922ED544A000C8AB8 /* FMInputEmailVC.m */,
+				4FF727FA22ED544A000C8AB8 /* FMInputEmailVC.xib */,
+				4F472D35229076D400F93D39 /* OTP */,
 			);
 			path = RegisterAccount;
 			sourceTree = "<group>";
@@ -1821,6 +1829,7 @@
 				4F45EEFC229EADBA004556F9 /* FMIntroCameraViewController.xib in Resources */,
 				4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */,
 				5CFF923D229B1FE10053A2A5 /* FZSearchViewController.xib in Resources */,
+				4FF727FC22ED544A000C8AB8 /* FMInputEmailVC.xib in Resources */,
 				5C9862B42264E4BE00545DCC /* FZItemMenuHomeTableViewCell.xib in Resources */,
 				4FDACD0F227F5D5B00A8571E /* HistoryBillFooterCell.xib in Resources */,
 				4FDACD03227F5AA500A8571E /* HistoryBillTableViewCell.xib in Resources */,
@@ -2027,6 +2036,7 @@
 				5C39102E2263492A008BEA62 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4FEEE6502292F48B00E337F2 /* RegisterPromotionCell.m in Sources */,
 				4FDACD26227FCC7500A8571E /* FMBaseViewController.m in Sources */,
+				4FF727FB22ED544A000C8AB8 /* FMInputEmailVC.m in Sources */,
 				4F1BCBDF22ECED0B00466B51 /* NSDictionary+Helper.m in Sources */,
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
 				4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */,

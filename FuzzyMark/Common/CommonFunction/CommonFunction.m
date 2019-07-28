@@ -44,11 +44,11 @@
 
 @implementation UIFont (CustomFont)
 + (UIFont*)setFontLightMuliWithSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:@"Muli" size:fontSize];
+    return [UIFont fontWithName:@"Muli-Light" size:fontSize];
 }
 
 + (UIFont*)setFontMuliWithSize:(CGFloat)fontSize {
-    return [UIFont fontWithName:@"Muli-Regular" size:fontSize];
+    return [UIFont fontWithName:@"Muli" size:fontSize];
 }
 
 + (UIFont*)setMediumFontMuliWithSize:(CGFloat)fontSize {

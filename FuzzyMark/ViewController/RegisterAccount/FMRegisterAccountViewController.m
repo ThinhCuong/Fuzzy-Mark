@@ -23,9 +23,21 @@
 
 @implementation FMRegisterAccountViewController {
     BaseCallApi *_httpClient;
+    UserInformation *_userModel;
 }
 
 #pragma mark - life cycle
+- (instancetype)initWithUser:(UserInformation *) userModel {
+    self = [super init];
+    if (self) {
+        _userModel = userModel;
+        if (!_userModel) {
+            _userModel = [[UserInformation alloc] init];
+        }
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -45,6 +57,17 @@
                                                object:nil];
     _tapCloseKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboart)];
     _httpClient = [BaseCallApi defaultInitWithBaseURL];
+    _tfEmail.text = _userModel.email ?: @"";
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.clipsToBounds = NO;
 }
 
 - (void)dealloc
@@ -53,6 +76,13 @@
 }
 
 #pragma mark - private
+- (void)setNavigationBar {
+    self.navigationItem.title = @"";
+    self.navigationController.navigationBar.topItem.title = @"";
+    self.isHideNavigationBar = NO;
+    self.navigationController.navigationBar.clipsToBounds = YES;
+}
+
 - (BOOL)validateNameWithString:(NSString *) name {
     return name.length > 0;
 }
@@ -113,6 +143,9 @@
 
 #pragma mark - IBAction
 - (IBAction)didSelectButtonSuccess:(id)sender {
+    _userModel.email = _tfEmail.text;
+    _userModel.user_view.name = _tfFullName.text;
+    
     NSDictionary *params = @{@"email": _tfEmail.text,
                              @"full_name": _tfFullName.text,
                              @"password": _tfPassword.text
@@ -122,7 +155,7 @@
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
-                [self showOTP];
+                [self saveDataRegisterSuccess];
             } else {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
@@ -136,10 +169,10 @@
 - (IBAction)didSelectShowPassword:(id)sender {
     if(_tfPassword.isSecureTextEntry) {
         _tfPassword.secureTextEntry = NO;
-        [_btnShowPass setTitle:@"HIỆN" forState:UIControlStateNormal];
+        [_btnShowPass setTitle:@"ẨN" forState:UIControlStateNormal];
     } else {
         _tfPassword.secureTextEntry = YES;
-        [_btnShowPass setTitle:@"ẨN" forState:UIControlStateNormal];
+        [_btnShowPass setTitle:@" " forState:UIControlStateNormal];
     }
 }
 
@@ -148,10 +181,9 @@
      _btnSuccess.enabled = [self enableButtonSuccess];
 }
 
-- (void)showOTP {
-    FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:nil];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)saveDataRegisterSuccess {
+    [UserInfo setUserInforWithUserModel:_userModel];
+    self.registerSuccess ? self.registerSuccess() : 0;
 }
 
 @end

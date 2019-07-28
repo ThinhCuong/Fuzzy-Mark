@@ -26,6 +26,11 @@ typedef NS_ENUM(NSInteger, CameraPosition) {
     CameraPositionRear
 };
 
+typedef NS_ENUM(NSInteger, OTPType) {
+    OTPTypeRegister,
+    OTPTypeReset
+};
+
 /* Name API */
 #define GET_HISTORIES_CAPTURE                @"user/histories-capture"
 #define GET_USER_NOTIFICATIONS               @"user/notifications"
