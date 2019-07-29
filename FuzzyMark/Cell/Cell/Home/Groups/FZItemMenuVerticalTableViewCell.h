@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FZHomeJsonModel.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *groupInfoDescriptionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *percenDiscountLabel;
 
-- (void)bindData:(FZGroupInfoJsonModel *)groupInfo;
+- (void)bindData:(RewardObject *)groupInfo;
 
 @end
 

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "FZHomeJsonModel.h"
+#import "FZHomeObject.h"
 
 typedef NS_ENUM(NSUInteger, SuportList) {
     Category = 0,
@@ -38,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
 @property (assign, nonatomic) id<FZMenuHomeTableViewDelegate> delegate;
-- (void)bindData:(FZHomeJsonModel *)homeData;
+- (void)bindData:(FZHomeObject *)homeData;
 
 @end
 

@@ -11,8 +11,8 @@
 #import "FZItemMenuVerticalTableViewCell.h"
 
 @interface FZItemMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate> {
-    NSArray<FZGroupInfoJsonModel> *_listVoucherVertical;
-    NSArray<FZGroupInfoJsonModel> *_listVoucherHorizontal;
+    NSArray<RewardObject *> *_listVoucherVertical;
+    NSArray<RewardObject *> *_listVoucherHorizontal;
 }
 
 @property (strong, nonatomic) IBOutlet UICollectionView *menuCollectionView;
@@ -38,7 +38,7 @@
     self.tableView.delegate = self;
 }
 
-- (void)bindData:(NSArray<FZGroupInfoJsonModel> *)listVoucherVertical listVoucherHorizontal:(NSArray<FZGroupInfoJsonModel> *)listVoucherHorizontal {
+- (void)bindData:(NSArray<RewardObject *> *)listVoucherVertical listVoucherHorizontal:(NSArray<RewardObject *> *)listVoucherHorizontal {
     _listVoucherVertical = listVoucherVertical;
     _listVoucherHorizontal = listVoucherHorizontal;
     _heightOfTableView.constant = 95 * listVoucherVertical.count;

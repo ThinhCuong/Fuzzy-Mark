@@ -10,7 +10,7 @@
 #import "FZBannerCollectionViewCell.h"
 
 @interface FZMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
-    NSArray<FZBannerModel> *_listBanner;
+    NSArray<BannerObject *> *_listBanner;
     
 }
 
@@ -41,10 +41,10 @@
     // Configure the view for the selected state
 }
 
-- (void)bindData:(FZHomeJsonModel *)homeData {
+- (void)bindData:(FZHomeObject *)homeData {
     _listBanner = homeData.banners;
-    FZFixedAdsJsonModel *temp = homeData.fixed_ads[0];
-    [self.fixadImage sd_setImageWithURL:[NSURL URLWithString:temp.image]];
+    FixedAdsObject *temp = homeData.fixedAds[0];
+    [self.fixadImage sd_setImageWithURL:[NSURL URLWithString:temp.imageAds]];
     [self.bannerCollectionView reloadData];
     [self stopTimer];
     [self startTimer];

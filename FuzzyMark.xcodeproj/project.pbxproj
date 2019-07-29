@@ -190,6 +190,7 @@
 		5C6BFAEB225D668800A26400 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAEA225D668800A26400 /* main.m */; };
 		5C6BFAF5225D668900A26400 /* FuzzyMarkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAF4225D668900A26400 /* FuzzyMarkTests.m */; };
 		5C6BFB00225D668900A26400 /* FuzzyMarkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */; };
+		5C714FD322ED601600D20A2B /* FZHomeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C714FD222ED601600D20A2B /* FZHomeObject.m */; };
 		5C76FBCA22BFDB080006D59D /* FZHotlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76FBC822BFDB080006D59D /* FZHotlineViewController.m */; };
 		5C76FBCB22BFDB080006D59D /* FZHotlineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76FBC922BFDB080006D59D /* FZHotlineViewController.xib */; };
 		5C76FBD122BFE1870006D59D /* MVHotlineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76FBCF22BFE1870006D59D /* MVHotlineCollectionViewCell.m */; };
@@ -538,6 +539,8 @@
 		5C6BFAFB225D668900A26400 /* FuzzyMarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzzyMarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAFF225D668900A26400 /* FuzzyMarkUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuzzyMarkUITests.m; sourceTree = "<group>"; };
 		5C6BFB01225D668900A26400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C714FD122ED601600D20A2B /* FZHomeObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeObject.h; sourceTree = "<group>"; };
+		5C714FD222ED601600D20A2B /* FZHomeObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeObject.m; sourceTree = "<group>"; };
 		5C76FBC722BFDB080006D59D /* FZHotlineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHotlineViewController.h; sourceTree = "<group>"; };
 		5C76FBC822BFDB080006D59D /* FZHotlineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHotlineViewController.m; sourceTree = "<group>"; };
 		5C76FBC922BFDB080006D59D /* FZHotlineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHotlineViewController.xib; sourceTree = "<group>"; };
@@ -1039,6 +1042,8 @@
 				5C9862882264CBE700545DCC /* FZHomeModel.m */,
 				5C61443E227FDF2600582AF7 /* FZHomeJsonModel.h */,
 				5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */,
+				5C714FD122ED601600D20A2B /* FZHomeObject.h */,
+				5C714FD222ED601600D20A2B /* FZHomeObject.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -2064,6 +2069,7 @@
 				4FF9C3D12291A2BC00D3AD81 /* FMRegisterPromotionViewController.m in Sources */,
 				4FF5AF2722B7EC6C009A613E /* VoucherInfoJsonModel.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
+				5C714FD322ED601600D20A2B /* FZHomeObject.m in Sources */,
 				4F27544522931E870086A46C /* FMCameraModel.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4FDACD0B227F5D2500A8571E /* HistoryBillFooterCell.m in Sources */,

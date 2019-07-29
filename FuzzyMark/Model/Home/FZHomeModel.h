@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FZHomeViewController.h"
 #import "FZHomeJsonModel.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) FZHomeViewController *homeViewController;
 
-- (void)bindData:(FZHomeJsonModel *)homeData;
+- (void)bindData:(FZHomeObject *)homeData;
 
 @end
 
