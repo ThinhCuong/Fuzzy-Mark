@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMUserInforModel : NSObject
 - (void)loadData;
+- (void)uploadAvatar:(UIImage *) avatar withSuccessBlock:(void (^) (BOOL)) successBlock;
 @property (assign, nonatomic ) id<FMUserInforDelegate> delegate;
 
 @end

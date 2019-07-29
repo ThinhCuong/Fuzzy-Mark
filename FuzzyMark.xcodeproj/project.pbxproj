@@ -22,6 +22,7 @@
 		4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B54229C615F0029F188 /* FMButtonNext.m */; };
 		4F35FDCC22EF478B00F79B45 /* FMLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */; };
 		4F35FDCD22EF478B00F79B45 /* FMLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */; };
+		4F35FDD222EF8A3B00F79B45 /* FMChoicePictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDD022EF8A3B00F79B45 /* FMChoicePictureModel.m */; };
 		4F45EEFB229EADBA004556F9 /* FMIntroCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */; };
 		4F45EEFC229EADBA004556F9 /* FMIntroCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */; };
 		4F45EF01229EB22B004556F9 /* FMIntroCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEFF229EB22B004556F9 /* FMIntroCameraCell.m */; };
@@ -274,6 +275,8 @@
 		4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLoginCell.m; sourceTree = "<group>"; };
 		4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMLoginCell.xib; sourceTree = "<group>"; };
 		4F35FDCE22EF849100F79B45 /* FuzzyMark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FuzzyMark.entitlements; sourceTree = "<group>"; };
+		4F35FDD022EF8A3B00F79B45 /* FMChoicePictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChoicePictureModel.m; sourceTree = "<group>"; };
+		4F35FDD122EF8A3B00F79B45 /* FMChoicePictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMChoicePictureModel.h; sourceTree = "<group>"; };
 		4F45EEF8229EADBA004556F9 /* FMIntroCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMIntroCameraViewController.h; sourceTree = SOURCE_ROOT; };
 		4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMIntroCameraViewController.m; sourceTree = SOURCE_ROOT; };
 		4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMIntroCameraViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -647,6 +650,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		4F35FDCF22EF8A1000F79B45 /* ChooseImage */ = {
+			isa = PBXGroup;
+			children = (
+				4F35FDD122EF8A3B00F79B45 /* FMChoicePictureModel.h */,
+				4F35FDD022EF8A3B00F79B45 /* FMChoicePictureModel.m */,
+			);
+			path = ChooseImage;
+			sourceTree = "<group>";
+		};
 		4F45EEFD229EB1F7004556F9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -721,6 +733,7 @@
 		4F50F3602276E9A700DF7173 /* UserInfor */ = {
 			isa = PBXGroup;
 			children = (
+				4F35FDCF22EF8A1000F79B45 /* ChooseImage */,
 				4F50F3F12276EBE000DF7173 /* UserInforCell */,
 				4F50F3712276E9A700DF7173 /* FMUserInforViewController.h */,
 				4F50F3612276E9A700DF7173 /* FMUserInforViewController.m */,
@@ -2007,6 +2020,7 @@
 				4FDEEA3F22E45AFC00A72BC1 /* UserInformation.m in Sources */,
 				5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */,
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
+				4F35FDD222EF8A3B00F79B45 /* FMChoicePictureModel.m in Sources */,
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
 				4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */,

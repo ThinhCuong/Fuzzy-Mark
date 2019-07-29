@@ -17,6 +17,7 @@
 #import "FMInputEmailVC.h"
 #import "FMLoginAccountViewController.h"
 #import "FMLoginCell.h"
+#import "FMChoicePictureModel.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol, FMUserInforDelegate, FMLoginCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -26,6 +27,7 @@
 @implementation FMUserInforViewController {
     NSArray <NSArray *> *_listMenuBlock;
     UserInformation *_userInfo;
+    FMChoicePictureModel *modelImg;
 }
 
 #pragma mark - lifeCycle
@@ -78,7 +80,6 @@
 - (void)showToastInviteLogin {
     [CommonFunction showToast:@"Đăng nhập để sử dụng tính năng này"];
 }
-
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -217,26 +218,55 @@
 
 #pragma mark - FMUserInforTableViewCellProtocol
 - (void)didSelectButtonHistory {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
     FMHistoryBillViewController *vc = [[FMHistoryBillViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didSelectButtonPoint {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
     FMHistoryPointViewController *vc = [[FMHistoryPointViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didSelectButtonAddImageUser {
-    
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
+    if (!modelImg) {
+        modelImg = [[FMChoicePictureModel alloc] init];
+    }
+    __block FMUserInforViewController *blockSelf = self;
+    [modelImg showOptionsCameraAndLibrary:self selectedImage:^(id _Nonnull selectedImg) {
+        if(selectedImg) {
+            [blockSelf.model uploadAvatar:selectedImg withSuccessBlock:^(BOOL isSuccess) {
+                if (isSuccess) {
+                    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+                    [self reloadTableViewWithIndexSet:indexSet];
+                }
+            }];
+        }
+    }];
 }
 
 - (void)didSelectEmailView {
-    
+    return;
 }
 
 - (void)didSelectPhoneView {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
     
 }
 

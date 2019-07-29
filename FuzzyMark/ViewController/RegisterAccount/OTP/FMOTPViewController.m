@@ -8,7 +8,6 @@
 
 #import "FMOTPViewController.h"
 #import "FuzzyMark-Swift.h"
-#import "NSDictionary+Helper.h"
 
 @interface FMOTPViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet TJTextField *tfFirst;
@@ -154,11 +153,11 @@
                 self.lbTitle.attributedText = [self getAttributedErrorWithString:[success stringForKey:@"errorCode"]];
             }
         } else {
-            self.lbTitle.attributedText = [self getAttributedErrorWithString:@"Có lỗi xẩy ra vui lòng thử sau!"];
+            self.lbTitle.attributedText = [self getAttributedErrorWithString:kMessageError];
         }
     } withFailBlock:^(id fail) {
         [CommonFunction hideLoadingView];
-        self.lbTitle.attributedText = [self getAttributedErrorWithString:@"Có lỗi xẩy ra vui lòng thử lại!"];
+        self.lbTitle.attributedText = [self getAttributedErrorWithString:kMessageError];
     }];
 }
 

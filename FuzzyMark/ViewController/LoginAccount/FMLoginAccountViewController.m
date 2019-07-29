@@ -8,7 +8,6 @@
 
 #import "FMLoginAccountViewController.h"
 #import "FuzzyMark-Swift.h"
-#import "NSDictionary+Helper.h"
 #import "UserInformation.h"
 #import "FMInputEmailVC.h"
 
@@ -113,11 +112,11 @@
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
         } else {
-            [CommonFunction showToast:@"Có lỗi xẩy ra vui lòng thử lại sau"];
+            [CommonFunction showToast:kMessageError];
         }
     } withFailBlock:^(id fail) {
         [CommonFunction hideLoadingView];
-        [CommonFunction showToast:@"Có lỗi xẩy ra vui lòng thử lại sau"];
+        [CommonFunction showToast:kMessageError];
     }];
 }
 

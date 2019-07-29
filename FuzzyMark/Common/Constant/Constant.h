@@ -45,6 +45,10 @@ typedef NS_ENUM(NSInteger, OTPType) {
 #define klineColorNormal                            [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:1.0]
 #define klineColorSuccess                           [UIColor colorWithRed:0.161 green:0.631 blue:0.612 alpha:1.0]
 #define klineColorError                             [UIColor colorWithRed:1.0 green:0.086 blue:0.117 alpha:1.0]
+#define UIColorFromRGBA(r, g, b, a)                 [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 /* Notication */
-#define kNotificationCenterChangeStatusUser       @"NotificationCenterChangeStatusUser"
+#define kNotificationCenterChangeStatusUser         @"NotificationCenterChangeStatusUser"
+
+/* String */
+#define kMessageError                               @"Có lỗi xẩy ra, vui lòng thử lại sau"

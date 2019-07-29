@@ -8,7 +8,6 @@
 
 #import "FMRegisterAccountViewController.h"
 #import "FuzzyMark-Swift.h"
-#import "NSDictionary+Helper.h"
 #import "FMOTPViewController.h"
 
 @interface FMRegisterAccountViewController () <UITextFieldDelegate>
