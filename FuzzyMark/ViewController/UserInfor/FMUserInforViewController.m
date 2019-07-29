@@ -140,9 +140,9 @@
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return 4;
+        return _listMenuBlock[0].count;
     } else if (section == 2) {
-        return 2;
+        return _listMenuBlock[1].count;
     } else {
         return 0;
     }

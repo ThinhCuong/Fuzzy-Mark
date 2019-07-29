@@ -63,20 +63,20 @@
                             <constraint firstAttribute="trailing" secondItem="G3o-tx-ewv" secondAttribute="trailing" id="fn1-JV-tre"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nguyễn Văn Khách" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hq-7n-j8K">
-                        <rect key="frame" x="139" y="158" width="128.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hq-7n-j8K">
+                        <rect key="frame" x="195.5" y="158" width="15.5" height="21"/>
                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l4Z-Cg-CgO">
-                        <rect key="frame" x="143" y="201" width="120.5" height="18"/>
+                        <rect key="frame" x="148.5" y="201" width="109" height="18"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_telephone" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-Wo-RDB">
                                 <rect key="frame" x="0.0" y="0.0" width="13" height="18"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(024) 8880 8888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCD-48-Vjl">
-                                <rect key="frame" x="23" y="0.0" width="97.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chưa cập nhật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCD-48-Vjl">
+                                <rect key="frame" x="23" y="0.0" width="86" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                 <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -84,13 +84,13 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hRT-dW-HRM">
-                        <rect key="frame" x="118" y="228" width="170" height="18"/>
+                        <rect key="frame" x="148.5" y="228" width="109" height="18"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_letter" translatesAutoresizingMaskIntoConstraints="NO" id="JeS-2g-0Qg">
                                 <rect key="frame" x="0.0" y="0.0" width="13" height="18"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nguyenkhach@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-3I-I1r">
-                                <rect key="frame" x="23" y="0.0" width="147" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chưa cập nhật" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-3I-I1r">
+                                <rect key="frame" x="23" y="0.0" width="86" height="18"/>
                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                 <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -104,13 +104,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="152" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="abY-I1-epW">
-                                        <rect key="frame" x="35" y="12" width="82" height="27"/>
+                                        <rect key="frame" x="52" y="12" width="48.5" height="27"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bill" translatesAutoresizingMaskIntoConstraints="NO" id="jdO-C5-O5m">
                                                 <rect key="frame" x="0.0" y="1.5" width="24" height="24"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1002" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLp-PV-4yD">
-                                                <rect key="frame" x="37" y="0.0" width="45" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLp-PV-4yD">
+                                                <rect key="frame" x="37" y="0.0" width="11.5" height="27"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
                                                 <color key="textColor" red="0.92156862745098034" green="0.55294117647058827" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -159,13 +159,13 @@
                                 <rect key="frame" x="160" y="0.0" width="152" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="syN-CP-iaR">
-                                        <rect key="frame" x="21.5" y="12" width="109.5" height="27"/>
+                                        <rect key="frame" x="52" y="12" width="48.5" height="27"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_diamond" translatesAutoresizingMaskIntoConstraints="NO" id="L91-gj-lPB">
                                                 <rect key="frame" x="0.0" y="1.5" width="24" height="24"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-Vu-A7E">
-                                                <rect key="frame" x="37" y="0.0" width="72.5" height="27"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-Vu-A7E">
+                                                <rect key="frame" x="37" y="0.0" width="11.5" height="27"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
                                                 <color key="textColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -278,6 +278,7 @@
                 <outlet property="lblPhone" destination="yCD-48-Vjl" id="MAi-ap-giq"/>
                 <outlet property="lblPoint" destination="aGq-Vu-A7E" id="HAB-u4-llR"/>
                 <outlet property="lblUserName" destination="1Hq-7n-j8K" id="zsc-ef-UQc"/>
+                <outlet property="viewLogin" destination="RVp-Eo-rsi" id="f9T-XM-fLn"/>
             </connections>
             <point key="canvasLocation" x="208.125" y="63.908450704225352"/>
         </tableViewCell>

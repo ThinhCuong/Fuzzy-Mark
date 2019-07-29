@@ -41,22 +41,22 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kRu-Lx-aX1">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="529.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="509.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ĐĂNG KÝ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqU-lO-nZ4">
-                                    <rect key="frame" x="173.5" y="20" width="64.5" height="21"/>
+                                    <rect key="frame" x="173.5" y="0.0" width="64.5" height="21"/>
                                     <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng nhập họ tên và mật khẩu để hoàn tất đăng ký" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-cN-AX5">
-                                    <rect key="frame" x="29.5" y="57" width="364.5" height="21"/>
+                                    <rect key="frame" x="29.5" y="37" width="364.5" height="21"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="imo-Hc-CPj">
-                                    <rect key="frame" x="19" y="93" width="373" height="72.5"/>
+                                    <rect key="frame" x="19" y="73" width="373" height="72.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chú ý: Nhập đúng tên thật. Chúng tôi sẽ đối chiếu thông tin này với thông tin in trên hoá đơn mua sắm khi xét duyệt hoàn tiền." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuC-0s-5WM">
                                             <rect key="frame" x="11" y="9" width="349" height="53.5"/>
@@ -79,13 +79,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz6-Wa-rgB">
-                                    <rect key="frame" x="28" y="189.5" width="30.5" height="15"/>
+                                    <rect key="frame" x="28" y="169.5" width="30.5" height="15"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Nhập Email" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-qb-gyk" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
-                                    <rect key="frame" x="28" y="210.5" width="366" height="30"/>
+                                    <rect key="frame" x="28" y="190.5" width="366" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="uax-O0-VLM"/>
                                     </constraints>
@@ -102,13 +102,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HỌ &amp; TÊN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zW-As-xdl">
-                                    <rect key="frame" x="28" y="256.5" width="48" height="15"/>
+                                    <rect key="frame" x="28" y="236.5" width="48" height="15"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Nhập Họ và Tên" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8l8-Xt-CXC" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
-                                    <rect key="frame" x="28" y="277.5" width="366" height="30"/>
+                                    <rect key="frame" x="28" y="257.5" width="366" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="dmV-Od-xN2"/>
                                     </constraints>
@@ -125,13 +125,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MẬT KHẨU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE9-g0-sl9">
-                                    <rect key="frame" x="28" y="323.5" width="52" height="15"/>
+                                    <rect key="frame" x="28" y="303.5" width="52" height="15"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Nhập Mật Khẩu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fon-aO-vpQ" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
-                                    <rect key="frame" x="28" y="344.5" width="366" height="30"/>
+                                    <rect key="frame" x="28" y="324.5" width="366" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="518-1b-iEi"/>
                                     </constraints>
@@ -148,7 +148,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pwG-0x-LTh">
-                                    <rect key="frame" x="363" y="344.5" width="31" height="30"/>
+                                    <rect key="frame" x="363" y="324.5" width="31" height="30"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                     <state key="normal" title="HIỆN"/>
                                     <connections>
@@ -156,13 +156,13 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NHẬP LẠI MẬT KHẨU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df9-ch-or7">
-                                    <rect key="frame" x="28" y="390.5" width="102" height="15"/>
+                                    <rect key="frame" x="28" y="370.5" width="102" height="15"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                                     <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" placeholder="Xác nhận mật khẩu" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ujg-KY-z0F" customClass="TJTextField" customModule="FuzzyMark" customModuleProvider="target">
-                                    <rect key="frame" x="28" y="411.5" width="366" height="30"/>
+                                    <rect key="frame" x="28" y="391.5" width="366" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="hdk-RY-sf0"/>
                                     </constraints>
@@ -179,7 +179,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWf-2P-IJQ" customClass="FMButtonNext">
-                                    <rect key="frame" x="16" y="465.5" width="379" height="44"/>
+                                    <rect key="frame" x="16" y="445.5" width="379" height="44"/>
                                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="C7D-lc-dkJ"/>
@@ -223,7 +223,7 @@
                                 <constraint firstItem="Ujg-KY-z0F" firstAttribute="leading" secondItem="kRu-Lx-aX1" secondAttribute="leading" constant="28" id="bi9-gc-trc"/>
                                 <constraint firstItem="Uz6-Wa-rgB" firstAttribute="top" secondItem="imo-Hc-CPj" secondAttribute="bottom" constant="24" id="dlA-5s-XZn"/>
                                 <constraint firstItem="eqU-lO-nZ4" firstAttribute="centerX" secondItem="kRu-Lx-aX1" secondAttribute="centerX" constant="-1.25" id="k93-ud-tKN"/>
-                                <constraint firstItem="eqU-lO-nZ4" firstAttribute="top" secondItem="kRu-Lx-aX1" secondAttribute="top" constant="20" id="nac-vB-5nv"/>
+                                <constraint firstItem="eqU-lO-nZ4" firstAttribute="top" secondItem="kRu-Lx-aX1" secondAttribute="top" id="nac-vB-5nv"/>
                                 <constraint firstItem="mE9-g0-sl9" firstAttribute="top" secondItem="8l8-Xt-CXC" secondAttribute="bottom" constant="16" id="o5l-BZ-fmB"/>
                                 <constraint firstItem="imo-Hc-CPj" firstAttribute="top" secondItem="7fO-cN-AX5" secondAttribute="bottom" constant="15" id="vCV-mQ-gTf"/>
                                 <constraint firstAttribute="trailing" secondItem="7fO-cN-AX5" secondAttribute="trailing" constant="20" id="wdE-an-Cys"/>

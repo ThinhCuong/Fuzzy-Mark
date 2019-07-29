@@ -58,8 +58,6 @@
     return name.length > 0;
 }
 
-
-
 - (void)textfieldDidChange:(UITextField *) sender {
     [self changeStateTextField:sender];
     _btnSuccess.enabled = [self enableButtonSuccess];
@@ -83,6 +81,10 @@
     BOOL isValidaName = [self validateNameWithString:_tfName.text];
     BOOL isValidaPassword = [self validatePasswordWithString:_tfPassword.text];
     return (isValidaName && isValidaPassword);
+}
+
+- (void)saveDataLoginSuccess:(UserInformation *) userInfo {
+    [UserInfo setUserInforWithUserModel:userInfo];
 }
 
 #pragma mark - IBAction
@@ -114,16 +116,16 @@
     }];
 }
 
-- (void)saveDataLoginSuccess:(UserInformation *) userInfo {
-    [UserInfo setUserInforWithUserModel:userInfo];
-}
-
 - (IBAction)didSelectRegister:(id)sender {
     FMInputEmailVC *vc = [[FMInputEmailVC alloc] init];
     vc.registerSuccess = ^{
         [self dismissViewControllerAnimated:YES completion:nil];
     };
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)didSelectForgotPassword:(id)sender {
+    
 }
 
 @end
