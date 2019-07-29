@@ -17,7 +17,7 @@
 }
 
 + (void)showLoadingView {
-    [self showLoadingViewInView:appDelegate.window.rootViewController.view];
+    [self showLoadingViewInView:appDelegate.window];
 }
 
 + (void)showLoadingViewInView:(UIView *) view {
@@ -30,14 +30,14 @@
 }
 
 + (void)showToast:(NSString *) toast {
-    [self showToast:toast inView:appDelegate.window.rootViewController.view];
+    [self showToast:toast inView:appDelegate.window];
 }
 
 + (void)showToast:(NSString *) toast inView:(UIView *) view {
     if (toast.length == 0) {
         return;
     }
-    [SVProgressHUD showWithStatus:toast];
+    [view makeToast:toast duration:3.0 position:CSToastPositionCenter];
 }
 
 @end

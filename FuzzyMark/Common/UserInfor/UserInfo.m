@@ -33,6 +33,7 @@
 }
 + (UserInformation *)getUserInforModel {
     UserInformation *userModel = [UserInformation new];
+    userModel.user_view = [[UseView alloc] init];
     userModel.user_view.idUser = [UserInfo getUserID];
     userModel.user_view.name = [UserInfo getUserName];
     userModel.user_view.avatar = [UserInfo getUserAvatar];
@@ -56,6 +57,14 @@
 }
 + (NSString *)getUserName {
     return [UserInfo getStringNSUserDefaultsWithKey:USER_NAME];
+}
+
++ (void)setDeviceID:(NSString *) deviceID {
+    [UserInfo setStringNSUserDefaultsWithString:deviceID andKey:DEVICE_ID];
+
+}
++ (NSString *)getDeviceID {
+    return [UserInfo getStringNSUserDefaultsWithKey:DEVICE_ID];
 }
 
 + (void)setUserAvatar:(NSString *) userAvatar {

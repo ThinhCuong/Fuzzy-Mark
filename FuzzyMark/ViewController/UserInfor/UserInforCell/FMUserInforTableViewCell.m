@@ -16,8 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblEmail;
 @property (weak, nonatomic) IBOutlet UILabel *lblNumberBill;
 @property (weak, nonatomic) IBOutlet UILabel *lblPoint;
-@property (weak, nonatomic) IBOutlet UIView *viewLogin;
-
 @end
 
 @implementation FMUserInforTableViewCell
@@ -57,13 +55,6 @@
     self.lblPoint.text = 0;
 }
 
-- (void)setHiddenLoginView:(BOOL) hidden {
-    self.viewLogin.hidden = hidden
-    if(hidden) {
-        self.
-    }
-}
-
 - (IBAction)didSelectButtonAddImageUser:(id)sender {
     if([self.delegate respondsToSelector:@selector(didSelectButtonAddImageUser)]) {
         [self.delegate didSelectButtonAddImageUser];
@@ -79,12 +70,6 @@
 - (IBAction)didSelectButtonPoint:(id)sender {
     if([self.delegate respondsToSelector:@selector(didSelectButtonPoint)]) {
         [self.delegate didSelectButtonPoint];
-    }
-}
-
-- (IBAction)didSelectButtonLogin:(id)sender {
-    if([self.delegate respondsToSelector:@selector(didSelectLogin)]) {
-        [self.delegate didSelectLogin];
     }
 }
 

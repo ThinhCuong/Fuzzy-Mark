@@ -17,6 +17,8 @@ typedef enum {
 } MVUserState;
 
 @interface UserInfo : NSObject
++ (void)resetUserData;
+
 + (void)setUserInforWithUserModel:(UserInformation *) userModel;
 + (UserInformation *)getUserInforModel;
 
@@ -43,6 +45,9 @@ typedef enum {
 
 + (void)setUserToken:(NSString *) userToken;
 + (NSString *)getUserToken;
+
++ (void)setDeviceID:(NSString *) deviceID;
++ (NSString *)getDeviceID;
 @end
 
 NS_ASSUME_NONNULL_END

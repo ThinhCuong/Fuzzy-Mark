@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,21 +20,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="471" id="KGk-i7-Jjw" customClass="FMUserInforTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="406" height="471.5"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="347.5" id="KGk-i7-Jjw" customClass="FMUserInforTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="406" height="380"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="406" height="471"/>
+                <rect key="frame" x="0.0" y="0.0" width="406" height="379.66666666666669"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vvt-UQ-Bx2" userLabel="line">
-                        <rect key="frame" x="16" y="470.5" width="374" height="0.5"/>
-                        <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="Hx5-3P-1o1"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="cB3-g9-p7H"/>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqA-Dw-gK1" userLabel="User">
                         <rect key="frame" x="149" y="34" width="108" height="108"/>
                         <subviews>
@@ -64,13 +56,13 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hq-7n-j8K">
-                        <rect key="frame" x="195.5" y="158" width="15.5" height="21"/>
+                        <rect key="frame" x="195.33333333333334" y="158" width="15.333333333333343" height="20.666666666666657"/>
                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l4Z-Cg-CgO">
-                        <rect key="frame" x="148.5" y="201" width="109" height="18"/>
+                        <rect key="frame" x="148.66666666666666" y="200.66666666666666" width="108.99999999999997" height="18"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_telephone" translatesAutoresizingMaskIntoConstraints="NO" id="MvH-Wo-RDB">
                                 <rect key="frame" x="0.0" y="0.0" width="13" height="18"/>
@@ -84,7 +76,7 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hRT-dW-HRM">
-                        <rect key="frame" x="148.5" y="228" width="109" height="18"/>
+                        <rect key="frame" x="148.66666666666666" y="227.66666666666666" width="108.99999999999997" height="18"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_letter" translatesAutoresizingMaskIntoConstraints="NO" id="JeS-2g-0Qg">
                                 <rect key="frame" x="0.0" y="0.0" width="13" height="18"/>
@@ -98,19 +90,19 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="20R-kG-Bsr">
-                        <rect key="frame" x="47" y="278" width="312" height="81"/>
+                        <rect key="frame" x="47" y="277.66666666666669" width="312" height="81"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqK-LF-aNO" customClass="FMViewShadow">
                                 <rect key="frame" x="0.0" y="0.0" width="152" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="abY-I1-epW">
-                                        <rect key="frame" x="52" y="12" width="48.5" height="27"/>
+                                        <rect key="frame" x="52" y="12.000000000000002" width="48.333333333333343" height="26.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bill" translatesAutoresizingMaskIntoConstraints="NO" id="jdO-C5-O5m">
-                                                <rect key="frame" x="0.0" y="1.5" width="24" height="24"/>
+                                                <rect key="frame" x="0.0" y="1.3333333333333144" width="24" height="24"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLp-PV-4yD">
-                                                <rect key="frame" x="37" y="0.0" width="11.5" height="27"/>
+                                                <rect key="frame" x="37" y="0.0" width="11.333333333333336" height="26.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
                                                 <color key="textColor" red="0.92156862745098034" green="0.55294117647058827" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -118,15 +110,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y4P-qd-abF">
-                                        <rect key="frame" x="14.5" y="43" width="123.5" height="33"/>
+                                        <rect key="frame" x="14.333333333333336" y="42.666666666666629" width="123.33333333333331" height="33.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Lịch sử chụp hóa đơn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IGt-Gs-gJx">
-                                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="10.333333333333334"/>
                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xem chi tiết" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9X-8v-V3G">
-                                                <rect key="frame" x="33" y="18" width="57" height="15"/>
+                                                <rect key="frame" x="33.333333333333336" y="18.333333333333371" width="57.000000000000007" height="15"/>
                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                                                 <color key="textColor" red="0.50588235294117645" green="0.50588235294117645" blue="0.50588235294117645" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -159,13 +151,13 @@
                                 <rect key="frame" x="160" y="0.0" width="152" height="81"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="syN-CP-iaR">
-                                        <rect key="frame" x="52" y="12" width="48.5" height="27"/>
+                                        <rect key="frame" x="52" y="12.000000000000002" width="48.333333333333343" height="26.666666666666671"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_diamond" translatesAutoresizingMaskIntoConstraints="NO" id="L91-gj-lPB">
-                                                <rect key="frame" x="0.0" y="1.5" width="24" height="24"/>
+                                                <rect key="frame" x="0.0" y="1.3333333333333144" width="24" height="24"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-Vu-A7E">
-                                                <rect key="frame" x="37" y="0.0" width="11.5" height="27"/>
+                                                <rect key="frame" x="37" y="0.0" width="11.333333333333336" height="26.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
                                                 <color key="textColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -173,15 +165,15 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="h2b-nR-6SP">
-                                        <rect key="frame" x="38" y="43" width="76.5" height="33"/>
+                                        <rect key="frame" x="37.666666666666664" y="42.666666666666629" width="76.666666666666686" height="33.333333333333343"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Điểm thưởng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOx-Ex-gjv">
-                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="10"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="10.333333333333334"/>
                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Xem chi tiết" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwL-rn-sKt">
-                                                <rect key="frame" x="9.5" y="18" width="57" height="15"/>
+                                                <rect key="frame" x="10" y="18.333333333333371" width="57" height="15"/>
                                                 <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="10"/>
                                                 <color key="textColor" red="0.50588235290000005" green="0.50588235290000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -212,56 +204,15 @@
                             </view>
                         </subviews>
                     </stackView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RVp-Eo-rsi">
-                        <rect key="frame" x="0.0" y="379" width="406" height="91.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vui lòng đăng nhập tài khoản để FuzzyMark có thể phục vụ bạn tốt hơn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rmK-I2-AxA">
-                                <rect key="frame" x="30" y="0.0" width="346" height="38.5"/>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="13"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18j-22-Nj5">
-                                <rect key="frame" x="153" y="48.5" width="100" height="33"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.85999999999999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="PQy-Bp-sTh"/>
-                                    <constraint firstAttribute="height" constant="33" id="Uj8-ft-UA1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
-                                <state key="normal" title="ĐĂNG NHẬP">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="didSelectButtonLogin:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="xO5-5u-Qsd"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="rmK-I2-AxA" firstAttribute="leading" secondItem="RVp-Eo-rsi" secondAttribute="leading" constant="30" id="1TN-cg-hUn"/>
-                            <constraint firstAttribute="bottom" secondItem="18j-22-Nj5" secondAttribute="bottom" constant="10" id="UoE-8G-Cgi"/>
-                            <constraint firstItem="18j-22-Nj5" firstAttribute="top" secondItem="rmK-I2-AxA" secondAttribute="bottom" constant="10" id="aZH-Mq-6eV"/>
-                            <constraint firstAttribute="trailing" secondItem="rmK-I2-AxA" secondAttribute="trailing" constant="30" id="wN5-CC-Yed"/>
-                            <constraint firstItem="18j-22-Nj5" firstAttribute="centerX" secondItem="RVp-Eo-rsi" secondAttribute="centerX" id="wh8-ou-Mtf"/>
-                            <constraint firstItem="rmK-I2-AxA" firstAttribute="top" secondItem="RVp-Eo-rsi" secondAttribute="top" id="yaX-Io-J0s"/>
-                        </constraints>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="QqA-Dw-gK1" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="B0K-k3-Jdo"/>
                     <constraint firstItem="l4Z-Cg-CgO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Dm5-Dg-ue3"/>
                     <constraint firstItem="l4Z-Cg-CgO" firstAttribute="top" secondItem="1Hq-7n-j8K" secondAttribute="bottom" constant="22" id="JR2-l0-sd0"/>
-                    <constraint firstItem="RVp-Eo-rsi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="LGb-wJ-V2v"/>
-                    <constraint firstAttribute="trailing" secondItem="RVp-Eo-rsi" secondAttribute="trailing" id="O2z-uW-c3s"/>
                     <constraint firstItem="hRT-dW-HRM" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="RYz-Nk-LPm"/>
-                    <constraint firstItem="vvt-UQ-Bx2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WmX-lj-BVV"/>
-                    <constraint firstItem="RVp-Eo-rsi" firstAttribute="top" secondItem="20R-kG-Bsr" secondAttribute="bottom" constant="20" id="apy-l3-JXV"/>
-                    <constraint firstAttribute="bottom" secondItem="vvt-UQ-Bx2" secondAttribute="bottom" id="bJ9-C5-Ba0"/>
                     <constraint firstItem="QqA-Dw-gK1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="34" id="czC-47-Sxf"/>
                     <constraint firstItem="20R-kG-Bsr" firstAttribute="top" secondItem="hRT-dW-HRM" secondAttribute="bottom" constant="32" id="e74-PT-xmV"/>
-                    <constraint firstItem="vvt-UQ-Bx2" firstAttribute="top" secondItem="RVp-Eo-rsi" secondAttribute="bottom" id="efm-uA-NiF"/>
-                    <constraint firstAttribute="trailing" secondItem="vvt-UQ-Bx2" secondAttribute="trailing" constant="16" id="fM0-m4-Kfu"/>
+                    <constraint firstAttribute="bottom" secondItem="20R-kG-Bsr" secondAttribute="bottom" constant="21" id="gnI-Or-AgF"/>
                     <constraint firstItem="hRT-dW-HRM" firstAttribute="top" secondItem="l4Z-Cg-CgO" secondAttribute="bottom" constant="9" id="hK7-lr-X5C"/>
                     <constraint firstItem="1Hq-7n-j8K" firstAttribute="top" secondItem="QqA-Dw-gK1" secondAttribute="bottom" constant="16" id="qkw-nL-2pf"/>
                     <constraint firstItem="20R-kG-Bsr" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="wxq-el-n0R"/>
@@ -278,16 +229,15 @@
                 <outlet property="lblPhone" destination="yCD-48-Vjl" id="MAi-ap-giq"/>
                 <outlet property="lblPoint" destination="aGq-Vu-A7E" id="HAB-u4-llR"/>
                 <outlet property="lblUserName" destination="1Hq-7n-j8K" id="zsc-ef-UQc"/>
-                <outlet property="viewLogin" destination="RVp-Eo-rsi" id="f9T-XM-fLn"/>
             </connections>
-            <point key="canvasLocation" x="208.125" y="63.908450704225352"/>
+            <point key="canvasLocation" x="207.24637681159422" y="12.228260869565219"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="ic_add" width="30" height="30"/>
         <image name="ic_bill" width="24" height="24"/>
         <image name="ic_diamond" width="24" height="24"/>
-        <image name="ic_letter" width="13" height="11"/>
+        <image name="ic_letter" width="13" height="10.333333015441895"/>
         <image name="ic_telephone" width="13" height="13"/>
         <image name="ic_user" width="108" height="108"/>
     </resources>

@@ -16,14 +16,16 @@
 #import "FMChangeUserInforViewController.h"
 #import "FMInputEmailVC.h"
 #import "FMLoginAccountViewController.h"
+#import "FMLoginCell.h"
 
-@interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol>
+@interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol, FMUserInforDelegate, FMLoginCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
 @property (strong, nonatomic) FMUserInforModel *model;
 @end
 
 @implementation FMUserInforViewController {
     NSArray <NSArray *> *_listMenuBlock;
+    UserInformation *_userInfo;
 }
 
 #pragma mark - lifeCycle
@@ -31,6 +33,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
         self.model = [[FMUserInforModel alloc] init];
+        self.model.delegate = self;
     }
     return self;
 }
@@ -40,13 +43,7 @@
     // Do any additional setup after loading the view from its nib.
     self.isHideNavigationBar = YES;
     [self setTableViewContent];
-    
-    __weak FMUserInforViewController *weakSelf = self;
-    [self.model initDataAllCellBlockWithSuccessBlock:^(NSArray * listMenuBlock) {
-        [weakSelf reloadBlockCell:listMenuBlock];
-    }];
-    [self.model initDataFirstCellUserWithSuccessBlock:^(NSArray * obj) {
-    }];
+    [self.model loadData];
 }
 
 #pragma mark - private
@@ -55,32 +52,149 @@
     self.tableViewContent.dataSource = self;
     [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMUserInforTableViewCell" bundle:nil] forCellReuseIdentifier:@"cellUser"];
     [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMMenuTabbleViewCell" bundle:nil] forCellReuseIdentifier:@"cellMenu"];
+    [self.tableViewContent registerNib:[UINib nibWithNibName:@"FMLoginCell" bundle:nil] forCellReuseIdentifier:@"cellLogin"];
     self.tableViewContent.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
-- (void)reloadBlockCell:(NSArray *) listMenuBlock {
+- (void)reLoadBlockCell:(NSArray *) listMenuBlock {
     _listMenuBlock = listMenuBlock;
-    [self.tableViewContent beginUpdates];
-    [self.tableViewContent reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableViewContent reloadSections:[NSIndexSet indexSetWithIndex:2] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self.tableViewContent endUpdates];
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(1, 2)];
+    [self reloadTableViewWithIndexSet:indexSet];
+}
+
+- (void)reLoadUserCell:(UserInformation *) userInfo {
+    _userInfo = userInfo;
+    NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
+    [self reloadTableViewWithIndexSet:indexSet];
+}
+
+- (void)reloadTableViewWithIndexSet:(NSIndexSet *) indexSet {
+    [_tableViewContent beginUpdates];
+    [_tableViewContent reloadSections:indexSet withRowAnimation:UITableViewRowAnimationAutomatic];
+    [_tableViewContent endUpdates];
+    [_tableViewContent selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:0 scrollPosition:UITableViewScrollPositionTop];
+}
+
+- (void)showToastInviteLogin {
+    [CommonFunction showToast:@"Đăng nhập để sử dụng tính năng này"];
+}
+
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 3;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 2;
+    } else if (section == 1) {
+        return _listMenuBlock[0].count;
+    } else if (section == 2) {
+        return _listMenuBlock[1].count;
+    }
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            return [self cellUserTableViewAtIndexPath:indexPath];
+        } else if (indexPath.row == 1 && !isLoggedIn) {
+            return [self cellLoginTableViewAtIndexPath:indexPath];
+        }
+    } else if (indexPath.section == 1 || indexPath.section == 2) {
+        return [self cellMenuTableViewAtIndexPath:indexPath];
+    }
+    return [UITableViewCell new];
+}
+
+- (UITableViewCell *)cellLoginTableViewAtIndexPath:(NSIndexPath *) indexPath {
+    // Show Login
+    FMLoginCell *cell = [_tableViewContent dequeueReusableCellWithIdentifier:@"cellLogin"];
+    cell.delegate = self;
+    return cell;
+}
+
+- (UITableViewCell *)cellUserTableViewAtIndexPath:(NSIndexPath *) indexPath {
+    FMUserInforTableViewCell *cell = [_tableViewContent dequeueReusableCellWithIdentifier:@"cellUser"];
+    if (!isLoggedIn) {
+        [cell binDataNotLogin];
+    } else {
+        [cell binDataLoginWithUserInfor:_userInfo];
+    }
+    cell.delegate = self;
+    
+    return cell;
+}
+
+- (UITableViewCell *)cellMenuTableViewAtIndexPath:(NSIndexPath *) indexPath {
+    NSInteger indexArray = indexPath.section - 1;
+    NSInteger indexItem = indexPath.row;
+    FMMenuTabbleViewCell *cell = [_tableViewContent dequeueReusableCellWithIdentifier:@"cellMenu"];
+    [cell binDataWith:_listMenuBlock[indexArray][indexItem]];
+    
+    // Ẩn bottom line với cell cuối
+    if (indexPath.row == _listMenuBlock[indexArray].count - 1) {
+        cell.hideBotomLine = YES;
+    } else {
+        cell.hideBotomLine = NO;
+    }
+    
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && indexPath.row == 1 && _userInfo) {
+        return 16;
+    }
+    return UITableViewAutomaticDimension;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footerView = [[UIView alloc] init];
+    if(section == 1) {
+        footerView.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.0];
+    } else {
+        footerView.backgroundColor = [UIColor clearColor];
+    }
+    return footerView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    if (section == 1) {
+        return 8;
+    }
+    return 0.01f;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.01f;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // Click Cell User
+    if(indexPath.section == 0) {
+        return;
+    }
+    // Click Cell Block
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self didSelectBlockCell:[tableView cellForRowAtIndexPath:indexPath]];
 }
 
 - (void)didSelectBlockCell:(FMMenuTabbleViewCell *) cell {
-    if(!cell) {
+    if(![cell isKindOfClass:FMMenuTabbleViewCell.class]) {
         return;
     }
     switch (cell.typeBlock) {
         case FMTableViewCellBlockFavoritePlaces: {
-            FMLocationFavoriteViewController *vc = [[FMLocationFavoriteViewController alloc] init];
-            vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
+            [self showViewFavorite];
             break;
         }
         case FMTableViewCellBlockUserInfor: {
-            FMChangeUserInforViewController *vc = [[FMChangeUserInforViewController alloc] init];
-            vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
+            [self showViewChangeUserInfo];
             break;
         }
         case FMTableViewCellBlockChangePassWord:
@@ -93,7 +207,8 @@
             
             break;
         case FMTableViewCellBlockLogOut:
-            
+            [UserInfo resetUserData];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
             break;
         default:
             break;
@@ -125,78 +240,32 @@
     
 }
 
+#pragma mark - FMLoginCellDelegate
 - (void)didSelectLogin {
     FMLoginAccountViewController *vc = [[FMLoginAccountViewController alloc] init];
     UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:navi animated:YES completion:nil];
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return 1;
-    } else if (section == 1) {
-        return _listMenuBlock[0].count;
-    } else if (section == 2) {
-        return _listMenuBlock[1].count;
-    } else {
-        return 0;
-    }
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        FMUserInforTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellUser"];
-        cell.delegate = self;
-        return cell;
-    } else {
-        FMMenuTabbleViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellMenu"];
-        [cell binDataWith:_listMenuBlock[indexPath.section - 1][indexPath.row]];
-        if (indexPath.row == _listMenuBlock[indexPath.section - 1].count - 1) {
-            cell.hideBotomLine = YES;
-        } else {
-            cell.hideBotomLine = NO;
-        }
-        return cell;
-    }
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-    UIView *footerView = [[UIView alloc] init];
-    if(section == 1) {
-        footerView.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1.0];
-    } else {
-        footerView.backgroundColor = [UIColor clearColor];
-    }
-    return footerView;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-    if (section == 1) {
-        return 8.0f;
-    } else {
-        return 0.01f;
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 0.01f;
-}
-
-#pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    // Click Cell User
-    if(indexPath.section == 0 && indexPath.row == 0) {
+#pragma mark - Goto ViewController
+- (void)showViewFavorite {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
         return;
     }
-    // Click Cell Block
-    [self didSelectBlockCell:[tableView cellForRowAtIndexPath:indexPath]];
-    
+    FMLocationFavoriteViewController *vc = [[FMLocationFavoriteViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)showViewChangeUserInfo {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
+    FMChangeUserInforViewController *vc = [[FMChangeUserInforViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

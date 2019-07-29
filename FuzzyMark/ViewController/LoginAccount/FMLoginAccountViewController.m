@@ -54,8 +54,10 @@
     return [passwordTest evaluateWithObject:password];
 }
 
-- (BOOL)validateNameWithString:(NSString *) name {
-    return name.length > 0;
+- (BOOL)validateEmailWithString:(NSString *) email {
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:email];
 }
 
 - (void)textfieldDidChange:(UITextField *) sender {
@@ -70,7 +72,7 @@
     TJTextField *textField = (TJTextField *) sender;
     BOOL isValidateTF;
     if([textField isEqual:_tfName]) {
-        isValidateTF = [self validateNameWithString:textField.text];
+        isValidateTF = [self validateEmailWithString:textField.text];
     } else {
         isValidateTF = [self validatePasswordWithString:textField.text];
     }
@@ -78,13 +80,14 @@
 }
 
 - (BOOL)enableButtonSuccess {
-    BOOL isValidaName = [self validateNameWithString:_tfName.text];
+    BOOL isValidaName = [self validateEmailWithString:_tfName.text];
     BOOL isValidaPassword = [self validatePasswordWithString:_tfPassword.text];
     return (isValidaName && isValidaPassword);
 }
 
 - (void)saveDataLoginSuccess:(UserInformation *) userInfo {
     [UserInfo setUserInforWithUserModel:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
 }
 
 #pragma mark - IBAction
@@ -94,7 +97,9 @@
 
 - (IBAction)didSelectBtnSuccess:(id)sender {
     NSDictionary *params = @{@"email": _tfName.text ?: @"",
-                             @"password": _tfPassword.text ?: @""
+                             @"password": _tfPassword.text ?: @"",
+                             @"device_id": [UserInfo getDeviceID],
+                             @"device_type": @1
                              };
     [CommonFunction showLoadingView];
     [_httpClient postDataWithPath:@"user/login" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
@@ -108,11 +113,11 @@
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
         } else {
-            [CommonFunction showToast:@"Không lấy được dữ liệu"];
+            [CommonFunction showToast:@"Có lỗi xẩy ra vui lòng thử lại sau"];
         }
     } withFailBlock:^(id fail) {
         [CommonFunction hideLoadingView];
-        [CommonFunction showToast:@"Không lấy được dữ liệu"];
+        [CommonFunction showToast:@"Có lỗi xẩy ra vui lòng thử lại sau"];
     }];
 }
 

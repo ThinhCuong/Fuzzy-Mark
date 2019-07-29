@@ -16,10 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)didSelectButtonAddImageUser;
 - (void)didSelectEmailView;
 - (void)didSelectPhoneView;
-- (void)didSelectLogin;
 @end
 
 @interface FMUserInforTableViewCell : UITableViewCell
+- (void)binDataLoginWithUserInfor:(UserInformation *) userInfo;
+- (void)binDataNotLogin;
 @property (assign, nonatomic) id<FMUserInforTableViewCellProtocol> delegate;
 @end
 

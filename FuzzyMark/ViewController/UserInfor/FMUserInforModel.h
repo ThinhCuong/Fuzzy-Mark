@@ -9,10 +9,15 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@protocol FMUserInforDelegate <NSObject>
+- (void)reLoadBlockCell:(NSArray *) listMenuBlock;
+- (void)reLoadUserCell:(UserInformation *) userInfo;
+@end
 
 @interface FMUserInforModel : NSObject
-- (void)initDataAllCellBlockWithSuccessBlock:(void(^)(NSArray *)) successBlock;
-- (void)initDataFirstCellUserWithSuccessBlock:(void(^)(NSArray *)) successBlock;
+- (void)loadData;
+@property (assign, nonatomic ) id<FMUserInforDelegate> delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,6 +20,8 @@
 		4F27544522931E870086A46C /* FMCameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F27544422931E870086A46C /* FMCameraModel.m */; };
 		4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B50229C496C0029F188 /* UITabBar+FMMiddleButton.m */; };
 		4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B54229C615F0029F188 /* FMButtonNext.m */; };
+		4F35FDCC22EF478B00F79B45 /* FMLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */; };
+		4F35FDCD22EF478B00F79B45 /* FMLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */; };
 		4F45EEFB229EADBA004556F9 /* FMIntroCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */; };
 		4F45EEFC229EADBA004556F9 /* FMIntroCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */; };
 		4F45EF01229EB22B004556F9 /* FMIntroCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEFF229EB22B004556F9 /* FMIntroCameraCell.m */; };
@@ -268,6 +270,10 @@
 		4F2F5B52229C56C50029F188 /* FuzzyMark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FuzzyMark-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F2F5B53229C615F0029F188 /* FMButtonNext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMButtonNext.h; sourceTree = "<group>"; };
 		4F2F5B54229C615F0029F188 /* FMButtonNext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMButtonNext.m; sourceTree = "<group>"; };
+		4F35FDC922EF478B00F79B45 /* FMLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLoginCell.h; sourceTree = "<group>"; };
+		4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLoginCell.m; sourceTree = "<group>"; };
+		4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMLoginCell.xib; sourceTree = "<group>"; };
+		4F35FDCE22EF849100F79B45 /* FuzzyMark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FuzzyMark.entitlements; sourceTree = "<group>"; };
 		4F45EEF8229EADBA004556F9 /* FMIntroCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMIntroCameraViewController.h; sourceTree = SOURCE_ROOT; };
 		4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMIntroCameraViewController.m; sourceTree = SOURCE_ROOT; };
 		4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMIntroCameraViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -798,6 +804,9 @@
 				4F50F3672276E9A700DF7173 /* FMUserInforTableViewCell.h */,
 				4F50F3642276E9A700DF7173 /* FMUserInforTableViewCell.m */,
 				4F50F36B2276E9A700DF7173 /* FMUserInforTableViewCell.xib */,
+				4F35FDC922EF478B00F79B45 /* FMLoginCell.h */,
+				4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */,
+				4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */,
 			);
 			path = UserInforCell;
 			sourceTree = "<group>";
@@ -1414,6 +1423,7 @@
 		5C6BFAD7225D668600A26400 /* FuzzyMark */ = {
 			isa = PBXGroup;
 			children = (
+				4F35FDCE22EF849100F79B45 /* FuzzyMark.entitlements */,
 				4F50F3F32276EDBC00DF7173 /* Themes */,
 				5C3910022263490B008BEA62 /* Common */,
 				5C98628A2264D45700545DCC /* Cell */,
@@ -1752,6 +1762,11 @@
 					5C6BFAD4225D668600A26400 = {
 						CreatedOnToolsVersion = 10.2;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					5C6BFAEF225D668900A26400 = {
 						CreatedOnToolsVersion = 10.2;
@@ -1876,6 +1891,7 @@
 				4F472D412290801B00F93D39 /* FMIntroChangePhoneNumber.xib in Resources */,
 				5C9BDECD22B30AFD0019BA12 /* FZVourcherSearchTableViewCell.xib in Resources */,
 				5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */,
+				4F35FDCD22EF478B00F79B45 /* FMLoginCell.xib in Resources */,
 				5C39102A2263492A008BEA62 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2087,6 +2103,7 @@
 				4FFC65CD22B5763900056AE2 /* FMPromotionDetailVC.m in Sources */,
 				4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */,
 				4FF44BDC22B690E600604202 /* FMPromotionDetailModel.m in Sources */,
+				4F35FDCC22EF478B00F79B45 /* FMLoginCell.m in Sources */,
 				5CD3A76C22887D7C0020A0DE /* FZBannerCollectionViewCell.m in Sources */,
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
 				5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */,

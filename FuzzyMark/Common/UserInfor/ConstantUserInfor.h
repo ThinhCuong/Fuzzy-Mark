@@ -11,6 +11,7 @@
 
 #define USER_ID                 @"USER_ID"
 #define USER_NAME               @"USER_NAME"
+#define DEVICE_ID               @"DEVICE_ID"
 #define USER_AVATAR             @"USER_AVATAR"
 #define USER_EMAIL              @"USER_EMAIL"
 #define USER_PHONE              @"USER_PHONE"
