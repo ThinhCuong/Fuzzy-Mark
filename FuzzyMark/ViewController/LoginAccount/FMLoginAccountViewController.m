@@ -110,7 +110,7 @@
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] == 0) {
-                UserInformation *userInfo = [[UserInformation alloc] initWithDictionary:[success dictionaryForKey:@"data"] error:nil];
+                UserInformation *userInfo = [[UserInformation alloc] initWithDict:[success dictionaryForKey:@"data"]];
                 [self saveDataLoginSuccess:userInfo];
                 [self dismissViewControllerAnimated:YES completion:nil];
             } else {

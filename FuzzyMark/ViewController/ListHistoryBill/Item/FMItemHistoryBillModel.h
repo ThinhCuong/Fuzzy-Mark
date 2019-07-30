@@ -12,8 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMItemHistoryBillModel : FMBaseTableViewModel
-
-
+- (instancetype)initWithType:(StatusType) type;
 @end
 
 NS_ASSUME_NONNULL_END

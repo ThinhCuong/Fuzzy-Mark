@@ -25,9 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBar];
     [self setupSegmentControl];
     [self setupPageVC];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setNavigationBar];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -68,9 +72,9 @@
     _pageViewController.delegate = self;
     _pageViewController.dataSource = self;
     _pageViewController.doubleSided = YES;
-    FMItemHistoryBillVC *firstVC = [[FMItemHistoryBillVC alloc] init];
-    FMItemHistoryBillVC *secondVC = [[FMItemHistoryBillVC alloc] init];
-    FMItemHistoryBillVC *thirdVC = [[FMItemHistoryBillVC alloc] init];
+    FMItemHistoryBillVC *firstVC = [[FMItemHistoryBillVC alloc] initWithType:StausTypeREQUEST];
+    FMItemHistoryBillVC *secondVC = [[FMItemHistoryBillVC alloc] initWithType:StausTypeAPPROVED];
+    FMItemHistoryBillVC *thirdVC = [[FMItemHistoryBillVC alloc] initWithType:StausTypeDENY];
     _childTableVCs = [NSArray arrayWithObjects: firstVC, secondVC, thirdVC, nil];
     [_pageViewController setViewControllers:@[_childTableVCs[0]] direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
     [self addChildViewController:_pageViewController];

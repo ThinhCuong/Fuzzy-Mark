@@ -189,7 +189,7 @@
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
                 NSDictionary *dict = [success dictionaryForKey:@"data"];
-                UserInformation *user = [[UserInformation alloc] initWithDictionary:dict error:nil];
+                UserInformation *user = [[UserInformation alloc] initWithDict:dict];
                 [UserInfo setUserInforWithUserModel:user];
                 self.registerSuccess ? self.registerSuccess() : 0;
             } else {

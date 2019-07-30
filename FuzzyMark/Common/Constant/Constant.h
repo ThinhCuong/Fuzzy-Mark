@@ -38,6 +38,12 @@ typedef NS_ENUM(NSInteger, LoginType) {
     LoginTypeForgotPassword
 };
 
+typedef NS_ENUM(NSInteger, StatusType) {
+    StausTypeREQUEST = 1,
+    StausTypeAPPROVED = 2,
+    StausTypeDENY = 3
+};
+
 /* Name API */
 #define GET_HISTORIES_CAPTURE                       @"user/histories-capture"
 #define GET_USER_NOTIFICATIONS                      @"user/notifications"

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMItemHistoryBillVC : UIViewController
-
+- (instancetype)initWithType:(StatusType) type;
 @end
 
 NS_ASSUME_NONNULL_END

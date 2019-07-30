@@ -29,11 +29,11 @@
     BOOL _isRefresh;
 }
 
-- (instancetype)init
+- (instancetype)initWithType:(StatusType) type
 {
     self = [super init];
     if (self) {
-        self.model = [[FMItemHistoryBillModel alloc] init];
+        self.model = [[FMItemHistoryBillModel alloc] initWithType:type];
         self.model.delegate = self;
     }
     return self;
@@ -48,8 +48,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     if(_isRefresh) {
-        [SVProgressHUD setContainerView:self.view];
-        [SVProgressHUD show];
+        [CommonFunction showLoadingView];
     }
 }
 
@@ -105,7 +104,7 @@
     if(_bottomRFControl.isRefreshing) {
         [_bottomRFControl endRefreshing];
     }
-    [SVProgressHUD dismiss];
+    [CommonFunction hideLoadingView];
     _isRefresh = NO;
 }
 
