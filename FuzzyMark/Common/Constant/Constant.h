@@ -28,7 +28,14 @@ typedef NS_ENUM(NSInteger, CameraPosition) {
 
 typedef NS_ENUM(NSInteger, OTPType) {
     OTPTypeRegister,
-    OTPTypeReset
+    OTPTypeReset,
+    OTPTypeOther
+};
+
+typedef NS_ENUM(NSInteger, LoginType) {
+    LoginTypeSignIn,
+    LoginTypeSignUp,
+    LoginTypeForgotPassword
 };
 
 /* Name API */

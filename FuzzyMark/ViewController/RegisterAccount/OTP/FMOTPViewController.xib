@@ -22,7 +22,8 @@
             <connections>
                 <outlet property="btnSuccess" destination="NnR-En-Er5" id="deL-hf-dfF"/>
                 <outlet property="btnTime" destination="yI9-fS-jqD" id="OPa-Co-8KD"/>
-                <outlet property="lbTitle" destination="Q4v-W7-4sg" id="Cmb-en-p2G"/>
+                <outlet property="lbContent" destination="Q4v-W7-4sg" id="iT5-T7-PXA"/>
+                <outlet property="lbTitle" destination="z30-1U-zjp" id="6yI-yz-GlJ"/>
                 <outlet property="tfFirst" destination="Yka-xS-ehM" id="eor-26-qei"/>
                 <outlet property="tfFourth" destination="JTk-3U-YbO" id="4IQ-sJ-IU4"/>
                 <outlet property="tfSecond" destination="ehs-Qo-Vnk" id="duo-wY-pqr"/>
@@ -150,7 +151,7 @@
                         <constraint firstAttribute="width" constant="200" id="XMF-RU-M2T"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
-                    <state key="normal" title="Gửi lại (56s)">
+                    <state key="normal" title="Gửi lại">
                         <color key="titleColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>

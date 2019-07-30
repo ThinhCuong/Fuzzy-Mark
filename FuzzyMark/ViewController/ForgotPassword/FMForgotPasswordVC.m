@@ -19,6 +19,23 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.clipsToBounds = NO;
+}
+
+- (void)setNavigationBar {
+    self.navigationItem.title = @"";
+    self.navigationController.navigationBar.topItem.title = @"";
+    self.isHideNavigationBar = NO;
+    self.navigationController.navigationBar.clipsToBounds = YES;
+}
+
 
 
 

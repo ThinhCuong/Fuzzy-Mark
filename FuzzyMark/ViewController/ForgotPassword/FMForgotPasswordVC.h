@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMForgotPasswordVC : UIViewController
+@interface FMForgotPasswordVC : FMBaseViewController
 
 @end
 

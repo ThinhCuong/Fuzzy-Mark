@@ -12,6 +12,7 @@
 #import "FMInputEmailVC.h"
 #import "FMOTPViewController.h"
 #import "FMRegisterAccountViewController.h"
+#import "FMForgotPasswordVC.h"
 
 @interface FMLoginAccountViewController () <UITextFieldDelegate, FMInputEmailVCDelegate, FMOTPViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet TJTextField *tfName;
@@ -21,6 +22,7 @@
 
 @implementation FMLoginAccountViewController {
     BaseCallApi *_httpClient;
+    LoginType _type;
 }
 
 - (void)viewDidLoad {
@@ -97,6 +99,7 @@
 }
 
 - (IBAction)didSelectBtnSuccess:(id)sender {
+    _type = LoginTypeSignIn;
     NSDictionary *params = @{@"email": _tfName.text ?: @"",
                              @"password": _tfPassword.text ?: @"",
                              @"device_id": [UserInfo getDeviceID],
@@ -123,18 +126,31 @@
 }
 
 - (IBAction)didSelectRegister:(id)sender {
-    FMInputEmailVC *vc = [[FMInputEmailVC alloc] init];
+    _type = LoginTypeSignUp;
+    FMInputEmailVC *vc = [[FMInputEmailVC alloc] initWithType:_type];
     vc.delegate = self;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:nil];
 }
 
 - (IBAction)didSelectForgotPassword:(id)sender {
-    
+    _type = LoginTypeForgotPassword;
+    FMInputEmailVC *vc = [[FMInputEmailVC alloc] initWithType:_type];
+    vc.delegate = self;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:nil];
 }
 
 #pragma mark - FMInputEmailVCDelegate
 - (void)outputEmailSuccess:(NSString *)email {
+    if (_type == LoginTypeSignUp) {
+        [self showOTPSignUpWithEmail:email];
+    } else if (_type == LoginTypeForgotPassword) {
+        [self showOTPForgotPasswordWithEmail:email];
+    }
+}
+
+- (void)showOTPSignUpWithEmail:(NSString *) email {
     NSAttributedString *emailString = [[NSAttributedString alloc] initWithString:email ?: @"" attributes:@{NSFontAttributeName : [UIFont setBoldFontMuliWithSize:14.0]}];
     NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Vui lòng nhập mã OTP vừa được gửi đến email " attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
     NSMutableAttributedString *titleAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:titleString];
@@ -146,20 +162,34 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)showOTPForgotPasswordWithEmail:(NSString *) email {
+    NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Nhập dãy 4 chữ số vừa được gửi vào email cho bạn để xác nhận" attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
+    
+    FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:titleString EmailSendOTP:email ?: @"" withType:OTPTypeReset];
+    vc.delegate = self;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - FMOTPViewControllerDelegate
 - (void)checkOTPSuccess:(BOOL)isSuccess withEmail:(NSString *)email {
-    // Register Account
+    // Register Account or Forgot Password
     if (isSuccess) {
         UserInformation *user = [[UserInformation alloc] init];
         user.user_view = [[UseView alloc] init];
         user.email = email ?: @"";
         
-        FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] initWithUser:user];
-        vc.registerSuccess = ^{
-            [self dismissViewControllerAnimated:YES completion:nil];
-            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
-        };
-        [self.navigationController pushViewController:vc animated:YES];
+        if (_type == LoginTypeSignUp) {
+            FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] initWithUser:user];
+            vc.registerSuccess = ^{
+                [self dismissViewControllerAnimated:YES completion:nil];
+                [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+            };
+            [self.navigationController pushViewController:vc animated:YES];
+        } else if (_type == LoginTypeForgotPassword) {
+            FMForgotPasswordVC *vc = [[FMForgotPasswordVC alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
 }
 

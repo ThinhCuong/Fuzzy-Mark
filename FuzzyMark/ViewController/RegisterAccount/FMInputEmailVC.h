@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FMInputEmailVC : FMBaseViewController
 
 @property (assign, nonatomic) id<FMInputEmailVCDelegate> delegate;
-
+- (instancetype)initWithType:(LoginType ) type;
 @end
 
 NS_ASSUME_NONNULL_END

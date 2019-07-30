@@ -21,6 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FMInputEmailVC">
             <connections>
                 <outlet property="btnSuccess" destination="Fnh-u7-qJg" id="EzT-35-7fU"/>
+                <outlet property="lbtitle" destination="oXZ-po-Shl" id="8hc-rg-tzu"/>
                 <outlet property="tfEmail" destination="hua-Xm-UmK" id="zjj-Xr-vo4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

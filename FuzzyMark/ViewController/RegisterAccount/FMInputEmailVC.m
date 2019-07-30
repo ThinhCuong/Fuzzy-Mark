@@ -13,15 +13,33 @@
 @interface FMInputEmailVC () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *tfEmail;
 @property (weak, nonatomic) IBOutlet UIButton *btnSuccess;
+@property (weak, nonatomic) IBOutlet UILabel *lbtitle;
 @end
 
-@implementation FMInputEmailVC
+@implementation FMInputEmailVC {
+    LoginType _type;
+}
 
 #pragma mark - life cycle
+- (instancetype)initWithType:(LoginType ) type {
+    self = [super init];
+    if (self) {
+        _type = type;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [_tfEmail addTarget:self action:@selector(textFieldEditingChange:) forControlEvents:UIControlEventEditingChanged];
+    if (_type == LoginTypeSignUp) {
+        _lbtitle.text = @"ĐĂNG KÍ";
+    } else if (_type == LoginTypeForgotPassword) {
+        _lbtitle.text = @"QUÊN MẬT KHẨU";
+    } else {
+        _lbtitle.text = @"";
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {

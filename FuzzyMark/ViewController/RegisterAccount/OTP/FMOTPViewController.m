@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet TJTextField *tfFourth;
 @property (weak, nonatomic) IBOutlet UIButton *btnTime;
 @property (weak, nonatomic) IBOutlet UIButton *btnSuccess;
+@property (weak, nonatomic) IBOutlet UILabel *lbContent;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
 @end
@@ -26,6 +27,7 @@
     NSString *_type;
     NSTimer *_timer;
     NSInteger _currSeconds;
+    NSString *_title;
     BaseCallApi *_httpClient;
 }
 
@@ -38,11 +40,15 @@
         switch (type) {
             case OTPTypeRegister:
                 _type = @"REGISTER";
+                _title = @"ĐĂNG KÍ";
                 break;
             case OTPTypeReset:
                 _type = @"RESET";
+                _title = @"QUÊN MẬT KHẨU";
+                break;
             default:
                 _type = @"";
+                _title = @"";
                 break;
         }
     }
@@ -56,8 +62,9 @@
     [_tfSecond addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [_tfThird addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [_tfFourth addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    _lbTitle.attributedText = _attributedString.length > 0 ? _attributedString : 0;
+    _lbContent.attributedText = _attributedString.length > 0 ? _attributedString : 0;
     _httpClient = [BaseCallApi defaultInitWithBaseURL];
+    _lbTitle.text = _title;
     [self didSelectBtnResendOTP:nil];
 }
 
@@ -152,17 +159,17 @@
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
-                self.lbTitle.attributedText = self->_attributedString;
+                self.lbContent.attributedText = self->_attributedString;
                 [self startCountdownTime];
             } else {
-                self.lbTitle.attributedText = [self getAttributedErrorWithString:[success stringForKey:@"message"]];
+                self.lbContent.attributedText = [self getAttributedErrorWithString:[success stringForKey:@"message"]];
             }
         } else {
-            self.lbTitle.attributedText = [self getAttributedErrorWithString:kMessageError];
+            self.lbContent.attributedText = [self getAttributedErrorWithString:kMessageError];
         }
     } withFailBlock:^(id fail) {
         [CommonFunction hideLoadingView];
-        self.lbTitle.attributedText = [self getAttributedErrorWithString:kMessageError];
+        self.lbContent.attributedText = [self getAttributedErrorWithString:kMessageError];
     }];
 }
 
