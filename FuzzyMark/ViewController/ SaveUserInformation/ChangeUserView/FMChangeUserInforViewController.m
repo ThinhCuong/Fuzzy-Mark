@@ -26,6 +26,7 @@
     UIDatePicker *_datePicker;
 }
 
+#pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUI];
@@ -34,6 +35,11 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self setNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.clipsToBounds = NO;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -46,31 +52,42 @@
     [self setDatePicker];
 }
 
+#pragma mark - IBAction
+- (IBAction)didSelectSave:(id)sender {
+    NSLog(@"Save");
+}
+
+#pragma mark - private
+- (void)setNavigationBar {
+    self.navigationItem.title = @"Thông tin cá nhân";
+    self.navigationController.navigationBar.topItem.title = @"";
+    self.isHideNavigationBar = NO;
+    self.navigationController.navigationBar.clipsToBounds = YES;
+}
+
 - (void)setCheckBox {
     TNCircularCheckBoxData *maleData = [[TNCircularCheckBoxData alloc] init];
     maleData.identifier = @"male";
     maleData.labelText = @"Nam";
-    maleData.labelFont = [UIFont setFontMuliWithSize:14];
     maleData.checked = YES;
     maleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
     maleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
-    maleData.borderRadius = 20;
-    maleData.circleRadius = 15;
+    maleData.borderRadius = 15;
+    maleData.circleRadius = 10;
     _selectCheckBox = maleData;
     
     TNCircularCheckBoxData *femaleData = [[TNCircularCheckBoxData alloc] init];
     femaleData.identifier = @"female";
     femaleData.labelText = @"Nữ";
-    femaleData.labelFont = [UIFont setFontMuliWithSize:14];
     femaleData.checked = NO;
     femaleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
     femaleData.circleColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
-    femaleData.borderRadius = 20;
-    femaleData.circleRadius = 15;
+    femaleData.borderRadius = 15;
+    femaleData.circleRadius = 10;
     
     _sexGroup = [[FMCheckBoxGroup alloc] initWithCheckBoxData:@[maleData, femaleData] style:TNCheckBoxLayoutHorizontal];
     [_sexGroup create];
-    _sexGroup.position = CGPointMake(0, 0);
+    _sexGroup.position = CGPointMake(0, 5);
     [self.checkBoxView addSubview:_sexGroup];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sexGroupChanged:) name:GROUP_CHANGED object:_sexGroup];
 }
@@ -106,19 +123,6 @@
     _selectCheckBox = _sexGroup.checkedCheckBoxes[0];
 }
 
-- (void)setNavigationBar {
-    self.navigationItem.title = @"Thông tin cá nhân";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-}
-
-#pragma mark - IBAction
-- (IBAction)didSelectSave:(id)sender {
-    FMChangeEmailViewController *vc = [[FMChangeEmailViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-#pragma mark - private
 - (void)didSelectDoneDatePicker {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"dd/MM/yyyy"];

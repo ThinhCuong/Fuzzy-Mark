@@ -137,6 +137,8 @@
 		4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD87227BEC230008BA69 /* Camera.xcassets */; };
 		4FF44BDC22B690E600604202 /* FMPromotionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF44BDB22B690E600604202 /* FMPromotionDetailModel.m */; };
 		4FF5AF2722B7EC6C009A613E /* VoucherInfoJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */; };
+		4FF699A122F05F9B0035BD72 /* FMLocationFavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF699A022F05F9B0035BD72 /* FMLocationFavoriteModel.m */; };
+		4FF699A622F0620A0035BD72 /* LocationFavoriteObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF699A522F0620A0035BD72 /* LocationFavoriteObj.m */; };
 		4FF727FB22ED544A000C8AB8 /* FMInputEmailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727F922ED544A000C8AB8 /* FMInputEmailVC.m */; };
 		4FF727FC22ED544A000C8AB8 /* FMInputEmailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF727FA22ED544A000C8AB8 /* FMInputEmailVC.xib */; };
 		4FF7280122ED8FE5000C8AB8 /* FMLoginAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF727FF22ED8FE5000C8AB8 /* FMLoginAccountViewController.m */; };
@@ -451,6 +453,10 @@
 		4FF44BDB22B690E600604202 /* FMPromotionDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionDetailModel.m; sourceTree = "<group>"; };
 		4FF5AF2522B7EC6C009A613E /* VoucherInfoJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoucherInfoJsonModel.h; sourceTree = "<group>"; };
 		4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoucherInfoJsonModel.m; sourceTree = "<group>"; };
+		4FF6999F22F05F9B0035BD72 /* FMLocationFavoriteModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLocationFavoriteModel.h; sourceTree = "<group>"; };
+		4FF699A022F05F9B0035BD72 /* FMLocationFavoriteModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLocationFavoriteModel.m; sourceTree = "<group>"; };
+		4FF699A422F0620A0035BD72 /* LocationFavoriteObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LocationFavoriteObj.h; path = ../LocationFavoriteObj.h; sourceTree = "<group>"; };
+		4FF699A522F0620A0035BD72 /* LocationFavoriteObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LocationFavoriteObj.m; path = ../LocationFavoriteObj.m; sourceTree = "<group>"; };
 		4FF727F822ED544A000C8AB8 /* FMInputEmailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMInputEmailVC.h; sourceTree = "<group>"; };
 		4FF727F922ED544A000C8AB8 /* FMInputEmailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMInputEmailVC.m; sourceTree = "<group>"; };
 		4FF727FA22ED544A000C8AB8 /* FMInputEmailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMInputEmailVC.xib; sourceTree = "<group>"; };
@@ -946,10 +952,13 @@
 		4FBD3D98228DBF5C00E76E2A /* LocationFavorite */ = {
 			isa = PBXGroup;
 			children = (
+				4FF699A722F0620E0035BD72 /* New Group */,
 				4FBD3D99228DBFBA00E76E2A /* FMLocationFavoriteViewController.h */,
 				4FBD3D9A228DBFBA00E76E2A /* FMLocationFavoriteViewController.m */,
 				4FBD3D9B228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib */,
 				4FBD3DA4228DDE2C00E76E2A /* LocationFavorite.xcassets */,
+				4FF6999F22F05F9B0035BD72 /* FMLocationFavoriteModel.h */,
+				4FF699A022F05F9B0035BD72 /* FMLocationFavoriteModel.m */,
 			);
 			path = LocationFavorite;
 			sourceTree = "<group>";
@@ -1205,6 +1214,15 @@
 				4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */,
 			);
 			path = PromotionDetail;
+			sourceTree = "<group>";
+		};
+		4FF699A722F0620E0035BD72 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4FF699A422F0620A0035BD72 /* LocationFavoriteObj.h */,
+				4FF699A522F0620A0035BD72 /* LocationFavoriteObj.m */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4FF727FD22ED8F71000C8AB8 /* LoginAccount */ = {
@@ -2048,6 +2066,7 @@
 				5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */,
 				5C39102D2263492A008BEA62 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4F45EF01229EB22B004556F9 /* FMIntroCameraCell.m in Sources */,
+				4FF699A622F0620A0035BD72 /* LocationFavoriteObj.m in Sources */,
 				4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */,
 				4FF7280122ED8FE5000C8AB8 /* FMLoginAccountViewController.m in Sources */,
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
@@ -2089,6 +2108,7 @@
 				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				5C563DD622B16F28006AB186 /* FZVourchersSearchViewController.m in Sources */,
+				4FF699A122F05F9B0035BD72 /* FMLocationFavoriteModel.m in Sources */,
 				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
 				4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */,
 				4FF9C3BF22910A7600D3AD81 /* HistoryBillHeaderCell.m in Sources */,
