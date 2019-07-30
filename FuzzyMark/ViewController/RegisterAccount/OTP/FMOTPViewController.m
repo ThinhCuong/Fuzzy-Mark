@@ -24,6 +24,8 @@
     NSAttributedString *_attributedString;
     NSString *_email;
     NSString *_type;
+    NSTimer *_timer;
+    NSInteger _currSeconds;
     BaseCallApi *_httpClient;
 }
 
@@ -126,6 +128,7 @@
         if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
                 if ([self.delegate respondsToSelector:@selector(checkOTPSuccess:withEmail:)]) {
+                    [self.view endEditing:YES];
                     [self.delegate checkOTPSuccess:YES withEmail:self->_email];
                 }
             } else {
@@ -150,6 +153,7 @@
         if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
                 self.lbTitle.attributedText = self->_attributedString;
+                [self startCountdownTime];
             } else {
                 self.lbTitle.attributedText = [self getAttributedErrorWithString:[success stringForKey:@"message"]];
             }
@@ -165,6 +169,29 @@
 - (NSAttributedString *)getAttributedErrorWithString:(NSString *) text {
     NSAttributedString *errorAttributedText = [[NSAttributedString alloc] initWithString:text attributes:@{NSForegroundColorAttributeName : klineColorError}];
     return errorAttributedText;
+}
+
+#pragma mark - Countdownt Timer
+- (void)startCountdownTime {
+    _currSeconds = 60;
+    _btnTime.enabled = NO;
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateCountdown) userInfo:nil repeats:YES];
+}
+
+- (void)updateCountdown {
+    _currSeconds--;
+    if (_currSeconds == 0) {
+        [_btnTime setTitle:@"Gửi lại" forState:UIControlStateNormal];
+        [self stopCountdown];
+        return;
+    } else {
+        [_btnTime setTitle:[NSString stringWithFormat:@"Gửi lại (%ld%@)", (long)_currSeconds, @"s"] forState:UIControlStateDisabled];
+    }
+}
+
+- (void)stopCountdown {
+    _btnTime.enabled = YES;
+    [_timer invalidate];
 }
 
 #pragma mark - UITextFieldDelegate
