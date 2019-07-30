@@ -10,8 +10,10 @@
 #import "FuzzyMark-Swift.h"
 #import "UserInformation.h"
 #import "FMInputEmailVC.h"
+#import "FMOTPViewController.h"
+#import "FMRegisterAccountViewController.h"
 
-@interface FMLoginAccountViewController () <UITextFieldDelegate>
+@interface FMLoginAccountViewController () <UITextFieldDelegate, FMInputEmailVCDelegate, FMOTPViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet TJTextField *tfName;
 @property (weak, nonatomic) IBOutlet TJTextField *tfPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnSuccess;
@@ -122,14 +124,43 @@
 
 - (IBAction)didSelectRegister:(id)sender {
     FMInputEmailVC *vc = [[FMInputEmailVC alloc] init];
-    vc.registerSuccess = ^{
-        [self dismissViewControllerAnimated:YES completion:nil];
-    };
-    [self.navigationController pushViewController:vc animated:YES];
+    vc.delegate = self;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:nil];
 }
 
 - (IBAction)didSelectForgotPassword:(id)sender {
     
+}
+
+#pragma mark - FMInputEmailVCDelegate
+- (void)outputEmailSuccess:(NSString *)email {
+    NSAttributedString *emailString = [[NSAttributedString alloc] initWithString:email ?: @"" attributes:@{NSFontAttributeName : [UIFont setBoldFontMuliWithSize:14.0]}];
+    NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Vui lòng nhập mã OTP vừa được gửi đến email " attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
+    NSMutableAttributedString *titleAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:titleString];
+    [titleAttributedString appendAttributedString:emailString];
+    
+    FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:titleAttributedString EmailSendOTP:email ?: @"" withType:OTPTypeRegister];
+    vc.delegate = self;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - FMOTPViewControllerDelegate
+- (void)checkOTPSuccess:(BOOL)isSuccess withEmail:(NSString *)email {
+    // Register Account
+    if (isSuccess) {
+        UserInformation *user = [[UserInformation alloc] init];
+        user.user_view = [[UseView alloc] init];
+        user.email = email ?: @"";
+        
+        FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] initWithUser:user];
+        vc.registerSuccess = ^{
+            [self dismissViewControllerAnimated:YES completion:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+        };
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 
 @end

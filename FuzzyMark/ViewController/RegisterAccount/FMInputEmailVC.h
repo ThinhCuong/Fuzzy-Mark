@@ -10,8 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol FMInputEmailVCDelegate <NSObject>
+
+- (void)outputEmailSuccess:(NSString *) email;
+
+@end
+
 @interface FMInputEmailVC : FMBaseViewController
-@property (nonatomic, copy) void(^registerSuccess)(void);
+
+@property (assign, nonatomic) id<FMInputEmailVCDelegate> delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

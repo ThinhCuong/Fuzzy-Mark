@@ -22,7 +22,8 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    
+    _imgUser.layer.cornerRadius = _imgUser.frame.size.height/2;
+    _imgUser.clipsToBounds = YES;
 }
 
 - (void)binDataLoginWithUserInfor:(UserInformation *) userInfo {

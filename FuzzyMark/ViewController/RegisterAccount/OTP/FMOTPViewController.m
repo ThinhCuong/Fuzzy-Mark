@@ -116,31 +116,32 @@
 #pragma mark - IBAction
 - (IBAction)didSelectBtnSendOTP:(id)sender {
     NSMutableString *otpString = [NSMutableString stringWithFormat:@"%@%@%@%@", _tfFirst.text, _tfSecond.text, _tfThird.text, _tfFourth.text];
-    NSDictionary *params = @{@"otp": otpString,
-                             @"email": _email ?: @""
+    NSDictionary *params = @{@"otp": otpString ?: @"",
+                             @"email": _email ?: @"",
+                             @"type": _type ?: @""
                              };
     [CommonFunction showLoadingView];
     [_httpClient postDataWithPath:@"user/check-otp" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
-                if ([self.delegate respondsToSelector:@selector(checkOTPSuccess:)]) {
-                    [self.delegate checkOTPSuccess:YES];
+                if ([self.delegate respondsToSelector:@selector(checkOTPSuccess:withEmail:)]) {
+                    [self.delegate checkOTPSuccess:YES withEmail:self->_email];
                 }
             } else {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
         } else {
-            [CommonFunction showToast:@"Không có dữ liệu"];
+            [CommonFunction showToast:kMessageError];
         }
     } withFailBlock:^(id fail) {
         [CommonFunction hideLoadingView];
-        [CommonFunction showToast:@"Không có dữ liệu"];
+        [CommonFunction showToast:kMessageError];
     }];
 }
 
 - (IBAction)didSelectBtnResendOTP:(id)sender {
-    NSDictionary *params = @{@"type": _type,
+    NSDictionary *params = @{@"type": _type ?:@"",
                              @"email": _email ?: @""
                              };
     [CommonFunction showLoadingView];
@@ -150,7 +151,7 @@
             if([success codeForKey:@"error_code"] == 0) {
                 self.lbTitle.attributedText = self->_attributedString;
             } else {
-                self.lbTitle.attributedText = [self getAttributedErrorWithString:[success stringForKey:@"errorCode"]];
+                self.lbTitle.attributedText = [self getAttributedErrorWithString:[success stringForKey:@"message"]];
             }
         } else {
             self.lbTitle.attributedText = [self getAttributedErrorWithString:kMessageError];

@@ -158,10 +158,12 @@
             } else {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
+        } else {
+            [CommonFunction showToast:kMessageError];
         }
     } withFailBlock:^(id fail) {
         [CommonFunction hideLoadingView];
-        [CommonFunction showToast:@"Không lấy được dữ liệu"];
+        [CommonFunction showToast:kMessageError];
     }];
 }
 
@@ -181,8 +183,24 @@
 }
 
 - (void)saveDataRegisterSuccess {
-    [UserInfo setUserInforWithUserModel:_userModel];
-    self.registerSuccess ? self.registerSuccess() : 0;
+    NSDictionary *params = @{};
+    [_httpClient getDataWithPath:@"/user/profile" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if ([success codeForKey:@"error_code"] == 0) {
+                NSDictionary *dict = [success dictionaryForKey:@"data"];
+                UserInformation *user = [[UserInformation alloc] initWithDictionary:dict error:nil];
+                [UserInfo setUserInforWithUserModel:user];
+                self.registerSuccess ? self.registerSuccess() : 0;
+            } else {
+                [CommonFunction showToast:[success stringForKey:@"message"]];
+            }
+        } else {
+            [CommonFunction showToast:kMessageError];
+        }
+    } withFailBlock:^(id fail) {
+        [CommonFunction showToast:kMessageError];
+    }];
 }
 
 @end

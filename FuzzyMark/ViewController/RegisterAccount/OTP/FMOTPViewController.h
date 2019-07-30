@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol FMOTPViewControllerDelegate <NSObject>
-- (void)checkOTPSuccess:(BOOL) isSuccess;
+- (void)checkOTPSuccess:(BOOL) isSuccess withEmail:(NSString *) email;
 @end
 
 @interface FMOTPViewController : FMBaseViewController
