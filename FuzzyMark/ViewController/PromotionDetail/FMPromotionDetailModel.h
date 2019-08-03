@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "VoucherInfoJsonModel.h"
+#import "FzVourcherInfoObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 @protocol FMPromotionDetailModelDelegate <NSObject>
 
-- (void)getDataSuccess:(VoucherInfoJsonModel *) voucherInfo;
+- (void)getDataSuccess:(FzVourcherInfoObject *) voucherInfo;
 - (void)getDataFail;
 - (void)getDataError;
 
@@ -20,7 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FMPromotionDetailModel : NSObject
 
 @property (assign, nonatomic) id<FMPromotionDetailModelDelegate> delegate;
-- (void)getVouchersInfoWithIDVoucher:(NSString *) idVoucher;
+
+- (void)getVouchersInfoWithIDVoucher:(NSString *)idVoucher;
 
 @end
 

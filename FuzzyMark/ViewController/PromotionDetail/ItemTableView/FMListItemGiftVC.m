@@ -10,16 +10,16 @@
 #import "FMPromotionGiftCell.h"
 
 @implementation FMListItemGiftVC {
-    VoucherInfoJsonModel *_jsonModel;
-    NSArray <Voucher *> *_listData;
+    FzVourcherInfoObject *_jsonModel;
+    NSArray <RewardObject *> *_listData;
 }
 
-- (instancetype)initWithVoucherDataJson:(VoucherInfoJsonModel *) jsonModel
+- (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel
 {
     self = [super init];
     if (self) {
         _jsonModel = jsonModel;
-        _listData = jsonModel.related_vouchers;
+        _listData = jsonModel.relatedVouchers;
     }
     return self;
 }

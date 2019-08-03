@@ -10,16 +10,16 @@
 #import "FMPromotionIntroCell.h"
 
 @implementation FMListItemIntroduceVC {
-    VoucherInfoJsonModel *_jsonModel;
+    FzVourcherInfoObject *_jsonModel;
     NSArray <Page *> *_listData;
 }
 
-- (instancetype)initWithVoucherDataJson:(VoucherInfoJsonModel *) jsonModel
+- (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel
 {
     self = [super init];
     if (self) {
         _jsonModel = jsonModel;
-        _listData = jsonModel.accepted_page;
+        _listData = jsonModel.acceptedPage;
     }
     return self;
 }

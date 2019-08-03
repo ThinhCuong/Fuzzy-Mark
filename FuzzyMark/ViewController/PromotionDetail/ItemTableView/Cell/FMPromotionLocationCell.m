@@ -22,7 +22,7 @@
     // Initialization code
 }
 
-- (void)binData:(Page *) model {
+- (void)binData:(PageObject *) model {
     self.lblLocation.text = model.address;
     self.lblPhone.text = model.hotline;
 }

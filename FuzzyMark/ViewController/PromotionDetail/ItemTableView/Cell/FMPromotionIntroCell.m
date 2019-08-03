@@ -8,6 +8,7 @@
 
 #import "FMPromotionIntroCell.h"
 
+
 @interface FMPromotionIntroCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *lblLocation;
@@ -24,10 +25,11 @@
     // Initialization code
 }
 
-- (void)binData:(Page *) model {
+- (void)binData:(PageObject *) model {
     self.lblLocation.text = model.address;
     self.lblPhone.text = model.hotline;
-    self.lblMoney.text = [NSString stringWithFormat:@"Mức giá: %@đ - %@đ", [self makeStringFormatMoneyString:model.min_price], [self makeStringFormatMoneyString:model.max_price]];
+    self.lblMoney.text = model.range_price;
+//     self.lblMoney.text = [NSString stringWithFormat:@"Mức giá: %@đ - %@đ", [self makeStringFormatMoneyString:model.min_price], [self makeStringFormatMoneyString:model.max_price]];
 }
 
 - (NSString *)makeStringFormatMoneyString:(NSInteger) totalAmount {

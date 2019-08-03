@@ -7,6 +7,7 @@
 //
 
 #import "FMPromotionDetailModel.h"
+#import "FzVourcherInfoObject.h"
 
 @implementation FMPromotionDetailModel {
     BaseCallApi *_httpClient;
@@ -22,13 +23,17 @@
     return self;
 }
 
-- (void)getVouchersInfoWithIDVoucher:(NSString *) idVoucher {
+- (void)getVouchersInfoWithIDVoucher:(NSString *)idVoucher {
     [_httpClient getDataWithPath:@"vouchers/info" andParam:@{@"id": idVoucher} isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             if([success[@"errorCode"] integerValue] == 0) {
                 NSError *err;
                 VoucherInfoJsonModel *vocherInfo = [[VoucherInfoJsonModel alloc] initWithDictionary:success[@"data"] error:&err];
-                [self.delegate getDataSuccess:vocherInfo];
+                
+                FzVourcherInfoObject *voucher = [[FzVourcherInfoObject alloc] initWithDataDictionary:success[@"data"]];
+                
+                [self.delegate getDataSuccess:voucher];
+                
             } else {
                 [self.delegate getDataError];
             }

@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Page.h"
+#import "FzVourcherInfoObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPromotionIntroCell : UITableViewCell
 
-- (void)binData:(Page *) model;
+- (void)binData:(PageObject *) model;
 
 @end
 
