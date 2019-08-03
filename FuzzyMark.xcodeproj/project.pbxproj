@@ -159,6 +159,7 @@
 		4FFC65CD22B5763900056AE2 /* FMPromotionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC65CB22B5763900056AE2 /* FMPromotionDetailVC.m */; };
 		4FFC65CE22B5763900056AE2 /* FMPromotionDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFC65CC22B5763900056AE2 /* FMPromotionDetailVC.xib */; };
 		4FFC65D022B57F8200056AE2 /* PromotionDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFC65CF22B57F8200056AE2 /* PromotionDetail.xcassets */; };
+		5C02E78C22F4FD1600746F4A /* FzVourcherInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C02E78B22F4FD1600746F4A /* FzVourcherInfoObject.m */; };
 		5C127AF722A48D20002ADFE9 /* FZFooterCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C127AF522A48D20002ADFE9 /* FZFooterCollectionReusableView.m */; };
 		5C127AF822A48D20002ADFE9 /* FZFooterCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C127AF622A48D20002ADFE9 /* FZFooterCollectionReusableView.xib */; };
 		5C1585EF22A5DDC5008F06AB /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1585EE22A5DDC5008F06AB /* CustomButton.swift */; };
@@ -487,6 +488,8 @@
 		4FFC65CB22B5763900056AE2 /* FMPromotionDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionDetailVC.m; sourceTree = "<group>"; };
 		4FFC65CC22B5763900056AE2 /* FMPromotionDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPromotionDetailVC.xib; sourceTree = "<group>"; };
 		4FFC65CF22B57F8200056AE2 /* PromotionDetail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PromotionDetail.xcassets; sourceTree = "<group>"; };
+		5C02E78A22F4FD1600746F4A /* FzVourcherInfoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FzVourcherInfoObject.h; sourceTree = "<group>"; };
+		5C02E78B22F4FD1600746F4A /* FzVourcherInfoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FzVourcherInfoObject.m; sourceTree = "<group>"; };
 		5C127AF422A48D20002ADFE9 /* FZFooterCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZFooterCollectionReusableView.h; sourceTree = "<group>"; };
 		5C127AF522A48D20002ADFE9 /* FZFooterCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZFooterCollectionReusableView.m; sourceTree = "<group>"; };
 		5C127AF622A48D20002ADFE9 /* FZFooterCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZFooterCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -1212,6 +1215,8 @@
 			children = (
 				4FF5AF2522B7EC6C009A613E /* VoucherInfoJsonModel.h */,
 				4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */,
+				5C02E78A22F4FD1600746F4A /* FzVourcherInfoObject.h */,
+				5C02E78B22F4FD1600746F4A /* FzVourcherInfoObject.m */,
 			);
 			path = PromotionDetail;
 			sourceTree = "<group>";
@@ -2072,6 +2077,7 @@
 				5C39102F2263492A008BEA62 /* UIImageView+AFNetworking.m in Sources */,
 				4FBD3D94228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.m in Sources */,
 				4F50F38E2276E9A700DF7173 /* FMUserInforViewController.m in Sources */,
+				5C02E78C22F4FD1600746F4A /* FzVourcherInfoObject.m in Sources */,
 				4FF2BD77227BD9F70008BA69 /* FMCameraViewController.m in Sources */,
 				5C76FBCA22BFDB080006D59D /* FZHotlineViewController.m in Sources */,
 				4FF27DAD22D5249F0077A36E /* TNCheckBox+SingleSelect.m in Sources */,

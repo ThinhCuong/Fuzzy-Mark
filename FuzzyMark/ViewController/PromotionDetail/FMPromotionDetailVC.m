@@ -13,6 +13,7 @@
 #import "FMListItemLocationVC.h"
 #import "FMListItemIntroduceVC.h"
 #import "FMListItemGiftVC.h"
+#import "FzVourcherInfoObject.h"
 
 
 @interface FMPromotionDetailVC () <FMPromotionDetailModelDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
@@ -35,7 +36,7 @@
 
 @implementation FMPromotionDetailVC {
     NSString *_idVoucher;
-    VoucherInfoJsonModel *_voucherInfo;
+    FzVourcherInfoObject *_voucherInfo;
     HMSegmentedControl *_segmentedControl;
     UIPageViewController *_pageViewController;
     NSArray <UIViewController *> *_childTableVCs;
@@ -47,7 +48,7 @@
 }
 
 #pragma mark - life cycle
-- (instancetype)initWithIDVoucher:(NSString *) idVoucher
+- (instancetype)initWithIDVoucher:(NSString *)idVoucher
 {
     self = [super init];
     if (self) {
@@ -125,11 +126,11 @@
     [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:_voucherInfo.voucher.image]];
     [self.imgVoucher sd_setImageWithURL:[NSURL URLWithString:_voucherInfo.voucher.logo]];
     self.lblName.text = _voucherInfo.voucher.name ?: @"";
-    self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", (long)_voucherInfo.voucher.percent_discount] ?: @"";
-    [self.btnSaleTop setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percent_discount, @"%"] forState:UIControlStateNormal];
-    [self.btnSaleBottom setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percent_discount, @"%"] forState:UIControlStateNormal];
-    self.lblDesc.text = _voucherInfo.voucher.descriptionVoucher ?: @"";
-    self.lblTitle.text = [NSString stringWithFormat:@"Hiện đã có %ld người sử dụng voucher này", (long)_voucherInfo.count_received];
+    self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", (long)_voucherInfo.voucher.percentDiscount] ?: @"";
+    [self.btnSaleTop setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percentDiscount, @"%"] forState:UIControlStateNormal];
+    [self.btnSaleBottom setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percentDiscount, @"%"] forState:UIControlStateNormal];
+    self.lblDesc.text = _voucherInfo.voucher.rewardDescription ?: @"";
+    self.lblTitle.text = [NSString stringWithFormat:@"Hiện đã có %ld người sử dụng voucher này", (long)_voucherInfo.countReceived];
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLabelWithCountdownTime) userInfo:nil repeats: YES];
     
     //bin Data listView
@@ -168,7 +169,7 @@
 }
 
 - (void)updateLabelWithCountdownTime {
-    self.lblTime.text = [self getTimeFormatted:_voucherInfo.voucher.count_down];
+    self.lblTime.text = [self getTimeFormatted:_voucherInfo.voucher.countDown];
 }
 
 - (NSString *)getTimeFormatted:(NSInteger) totalSeconds {
@@ -178,7 +179,7 @@
         }
         _timer = nil;
     }
-    _voucherInfo.voucher.count_down--;
+    _voucherInfo.voucher.countDown--;
     
     NSInteger day = totalSeconds / 86400;
     NSInteger hours = (totalSeconds % 86400) /3600;
@@ -237,7 +238,7 @@
 }
 
 #pragma mark - MVPromotionDetailModelDelegate
-- (void)getDataSuccess:(VoucherInfoJsonModel *) voucherInfo {
+- (void)getDataSuccess:(FzVourcherInfoObject *) voucherInfo {
     [self stopAnimationLoading];
     _voucherInfo = voucherInfo;
     [self binData];

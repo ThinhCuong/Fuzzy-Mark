@@ -109,8 +109,8 @@
     }];
 }
 
-- (void)didSelectChooseItemWithIDVoucher:(NSString *) idVoucher {
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+- (void)didSelectChooseItemWithIDVoucher:(NSInteger)idVoucher {
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:[NSString stringWithFormat:@"%ld", (long)idVoucher]];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

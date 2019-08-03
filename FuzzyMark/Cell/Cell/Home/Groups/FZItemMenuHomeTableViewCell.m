@@ -62,7 +62,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    [self didSelectChooseItemWithVoucher:@"fix"];
+    [self didSelectChooseItemWithVoucher:_listVoucherHorizontal[indexPath.row].rewardId];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,10 +82,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self didSelectChooseItemWithVoucher:@"fix"];
+    [self didSelectChooseItemWithVoucher:_listVoucherVertical[indexPath.row].rewardId];
 }
 
-- (void)didSelectChooseItemWithVoucher:(NSString *) voucherID {
+- (void)didSelectChooseItemWithVoucher:(NSInteger)voucherID {
     [self.delegate didSelectChooseItemWithIDVoucher:voucherID];
 }
 
