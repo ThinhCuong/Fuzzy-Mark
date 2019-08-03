@@ -29,9 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBar];
     [self setupUI];
     [self binData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self setNavigationBar];
 }
 
 - (void)setNavigationBar {
