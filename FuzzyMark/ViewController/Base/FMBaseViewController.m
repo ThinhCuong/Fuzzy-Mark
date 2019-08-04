@@ -14,6 +14,7 @@
 
 @implementation FMBaseViewController {
     UITapGestureRecognizer *_tapCloseKeyboard;
+    
 }
 
 #pragma mark - IBAction
@@ -48,6 +49,7 @@
     self.hideBottomLineNav = _hideBottomLineNav;
     self.hideNav = _hideNav;
     self.navBackBtnTitle = _navBackBtnTitle ?: @"";
+    self.navTitle = _navTitle ?: @"";
 }
 
 - (void)closeKeyboart {

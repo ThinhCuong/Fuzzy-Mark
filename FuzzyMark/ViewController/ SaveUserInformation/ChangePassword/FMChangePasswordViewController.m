@@ -33,11 +33,6 @@
     _httpClient = [BaseCallApi defaultInitWithBaseURL];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.hideNav = YES;
-}
-
 - (BOOL)validateNewPasswordWithString:(NSString *) password {
     NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
     NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
