@@ -28,27 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.hideBottomLineNav = YES;
     [self.tfName addTarget:self action:@selector(textfieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.tfPassword addTarget:self action:@selector(textfieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     _httpClient = [BaseCallApi defaultInitWithBaseURL];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self setNavigationBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.clipsToBounds = NO;
-}
-
-#pragma mark - private
-- (void)setNavigationBar {
-    self.navigationItem.title = @"";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationController.navigationBar.clipsToBounds = YES;
 }
 
 - (BOOL)validatePasswordWithString:(NSString *) password {

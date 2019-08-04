@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.isHideNavigationBar = YES;
+    self.hideNav = YES;
     
     // header
     [self.tableView registerNib:[UINib nibWithNibName:@"FZHeaderSearchTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZHeaderSearchTableViewCell"];

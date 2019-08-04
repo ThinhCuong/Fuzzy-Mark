@@ -36,6 +36,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navTitle = @"Địa điểm quan tâm";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ic_filter"] style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightBarButtonItem)];
     [self setTableView];
 //    [self callDataRefresh];
 }
@@ -47,20 +49,12 @@
     }
 }
 
-
 #pragma mark - private
 - (void)setTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
     [self.tableView registerNib:[UINib nibWithNibName:@"LocationFavoriteTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-}
-
-- (void)setNavigationBar {
-    self.navigationItem.title = @"Địa điểm quan tâm";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ic_filter"] style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightBarButtonItem)];
 }
 
 - (void)didSelectRightBarButtonItem {

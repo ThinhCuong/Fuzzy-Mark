@@ -18,6 +18,7 @@
 #import "FMLoginAccountViewController.h"
 #import "FMLoginCell.h"
 #import "FMChoicePictureModel.h"
+#import "FMChangePasswordViewController.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol, FMUserInforDelegate, FMLoginCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -43,7 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.isHideNavigationBar = YES;
+    self.hideNav = YES;
     [self setTableViewContent];
     [self.model loadData];
 }
@@ -199,7 +200,7 @@
             break;
         }
         case FMTableViewCellBlockChangePassWord:
-            
+            [self showViewChangePassword];
             break;
         case FMTableViewCellBlockChangePhoneNumber:
             
@@ -296,6 +297,16 @@
     FMChangeUserInforViewController *vc = [[FMChangeUserInforViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)showViewChangePassword {
+    FMChangePasswordViewController *vc = [[FMChangePasswordViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)showViewChangePhoneNumber {
+    
 }
 
 @end

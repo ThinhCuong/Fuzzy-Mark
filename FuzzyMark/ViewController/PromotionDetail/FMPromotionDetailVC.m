@@ -86,7 +86,7 @@
 #pragma mark - private
 - (void)setUI {
     [SVProgressHUD setContainerView:self.view];
-    self.isHideNavigationBar = YES;
+    self.hideNav = YES;
     self.btnSaleTop.layer.cornerRadius = self.btnSaleTop.frame.size.height / 2;
     self.btnSaleBottom.layer.cornerRadius = self.btnSaleBottom.frame.size.height / 2;
     [self showButtonSaleTop];

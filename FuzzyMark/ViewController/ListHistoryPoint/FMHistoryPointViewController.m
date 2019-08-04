@@ -33,9 +33,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setNavigationBar];
-    [self setTableViewContent];
+    self.navTitle = @"Lịch sử nhận điểm thưởng";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ic_info"] style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightBarButtonItem)];
     
+    [self setTableViewContent];
     [self.model.listData removeAllObjects];
     [self.model getListHistoryCaptureWithSuccessBlock:^(id data) {
         if(data) {
@@ -44,24 +45,12 @@
     }];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-}
-
 #pragma mark - private
 - (void)setTableViewContent {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"HistoryPointTableViewCell" bundle:nil] forCellReuseIdentifier:@"cell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"HistoryPointHeaderTableViewCell" bundle:nil] forCellReuseIdentifier:@"headerCell"];
-}
-
-- (void)setNavigationBar {
-    self.navigationItem.title = @"Lịch sử nhận điểm thưởng";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ic_info"] style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightBarButtonItem)];
 }
 
 - (void)didSelectRightBarButtonItem {

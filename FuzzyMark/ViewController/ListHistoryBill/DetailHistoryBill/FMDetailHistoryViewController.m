@@ -29,19 +29,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navTitle = @"Thông tin giao dịch";
     [self setupUI];
     [self binData];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setNavigationBar];
-}
-
-- (void)setNavigationBar {
-    self.navigationItem.title = @"Thông tin giao dịch";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
 }
 
 - (void)setupUI {

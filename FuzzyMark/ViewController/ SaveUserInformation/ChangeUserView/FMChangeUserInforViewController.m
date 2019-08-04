@@ -29,12 +29,13 @@
 #pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navTitle = @"Thông tin cá nhân";
     [self setUI];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setNavigationBar];
+    self.hideBottomLineNav = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -55,14 +56,6 @@
 #pragma mark - IBAction
 - (IBAction)didSelectSave:(id)sender {
     NSLog(@"Save");
-}
-
-#pragma mark - private
-- (void)setNavigationBar {
-    self.navigationItem.title = @"Thông tin cá nhân";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationController.navigationBar.clipsToBounds = YES;
 }
 
 - (void)setCheckBox {

@@ -17,7 +17,6 @@
 @property (weak, nonatomic) IBOutlet TJTextField *tfRepassWord;
 @property (weak, nonatomic) IBOutlet UIButton *btnSuccess;
 @property (weak, nonatomic) IBOutlet UIButton *btnShowPass;
-@property (strong, nonatomic) UITapGestureRecognizer *tapCloseKeyboard;
 @end
 
 @implementation FMRegisterAccountViewController {
@@ -40,46 +39,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.hideBottomLineNav = YES;
     [self.tfEmail addTarget:self action:@selector(textfieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.tfFullName addTarget:self action:@selector(textfieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.tfPassword addTarget:self action:@selector(textfieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [self.tfRepassWord addTarget:self action:@selector(textfieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidShow:)
-                                                 name:UIKeyboardDidShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardDidHide:)
-                                                 name:UIKeyboardDidHideNotification
-                                               object:nil];
-    _tapCloseKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboart)];
     _httpClient = [BaseCallApi defaultInitWithBaseURL];
     _tfEmail.text = _userModel.email ?: @"";
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self setNavigationBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.clipsToBounds = NO;
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter ] removeObserver:self];
-}
-
-#pragma mark - private
-- (void)setNavigationBar {
-    self.navigationItem.title = @"";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationController.navigationBar.clipsToBounds = YES;
 }
 
 - (BOOL)validateNameWithString:(NSString *) name {
@@ -126,18 +92,6 @@
         isValidateTF = [self validateRepasswordWithString:textField.text];
     }
     textField.lineColor = isValidateTF ? klineColorSuccess : klineColorError;
-}
-
-- (void)closeKeyboart {
-    [self.view endEditing:YES];
-}
-
-- (void)keyboardDidShow: (NSNotification *) notif{
-    [self.view addGestureRecognizer:_tapCloseKeyboard];
-}
-
-- (void)keyboardDidHide: (NSNotification *) notif{
-    [self.view removeGestureRecognizer:_tapCloseKeyboard];
 }
 
 #pragma mark - IBAction

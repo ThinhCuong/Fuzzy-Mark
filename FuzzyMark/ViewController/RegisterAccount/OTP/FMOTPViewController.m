@@ -70,21 +70,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setNavigationBar];
+    self.hideBottomLineNav = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     self.navigationController.navigationBar.clipsToBounds = NO;
-}
-
-#pragma mark - private
-- (void)setNavigationBar {
-    self.navigationItem.title = @"";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationController.navigationBar.clipsToBounds = YES;
-    
 }
 
 - (void)textFieldDidChange:(UITextField *) sender {

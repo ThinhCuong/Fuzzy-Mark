@@ -32,7 +32,7 @@
     // Do any additional setup after loading the view from its nib.
     _firstLoad = YES;
     [self.introView setAlpha:0.0];
-    [self setNavigationBar];
+    self.hideNav = YES;
     _listImage = [[NSMutableArray alloc] init];
 }
 
@@ -49,11 +49,6 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self.session stopRunning];
-}
-
-#pragma mark private
-- (void)setNavigationBar {
-    self.isHideNavigationBar = YES;
 }
 
 - (void)setBlurView {

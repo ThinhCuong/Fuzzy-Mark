@@ -31,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.isHideNavigationBar = YES;
+    self.hideNav = YES;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self testApi];

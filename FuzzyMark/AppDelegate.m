@@ -59,35 +59,30 @@
     self.naviHomeController = [[UINavigationController alloc] initWithRootViewController:self.homeViewController];
     UITabBarItem *tabbarItemHome = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_home_tb"] selectedImage:[UIImage imageNamed:@"ic_home_tb"]];
     self.naviHomeController.tabBarItem = tabbarItemHome;
-    self.naviHomeController.delegate = self;
     
     // init Search
     self.FMSearchViewController = [[FZSearchViewController alloc] init];
     self.FMNaviSearchController = [[UINavigationController alloc] initWithRootViewController:self.FMSearchViewController];
     UITabBarItem *tabbarItemSeach = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_search_selected_tb"] selectedImage:[UIImage imageNamed:@"ic_search_selected_tb"]];
     self.FMNaviSearchController.tabBarItem = tabbarItemSeach;
-    self.FMNaviSearchController.delegate = self;
     
     // init Camera
     self.registerPromotiosVC = [[FMRegisterPromotionViewController alloc] init];
     self.naviRegisterPromotions = [[UINavigationController alloc] initWithRootViewController:self.registerPromotiosVC];
     UITabBarItem *tabbarItemCamera = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_camera_tb"] selectedImage:[UIImage imageNamed:@"ic_camera_tb"]];
     self.naviRegisterPromotions.tabBarItem = tabbarItemCamera;
-    self.naviRegisterPromotions.delegate = self;
     
     // init Notifi
     self.notifiViewController = [[FMNotifiViewController alloc] init];
     self.naviNotifiController = [[UINavigationController alloc] initWithRootViewController:self.notifiViewController];
     UITabBarItem *tabbarItemNotifi = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_bell_tb"] selectedImage:[UIImage imageNamed:@"ic_bell_tb"]];
     self.naviNotifiController.tabBarItem = tabbarItemNotifi;
-    self.naviNotifiController.delegate = self;
     
     // init User
     self.userInforViewController = [[FMUserInforViewController alloc] init];
     self.naviUserInforController = [[UINavigationController alloc] initWithRootViewController:self.userInforViewController];
     UITabBarItem *tabbarItemUserInfor = [[UITabBarItem alloc] initWithTitle:@"" image:[UIImage imageNamed:@"ic_user_tb"] selectedImage:[UIImage imageNamed:@"ic_user_tb"]];
     self.naviUserInforController.tabBarItem = tabbarItemUserInfor;
-    self.naviUserInforController.delegate = self;
 }
 
 
@@ -150,16 +145,6 @@
     }
     
     return _persistentContainer;
-}
-
-#pragma mark - UINavigationBarDelegate
-- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if([viewController isKindOfClass: FMBaseViewController.class]) {
-        FMBaseViewController *vc = (FMBaseViewController *) viewController;
-        [navigationController setNavigationBarHidden:vc.isHideNavigationBar];
-    } else {
-        return;
-    }
 }
 
 #pragma mark - Core Data Saving support

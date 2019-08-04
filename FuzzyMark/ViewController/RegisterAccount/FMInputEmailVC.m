@@ -32,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.hideBottomLineNav = YES;
     [_tfEmail addTarget:self action:@selector(textFieldEditingChange:) forControlEvents:UIControlEventEditingChanged];
     if (_type == LoginTypeSignUp) {
         _lbtitle.text = @"ĐĂNG KÍ";
@@ -40,25 +41,6 @@
     } else {
         _lbtitle.text = @"";
     }
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self setNavigationBar];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.clipsToBounds = NO;
-}
-
-#pragma mark - private
-- (void)setNavigationBar {
-    self.navigationItem.title = @"";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
-    self.navigationController.navigationBar.clipsToBounds = YES;
-
 }
 
 - (BOOL)validateEmailWithString:(NSString *) email {

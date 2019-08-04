@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMBaseViewController : UIViewController
-@property (assign, nonatomic) BOOL isHideNavigationBar;
+@property (assign, nonatomic) BOOL hideNav;
+@property (assign, nonatomic) BOOL hideBottomLineNav;
+@property (strong, nonatomic) NSString *navBackBtnTitle;
+@property (strong, nonatomic) NSString *navTitle;
 @end
 
 NS_ASSUME_NONNULL_END

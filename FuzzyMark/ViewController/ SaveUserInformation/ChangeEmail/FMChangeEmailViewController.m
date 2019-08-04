@@ -17,17 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navTitle = @"Cập nhật Email";
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self setNavigationBar];
-}
-
-- (void)setNavigationBar {
-    self.navigationItem.title = @"Cập nhật Email";
-    self.navigationController.navigationBar.topItem.title = @"";
-    self.isHideNavigationBar = NO;
 }
 
 @end

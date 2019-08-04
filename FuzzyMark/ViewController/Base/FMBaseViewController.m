@@ -12,21 +12,75 @@
 
 @end
 
-@implementation FMBaseViewController
+@implementation FMBaseViewController {
+    UITapGestureRecognizer *_tapCloseKeyboard;
+}
 
+#pragma mark - IBAction
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self resetNavigation];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardDidHideNotification
+                                               object:nil];
+    _tapCloseKeyboard = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeKeyboart)];
 }
-*/
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
+}
+
+#pragma mark - private
+- (void)resetNavigation {
+    self.hideBottomLineNav = _hideBottomLineNav;
+    self.hideNav = _hideNav;
+    self.navBackBtnTitle = _navBackBtnTitle ?: @"";
+}
+
+- (void)closeKeyboart {
+    [self.view endEditing:YES];
+}
+
+- (void)keyboardDidShow: (NSNotification *) notif{
+    [self.view addGestureRecognizer:_tapCloseKeyboard];
+}
+
+- (void)keyboardDidHide: (NSNotification *) notif{
+    [self.view removeGestureRecognizer:_tapCloseKeyboard];
+}
+
+#pragma mark - Accessory
+- (void)setNavTitle:(NSString *)navTitle {
+    _navTitle = navTitle;
+    [self.navigationItem setTitle:self.navTitle ?: @""];
+}
+
+- (void)setHideNav:(BOOL)hideNav {
+    _hideNav = hideNav;
+    [self.navigationController setNavigationBarHidden:hideNav];
+}
+
+- (void)setNavBackBtnTitle:(NSString *)navBackBtnTitle {
+    _navBackBtnTitle = navBackBtnTitle;
+    [self.navigationController.navigationBar.topItem setTitle:self.navBackBtnTitle ?: @""];
+}
+
+- (void)setHideBottomLineNav:(BOOL)hideBottomLineNav {
+    _hideBottomLineNav = hideBottomLineNav;
+    [self.navigationController.navigationBar setClipsToBounds:self.hideBottomLineNav];
+}
 
 @end

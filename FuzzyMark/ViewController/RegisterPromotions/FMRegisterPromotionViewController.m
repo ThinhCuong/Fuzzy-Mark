@@ -49,8 +49,7 @@
 
 #pragma mark - private
 - (void)setNavigationBar {
-    self.isHideNavigationBar = NO;
-    self.navigationItem.title = @"Ưu đãi đã đăng kí";
+    self.navTitle = @"Ưu đãi đã đăng kí";
     [self addRightButtonNavigationBar];
 }
 
