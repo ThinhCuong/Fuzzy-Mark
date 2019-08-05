@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FZVourchersSearchViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
-
+- (instancetype)initWithKeyWord:(NSString *)keyWord;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -32,8 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FZBannerModel;
 @interface FZBannerModel : JSONModel
 
-@property (nonatomic) NSInteger id;
-@property (nonatomic) NSString *image;
+@property (nonatomic) NSNumber <Optional> * id;
+@property (nonatomic) NSString <Optional> *image;
 
 @end
 
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZIconGroupJsonModel : JSONModel
 
-@property (nonatomic) NSInteger id;
+@property (nonatomic) NSNumber <Optional> * id;
 @property (nonatomic) NSString *title;
 @property (nonatomic) NSString *image;
 
@@ -57,8 +57,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZGroupJsonModel : JSONModel
 
-@property (nonatomic) NSInteger id;
-@property (nonatomic) NSString *title;
+@property (nonatomic) NSNumber <Optional> * id;
+@property (nonatomic) NSString <Optional> *title;
 @property (nonatomic) NSArray <FZGroupInfoJsonModel *> <FZGroupInfoJsonModel> *vouchers_vertical;
 @property (nonatomic) NSArray <FZGroupInfoJsonModel *> <FZGroupInfoJsonModel> *vouchers_horizontal;
 
@@ -69,37 +69,37 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZGroupInfoJsonModel : JSONModel
 
-@property (nonatomic) NSInteger id;
-@property (nonatomic) NSString *name;
-@property (nonatomic) NSString *image;
-@property (nonatomic) NSString *logo;
-@property (nonatomic) NSString *groupInfoDescription;
-@property (nonatomic) NSInteger percent_discount;
-@property (nonatomic) FZPageJsonModel *page;
+@property (nonatomic) NSNumber <Optional> * id;
+@property (nonatomic) NSString <Optional> *name;
+@property (nonatomic) NSString <Optional> *image;
+@property (nonatomic) NSString <Optional> *logo;
+@property (nonatomic) NSString <Optional> *groupInfoDescription;
+@property (nonatomic) NSNumber <Optional> * percent_discount;
+@property (nonatomic) FZPageJsonModel <Optional> *page;
 @end
 
 @class FZLocationJsonModel;
 @interface FZPageJsonModel : JSONModel
 
-@property (nonatomic) NSInteger id;
-@property (nonatomic) NSString *name;
-@property (nonatomic) NSString *address;
-@property (nonatomic) NSInteger rate_count;
-@property (nonatomic) NSInteger total_rate;
-@property (nonatomic) NSString *image;
-@property (nonatomic) NSString *open_time;
-@property (nonatomic) NSString *close_time;
-@property (nonatomic) NSString *hotline;
-@property (nonatomic) NSString *min_price;
-@property (nonatomic) NSString *max_price;
-@property (nonatomic) FZLocationJsonModel *location;
+@property (nonatomic) NSNumber <Optional> *id;
+@property (nonatomic) NSString <Optional> *name;
+@property (nonatomic) NSString <Optional> *address;
+@property (nonatomic) NSNumber <Optional> *rate_count;
+@property (nonatomic) NSNumber <Optional> *total_rate;
+@property (nonatomic) NSString <Optional> *image;
+@property (nonatomic) NSString <Optional> *open_time;
+@property (nonatomic) NSString <Optional> *close_time;
+@property (nonatomic) NSString <Optional> *hotline;
+@property (nonatomic) NSString <Optional> *min_price;
+@property (nonatomic) NSString <Optional> *max_price;
+@property (nonatomic) FZLocationJsonModel <Optional> *location;
 
 @end
 
 @interface FZLocationJsonModel : JSONModel
 
-@property (nonatomic) NSInteger lat;
-@property (nonatomic) NSInteger lng;
+@property (nonatomic) NSNumber <Optional> * lat;
+@property (nonatomic) NSNumber <Optional> * lng;
 
 @end
 

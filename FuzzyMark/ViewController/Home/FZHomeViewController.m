@@ -118,7 +118,7 @@
 - (void)didSelectSuportList:(SuportList ) indexChoose {
     switch (indexChoose) {
         case 0: {
-            FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithNibName:@"FZVourchersSearchViewController" bundle:nil];
+            FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithKeyWord:@""];
             rewardInfoVC.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:rewardInfoVC animated:YES];
             break;
@@ -138,7 +138,30 @@
 }
 
 - (void)didSelectCategoryList:(CategoryList ) indexChoose {
-    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithNibName:@"FZVourchersSearchViewController" bundle:nil];
+    NSString *category;
+    switch (indexChoose) {
+        case Restaurant:
+            category = @"Restaurant";
+            break;
+        case Hotel:
+            category = @"Hotel";
+            break;
+        case Travel:
+            category = @"Travel";
+            break;
+        case Store:
+            category = @"Store";
+            break;
+        case News:
+            category = @"News";
+            break;
+        case Map:
+            category = @"Map";
+            break;
+        default:
+            break;
+    }
+    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithKeyWord:category];
     rewardInfoVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:rewardInfoVC animated:YES];
 }

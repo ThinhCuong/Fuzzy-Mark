@@ -16,7 +16,18 @@
 
 @end
 
-@implementation FZVourchersSearchViewController
+@implementation FZVourchersSearchViewController {
+    NSString *_keyWord;
+}
+
+- (instancetype)initWithKeyWord:(NSString *)keyWord
+{
+    self = [super init];
+    if (self) {
+        _keyWord = keyWord;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -43,7 +54,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+    FZGroupInfoJsonModel *groupID = self.listVourcher[indexPath.row];
+    NSString *voucherID = [groupID.id stringValue];
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:voucherID];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -51,7 +64,14 @@
 - (void)callVouchersSearch {
     
     NSDictionary *params = @{
-                             @"token": @"abd",
+                             @"token": [UserInfo getUserToken] ?: @"",
+                             @"limit": @"50",
+                             @"offset" : @(_listVourcher.count),
+                             @"keyword" : _keyWord ?: @"",
+                             @"lat" : @"20.9813266",
+                             @"lng" : @"105.7874813",
+                             @"categories" : @"",
+                             @"services" : @""
                              };
     
     [SVProgressHUD setContainerView:self.view];

@@ -26,10 +26,10 @@
 - (void)bindData:(FZGroupInfoJsonModel *)groupInfo {
     [self.image sd_setImageWithURL: [NSURL URLWithString:groupInfo.image]];
     self.nameLabel.text = groupInfo.name;
-    self.discountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld%@", groupInfo.percent_discount, @"%"];
+    self.discountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %@%@", groupInfo.percent_discount, @"%"];
     self.addressLabel.text = groupInfo.page.address;
-    self.totalRateLabel.text = [NSString stringWithFormat:@"%ld", groupInfo.page.total_rate];
-    self.totalRateCountLabel.text = [NSString stringWithFormat:@"(%ld)", groupInfo.page.rate_count];
+    self.totalRateLabel.text = [NSString stringWithFormat:@"%@", groupInfo.page.total_rate];
+    self.totalRateCountLabel.text = [NSString stringWithFormat:@"(%@)", groupInfo.page.rate_count];
 }
 
 @end

@@ -19,6 +19,7 @@
 #import "FMLoginCell.h"
 #import "FMChoicePictureModel.h"
 #import "FMChangePasswordViewController.h"
+#import "FMIntroChangePhoneNumber.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol, FMUserInforDelegate, FMLoginCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -203,7 +204,7 @@
             [self showViewChangePassword];
             break;
         case FMTableViewCellBlockChangePhoneNumber:
-            
+            [self showViewChangePhoneNumber];
             break;
         case FMTableViewCellBlockPoliciesAndTerms:
             
@@ -306,7 +307,9 @@
 }
 
 - (void)showViewChangePhoneNumber {
-    
+    FMIntroChangePhoneNumber *vc = [[FMIntroChangePhoneNumber alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

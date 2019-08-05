@@ -7,6 +7,7 @@
 //
 
 #import "FMIntroChangePhoneNumber.h"
+#import "FMChangePhoneNumberViewController.h"
 
 @interface FMIntroChangePhoneNumber ()
 
@@ -17,16 +18,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navTitle = @"Thay đổi số điện thoại";
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)didSelectBtnNext:(id)sender {
+    FMChangePhoneNumberViewController *vc = [[FMChangePhoneNumberViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
-*/
+
 
 @end

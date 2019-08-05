@@ -37,7 +37,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhU-nz-mUd">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhU-nz-mUd" customClass="FMButtonNext">
                     <rect key="frame" x="16" y="354" width="288" height="44"/>
                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -47,6 +47,9 @@
                     <state key="normal" title="Tiếp tục...">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="didSelectBtnNext:" destination="-1" eventType="touchUpInside" id="vG2-a8-h8Z"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JG2-Um-Mtg">
                     <rect key="frame" x="25" y="199.5" width="270" height="41.5"/>

@@ -27,10 +27,7 @@
     [_httpClient getDataWithPath:@"vouchers/info" andParam:@{@"id": idVoucher} isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             if([success[@"errorCode"] integerValue] == 0) {
-                NSError *err;
-                VoucherInfoJsonModel *vocherInfo = [[VoucherInfoJsonModel alloc] initWithDictionary:success[@"data"] error:&err];
-                
-                FzVourcherInfoObject *voucher = [[FzVourcherInfoObject alloc] initWithDataDictionary:success[@"data"]];
+                FzVourcherInfoObject *voucher = [[FzVourcherInfoObject alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];
                 
                 [self.delegate getDataSuccess:voucher];
                 

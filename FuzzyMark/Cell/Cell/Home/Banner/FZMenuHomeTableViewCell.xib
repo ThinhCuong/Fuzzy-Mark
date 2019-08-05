@@ -269,7 +269,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tut-A5-tKs">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tut-A5-tKs">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="72.5"/>
                                                 <connections>
                                                     <action selector="didSelectChooseCategory:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rVx-hg-7DS"/>
@@ -306,7 +306,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-eS-0O2">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5NE-eS-0O2">
                                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="72.5"/>
                                                 <connections>
                                                     <action selector="didSelectChooseCategory:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kGi-pA-3kc"/>
@@ -348,7 +348,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-bL-dzz">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1m-bL-dzz">
                                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="72.5"/>
                                                 <connections>
                                                     <action selector="didSelectChooseCategory:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="y4L-hU-Ywj"/>
@@ -385,7 +385,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEn-Vi-63x">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEn-Vi-63x">
                                                 <rect key="frame" x="0.0" y="0.0" width="107" height="72.5"/>
                                                 <connections>
                                                     <action selector="didSelectChooseCategory:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3tw-Oi-emc"/>
@@ -422,7 +422,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7di-CP-Nq2">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7di-CP-Nq2">
                                                 <rect key="frame" x="0.0" y="0.0" width="106.5" height="72.5"/>
                                                 <connections>
                                                     <action selector="didSelectChooseCategory:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="D3B-Kx-svl"/>
