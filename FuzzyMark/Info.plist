@@ -39,6 +39,20 @@
 	<string>Bạn cần cho phép FuzzyMark truy cập Camera để thực hiện chức năng này</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Bạn cần cho phép FuzzyMark truy cập Ảnh để thực hiện chức năng này</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Muli-ExtraLight.ttf</string>
+		<string>Muli-ExtraLightItalic.ttf</string>
+		<string>Muli-BoldItalic.ttf</string>
+		<string>Muli-Semi-BoldItalic.ttf</string>
+		<string>Muli-Bold.ttf</string>
+		<string>Muli-Italic.ttf</string>
+		<string>Muli-SemiBold.ttf</string>
+		<string>Muli-Light.ttf</string>
+		<string>Muli.ttf</string>
+		<string>Muli-LightItalic.ttf</string>
+		<string>Muli-Black.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -59,20 +73,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Muli-ExtraLight.ttf</string>
-		<string>Muli-ExtraLightItalic.ttf</string>
-		<string>Muli-BoldItalic.ttf</string>
-		<string>Muli-Semi-BoldItalic.ttf</string>
-		<string>Muli-Bold.ttf</string>
-		<string>Muli-Italic.ttf</string>
-		<string>Muli-SemiBold.ttf</string>
-		<string>Muli-Light.ttf</string>
-		<string>Muli.ttf</string>
-		<string>Muli-LightItalic.ttf</string>
-		<string>Muli-Black.ttf</string>
 	</array>
 </dict>
 </plist>

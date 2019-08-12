@@ -2331,7 +2331,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9X92A5RB95;
+				DEVELOPMENT_TEAM = 5VR7C6YPUT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -2340,7 +2340,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cuongnt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzzy.tutv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2357,7 +2357,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 9X92A5RB95;
+				DEVELOPMENT_TEAM = 5VR7C6YPUT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -2366,7 +2366,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cuongnt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fuzzy.tutv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FuzzyMark/FuzzyMark-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
