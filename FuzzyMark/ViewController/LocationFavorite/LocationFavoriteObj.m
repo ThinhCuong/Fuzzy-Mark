@@ -16,11 +16,11 @@
     if (self) {
         self.idLocation = [dict integerForKey:@"id"];
         self.name = [dict stringForKey:@"name"];
-        self.location = [[Location alloc] initWithDictionary:[dict dictionaryForKey:@"location"] error:nil];
+        self.location = [[Location alloc] initWithDataDictionary:[dict dictionaryForKey:@"location"]];
         self.address = [dict stringForKey:@"address"];
         self.rate_count = [dict integerForKey:@"rate_count"];
         self.total_rate = [dict integerForKey:@"total_rate"];
-        self.image = [dict stringForKey:@"image"];
+        self.image = [dict stringImageForKey:@"image"];
         self.open_time = [dict stringForKey:@"open_time"];
         self.close_time = [dict stringForKey:@"close_time"];
         self.hotline = [dict stringForKey:@"hotline"];

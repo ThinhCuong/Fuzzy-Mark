@@ -11,13 +11,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HistoryBill : JSONModel
+@interface HistoryBill : NSObject
 
 @property (nonatomic) NSString *transaction_id;
 @property (nonatomic) NSInteger status;
 @property (nonatomic) Voucher *voucher;
 @property (nonatomic) NSString *time;
 @property (nonatomic) NSString *reason;
+- (instancetype)initWithDataDictionary:(NSDictionary *)data;
 
 @end
 

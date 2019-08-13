@@ -10,4 +10,13 @@
 
 @implementation Location
 
+- (instancetype)initWithDataDictionary:(NSDictionary *)data {
+    self = [super init];
+    if (self) {
+        self.lat = [data floatForKey:@"lat"];
+        self.lng = [data floatForKey:@"lng"];
+    }
+    return self;
+}
+
 @end

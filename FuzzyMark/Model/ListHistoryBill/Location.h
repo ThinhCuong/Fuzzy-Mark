@@ -10,10 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Location : JSONModel
+@interface Location : NSObject
 
 @property (nonatomic) CGFloat lat;
 @property (nonatomic) CGFloat lng;
+- (instancetype)initWithDataDictionary:(NSDictionary *)data;
 
 @end
 

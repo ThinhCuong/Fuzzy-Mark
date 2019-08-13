@@ -5,6 +5,7 @@
 - (NSDictionary *)dictionaryForKey:(NSString *)key;
 - (NSArray *)arrayForKey:(NSString *)key;
 - (NSString *)stringForKey:(NSString *)key;
+- (NSString *)stringImageForKey:(NSString *)key;
 - (NSInteger)integerForKey:(NSString *)key;
 - (float)floatForKey:(NSString *)key;
 - (double)doubleForKey:(NSString *)key;

@@ -11,8 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol Page;
-@interface Page : JSONModel
+@interface Page : NSObject
 
 @property (nonatomic) NSInteger idPage;
 @property (nonatomic) NSString *name;
@@ -25,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *hotline;
 @property (nonatomic) NSInteger min_price;
 @property (nonatomic) NSInteger max_price;
+- (instancetype)initWithDataDictionary:(NSDictionary *)data;
 
 @end
 

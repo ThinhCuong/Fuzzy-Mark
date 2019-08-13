@@ -17,8 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) Voucher *voucher;
 @property (nonatomic) NSInteger count_received;
 @property (nonatomic) NSString *intro;
-@property (nonatomic) NSArray <Page> *accepted_page;
-@property (nonatomic) NSArray <Voucher> *related_vouchers;
+@property (nonatomic) NSArray <Page*> *accepted_page;
+@property (nonatomic) NSArray <Voucher*> *related_vouchers;
 
 @end
 

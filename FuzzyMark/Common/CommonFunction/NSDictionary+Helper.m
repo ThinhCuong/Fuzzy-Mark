@@ -72,6 +72,22 @@
     }
 }
 
+- (NSString *)stringImageForKey:(NSString *)key {
+    @try {
+        if ([self existKey:key]) {
+            id value = self[key];
+            if([value isKindOfClass:[NSString class]]) {
+                return [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+            }
+            if([value isKindOfClass:[NSNumber class]]) {
+                return [[value stringValue] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+            }
+        }
+        return @"";
+    } @catch (NSException *exception) {
+        return @"";
+    }
+}
 
 - (NSInteger)integerForKey:(NSString *)key {
     @try {

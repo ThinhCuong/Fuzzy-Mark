@@ -30,8 +30,7 @@
             self.isLoadMore = numberItem >= 50;
             if(numberItem > 0) {
                 for (NSDictionary *dict in [success arrayForKey:@"data"]) {
-                    NSError *err;
-                    HistoryBill *bill = [[HistoryBill alloc] initWithDictionary:dict error:&err];
+                    HistoryBill *bill = [[HistoryBill alloc] initWithDataDictionary:dict];
                     [self.listItem addObject:bill];
                 }
                 [self.delegate updateViewDataSuccess:self.listItem];

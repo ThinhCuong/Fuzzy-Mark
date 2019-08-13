@@ -62,7 +62,7 @@
     self = [super init];
     if (self) {
         self.bannerId = [data integerForKey:@"id"];
-        self.image = [data stringForKey:@"image"];
+        self.image = [data stringImageForKey:@"image"];
         self.bannerType = [data integerForKey:@"banner_type"];
         self.voucherId = [data integerForKey:@"id_voucher"];
         self.urlAds = [data stringForKey:@"url_ads"];
@@ -78,7 +78,7 @@
     self = [super init];
     if (self) {
         self.adId = [data integerForKey:@"id"];
-        self.imageAds = [data stringForKey:@"image_ads"];
+        self.imageAds = [data stringImageForKey:@"image_ads"];
         self.adType = [data integerForKey:@"ad_type"];
         self.voucherId = [data integerForKey:@"id_voucher"];
         self.urlAds = [data stringForKey:@"url_ads"];
@@ -95,7 +95,7 @@
     if (self) {
         self.adId = [data integerForKey:@"id"];
         self.title = [data stringForKey:@"title"];
-        self.image = [data stringForKey:@"image"];
+        self.image = [data stringImageForKey:@"image"];
     }
     return self;
 }
@@ -139,7 +139,7 @@
     if (self) {
         self.rewardId = [data integerForKey:@"id"];
         self.name = [data stringForKey:@"name"];
-        self.image = [data stringForKey:@"image"];
+        self.image = [data stringImageForKey:@"image"];
         self.logo = [data stringForKey:@"logo"];
         self.rewardDescription = [data stringForKey:@"description"];
         self.percentDiscount = [data integerForKey:@"percent_discount"];
@@ -165,7 +165,7 @@
         self.address = [data stringForKey:@"address"];
         self.rate_count = [data integerForKey:@"rate_count"];
         self.total_rate = [data integerForKey:@"total_rate"];
-        self.image = [data stringForKey:@"image"];
+        self.image = [data stringImageForKey:@"image"];
         self.open_time = [data stringForKey:@"open_time"];
         self.close_time = [data stringForKey:@"close_time"];
         self.hotline = [data stringForKey:@"hotline"];
