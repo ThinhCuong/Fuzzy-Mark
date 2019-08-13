@@ -10,7 +10,6 @@
 #import "FZHomeModel.h"
 #import "FZHomeHeaderView.h"
 #import "BaseCallApi.h"
-#import "FZHomeJsonModel.h"
 #import "FMPromotionDetailVC.h"
 #import "FZMenuHomeTableViewCell.h"
 #import "FZItemMenuHomeTableViewCell.h"
@@ -23,7 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
 @property (strong, nonatomic) NSArray *listBanner;
-@property (nonatomic, strong) NSMutableArray<FZGroupJsonModel> *groups;
+@property (nonatomic, strong) NSMutableArray<GroupInfoObject *> *groups;
 
 @end
 

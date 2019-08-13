@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FZHomeJsonModel.h"
 #import "FZHomeObject.h"
 
 typedef NS_ENUM(NSUInteger, SuportList) {

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FZHomeModel.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *startImage;
 @property (weak, nonatomic) IBOutlet UILabel *totalRateCountLabel;
 
-- (void)bindData:(FZGroupInfoJsonModel *)groupInfo;
+- (void)bindData:(RewardObject *)groupInfo;
 
 @end
 

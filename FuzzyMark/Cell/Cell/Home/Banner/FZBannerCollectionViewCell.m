@@ -15,7 +15,7 @@
     // Initialization code
 }
 
-- (void)bindData:(FZBannerModel *)bannerInfo {
+- (void)bindData:(BannerObject *)bannerInfo {
     [self.bannerImage sd_setImageWithURL:[NSURL URLWithString:bannerInfo.image]];
 }
 

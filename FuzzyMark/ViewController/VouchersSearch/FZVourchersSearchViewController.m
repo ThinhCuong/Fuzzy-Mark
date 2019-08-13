@@ -12,7 +12,7 @@
 #import "FMPromotionDetailVC.h"
 
 @interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) NSArray <FZGroupInfoJsonModel> *listVourcher;
+@property (strong, nonatomic) NSArray <RewardObject *> *listVourcher;
 
 @end
 
@@ -49,13 +49,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FZVourcherSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZVourcherSearchTableViewCell"];
+    
     [cell bindData:self.listVourcher[indexPath.row]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    FZGroupInfoJsonModel *groupID = self.listVourcher[indexPath.row];
-    NSString *voucherID = [groupID.id stringValue];
+    RewardObject *reward = self.listVourcher[indexPath.row];
+    NSString *voucherID = [NSString stringWithFormat:@"%ld", (long)reward.rewardId];
     FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:voucherID];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
@@ -79,8 +80,13 @@
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"vouchers/search" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
         [SVProgressHUD dismiss];
         if (responseData) {
-            FzVourcherSearch *GroupInfoData = [[FzVourcherSearch alloc] initWithDictionary:responseData error:nil];
-            self.listVourcher = GroupInfoData.data;
+            NSMutableArray *listData = [NSMutableArray new];
+            NSArray *data = [responseData arrayForKey:@"data"];
+            for (NSDictionary *dict in data) {
+                RewardObject *obj = [[RewardObject alloc] initWithDataDictionary:dict];
+                [listData addObject:obj];
+            }
+            self.listVourcher = listData;
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {

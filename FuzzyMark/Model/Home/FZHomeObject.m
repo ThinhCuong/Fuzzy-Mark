@@ -15,41 +15,36 @@
     if (self) {
         // parse banner
         NSMutableArray *listBanner = [NSMutableArray new];
-        if (data[@"banners"]) {
-            for (NSDictionary *dict in data[@"banners"]) {
-                BannerObject *bannerInfo = [[BannerObject alloc] initWithDataDictionary:dict];
-                [listBanner addObject:bannerInfo];
-            }
-            self.banners = listBanner;
+        for (NSDictionary *dict in [data arrayForKey:@"banners"]) {
+            BannerObject *bannerInfo = [[BannerObject alloc] initWithDataDictionary:dict];
+            [listBanner addObject:bannerInfo];
         }
+        self.banners = listBanner;
+        
         NSMutableArray *listfixedAd = [NSMutableArray new];
         // parse fixed_ads
-        if (data[@"fixed_ads"]) {
-            for (NSDictionary *dict in data[@"fixed_ads"]) {
-                 FixedAdsObject *adInfo = [[FixedAdsObject alloc] initWithDataDictionary:dict];
-                [listfixedAd addObject:adInfo];
-            }
-            self.fixedAds = listfixedAd;
+        for (NSDictionary *dict in [data arrayForKey:@"fixed_ads"]) {
+             FixedAdsObject *adInfo = [[FixedAdsObject alloc] initWithDataDictionary:dict];
+            [listfixedAd addObject:adInfo];
         }
+        self.fixedAds = listfixedAd;
+        
         NSMutableArray *listIcon = [NSMutableArray new];
         // parse icon_groups
-        if (data[@"icon_groups"]) {
-            for (NSDictionary *dict in data[@"icon_groups"]) {
-                IConObject *iconInfo = [[IConObject alloc] initWithDataDictionary:dict];
-                [listIcon addObject:iconInfo];
-            }
-            self.iconGroups = listIcon;
+        for (NSDictionary *dict in [data arrayForKey:@"icon_groups"]) {
+            IConObject *iconInfo = [[IConObject alloc] initWithDataDictionary:dict];
+            [listIcon addObject:iconInfo];
         }
+        self.iconGroups = listIcon;
+        
         NSMutableArray *listgroup = [NSMutableArray new];
         // parse groups
-        if (data[@"groups"]) {
-            for (NSDictionary *dict in data[@"groups"]) {
-                GroupInfoObject *groupInfo = [[GroupInfoObject alloc] initWithDataDictionary:dict];
-                [listgroup addObject:groupInfo];
-            }
-            self.groups = listgroup;
+        for (NSDictionary *dict in [data arrayForKey:@"groups"]) {
+            GroupInfoObject *groupInfo = [[GroupInfoObject alloc] initWithDataDictionary:dict];
+            [listgroup addObject:groupInfo];
         }
-    }
+        self.groups = listgroup;
+        }
     return self;
 }
 
@@ -109,22 +104,20 @@
     if (self) {
         self.groupId = [data integerForKey:@"id"];
         self.title = [data stringForKey:@"title"];
+        
         NSMutableArray *listVoucherHorizontal = [NSMutableArray new];
-        if (data[@"vouchers_horizontal"]) {
-            for (NSDictionary *dict in data[@"vouchers_horizontal"]) {
-                RewardObject *voucherInfo = [[RewardObject alloc] initWithDataDictionary:dict];
-                [listVoucherHorizontal addObject:voucherInfo];
-            }
-            self.vouchersHorizontal = listVoucherHorizontal;
+        for (NSDictionary *dict in [data arrayForKey:@"vouchers_horizontal"]) {
+            RewardObject *voucherInfo = [[RewardObject alloc] initWithDataDictionary:dict];
+            [listVoucherHorizontal addObject:voucherInfo];
         }
+        self.vouchersHorizontal = listVoucherHorizontal;
+        
         NSMutableArray *listVoucherVertical = [NSMutableArray new];
-        if (data[@"vouchers_vertical"]) {
-            for (NSDictionary *dict in data[@"vouchers_vertical"]) {
-                RewardObject *voucherInfo = [[RewardObject alloc] initWithDataDictionary:dict];
-                [listVoucherVertical addObject:voucherInfo];
-            }
-            self.vouchersVertical = listVoucherVertical;
+        for (NSDictionary *dict in [data arrayForKey:@"vouchers_vertical"]) {
+            RewardObject *voucherInfo = [[RewardObject alloc] initWithDataDictionary:dict];
+            [listVoucherVertical addObject:voucherInfo];
         }
+        self.vouchersVertical = listVoucherVertical;
     }
     return self;
 }
@@ -140,14 +133,11 @@
         self.rewardId = [data integerForKey:@"id"];
         self.name = [data stringForKey:@"name"];
         self.image = [data stringImageForKey:@"image"];
-        self.logo = [data stringForKey:@"logo"];
+        self.logo = [data stringImageForKey:@"logo"];
         self.rewardDescription = [data stringForKey:@"description"];
         self.percentDiscount = [data integerForKey:@"percent_discount"];
         self.countDown = [data integerForKey:@"count_down"];
-        if (data[@"page"]) {
-            PageObject *pageInfo = [[PageObject alloc] initWithDataDictionary:data[@"page"]];
-            self.page = pageInfo;
-        }
+        self.page = [[PageObject alloc] initWithDataDictionary:[data dictionaryForKey:@"page"]];
     }
     return self;
 }

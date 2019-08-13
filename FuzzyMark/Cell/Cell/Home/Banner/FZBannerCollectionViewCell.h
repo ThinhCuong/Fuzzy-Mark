@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FZHomeJsonModel.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) IBOutlet UIImageView *bannerImage;
 
-- (void)bindData:(FZBannerModel *)bannerInfo;
+- (void)bindData:(BannerObject *)bannerInfo;
 
 @end
 

@@ -189,7 +189,6 @@
 		5C5E915F229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E915D229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.m */; };
 		5C5E9160229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E915E229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib */; };
 		5C5E9164229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E9163229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m */; };
-		5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */; };
 		5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE1225D668600A26400 /* FuzzyMark.xcdatamodeld */; };
 		5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE4225D668800A26400 /* Assets.xcassets */; };
 		5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C6BFAE6225D668800A26400 /* LaunchScreen.storyboard */; };
@@ -543,8 +542,6 @@
 		5C5E915D229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZTitleHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		5C5E915E229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZTitleHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		5C5E9163229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHeaderSearchTableViewCell.m; sourceTree = "<group>"; };
-		5C61443E227FDF2600582AF7 /* FZHomeJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHomeJsonModel.h; sourceTree = "<group>"; };
-		5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZHomeJsonModel.m; sourceTree = "<group>"; };
 		5C6BFAD5225D668600A26400 /* FuzzyMark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuzzyMark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C6BFAE2225D668600A26400 /* FuzzyMark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FuzzyMark.xcdatamodel; sourceTree = "<group>"; };
 		5C6BFAE4225D668800A26400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1074,8 +1071,6 @@
 			children = (
 				5C9862872264CBE700545DCC /* FZHomeModel.h */,
 				5C9862882264CBE700545DCC /* FZHomeModel.m */,
-				5C61443E227FDF2600582AF7 /* FZHomeJsonModel.h */,
-				5C61443F227FDF2600582AF7 /* FZHomeJsonModel.m */,
 				5C714FD122ED601600D20A2B /* FZHomeObject.h */,
 				5C714FD222ED601600D20A2B /* FZHomeObject.m */,
 			);
@@ -2041,7 +2036,6 @@
 			files = (
 				4F472D33229076C900F93D39 /* FMOTPViewController.m in Sources */,
 				4FDEEA3F22E45AFC00A72BC1 /* UserInformation.m in Sources */,
-				5C614440227FDF2600582AF7 /* FZHomeJsonModel.m in Sources */,
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
 				4F35FDD222EF8A3B00F79B45 /* FMChoicePictureModel.m in Sources */,
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,

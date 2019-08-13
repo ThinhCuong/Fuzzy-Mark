@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *logo;
 @property (strong, nonatomic) NSString *rewardDescription;
 @property (assign, nonatomic) NSInteger percentDiscount;
-@property (assign, nonatomic) PageObject *page;
+@property (strong, nonatomic) PageObject *page;
 @property (assign, nonatomic) NSInteger countDown;
 
 - (instancetype)initWithDataDictionary:(NSDictionary *)dict;
