@@ -15,10 +15,10 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)binData:(HistoryCaptureObject *) obj {
+    self.lbTitle.text = obj.title ?: @"";
+    self.lbTime.text = obj.time ?: @"";
+    self.lbPoint.text = [NSString stringWithFormat:@"+%ld", (long)obj.point];
 }
 
 @end

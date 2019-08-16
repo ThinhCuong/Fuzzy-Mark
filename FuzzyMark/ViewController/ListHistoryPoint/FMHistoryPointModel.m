@@ -7,43 +7,35 @@
 //
 
 #import "FMHistoryPointModel.h"
+#import "HistoryCaptureObject.h"
 
-@implementation FMHistoryPointModel {
-    BaseCallApi *_httpClient;
-}
+@implementation FMHistoryPointModel
 
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _httpClient = [BaseCallApi defaultInitWithBaseURL];
-        self.listData = [[NSMutableArray alloc] init];
-    }
-    return self;
-}
-
-- (void)getListHistoryCaptureWithSuccessBlock: (void(^)(id)) successBlock {
-//    NSDictionary *param = @{@"limit": @"50", @"offset": @(self.listData.count)};
-//
-//    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_HISTORIES_CAPTURE andParam:param isShowfailureAlert:YES withSuccessBlock:^(id success) {
-//        if(success) {
-//            BTParseJSON *json = [[BTParseJSON alloc] initWithDict:success];
-//            if([json arrayForKey:@"data"]) {
-//                NSArray *data = [json arrayForKey:@"data"];
-//                if(data.count > 0 && data) {
-//                    for (NSDictionary *dict in data) {
-//                        HistoryBill *item = [[HistoryBill alloc] initWithDictionary:dict error:nil];
-//                        [self.listData addObject:item];
-//                    }
-//                }
-//            }
-//            successBlock(self.listData);
-//        } else {
-//            successBlock(nil);
-//        }
-//    } withFailBlock:^(id fail) {
-//        successBlock(nil);
-//    }];
+- (void)getDataTableView:(NSMutableDictionary *) params {
+    [params setObject:[UserInfo getUserToken] forKey:@"token"];
+    [self.httpClient getDataWithPath:GET_HISTORIES_REWARD andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        if([success isKindOfClass:[NSDictionary class]]) {
+            if ([success codeForKey:@"error_code"] != 0) {
+                [CommonFunction showToast:[success stringForKey:[success stringForKey:@"message"]]];
+            }
+            NSInteger numberItem = [success arrayForKey:@"data"].count;
+            self.isLoadMore = numberItem >= 50;
+            if(numberItem > 0) {
+                for (NSDictionary *dict in [success arrayForKey:@"data"]) {
+                    HistoryCaptureObject *obj = [[HistoryCaptureObject alloc] initWithDataDictionary:dict];
+                    [self.listData addObject:obj];
+                }
+                [self.delegate updateViewDataSuccess:self.listItem];
+            } else {
+                [self.delegate updateViewDataEmpty];
+            }
+        } else {
+            [self.delegate updateViewDataError];
+        }
+        
+    } withFailBlock:^(id fail) {
+        [self.delegate updateViewDataError];
+    }];
 }
 
 @end

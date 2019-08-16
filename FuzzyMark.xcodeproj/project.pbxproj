@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
 		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
+		4F10755D2306E4D70029FC91 /* HistoryCaptureObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */; };
 		4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBD722ECB88100466B51 /* UIImage+Support.m */; };
 		4F1BCBDF22ECED0B00466B51 /* NSDictionary+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */; };
 		4F25D6E022BAE15300C27190 /* FMListItemLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D6DE22BAE15300C27190 /* FMListItemLocationVC.m */; };
@@ -253,6 +254,8 @@
 		4F00C820227A246C0073B583 /* FMUserInforModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUserInforModel.m; sourceTree = "<group>"; };
 		4F00C822227A2D580073B583 /* FMCellBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCellBlockObject.h; sourceTree = "<group>"; };
 		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
+		4F10755B2306E4D70029FC91 /* HistoryCaptureObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCaptureObject.h; sourceTree = "<group>"; };
+		4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCaptureObject.m; sourceTree = "<group>"; };
 		4F1BCBD622ECB88100466B51 /* UIImage+Support.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Support.h"; sourceTree = "<group>"; };
 		4F1BCBD722ECB88100466B51 /* UIImage+Support.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Support.m"; sourceTree = "<group>"; };
 		4F1BCBDD22ECED0B00466B51 /* NSDictionary+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helper.h"; sourceTree = "<group>"; };
@@ -932,6 +935,8 @@
 				4FBD3D8E228D9C8800E76E2A /* FMHistoryPointModel.h */,
 				4FBD3D8F228D9C8800E76E2A /* FMHistoryPointModel.m */,
 				4FBD3D96228DBC7E00E76E2A /* HistoryPoint.xcassets */,
+				4F10755B2306E4D70029FC91 /* HistoryCaptureObject.h */,
+				4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */,
 			);
 			path = ListHistoryPoint;
 			sourceTree = "<group>";
@@ -2116,6 +2121,7 @@
 				4F50F3972276E9A700DF7173 /* FMNewsViewController.m in Sources */,
 				5C9BDECC22B30AFD0019BA12 /* FZVourcherSearchTableViewCell.m in Sources */,
 				5C3910372263492A008BEA62 /* AFURLSessionManager.m in Sources */,
+				4F10755D2306E4D70029FC91 /* HistoryCaptureObject.m in Sources */,
 				4FF9C3D12291A2BC00D3AD81 /* FMRegisterPromotionViewController.m in Sources */,
 				4FF5AF2722B7EC6C009A613E /* VoucherInfoJsonModel.m in Sources */,
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,

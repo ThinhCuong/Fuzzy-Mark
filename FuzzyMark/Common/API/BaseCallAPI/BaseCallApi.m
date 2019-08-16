@@ -20,8 +20,8 @@
     static BaseCallApi *defaultInitWithBaseURL = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"http://fuzzy.congculaptrinh.com/api/"];
-//        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"https://devtools-ntt.herokuapp.com/api/FuzzyMark/"];
+//        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"http://fuzzy.congculaptrinh.com/api/"];
+        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"https://devtools-ntt.herokuapp.com/api/FuzzyMark/"];
     });
     return defaultInitWithBaseURL;
 }

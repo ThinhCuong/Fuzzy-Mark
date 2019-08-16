@@ -69,6 +69,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
+            <connections>
+                <outlet property="lbPoint" destination="fAQ-Ab-beT" id="xhy-JJ-rb6"/>
+                <outlet property="lbTime" destination="Fwo-gF-I06" id="fch-9r-dw5"/>
+                <outlet property="lbTitle" destination="dfV-fW-m2u" id="TdQ-dz-dDB"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="55.915178571428569"/>
         </tableViewCell>
     </objects>

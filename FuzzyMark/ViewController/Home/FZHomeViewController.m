@@ -99,7 +99,6 @@
         [SVProgressHUD setBackgroundLayerColor:UIColor.redColor];
         if (responseData) {
             FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
-//            FZHomeJsonModel *homeData = [[FZHomeJsonModel alloc] initWithDictionary:responseData[@"data"] error:nil];
             [self.dataModel bindData:data];
             [self.tableView reloadData];
         }

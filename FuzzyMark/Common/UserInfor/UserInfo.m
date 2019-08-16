@@ -103,6 +103,7 @@
 }
 
 + (void)setUserToken:(NSString *) userToken {
+    userToken = [NSString stringWithFormat:@"JWT %@", userToken];
     [UserInfo setStringNSUserDefaultsWithString:userToken andKey:USER_TOKEN];
 }
 + (NSString *)getUserToken {
