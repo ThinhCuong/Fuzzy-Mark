@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FZHomeObject.h"
+#import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LocationFavoriteTableViewCell : UITableViewCell
+
+- (void)bindData:(RewardObject *)groupInfo currentLocation:(CLLocationCoordinate2D)currentLocation;
 
 @end
 

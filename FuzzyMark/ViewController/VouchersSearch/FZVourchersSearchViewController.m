@@ -10,8 +10,14 @@
 #import "FZVourcherSearchTableViewCell.h"
 #import "FZHomeModel.h"
 #import "FMPromotionDetailVC.h"
+#import "LocationFavoriteTableViewCell.h"
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate>
+@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate> {
+    CLLocationManager *_locationManager;
+    CLLocationCoordinate2D _coordinate;
+}
 @property (strong, nonatomic) NSArray <RewardObject *> *listVourcher;
 
 @end
@@ -32,10 +38,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    [self.tableView registerNib:[UINib nibWithNibName:@"FZVourcherSearchTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZVourcherSearchTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LocationFavoriteTableViewCell" bundle:nil] forCellReuseIdentifier:@"LocationFavoriteTableViewCell"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self callVouchersSearch];
+    
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+
+    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+        [_locationManager requestWhenInUseAuthorization];
+    }else{
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        [_locationManager startUpdatingLocation];
+        _coordinate = [[_locationManager location] coordinate];
+    } else if (status == kCLAuthorizationStatusDenied) {
+        [CommonFunction showToast:@"Bạn cần vào cài đặt cấp quyền vị trí cho ứng dụng"];
+    } else if (status == kCLAuthorizationStatusNotDetermined) {
+        if ([manager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [manager requestWhenInUseAuthorization];
+            [_locationManager startUpdatingLocation];
+        }
+    }
 }
 
 
@@ -48,9 +78,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    FZVourcherSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZVourcherSearchTableViewCell"];
-    
-    [cell bindData:self.listVourcher[indexPath.row]];
+    LocationFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationFavoriteTableViewCell"];
+    [cell bindData:self.listVourcher[indexPath.row] currentLocation:_coordinate];
     return cell;
 }
 
