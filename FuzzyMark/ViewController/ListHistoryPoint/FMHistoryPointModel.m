@@ -12,7 +12,6 @@
 @implementation FMHistoryPointModel
 
 - (void)getDataTableView:(NSMutableDictionary *) params {
-    [params setObject:[UserInfo getUserToken] forKey:@"token"];
     [self.httpClient getDataWithPath:GET_HISTORIES_REWARD andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] != 0) {

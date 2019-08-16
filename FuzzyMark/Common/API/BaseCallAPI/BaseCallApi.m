@@ -20,8 +20,8 @@
     static BaseCallApi *defaultInitWithBaseURL = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-//        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"http://fuzzy.congculaptrinh.com/api/"];
-        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"https://devtools-ntt.herokuapp.com/api/FuzzyMark/"];
+        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"http://fuzzy.congculaptrinh.com/api/"];
+//        defaultInitWithBaseURL = [[BaseCallApi alloc] initWithBaseURL:@"https://devtools-ntt.herokuapp.com/api/FuzzyMark/"];
     });
     return defaultInitWithBaseURL;
 }
@@ -119,14 +119,14 @@
                              downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
                             completionHandler:(nullable void (^)(NSURLResponse *response, id _Nullable responseObject,  NSError * _Nullable error))completionHandler {
     
-    static NSString *token;
-    if(!token)
+    static NSString *authorization;
+    if(!authorization)
     {
-        token = [UserInfo getUserToken];
+        authorization = [UserInfo getUserToken];
     }
     
     NSMutableURLRequest *req = (NSMutableURLRequest *)request;
-    [req setValue:token forHTTPHeaderField:@"token"];
+    [req setValue:authorization forHTTPHeaderField:@"Authorization"];
     return [super dataTaskWithRequest:request uploadProgress:uploadProgressBlock downloadProgress:downloadProgressBlock completionHandler:completionHandler];
 }
 

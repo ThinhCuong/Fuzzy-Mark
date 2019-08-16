@@ -24,7 +24,6 @@
 
 - (void)getDataTableView:(NSMutableDictionary *) params {
     [params setObject:@(_type) forKey:@"status"];
-    [params setObject:[UserInfo getUserToken] forKey:@"token"];
     [self.httpClient getDataWithPath:GET_HISTORIES_CAPTURE andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] != 0) {
