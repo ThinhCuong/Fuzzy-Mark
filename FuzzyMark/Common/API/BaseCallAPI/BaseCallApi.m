@@ -113,6 +113,23 @@
     [self.listTask addObject:task];
 }
 
+// Auto truyen token vao header moi API
+- (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request
+                               uploadProgress:(nullable void (^)(NSProgress *uploadProgress)) uploadProgressBlock
+                             downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
+                            completionHandler:(nullable void (^)(NSURLResponse *response, id _Nullable responseObject,  NSError * _Nullable error))completionHandler {
+    
+    static NSString *authorization;
+    if(!authorization)
+    {
+        authorization = [UserInfo getUserToken];
+    }
+    
+    NSMutableURLRequest *req = (NSMutableURLRequest *)request;
+    [req setValue:authorization forHTTPHeaderField:@"Authorization"];
+    return [super dataTaskWithRequest:request uploadProgress:uploadProgressBlock downloadProgress:downloadProgressBlock completionHandler:completionHandler];
+}
+
 - (NSDictionary *)createCommonParam:(NSDictionary *)commonParam {
     NSMutableDictionary *listParam = commonParam.mutableCopy;
     [listParam setObject:@"" forKey:@""];

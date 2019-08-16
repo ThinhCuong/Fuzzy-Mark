@@ -22,7 +22,7 @@
 
 - (void)actionPullToRefreshData {
     [self.listItem removeAllObjects];
-    NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @0};
+    NSDictionary *params = @{@"limit": NUMBER_ITEM_CALL_API, @"offset": @0};
     [self getDataTableView:params.mutableCopy];
 }
 

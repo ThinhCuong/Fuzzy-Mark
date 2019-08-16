@@ -35,9 +35,10 @@
 }
 
 - (BOOL)validatePasswordWithString:(NSString *) password {
-    NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
-    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
-    return [passwordTest evaluateWithObject:password];
+//    NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
+//    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
+//    return [passwordTest evaluateWithObject:password];
+    return YES;
 }
 
 - (BOOL)validateEmailWithString:(NSString *) email {
