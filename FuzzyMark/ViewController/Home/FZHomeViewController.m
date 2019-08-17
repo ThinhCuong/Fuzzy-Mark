@@ -138,22 +138,22 @@
 - (void)didSelectCategoryList:(CategoryList ) indexChoose {
     NSString *category;
     switch (indexChoose) {
-        case Restaurant:
+        case Restaurant_Category:
             category = @"Restaurant";
             break;
-        case Hotel:
+        case Hotel_Category:
             category = @"Hotel";
             break;
-        case Travel:
+        case Travel_Category:
             category = @"Travel";
             break;
-        case Store:
+        case Store_Category:
             category = @"Store";
             break;
-        case News:
+        case News_Category:
             category = @"News";
             break;
-        case Map:
+        case Map_Category:
             category = @"Map";
             break;
         default:

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FZSearchModel.h"
+#import "ConfigAppObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIButton *backgroundIcon;
 @property (strong, nonatomic) IBOutlet UIView *selectedLineView;
 
-- (void)bindData:(GroupObject *)groupInfo;
+- (void)bindData:(Group *)groupInfo;
 
 @end
 

@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)hideLoadingView;
 + (void)showToast:(NSString *) toast;
 + (void)showToast:(NSString *) toast inView:(UIView *) view;
++ (void)configServer;
 
 @end
 

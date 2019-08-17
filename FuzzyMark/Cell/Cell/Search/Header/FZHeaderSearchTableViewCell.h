@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FZSearchModel.h"
+#import "ConfigAppObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

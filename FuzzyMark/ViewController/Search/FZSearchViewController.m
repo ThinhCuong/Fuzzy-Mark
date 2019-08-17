@@ -7,7 +7,6 @@
 //
 
 #import "FZSearchViewController.h"
-#import "FZSearchModel.h"
 #import "FZItemSearchCollectionViewCell.h"
 #import "FZTitleHeaderCollectionReusableView.h"
 #import "FZHeaderSearchTableViewCell.h"
@@ -22,8 +21,8 @@
     BOOL _isWill;
 }
 
-@property(nonatomic) NSArray<GroupObject *> *listGroup;
-@property(nonatomic) NSArray<GroupObject *> *listCategory;
+@property(nonatomic) NSArray<Group *> *listGroup;
+@property(nonatomic) NSArray<Group *> *listCategory;
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -55,7 +54,7 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
-    [self callGroupsApi];
+    [self getDataModel];
     
 }
 
@@ -146,24 +145,9 @@
     _willSectionIndex = indexPath.section;
 }
 
-- (void)callGroupsApi {
-    
-    NSDictionary *params = @{
-                             @"token": @"abd",
-                             };
-    [SVProgressHUD setContainerView:self.view];
-    [SVProgressHUD show];
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"groups" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
-        [SVProgressHUD dismiss];
-        if (responseData) {
-            FZSearchModel *homeData = [[FZSearchModel alloc] initWithDictionary:responseData error:nil];
-            self.listGroup = homeData.data;
-            [self.collectionView reloadData];
-            [self.tableView reloadData];
-        }
-    } withFailBlock:^(id responseError) {
-        [SVProgressHUD dismiss];
-    }];
+- (void)getDataModel {
+    self.listGroup = [ConfigApp getListGroups];
+    [self.tableView reloadData];
 }
 
 @end

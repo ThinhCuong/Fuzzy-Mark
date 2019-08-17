@@ -10,7 +10,7 @@
 #import "FZHeaderItemCollectionViewCell.h"
 
 @interface FZHeaderSearchTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
-    NSArray<GroupObject *> *_listGroup;
+    NSArray<Group *> *_listGroup;
 }
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;

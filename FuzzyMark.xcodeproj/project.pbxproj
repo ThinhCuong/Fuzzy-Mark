@@ -136,6 +136,7 @@
 		4FF2BD7A227BDA390008BA69 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF2BD79227BDA390008BA69 /* AVFoundation.framework */; };
 		4FF2BD86227BE83B0008BA69 /* RegisterPromotionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD84227BE83B0008BA69 /* RegisterPromotionCell.xib */; };
 		4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF2BD87227BEC230008BA69 /* Camera.xcassets */; };
+		4FF415542307E05D0013BF49 /* ConfigApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF415532307E05D0013BF49 /* ConfigApp.m */; };
 		4FF44BDC22B690E600604202 /* FMPromotionDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF44BDB22B690E600604202 /* FMPromotionDetailModel.m */; };
 		4FF5AF2722B7EC6C009A613E /* VoucherInfoJsonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5AF2622B7EC6C009A613E /* VoucherInfoJsonModel.m */; };
 		4FF699A122F05F9B0035BD72 /* FMLocationFavoriteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF699A022F05F9B0035BD72 /* FMLocationFavoriteModel.m */; };
@@ -222,7 +223,7 @@
 		5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */; };
 		5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */; };
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
-		5CFF9237229B1A560053A2A5 /* FZSearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF9236229B1A560053A2A5 /* FZSearchModel.m */; };
+		5CFF9237229B1A560053A2A5 /* ConfigAppObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */; };
 		5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */; };
 		5CFF923D229B1FE10053A2A5 /* FZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */; };
 		665FD50ADF305E3C1AAC1673 /* Pods_FuzzyMark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6643B1713A15E4D2690ACC11 /* Pods_FuzzyMark.framework */; };
@@ -452,6 +453,8 @@
 		4FF2BD79227BDA390008BA69 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4FF2BD84227BE83B0008BA69 /* RegisterPromotionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterPromotionCell.xib; sourceTree = "<group>"; };
 		4FF2BD87227BEC230008BA69 /* Camera.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Camera.xcassets; sourceTree = "<group>"; };
+		4FF415522307E05D0013BF49 /* ConfigApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigApp.h; sourceTree = "<group>"; };
+		4FF415532307E05D0013BF49 /* ConfigApp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigApp.m; sourceTree = "<group>"; };
 		4FF44BDA22B690E600604202 /* FMPromotionDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPromotionDetailModel.h; sourceTree = "<group>"; };
 		4FF44BDB22B690E600604202 /* FMPromotionDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionDetailModel.m; sourceTree = "<group>"; };
 		4FF5AF2522B7EC6C009A613E /* VoucherInfoJsonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoucherInfoJsonModel.h; sourceTree = "<group>"; };
@@ -596,8 +599,8 @@
 		5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
-		5CFF9235229B1A560053A2A5 /* FZSearchModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZSearchModel.h; sourceTree = "<group>"; };
-		5CFF9236229B1A560053A2A5 /* FZSearchModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZSearchModel.m; sourceTree = "<group>"; };
+		5CFF9235229B1A560053A2A5 /* ConfigAppObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigAppObject.h; sourceTree = "<group>"; };
+		5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigAppObject.m; sourceTree = "<group>"; };
 		5CFF9239229B1FE10053A2A5 /* FZSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZSearchViewController.h; sourceTree = "<group>"; };
 		5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZSearchViewController.m; sourceTree = "<group>"; };
 		5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZSearchViewController.xib; sourceTree = "<group>"; };
@@ -1210,6 +1213,15 @@
 			path = Camera;
 			sourceTree = "<group>";
 		};
+		4FF415552307E0630013BF49 /* ConfigApp */ = {
+			isa = PBXGroup;
+			children = (
+				4FF415522307E05D0013BF49 /* ConfigApp.h */,
+				4FF415532307E05D0013BF49 /* ConfigApp.m */,
+			);
+			path = ConfigApp;
+			sourceTree = "<group>";
+		};
 		4FF5AF2422B7EC43009A613E /* PromotionDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1307,6 +1319,7 @@
 		5C3910022263490B008BEA62 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4FF415552307E0630013BF49 /* ConfigApp */,
 				4FDEEA4722E4647C00A72BC1 /* UserInfor */,
 				4FF9C3B72290F30300D3AD81 /* Model */,
 				4FF9C3B52290EFF200D3AD81 /* Protocol */,
@@ -1688,8 +1701,8 @@
 		5CFF9232229B19970053A2A5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				5CFF9235229B1A560053A2A5 /* FZSearchModel.h */,
-				5CFF9236229B1A560053A2A5 /* FZSearchModel.m */,
+				5CFF9235229B1A560053A2A5 /* ConfigAppObject.h */,
+				5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -2106,7 +2119,8 @@
 				4FDC204F22A0D9FB003B755C /* CameraShowImageCell.m in Sources */,
 				4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */,
 				4FB0B28322B9AEF500487D66 /* FMPromotionGiftCell.m in Sources */,
-				5CFF9237229B1A560053A2A5 /* FZSearchModel.m in Sources */,
+				5CFF9237229B1A560053A2A5 /* ConfigAppObject.m in Sources */,
+				4FF415542307E05D0013BF49 /* ConfigApp.m in Sources */,
 				5C5E9164229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m in Sources */,
 				4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */,
 				5C435918229F656000844AA0 /* FZHeaderItemCollectionViewCell.m in Sources */,
@@ -2328,6 +2342,7 @@
 			baseConfigurationReference = B3F0B1E353FB9438C39E8867 /* Pods-FuzzyMark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -2354,6 +2369,7 @@
 			baseConfigurationReference = B7339E9B6C85359D70719D12 /* Pods-FuzzyMark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

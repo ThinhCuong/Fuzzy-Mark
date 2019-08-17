@@ -8,6 +8,7 @@
 
 #import "CommonFunction.h"
 #import "AppDelegate.h"
+#import "ConfigAppObject.h"
 
 @implementation CommonFunction
 
@@ -43,7 +44,10 @@
 + (void)configServer {
     BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
     [httpClient getDataWithPath:GET_CONFIGURATION andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id success) {
-        
+        if ([success isKindOfClass:NSDictionary.class]) {
+            ConfigAppObject *config = [[ConfigAppObject alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];
+            [ConfigApp setConfigAppWithConfigObject:config];
+        }
     } withFailBlock:^(id fail) {
         
     }];

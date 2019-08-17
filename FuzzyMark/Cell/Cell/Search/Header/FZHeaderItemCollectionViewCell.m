@@ -15,7 +15,7 @@
     // Initialization code
 }
 
-- (void)bindData:(GroupObject *)groupInfo {
+- (void)bindData:(Group *)groupInfo {
     [self.iconImage sd_setImageWithURL: [NSURL URLWithString:groupInfo.icon]];
 }
 

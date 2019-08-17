@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FZSearchModel.h"
+#import "ConfigAppObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 
-- (void)bindData:(CategoryObject *)category;
+- (void)bindData:(Category *)category;
 
 @end
 

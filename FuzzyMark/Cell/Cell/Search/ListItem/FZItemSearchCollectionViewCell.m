@@ -17,7 +17,7 @@
     [CommonFunction setCornerRadiusUIImageView:self.image cornerRadiusValue:15];
 }
 
-- (void)bindData:(CategoryObject *)category {
+- (void)bindData:(Category *)category {
     [self.image sd_setImageWithURL:[NSURL URLWithString:category.image]];
     self.titleLabel.text = category.name;
 }

@@ -140,7 +140,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == 0) {
         HistoryPointHeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"headerCell"];
-        [cell binDataWithPoint:0];
+        [cell binDataWithPoint:[UserInfo getUserPointReward]];
         return cell;
     } else {
         HistoryPointTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];

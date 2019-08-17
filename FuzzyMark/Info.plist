@@ -37,12 +37,12 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Bạn cần cho phép FuzzyMark truy cập Camera để thực hiện chức năng này</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Bạn cần cho phép FuzzyMark truy cập Ảnh để thực hiện chức năng này</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Allow Location Access</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Allow Location Access</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Bạn cần cho phép FuzzyMark truy cập Ảnh để thực hiện chức năng này</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Muli-ExtraLight.ttf</string>
@@ -57,8 +57,6 @@
 		<string>Muli-LightItalic.ttf</string>
 		<string>Muli-Black.ttf</string>
 	</array>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>

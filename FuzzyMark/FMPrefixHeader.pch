@@ -25,4 +25,5 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Toast/Toast.h>
 #import "UserInfo.h"
+#import "ConfigApp.h"
 #import "NSDictionary+Helper.h"

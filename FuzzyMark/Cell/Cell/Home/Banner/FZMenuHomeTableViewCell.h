@@ -10,19 +10,19 @@
 #import "FZHomeObject.h"
 
 typedef NS_ENUM(NSUInteger, SuportList) {
-    Category = 0,
-    Sale,
-    Hotline,
-    SNews
+    Category_Suport = 0,
+    Sale_Suport,
+    Hotline_Suport,
+    SNews_Suport
 };
 
 typedef NS_ENUM(NSUInteger, CategoryList) {
-    Restaurant = 0,
-    Hotel,
-    Travel,
-    Store,
-    News,
-    Map
+    Restaurant_Category = 0,
+    Hotel_Category,
+    Travel_Category,
+    Store_Category,
+    News_Category,
+    Map_Category
 };
 
 NS_ASSUME_NONNULL_BEGIN

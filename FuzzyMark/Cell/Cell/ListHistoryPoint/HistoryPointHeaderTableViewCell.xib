@@ -80,6 +80,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="lbPoint" destination="fVN-15-1Oq" id="023-Pj-Poq"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="133.25892857142856"/>
         </tableViewCell>
     </objects>
