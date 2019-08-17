@@ -21,14 +21,13 @@
 @end
 
 @implementation FMRegisterPromotionViewController {
-//    NSArray <Notifi*> *_listData;
+    NSArray *_listData;
     UIRefreshControl *_topRFControl;
     UIRefreshControl *_bottomRFControl;
     BOOL _isRefresh;
 }
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         self.model = [[FMRegisterPromotionModel alloc] init];
@@ -42,14 +41,19 @@
     // Do any additional setup after loading the view from its nib.
     [self setNavigationBar];
     [self setTableView];
-//    [SVProgressHUD setContainerView:self.view];
-//    [SVProgressHUD show];
-//    [self callDataRefresh];
+    [self callDataRefresh];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if(_isRefresh) {
+        [CommonFunction showLoadingView];
+    }
 }
 
 #pragma mark - private
 - (void)setNavigationBar {
-    self.navTitle = @"Ưu đãi đã đăng kí";
+    self.navTitle = @"Ưu đãi quan tâm";
     [self addRightButtonNavigationBar];
 }
 
@@ -90,13 +94,12 @@
 }
 
 - (void)callDataRefresh {
-    [self stopAnimationRefresh];
-//    if([self checkIsRefresh]) {
-//        [self stopAnimationRefresh];
-//        return;
-//    }
-//    _isRefresh = YES;
-//    [self.model actionPullToRefreshData];
+    if([self checkIsRefresh]) {
+        [self stopAnimationRefresh];
+        return;
+    }
+    _isRefresh = YES;
+    [self.model actionPullToRefreshData];
 }
 
 - (BOOL)checkIsRefresh {
@@ -115,14 +118,14 @@
 }
 
 - (void)didSelectRightButton {
-    
+    NSLog(@"Click Right Button");
 }
 
 #pragma mark - FMUpdateDataProtocol
 - (void)updateViewDataSuccess:(NSMutableArray *) listData {
-//    [self stopAnimationRefresh];
-//    _listData = listData.copy;
-//    [self.contentTableView reloadData];
+    [self stopAnimationRefresh];
+    _listData = listData.copy;
+    [self.contentTableView reloadData];
 }
 
 - (void)updateViewDataEmpty {
@@ -135,11 +138,13 @@
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return _listData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     RegisterPromotionCell *cell = [self.contentTableView dequeueReusableCellWithIdentifier:@"cell"];
+    Voucher *obj = _listData[indexPath.row];
+    [cell binDataWithVoucher:obj];
     return cell;
 }
 
@@ -158,15 +163,6 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return UITableViewAutomaticDimension;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForHeaderInSection:(NSInteger)section {
-    return 42;
-}
-
-- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *) view;
-    header.contentView.backgroundColor = [UIColor whiteColor];
 }
 
 @end

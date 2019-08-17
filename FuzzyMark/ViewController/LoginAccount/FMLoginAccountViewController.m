@@ -75,6 +75,7 @@
 - (void)saveDataLoginSuccess:(UserInformation *) userInfo {
     [UserInfo setUserInforWithUserModel:userInfo];
     [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+    NSLog(@"token:JWT %@",userInfo.token);
 }
 
 #pragma mark - IBAction

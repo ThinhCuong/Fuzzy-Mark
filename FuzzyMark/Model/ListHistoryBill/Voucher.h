@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSInteger percent_discount;
 @property (nonatomic) Page *page;
 @property (nonatomic) NSInteger count_down;
+@property (nonatomic) NSString *time_bookmark;
 - (instancetype)initWithDataDictionary:(NSDictionary *)data;
-
 
 @end
 

@@ -52,6 +52,7 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define GET_HISTORIES_REWARD                        @"user/histories-reward"
 #define GET_CONFIGURATION                           @"configuration"
 #define POST_USER_UPLOAD_BILLS                      @"user/upload-bills"
+#define GET_VOUCHERS_INTERESTED                     @"vouchers/interested"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50

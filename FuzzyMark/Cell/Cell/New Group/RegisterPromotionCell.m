@@ -26,10 +26,12 @@
     // Initialization code
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)binDataWithVoucher:(Voucher *) model {
+    self.lblName.text = model.name ?: @"";
+    self.lblLocation.text = model.page.address ?: @"";
+    self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %ld%@", (long)model.percent_discount,@"%"];
+    self.lblTime.text = model.time_bookmark ?: @"";
+    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"logo_placeholder"]];
 }
 
 @end

@@ -15,7 +15,7 @@
     if (self) {
         self.idPage = [data integerForKey:@"id"];
         self.name = [data stringForKey:@"name"];
-        self.address = [data stringImageForKey:@"address"];
+        self.address = [data stringForKey:@"address"];
         self.rate_count = [data integerForKey:@"rate_count"];
         self.total_rate = [data integerForKey:@"total_rate"];
         self.image = [data stringImageForKey:@"image"];

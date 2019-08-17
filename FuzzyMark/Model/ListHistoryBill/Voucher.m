@@ -21,6 +21,7 @@
         self.percent_discount = [data integerForKey:@"id"];
         self.page = [[Page alloc] initWithDataDictionary:[data dictionaryForKey:@"page"]];
         self.count_down = [data integerForKey:@"count_down"];
+        self.time_bookmark = [data stringForKey:@"time_bookmark"];
     }
     return self;
 }
