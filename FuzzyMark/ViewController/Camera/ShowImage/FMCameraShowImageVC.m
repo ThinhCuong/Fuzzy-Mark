@@ -14,7 +14,9 @@
 
 @end
 
-@implementation FMCameraShowImageVC
+@implementation FMCameraShowImageVC {
+    
+}
 
 #pragma mark - life cycle
 - (void)viewDidLoad {
@@ -67,7 +69,13 @@
 }
 
 - (IBAction)didSelectUpload:(id)sender {
-    
+    NSDictionary *params = @{};
+    BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
+    [httpClient postDataWithPath:POST_USER_UPLOAD_BILLS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        
+    } withFailBlock:^(id fail) {
+        
+    }];
 }
 
 - (IBAction)didSelectBack:(id)sender {

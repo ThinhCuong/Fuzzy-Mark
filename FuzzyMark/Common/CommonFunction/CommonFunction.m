@@ -40,6 +40,15 @@
     [view makeToast:toast duration:3.0 position:CSToastPositionCenter];
 }
 
++ (void)configServer {
+    BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
+    [httpClient getDataWithPath:GET_CONFIGURATION andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id success) {
+        
+    } withFailBlock:^(id fail) {
+        
+    }];
+}
+
 @end
 
 @implementation UIFont (CustomFont)

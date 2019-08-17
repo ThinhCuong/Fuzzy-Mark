@@ -50,6 +50,8 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define PUT_USER_NOTIFICATIONS_READ                 @"user/notifications/read"
 #define PUT_USER_NOTIFICATIONS_READ_ALL             @"user/notifications/read-all"
 #define GET_HISTORIES_REWARD                        @"user/histories-reward"
+#define GET_CONFIGURATION                           @"configuration"
+#define POST_USER_UPLOAD_BILLS                      @"user/upload-bills"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50

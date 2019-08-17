@@ -31,7 +31,7 @@
         [self.delegate updateViewDataEmpty];
         return;
     }
-    NSDictionary *params = @{@"limit": GET_USER_NOTIFICATIONS, @"offset": @(self.listItem.count)};
+    NSDictionary *params = @{@"limit": NUMBER_ITEM_CALL_API, @"offset": @(self.listItem.count)};
     [self getDataTableView:params.mutableCopy];
 }
 
