@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMCameraViewController : FMBaseViewController
 @property (strong, nonatomic) FMCameraShowImageVC *showImageVC;
-
+- (instancetype)initWithVoucherID:(NSInteger) voucher_id;
 @end
 
 NS_ASSUME_NONNULL_END

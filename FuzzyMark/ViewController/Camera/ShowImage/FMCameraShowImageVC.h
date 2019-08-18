@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMCameraShowImageVC : UIViewController
 @property (weak, nonatomic) NSMutableArray <UIImage *> *listImage;
-
+- (instancetype)initWithVoucherID:(NSInteger) voucher_id;
 @end
 
 NS_ASSUME_NONNULL_END

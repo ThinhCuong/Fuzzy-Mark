@@ -158,6 +158,8 @@
 		4FF9C3D22291A2BC00D3AD81 /* FMRegisterPromotionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF9C3D02291A2BC00D3AD81 /* FMRegisterPromotionViewController.xib */; };
 		4FF9C3D52291A2E300D3AD81 /* FMRegisterPromotionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3D42291A2E300D3AD81 /* FMRegisterPromotionModel.m */; };
 		4FF9C3D82291A78800D3AD81 /* RegisterPromotionHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9C3D72291A78800D3AD81 /* RegisterPromotionHeaderCell.m */; };
+		4FFB570B2308FEFF00B67057 /* FMPopupNotifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFB57092308FEFE00B67057 /* FMPopupNotifiViewController.m */; };
+		4FFB570C2308FEFF00B67057 /* FMPopupNotifiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFB570A2308FEFF00B67057 /* FMPopupNotifiViewController.xib */; };
 		4FFC65CD22B5763900056AE2 /* FMPromotionDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FFC65CB22B5763900056AE2 /* FMPromotionDetailVC.m */; };
 		4FFC65CE22B5763900056AE2 /* FMPromotionDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FFC65CC22B5763900056AE2 /* FMPromotionDetailVC.xib */; };
 		4FFC65D022B57F8200056AE2 /* PromotionDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FFC65CF22B57F8200056AE2 /* PromotionDetail.xcassets */; };
@@ -489,6 +491,9 @@
 		4FF9C3D42291A2E300D3AD81 /* FMRegisterPromotionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRegisterPromotionModel.m; sourceTree = "<group>"; };
 		4FF9C3D62291A78800D3AD81 /* RegisterPromotionHeaderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterPromotionHeaderCell.h; sourceTree = "<group>"; };
 		4FF9C3D72291A78800D3AD81 /* RegisterPromotionHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterPromotionHeaderCell.m; sourceTree = "<group>"; };
+		4FFB57082308FEFE00B67057 /* FMPopupNotifiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPopupNotifiViewController.h; sourceTree = "<group>"; };
+		4FFB57092308FEFE00B67057 /* FMPopupNotifiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPopupNotifiViewController.m; sourceTree = "<group>"; };
+		4FFB570A2308FEFF00B67057 /* FMPopupNotifiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPopupNotifiViewController.xib; sourceTree = "<group>"; };
 		4FFC65CA22B5763900056AE2 /* FMPromotionDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPromotionDetailVC.h; sourceTree = "<group>"; };
 		4FFC65CB22B5763900056AE2 /* FMPromotionDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionDetailVC.m; sourceTree = "<group>"; };
 		4FFC65CC22B5763900056AE2 /* FMPromotionDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPromotionDetailVC.xib; sourceTree = "<group>"; };
@@ -1302,6 +1307,16 @@
 			path = RegisterPromotions;
 			sourceTree = "<group>";
 		};
+		4FFB57072308FD7F00B67057 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				4FFB57082308FEFE00B67057 /* FMPopupNotifiViewController.h */,
+				4FFB57092308FEFE00B67057 /* FMPopupNotifiViewController.m */,
+				4FFB570A2308FEFF00B67057 /* FMPopupNotifiViewController.xib */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
 		4FFC65C922B575C900056AE2 /* PromotionDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -1383,18 +1398,18 @@
 			isa = PBXGroup;
 			children = (
 				5C39101D2263492A008BEA62 /* AFSecurityPolicy.h */,
-				5C39101E2263492A008BEA62 /* AFNetworkReachabilityManager.h */,
-				5C39101F2263492A008BEA62 /* AFURLSessionManager.h */,
-				5C3910202263492A008BEA62 /* AFURLRequestSerialization.h */,
-				5C3910212263492A008BEA62 /* AFURLResponseSerialization.m */,
-				5C3910222263492A008BEA62 /* AFHTTPSessionManager.m */,
-				5C3910232263492A008BEA62 /* AFURLResponseSerialization.h */,
-				5C3910242263492A008BEA62 /* AFURLSessionManager.m */,
-				5C3910252263492A008BEA62 /* AFURLRequestSerialization.m */,
-				5C3910262263492A008BEA62 /* AFNetworking.h */,
-				5C3910272263492A008BEA62 /* AFNetworkReachabilityManager.m */,
 				5C3910282263492A008BEA62 /* AFSecurityPolicy.m */,
+				5C39101E2263492A008BEA62 /* AFNetworkReachabilityManager.h */,
+				5C3910272263492A008BEA62 /* AFNetworkReachabilityManager.m */,
+				5C3910202263492A008BEA62 /* AFURLRequestSerialization.h */,
+				5C3910252263492A008BEA62 /* AFURLRequestSerialization.m */,
+				5C3910232263492A008BEA62 /* AFURLResponseSerialization.h */,
+				5C3910212263492A008BEA62 /* AFURLResponseSerialization.m */,
+				5C39101F2263492A008BEA62 /* AFURLSessionManager.h */,
+				5C3910242263492A008BEA62 /* AFURLSessionManager.m */,
 				5C3910292263492A008BEA62 /* AFHTTPSessionManager.h */,
+				5C3910222263492A008BEA62 /* AFHTTPSessionManager.m */,
+				5C3910262263492A008BEA62 /* AFNetworking.h */,
 			);
 			path = AFNetworking;
 			sourceTree = "<group>";
@@ -1548,6 +1563,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4FFB57072308FD7F00B67057 /* Popup */,
 				4FF7280322EDA6EA000C8AB8 /* ForgotPassword */,
 				4FF727FD22ED8F71000C8AB8 /* LoginAccount */,
 				4FDEEA4C22E47D9C00A72BC1 /* RegisterAccount */,
@@ -1879,6 +1895,7 @@
 				5C5BA89B229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C5BA896229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib in Resources */,
+				4FFB570C2308FEFF00B67057 /* FMPopupNotifiViewController.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F472D3B22907A9300F93D39 /* FMChangePasswordViewController.xib in Resources */,
 				4F50F4002276EDBC00DF7173 /* Muli-ExtraLight.ttf in Resources */,
@@ -2055,6 +2072,7 @@
 				4F472D33229076C900F93D39 /* FMOTPViewController.m in Sources */,
 				4FDEEA3F22E45AFC00A72BC1 /* UserInformation.m in Sources */,
 				5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */,
+				4FFB570B2308FEFF00B67057 /* FMPopupNotifiViewController.m in Sources */,
 				4F35FDD222EF8A3B00F79B45 /* FMChoicePictureModel.m in Sources */,
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,

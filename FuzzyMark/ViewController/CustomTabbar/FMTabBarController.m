@@ -7,8 +7,10 @@
 //
 
 #import "FMTabBarController.h"
+#import "FMPopupNotifiViewController.h"
+#import "FMLoginAccountViewController.h"
 
-@interface FMTabBarController ()
+@interface FMTabBarController () <FMPopupNotifiDelegate>
 
 @end
 
@@ -97,6 +99,13 @@
 }
 
 - (void)didSelectMiddleButton {
+    if ([UserInfo getUserToken].length == 0) {
+        FMPopupNotifiViewController *vc = [[FMPopupNotifiViewController alloc] initWithTitle:@"Bạn cần đăng nhập để sử dụng chức năng này"];
+        vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        vc.delegate = self;
+        [self presentViewController:vc animated:YES completion:nil];
+        return;
+    }
     [self.middleButton selectedButton];
     [self setSelectedIndex:2];
 }
@@ -105,5 +114,21 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     [self.middleButton unselectedButton];
 }
+
+#pragma mark - FMPopupNotifiDelegate
+- (void)didSelectChooseSuccessPopup {
+    FMLoginAccountViewController *vc = [[FMLoginAccountViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    vc.loginSuccess = ^(BOOL isSuccess) {
+        [self didSelectMiddleButton];
+    };
+    [self presentViewController:navi animated:YES completion:nil];
+}
+
+- (void)didSelectChooseCanclePopup {
+    return;
+}
+
+
 
 @end

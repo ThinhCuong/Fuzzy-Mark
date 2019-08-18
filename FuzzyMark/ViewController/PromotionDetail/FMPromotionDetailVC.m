@@ -260,7 +260,7 @@
 }
 
 - (IBAction)didSelectTakePhoto:(id)sender {
-    FMCameraViewController *vc = [[FMCameraViewController alloc] init];
+    FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_idVoucher];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -15,10 +15,18 @@
 @end
 
 @implementation FMCameraShowImageVC {
-    
+    NSInteger _voucherID;
 }
 
 #pragma mark - life cycle
+- (instancetype)initWithVoucherID:(NSInteger) voucher_id {
+    self = [super init];
+    if (self) {
+        _voucherID = voucher_id;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionViewContent.delegate = self;
@@ -69,12 +77,33 @@
 }
 
 - (IBAction)didSelectUpload:(id)sender {
-    NSDictionary *params = @{};
     BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
-    [httpClient postDataWithPath:POST_USER_UPLOAD_BILLS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
-        
-    } withFailBlock:^(id fail) {
-        
+    [CommonFunction showLoadingView];
+    [httpClient POST:POST_USER_UPLOAD_BILLS parameters:@{@"voucher_id": @(_voucherID)} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        int i = 0;
+        for (UIImage *img in self->_listImage) {
+            i++;
+            if (i > 3) {
+                return;
+            }
+            NSData *data = UIImageJPEGRepresentation(img, 0.5);
+            [formData appendPartWithFileData:data
+                                        name:@"bills"
+                                    fileName:@"avatar.jpg"
+                                    mimeType:@"image/jpeg"];
+        }
+    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [CommonFunction hideLoadingView];
+        if ([responseObject isKindOfClass:NSDictionary.class]) {
+            if ([responseObject codeForKey:@"error_code"] != 0) {
+                [CommonFunction showToast:[responseObject stringForKey:@"message"]];
+            } else {
+                
+            }
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [CommonFunction hideLoadingView];
+        [CommonFunction showToast:@"Không gửi được ảnh. Vui lòng thử lại sau"];
     }];
 }
 

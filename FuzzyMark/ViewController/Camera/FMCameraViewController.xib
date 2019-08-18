@@ -32,7 +32,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sQc-NU-Wwl" userLabel="Menu">
                     <rect key="frame" x="0.0" y="557" width="375" height="110"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSD-hY-86O" userLabel="MidleButton">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSD-hY-86O">
                             <rect key="frame" x="159.5" y="19" width="56" height="56"/>
                             <state key="normal" image="ic_take_photo"/>
                             <connections>

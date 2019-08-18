@@ -97,7 +97,9 @@
             if ([success codeForKey:@"error_code"] == 0) {
                 UserInformation *userInfo = [[UserInformation alloc] initWithDict:[success dictionaryForKey:@"data"]];
                 [self saveDataLoginSuccess:userInfo];
-                [self dismissViewControllerAnimated:YES completion:nil];
+                [self dismissViewControllerAnimated:YES completion:^{
+                    self.loginSuccess ? self.loginSuccess(YES) : 0;
+                }];
             } else {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
@@ -169,6 +171,7 @@
             vc.registerSuccess = ^{
                 [self dismissViewControllerAnimated:YES completion:nil];
                 [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+                self.loginSuccess ? self.loginSuccess(YES) : 0;
             };
             [self.navigationController pushViewController:vc animated:YES];
         } else if (_type == LoginTypeForgotPassword) {

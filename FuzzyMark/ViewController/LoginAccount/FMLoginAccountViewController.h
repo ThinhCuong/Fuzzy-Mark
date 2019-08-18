@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMLoginAccountViewController : FMBaseViewController
-
+@property (copy, nonatomic) void (^loginSuccess)(BOOL);
 @end
 
 NS_ASSUME_NONNULL_END

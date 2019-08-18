@@ -151,7 +151,8 @@
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
-    FMCameraViewController *vc = [[FMCameraViewController alloc] init];
+    Voucher *obj = _listData[indexPath.row];
+    FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:obj.idVoucher];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

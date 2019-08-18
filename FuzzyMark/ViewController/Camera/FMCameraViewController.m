@@ -24,9 +24,18 @@
 @implementation FMCameraViewController {
     NSMutableArray *_listImage;
     BOOL _firstLoad;
+    NSInteger _voucherID;
 }
 
 #pragma mark - life cycle
+- (instancetype)initWithVoucherID:(NSInteger) voucher_id {
+    self = [super init];
+    if (self) {
+        _voucherID = voucher_id;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -192,7 +201,7 @@
         [_listImage addObject:image];
         // Add the image to captureImageView here...
         if(!self.showImageVC) {
-            self.showImageVC = [[FMCameraShowImageVC alloc] init];
+            self.showImageVC = [[FMCameraShowImageVC alloc] initWithVoucherID:_voucherID];
         }
         self.showImageVC.listImage = _listImage;
         [self presentViewController:self.showImageVC animated:YES completion:nil];
