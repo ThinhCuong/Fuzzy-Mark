@@ -11,32 +11,62 @@
 
 @interface BaseCallApi : AFHTTPSessionManager
 
-+ (BaseCallApi *)defaultInitWithBaseURL;
++ (BaseCallApi * _Nonnull)defaultInitWithBaseURL;
 
-- (instancetype)initWithBaseURL:(NSString *)baseUrl;
+- (instancetype _Nonnull)initWithBaseURL:(NSString * _Nullable)baseUrl;
 
-- (void)getDataWithPath:(NSString *)path
-               andParam:(NSDictionary*)param
+- (void)getDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
      isShowfailureAlert:(BOOL)isShowfailureAlert
-       withSuccessBlock:(void(^)(id))successBlock
-          withFailBlock:(void(^)(id))failureBlock;
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
 
-- (void)postDataWithPath:(NSString *)path
-                andParam:(NSDictionary*)param
+- (void)getDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
+            isSendToken:(BOOL)isSendToken
+     isShowfailureAlert:(BOOL)isShowfailureAlert
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
+
+- (void)postDataWithPath:(NSString * _Nullable)path
+                andParam:(NSDictionary* _Nullable)param
       isShowfailureAlert:(BOOL)isShowfailureAlert
-   withSuccessBlock:(void(^)(id))successBlock
-           withFailBlock:(void(^)(id))failureBlock;
+        withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+           withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
 
-- (void)putDataWithPath:(NSString *)path
-               andParam:(NSDictionary*)param
+- (void)postDataWithPath:(NSString * _Nullable)path
+            queriesParam:(NSDictionary * _Nullable)queriesParam
+               bodyParam:(NSDictionary * _Nullable)bodyParam
+constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))block
+             isSendToken:(BOOL)isSendToken
+      isShowfailureAlert:(BOOL)isShowfailureAlert
+        withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+           withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
+
+- (void)putDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
      isShowfailureAlert:(BOOL)isShowfailureAlert
-       withSuccessBlock:(void(^)(id))successBlock
-          withFailBlock:(void(^)(id))failureBlock;
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
 
-- (void)deleteDataWithPath:(NSString *)path
-                  andParam:(NSDictionary*)param
+- (void)putDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
+            isSendToken:(BOOL)isSendToken
+     isShowfailureAlert:(BOOL)isShowfailureAlert
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
+
+- (void)deleteDataWithPath:(NSString * _Nullable)path
+                  andParam:(NSDictionary* _Nullable)param
         isShowfailureAlert:(BOOL)isShowfailureAlert
-          withSuccessBlock:(void(^)(id))successBlock
-             withFailBlock:(void(^)(id))failureBlock;
+          withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+             withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
+
+- (void)deleteDataWithPath:(NSString * _Nullable)path
+                  andParam:(NSDictionary* _Nullable)param
+               isSendToken:(BOOL)isSendToken
+        isShowfailureAlert:(BOOL)isShowfailureAlert
+          withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+             withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
 
 @end

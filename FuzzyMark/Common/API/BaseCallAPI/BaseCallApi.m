@@ -14,9 +14,11 @@
 
 @end
 
+NSInteger const kNetworkingTimeout = 30;
+
 @implementation BaseCallApi
 
-+ (BaseCallApi *)defaultInitWithBaseURL {
++ (BaseCallApi * _Nonnull)defaultInitWithBaseURL {
     static BaseCallApi *defaultInitWithBaseURL = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -26,12 +28,12 @@
     return defaultInitWithBaseURL;
 }
 
-- (instancetype)initWithBaseURL:(NSString *)baseUrl{
+- (instancetype _Nonnull)initWithBaseURL:(NSString * _Nullable)baseUrl {
     self = [super initWithBaseURL:[NSURL URLWithString:baseUrl]];
     if (self) {
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.requestSerializer = [AFHTTPRequestSerializer serializer];
-        //  self.requestSerializer.timeoutInterval = kNetworkingTimeout;
+          self.requestSerializer.timeoutInterval = kNetworkingTimeout;
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/html", nil];
         self.securityPolicy.allowInvalidCertificates = YES;
         self.listTask = [NSMutableArray new];
@@ -39,15 +41,31 @@
     return self;
 }
 
-
-- (void)getDataWithPath:(NSString *)path
-               andParam:(NSDictionary*)param
+- (void)getDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
      isShowfailureAlert:(BOOL)isShowfailureAlert
-       withSuccessBlock:(void(^)(id))successBlock
-          withFailBlock:(void(^)(id))failureBlock {
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
+    
+    [self getDataWithPath:path andParam:param isSendToken:NO isShowfailureAlert:isShowfailureAlert withSuccessBlock:successBlock withFailBlock:failureBlock];
+}
+
+- (void)getDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
+            isSendToken:(BOOL)isSendToken
+     isShowfailureAlert:(BOOL)isShowfailureAlert
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
     
     // init param with common param
     NSDictionary *newParams = [self createCommonParam:param];
+    
+    // send token
+    if (isSendToken) {
+        [self.requestSerializer setValue:[UserInfo getUserToken] forHTTPHeaderField:@"Authorization"];
+    } else {
+        [self.requestSerializer clearAuthorizationHeader];
+    }
     
     NSURLSessionDataTask *task = [self GET:path parameters:newParams progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successBlock ? successBlock(responseObject) : 0;
@@ -58,11 +76,11 @@
     [self.listTask addObject:task];
 }
 
-- (void)postDataWithPath:(NSString *)path
-                andParam:(NSDictionary*)param
+- (void)postDataWithPath:(NSString * _Nullable)path
+                andParam:(NSDictionary* _Nullable)param
       isShowfailureAlert:(BOOL)isShowfailureAlert
-        withSuccessBlock:(void(^)(id))successBlock
-           withFailBlock:(void(^)(id))failureBlock {
+        withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+           withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
     
     // init param with common param
     NSDictionary *newParams = [self createCommonParam:param];
@@ -76,14 +94,59 @@
     [self.listTask addObject:task];
 }
 
-- (void)putDataWithPath:(NSString *)path
-               andParam:(NSDictionary*)param
+- (void)postDataWithPath:(NSString * _Nullable)path
+            queriesParam:(NSDictionary * _Nullable)queriesParam
+               bodyParam:(NSDictionary * _Nullable)bodyParam
+constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))block
+             isSendToken:(BOOL)isSendToken
+      isShowfailureAlert:(BOOL)isShowfailureAlert
+        withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+           withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
+    
+    // init param with common param
+    NSDictionary *newBodyParam = [self createCommonParam:bodyParam];
+    NSString *newPath = [self addQueryStringToUrlString:path withDictionary:queriesParam];
+    
+    // send token
+    if (isSendToken) {
+        [self.requestSerializer setValue:[UserInfo getUserToken] forHTTPHeaderField:@"Authorization"];
+    } else {
+        [self.requestSerializer clearAuthorizationHeader];
+    }
+    
+    NSURLSessionDataTask *task = [self POST:newPath parameters:newBodyParam constructingBodyWithBlock:block progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock ? successBlock(responseObject) : 0;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failureBlock ? failureBlock(error) : nil;
+    }];
+    
+    [self.listTask addObject:task];
+}
+
+- (void)putDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
      isShowfailureAlert:(BOOL)isShowfailureAlert
-       withSuccessBlock:(void(^)(id))successBlock
-          withFailBlock:(void(^)(id))failureBlock {
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
+    [self putDataWithPath:path andParam:param isSendToken:NO isShowfailureAlert:isShowfailureAlert withSuccessBlock:successBlock withFailBlock:failureBlock];
+}
+
+- (void)putDataWithPath:(NSString * _Nullable)path
+               andParam:(NSDictionary * _Nullable)param
+            isSendToken:(BOOL)isSendToken
+     isShowfailureAlert:(BOOL)isShowfailureAlert
+       withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+          withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
     
     // init param with common param
     NSDictionary *newParams = [self createCommonParam:param];
+    
+    // send token
+    if (isSendToken) {
+        [self.requestSerializer setValue:[UserInfo getUserToken] forHTTPHeaderField:@"Authorization"];
+    } else {
+        [self.requestSerializer clearAuthorizationHeader];
+    }
     
     NSURLSessionDataTask *task = [self PUT:path parameters:newParams success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successBlock ? successBlock(responseObject) : 0;
@@ -94,15 +157,30 @@
     [self.listTask addObject:task];
 }
 
-
-- (void)deleteDataWithPath:(NSString *)path
-                  andParam:(NSDictionary*)param
+- (void)deleteDataWithPath:(NSString * _Nullable)path
+                  andParam:(NSDictionary* _Nullable)param
         isShowfailureAlert:(BOOL)isShowfailureAlert
-          withSuccessBlock:(void(^)(id))successBlock
-             withFailBlock:(void(^)(id))failureBlock {
+          withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+             withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
+    [self deleteDataWithPath:path andParam:param isShowfailureAlert:isShowfailureAlert withSuccessBlock:successBlock withFailBlock:failureBlock];
+}
+
+- (void)deleteDataWithPath:(NSString * _Nullable)path
+                  andParam:(NSDictionary* _Nullable)param
+               isSendToken:(BOOL)isSendToken
+        isShowfailureAlert:(BOOL)isShowfailureAlert
+          withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+             withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
     
     // init param with common param
     NSDictionary *newParams = [self createCommonParam:param];
+    
+    // send token
+    if (isSendToken) {
+        [self.requestSerializer setValue:[UserInfo getUserToken] forHTTPHeaderField:@"Authorization"];
+    } else {
+        [self.requestSerializer clearAuthorizationHeader];
+    }
     
     NSURLSessionDataTask *task = [self DELETE:path parameters:newParams success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successBlock ? successBlock(responseObject) : 0;
@@ -113,27 +191,26 @@
     [self.listTask addObject:task];
 }
 
-// Auto truyen token vao header moi API
-- (NSURLSessionDataTask *)dataTaskWithRequest:(NSURLRequest *)request
-                               uploadProgress:(nullable void (^)(NSProgress *uploadProgress)) uploadProgressBlock
-                             downloadProgress:(nullable void (^)(NSProgress *downloadProgress)) downloadProgressBlock
-                            completionHandler:(nullable void (^)(NSURLResponse *response, id _Nullable responseObject,  NSError * _Nullable error))completionHandler {
-    
-    static NSString *authorization;
-    if(!authorization)
-    {
-        authorization = [UserInfo getUserToken];
-    }
-    
-    NSMutableURLRequest *req = (NSMutableURLRequest *)request;
-    [req setValue:authorization forHTTPHeaderField:@"Authorization"];
-    return [super dataTaskWithRequest:request uploadProgress:uploadProgressBlock downloadProgress:downloadProgressBlock completionHandler:completionHandler];
-}
-
 - (NSDictionary *)createCommonParam:(NSDictionary *)commonParam {
     NSMutableDictionary *listParam = commonParam.mutableCopy;
-    [listParam setObject:@"" forKey:@""];
     return listParam;
+}
+
+- (NSString*)addQueryStringToUrlString:(NSString *)urlString withDictionary:(NSDictionary *)dictionary
+{
+    NSMutableString *urlWithQueryString = [[NSMutableString alloc] initWithString:urlString];
+    
+    for (id key in dictionary) {
+        NSString *keyString = [key description];
+        NSString *valueString = [[dictionary objectForKey:key] description];
+        
+        if ([urlWithQueryString rangeOfString:@"?"].location == NSNotFound) {
+            [urlWithQueryString appendFormat:@"?%@=%@", keyString, valueString];
+        } else {
+            [urlWithQueryString appendFormat:@"&%@=%@", keyString, valueString];
+        }
+    }
+    return urlWithQueryString;
 }
 
 @end

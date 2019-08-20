@@ -77,9 +77,10 @@
 }
 
 - (IBAction)didSelectUpload:(id)sender {
+    NSDictionary *param = @{@"voucher_id": @1};
     BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
     [CommonFunction showLoadingView];
-    [httpClient POST:POST_USER_UPLOAD_BILLS parameters:@{@"voucher_id": @(_voucherID)} constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+    [httpClient postDataWithPath:POST_USER_UPLOAD_BILLS queriesParam:param bodyParam:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
         int i = 0;
         for (UIImage *img in self->_listImage) {
             i++;
@@ -92,7 +93,7 @@
                                     fileName:@"avatar.jpg"
                                     mimeType:@"image/jpeg"];
         }
-    } progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    } isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id responseObject) {
         [CommonFunction hideLoadingView];
         if ([responseObject isKindOfClass:NSDictionary.class]) {
             if ([responseObject codeForKey:@"error_code"] != 0) {
@@ -101,7 +102,7 @@
                 
             }
         }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    } withFailBlock:^(id failObject) {
         [CommonFunction hideLoadingView];
         [CommonFunction showToast:@"Không gửi được ảnh. Vui lòng thử lại sau"];
     }];
