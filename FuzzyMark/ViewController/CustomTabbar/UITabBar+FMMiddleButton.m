@@ -20,7 +20,7 @@
 }
 
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-    if(self.middleButton && CGRectContainsPoint(self.middleButton.frame, point)) {
+    if(self.middleButton && CGRectContainsPoint(self.middleButton.frame, point) && !self.hidden) {
         return self.middleButton;
     }
     return [super hitTest:point withEvent:event];
