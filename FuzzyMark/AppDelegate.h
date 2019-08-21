@@ -41,5 +41,7 @@
 @property (strong, nonatomic) FMNotifiViewController *notifiViewController;
 @property (strong, nonatomic) FMUserInforViewController *userInforViewController;
 
+- (void)loginRequiredWithSuccessBlock:(void(^)(BOOL)) successBlock;
+
 @end
 

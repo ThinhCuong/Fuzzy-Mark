@@ -12,6 +12,7 @@
 #import "RegisterPromotionCell.h"
 #import "RegisterPromotionHeaderCell.h"
 #import "FMCameraViewController.h"
+#import "AppDelegate.h"
 
 @interface FMRegisterPromotionViewController () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
 
@@ -152,9 +153,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.contentTableView deselectRowAtIndexPath:indexPath animated:YES];
     Voucher *obj = _listData[indexPath.row];
-    FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:obj.idVoucher];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    __block FMRegisterPromotionViewController *_blockSelf = self;
+    [appDelegate loginRequiredWithSuccessBlock:^(BOOL isSuccess) {
+        if(!isSuccess) {
+            return;
+        }
+        FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:obj.idVoucher];
+        vc.hidesBottomBarWhenPushed = YES;
+        [_blockSelf.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {

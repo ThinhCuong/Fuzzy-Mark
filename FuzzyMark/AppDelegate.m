@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FMPopupNotifiViewController.h"
+#import "FMLoginAccountViewController.h"
 
 @interface AppDelegate ()
 
@@ -155,6 +157,39 @@
     NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
     token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
     NSLog(@"content---%@", token);
+}
+
+- (void)loginRequiredWithSuccessBlock:(void(^)(BOOL)) successBlock {
+    
+    if ([UserInfo getUserToken].length == 0) {
+        
+        FMPopupNotifiViewController *vc = [[FMPopupNotifiViewController alloc] initWithTitle:@"Bạn cần đăng nhập để sử dụng chức năng này"];
+        vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+        
+        vc.didSelectChooseSuccessBlock = ^{
+            FMLoginAccountViewController *vc = [[FMLoginAccountViewController alloc] init];
+            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+            vc.loginSuccess = ^(BOOL isSuccess) {
+                if (isSuccess) {
+                    successBlock(YES);
+                } else {
+                    successBlock(NO);
+                }
+            };
+            [self.tabbarController presentViewController:navi animated:YES completion:nil];
+        };
+        
+        vc.didSelectChooseCanCleBlock = ^{
+            successBlock(NO);
+        };
+        
+        [appDelegate.tabbarController presentViewController:vc animated:YES completion:nil];
+        
+        return;
+        
+    } else {
+        successBlock(YES);
+    }
 }
 
 @end

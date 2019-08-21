@@ -34,13 +34,19 @@
 
 - (IBAction)didSlectAccept:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate didSelectChooseSuccessPopup];
+        if ([self.delegate respondsToSelector:@selector(didSelectChooseSuccessBlock)]) {
+            [self.delegate didSelectChooseSuccessPopup];
+        }
+        self.didSelectChooseSuccessBlock ? self.didSelectChooseSuccessBlock() : 0;
     }];
 }
 
 - (IBAction)didSlectCancle:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
-        [self.delegate didSelectChooseCanclePopup];
+        if ([self.delegate respondsToSelector:@selector(didSelectChooseCanCleBlock)]) {
+            [self.delegate didSelectChooseCanclePopup];
+        };
+        self.didSelectChooseCanCleBlock ? self.didSelectChooseCanCleBlock() : 0;
     }];
 }
 

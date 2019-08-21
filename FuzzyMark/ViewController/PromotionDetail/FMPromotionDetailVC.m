@@ -14,6 +14,7 @@
 #import "FMListItemIntroduceVC.h"
 #import "FMListItemGiftVC.h"
 #import "FzVourcherInfoObject.h"
+#import "AppDelegate.h"
 
 
 @interface FMPromotionDetailVC () <FMPromotionDetailModelDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
@@ -35,7 +36,7 @@
 @end
 
 @implementation FMPromotionDetailVC {
-    NSString *_idVoucher;
+    NSInteger _idVoucher;
     FzVourcherInfoObject *_voucherInfo;
     HMSegmentedControl *_segmentedControl;
     UIPageViewController *_pageViewController;
@@ -48,7 +49,7 @@
 }
 
 #pragma mark - life cycle
-- (instancetype)initWithIDVoucher:(NSString *)idVoucher
+- (instancetype)initWithIDVoucher:(NSInteger)idVoucher
 {
     self = [super init];
     if (self) {
@@ -260,9 +261,15 @@
 }
 
 - (IBAction)didSelectTakePhoto:(id)sender {
-    FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_idVoucher];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    __block FMPromotionDetailVC *_blockSelf = self;
+    [appDelegate loginRequiredWithSuccessBlock:^(BOOL isSuccess) {
+        if(!isSuccess) {
+            return;
+        }
+        FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_blockSelf->_idVoucher];
+        vc.hidesBottomBarWhenPushed = YES;
+        [_blockSelf.navigationController pushViewController:vc animated:YES];
+    }];
 }
 
 #pragma mark - UIPageViewControllerDataSource

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol FMPopupNotifiDelegate <NSObject>
 
+@optional
 - (void)didSelectChooseSuccessPopup;
 - (void)didSelectChooseCanclePopup;
 
@@ -20,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FMPopupNotifiViewController : UIViewController
 @property (assign, nonatomic) id<FMPopupNotifiDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+@property (copy, nonatomic) void(^didSelectChooseSuccessBlock)(void);
+@property (copy, nonatomic) void(^didSelectChooseCanCleBlock)(void);
 - (instancetype)initWithTitle:(NSString *) title;
 @end
 

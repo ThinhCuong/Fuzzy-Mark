@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPromotionDetailVC : FMBaseViewController
 
-- (instancetype)initWithIDVoucher:(NSString *) idVoucher;
+- (instancetype)initWithIDVoucher:(NSInteger) idVoucher;
 
 @end
 

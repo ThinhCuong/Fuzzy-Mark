@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (assign, nonatomic) id<FMPromotionDetailModelDelegate> delegate;
 
-- (void)getVouchersInfoWithIDVoucher:(NSString *)idVoucher;
+- (void)getVouchersInfoWithIDVoucher:(NSInteger)idVoucher;
 
 @end
 
