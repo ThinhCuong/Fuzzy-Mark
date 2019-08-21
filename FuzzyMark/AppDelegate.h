@@ -42,6 +42,7 @@
 @property (strong, nonatomic) FMUserInforViewController *userInforViewController;
 
 - (void)loginRequiredWithSuccessBlock:(void(^)(BOOL)) successBlock;
+- (void)selectTabWithIndex:(NSInteger) index;
 
 @end
 

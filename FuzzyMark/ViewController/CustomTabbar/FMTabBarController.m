@@ -112,6 +112,15 @@
     [self.middleButton unselectedButton];
 }
 
+- (void)setSelectedIndex:(NSUInteger)selectedIndex {
+    if (selectedIndex == 2) {
+        [self.middleButton selectedButton];
+    } else {
+        [self.middleButton unselectedButton];
+    }
+    [super setSelectedIndex:selectedIndex];
+}
+
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "FMCameraShowImageVC.h"
 #import "CameraShowImageCell.h"
+#import "FMSendImageVoucherSuccessVC.h"
 
 @interface FMCameraShowImageVC () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionViewContent;
@@ -99,7 +100,8 @@
             if ([responseObject codeForKey:@"error_code"] != 0) {
                 [CommonFunction showToast:[responseObject stringForKey:@"message"]];
             } else {
-                
+                FMSendImageVoucherSuccessVC *vc = [[FMSendImageVoucherSuccessVC alloc] init];
+                [self presentViewController:vc animated:YES completion:nil];
             }
         }
     } withFailBlock:^(id failObject) {

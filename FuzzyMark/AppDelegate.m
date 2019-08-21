@@ -192,4 +192,21 @@
     }
 }
 
+- (void)selectTabWithIndex:(NSInteger) index {
+    if (index < 0) {
+        index = 0;
+    }
+    if (index > 4) {
+        index = 4;
+    }
+    UIViewController *vc = self.tabbarController.selectedViewController;
+    if ([vc isKindOfClass:UINavigationController.class]) {
+        UINavigationController *navi = (UINavigationController *) vc;
+        [navi popToRootViewControllerAnimated:YES];
+    }
+    [vc dismissViewControllerAnimated:NO completion:^{
+        [self.tabbarController setSelectedIndex:index];
+    }];
+}
+
 @end

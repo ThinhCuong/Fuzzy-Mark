@@ -115,6 +115,8 @@
 		4FDACD11227F630A00A8571E /* RegisterPromotionHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDACD10227F630A00A8571E /* RegisterPromotionHeaderCell.xib */; };
 		4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD13227F67F100A8571E /* FMItemHistoryBillModel.m */; };
 		4FDACD26227FCC7500A8571E /* FMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDACD25227FCC7400A8571E /* FMBaseViewController.m */; };
+		4FDAFC0B230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDAFC09230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.m */; };
+		4FDAFC0C230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDAFC0A230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.xib */; };
 		4FDC204922A0CF24003B755C /* FMCameraShowImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC204622A0CF24003B755C /* FMCameraShowImageVC.m */; };
 		4FDC204A22A0CF24003B755C /* FMCameraShowImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC204722A0CF24003B755C /* FMCameraShowImageVC.xib */; };
 		4FDC204F22A0D9FB003B755C /* CameraShowImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC204D22A0D9FB003B755C /* CameraShowImageCell.m */; };
@@ -419,6 +421,9 @@
 		4FDACD13227F67F100A8571E /* FMItemHistoryBillModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMItemHistoryBillModel.m; sourceTree = "<group>"; };
 		4FDACD24227FCC7400A8571E /* FMBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMBaseViewController.h; sourceTree = "<group>"; };
 		4FDACD25227FCC7400A8571E /* FMBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMBaseViewController.m; sourceTree = "<group>"; };
+		4FDAFC08230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMSendImageVoucherSuccessVC.h; sourceTree = "<group>"; };
+		4FDAFC09230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMSendImageVoucherSuccessVC.m; sourceTree = "<group>"; };
+		4FDAFC0A230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMSendImageVoucherSuccessVC.xib; sourceTree = "<group>"; };
 		4FDC204622A0CF24003B755C /* FMCameraShowImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMCameraShowImageVC.m; sourceTree = "<group>"; };
 		4FDC204722A0CF24003B755C /* FMCameraShowImageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMCameraShowImageVC.xib; sourceTree = "<group>"; };
 		4FDC204822A0CF24003B755C /* FMCameraShowImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMCameraShowImageVC.h; sourceTree = "<group>"; };
@@ -1097,6 +1102,9 @@
 				4FDC204822A0CF24003B755C /* FMCameraShowImageVC.h */,
 				4FDC204622A0CF24003B755C /* FMCameraShowImageVC.m */,
 				4FDC204722A0CF24003B755C /* FMCameraShowImageVC.xib */,
+				4FDAFC08230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.h */,
+				4FDAFC09230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.m */,
+				4FDAFC0A230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.xib */,
 			);
 			path = ShowImage;
 			sourceTree = "<group>";
@@ -1938,6 +1946,7 @@
 				4FF7280222ED8FE5000C8AB8 /* FMLoginAccountViewController.xib in Resources */,
 				4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */,
 				4FF9C3C62291373200D3AD81 /* FMDetailHistoryViewController.xib in Resources */,
+				4FDAFC0C230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.xib in Resources */,
 				4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */,
 				4FF9C3D22291A2BC00D3AD81 /* FMRegisterPromotionViewController.xib in Resources */,
 				4FDEEA5122E47F2E00A72BC1 /* FMRegisterAccountViewController.xib in Resources */,
@@ -2173,6 +2182,7 @@
 				4FBD3DA2228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m in Sources */,
 				4FF014A3227EEEBC0063093C /* Page.m in Sources */,
 				4FFC65CD22B5763900056AE2 /* FMPromotionDetailVC.m in Sources */,
+				4FDAFC0B230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.m in Sources */,
 				4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */,
 				4FF44BDC22B690E600604202 /* FMPromotionDetailModel.m in Sources */,
 				4F35FDCC22EF478B00F79B45 /* FMLoginCell.m in Sources */,
