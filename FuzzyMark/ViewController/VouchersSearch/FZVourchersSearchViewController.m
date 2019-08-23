@@ -85,8 +85,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     RewardObject *reward = self.listVourcher[indexPath.row];
-    NSString *voucherID = [NSString stringWithFormat:@"%ld", (long)reward.rewardId];
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:voucherID];
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:reward.rewardId];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -116,7 +116,8 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:@"123"];
+    NSInteger idGroup = _listGroup[indexPath.section].idGroup;
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:idGroup];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

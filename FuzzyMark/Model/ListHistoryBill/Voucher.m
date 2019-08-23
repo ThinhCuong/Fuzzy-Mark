@@ -16,9 +16,9 @@
         self.idVoucher = [data integerForKey:@"id"];
         self.descriptionVoucher = [data stringForKey:@"description"];
         self.name = [data stringForKey:@"name"];
-        self.image = [data stringImageForKey:@"id"];
+        self.image = [data stringImageForKey:@"image"];
         self.logo = [data stringForKey:@"id"];
-        self.percent_discount = [data integerForKey:@"id"];
+        self.percent_discount = [data integerForKey:@"percent_discount"];
         self.page = [[Page alloc] initWithDataDictionary:[data dictionaryForKey:@"page"]];
         self.count_down = [data integerForKey:@"count_down"];
         self.time_bookmark = [data stringForKey:@"time_bookmark"];
