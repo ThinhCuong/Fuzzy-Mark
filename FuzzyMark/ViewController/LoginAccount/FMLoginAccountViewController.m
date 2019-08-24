@@ -91,7 +91,7 @@
                              @"device_type": @1
                              };
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/login" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient postDataWithPath:POST_USER_LOGIN andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] == 0) {

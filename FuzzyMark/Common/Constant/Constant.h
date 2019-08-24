@@ -56,6 +56,10 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define GET_VOUCHERS_INTERESTED                     @"vouchers/interested"
 #define GET_USER_BILL_DETAIL                        @"user/bill-detail"
 #define GET_USER_PROFILE                            @"user/profile"
+#define POST_USER_LOGIN                             @"user/login"
+#define POST_USER_REGISTER                          @"user/register"
+#define POST_USER_RESEND_OTP                        @"user/resend-otp"
+#define POST_USER_CHECK_OTP                         @"user/check-otp"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50

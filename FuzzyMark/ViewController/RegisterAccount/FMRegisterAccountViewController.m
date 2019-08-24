@@ -104,7 +104,7 @@
                              @"password": _tfPassword.text
                              };
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/register" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient postDataWithPath:POST_USER_REGISTER andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
