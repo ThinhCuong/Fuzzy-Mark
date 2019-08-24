@@ -55,6 +55,7 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define POST_USER_UPLOAD_AVATAR                     @"user/upload-avatar"
 #define GET_VOUCHERS_INTERESTED                     @"vouchers/interested"
 #define GET_USER_BILL_DETAIL                        @"user/bill-detail"
+#define GET_USER_PROFILE                            @"user/profile"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50
