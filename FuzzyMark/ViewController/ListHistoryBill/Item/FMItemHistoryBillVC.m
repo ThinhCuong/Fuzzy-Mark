@@ -14,7 +14,7 @@
 #import <CCBottomRefreshControl-umbrella.h>
 #import "FMDetailHistoryViewController.h"
 
-@interface FMItemHistoryBillVC () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
+@interface FMItemHistoryBillVC () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol, HistoryBillHeaderCellDelegate>
 
 @property (strong, nonatomic) FMItemHistoryBillModel *model;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -141,6 +141,8 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     HistoryBillHeaderCell *header = (HistoryBillHeaderCell *) [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"header"];
     [header binData:_listData[section]];
+    header.tag = section;
+    header.delegate = self;
      return header;
 }
 
@@ -172,10 +174,10 @@
     footer.contentView.backgroundColor = [UIColor whiteColor];
 }
 
-#pragma mark - UITableViewDelegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    FMDetailHistoryViewController *vc = [[FMDetailHistoryViewController alloc] init];
+#pragma mark - HistoryBillHeaderCellDelegate
+- (void)didSelectShowDetail:(HistoryBillHeaderCell *)cell {
+    HistoryBill *bill = _listData[cell.tag];
+    FMDetailHistoryViewController *vc = [[FMDetailHistoryViewController alloc] initWithID:bill.voucher.idVoucher];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

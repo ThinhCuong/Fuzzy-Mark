@@ -25,7 +25,18 @@
 
 @end
 
-@implementation FMDetailHistoryViewController
+@implementation FMDetailHistoryViewController {
+    NSInteger _idDetail;
+}
+
+- (instancetype)initWithID:(NSInteger) idDetail
+{
+    self = [super init];
+    if (self) {
+        _idDetail = idDetail;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
