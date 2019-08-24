@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
 		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
+		4F0FB59B231175060094F211 /* TransactionInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0FB59A231175060094F211 /* TransactionInfoObject.m */; };
 		4F10755D2306E4D70029FC91 /* HistoryCaptureObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */; };
 		4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBD722ECB88100466B51 /* UIImage+Support.m */; };
 		4F1BCBDF22ECED0B00466B51 /* NSDictionary+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */; };
@@ -259,6 +260,8 @@
 		4F00C820227A246C0073B583 /* FMUserInforModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUserInforModel.m; sourceTree = "<group>"; };
 		4F00C822227A2D580073B583 /* FMCellBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCellBlockObject.h; sourceTree = "<group>"; };
 		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
+		4F0FB599231175060094F211 /* TransactionInfoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionInfoObject.h; sourceTree = "<group>"; };
+		4F0FB59A231175060094F211 /* TransactionInfoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionInfoObject.m; sourceTree = "<group>"; };
 		4F10755B2306E4D70029FC91 /* HistoryCaptureObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCaptureObject.h; sourceTree = "<group>"; };
 		4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCaptureObject.m; sourceTree = "<group>"; };
 		4F1BCBD622ECB88100466B51 /* UIImage+Support.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Support.h"; sourceTree = "<group>"; };
@@ -670,6 +673,15 @@
 				4FDACD25227FCC7400A8571E /* FMBaseViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		4F0FB598231174D90094F211 /* TransactionInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4F0FB599231175060094F211 /* TransactionInfoObject.h */,
+				4F0FB59A231175060094F211 /* TransactionInfoObject.m */,
+			);
+			path = TransactionInfo;
 			sourceTree = "<group>";
 		};
 		4F35FDCF22EF8A1000F79B45 /* ChooseImage */ = {
@@ -1609,6 +1621,7 @@
 		5C9862832264CB1E00545DCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4F0FB598231174D90094F211 /* TransactionInfo */,
 				4FF5AF2422B7EC43009A613E /* PromotionDetail */,
 				5CFF9232229B19970053A2A5 /* Search */,
 				4F472D5022908C6A00F93D39 /* Notification */,
@@ -2105,6 +2118,7 @@
 				4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */,
 				4F50F39A2276E9A700DF7173 /* FMFirstNewsTableViewCell.m in Sources */,
 				4FF014A6227EEF6A0063093C /* Location.m in Sources */,
+				4F0FB59B231175060094F211 /* TransactionInfoObject.m in Sources */,
 				5C3910342263492A008BEA62 /* AFImageDownloader.m in Sources */,
 				5C3910332263492A008BEA62 /* AFAutoPurgingImageCache.m in Sources */,
 				5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */,
