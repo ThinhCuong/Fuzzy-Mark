@@ -103,5 +103,8 @@
     [self.delegate clickToHotline];
 }
 
+- (IBAction)clickRewardAction:(UIButton *)sender {
+    [self.delegate clickReward];
+}
 
 @end

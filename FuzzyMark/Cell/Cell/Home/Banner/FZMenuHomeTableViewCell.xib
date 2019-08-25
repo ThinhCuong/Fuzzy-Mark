@@ -100,7 +100,7 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1Y-tI-Qx8">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="85"/>
                                                 <connections>
-                                                    <action selector="didSelectChooseListSuport:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="65n-EH-ToM"/>
+                                                    <action selector="clickRewardAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="As1-iD-eV3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -137,7 +137,6 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="85"/>
                                                 <connections>
                                                     <action selector="clickToHoline:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="s1X-mx-rx8"/>
-                                                    <action selector="didSelectChooseListSuport:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="B0m-2i-quJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -172,9 +171,6 @@
                                             </label>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJd-Bh-qe6">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="85"/>
-                                                <connections>
-                                                    <action selector="didSelectChooseListSuport:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RFx-bu-uGT"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

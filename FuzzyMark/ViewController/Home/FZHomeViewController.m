@@ -16,6 +16,8 @@
 #import "FZVourchersSearchViewController.h"
 #import "FZHotlineViewController.h"
 #import "FZHomeObject.h"
+#import "FZRewardViewController.h"
+#import "AppDelegate.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
@@ -168,5 +170,12 @@
     FZHotlineViewController *hotlineViewController = [[FZHotlineViewController alloc] initWithNibName:@"FZHotlineViewController" bundle:nil];
     hotlineViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hotlineViewController animated:YES];
+}
+
+- (void)clickReward {
+    FZRewardViewController *rewardViewController = [[FZRewardViewController alloc] initWithNibName:@"FZRewardViewController" bundle:nil];
+    rewardViewController.hidesBottomBarWhenPushed = YES;
+//    rewardViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self.navigationController pushViewController:rewardViewController animated:YES];
 }
 @end
