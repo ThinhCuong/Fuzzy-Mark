@@ -22,7 +22,7 @@
             if(numberItem > 0) {
                 for (NSDictionary *dict in [success arrayForKey:@"data"]) {
                     HistoryCaptureObject *obj = [[HistoryCaptureObject alloc] initWithDataDictionary:dict];
-                    [self.listData addObject:obj];
+                    [self.listItem addObject:obj];
                 }
                 [self.delegate updateViewDataSuccess:self.listItem];
             } else {

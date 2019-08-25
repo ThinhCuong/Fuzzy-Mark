@@ -11,7 +11,6 @@
 
 @implementation FMListItemIntroduceVC {
     FzVourcherInfoObject *_jsonModel;
-    NSArray <Page *> *_listData;
 }
 
 - (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel
@@ -19,7 +18,6 @@
     self = [super init];
     if (self) {
         _jsonModel = jsonModel;
-        _listData = jsonModel.acceptedPage;
     }
     return self;
 }
@@ -35,18 +33,19 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _listData.count;
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FMPromotionIntroCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    [cell binData:_listData[indexPath.row]];
+    [cell binData:_jsonModel];
     return cell;
 }
 
 #pragma mark - UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 @end

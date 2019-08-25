@@ -24,7 +24,7 @@
 }
 
 - (void)getVouchersInfoWithIDVoucher:(NSInteger) idVoucher {
-    [_httpClient getDataWithPath:@"vouchers/info" andParam:@{@"id": @(idVoucher)} isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient getDataWithPath:GET_VOUCHERS_INFO andParam:@{@"id": @(idVoucher)} isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             if([success[@"errorCode"] integerValue] == 0) {
                 FzVourcherInfoObject *voucher = [[FzVourcherInfoObject alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];

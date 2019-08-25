@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMHistoryPointModel : FMBaseTableViewModel
-@property (strong, nonatomic) NSMutableArray *listData;
+
 @end
 
 NS_ASSUME_NONNULL_END

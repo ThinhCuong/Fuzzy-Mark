@@ -113,11 +113,15 @@
 }
 
 - (IBAction)didSelectRegister:(id)sender {
-    _type = LoginTypeSignUp;
-    FMInputEmailVC *vc = [[FMInputEmailVC alloc] initWithType:_type];
-    vc.delegate = self;
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:nil];
+    UserInformation *user = [[UserInformation alloc] init];
+    user.user_view = [[UseView alloc] init];
+    FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] initWithUser:user];
+    vc.registerSuccess = ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+        self.loginSuccess ? self.loginSuccess(YES) : 0;
+    };
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)didSelectForgotPassword:(id)sender {
@@ -130,55 +134,41 @@
 
 #pragma mark - FMInputEmailVCDelegate
 - (void)outputEmailSuccess:(NSString *)email {
-    if (_type == LoginTypeSignUp) {
-        [self showOTPSignUpWithEmail:email];
-    } else if (_type == LoginTypeForgotPassword) {
-        [self showOTPForgotPasswordWithEmail:email];
+    if (_type != LoginTypeForgotPassword) {
+        return;
     }
-}
-
-- (void)showOTPSignUpWithEmail:(NSString *) email {
-    NSAttributedString *emailString = [[NSAttributedString alloc] initWithString:email ?: @"" attributes:@{NSFontAttributeName : [UIFont setBoldFontMuliWithSize:14.0]}];
-    NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Vui lòng nhập mã OTP vừa được gửi đến email " attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
-    NSMutableAttributedString *titleAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:titleString];
-    [titleAttributedString appendAttributedString:emailString];
-    
-    FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:titleAttributedString EmailSendOTP:email ?: @"" withType:OTPTypeRegister];
-    vc.delegate = self;
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    [self showOTPForgotPasswordWithEmail:email];
 }
 
 - (void)showOTPForgotPasswordWithEmail:(NSString *) email {
-    NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Nhập dãy 4 chữ số vừa được gửi vào email cho bạn để xác nhận" attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
-    
-    FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:titleString EmailSendOTP:email ?: @"" withType:OTPTypeReset];
-    vc.delegate = self;
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
+    NSDictionary *param = @{@"email": email?:@""};
+    [CommonFunction showLoadingView];
+    [_httpClient postDataWithPath:POST_USER_FORGOT_PASSWORD andParam:param isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if([success codeForKey:@"error_code"] == 0) {
+                NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Nhập dãy 4 chữ số vừa được gửi vào email cho bạn để xác nhận" attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
+                
+                FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:titleString EmailSendOTP:email ?: @"" withType:OTPTypeReset];
+                vc.delegate = self;
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            } else {
+                [CommonFunction showToast:[success stringForKey:@"message"]];
+            }
+        } else {
+            [CommonFunction showToast:kMessageError];
+        }
+    } withFailBlock:^(id _Nullable fail) {
+        [CommonFunction hideLoadingView];
+        [CommonFunction showToast:kMessageError];
+    }];
 }
 
 #pragma mark - FMOTPViewControllerDelegate
 - (void)checkOTPSuccess:(BOOL)isSuccess withEmail:(NSString *)email {
-    // Register Account or Forgot Password
-    if (isSuccess) {
-        UserInformation *user = [[UserInformation alloc] init];
-        user.user_view = [[UseView alloc] init];
-        user.email = email ?: @"";
-        
-        if (_type == LoginTypeSignUp) {
-            FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] initWithUser:user];
-            vc.registerSuccess = ^{
-                [self dismissViewControllerAnimated:YES completion:nil];
-                [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
-                self.loginSuccess ? self.loginSuccess(YES) : 0;
-            };
-            [self.navigationController pushViewController:vc animated:YES];
-        } else if (_type == LoginTypeForgotPassword) {
-            FMForgotPasswordVC *vc = [[FMForgotPasswordVC alloc] init];
-            [self.navigationController pushViewController:vc animated:YES];
-        }
-    }
+    //Forgot Password
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 @end

@@ -14,13 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZHomeModel : NSObject
 
+@property (weak, nonatomic) FMBaseViewController *homeViewController;
+
 - (void)registerCellForTableView:(UITableView *)tableView;
 - (NSInteger )numberOfSectionsInTableView;
 - (NSInteger )numberOfRowsInSection:(NSInteger )section;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
-
-@property (strong, nonatomic) FZHomeViewController *homeViewController;
-
 - (void)bindData:(FZHomeObject *)homeData;
 
 @end

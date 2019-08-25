@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 - (instancetype)initWithKeyWord:(NSString *)keyWord;
+- (instancetype)initWithCategori:(NSInteger)categori;
+- (instancetype)initWithService:(NSInteger)service;
+
 @end
 
 NS_ASSUME_NONNULL_END

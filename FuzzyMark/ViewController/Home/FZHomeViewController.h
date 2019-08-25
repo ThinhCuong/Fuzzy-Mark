@@ -7,10 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FZHomeModel.h"
+#import "FZHomeHeaderView.h"
+#import "BaseCallApi.h"
+#import "FMPromotionDetailVC.h"
+#import "FZMenuHomeTableViewCell.h"
+#import "FZItemMenuHomeTableViewCell.h"
+#import "FZVourchersSearchViewController.h"
+#import "FZHotlineViewController.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FZHomeViewController : FMBaseViewController
+@interface FZHomeViewController : FMBaseViewController <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
 @end
 

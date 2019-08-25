@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPromotionIntroCell : UITableViewCell
 
-- (void)binData:(PageObject *) model;
+- (void)binData:(FzVourcherInfoObject *) model;
 
 @end
 

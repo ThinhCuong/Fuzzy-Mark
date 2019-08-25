@@ -25,11 +25,25 @@
     // Initialization code
 }
 
-- (void)binData:(PageObject *) model {
-    self.lblLocation.text = model.address;
-    self.lblPhone.text = model.hotline;
-    self.lblMoney.text = model.range_price;
-//     self.lblMoney.text = [NSString stringWithFormat:@"Mức giá: %@đ - %@đ", [self makeStringFormatMoneyString:model.min_price], [self makeStringFormatMoneyString:model.max_price]];
+- (void)binData:(FzVourcherInfoObject *) model {
+    PageObject *page;
+    if (model.acceptedPage.count > 0) {
+        page = model.acceptedPage.firstObject;
+    } else {
+        page = [[PageObject alloc] initWithDataDictionary:@{}];
+    }
+    self.lblLocation.text = page.address?:@"";
+    self.lblPhone.text = page.hotline?:@"";
+    self.lblMoney.text = page.range_price?:@"";
+    
+    NSAttributedString * attrStr =
+    [[NSAttributedString alloc] initWithData:[model.intro?:@"" dataUsingEncoding:NSUnicodeStringEncoding]
+                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType}
+                          documentAttributes:nil error:nil];
+    
+    self.lblDesc.attributedText = attrStr;
+
+    
 }
 
 - (NSString *)makeStringFormatMoneyString:(NSInteger) totalAmount {

@@ -11,7 +11,7 @@
 
 @implementation FMListItemLocationVC {
     FzVourcherInfoObject *_jsonModel;
-    NSArray <Page *> *_listData;
+    NSArray <PageObject *> *_listData;
 }
 
 - (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel
@@ -47,6 +47,7 @@
 #pragma mark - UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 @end
