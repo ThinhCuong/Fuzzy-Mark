@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMNewsCollectionViewCell : UICollectionViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *newsImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 NS_ASSUME_NONNULL_END

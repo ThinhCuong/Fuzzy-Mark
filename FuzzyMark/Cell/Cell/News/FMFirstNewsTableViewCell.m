@@ -14,7 +14,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [CommonFunction setCornerRadiusUIImageView:self.image cornerRadiusValue:10];
+   
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -22,7 +22,12 @@
     // Configure the view for the selected state
 }
 
-- (void)bindData:(FZNewsObject *)newsInfo {
+- (void)bindData:(FZNewsObject *)newsInfo isNewsDetail:(BOOL)isNewsDetail {
+    if (isNewsDetail) {
+        self.widthOfImage.constant = 0;
+    } else {
+        [CommonFunction setCornerRadiusUIImageView:self.image cornerRadiusValue:10];
+    }
     [self.image sd_setImageWithURL: [NSURL URLWithString:newsInfo.image]];
     self.descriptionLabel.text = newsInfo.title;
     self.timeLabel.text = newsInfo.time;

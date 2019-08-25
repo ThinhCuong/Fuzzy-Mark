@@ -48,15 +48,15 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="f8k-V7-5lN" firstAttribute="trailing" secondItem="j7P-Ws-ESv" secondAttribute="trailing" id="47t-7b-PIM"/>
-                    <constraint firstItem="f8k-V7-5lN" firstAttribute="leading" secondItem="j7P-Ws-ESv" secondAttribute="leading" id="5kK-XY-pNP"/>
                     <constraint firstAttribute="bottom" secondItem="qoF-xQ-gLC" secondAttribute="bottom" constant="10.5" id="D46-TT-96g"/>
                     <constraint firstItem="j7P-Ws-ESv" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-30" id="Dcm-Rn-cq7"/>
                     <constraint firstItem="qoF-xQ-gLC" firstAttribute="leading" secondItem="f8k-V7-5lN" secondAttribute="leading" id="EFK-Dg-P0O"/>
                     <constraint firstItem="j7P-Ws-ESv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Eno-Hq-fOM"/>
                     <constraint firstItem="f8k-V7-5lN" firstAttribute="top" secondItem="j7P-Ws-ESv" secondAttribute="bottom" constant="3" id="H59-Ie-6BN"/>
+                    <constraint firstItem="f8k-V7-5lN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="HzT-R5-6TK"/>
                     <constraint firstItem="qoF-xQ-gLC" firstAttribute="trailing" secondItem="f8k-V7-5lN" secondAttribute="trailing" id="OmV-bv-ei9"/>
                     <constraint firstItem="qoF-xQ-gLC" firstAttribute="top" secondItem="f8k-V7-5lN" secondAttribute="bottom" id="QG5-e3-uMS"/>
+                    <constraint firstAttribute="trailing" secondItem="f8k-V7-5lN" secondAttribute="trailing" constant="15" id="f6W-ps-1fI"/>
                     <constraint firstItem="j7P-Ws-ESv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pec-Og-RqW"/>
                 </constraints>
             </tableViewCellContentView>
@@ -65,6 +65,7 @@
                 <outlet property="descriptionLabel" destination="f8k-V7-5lN" id="HzL-yU-G71"/>
                 <outlet property="image" destination="j7P-Ws-ESv" id="v50-CW-jDt"/>
                 <outlet property="timeLabel" destination="qoF-xQ-gLC" id="emI-pP-dfp"/>
+                <outlet property="widthOfImage" destination="Dcm-Rn-cq7" id="cp1-AH-Hlg"/>
             </connections>
             <point key="canvasLocation" x="121.0144927536232" y="91.40625"/>
         </tableViewCell>

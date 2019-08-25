@@ -234,6 +234,8 @@
 		5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */; };
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
 		5CFE50212312D88500FC7B66 /* FZNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE50202312D88500FC7B66 /* FZNewsObject.m */; };
+		5CFE50252312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE50232312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m */; };
+		5CFE50262312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE50242312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib */; };
 		5CFF9237229B1A560053A2A5 /* ConfigAppObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */; };
 		5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */; };
 		5CFF923D229B1FE10053A2A5 /* FZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */; };
@@ -628,6 +630,9 @@
 		5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		5CFE501F2312D88500FC7B66 /* FZNewsObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZNewsObject.h; sourceTree = "<group>"; };
 		5CFE50202312D88500FC7B66 /* FZNewsObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZNewsObject.m; sourceTree = "<group>"; };
+		5CFE50222312F0CC00FC7B66 /* FZNewsInfoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZNewsInfoDetailViewController.h; sourceTree = "<group>"; };
+		5CFE50232312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZNewsInfoDetailViewController.m; sourceTree = "<group>"; };
+		5CFE50242312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZNewsInfoDetailViewController.xib; sourceTree = "<group>"; };
 		5CFF9235229B1A560053A2A5 /* ConfigAppObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigAppObject.h; sourceTree = "<group>"; };
 		5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigAppObject.m; sourceTree = "<group>"; };
 		5CFF9239229B1FE10053A2A5 /* FZSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZSearchViewController.h; sourceTree = "<group>"; };
@@ -801,6 +806,9 @@
 				4F50F3762276E9A700DF7173 /* FMNewsViewController.h */,
 				4F50F3742276E9A700DF7173 /* FMNewsViewController.m */,
 				4F50F3752276E9A700DF7173 /* FMNewsViewController.xib */,
+				5CFE50222312F0CC00FC7B66 /* FZNewsInfoDetailViewController.h */,
+				5CFE50232312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m */,
+				5CFE50242312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -1986,6 +1994,7 @@
 				5C563DD722B16F28006AB186 /* FZVourchersSearchViewController.xib in Resources */,
 				4F472D4C229083CB00F93D39 /* FMChangePhoneNumberViewController.xib in Resources */,
 				4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */,
+				5CFE50262312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
 				4FBD3D9D228DBFBA00E76E2A /* FMLocationFavoriteViewController.xib in Resources */,
 				4F472D34229076C900F93D39 /* FMOTPViewController.xib in Resources */,
@@ -2152,6 +2161,7 @@
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
 				4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */,
+				5CFE50252312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m in Sources */,
 				4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */,
 				4F25D6E522BAE64800C27190 /* FMListItemIntroduceVC.m in Sources */,
 				4FF9C3D52291A2E300D3AD81 /* FMRegisterPromotionModel.m in Sources */,

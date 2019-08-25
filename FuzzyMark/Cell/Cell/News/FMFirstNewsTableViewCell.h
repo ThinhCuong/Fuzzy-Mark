@@ -16,8 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *widthOfImage;
 
-- (void)bindData:(FZNewsObject *)newsInfo;
+- (void)bindData:(FZNewsObject *)newsInfo isNewsDetail:(BOOL)isNewsDetail;
     
 @end
 

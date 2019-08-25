@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [CommonFunction setCornerRadiusUIImageView:self.newsImage cornerRadiusValue:5];
 }
 
 @end

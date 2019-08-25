@@ -10,11 +10,12 @@
 #import "FZNewsObject.h"
 #import "FMFirstNewsTableViewCell.h"
 #import "FMSecondsNewsTableViewCell.h"
+#import "FZNewsInfoDetailViewController.h"
 
 @interface FMNewsViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property(strong, nonatomic) NSArray *listNews;
-@property(strong, nonatomic) NSArray *listNewsRemovedFirstItem;
+@property(strong, nonatomic) NSArray <FZNewsObject *> *listNews;
+@property(strong, nonatomic) NSArray <FZNewsObject *> *listNewsRemovedFirstItem;
 @end
 
 @implementation FMNewsViewController
@@ -85,13 +86,25 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FMFirstNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMFirstNewsTableViewCell"];
-        [cell bindData:self.listNews.firstObject];
+        [cell bindData:self.listNews.firstObject isNewsDetail:NO];
          return cell;
     } else {
         FMSecondsNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMSecondsNewsTableViewCell"];
         [cell bindData:self.listNewsRemovedFirstItem[indexPath.row]];
          return cell;
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    FZNewsInfoDetailViewController *newsInfoViewController = [[FZNewsInfoDetailViewController alloc] initWithNibName:@"FZNewsInfoDetailViewController" bundle:nil];
+    newsInfoViewController.hidesBottomBarWhenPushed = YES;
+    if (indexPath.section == 0) {
+        [newsInfoViewController callNewsFullNews:[NSString stringWithFormat:@"%ld", self.listNews.firstObject.newsId]];
+    } else {
+        [newsInfoViewController callNewsFullNews:[NSString stringWithFormat:@"%ld", self.listNewsRemovedFirstItem[indexPath.row].newsId]];
+    }
+    
+    [self.navigationController pushViewController:newsInfoViewController animated:YES];
 }
 
 @end
