@@ -194,6 +194,10 @@
 		5C563DD722B16F28006AB186 /* FZVourchersSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C563DD522B16F28006AB186 /* FZVourchersSearchViewController.xib */; };
 		5C5BA896229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5BA894229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib */; };
 		5C5BA89B229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5BA899229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib */; };
+		5C5D08D42310549A0017942B /* FZRewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D08D22310549A0017942B /* FZRewardViewController.m */; };
+		5C5D08D52310549A0017942B /* FZRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5D08D32310549A0017942B /* FZRewardViewController.xib */; };
+		5C5D08DA231061960017942B /* FZRewardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D08D8231061960017942B /* FZRewardTableViewCell.m */; };
+		5C5D08DB231061960017942B /* FZRewardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5D08D9231061960017942B /* FZRewardTableViewCell.xib */; };
 		5C5E915F229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E915D229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.m */; };
 		5C5E9160229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5E915E229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib */; };
 		5C5E9164229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5E9163229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m */; };
@@ -560,6 +564,12 @@
 		5C5BA894229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHeaderSearchTableViewCell.xib; sourceTree = "<group>"; };
 		5C5BA897229E24400090AE7B /* FZHeaderItemCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZHeaderItemCollectionViewCell.h; sourceTree = "<group>"; };
 		5C5BA899229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZHeaderItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		5C5D08D12310549A0017942B /* FZRewardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZRewardViewController.h; sourceTree = "<group>"; };
+		5C5D08D22310549A0017942B /* FZRewardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZRewardViewController.m; sourceTree = "<group>"; };
+		5C5D08D32310549A0017942B /* FZRewardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZRewardViewController.xib; sourceTree = "<group>"; };
+		5C5D08D7231061960017942B /* FZRewardTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZRewardTableViewCell.h; sourceTree = "<group>"; };
+		5C5D08D8231061960017942B /* FZRewardTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZRewardTableViewCell.m; sourceTree = "<group>"; };
+		5C5D08D9231061960017942B /* FZRewardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZRewardTableViewCell.xib; sourceTree = "<group>"; };
 		5C5E915C229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZTitleHeaderCollectionReusableView.h; sourceTree = "<group>"; };
 		5C5E915D229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZTitleHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 		5C5E915E229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZTitleHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
@@ -1487,6 +1497,26 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		5C5D08D02310540E0017942B /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				5C5D08D12310549A0017942B /* FZRewardViewController.h */,
+				5C5D08D22310549A0017942B /* FZRewardViewController.m */,
+				5C5D08D32310549A0017942B /* FZRewardViewController.xib */,
+			);
+			path = Rewards;
+			sourceTree = "<group>";
+		};
+		5C5D08D6231061780017942B /* Reward */ = {
+			isa = PBXGroup;
+			children = (
+				5C5D08D7231061960017942B /* FZRewardTableViewCell.h */,
+				5C5D08D8231061960017942B /* FZRewardTableViewCell.m */,
+				5C5D08D9231061960017942B /* FZRewardTableViewCell.xib */,
+			);
+			path = Reward;
+			sourceTree = "<group>";
+		};
 		5C6BFACC225D668600A26400 = {
 			isa = PBXGroup;
 			children = (
@@ -1588,6 +1618,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5C5D08D02310540E0017942B /* Rewards */,
 				4FFB57072308FD7F00B67057 /* Popup */,
 				4FF7280322EDA6EA000C8AB8 /* ForgotPassword */,
 				4FF727FD22ED8F71000C8AB8 /* LoginAccount */,
@@ -1686,6 +1717,7 @@
 		5C9862A42264E35900545DCC /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				5C5D08D6231061780017942B /* Reward */,
 				5C76FBCD22BFE1630006D59D /* Hotline */,
 				5C9BDEC822B30AC60019BA12 /* VourcherSearch */,
 				4FEEE64B2292F2EA00E337F2 /* RegisterPromotion */,
@@ -1910,6 +1942,7 @@
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
 				4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */,
 				4F25D6E622BAE64800C27190 /* FMListItemIntroduceVC.xib in Resources */,
+				5C5D08DB231061960017942B /* FZRewardTableViewCell.xib in Resources */,
 				5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */,
 				4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */,
 				4FF2BD86227BE83B0008BA69 /* RegisterPromotionCell.xib in Resources */,
@@ -1918,6 +1951,7 @@
 				4FBD3DA5228DDE2C00E76E2A /* LocationFavorite.xcassets in Resources */,
 				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
 				4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */,
+				5C5D08D52310549A0017942B /* FZRewardViewController.xib in Resources */,
 				5C5BA89B229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C5BA896229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib in Resources */,
@@ -2163,6 +2197,7 @@
 				4FBF8ACC228E6136001C7B9C /* FMChangeUserInforViewController.m in Sources */,
 				5CC572C3229D8E1200E613AE /* FZItemSearchCollectionViewCell.m in Sources */,
 				4F472D4F22908A7500F93D39 /* FMNotifiModel.m in Sources */,
+				5C5D08DA231061960017942B /* FZRewardTableViewCell.m in Sources */,
 				4FDC204F22A0D9FB003B755C /* CameraShowImageCell.m in Sources */,
 				4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */,
 				4FB0B28322B9AEF500487D66 /* FMPromotionGiftCell.m in Sources */,
@@ -2217,6 +2252,7 @@
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				4FB0B27E22B9AA9E00487D66 /* FMPromotionIntroCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
+				5C5D08D42310549A0017942B /* FZRewardViewController.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
 				5C76FBD122BFE1870006D59D /* MVHotlineCollectionViewCell.m in Sources */,
 				4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */,

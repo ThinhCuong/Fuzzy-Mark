@@ -25,7 +25,7 @@
             [listSubServices addObject:obj];
         }
         for (NSDictionary *dict in [data arrayForKey:@"promotions"]) {
-            Group *obj = [[Group alloc] initWithDataDictionary:dict];
+            Promotion *obj = [[Promotion alloc] initWithDataDictionary:dict];
             [listPromotions addObject:obj];
         }
         self.groups = listGroup.copy;

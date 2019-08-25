@@ -7,8 +7,19 @@
 //
 
 #import "FZHomeViewController.h"
+#import "FZHomeModel.h"
+#import "FZHomeHeaderView.h"
+#import "BaseCallApi.h"
+#import "FMPromotionDetailVC.h"
+#import "FZMenuHomeTableViewCell.h"
+#import "FZItemMenuHomeTableViewCell.h"
+#import "FZVourchersSearchViewController.h"
+#import "FZHotlineViewController.h"
+#import "FZHomeObject.h"
+#import "FZRewardViewController.h"
+#import "AppDelegate.h"
 
-@interface FZHomeViewController ()
+@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
@@ -170,4 +181,10 @@
     
 }
 
+- (void)clickReward {
+    FZRewardViewController *rewardViewController = [[FZRewardViewController alloc] initWithNibName:@"FZRewardViewController" bundle:nil];
+    rewardViewController.hidesBottomBarWhenPushed = YES;
+//    rewardViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [self.navigationController pushViewController:rewardViewController animated:YES];
+}
 @end
