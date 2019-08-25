@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="R9Q-jq-EpJ">
-                    <rect key="frame" x="0.0" y="20" width="375" height="519"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="514"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="98P-Zm-sqy">
@@ -51,14 +51,14 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="xn3-54-jI9" firstAttribute="top" secondItem="R9Q-jq-EpJ" secondAttribute="top" constant="10" id="9cO-Tf-OqK"/>
                 <constraint firstItem="R9Q-jq-EpJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Kxm-At-AWR"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="98P-Zm-sqy" secondAttribute="bottom" id="MOO-nb-t5g"/>
                 <constraint firstItem="98P-Zm-sqy" firstAttribute="trailing" secondItem="R9Q-jq-EpJ" secondAttribute="trailing" id="XBl-7E-JMm"/>
                 <constraint firstItem="98P-Zm-sqy" firstAttribute="leading" secondItem="R9Q-jq-EpJ" secondAttribute="leading" id="aaV-Ap-qg4"/>
-                <constraint firstItem="98P-Zm-sqy" firstAttribute="top" secondItem="R9Q-jq-EpJ" secondAttribute="bottom" id="bgy-ez-8ff"/>
+                <constraint firstItem="98P-Zm-sqy" firstAttribute="top" secondItem="R9Q-jq-EpJ" secondAttribute="bottom" constant="5" id="bgy-ez-8ff"/>
                 <constraint firstItem="xn3-54-jI9" firstAttribute="leading" secondItem="R9Q-jq-EpJ" secondAttribute="leading" id="kqe-VL-8vI"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="R9Q-jq-EpJ" secondAttribute="trailing" id="rF4-sE-zjO"/>
                 <constraint firstItem="R9Q-jq-EpJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="tB2-Bn-FAi"/>

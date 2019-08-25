@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FZNewsObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UIImageView *newsImage;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+- (void)bindData:(FZNewsObject *)newsInfo;
 
 @end
 

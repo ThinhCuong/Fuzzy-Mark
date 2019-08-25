@@ -10,12 +10,13 @@
 #import "FZNewsObject.h"
 #import "FMFirstNewsTableViewCell.h"
 #import "FMNewsCollectionViewCell.h"
+#import "FZNewsContentTableViewCell.h"
 
 @interface FZNewsInfoDetailViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property(strong, nonatomic) FZNewsObject *newsInfoDetail;
 @property(strong, nonatomic) NSArray *listNewsRelate;
-
+@property(strong, nonatomic) NSString *contentHtml;
 @end
 
 @implementation FZNewsInfoDetailViewController
@@ -24,6 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.tableview registerNib:[UINib nibWithNibName:@"FMFirstNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMFirstNewsTableViewCell"];
+    [self.tableview registerNib:[UINib nibWithNibName:@"FZNewsContentTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZNewsContentTableViewCell"];
+    
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
     self.hideNav = YES;
@@ -57,6 +60,7 @@
                     [temp addObject:newsInfo];
                 }
                 self.listNewsRelate = temp.copy;
+                self.contentHtml = [data stringForKey:@"content"];
             } else {
                 [CommonFunction showToast:message];
             }
@@ -70,15 +74,14 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (section == 0) {
         return 1;
     } else {
-        return 0;
-//        return self.listNewsRemovedFirstItem.count;
+        return 1;
     }
 }
 
@@ -88,10 +91,9 @@
         [cell bindData:self.newsInfoDetail isNewsDetail:YES];
         return cell;
     } else {
-//        FMSecondsNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMSecondsNewsTableViewCell"];
-//        [cell bindData:self.listNewsRemovedFirstItem[indexPath.row]];
-//        return cell;
-        return nil;
+        FZNewsContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZNewsContentTableViewCell"];
+        [cell bindData:self.contentHtml];
+        return cell;
     }
 }
 
@@ -101,7 +103,7 @@
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FMNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FMNewsCollectionViewCell" forIndexPath:indexPath];
-//    [cell bindData:_listVoucherHorizontal[indexPath.row]];
+    [cell bindData:self.listNewsRelate[indexPath.row]];
     return cell;
 }
 

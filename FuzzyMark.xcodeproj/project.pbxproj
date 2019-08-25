@@ -233,6 +233,8 @@
 		5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */; };
 		5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */; };
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
+		5CFC075223134B4D009F4E6D /* FZNewsContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFC075023134B4D009F4E6D /* FZNewsContentTableViewCell.m */; };
+		5CFC075323134B4D009F4E6D /* FZNewsContentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFC075123134B4D009F4E6D /* FZNewsContentTableViewCell.xib */; };
 		5CFE50212312D88500FC7B66 /* FZNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE50202312D88500FC7B66 /* FZNewsObject.m */; };
 		5CFE50252312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE50232312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m */; };
 		5CFE50262312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFE50242312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib */; };
@@ -628,6 +630,9 @@
 		5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CFC074F23134B4D009F4E6D /* FZNewsContentTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZNewsContentTableViewCell.h; sourceTree = "<group>"; };
+		5CFC075023134B4D009F4E6D /* FZNewsContentTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZNewsContentTableViewCell.m; sourceTree = "<group>"; };
+		5CFC075123134B4D009F4E6D /* FZNewsContentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZNewsContentTableViewCell.xib; sourceTree = "<group>"; };
 		5CFE501F2312D88500FC7B66 /* FZNewsObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZNewsObject.h; sourceTree = "<group>"; };
 		5CFE50202312D88500FC7B66 /* FZNewsObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZNewsObject.m; sourceTree = "<group>"; };
 		5CFE50222312F0CC00FC7B66 /* FZNewsInfoDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZNewsInfoDetailViewController.h; sourceTree = "<group>"; };
@@ -862,6 +867,9 @@
 				4F50F37E2276E9A700DF7173 /* FMSecondsNewsTableViewCell.h */,
 				4F50F37F2276E9A700DF7173 /* FMNewsCollectionViewCell.m */,
 				4F50F3802276E9A700DF7173 /* FMNewsCollectionViewCell.xib */,
+				5CFC074F23134B4D009F4E6D /* FZNewsContentTableViewCell.h */,
+				5CFC075023134B4D009F4E6D /* FZNewsContentTableViewCell.m */,
+				5CFC075123134B4D009F4E6D /* FZNewsContentTableViewCell.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -1989,6 +1997,7 @@
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
 				4FBD3D95228DB7D800E76E2A /* HistoryPointHeaderTableViewCell.xib in Resources */,
 				4F25D6E122BAE15300C27190 /* FMListItemLocationVC.xib in Resources */,
+				5CFC075323134B4D009F4E6D /* FZNewsContentTableViewCell.xib in Resources */,
 				4FB0B27A22B9A63700487D66 /* FMPromotionLocationCell.xib in Resources */,
 				4F472D572290B42000F93D39 /* Notifi.xcassets in Resources */,
 				5C563DD722B16F28006AB186 /* FZVourchersSearchViewController.xib in Resources */,
@@ -2232,6 +2241,7 @@
 				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				5C563DD622B16F28006AB186 /* FZVourchersSearchViewController.m in Sources */,
+				5CFC075223134B4D009F4E6D /* FZNewsContentTableViewCell.m in Sources */,
 				4FF699A122F05F9B0035BD72 /* FMLocationFavoriteModel.m in Sources */,
 				4F50F3A32276E9A700DF7173 /* FMMiddleButton.m in Sources */,
 				4FDACCE6227EFBCE00A8571E /* BTParseJSON.m in Sources */,
