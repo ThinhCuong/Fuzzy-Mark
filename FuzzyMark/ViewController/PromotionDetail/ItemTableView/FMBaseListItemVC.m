@@ -8,7 +8,7 @@
 
 #import "FMBaseListItemVC.h"
 
-@interface FMBaseListItemVC ()
+@interface FMBaseListItemVC () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -19,10 +19,26 @@
     self.changeHeightContentTableView(self.contentTableView.contentSize.height);
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 0;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 0;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [UITableViewCell new];
+}
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row){
         self.changeHeightContentTableView(self.contentTableView.contentSize.height);
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Click cell");
 }
 
 @end

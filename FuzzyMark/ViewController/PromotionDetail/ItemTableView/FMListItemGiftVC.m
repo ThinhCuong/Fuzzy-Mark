@@ -8,6 +8,7 @@
 
 #import "FMListItemGiftVC.h"
 #import "FMPromotionGiftCell.h"
+#import "FMPromotionDetailVC.h"
 
 @implementation FMListItemGiftVC {
     FzVourcherInfoObject *_jsonModel;
@@ -47,6 +48,9 @@
 #pragma mark - UITableViewDataSource
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    RewardObject *obj = _listData[indexPath.row];
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:obj.rewardId];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
