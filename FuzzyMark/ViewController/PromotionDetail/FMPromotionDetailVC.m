@@ -142,16 +142,16 @@
         return;
     }
     
-    FMListItemLocationVC *firstVC = [[FMListItemLocationVC alloc] initWithVoucherDataJson:_voucherInfo];
-    firstVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
+    FMListItemLocationVC *thirdVC = [[FMListItemLocationVC alloc] initWithVoucherDataJson:_voucherInfo];
+    thirdVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
     };
     FMListItemIntroduceVC *secondVC = [[FMListItemIntroduceVC alloc] initWithVoucherDataJson:_voucherInfo];
     secondVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
     };
-    FMListItemGiftVC *thirdVC = [[FMListItemGiftVC alloc] initWithVoucherDataJson:_voucherInfo];
-    thirdVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
+    FMListItemGiftVC *firstVC = [[FMListItemGiftVC alloc] initWithVoucherDataJson:_voucherInfo];
+    firstVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
     };
     _childTableVCs = [NSArray arrayWithObjects: firstVC, secondVC, thirdVC, nil];
@@ -204,7 +204,7 @@
 }
 
 - (void)setupSegmentControl {
-    _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Địa điểm áp dụng", @"Giới thiệu", @"Thêm quà"]];
+    _segmentedControl = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Giới thiệu", @"Thêm quà", @"Địa điểm áp dụng"]];
     _segmentedControl.segmentWidthStyle = HMSegmentedControlSegmentWidthStyleFixed;
     _segmentedControl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
     _segmentedControl.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:1.0], NSFontAttributeName : [UIFont fontWithName:@"Muli-SemiBold" size:14]};
