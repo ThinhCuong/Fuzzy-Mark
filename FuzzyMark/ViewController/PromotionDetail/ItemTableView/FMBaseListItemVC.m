@@ -19,4 +19,10 @@
     self.changeHeightContentTableView(self.contentTableView.contentSize.height);
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([indexPath row] == ((NSIndexPath*)[[tableView indexPathsForVisibleRows] lastObject]).row){
+        self.changeHeightContentTableView(self.contentTableView.contentSize.height);
+    }
+}
+
 @end

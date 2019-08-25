@@ -142,18 +142,19 @@
         return;
     }
     
+    FMListItemGiftVC *secondVC = [[FMListItemGiftVC alloc] initWithVoucherDataJson:_voucherInfo];
+    secondVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
+        [self updateContraintHeightPage:heightContentTableView];
+    };
     FMListItemLocationVC *thirdVC = [[FMListItemLocationVC alloc] initWithVoucherDataJson:_voucherInfo];
     thirdVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
     };
-    FMListItemIntroduceVC *secondVC = [[FMListItemIntroduceVC alloc] initWithVoucherDataJson:_voucherInfo];
-    secondVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
-        [self updateContraintHeightPage:heightContentTableView];
-    };
-    FMListItemGiftVC *firstVC = [[FMListItemGiftVC alloc] initWithVoucherDataJson:_voucherInfo];
+    FMListItemIntroduceVC *firstVC = [[FMListItemIntroduceVC alloc] initWithVoucherDataJson:_voucherInfo];
     firstVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
     };
+    
     _childTableVCs = [NSArray arrayWithObjects: firstVC, secondVC, thirdVC, nil];
     [_pageViewController setViewControllers:@[_childTableVCs[_currentIndex]] direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
     [_segmentedControl setSelectedSegmentIndex:_currentIndex animated:YES];
