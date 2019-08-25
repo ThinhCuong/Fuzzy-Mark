@@ -25,7 +25,7 @@
 }
 
 - (void)bindData:(RewardObject *)groupInfo {
-    [self.image sd_setImageWithURL:[NSURL URLWithString:groupInfo.image] placeholderImage:[UIImage imageNamed:@"logo_placeholder"]];
+    [self.image sd_setImageWithURL:[NSURL URLWithString:groupInfo.page.image] placeholderImage:[UIImage imageNamed:@"logo_placeholder"]];
     self.nameLabel.text = groupInfo.name;
     self.groupInfoDescriptionLabel.text = groupInfo.rewardDescription;
     self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percentDiscount, @"%"];

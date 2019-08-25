@@ -62,6 +62,7 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define POST_USER_CHECK_OTP                         @"user/check-otp"
 #define PUT_USER_CHANGE_PASSWORD                    @"user/change-password"
 #define PUT_USER_UPDATE_PROFILE                     @"user/update-profile"
+#define GET_HOME_DATA                               @"get-home-data"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50

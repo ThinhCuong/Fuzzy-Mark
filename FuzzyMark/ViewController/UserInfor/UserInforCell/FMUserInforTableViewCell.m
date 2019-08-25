@@ -27,7 +27,10 @@
 }
 
 - (void)binDataLoginWithUserInfor:(UserInformation *) userInfo {
-    [self.imgUser sd_setImageWithURL:[NSURL URLWithString:userInfo.user_view.avatar] placeholderImage:[UIImage imageNamed:@"ic_user"]];
+    [[SDImageCache sharedImageCache] clearMemory];
+    [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
+       [self.imgUser sd_setImageWithURL:[NSURL URLWithString:userInfo.user_view.avatar] placeholderImage:[UIImage imageNamed:@"ic_user"]];
+    }];
     
     self.lblUserName.text = userInfo.user_view.name ?: @"";
     

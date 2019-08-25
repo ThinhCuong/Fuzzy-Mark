@@ -7,17 +7,8 @@
 //
 
 #import "FZHomeViewController.h"
-#import "FZHomeModel.h"
-#import "FZHomeHeaderView.h"
-#import "BaseCallApi.h"
-#import "FMPromotionDetailVC.h"
-#import "FZMenuHomeTableViewCell.h"
-#import "FZItemMenuHomeTableViewCell.h"
-#import "FZVourchersSearchViewController.h"
-#import "FZHotlineViewController.h"
-#import "FZHomeObject.h"
 
-@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
+@interface FZHomeViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
@@ -33,7 +24,7 @@
     self.hideNav = YES;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self testApi];
+    [self getDataHome];
     self.dataModel = [[FZHomeModel alloc] init];
     self.dataModel.homeViewController = self;
     [self.dataModel registerCellForTableView:self.tableView];
@@ -89,21 +80,25 @@
     return;
 }
 
-- (void)testApi {
+- (void)getDataHome {
     NSDictionary *params = @{};
-    
-    [SVProgressHUD setContainerView:self.view];
-    [SVProgressHUD show];
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"get-home-data" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
-        [SVProgressHUD dismiss];
-        [SVProgressHUD setBackgroundLayerColor:UIColor.redColor];
-        if (responseData) {
-            FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
-            [self.dataModel bindData:data];
-            [self.tableView reloadData];
+    [CommonFunction showLoadingView];
+    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_HOME_DATA andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        [CommonFunction hideLoadingView];
+        if ([responseData isKindOfClass:NSDictionary.class]) {
+            if ([responseData codeForKey:@"error_code"] == 0) {
+                FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
+                [self.dataModel bindData:data];
+                [self.tableView reloadData];
+            } else {
+                [CommonFunction showToast:[responseData stringForKey:@"message"]];
+            }
+        } else {
+            [CommonFunction showToast:kMessageError];
         }
     } withFailBlock:^(id responseError) {
-        [SVProgressHUD dismiss];
+        [CommonFunction hideLoadingView];
+        [CommonFunction showToast:kMessageError];
     }];
 }
 
@@ -169,4 +164,10 @@
     hotlineViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:hotlineViewController animated:YES];
 }
+
+#pragma mark - FZHomeHeaderDelegate
+- (void)showPickerChooseLocation {
+    
+}
+
 @end
