@@ -19,6 +19,7 @@
 #import "FZRewardViewController.h"
 #import "AppDelegate.h"
 #import "FMNewsViewController.h"
+#import "FZSearchViewController.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
@@ -120,12 +121,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)didSelectSuportList:(SuportList ) indexChoose {
+- (void)didSelectSuportList:(SuportList )indexChoose {
     switch (indexChoose) {
         case 0: {
-            FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithKeyWord:@""];
-            rewardInfoVC.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:rewardInfoVC animated:YES];
+            FZSearchViewController *searchViewController = [[FZSearchViewController alloc] initWithNibName:@"FZSearchViewController" bundle:nil];
+            [self.navigationController pushViewController:searchViewController animated:YES];
             break;
         }
         case 1:
