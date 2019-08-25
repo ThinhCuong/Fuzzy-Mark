@@ -122,18 +122,18 @@
                              @"type": _typeString ?: @""
                              };
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/check-otp" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient postDataWithPath:POST_USER_CHECK_OTP andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
+                [self.view endEditing:YES];
+                if (self->_type == OTPTypeRegister) {
+                    UserInformation *userInfo = [[UserInformation alloc] initWithDict:[success dictionaryForKey:@"data"]];
+                    [self saveDataLoginSuccess:userInfo];
+                } else {
+                    [CommonFunction showToast:[success stringForKey:@"message"]];
+                }
                 if ([self.delegate respondsToSelector:@selector(checkOTPSuccess:withEmail:)]) {
-                    [self.view endEditing:YES];
-                    if (self->_type == OTPTypeRegister) {
-                        UserInformation *userInfo = [[UserInformation alloc] initWithDict:[success dictionaryForKey:@"data"]];
-                        [self saveDataLoginSuccess:userInfo];
-                    } else {
-                        [CommonFunction showToast:[success stringForKey:@"message"]];
-                    }
                     [self.delegate checkOTPSuccess:YES withEmail:self->_email];
                 }
             } else {
@@ -153,7 +153,7 @@
                              @"email": _email ?: @""
                              };
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/resend-otp" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient postDataWithPath:POST_USER_RESEND_OTP andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if([success codeForKey:@"error_code"] == 0) {
