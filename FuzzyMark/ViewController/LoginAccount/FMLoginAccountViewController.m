@@ -113,11 +113,15 @@
 }
 
 - (IBAction)didSelectRegister:(id)sender {
-    _type = LoginTypeSignUp;
-    FMInputEmailVC *vc = [[FMInputEmailVC alloc] initWithType:_type];
-    vc.delegate = self;
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:nil];
+    UserInformation *user = [[UserInformation alloc] init];
+    user.user_view = [[UseView alloc] init];
+    FMRegisterAccountViewController *vc = [[FMRegisterAccountViewController alloc] initWithUser:user];
+    vc.registerSuccess = ^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+        self.loginSuccess ? self.loginSuccess(YES) : 0;
+    };
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)didSelectForgotPassword:(id)sender {

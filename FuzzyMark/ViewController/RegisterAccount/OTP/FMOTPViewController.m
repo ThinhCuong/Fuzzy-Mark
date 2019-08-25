@@ -18,13 +18,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnSuccess;
 @property (weak, nonatomic) IBOutlet UILabel *lbContent;
 @property (weak, nonatomic) IBOutlet UILabel *lbTitle;
+@property (assign, nonatomic) OTPType type;
 
 @end
 
 @implementation FMOTPViewController {
     NSAttributedString *_attributedString;
     NSString *_email;
-    NSString *_type;
+    NSString *_typeString;
     NSTimer *_timer;
     NSInteger _currSeconds;
     NSString *_title;
@@ -35,19 +36,20 @@
 - (instancetype)initWithTitleAttributedString:(NSAttributedString *) attributedString EmailSendOTP:(NSString *) email withType:(OTPType) type {
     self = [super init];
     if (self) {
+        _type = type;
         _attributedString = attributedString;
         _email = email;
         switch (type) {
             case OTPTypeRegister:
-                _type = @"REGISTER";
+                _typeString = @"REGISTER";
                 _title = @"ĐĂNG KÍ";
                 break;
             case OTPTypeReset:
-                _type = @"RESET";
+                _typeString = @"RESET";
                 _title = @"QUÊN MẬT KHẨU";
                 break;
             default:
-                _type = @"";
+                _typeString = @"";
                 _title = @"";
                 break;
         }
@@ -65,7 +67,6 @@
     _lbContent.attributedText = _attributedString.length > 0 ? _attributedString : 0;
     _httpClient = [BaseCallApi defaultInitWithBaseURL];
     _lbTitle.text = _title;
-    [self didSelectBtnResendOTP:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -118,7 +119,7 @@
     NSMutableString *otpString = [NSMutableString stringWithFormat:@"%@%@%@%@", _tfFirst.text, _tfSecond.text, _tfThird.text, _tfFourth.text];
     NSDictionary *params = @{@"otp": otpString ?: @"",
                              @"email": _email ?: @"",
-                             @"type": _type ?: @""
+                             @"type": _typeString ?: @""
                              };
     [CommonFunction showLoadingView];
     [_httpClient postDataWithPath:@"user/check-otp" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
@@ -127,6 +128,12 @@
             if([success codeForKey:@"error_code"] == 0) {
                 if ([self.delegate respondsToSelector:@selector(checkOTPSuccess:withEmail:)]) {
                     [self.view endEditing:YES];
+                    if (self->_type == OTPTypeRegister) {
+                        UserInformation *userInfo = [[UserInformation alloc] initWithDict:[success dictionaryForKey:@"data"]];
+                        [self saveDataLoginSuccess:userInfo];
+                    } else {
+                        [CommonFunction showToast:[success stringForKey:@"message"]];
+                    }
                     [self.delegate checkOTPSuccess:YES withEmail:self->_email];
                 }
             } else {
@@ -142,7 +149,7 @@
 }
 
 - (IBAction)didSelectBtnResendOTP:(id)sender {
-    NSDictionary *params = @{@"type": _type ?:@"",
+    NSDictionary *params = @{@"type": _typeString ?:@"",
                              @"email": _email ?: @""
                              };
     [CommonFunction showLoadingView];
@@ -208,6 +215,12 @@
         lineTextField.lineColor = klineColorError;
     }
     return YES;
+}
+
+- (void)saveDataLoginSuccess:(UserInformation *) userInfo {
+    [UserInfo setUserInforWithUserModel:userInfo];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+    NSLog(@"token:JWT %@",userInfo.token);
 }
 
 @end

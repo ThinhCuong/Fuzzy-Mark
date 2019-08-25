@@ -10,7 +10,7 @@
 #import "FuzzyMark-Swift.h"
 #import "FMOTPViewController.h"
 
-@interface FMRegisterAccountViewController () <UITextFieldDelegate>
+@interface FMRegisterAccountViewController () <UITextFieldDelegate, FMOTPViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet TJTextField *tfEmail;
 @property (weak, nonatomic) IBOutlet TJTextField *tfFullName;
 @property (weak, nonatomic) IBOutlet TJTextField *tfPassword;
@@ -59,9 +59,10 @@
 }
 
 - (BOOL)validatePasswordWithString:(NSString *) password {
-    NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
-    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
-    return [passwordTest evaluateWithObject:password];
+//    NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
+//    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
+//    return [passwordTest evaluateWithObject:password];
+    return password.length > 0;
 }
 
 - (BOOL)validateRepasswordWithString:(NSString *) repassword  {
@@ -108,7 +109,7 @@
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
-                [self saveDataRegisterSuccess];
+                [self gotoInputOTPView];
             } else {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }
@@ -136,24 +137,21 @@
      _btnSuccess.enabled = [self enableButtonSuccess];
 }
 
-- (void)saveDataRegisterSuccess {
-    [_httpClient getDataWithPath:GET_USER_PROFILE andParam:@{} isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
-        [CommonFunction hideLoadingView];
-        if ([success isKindOfClass:NSDictionary.class]) {
-            if ([success codeForKey:@"error_code"] == 0) {
-                NSDictionary *dict = [success dictionaryForKey:@"data"];
-                UserInformation *user = [[UserInformation alloc] initWithDict:dict];
-                [UserInfo setUserInforWithUserModel:user];
-                self.registerSuccess ? self.registerSuccess() : 0;
-            } else {
-                [CommonFunction showToast:[success stringForKey:@"message"]];
-            }
-        } else {
-            [CommonFunction showToast:kMessageError];
-        }
-    } withFailBlock:^(id _Nullable fail) {
-        [CommonFunction showToast:kMessageError];
-    }];
+- (void)gotoInputOTPView {
+    NSAttributedString *emailString = [[NSAttributedString alloc] initWithString:_tfEmail.text ?: @"" attributes:@{NSFontAttributeName : [UIFont setBoldFontMuliWithSize:14.0]}];
+    NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Vui lòng nhập mã OTP vừa được gửi đến email " attributes:@{NSFontAttributeName : [UIFont setFontMuliWithSize:14.0]}];
+    NSMutableAttributedString *titleAttributedString = [[NSMutableAttributedString alloc] initWithAttributedString:titleString];
+    [titleAttributedString appendAttributedString:emailString];
+    
+    FMOTPViewController *vc = [[FMOTPViewController alloc] initWithTitleAttributedString:titleAttributedString EmailSendOTP:_tfEmail.text ?: @"" withType:OTPTypeRegister];
+    vc.delegate = self;
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma - mark : FMOTPViewControllerDelegate
+- (void)checkOTPSuccess:(BOOL) isSuccess withEmail:(NSString *) email {
+    self.registerSuccess?self.registerSuccess():0;
 }
 
 @end
