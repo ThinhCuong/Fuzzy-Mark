@@ -86,7 +86,6 @@
 
 #pragma mark - private
 - (void)setUI {
-    [SVProgressHUD setContainerView:self.view];
     self.hideNav = YES;
     self.btnSaleTop.layer.cornerRadius = self.btnSaleTop.frame.size.height / 2;
     self.btnSaleBottom.layer.cornerRadius = self.btnSaleBottom.frame.size.height / 2;
@@ -114,11 +113,11 @@
 }
 
 - (void)startAnimationLoading {
-    [SVProgressHUD show];
+    [CommonFunction showLoadingView];
 }
 
 - (void)stopAnimationLoading {
-    [SVProgressHUD dismiss];
+    [CommonFunction hideLoadingView];
 }
 
 - (void)binData {
@@ -173,19 +172,20 @@
     self.lblTime.text = [self getTimeFormatted:_voucherInfo.voucher.countDown];
 }
 
-- (NSString *)getTimeFormatted:(NSInteger) totalSeconds {
-    if(totalSeconds == 0) {
+- (NSString *)getTimeFormatted:(NSInteger) totalMiniSeconds {
+    if(totalMiniSeconds == 0) {
         if([_timer isValid]) {
             [_timer invalidate];
         }
         _timer = nil;
     }
+    NSInteger miniSeconds = totalMiniSeconds/1000;
     _voucherInfo.voucher.countDown--;
     
-    NSInteger day = totalSeconds / 86400;
-    NSInteger hours = (totalSeconds % 86400) /3600;
-    NSInteger minutes = (totalSeconds % 3600) / 60;
-    NSInteger seconds = (totalSeconds % 3600) % 60;
+    NSInteger day = miniSeconds / 86400;
+    NSInteger hours = (miniSeconds % 86400) /36000;
+    NSInteger minutes = (miniSeconds % 3600) / 60;
+    NSInteger seconds = (miniSeconds % 3600) % 60;
     
     if (day > 0) {
         return [NSString stringWithFormat:@"Còn %02ld ngày : %02ld giờ : %02ld phút : %02ld giây", (long)day, (long)hours, (long)minutes, (long)seconds];
