@@ -20,7 +20,9 @@
 }
 
 - (IBAction)didSlectDetail:(id)sender {
-    
+    if ([self.delegate respondsToSelector:@selector(didSelectShowDetail:)]) {
+        [self.delegate didSelectShowDetail:self];
+    }
 }
 
 

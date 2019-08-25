@@ -104,7 +104,7 @@
                              @"password": _tfPassword.text
                              };
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/register" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient postDataWithPath:POST_USER_REGISTER andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
@@ -137,8 +137,7 @@
 }
 
 - (void)saveDataRegisterSuccess {
-    NSDictionary *params = @{};
-    [_httpClient getDataWithPath:@"/user/profile" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient getDataWithPath:GET_USER_PROFILE andParam:@{} isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
@@ -152,7 +151,7 @@
         } else {
             [CommonFunction showToast:kMessageError];
         }
-    } withFailBlock:^(id fail) {
+    } withFailBlock:^(id _Nullable fail) {
         [CommonFunction showToast:kMessageError];
     }];
 }

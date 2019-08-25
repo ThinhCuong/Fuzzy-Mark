@@ -91,7 +91,7 @@
             NSData *data = UIImageJPEGRepresentation(img, 0.5);
             [formData appendPartWithFileData:data
                                         name:@"bills"
-                                    fileName:@"avatar.jpg"
+                                    fileName:[NSString stringWithFormat:@"image%d.jpg",i]
                                     mimeType:@"image/jpeg"];
         }
     } isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id responseObject) {

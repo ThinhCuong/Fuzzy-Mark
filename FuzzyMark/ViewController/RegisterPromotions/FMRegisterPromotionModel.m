@@ -11,7 +11,7 @@
 @implementation FMRegisterPromotionModel
 
 - (void)getDataTableView:(NSMutableDictionary *) params {
-    [self.httpClient getDataWithPath:GET_VOUCHERS_INTERESTED andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [self.httpClient getDataWithPath:GET_VOUCHERS_INTERESTED andParam:params isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] != 0) {
                 [CommonFunction showToast:[success stringForKey:@"message"]];

@@ -12,8 +12,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMDetailHistoryViewController : FMBaseViewController
+- (instancetype)initWithID:(NSInteger) idDetail;
 
-@property (strong, nonatomic) HistoryBill *model;
 
 @end
 

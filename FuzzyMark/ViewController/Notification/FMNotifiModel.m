@@ -37,7 +37,7 @@
 }
 
 - (void)putUserNotifiRead:(NSDictionary *) prams {
-    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ andParam:prams isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ andParam:prams isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             if([success[@"error_code"] integerValue] == 0) {
                 for (Notifi *item in self.listItem) {
@@ -55,7 +55,7 @@
 }
 
 - (void)putUserNotifiReadAll {
-    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ_ALL andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [self.httpClient putDataWithPath:PUT_USER_NOTIFICATIONS_READ_ALL andParam:@{} isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id success) {
         if(success) {
             if([success[@"error_code"] integerValue] == 0) {
                 for (Notifi *item in self.listItem) {

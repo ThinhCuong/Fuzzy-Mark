@@ -34,9 +34,10 @@
 }
 
 - (BOOL)validateNewPasswordWithString:(NSString *) password {
-    NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
-    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
-    return [passwordTest evaluateWithObject:password];
+//    NSString *passwordRegex = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{10,}";
+//    NSPredicate *passwordTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", passwordRegex];
+//    return [passwordTest evaluateWithObject:password];
+    return password.length > 0;
 }
 
 - (BOOL)validateRepasswordWithString:(NSString *) repassword  {
@@ -98,13 +99,14 @@
 }
 
 - (IBAction)saveNewpassword:(id)sender {
-    NSDictionary *params = @{@"new_password": _tfNewpassword};
+    NSDictionary *params = @{@"new_password": _tfNewpassword.text};
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/change-password" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [_httpClient putDataWithPath:PUT_USER_CHANGE_PASSWORD andParam:params isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {
                 [self.navigationController popToRootViewControllerAnimated:YES];
+                [CommonFunction showToast:[success stringForKey:@"message"]];
             } else {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
             }

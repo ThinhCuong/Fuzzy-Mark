@@ -90,38 +90,35 @@
 }
 
 - (void)uploadAvatar:(UIImage *) avatar withSuccessBlock:(void (^) (BOOL)) successBlock {
-    NSDictionary *params = @{@"img": [self convertImageToBase64String:avatar]};
+    BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
     [CommonFunction showLoadingView];
-    [_httpClient postDataWithPath:@"user/upload-avatar" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [httpClient postDataWithPath:POST_USER_UPLOAD_AVATAR queriesParam:@{} bodyParam:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> _Nonnull formData) {
+        NSData *data = UIImageJPEGRepresentation(avatar, 0.5);
+        [formData appendPartWithFileData:data
+                                    name:@"avatar"
+                                fileName:@"image.jpg"
+                                mimeType:@"image/jpeg"];
+    } isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id responseObject) {
         [CommonFunction hideLoadingView];
-        if([success isKindOfClass:NSDictionary.class]) {
-            if ([success codeForKey:@"error_code"] == 0) {
-                NSDictionary *data = [success dictionaryForKey:@"data"];
+        if([responseObject isKindOfClass:NSDictionary.class]) {
+            if ([responseObject codeForKey:@"error_code"] == 0) {
+                NSDictionary *data = [responseObject dictionaryForKey:@"data"];
                 [UserInfo setUserAvatar:[data stringForKey:@"url"]];
                 successBlock(YES);
             } else {
-                [CommonFunction showToast:[success stringForKey:@"message"]];
+                [CommonFunction showToast:[responseObject stringForKey:@"message"]];
                 successBlock(NO);
             }
         } else {
-            [CommonFunction showToast:[success stringForKey:kMessageError]];
+            [CommonFunction showToast:[responseObject stringForKey:kMessageError]];
             successBlock(NO);
         }
-    } withFailBlock:^(id fail) {
+    } withFailBlock:^(id failObject) {
         [CommonFunction hideLoadingView];
         [CommonFunction showToast:kMessageError];
         successBlock(NO);
     }];
-}
-
-- (NSString *)convertImageToBase64String:(UIImage *)image {
-    if(image != nil) {
-        NSData *imageData = UIImageJPEGRepresentation(image,0.5f);
-        NSString *base64String = [imageData base64EncodedStringWithOptions:0];
-        base64String = [NSString stringWithFormat:@"data:image/jpg;base64,%@",base64String];
-        return base64String?:@"";
-    }
-    return @"";
+    
 }
 
 @end

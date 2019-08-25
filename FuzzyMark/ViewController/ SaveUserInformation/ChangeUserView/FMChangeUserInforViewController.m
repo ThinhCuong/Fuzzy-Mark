@@ -53,14 +53,43 @@
     [self setDatePicker];
 }
 
+- (NSString *)converDate:(NSString *) dateString {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd/MM/yyyy"];
+    NSDate *date = [dateFormatter dateFromString:dateString];
+    [dateFormatter setDateFormat:@"yyyy-mm-dd"];
+    return [dateFormatter stringFromDate:date];
+}
+
 #pragma mark - IBAction
 - (IBAction)didSelectSave:(id)sender {
-    NSLog(@"Save");
+    BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
+    NSDictionary *param = @{@"full_name": _txtName.text ?:@"",
+                            @"gender": _selectCheckBox.identifier ?:@"",
+                            @"birthday": [self converDate:_txtBirthday.text] ?:@""
+                            };
+    [CommonFunction showLoadingView];
+    [httpClient putDataWithPath:PUT_USER_UPDATE_PROFILE andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if ([success codeForKey:@"error_code"] == 0) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                [CommonFunction showToast:[success stringForKey:@"message"]];
+            } else {
+                [CommonFunction showToast:[success stringForKey:@"message"]];
+            }
+        } else {
+            [CommonFunction showToast:kMessageError];
+        }
+    } withFailBlock:^(id _Nullable fail) {
+        [CommonFunction hideLoadingView];
+        [CommonFunction showToast:kMessageError];
+    }];
 }
 
 - (void)setCheckBox {
     TNCircularCheckBoxData *maleData = [[TNCircularCheckBoxData alloc] init];
-    maleData.identifier = @"male";
+    maleData.identifier = @"1";
     maleData.labelText = @"Nam";
     maleData.checked = YES;
     maleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];
@@ -70,7 +99,7 @@
     _selectCheckBox = maleData;
     
     TNCircularCheckBoxData *femaleData = [[TNCircularCheckBoxData alloc] init];
-    femaleData.identifier = @"female";
+    femaleData.identifier = @"2";
     femaleData.labelText = @"Nữ";
     femaleData.checked = NO;
     femaleData.borderColor = [UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0];

@@ -252,6 +252,7 @@
         if(selectedImg) {
             [blockSelf.model uploadAvatar:selectedImg withSuccessBlock:^(BOOL isSuccess) {
                 if (isSuccess) {
+                    self->_userInfo.user_view.avatar = [UserInfo getUserAvatar];
                     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:0];
                     [self reloadTableViewWithIndexSet:indexSet];
                 }

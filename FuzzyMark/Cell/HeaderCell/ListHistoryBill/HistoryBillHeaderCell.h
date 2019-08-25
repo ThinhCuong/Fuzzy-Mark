@@ -11,8 +11,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HistoryBillHeaderCell : UITableViewHeaderFooterView
+@class HistoryBillHeaderCell;
+@protocol HistoryBillHeaderCellDelegate <NSObject>
 
+- (void)didSelectShowDetail:(HistoryBillHeaderCell* ) cell;
+
+@end
+
+@interface HistoryBillHeaderCell : UITableViewHeaderFooterView
+@property (assign, nonatomic) id<HistoryBillHeaderCellDelegate> delegate;
 - (void)binData:(HistoryBill *) model;
 
 @end

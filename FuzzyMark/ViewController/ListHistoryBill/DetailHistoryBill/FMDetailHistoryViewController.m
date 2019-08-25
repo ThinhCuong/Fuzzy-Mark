@@ -7,6 +7,7 @@
 //
 
 #import "FMDetailHistoryViewController.h"
+#import "TransactionInfoObject.h"
 
 @interface FMDetailHistoryViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lblName;
@@ -25,39 +26,67 @@
 
 @end
 
-@implementation FMDetailHistoryViewController
+@implementation FMDetailHistoryViewController {
+    NSInteger _idDetail;
+    BaseCallApi *httpClient;
+}
+
+- (instancetype)initWithID:(NSInteger) idDetail
+{
+    self = [super init];
+    if (self) {
+        _idDetail = idDetail;
+        httpClient = [BaseCallApi defaultInitWithBaseURL];
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navTitle = @"Thông tin giao dịch";
-    [self setupUI];
-    [self binData];
+    [self getUserBillDetail];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 }
 
-- (void)setupUI {
-    
+- (void)binData:(TransactionInfoObject *) model {
+    self.lblName.text = model.transaction_view.voucher.name ?: @"";
+    self.lblFullName.text = model.transaction_view.voucher.page.name ?:@"";
+    self.lblLocation.text = model.transaction_view.voucher.page.address ?:@"";
+    if(model.transaction_view.status == 0) {
+        self.lblStatus.text = @"Từ chối";
+    } else if(model.transaction_view.status == 1) {
+        self.lblStatus.text = @"Chấp nhận";
+    }
+    self.lblContent.text = model.transaction_view.voucher.descriptionVoucher ?:@"";
+    self.lblCode.text = model.transaction_view.transaction_id;
+    self.lblTimeGive.text = model.time_take_voucher;
+    self.lblRequest.text = model.time_send_request;
+    self.lblAccep.text = model.time_check;
+    [self.imgBill sd_setImageWithURL:[NSURL URLWithString:model.transaction_view.voucher.image]];
 }
 
-- (void)binData {
-//    self.lblName.text = self.model.voucher.name ?: @"";
-//    self.lblFullName.text = self.model.voucher.page.name ?:@"";
-//    self.lblLocation.text = self.model.voucher.page.address ?:@"";
-//    if(self.model.status == 0) {
-//        self.lblStatus.text = @"Từ chối";
-//    } else if(self.model.status == 1) {
-//        self.lblStatus.text = @"Từ chối";
-//    } else {
-//        self.lblStatus.text = @"Từ chối";
-//    }
-//    self.lblContent.text = self.model.voucher.descriptionVoucher ?:@"";
-//    self.lblCode.text = self.model.transaction_id;
-//    self.lblTimeGive.text = self.model.
+- (void)getUserBillDetail {
+    [CommonFunction showLoadingView];
+    NSDictionary *param = @{@"id": @(_idDetail)};
+    [httpClient getDataWithPath:GET_USER_BILL_DETAIL andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if ([success codeForKey:@"error_code"] == 0) {
+                TransactionInfoObject *obj = [[TransactionInfoObject alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];
+                [self binData:obj];
+            } else {
+                [CommonFunction showToast:[success stringForKey:@"message"]];
+            }
+        } else {
+            [CommonFunction showToast:kMessageError];
+        }
+    } withFailBlock:^(id _Nullable fail) {
+        [CommonFunction showToast:kMessageError];
+    }];
 }
-
 
 
 @end

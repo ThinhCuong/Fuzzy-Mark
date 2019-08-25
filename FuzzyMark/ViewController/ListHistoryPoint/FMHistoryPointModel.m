@@ -12,7 +12,7 @@
 @implementation FMHistoryPointModel
 
 - (void)getDataTableView:(NSMutableDictionary *) params {
-    [self.httpClient getDataWithPath:GET_HISTORIES_REWARD andParam:params isShowfailureAlert:YES withSuccessBlock:^(id success) {
+    [self.httpClient getDataWithPath:GET_HISTORIES_REWARD andParam:params isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
         if([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] != 0) {
                 [CommonFunction showToast:[success stringForKey:@"message"]];
@@ -31,8 +31,7 @@
         } else {
             [self.delegate updateViewDataError];
         }
-        
-    } withFailBlock:^(id fail) {
+    } withFailBlock:^(id _Nullable fail) {
         [self.delegate updateViewDataError];
     }];
 }
