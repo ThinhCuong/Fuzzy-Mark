@@ -20,44 +20,53 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="283" id="KGk-i7-Jjw" customClass="FMFirstNewsTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="401" height="283"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="225" id="KGk-i7-Jjw" customClass="FMFirstNewsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="225"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="401" height="282.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="401" height="224.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-Ws-ESv">
-                        <rect key="frame" x="16" y="0.0" width="369" height="225"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j7P-Ws-ESv">
+                        <rect key="frame" x="15" y="10" width="371" height="165"/>
+                        <color key="backgroundColor" red="1" green="0.43921568630000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="j7P-Ws-ESv" secondAttribute="height" multiplier="41:25" id="SO2-7j-CK3"/>
+                            <constraint firstAttribute="height" constant="165" id="JkN-sp-KrV"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sắc màu bao phủ trong lễ hội Holi ở Ấn Độ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8k-V7-5lN">
-                        <rect key="frame" x="16" y="233" width="290.5" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sắc màu bao phủ trong lễ hội Holi ở Ấn Độ" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f8k-V7-5lN">
+                        <rect key="frame" x="15" y="178" width="371" height="21"/>
                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58 phút trước" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoF-xQ-gLC">
-                        <rect key="frame" x="16" y="254" width="78" height="15"/>
+                        <rect key="frame" x="15" y="199" width="371" height="15"/>
                         <fontDescription key="fontDescription" name="Muli-Light" family="Muli" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="f8k-V7-5lN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="KDv-S3-O2b"/>
-                    <constraint firstItem="qoF-xQ-gLC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UkA-wF-lmU"/>
-                    <constraint firstItem="qoF-xQ-gLC" firstAttribute="top" secondItem="f8k-V7-5lN" secondAttribute="bottom" id="YTJ-oN-kU9"/>
-                    <constraint firstAttribute="trailing" secondItem="j7P-Ws-ESv" secondAttribute="trailing" constant="16" id="bHj-nJ-F0v"/>
-                    <constraint firstItem="j7P-Ws-ESv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dgU-Gj-Kl3"/>
-                    <constraint firstItem="f8k-V7-5lN" firstAttribute="top" secondItem="j7P-Ws-ESv" secondAttribute="bottom" constant="8" id="k2M-tO-hZK"/>
-                    <constraint firstItem="j7P-Ws-ESv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rQE-kv-dwf"/>
+                    <constraint firstItem="f8k-V7-5lN" firstAttribute="trailing" secondItem="j7P-Ws-ESv" secondAttribute="trailing" id="47t-7b-PIM"/>
+                    <constraint firstItem="f8k-V7-5lN" firstAttribute="leading" secondItem="j7P-Ws-ESv" secondAttribute="leading" id="5kK-XY-pNP"/>
+                    <constraint firstAttribute="bottom" secondItem="qoF-xQ-gLC" secondAttribute="bottom" constant="10.5" id="D46-TT-96g"/>
+                    <constraint firstItem="j7P-Ws-ESv" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-30" id="Dcm-Rn-cq7"/>
+                    <constraint firstItem="qoF-xQ-gLC" firstAttribute="leading" secondItem="f8k-V7-5lN" secondAttribute="leading" id="EFK-Dg-P0O"/>
+                    <constraint firstItem="j7P-Ws-ESv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Eno-Hq-fOM"/>
+                    <constraint firstItem="f8k-V7-5lN" firstAttribute="top" secondItem="j7P-Ws-ESv" secondAttribute="bottom" constant="3" id="H59-Ie-6BN"/>
+                    <constraint firstItem="qoF-xQ-gLC" firstAttribute="trailing" secondItem="f8k-V7-5lN" secondAttribute="trailing" id="OmV-bv-ei9"/>
+                    <constraint firstItem="qoF-xQ-gLC" firstAttribute="top" secondItem="f8k-V7-5lN" secondAttribute="bottom" id="QG5-e3-uMS"/>
+                    <constraint firstItem="j7P-Ws-ESv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="pec-Og-RqW"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="129.71014492753625" y="132.92410714285714"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="f8k-V7-5lN" id="HzL-yU-G71"/>
+                <outlet property="image" destination="j7P-Ws-ESv" id="v50-CW-jDt"/>
+                <outlet property="timeLabel" destination="qoF-xQ-gLC" id="emI-pP-dfp"/>
+            </connections>
+            <point key="canvasLocation" x="121.0144927536232" y="91.40625"/>
         </tableViewCell>
     </objects>
 </document>

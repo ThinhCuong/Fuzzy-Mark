@@ -232,6 +232,7 @@
 		5CD3A76D22887D7C0020A0DE /* FZBannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */; };
 		5CF6184D2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */; };
 		5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */; };
+		5CFE50212312D88500FC7B66 /* FZNewsObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFE50202312D88500FC7B66 /* FZNewsObject.m */; };
 		5CFF9237229B1A560053A2A5 /* ConfigAppObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */; };
 		5CFF923C229B1FE10053A2A5 /* FZSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CFF923A229B1FE10053A2A5 /* FZSearchViewController.m */; };
 		5CFF923D229B1FE10053A2A5 /* FZSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CFF923B229B1FE10053A2A5 /* FZSearchViewController.xib */; };
@@ -622,6 +623,8 @@
 		5CF6184A2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZMenuHomeCollectionViewCell.h; sourceTree = "<group>"; };
 		5CF6184B2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZMenuHomeCollectionViewCell.m; sourceTree = "<group>"; };
 		5CF6184C2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FZMenuHomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		5CFE501F2312D88500FC7B66 /* FZNewsObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZNewsObject.h; sourceTree = "<group>"; };
+		5CFE50202312D88500FC7B66 /* FZNewsObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FZNewsObject.m; sourceTree = "<group>"; };
 		5CFF9235229B1A560053A2A5 /* ConfigAppObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigAppObject.h; sourceTree = "<group>"; };
 		5CFF9236229B1A560053A2A5 /* ConfigAppObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigAppObject.m; sourceTree = "<group>"; };
 		5CFF9239229B1FE10053A2A5 /* FZSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FZSearchViewController.h; sourceTree = "<group>"; };
@@ -1652,6 +1655,7 @@
 		5C9862832264CB1E00545DCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5CFE501E2312D85B00FC7B66 /* News */,
 				4F0FB598231174D90094F211 /* TransactionInfo */,
 				4FF5AF2422B7EC43009A613E /* PromotionDetail */,
 				5CFF9232229B19970053A2A5 /* Search */,
@@ -1765,6 +1769,15 @@
 				5CD3A76B22887D7C0020A0DE /* FZBannerCollectionViewCell.xib */,
 			);
 			path = Banner;
+			sourceTree = "<group>";
+		};
+		5CFE501E2312D85B00FC7B66 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				5CFE501F2312D88500FC7B66 /* FZNewsObject.h */,
+				5CFE50202312D88500FC7B66 /* FZNewsObject.m */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		5CFF9232229B19970053A2A5 /* Search */ = {
@@ -2239,6 +2252,7 @@
 				4F50F3A02276E9A700DF7173 /* FMNotifiViewController.m in Sources */,
 				5C87BDD4227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m in Sources */,
 				4FBD3D90228D9C8800E76E2A /* FMHistoryPointModel.m in Sources */,
+				5CFE50212312D88500FC7B66 /* FZNewsObject.m in Sources */,
 				4FBD3D8C228D9A5100E76E2A /* HistoryPointTableViewCell.m in Sources */,
 				5C3910362263492A008BEA62 /* AFHTTPSessionManager.m in Sources */,
 				4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */,

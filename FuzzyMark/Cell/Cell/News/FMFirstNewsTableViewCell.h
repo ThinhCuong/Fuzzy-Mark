@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FZNewsObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMFirstNewsTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *image;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
+- (void)bindData:(FZNewsObject *)newsInfo;
+    
 @end
 
 NS_ASSUME_NONNULL_END

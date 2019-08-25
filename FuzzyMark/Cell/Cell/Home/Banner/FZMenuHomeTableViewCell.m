@@ -107,4 +107,8 @@
     [self.delegate clickReward];
 }
 
+- (IBAction)clickNewsAction:(UIButton *)sender {
+    [self.delegate clickNews];
+}
+
 @end

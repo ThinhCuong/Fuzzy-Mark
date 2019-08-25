@@ -171,6 +171,9 @@
                                             </label>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJd-Bh-qe6">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="85"/>
+                                                <connections>
+                                                    <action selector="clickNewsAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="78Z-K9-rcq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -18,6 +18,7 @@
 #import "FZHomeObject.h"
 #import "FZRewardViewController.h"
 #import "AppDelegate.h"
+#import "FMNewsViewController.h"
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
@@ -178,4 +179,11 @@
 //    rewardViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
     [self.navigationController pushViewController:rewardViewController animated:YES];
 }
+
+- (void)clickNews {
+    FMNewsViewController *newsViewController = [[FMNewsViewController alloc] initWithNibName:@"FMNewsViewController" bundle:nil];
+    newsViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:newsViewController animated:YES];
+}
+
 @end
