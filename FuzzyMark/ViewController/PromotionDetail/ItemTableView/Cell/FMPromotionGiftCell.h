@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Voucher.h"
+#import "FzVourcherInfoObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPromotionGiftCell : UITableViewCell
 
-- (void)binData:(Voucher *) model;
+- (void)binData:(RewardObject *) model;
 
 @end
 

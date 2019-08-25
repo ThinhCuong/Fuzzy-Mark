@@ -20,7 +20,7 @@
 - (void)bindData:(RewardObject *)groupInfo {
     [self.groupImage sd_setImageWithURL:[NSURL URLWithString:groupInfo.image]];
     self.nameLabel.text = groupInfo.name;
-    self.groupInfoDescriptionLabel.text = groupInfo.rewardDescription;
+    self.groupInfoDescriptionLabel.text = groupInfo.page.address;
     self.percenDiscountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %@", (long)groupInfo.percentDiscount, @"%"];
 }
 

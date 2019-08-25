@@ -24,10 +24,10 @@
     // Initialization code
 }
 
-- (void)binData:(Voucher *) model {
-    [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:model.page.image]];
+- (void)binData:(RewardObject *) model {
+    [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:model.image]];
     self.lblAddress.text = model.page.address;
-    self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", (long)model.percent_discount];
+    self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", model.page.discount];
 }
 
 @end

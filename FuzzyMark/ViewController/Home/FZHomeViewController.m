@@ -154,7 +154,7 @@
         default:
             break;
     }
-    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithKeyWord:category];
+    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithKeyWord:@""];
     rewardInfoVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:rewardInfoVC animated:YES];
 }
