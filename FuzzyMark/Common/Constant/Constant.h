@@ -66,6 +66,10 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define POST_USER_FORGOT_PASSWORD                   @"user/forgot-password"
 #define GET_VOUCHERS_SEARCH                         @"vouchers/search"
 #define GET_VOUCHERS_INFO                           @"vouchers/info"
+#define GET_VOUCHERS_INTERESTED                     @"vouchers/interested"
+#define POST_VOUCHERS_ADD_INTERESTED                @"vouchers/add-interested"
+#define GET_NEWS_GET_NEWS                           @"news/get-news"
+#define GET_NEWS_FULL_NEWS                          @"news/full-news"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50

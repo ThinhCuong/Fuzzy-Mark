@@ -38,11 +38,9 @@
                              @"offset": @"0"
                              };
     
-    [SVProgressHUD setContainerView:self.view];
-    [SVProgressHUD show];
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"news/get-news" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id dataResponse) {
-        [SVProgressHUD dismiss];
-        [SVProgressHUD setBackgroundLayerColor:UIColor.redColor];
+    [CommonFunction hideLoadingView];
+    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_NEWS_GET_NEWS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id dataResponse) {
+        [CommonFunction showLoadingView];
         if (dataResponse) {
             NSInteger errorCode = [dataResponse codeForKey:@"error_code"];
             NSString *message = [dataResponse stringForKey:@"message"];
@@ -66,7 +64,7 @@
             [self.tableView reloadData];
         }
     } withFailBlock:^(id responseError) {
-        [SVProgressHUD dismiss];
+        [CommonFunction hideLoadingView];
         [self.tableView reloadData];
     }];
 }
