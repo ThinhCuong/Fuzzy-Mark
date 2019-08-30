@@ -95,6 +95,32 @@ NSInteger const kNetworkingTimeout = 30;
 }
 
 - (void)postDataWithPath:(NSString * _Nullable)path
+                andParam:(NSDictionary* _Nullable)param
+             isSendToken:(BOOL)isSendToken
+      isShowfailureAlert:(BOOL)isShowfailureAlert
+        withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+           withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
+    
+    // init param with common param
+    NSDictionary *newParams = [self createCommonParam:param];
+    
+    // send token
+    if (isSendToken) {
+        [self.requestSerializer setValue:[UserInfo getUserToken] forHTTPHeaderField:@"Authorization"];
+    } else {
+        [self.requestSerializer clearAuthorizationHeader];
+    }
+    
+    NSURLSessionDataTask *task = [self POST:path parameters:newParams progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        successBlock ? successBlock(responseObject) : 0;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        failureBlock ? failureBlock(error) : nil;
+    }];
+    
+    [self.listTask addObject:task];
+}
+
+- (void)postDataWithPath:(NSString * _Nullable)path
             queriesParam:(NSDictionary * _Nullable)queriesParam
                bodyParam:(NSDictionary * _Nullable)bodyParam
 constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))block

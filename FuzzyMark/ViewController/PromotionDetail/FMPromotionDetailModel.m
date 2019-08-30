@@ -45,7 +45,7 @@
 
 - (void)addVoucherInterested:(NSInteger) idVoucher {
     NSDictionary *param = @{@"id": @(idVoucher)};
-    [_httpClient postDataWithPath:POST_VOUCHERS_ADD_INTERESTED queriesParam:@{} bodyParam:param constructingBodyWithBlock:nil isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
+    [_httpClient postDataWithPath:POST_VOUCHERS_ADD_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
 }
 
 @end
