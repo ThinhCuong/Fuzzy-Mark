@@ -35,15 +35,14 @@
     self.lblLocation.text = page.address?:@"";
     self.lblPhone.text = page.hotline?:@"";
     self.lblMoney.text = page.range_price?:@"";
-    
-    NSAttributedString * attrStr =
-    [[NSAttributedString alloc] initWithData:[model.intro?:@"" dataUsingEncoding:NSUnicodeStringEncoding]
-                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType}
-                          documentAttributes:nil error:nil];
-    
-    self.lblDesc.attributedText = attrStr;
+    self.lblDesc.attributedText = [CommonFunction convertHTMLString:model.intro?:@""];
+}
 
-    
+- (void)binDataWithPageInfo:(PageInfo *)model {
+    self.lblLocation.text = model.page_view.address?:@"";
+    self.lblPhone.text = model.page_view.hotline?:@"";
+    self.lblMoney.text = model.page_view.range_price?:@"";
+    self.lblDesc.attributedText = [CommonFunction convertHTMLString:model.descriptionPageInfo?:@""];
 }
 
 - (NSString *)makeStringFormatMoneyString:(NSInteger) totalAmount {

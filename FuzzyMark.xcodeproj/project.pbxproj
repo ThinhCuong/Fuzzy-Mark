@@ -79,6 +79,19 @@
 		4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FE2276EDBC00DF7173 /* Muli-LightItalic.ttf */; };
 		4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F50F3FF2276EDBC00DF7173 /* sharefonts.net.txt */; };
 		4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AD98F22BBF5BB007537A4 /* FMBaseListItemVC.m */; };
+		4F5F44F02318D7FB00D58817 /* FMPageDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44EC2318D7FB00D58817 /* FMPageDetailVC.xib */; };
+		4F5F44F12318D7FB00D58817 /* FMPageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44EE2318D7FB00D58817 /* FMPageDetailModel.m */; };
+		4F5F44F22318D7FB00D58817 /* FMPageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44EF2318D7FB00D58817 /* FMPageDetailVC.m */; };
+		4F5F44F42318DA8F00D58817 /* FMPageDetailModel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44F32318DA8F00D58817 /* FMPageDetailModel.xcassets */; };
+		4F5F44F92318E03D00D58817 /* FMListItemImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44F72318E03D00D58817 /* FMListItemImageVC.m */; };
+		4F5F44FA2318E03D00D58817 /* FMListItemImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44F82318E03D00D58817 /* FMListItemImageVC.xib */; };
+		4F5F44FE2318E06D00D58817 /* FMListItemRateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44FC2318E06D00D58817 /* FMListItemRateVC.m */; };
+		4F5F44FF2318E06D00D58817 /* FMListItemRateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44FD2318E06D00D58817 /* FMListItemRateVC.xib */; };
+		4F5F45032319011D00D58817 /* PageInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F45022319011D00D58817 /* PageInfo.m */; };
+		4F5F4512231917B500D58817 /* FMPageInfoImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F4510231917B500D58817 /* FMPageInfoImageCell.m */; };
+		4F5F4513231917B500D58817 /* FMPageInfoImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F4511231917B500D58817 /* FMPageInfoImageCell.xib */; };
+		4F5F4517231917FC00D58817 /* FMPageInfoRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F4515231917FC00D58817 /* FMPageInfoRateCell.m */; };
+		4F5F4518231917FC00D58817 /* FMPageInfoRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F4516231917FC00D58817 /* FMPageInfoRateCell.xib */; };
 		4F6D65BA228EFF0D0092CA53 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */; };
 		4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */; };
 		4F6D65C0228FC9520092CA53 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65BE228FC9520092CA53 /* DatePickerViewController.m */; };
@@ -131,7 +144,6 @@
 		4FEEE6502292F48B00E337F2 /* RegisterPromotionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FEEE64E2292F48B00E337F2 /* RegisterPromotionCell.m */; };
 		4FF0149C227EA3EC0063093C /* HistoryBill.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149B227EA3EC0063093C /* HistoryBill.m */; };
 		4FF0149F227EEDAB0063093C /* Voucher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0149E227EEDAB0063093C /* Voucher.m */; };
-		4FF014A3227EEEBC0063093C /* Page.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF014A2227EEEBC0063093C /* Page.m */; };
 		4FF014A6227EEF6A0063093C /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF014A5227EEF6A0063093C /* Location.m */; };
 		4FF27DAD22D5249F0077A36E /* TNCheckBox+SingleSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF27DAC22D5249F0077A36E /* TNCheckBox+SingleSelect.m */; };
 		4FF27DB322D529A70077A36E /* FMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF27DB122D529A60077A36E /* FMCheckBoxGroup.m */; };
@@ -379,6 +391,26 @@
 		4F50F40D2276F1AB00DF7173 /* FMPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPrefixHeader.pch; sourceTree = "<group>"; };
 		4F5AD98E22BBF5BA007537A4 /* FMBaseListItemVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMBaseListItemVC.h; sourceTree = "<group>"; };
 		4F5AD98F22BBF5BB007537A4 /* FMBaseListItemVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMBaseListItemVC.m; sourceTree = "<group>"; };
+		4F5F44EB2318D7FB00D58817 /* FMPageDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPageDetailVC.h; sourceTree = "<group>"; };
+		4F5F44EC2318D7FB00D58817 /* FMPageDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMPageDetailVC.xib; sourceTree = "<group>"; };
+		4F5F44ED2318D7FB00D58817 /* FMPageDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPageDetailModel.h; sourceTree = "<group>"; };
+		4F5F44EE2318D7FB00D58817 /* FMPageDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPageDetailModel.m; sourceTree = "<group>"; };
+		4F5F44EF2318D7FB00D58817 /* FMPageDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPageDetailVC.m; sourceTree = "<group>"; };
+		4F5F44F32318DA8F00D58817 /* FMPageDetailModel.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FMPageDetailModel.xcassets; sourceTree = "<group>"; };
+		4F5F44F62318E03D00D58817 /* FMListItemImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMListItemImageVC.h; sourceTree = "<group>"; };
+		4F5F44F72318E03D00D58817 /* FMListItemImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMListItemImageVC.m; sourceTree = "<group>"; };
+		4F5F44F82318E03D00D58817 /* FMListItemImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMListItemImageVC.xib; sourceTree = "<group>"; };
+		4F5F44FB2318E06D00D58817 /* FMListItemRateVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMListItemRateVC.h; sourceTree = "<group>"; };
+		4F5F44FC2318E06D00D58817 /* FMListItemRateVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMListItemRateVC.m; sourceTree = "<group>"; };
+		4F5F44FD2318E06D00D58817 /* FMListItemRateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMListItemRateVC.xib; sourceTree = "<group>"; };
+		4F5F45012319011D00D58817 /* PageInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageInfo.h; sourceTree = "<group>"; };
+		4F5F45022319011D00D58817 /* PageInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageInfo.m; sourceTree = "<group>"; };
+		4F5F450F231917B500D58817 /* FMPageInfoImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPageInfoImageCell.h; sourceTree = "<group>"; };
+		4F5F4510231917B500D58817 /* FMPageInfoImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPageInfoImageCell.m; sourceTree = "<group>"; };
+		4F5F4511231917B500D58817 /* FMPageInfoImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPageInfoImageCell.xib; sourceTree = "<group>"; };
+		4F5F4514231917FC00D58817 /* FMPageInfoRateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPageInfoRateCell.h; sourceTree = "<group>"; };
+		4F5F4515231917FC00D58817 /* FMPageInfoRateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPageInfoRateCell.m; sourceTree = "<group>"; };
+		4F5F4516231917FC00D58817 /* FMPageInfoRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPageInfoRateCell.xib; sourceTree = "<group>"; };
 		4F6D65B9228EFF0D0092CA53 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TJTextField.swift; sourceTree = "<group>"; };
 		4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ChangeUserInfor.xcassets; sourceTree = "<group>"; };
 		4F6D65BD228FC9520092CA53 /* DatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
@@ -460,8 +492,6 @@
 		4FF0149B227EA3EC0063093C /* HistoryBill.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryBill.m; sourceTree = "<group>"; };
 		4FF0149D227EEDAB0063093C /* Voucher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Voucher.h; sourceTree = "<group>"; };
 		4FF0149E227EEDAB0063093C /* Voucher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Voucher.m; sourceTree = "<group>"; };
-		4FF014A1227EEEBC0063093C /* Page.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Page.h; sourceTree = "<group>"; };
-		4FF014A2227EEEBC0063093C /* Page.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Page.m; sourceTree = "<group>"; };
 		4FF014A4227EEF6A0063093C /* Location.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		4FF014A5227EEF6A0063093C /* Location.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		4FF014A9227EF4FF0063093C /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
@@ -927,6 +957,56 @@
 			path = SystemThemes;
 			sourceTree = "<group>";
 		};
+		4F5F44EA2318D71100D58817 /* PageInfoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4F5F45042319162500D58817 /* Cell */,
+				4F5F44F52318DFBB00D58817 /* ItemTableView */,
+				4F5F44ED2318D7FB00D58817 /* FMPageDetailModel.h */,
+				4F5F44EE2318D7FB00D58817 /* FMPageDetailModel.m */,
+				4F5F44EB2318D7FB00D58817 /* FMPageDetailVC.h */,
+				4F5F44EF2318D7FB00D58817 /* FMPageDetailVC.m */,
+				4F5F44EC2318D7FB00D58817 /* FMPageDetailVC.xib */,
+				4F5F44F32318DA8F00D58817 /* FMPageDetailModel.xcassets */,
+			);
+			path = PageInfoDetail;
+			sourceTree = "<group>";
+		};
+		4F5F44F52318DFBB00D58817 /* ItemTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4F5F44F62318E03D00D58817 /* FMListItemImageVC.h */,
+				4F5F44F72318E03D00D58817 /* FMListItemImageVC.m */,
+				4F5F44F82318E03D00D58817 /* FMListItemImageVC.xib */,
+				4F5F44FB2318E06D00D58817 /* FMListItemRateVC.h */,
+				4F5F44FC2318E06D00D58817 /* FMListItemRateVC.m */,
+				4F5F44FD2318E06D00D58817 /* FMListItemRateVC.xib */,
+			);
+			path = ItemTableView;
+			sourceTree = "<group>";
+		};
+		4F5F4500231900F000D58817 /* PageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4F5F45012319011D00D58817 /* PageInfo.h */,
+				4F5F45022319011D00D58817 /* PageInfo.m */,
+			);
+			path = PageDetail;
+			sourceTree = "<group>";
+		};
+		4F5F45042319162500D58817 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F5F450F231917B500D58817 /* FMPageInfoImageCell.h */,
+				4F5F4510231917B500D58817 /* FMPageInfoImageCell.m */,
+				4F5F4511231917B500D58817 /* FMPageInfoImageCell.xib */,
+				4F5F4514231917FC00D58817 /* FMPageInfoRateCell.h */,
+				4F5F4515231917FC00D58817 /* FMPageInfoRateCell.m */,
+				4F5F4516231917FC00D58817 /* FMPageInfoRateCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4F6D65C2228FC9560092CA53 /* DatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -1236,8 +1316,6 @@
 				4FF0149B227EA3EC0063093C /* HistoryBill.m */,
 				4FF0149D227EEDAB0063093C /* Voucher.h */,
 				4FF0149E227EEDAB0063093C /* Voucher.m */,
-				4FF014A1227EEEBC0063093C /* Page.h */,
-				4FF014A2227EEEBC0063093C /* Page.m */,
 				4FF014A4227EEF6A0063093C /* Location.h */,
 				4FF014A5227EEF6A0063093C /* Location.m */,
 			);
@@ -1645,6 +1723,7 @@
 				5C76FBCC22BFDB0F0006D59D /* Hotline */,
 				5C563DD222B16C62006AB186 /* VouchersSearch */,
 				5CFF9238229B1FC00053A2A5 /* Search */,
+				4F5F44EA2318D71100D58817 /* PageInfoDetail */,
 				4FFC65C922B575C900056AE2 /* PromotionDetail */,
 				4F00C81B227A06C30073B583 /* Base */,
 				4F50F3892276E9A700DF7173 /* CustomTabbar */,
@@ -1679,6 +1758,7 @@
 				5CFE501E2312D85B00FC7B66 /* News */,
 				4F0FB598231174D90094F211 /* TransactionInfo */,
 				4FF5AF2422B7EC43009A613E /* PromotionDetail */,
+				4F5F4500231900F000D58817 /* PageDetail */,
 				5CFF9232229B19970053A2A5 /* Search */,
 				4F472D5022908C6A00F93D39 /* Notification */,
 				4FDACD1B227F765C00A8571E /* Home */,
@@ -1962,6 +2042,7 @@
 				4F50F3982276E9A700DF7173 /* FMNewsViewController.xib in Resources */,
 				4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */,
 				4F50F39B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib in Resources */,
+				4F5F4518231917FC00D58817 /* FMPageInfoRateCell.xib in Resources */,
 				4F45EF02229EB22B004556F9 /* FMIntroCameraCell.xib in Resources */,
 				4F50F4032276EDBC00DF7173 /* Muli-Semi-BoldItalic.ttf in Resources */,
 				4FDC27B422D4FBEA001FFA00 /* FMChangeUserInforViewController.xib in Resources */,
@@ -1970,14 +2051,17 @@
 				5C76FBCB22BFDB080006D59D /* FZHotlineViewController.xib in Resources */,
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
 				4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */,
+				4F5F44F02318D7FB00D58817 /* FMPageDetailVC.xib in Resources */,
 				4F25D6E622BAE64800C27190 /* FMListItemIntroduceVC.xib in Resources */,
 				5C5D08DB231061960017942B /* FZRewardTableViewCell.xib in Resources */,
 				5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */,
 				4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */,
 				4FF2BD86227BE83B0008BA69 /* RegisterPromotionCell.xib in Resources */,
 				5C127AF822A48D20002ADFE9 /* FZFooterCollectionReusableView.xib in Resources */,
+				4F5F44FA2318E03D00D58817 /* FMListItemImageVC.xib in Resources */,
 				4F50F3A12276E9A700DF7173 /* FMNotifiTableViewCell.xib in Resources */,
 				4FBD3DA5228DDE2C00E76E2A /* LocationFavorite.xcassets in Resources */,
+				4F5F4513231917B500D58817 /* FMPageInfoImageCell.xib in Resources */,
 				4F50F4092276EDBD00DF7173 /* Muli-LightItalic.ttf in Resources */,
 				4FF9C3BC2290FC8A00D3AD81 /* FMItemHistoryBillVC.xib in Resources */,
 				5C5D08D52310549A0017942B /* FZRewardViewController.xib in Resources */,
@@ -2002,6 +2086,7 @@
 				4F472D572290B42000F93D39 /* Notifi.xcassets in Resources */,
 				5C563DD722B16F28006AB186 /* FZVourchersSearchViewController.xib in Resources */,
 				4F472D4C229083CB00F93D39 /* FMChangePhoneNumberViewController.xib in Resources */,
+				4F5F44F42318DA8F00D58817 /* FMPageDetailModel.xcassets in Resources */,
 				4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */,
 				5CFE50262312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
@@ -2028,6 +2113,7 @@
 				4F50F3902276E9A700DF7173 /* FMMenuTabbleViewCell.xib in Resources */,
 				4FF7280222ED8FE5000C8AB8 /* FMLoginAccountViewController.xib in Resources */,
 				4F50F4022276EDBC00DF7173 /* Muli-BoldItalic.ttf in Resources */,
+				4F5F44FF2318E06D00D58817 /* FMListItemRateVC.xib in Resources */,
 				4FF9C3C62291373200D3AD81 /* FMDetailHistoryViewController.xib in Resources */,
 				4FDAFC0C230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.xib in Resources */,
 				4FF2BD78227BD9F70008BA69 /* FMCameraViewController.xib in Resources */,
@@ -2209,12 +2295,14 @@
 				4F6D65C0228FC9520092CA53 /* DatePickerViewController.m in Sources */,
 				5C8EC2AF2263664000C124CE /* FZHomeViewController.m in Sources */,
 				4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */,
+				4F5F44FE2318E06D00D58817 /* FMListItemRateVC.m in Sources */,
 				4F50F3992276E9A700DF7173 /* FMSecondsNewsTableViewCell.m in Sources */,
 				4F50F39D2276E9A700DF7173 /* FMNewsCollectionViewCell.m in Sources */,
 				5C3910322263492A008BEA62 /* UIWebView+AFNetworking.m in Sources */,
 				5C9862A32264DC8100545DCC /* CustomView.swift in Sources */,
 				4F472D5322908C8A00F93D39 /* Notifi.m in Sources */,
 				4FDACD02227F5AA500A8571E /* HistoryBillTableViewCell.m in Sources */,
+				4F5F44F22318D7FB00D58817 /* FMPageDetailVC.m in Sources */,
 				5C127AF722A48D20002ADFE9 /* FZFooterCollectionReusableView.m in Sources */,
 				5C39103A2263492A008BEA62 /* AFSecurityPolicy.m in Sources */,
 				4FDEEA4A22E4649800A72BC1 /* UserInfo.m in Sources */,
@@ -2234,7 +2322,9 @@
 				4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */,
 				4FB0B28322B9AEF500487D66 /* FMPromotionGiftCell.m in Sources */,
 				5CFF9237229B1A560053A2A5 /* ConfigAppObject.m in Sources */,
+				4F5F4517231917FC00D58817 /* FMPageInfoRateCell.m in Sources */,
 				4FF415542307E05D0013BF49 /* ConfigApp.m in Sources */,
+				4F5F44F12318D7FB00D58817 /* FMPageDetailModel.m in Sources */,
 				5C5E9164229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m in Sources */,
 				4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */,
 				5C435918229F656000844AA0 /* FZHeaderItemCollectionViewCell.m in Sources */,
@@ -2256,6 +2346,7 @@
 				5C3910392263492A008BEA62 /* AFNetworkReachabilityManager.m in Sources */,
 				5C714FD322ED601600D20A2B /* FZHomeObject.m in Sources */,
 				4F27544522931E870086A46C /* FMCameraModel.m in Sources */,
+				4F5F4512231917B500D58817 /* FMPageInfoImageCell.m in Sources */,
 				5C3910312263492A008BEA62 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4FDACD0B227F5D2500A8571E /* HistoryBillFooterCell.m in Sources */,
 				5C3910382263492A008BEA62 /* AFURLRequestSerialization.m in Sources */,
@@ -2268,7 +2359,6 @@
 				5C9862B32264E4BE00545DCC /* FZItemMenuHomeTableViewCell.m in Sources */,
 				4FDACCF6227F577200A8571E /* FMHistoryBillViewController.m in Sources */,
 				4FBD3DA2228DDA5C00E76E2A /* LocationFavoriteTableViewCell.m in Sources */,
-				4FF014A3227EEEBC0063093C /* Page.m in Sources */,
 				4FFC65CD22B5763900056AE2 /* FMPromotionDetailVC.m in Sources */,
 				4FDAFC0B230DCC4C0039BB63 /* FMSendImageVoucherSuccessVC.m in Sources */,
 				4F472D2B229072F600F93D39 /* FMChangeEmailViewController.m in Sources */,
@@ -2286,9 +2376,11 @@
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				4FB0B27E22B9AA9E00487D66 /* FMPromotionIntroCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
+				4F5F44F92318E03D00D58817 /* FMListItemImageVC.m in Sources */,
 				5C5D08D42310549A0017942B /* FZRewardViewController.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
 				5C76FBD122BFE1870006D59D /* MVHotlineCollectionViewCell.m in Sources */,
+				4F5F45032319011D00D58817 /* PageInfo.m in Sources */,
 				4FBD3D9C228DBFBA00E76E2A /* FMLocationFavoriteViewController.m in Sources */,
 				4FB0B27922B9A63700487D66 /* FMPromotionLocationCell.m in Sources */,
 				5C1585EF22A5DDC5008F06AB /* CustomButton.swift in Sources */,
@@ -2464,7 +2556,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5VR7C6YPUT;
+				DEVELOPMENT_TEAM = G382VV9V5A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;
@@ -2491,7 +2583,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 5VR7C6YPUT;
+				DEVELOPMENT_TEAM = G382VV9V5A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FuzzyMark/FMPrefixHeader.pch;
 				INFOPLIST_FILE = FuzzyMark/Info.plist;

@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Page.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *logo;
 @property (nonatomic) NSString *descriptionVoucher;
 @property (nonatomic) NSInteger percent_discount;
-@property (nonatomic) Page *page;
+@property (nonatomic) PageObject *page;
 @property (nonatomic) NSInteger count_down;
 @property (nonatomic) NSString *time_bookmark;
 - (instancetype)initWithDataDictionary:(NSDictionary *)data;

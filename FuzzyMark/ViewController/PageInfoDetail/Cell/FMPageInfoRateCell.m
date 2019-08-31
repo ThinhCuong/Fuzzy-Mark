@@ -1,14 +1,14 @@
 //
-//  FZNewsContentTableViewCell.m
+//  FMPageInfoRateCell.m
 //  FuzzyMark
 //
-//  Created by Nguyen Cuong on 8/26/19.
+//  Created by Tu Tran on 8/30/19.
 //  Copyright © 2019 Nguyen Cuong. All rights reserved.
 //
 
-#import "FZNewsContentTableViewCell.h"
+#import "FMPageInfoRateCell.h"
 
-@implementation FZNewsContentTableViewCell
+@implementation FMPageInfoRateCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -21,7 +21,4 @@
     // Configure the view for the selected state
 }
 
-- (void)bindData:(NSString *)content {
-    self.contentLabel.attributedText = [CommonFunction convertHTMLString:content?:@""];
-}
 @end

@@ -38,9 +38,9 @@
                              @"offset": @"0"
                              };
     
-    [CommonFunction hideLoadingView];
+    [CommonFunction showLoadingView];
     [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_NEWS_GET_NEWS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id dataResponse) {
-        [CommonFunction showLoadingView];
+        [CommonFunction hideLoadingView];
         if (dataResponse) {
             NSInteger errorCode = [dataResponse codeForKey:@"error_code"];
             NSString *message = [dataResponse stringForKey:@"message"];

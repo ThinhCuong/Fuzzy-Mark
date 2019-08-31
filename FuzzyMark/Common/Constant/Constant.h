@@ -70,6 +70,12 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define POST_VOUCHERS_ADD_INTERESTED                @"vouchers/add-interested"
 #define GET_NEWS_GET_NEWS                           @"news/get-news"
 #define GET_NEWS_FULL_NEWS                          @"news/full-news"
+#define GET_PAGES_INFO                              @"pages/info"
+#define GET_PAGES_INTERESTED                        @"pages/interested"
+#define POST_PAGES_ADD_INTERESTED                   @"pages/add-interested"
+#define DELETE_PAGES_DELETE_INTERESTED              @"pages/delete-interested"
+#define GET_PAGES_RATES_PAGE                        @"pages/rates-page"
+#define POST_PAGES_RATE                             @"pages/rate"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50
@@ -86,3 +92,6 @@ typedef NS_ENUM(NSInteger, StatusType) {
 
 /* String */
 #define kMessageError                               @"Có lỗi xẩy ra, vui lòng thử lại sau"
+
+/* Image */
+#define kLogoPlaceholderImage                       [UIImage imageNamed:@"logo_placeholder"]

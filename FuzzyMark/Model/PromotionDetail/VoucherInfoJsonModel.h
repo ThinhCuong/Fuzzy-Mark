@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Voucher.h"
-#import "Page.h"
+#import "FZHomeObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) Voucher *voucher;
 @property (nonatomic) NSInteger count_received;
 @property (nonatomic) NSString *intro;
-@property (nonatomic) NSArray <Page*> *accepted_page;
+@property (nonatomic) NSArray <PageObject*> *accepted_page;
 @property (nonatomic) NSArray <Voucher*> *related_vouchers;
 
 @end

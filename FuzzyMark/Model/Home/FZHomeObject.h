@@ -88,6 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (assign, nonatomic) NSInteger pageId;
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *logo;
 @property (strong, nonatomic) LocationObject *location;
 @property (strong, nonatomic) NSString *address;
 @property (assign, nonatomic) NSInteger rate_count;

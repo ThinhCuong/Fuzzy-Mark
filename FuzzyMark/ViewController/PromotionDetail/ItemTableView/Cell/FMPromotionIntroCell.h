@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "FzVourcherInfoObject.h"
+#import "PageInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPromotionIntroCell : UITableViewCell
 
 - (void)binData:(FzVourcherInfoObject *) model;
+- (void)binDataWithPageInfo:(PageInfo *)model;
 
 @end
 

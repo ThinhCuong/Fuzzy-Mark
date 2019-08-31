@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)showToast:(NSString *) toast;
 + (void)showToast:(NSString *) toast inView:(UIView *) view;
 + (void)configServer;
++ (NSAttributedString *)convertHTMLString:(NSString *) stringHTML;
 
 @end
 

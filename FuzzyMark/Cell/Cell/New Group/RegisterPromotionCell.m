@@ -31,7 +31,7 @@
     self.lblLocation.text = model.page.address ?: @"";
     self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %ld%@", (long)model.percent_discount,@"%"];
     self.lblTime.text = model.time_bookmark ?: @"";
-    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"logo_placeholder"]];
+    [self.imgIcon sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:kLogoPlaceholderImage];
 }
 
 @end

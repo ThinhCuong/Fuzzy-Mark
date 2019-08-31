@@ -161,6 +161,7 @@
         self.hotline = [data stringForKey:@"hotline"];
         self.range_price = [data stringForKey:@"range_price"];
         self.discount = [data integerForKey:@"discount"];
+        self.logo = [data stringImageForKey:@"logo"];
         if (![[data dictionaryForKey:@"location"] isEmpty]) {
             LocationObject *location = [[LocationObject alloc] initWithDataDictionary:data[@"location"]];
             self.location = location;

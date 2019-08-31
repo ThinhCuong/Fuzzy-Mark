@@ -10,12 +10,14 @@
 #import "VoucherInfoJsonModel.h"
 #import "FMBaseListItemVC.h"
 #import "FzVourcherInfoObject.h"
+#import "PageInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMListItemIntroduceVC : FMBaseListItemVC
 
-- (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel;;
+- (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel;
+- (instancetype)initWithPageInfo:(PageInfo *) pageInfo;
 
 @end
 

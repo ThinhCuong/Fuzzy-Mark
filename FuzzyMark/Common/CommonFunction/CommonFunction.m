@@ -41,6 +41,13 @@
     [view makeToast:toast duration:3.0 position:CSToastPositionCenter];
 }
 
++ (NSAttributedString *)convertHTMLString:(NSString *) stringHTML {
+    NSAttributedString * attrStr = [[NSAttributedString alloc] initWithData:[stringHTML dataUsingEncoding:NSUnicodeStringEncoding]
+                                     options:@{NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType}
+                          documentAttributes:nil error:nil];
+    return attrStr;
+}
+
 + (void)configServer {
     BaseCallApi *httpClient = [BaseCallApi defaultInitWithBaseURL];
     [httpClient getDataWithPath:GET_CONFIGURATION andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id success) {
