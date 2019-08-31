@@ -42,14 +42,50 @@
     }];
 }
 
-- (void)addPageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) successBlock {
-    NSDictionary *param = @{@"id": @(idPage)};
+- (void)addPageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock {
+    NSDictionary *param = @{@"id": @(idPage),
+                            @"page_name": pageName?:@""
+                            };
+    [CommonFunction showLoadingView];
     [_httpClient postDataWithPath:POST_PAGES_ADD_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
+    [_httpClient postDataWithPath:POST_PAGES_ADD_INTERESTED andParam:param isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if ([success codeForKey:@"error_code"] == 0) {
+                successBlock?successBlock(YES):0;
+            } else {
+                successBlock?successBlock(NO):0;
+            }
+        } else {
+            successBlock?successBlock(NO):0;
+        }
+    } withFailBlock:^(id _Nullable fail) {
+        [CommonFunction hideLoadingView];
+        successBlock?successBlock(NO):0;
+    }];
 }
 
-- (void)deletePageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) failBlock {
-    NSDictionary *param = @{@"id": @(idPage)};
+- (void)deletePageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock {
+    NSDictionary *param = @{@"id": @(idPage),
+                            @"page_name": pageName?:@""
+                            };
+    [CommonFunction showLoadingView];
     [_httpClient deleteDataWithPath:DELETE_PAGES_DELETE_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
+    [_httpClient deleteDataWithPath:DELETE_PAGES_DELETE_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if ([success codeForKey:@"error_code"] == 0) {
+                successBlock?successBlock(YES):0;
+            } else {
+                successBlock?successBlock(NO):0;
+            }
+        } else {
+            successBlock?successBlock(NO):0;
+        }
+    } withFailBlock:^(id _Nullable fail) {
+        [CommonFunction hideLoadingView];
+        successBlock?successBlock(NO):0;
+    }];
 }
 
 @end

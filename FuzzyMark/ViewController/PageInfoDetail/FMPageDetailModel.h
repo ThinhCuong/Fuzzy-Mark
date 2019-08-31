@@ -18,13 +18,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)getDataError;
 
 @end
+
 @interface FMPageDetailModel : NSObject
 
 @property (assign, nonatomic) id<FMPageDetailModelDelegate> delegate;
 
 - (void)getPageInfoWithIDPage:(NSInteger)idPage;
-- (void)addPageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) successBlock;
-- (void)deletePageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) failBlock;
+- (void)addPageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock;
+- (void)deletePageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock;
 
 @end
 

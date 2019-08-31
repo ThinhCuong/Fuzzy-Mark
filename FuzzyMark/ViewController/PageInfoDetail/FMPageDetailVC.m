@@ -240,7 +240,24 @@
 }
 
 - (IBAction)didSelectLikeAction:(id)sender {
-    [self.model ]
+    __block FMPageDetailVC *blockSelf = self;
+    if (self.btLike.selected) {
+        [self.model deletePageInterested:_idPage pageName:_pageInfo.page_view.name withSuccessBlock:^(BOOL success) {
+            if (success) {
+                blockSelf.btLike.selected = !blockSelf.btLike.selected;
+            } else {
+                [CommonFunction showToast:kMessageError];
+            }
+        }];
+    } else {
+        [self.model addPageInterested:_idPage pageName:_pageInfo.page_view.name withSuccessBlock:^(BOOL success) {
+            if (success) {
+                blockSelf.btLike.selected = !blockSelf.btLike.selected;
+            } else {
+                [CommonFunction showToast:kMessageError];
+            }
+        }];
+    }
 }
 
 #pragma mark - UIPageViewControllerDataSource
