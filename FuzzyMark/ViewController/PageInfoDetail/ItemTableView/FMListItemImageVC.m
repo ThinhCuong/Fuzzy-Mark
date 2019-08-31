@@ -7,51 +7,51 @@
 //
 
 #import "FMListItemImageVC.h"
+#import "FMPageInfoImageCell.h"
 
 @interface FMListItemImageVC ()
 
 @end
 
-@implementation FMListItemImageVC
+@implementation FMListItemImageVC {
+    NSArray <AlbumView*> * _albums;
+}
 
-//FzVourcherInfoObject *_jsonModel;
-//NSArray <PageObject *> *_listData;
-//}
+#pragma mark - life cycle
+- (instancetype)initWithListImage:(NSArray <AlbumView*> *) albums
+{
+    self = [super init];
+    if (self) {
+        _albums = albums;
+    }
+    return self;
+}
 
-//- (instancetype)initWithVoucherDataJson:(FzVourcherInfoObject *) jsonModel
-//{
-//    self = [super init];
-//    if (self) {
-//        _jsonModel = jsonModel;
-//        _listData = jsonModel.acceptedPage;
-//    }
-//    return self;
-//}
-//
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    [self.contentTableView registerNib:[UINib nibWithNibName:@"FMPromotionLocationCell" bundle:nil] forCellReuseIdentifier:@"cell"];
-//}
-//
-//#pragma mark - UITableViewDelegate
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    return _listData.count;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    FMPromotionLocationCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-//    [cell binData:_listData[indexPath.row]];
-//    return cell;
-//}
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.contentCollectionView registerNib:[UINib nibWithNibName:@"FMPageInfoImageCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+}
 
-#pragma mark - UITableViewDataSource
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+#pragma mark - UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return  _albums.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    FMPageInfoImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    [cell binDataWithAlbum:_albums[indexPath.row]];
+    return cell;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
 }
+
+
 
 @end

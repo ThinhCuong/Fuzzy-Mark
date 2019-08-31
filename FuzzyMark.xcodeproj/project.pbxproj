@@ -82,7 +82,6 @@
 		4F5F44F02318D7FB00D58817 /* FMPageDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44EC2318D7FB00D58817 /* FMPageDetailVC.xib */; };
 		4F5F44F12318D7FB00D58817 /* FMPageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44EE2318D7FB00D58817 /* FMPageDetailModel.m */; };
 		4F5F44F22318D7FB00D58817 /* FMPageDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44EF2318D7FB00D58817 /* FMPageDetailVC.m */; };
-		4F5F44F42318DA8F00D58817 /* FMPageDetailModel.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44F32318DA8F00D58817 /* FMPageDetailModel.xcassets */; };
 		4F5F44F92318E03D00D58817 /* FMListItemImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44F72318E03D00D58817 /* FMListItemImageVC.m */; };
 		4F5F44FA2318E03D00D58817 /* FMListItemImageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5F44F82318E03D00D58817 /* FMListItemImageVC.xib */; };
 		4F5F44FE2318E06D00D58817 /* FMListItemRateVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5F44FC2318E06D00D58817 /* FMListItemRateVC.m */; };
@@ -96,6 +95,7 @@
 		4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */; };
 		4F6D65C0228FC9520092CA53 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65BE228FC9520092CA53 /* DatePickerViewController.m */; };
 		4F6D65C1228FC9520092CA53 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BF228FC9520092CA53 /* DatePickerViewController.xib */; };
+		4FA08BD1231A683B006BEE4E /* FMPageDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */; };
 		4FB0B27922B9A63700487D66 /* FMPromotionLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0B27722B9A63700487D66 /* FMPromotionLocationCell.m */; };
 		4FB0B27A22B9A63700487D66 /* FMPromotionLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0B27822B9A63700487D66 /* FMPromotionLocationCell.xib */; };
 		4FB0B27E22B9AA9E00487D66 /* FMPromotionIntroCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0B27C22B9AA9E00487D66 /* FMPromotionIntroCell.m */; };
@@ -396,7 +396,6 @@
 		4F5F44ED2318D7FB00D58817 /* FMPageDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMPageDetailModel.h; sourceTree = "<group>"; };
 		4F5F44EE2318D7FB00D58817 /* FMPageDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPageDetailModel.m; sourceTree = "<group>"; };
 		4F5F44EF2318D7FB00D58817 /* FMPageDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMPageDetailVC.m; sourceTree = "<group>"; };
-		4F5F44F32318DA8F00D58817 /* FMPageDetailModel.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FMPageDetailModel.xcassets; sourceTree = "<group>"; };
 		4F5F44F62318E03D00D58817 /* FMListItemImageVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMListItemImageVC.h; sourceTree = "<group>"; };
 		4F5F44F72318E03D00D58817 /* FMListItemImageVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMListItemImageVC.m; sourceTree = "<group>"; };
 		4F5F44F82318E03D00D58817 /* FMListItemImageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMListItemImageVC.xib; sourceTree = "<group>"; };
@@ -416,6 +415,7 @@
 		4F6D65BD228FC9520092CA53 /* DatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		4F6D65BE228FC9520092CA53 /* DatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		4F6D65BF228FC9520092CA53 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FMPageDetail.xcassets; sourceTree = "<group>"; };
 		4FB0B27622B9A63700487D66 /* FMPromotionLocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPromotionLocationCell.h; sourceTree = "<group>"; };
 		4FB0B27722B9A63700487D66 /* FMPromotionLocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionLocationCell.m; sourceTree = "<group>"; };
 		4FB0B27822B9A63700487D66 /* FMPromotionLocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPromotionLocationCell.xib; sourceTree = "<group>"; };
@@ -967,7 +967,7 @@
 				4F5F44EB2318D7FB00D58817 /* FMPageDetailVC.h */,
 				4F5F44EF2318D7FB00D58817 /* FMPageDetailVC.m */,
 				4F5F44EC2318D7FB00D58817 /* FMPageDetailVC.xib */,
-				4F5F44F32318DA8F00D58817 /* FMPageDetailModel.xcassets */,
+				4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */,
 			);
 			path = PageInfoDetail;
 			sourceTree = "<group>";
@@ -2086,7 +2086,6 @@
 				4F472D572290B42000F93D39 /* Notifi.xcassets in Resources */,
 				5C563DD722B16F28006AB186 /* FZVourchersSearchViewController.xib in Resources */,
 				4F472D4C229083CB00F93D39 /* FMChangePhoneNumberViewController.xib in Resources */,
-				4F5F44F42318DA8F00D58817 /* FMPageDetailModel.xcassets in Resources */,
 				4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */,
 				5CFE50262312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
@@ -2134,6 +2133,7 @@
 				4FDACD05227F5BE000A8571E /* Muli-Black.ttf in Resources */,
 				4F472D412290801B00F93D39 /* FMIntroChangePhoneNumber.xib in Resources */,
 				5C9BDECD22B30AFD0019BA12 /* FZVourcherSearchTableViewCell.xib in Resources */,
+				4FA08BD1231A683B006BEE4E /* FMPageDetail.xcassets in Resources */,
 				5C8EC2B02263664000C124CE /* FZHomeViewController.xib in Resources */,
 				4F35FDCD22EF478B00F79B45 /* FMLoginCell.xib in Resources */,
 				5C39102A2263492A008BEA62 /* LICENSE in Resources */,

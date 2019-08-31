@@ -48,6 +48,9 @@
                         </constraints>
                         <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                         <state key="normal" title="Xem địa điểm"/>
+                        <connections>
+                            <action selector="didSelectShowPage:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ZJg-KJ-b8j"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gogi House &amp; Porky Steak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1CW-D9-UhZ">
                         <rect key="frame" x="106" y="16" width="182" height="18"/>

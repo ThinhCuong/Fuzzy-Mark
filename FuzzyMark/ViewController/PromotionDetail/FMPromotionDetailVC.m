@@ -89,6 +89,32 @@
     self.hideNav = YES;
     self.btnSaleTop.layer.cornerRadius = self.btnSaleTop.frame.size.height / 2;
     self.btnSaleBottom.layer.cornerRadius = self.btnSaleBottom.frame.size.height / 2;
+    
+    // Gradient image Banner
+    {
+        CAGradientLayer *gradientMask = [CAGradientLayer layer];
+        gradientMask.frame = self.imgBanner.bounds;
+        gradientMask.colors = @[(id)[UIColor colorWithRed:0.0 green:0.0 blue:0.34 alpha:0.0].CGColor,
+                                (id)[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0].CGColor];
+        self.imgBanner.layer.mask = gradientMask;
+    }
+    
+    // Gradient button Top/Bottom
+    {
+        CAGradientLayer *gradientMask = [CAGradientLayer layer];
+        gradientMask.colors = @[(id)[UIColor colorWithRed:0.2 green:0.6 blue:0.86 alpha:1.0].CGColor,
+                                (id)[UIColor colorWithRed:0.1 green:0.45 blue:0.68 alpha:1.0].CGColor];
+        gradientMask.locations = @[@0, @1];
+        gradientMask.startPoint = CGPointMake(0.25, 0.5);
+        gradientMask.endPoint = CGPointMake(0.75, 0.5);
+        gradientMask.transform = CATransform3DMakeAffineTransform(CGAffineTransformMake(0, 1, -1, 0, 1, 0));
+        gradientMask.bounds = CGRectInset(self.btnSaleTop.bounds, -0.5*self.btnSaleTop.bounds.size.width, -0.5*self.btnSaleTop.bounds.size.height);
+        gradientMask.position = self.btnSaleTop.center;
+        
+        [self.btnSaleBottom.layer addSublayer:gradientMask];
+        [self.btnSaleTop.layer addSublayer:gradientMask];
+    }
+    
     [self showButtonSaleTop];
 }
 
@@ -310,13 +336,15 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     
-    if (scrollView.contentOffset.y < 0){
+    CGRect rectScrollView = CGRectMake(scrollView.contentOffset.x, scrollView.contentOffset.y, scrollView.frame.size.width, scrollView.frame.size.height);
+    CGRect rectButtonTop = [self.btnSaleTop.superview convertRect:self.btnSaleTop.frame toView:scrollView];
+    
+    if (!CGRectIntersectsRect(rectScrollView, rectButtonTop)) {
+        [self showButtonSaleBottom];
+    } else {
         [self showButtonSaleTop];
     }
     
-    if (scrollView.contentOffset.y >= (scrollView.contentSize.height - scrollView.frame.size.height)) {
-        [self showButtonSaleBottom];
-    }
 }
 
 @end

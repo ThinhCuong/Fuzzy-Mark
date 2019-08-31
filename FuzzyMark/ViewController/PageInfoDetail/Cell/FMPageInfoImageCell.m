@@ -17,6 +17,7 @@
 
 - (void)binDataWithAlbum:(AlbumView *) album {
     self.lbName.text = album.name?:@"";
+    self.lbNumberImage.text = [NSString stringWithFormat:@"%ld ảnh", album.files.count];
     [self.imgContent sd_setImageWithURL:[NSURL URLWithString:album.files.firstObject?:@""] placeholderImage:kLogoPlaceholderImage];
 }
 

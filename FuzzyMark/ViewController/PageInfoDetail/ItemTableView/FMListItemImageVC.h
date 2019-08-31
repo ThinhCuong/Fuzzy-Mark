@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "FMBaseListItemVC.h"
+#import "PageInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMListItemImageVC : FMBaseListItemVC
+
+- (instancetype)initWithListImage:(NSArray <AlbumView*> *) albums;
 
 @end
 

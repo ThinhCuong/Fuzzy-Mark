@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPageDetailVC : FMBaseViewController
 
-- (instancetype)initWithIDVoucher:(NSInteger) idVoucher;
+- (instancetype)initWithIDPage:(NSInteger)idPage;
 
 @end
 

@@ -13,6 +13,8 @@
 #import "FMListItemLocationVC.h"
 #import "FMListItemIntroduceVC.h"
 #import "FMListItemGiftVC.h"
+#import "FMListItemImageVC.h"
+#import "FMListItemRateVC.h"
 #import "FzVourcherInfoObject.h"
 #import "AppDelegate.h"
 
@@ -36,24 +38,23 @@
 @end
 
 @implementation FMPageDetailVC {
-    NSInteger _idVoucher;
+    NSInteger _idPage;
     PageInfo *_pageInfo;
     HMSegmentedControl *_segmentedControl;
     UIPageViewController *_pageViewController;
     NSArray <UIViewController *> *_childTableVCs;
     NSInteger _currentIndex;
-    NSTimer *_timer;
     BOOL _callAPISuccess;
     BOOL _viewDisplayed;
     CGFloat _minHeightPageView;
 }
 
 #pragma mark - life cycle
-- (instancetype)initWithIDVoucher:(NSInteger)idVoucher
+- (instancetype)initWithIDPage:(NSInteger)idPage
 {
     self = [super init];
     if (self) {
-        _idVoucher = idVoucher;
+        _idPage = idPage;
         self.model = [[FMPageDetailModel alloc] init];
     }
     return self;
@@ -68,7 +69,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self startAnimationLoading];
-    [self.model getPageInfoWithIDPage:_idVoucher];
+    [self.model getPageInfoWithIDPage:_idPage];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -88,7 +89,16 @@
 - (void)setUI {
     self.hideNav = YES;
     self.rateView.layer.cornerRadius = 4;
-    self.imgBanner.layer.cornerRadius = self.imgBanner.frame.size.height/2;
+    self.imgPageInfo.layer.cornerRadius = self.imgPageInfo.frame.size.height/2;
+    
+    // Gradient image Banner
+    {
+        CAGradientLayer *gradientMask = [CAGradientLayer layer];
+        gradientMask.frame = self.imgBanner.bounds;
+        gradientMask.colors = @[(id)[UIColor colorWithRed:0.0 green:0.0 blue:0.34 alpha:0.0].CGColor,
+                                (id)[UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0].CGColor];
+        self.imgBanner.layer.mask = gradientMask;
+    }
 }
 
 - (void)setData {
@@ -112,7 +122,8 @@
     [self.imgPageInfo sd_setImageWithURL:[NSURL URLWithString:_pageInfo.page_view.logo]];
     self.lblName.text = _pageInfo.page_view.name ?:@"";
     self.lblDescription.attributedText = [CommonFunction convertHTMLString:_pageInfo.short_description?:@""];
-    self.lblTime.text = [NSString stringWithFormat:@"Mở cửa: %@-%@", _pageInfo.page_view.open_time?:@"", _pageInfo.page_view.close_time?:@""];
+    self.lblTime.text = [NSString stringWithFormat:@"Mở cửa: %@ - %@", _pageInfo.page_view.open_time?:@"", _pageInfo.page_view.close_time?:@""];
+    self.lbRate.text = [NSString stringWithFormat:@"%ld", (long)_pageInfo.page_view.rate_count];
     
     //bin Data listView
     [self setDataListView];
@@ -126,12 +137,17 @@
     firstVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
         [self updateContraintHeightPage:heightContentTableView];
     };
-//    FMListItemLocationVC *thirdVC = [[FMListItemLocationVC alloc] initWithVoucherDataJson:_voucherInfo];
-//    thirdVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
-//        [self updateContraintHeightPage:heightContentTableView];
-//    };
+    FMListItemImageVC *secondVC = [[FMListItemImageVC alloc] initWithListImage:_pageInfo.albums];
+    secondVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
+        [self updateContraintHeightPage:heightContentTableView];
+    };
     
-//    _childTableVCs = [NSArray arrayWithObjects: firstVC, secondVC, thirdVC, nil];
+    FMListItemRateVC *thirdVC = [[FMListItemRateVC alloc] initWithPageInfo:_pageInfo];
+    thirdVC.changeHeightContentTableView = ^(CGFloat heightContentTableView) {
+        [self updateContraintHeightPage:heightContentTableView];
+    };
+    
+    _childTableVCs = [NSArray arrayWithObjects: firstVC, secondVC, thirdVC, nil];
     [_pageViewController setViewControllers:@[_childTableVCs[_currentIndex]] direction:UIPageViewControllerNavigationDirectionReverse animated:NO completion:nil];
     [_segmentedControl setSelectedSegmentIndex:_currentIndex animated:YES];
 }
@@ -209,7 +225,7 @@
         if(!isSuccess) {
             return;
         }
-        FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_blockSelf->_idVoucher];
+        FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_blockSelf->_idPage];
         vc.hidesBottomBarWhenPushed = YES;
         [_blockSelf.navigationController pushViewController:vc animated:YES];
     }];

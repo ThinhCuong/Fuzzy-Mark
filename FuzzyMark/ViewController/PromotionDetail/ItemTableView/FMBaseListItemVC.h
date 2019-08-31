@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMBaseListItemVC : UIViewController 
 @property (weak, nonatomic) IBOutlet UITableView *contentTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *contentCollectionView;
 @property (nonatomic, copy) void (^changeHeightContentTableView)(CGFloat);
 @end
 

@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-        self.page_view = [[PageObject alloc] initWithDataDictionary:data[@"page_view"]];
-        self.hot_voucher = [[Voucher alloc] initWithDataDictionary:data[@"hot_voucher"]];
+        self.page_view = [[PageObject alloc] initWithDataDictionary:[data dictionaryForKey:@"page_view"]];
+        self.hot_voucher = [[Voucher alloc] initWithDataDictionary:[data dictionaryForKey:@"hot_voucher"]];
         self.descriptionPageInfo = [data stringForKey:@"description"];
         self.short_description = [data stringForKey:@"short_description"];
         

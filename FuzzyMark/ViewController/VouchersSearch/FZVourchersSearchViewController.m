@@ -15,8 +15,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "FZVouchersSearchModel.h"
 #import <CCBottomRefreshControl-umbrella.h>
+#import "FMPageDetailVC.h"
 
-@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, FMUpdateTableDataProtocol> {
+@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell> {
     CLLocationManager *_locationManager;
     CLLocationCoordinate2D _coordinate;
 }
@@ -205,6 +206,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LocationFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationFavoriteTableViewCell"];
     [cell bindData:_listVourcher[indexPath.row] currentLocation:_coordinate];
+    cell.delegate = self;
     return cell;
 }
 
@@ -212,6 +214,13 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     RewardObject *reward = _listVourcher[indexPath.row];
     FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:reward.rewardId];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - LocationFavoriteTableViewCell
+- (void)showDetailPageWithID:(NSInteger)idPage {
+    FMPageDetailVC *vc = [[FMPageDetailVC alloc] initWithIDPage:idPage];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

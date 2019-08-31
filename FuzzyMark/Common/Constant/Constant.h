@@ -95,3 +95,5 @@ typedef NS_ENUM(NSInteger, StatusType) {
 
 /* Image */
 #define kLogoPlaceholderImage                       [UIImage imageNamed:@"logo_placeholder"]
+#define kUserPlaceholderImage                       [UIImage imageNamed:@"ic_user"]
+

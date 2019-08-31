@@ -12,7 +12,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol LocationFavoriteTableViewCell <NSObject>
+
+- (void)showDetailPageWithID:(NSInteger) idPage;
+
+@end
+
 @interface LocationFavoriteTableViewCell : UITableViewCell
+
+@property (assign, nonatomic) id<LocationFavoriteTableViewCell>delegate;
 
 - (void)bindData:(RewardObject *)groupInfo currentLocation:(CLLocationCoordinate2D)currentLocation;
 

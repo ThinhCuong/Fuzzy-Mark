@@ -13,12 +13,14 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.imgUser.layer.cornerRadius = self.imgUser.layer.frame.size.height/2;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)binDataWith:(RageView *) pageInfo {
+    [self.imgUser sd_setImageWithURL:[NSURL URLWithString:pageInfo.user.avatar] placeholderImage:kUserPlaceholderImage];
+    self.lbName.text = pageInfo.user.name?:@"";
+    self.lbTime.text = pageInfo.time?:@"";
+    self.rateView.rating = pageInfo.point;
 }
 
 @end

@@ -25,7 +25,9 @@
 
 @end
 
-@implementation LocationFavoriteTableViewCell
+@implementation LocationFavoriteTableViewCell {
+    NSInteger _idPage;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -54,7 +56,14 @@
     } else {
         self.lblDistance.text = [NSString stringWithFormat:@"%.1f km", distance / 1000];
     }
+    
+    _idPage = groupInfo.page.pageId;
 
+}
+- (IBAction)didSelectShowPage:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(showDetailPageWithID:)]) {
+        [self.delegate showDetailPageWithID:_idPage];
+    }
 }
 
 @end

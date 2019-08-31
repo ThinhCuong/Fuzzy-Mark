@@ -12,21 +12,48 @@
 
 @end
 
-@implementation FMListItemRateVC
+@implementation FMListItemRateVC {
+    PageInfo *_pageInfo;
+    NSArray <RageView *> *_rates;
+}
+
+- (instancetype)initWithPageInfo:(PageInfo *) pageInfo
+{
+    self = [super init];
+    if (self) {
+        _pageInfo = pageInfo;
+        _rates = pageInfo.rates;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    [self.contentTableView registerNib:[UINib nibWithNibName:@"FMPageInfoRateCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    self.statusView.layer.cornerRadius = self.statusView.layer.frame.size.height/2;
+    self.lbStar.text = [NSString stringWithFormat:@"%ld", (long)_pageInfo.page_view.total_rate];
+    self.lbnumberRate.text = [NSString stringWithFormat:@"%lu đánh giá", (unsigned long)_pageInfo.rates.count];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - UITableViewDelegate
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _pageInfo.rates.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FMPageInfoRateCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    [cell binDataWith:_rates[indexPath.row]];
+    return cell;
+}
+
+#pragma mark - UITableViewDataSource
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
 
 @end
