@@ -124,6 +124,7 @@
     self.lblDescription.attributedText = [CommonFunction convertHTMLString:_pageInfo.short_description?:@""];
     self.lblTime.text = [NSString stringWithFormat:@"Mở cửa: %@ - %@", _pageInfo.page_view.open_time?:@"", _pageInfo.page_view.close_time?:@""];
     self.lbRate.text = [NSString stringWithFormat:@"%ld", (long)_pageInfo.page_view.rate_count];
+    self.btLike.selected = _pageInfo.page_view.is_bookmark;
     
     //bin Data listView
     [self setDataListView];
@@ -229,6 +230,17 @@
         vc.hidesBottomBarWhenPushed = YES;
         [_blockSelf.navigationController pushViewController:vc animated:YES];
     }];
+}
+
+-(IBAction)didSelectShareAction:(id)sender {
+    NSArray* sharedObjects=[NSArray arrayWithObjects:@"sharecontent",  nil];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:sharedObjects applicationActivities:nil];
+    activityViewController.popoverPresentationController.sourceView = self.view;
+    [self presentViewController:activityViewController animated:YES completion:nil];
+}
+
+- (IBAction)didSelectLikeAction:(id)sender {
+    [self.model ]
 }
 
 #pragma mark - UIPageViewControllerDataSource

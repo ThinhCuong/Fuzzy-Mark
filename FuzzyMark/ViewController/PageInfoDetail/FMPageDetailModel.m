@@ -42,12 +42,12 @@
     }];
 }
 
-- (void)addPageInterested:(NSInteger) idPage {
+- (void)addPageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) successBlock {
     NSDictionary *param = @{@"id": @(idPage)};
     [_httpClient postDataWithPath:POST_PAGES_ADD_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
 }
 
-- (void)deletePageInterested:(NSInteger) idPage {
+- (void)deletePageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) failBlock {
     NSDictionary *param = @{@"id": @(idPage)};
     [_httpClient deleteDataWithPath:DELETE_PAGES_DELETE_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
 }

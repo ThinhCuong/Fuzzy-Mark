@@ -99,6 +99,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *hotline;
 @property (strong, nonatomic) NSString *range_price;
 @property (assign, nonatomic) NSInteger discount;
+@property (assign, nonatomic) NSInteger is_bookmark;
 
 - (instancetype)initWithDataDictionary:(NSDictionary *)dict;
 

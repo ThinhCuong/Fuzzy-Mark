@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) id<FMPageDetailModelDelegate> delegate;
 
 - (void)getPageInfoWithIDPage:(NSInteger)idPage;
+- (void)addPageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) successBlock;
+- (void)deletePageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) failBlock;
 
 @end
 

@@ -163,9 +163,10 @@
         self.discount = [data integerForKey:@"discount"];
         self.logo = [data stringImageForKey:@"logo"];
         if (![[data dictionaryForKey:@"location"] isEmpty]) {
-            LocationObject *location = [[LocationObject alloc] initWithDataDictionary:data[@"location"]];
+            LocationObject *location = [[LocationObject alloc] initWithDataDictionary:[data dictionaryForKey:@"location"]];
             self.location = location;
         }
+        self.is_bookmark = [data boolForKey:@"is_bookmark"];
     }
     return self;
 }
