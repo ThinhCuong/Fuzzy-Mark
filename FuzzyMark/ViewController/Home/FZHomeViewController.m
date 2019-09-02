@@ -166,7 +166,9 @@
         default:
             break;
     }
-    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithKeyWord:@""];
+    FMVouchersObjecRequest *obj = [[FMVouchersObjecRequest alloc] init];
+    [obj addCategoryID:1];
+    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
     rewardInfoVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:rewardInfoVC animated:YES];
 }

@@ -7,15 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FMVouchersObjecRequest.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FZVourchersSearchViewController : UIViewController
+@interface FZVourchersSearchViewController : FMBaseViewController
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-- (instancetype)initWithKeyWord:(NSString *)keyWord;
-- (instancetype)initWithCategori:(NSInteger)categori;
-- (instancetype)initWithService:(NSInteger)service;
+- (instancetype)initWithObjectRequest:(FMVouchersObjecRequest *) objRequest;
 
 @end
 

@@ -12,24 +12,20 @@
 #import "FMPromotionDetailVC.h"
 #import "LocationFavoriteTableViewCell.h"
 #import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
 #import "FZVouchersSearchModel.h"
 #import <CCBottomRefreshControl-umbrella.h>
 #import "FMPageDetailVC.h"
+#import "MVUtilSearchViewController.h"
 
-@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell> {
-    CLLocationManager *_locationManager;
-    CLLocationCoordinate2D _coordinate;
-}
+@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell, UISearchResultsUpdating>
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UISearchController *searchController;
 @property (strong, nonatomic) FZVouchersSearchModel *model;
 
 @end
 
 @implementation FZVourchersSearchViewController {
-    NSString *_keyWord;
-    NSMutableArray <NSNumber *> *_categories;
-    NSMutableArray <NSNumber *> *_services;
     NSArray <RewardObject *> *_listVourcher;
     UIRefreshControl *_topRFControl;
     UIRefreshControl *_bottomRFControl;
@@ -37,36 +33,12 @@
 
 }
 
-- (instancetype)initWithKeyWord:(NSString *)keyWord
+- (instancetype)initWithObjectRequest:(FMVouchersObjecRequest *) objRequest
 {
     self = [super init];
     if (self) {
-        _keyWord = keyWord;
         self.model = [[FZVouchersSearchModel alloc] init];
-        self.model.delegate = self;
-    }
-    return self;
-}
-
-- (instancetype)initWithCategori:(NSInteger)categori
-{
-    self = [super init];
-    if (self) {
-        NSNumber *categoriNumber = [NSNumber numberWithInteger:categori];
-        [_categories addObject:categoriNumber];
-        self.model = [[FZVouchersSearchModel alloc] init];
-        self.model.delegate = self;
-    }
-    return self;
-}
-
-- (instancetype)initWithService:(NSInteger)service
-{
-    self = [super init];
-    if (self) {
-        NSNumber *serviceNumber = [NSNumber numberWithInteger:service];
-        [_services addObject:serviceNumber];
-        self.model = [[FZVouchersSearchModel alloc] init];
+        self.model.objRequest = objRequest?:[FMVouchersObjecRequest new];
         self.model.delegate = self;
     }
     return self;
@@ -76,8 +48,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.hideNav = NO;
+    self.hideBottomLineNav = YES;
+    [self setSearchController];
     [self setTableViewContent];
-    [self setLocationManager];
     [self callDataRefresh];
 }
 
@@ -90,6 +64,25 @@
 
 
 #pragma mark - private
+- (void)setSearchController {
+    // init SearchController
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    _searchController.obscuresBackgroundDuringPresentation = NO;
+    _searchController.dimsBackgroundDuringPresentation = NO;
+    _searchController.hidesNavigationBarDuringPresentation = NO;
+    _searchController.searchResultsUpdater = self;
+    
+    // set SearchBar
+    [_searchController.searchBar sizeToFit];
+    _searchController.searchBar.placeholder = @"Nhà hàng gần tôi...";
+    _searchController.searchBar.backgroundImage = [UIImage new];
+    _searchController.searchBar.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.0];
+    UITextField *tfSearch = [_searchController.searchBar valueForKey:@"_searchField"];
+    [tfSearch setFont:[UIFont fontWithName:@"Muli-Light" size:12.0]];
+    
+    self.navigationItem.titleView = _searchController.searchBar;
+}
+
 - (void)setTableViewContent {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -109,25 +102,12 @@
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
-- (void)setLocationManager {
-    _locationManager = [[CLLocationManager alloc] init];
-    _locationManager.delegate = self;
-    
-    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
-    if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
-        [_locationManager requestWhenInUseAuthorization];
-    }else{
-        [_locationManager startUpdatingLocation];
-    }
-}
-
 - (void)callDataLoadMore {
     if([self checkIsRefresh]) {
         [self stopAnimationRefresh];
         return;
     }
     _isRefresh = YES;
-    [self saveDataModelBeforeRequest];
     [self.model actionLoadMoreData];
 }
 
@@ -137,21 +117,11 @@
         return;
     }
     _isRefresh = YES;
-    [self saveDataModelBeforeRequest];
     [self.model actionPullToRefreshData];
 }
 
 - (BOOL)checkIsRefresh {
     return _isRefresh;
-}
-
-- (void)saveDataModelBeforeRequest {
-    FZUploadDataVoucher *dataUpload = [FZUploadDataVoucher new];
-    dataUpload.keyword = _keyWord;
-    dataUpload.categories = _categories;
-    dataUpload.service = _services;
-    dataUpload.lat = _coordinate.latitude;
-    dataUpload.lng = _coordinate.longitude;
 }
 
 - (void)stopAnimationRefresh {
@@ -163,20 +133,6 @@
     }
     [CommonFunction hideLoadingView];
     _isRefresh = NO;
-}
-
-- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
-        [_locationManager startUpdatingLocation];
-        _coordinate = [[_locationManager location] coordinate];
-    } else if (status == kCLAuthorizationStatusDenied) {
-        [CommonFunction showToast:@"Bạn cần vào cài đặt cấp quyền vị trí cho ứng dụng"];
-    } else if (status == kCLAuthorizationStatusNotDetermined) {
-        if ([manager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-            [manager requestWhenInUseAuthorization];
-            [_locationManager startUpdatingLocation];
-        }
-    }
 }
 
 #pragma mark - FMUpdateDataProtocol
@@ -205,7 +161,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LocationFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationFavoriteTableViewCell"];
-    [cell bindData:_listVourcher[indexPath.row] currentLocation:_coordinate];
+    [cell bindData:_listVourcher[indexPath.row] currentLocation:_model.coordinate];
     cell.delegate = self;
     return cell;
 }
@@ -221,6 +177,13 @@
 #pragma mark - LocationFavoriteTableViewCell
 - (void)showDetailPageWithID:(NSInteger)idPage {
     FMPageDetailVC *vc = [[FMPageDetailVC alloc] initWithIDPage:idPage];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - IBAction
+- (IBAction)didSelectFilter:(id)sender {
+    MVUtilSearchViewController *vc = [[MVUtilSearchViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

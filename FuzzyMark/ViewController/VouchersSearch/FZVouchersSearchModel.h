@@ -7,22 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FMVouchersObjecRequest.h"
 #import "FMBaseTableViewModel.h"
+#import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class FZUploadDataVoucher;
-@interface FZVouchersSearchModel : FMBaseTableViewModel
-@property (strong, nonatomic) FZUploadDataVoucher *dataUpload;
-@end
-
-@interface FZUploadDataVoucher : NSObject
-@property (strong, nonatomic) NSString *keyword;
-@property (assign, nonatomic) NSInteger lat;
-@property (assign, nonatomic) NSInteger lng;
-@property (assign, nonatomic) NSArray <NSNumber*> *categories;
-@property (assign, nonatomic) NSArray <NSNumber*> *service;
-
+@interface FZVouchersSearchModel : FMBaseTableViewModel <CLLocationManagerDelegate>
+@property (strong, nonatomic) FMVouchersObjecRequest *objRequest;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 @end
 
 NS_ASSUME_NONNULL_END

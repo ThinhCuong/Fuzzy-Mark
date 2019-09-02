@@ -48,7 +48,7 @@
     self.lblNumberComment.text = [NSString stringWithFormat:@"(%ld)", (long)groupInfo.page.rate_count];
     
     CLLocation *locA = [[CLLocation alloc] initWithLatitude:currentLocation.latitude longitude:currentLocation.longitude];
-    CLLocation *locB = [[CLLocation alloc] initWithLatitude:groupInfo.page.location.lat.doubleValue longitude:groupInfo.page.location.lng.doubleValue];
+    CLLocation *locB = [[CLLocation alloc] initWithLatitude:[groupInfo.page.location.lat doubleValue] longitude:[groupInfo.page.location.lng doubleValue]];
     CLLocationDistance distance = [locA distanceFromLocation:locB];
     
     if (distance < 1000) {

@@ -19,8 +19,42 @@
     NSString *_keyword;
 }
 
+#pragma mark - life cycle
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
+        
+        _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+        if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+            [_locationManager requestWhenInUseAuthorization];
+        }else{
+            [_locationManager startUpdatingLocation];
+        }
+    }
+    return self;
+}
+
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        [_locationManager startUpdatingLocation];
+        _coordinate = [[_locationManager location] coordinate];
+    } else if (status == kCLAuthorizationStatusDenied) {
+        [CommonFunction showToast:@"Bạn cần vào cài đặt cấp quyền vị trí cho ứng dụng"];
+    } else if (status == kCLAuthorizationStatusNotDetermined) {
+        if ([manager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [manager requestWhenInUseAuthorization];
+            [_locationManager startUpdatingLocation];
+        }
+    }
+}
+
+#pragma mark - private
 - (void)getDataTableView:(NSMutableDictionary *) params {
-    NSDictionary *newParams = [self addNewKeyInDictionary:params];
+    NSDictionary *newParams = [self addDataParams:params];
     [self.httpClient getDataWithPath:GET_VOUCHERS_SEARCH andParam:newParams isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
         if([success isKindOfClass:[NSDictionary class]]) {
             if ([success codeForKey:@"error_code"] != 0) {
@@ -45,41 +79,10 @@
     }];
 }
 
-- (NSDictionary *)addNewKeyInDictionary:(NSDictionary *) dict {
-    NSDictionary *newDict = dict.mutableCopy;
-    
-    NSString *categories = [self getStringWithArray:self.dataUpload.categories?:@[]];
-    NSString *services = [self getStringWithArray:self.dataUpload.service?:@[]];
-    
-    [newDict setValue:self.dataUpload.keyword?:@"" forKey:@"keyword"];
-    [newDict setValue:@(_lng) forKey:@"lng"];
-    [newDict setValue:@(_lat) forKey:@"lat"];
-    [newDict setValue:categories?:@"" forKey:@"categories"];
-    [newDict setValue:services?:@"" forKey:@"services"];
-
-    return newDict.copy;
+- (NSDictionary *)addDataParams:(NSMutableDictionary *) params {
+    NSMutableDictionary *newParam = [_objRequest getParamRequestWithLocation:_coordinate].mutableCopy;
+    [newParam addEntriesFromDictionary:params];
+    return newParam.copy;
 }
-
-- (NSString *)getStringWithArray:(NSArray <NSNumber*> *) arr {
-    NSMutableString *dataString = [NSMutableString new];
-    for (NSNumber *item in arr) {
-        @try {
-            [dataString appendString:[item stringValue]];
-        } @catch (NSException *exception) {
-            continue;
-        } @finally {
-            [dataString appendString:@","];
-        }
-    }
-    if (dataString.length > 0) {
-        [dataString substringFromIndex:dataString.length-1];
-    }
-    return dataString;
-}
-
-@end
-
-@implementation FZUploadDataVoucher
-
 
 @end
