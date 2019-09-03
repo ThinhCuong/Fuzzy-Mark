@@ -20,7 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeCategoryID:(NSInteger) categoryID;
 - (void)addSeviceID:(NSInteger) serviceID;
 - (void)removeSeviceID:(NSInteger) serviceID;
+- (BOOL)checkServiceIsExistList:(NSInteger) serviceID;
+- (BOOL)checkCategoryIsExistList:(NSInteger) categoryID;
 - (NSDictionary *)getParamRequestWithLocation:(CLLocationCoordinate2D)currentLocation;
+
+@property (assign, nonatomic) NSInteger countService;
 
 @end
 

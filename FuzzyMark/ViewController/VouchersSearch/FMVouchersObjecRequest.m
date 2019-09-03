@@ -41,7 +41,9 @@
 - (void)addSeviceID:(NSInteger) serviceID {
     NSNumber *value = [NSNumber numberWithInteger:serviceID];
     if (![_servicesID containsObject:value]) {
+        [self willChangeValueForKey:@"countService"];
         [_servicesID addObject:value];
+        [self didChangeValueForKey:@"countService"];
     }
 }
 
@@ -49,7 +51,9 @@
     NSNumber *value = [NSNumber numberWithInteger:serviceID];
     NSInteger index = [_categoriesID indexOfObject:value];
     if (index != NSNotFound) {
+        [self willChangeValueForKey:@"countService"];
         [_categoriesID removeObjectAtIndex:index];
+        [self didChangeValueForKey:@"countService"];
     }
 }
 
@@ -91,12 +95,36 @@
     return params;
 }
 
+- (BOOL)checkServiceIsExistList:(NSInteger) serviceID {
+    NSNumber *value = [NSNumber numberWithInteger:serviceID];
+    NSInteger index = [_servicesID indexOfObject:value];
+    if (index == NSNotFound) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+- (BOOL)checkCategoryIsExistList:(NSInteger) categoryID {
+    NSNumber *value = [NSNumber numberWithInteger:categoryID];
+    NSInteger index = [_categoriesID indexOfObject:value];
+    if (index == NSNotFound) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 - (NSArray<NSNumber *> *)categoriesID {
     return _categoriesID.copy;
 }
 
 - (NSArray<NSNumber *> *)servicesID {
     return _servicesID.copy;
+}
+
+- (NSInteger)countService {
+    return _servicesID.count;
 }
 
 @end

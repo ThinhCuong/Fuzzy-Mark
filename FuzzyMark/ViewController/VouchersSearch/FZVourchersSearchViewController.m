@@ -21,6 +21,8 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UILabel *lbNumbber;
+@property (weak, nonatomic) IBOutlet UIView *viewNumber;
 @property (strong, nonatomic) FZVouchersSearchModel *model;
 
 @end
@@ -63,6 +65,9 @@
     }
 }
 
+- (void)dealloc {
+    [self.model.objRequest removeObserver:self forKeyPath:@"countService"];
+}
 
 #pragma mark - private
 - (void)setSearchBar {
@@ -78,6 +83,10 @@
     } @catch (NSException *exception) {
         
     }
+    
+    self.viewNumber.layer.cornerRadius = self.viewNumber.frame.size.height/2;
+    self.lbNumbber.text = [NSString stringWithFormat:@"%lu", (unsigned long)_model.objRequest.servicesID.count];
+    [self.model.objRequest addObserver:self forKeyPath:@"countService" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)setTableViewContent {
@@ -130,6 +139,13 @@
     }
     [CommonFunction hideLoadingView];
     _isRefresh = NO;
+}
+
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"countService"]) {
+        self.lbNumbber.text = [NSString stringWithFormat:@"%lu",(unsigned long)self.model.objRequest.servicesID.count];
+    }
 }
 
 #pragma mark - FMUpdateDataProtocol
@@ -189,7 +205,7 @@
 
 #pragma mark - IBAction
 - (IBAction)didSelectFilter:(id)sender {
-    MVUtilSearchViewController *vc = [[MVUtilSearchViewController alloc] init];
+    MVUtilSearchViewController *vc = [[MVUtilSearchViewController alloc] initWith:self.model.objRequest];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
