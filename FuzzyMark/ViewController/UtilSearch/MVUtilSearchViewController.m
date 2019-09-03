@@ -86,6 +86,8 @@
     for (WrapService *wrap in _services) {
         if (wrap.isSelected) {
             [_objRequest addSeviceID:wrap.service.idService];
+        } else  {
+            [_objRequest removeSeviceID:wrap.service.idService];
         }
     }
     [self.navigationController popViewControllerAnimated:YES];

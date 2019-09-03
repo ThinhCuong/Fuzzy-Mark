@@ -49,10 +49,10 @@
 
 - (void)removeSeviceID:(NSInteger) serviceID {
     NSNumber *value = [NSNumber numberWithInteger:serviceID];
-    NSInteger index = [_categoriesID indexOfObject:value];
+    NSInteger index = [_servicesID indexOfObject:value];
     if (index != NSNotFound) {
         [self willChangeValueForKey:@"countService"];
-        [_categoriesID removeObjectAtIndex:index];
+        [_servicesID removeObjectAtIndex:index];
         [self didChangeValueForKey:@"countService"];
     }
 }
