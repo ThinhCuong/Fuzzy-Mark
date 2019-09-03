@@ -2,6 +2,7 @@ PODS:
   - CCBottomRefreshControl (0.5.2)
   - CHIPageControl/Jaloro (0.1.7)
   - Cosmos (19.0.3)
+  - FSPagerView (0.8.2)
   - HMSegmentedControl (1.5.5)
   - JSONModel (1.8.0)
   - SDWebImage (5.0.0):
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - CCBottomRefreshControl
   - CHIPageControl/Jaloro
   - Cosmos (~> 19.0)
+  - FSPagerView
   - HMSegmentedControl
   - JSONModel
   - SDWebImage (~> 5.0)
@@ -29,6 +31,7 @@ SPEC REPOS:
     - CCBottomRefreshControl
     - CHIPageControl
     - Cosmos
+    - FSPagerView
     - HMSegmentedControl
     - JSONModel
     - SDWebImage
@@ -41,6 +44,7 @@ SPEC CHECKSUMS:
   CCBottomRefreshControl: 389780b4488321c91d18f66a6da5ef9606df6de5
   CHIPageControl: bbe1ddd0c688c02ec65b7f7e7d34551a3d16f37c
   Cosmos: a6fb17284281fa12cf4c85c2efecd440a215ec44
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
   HMSegmentedControl: f514c6dad47aa3065e0ed2e8046b73efc71221b9
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   SDWebImage: 5de80a0302de9e377e62f47d2fa1304efff0e55f
@@ -49,6 +53,6 @@ SPEC CHECKSUMS:
   Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: 0bcc72696f170d9aceb9a869f66404cabd5fc1c7
+PODFILE CHECKSUM: 6b1d17748c15c2374460520500723496b5ec9952
 
 COCOAPODS: 1.7.1
