@@ -17,16 +17,18 @@
 #import "FMPageDetailVC.h"
 #import "MVUtilSearchViewController.h"
 
-@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell, UISearchResultsUpdating>
+@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell, UISearchBarDelegate>
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) UISearchController *searchController;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (strong, nonatomic) FZVouchersSearchModel *model;
 
 @end
 
 @implementation FZVourchersSearchViewController {
     NSArray <RewardObject *> *_listVourcher;
+    NSArray <RewardObject *> *_filterServices;
+    NSString *_keySearch;
     UIRefreshControl *_topRFControl;
     UIRefreshControl *_bottomRFControl;
     BOOL _isRefresh;
@@ -48,9 +50,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.hideNav = NO;
-    self.hideBottomLineNav = YES;
-    [self setSearchController];
+    self.hideNav = YES;
+    [self setSearchBar];
     [self setTableViewContent];
     [self callDataRefresh];
 }
@@ -64,23 +65,19 @@
 
 
 #pragma mark - private
-- (void)setSearchController {
-    // init SearchController
-    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
-    _searchController.obscuresBackgroundDuringPresentation = NO;
-    _searchController.dimsBackgroundDuringPresentation = NO;
-    _searchController.hidesNavigationBarDuringPresentation = NO;
-    _searchController.searchResultsUpdater = self;
+- (void)setSearchBar {
+    _searchBar.placeholder = @"Nhà hàng gần tôi...";
+    _searchBar.backgroundImage = [UIImage new];
+    _searchBar.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.0];
+    _searchBar.delegate = self;
     
-    // set SearchBar
-    [_searchController.searchBar sizeToFit];
-    _searchController.searchBar.placeholder = @"Nhà hàng gần tôi...";
-    _searchController.searchBar.backgroundImage = [UIImage new];
-    _searchController.searchBar.backgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:1.0];
-    UITextField *tfSearch = [_searchController.searchBar valueForKey:@"_searchField"];
-    [tfSearch setFont:[UIFont fontWithName:@"Muli-Light" size:12.0]];
-    
-    self.navigationItem.titleView = _searchController.searchBar;
+    @try {
+        UITextField *tfSearch = [_searchBar valueForKey:@"_searchField"];
+        [tfSearch setFont:[UIFont fontWithName:@"Muli-Light" size:12.0]];
+        [tfSearch setReturnKeyType:UIReturnKeyDone];
+    } @catch (NSException *exception) {
+        
+    }
 }
 
 - (void)setTableViewContent {
@@ -156,14 +153,23 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _listVourcher.count;
+    if (_keySearch.length > 0) {
+        return _filterServices.count;
+    } else {
+        return _listVourcher.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     LocationFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationFavoriteTableViewCell"];
-    [cell bindData:_listVourcher[indexPath.row] currentLocation:_model.coordinate];
     cell.delegate = self;
-    return cell;
+    if (_keySearch.length > 0) {
+        [cell bindData:_filterServices[indexPath.row] currentLocation:_model.coordinate];
+        return cell;
+    } else {
+        [cell bindData:_listVourcher[indexPath.row] currentLocation:_model.coordinate];
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -186,6 +192,20 @@
     MVUtilSearchViewController *vc = [[MVUtilSearchViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+#pragma mark - UISearchBarDelegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    _keySearch = searchText;
+    NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.name CONTAINS[cd] '%@'", _keySearch]];
+    NSArray *arr = [_listVourcher filteredArrayUsingPredicate:searchPredicate];
+    _filterServices = arr?:@[];
+    
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [_searchBar endEditing:YES];
 }
 
 @end
