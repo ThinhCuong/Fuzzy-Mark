@@ -13,6 +13,8 @@
 		4F10755D2306E4D70029FC91 /* HistoryCaptureObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */; };
 		4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBD722ECB88100466B51 /* UIImage+Support.m */; };
 		4F1BCBDF22ECED0B00466B51 /* NSDictionary+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */; };
+		4F205FBA231F22E900F1C6E1 /* FMMenuHomeCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F205FB8231F22E900F1C6E1 /* FMMenuHomeCategoryCell.m */; };
+		4F205FBB231F22E900F1C6E1 /* FMMenuHomeCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F205FB9231F22E900F1C6E1 /* FMMenuHomeCategoryCell.xib */; };
 		4F25D6E022BAE15300C27190 /* FMListItemLocationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D6DE22BAE15300C27190 /* FMListItemLocationVC.m */; };
 		4F25D6E122BAE15300C27190 /* FMListItemLocationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F25D6DF22BAE15300C27190 /* FMListItemLocationVC.xib */; };
 		4F25D6E522BAE64800C27190 /* FMListItemIntroduceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F25D6E322BAE64800C27190 /* FMListItemIntroduceVC.m */; };
@@ -296,6 +298,9 @@
 		4F1BCBD722ECB88100466B51 /* UIImage+Support.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Support.m"; sourceTree = "<group>"; };
 		4F1BCBDD22ECED0B00466B51 /* NSDictionary+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Helper.h"; sourceTree = "<group>"; };
 		4F1BCBDE22ECED0B00466B51 /* NSDictionary+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Helper.m"; sourceTree = "<group>"; };
+		4F205FB7231F22E900F1C6E1 /* FMMenuHomeCategoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMMenuHomeCategoryCell.h; sourceTree = "<group>"; };
+		4F205FB8231F22E900F1C6E1 /* FMMenuHomeCategoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMMenuHomeCategoryCell.m; sourceTree = "<group>"; };
+		4F205FB9231F22E900F1C6E1 /* FMMenuHomeCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMMenuHomeCategoryCell.xib; sourceTree = "<group>"; };
 		4F25D6DD22BAE15300C27190 /* FMListItemLocationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMListItemLocationVC.h; sourceTree = "<group>"; };
 		4F25D6DE22BAE15300C27190 /* FMListItemLocationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMListItemLocationVC.m; sourceTree = "<group>"; };
 		4F25D6DF22BAE15300C27190 /* FMListItemLocationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMListItemLocationVC.xib; sourceTree = "<group>"; };
@@ -1747,6 +1752,9 @@
 				5C87BDD1227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.h */,
 				5C87BDD2227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.m */,
 				5C87BDD3227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib */,
+				4F205FB7231F22E900F1C6E1 /* FMMenuHomeCategoryCell.h */,
+				4F205FB8231F22E900F1C6E1 /* FMMenuHomeCategoryCell.m */,
+				4F205FB9231F22E900F1C6E1 /* FMMenuHomeCategoryCell.xib */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -2127,6 +2135,7 @@
 				4F472D572290B42000F93D39 /* Notifi.xcassets in Resources */,
 				5C563DD722B16F28006AB186 /* FZVourchersSearchViewController.xib in Resources */,
 				4F472D4C229083CB00F93D39 /* FMChangePhoneNumberViewController.xib in Resources */,
+				4F205FBB231F22E900F1C6E1 /* FMMenuHomeCategoryCell.xib in Resources */,
 				4F472D2F229073A900F93D39 /* ChangeEmail.xcassets in Resources */,
 				5CFE50262312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib in Resources */,
 				4F50F4072276EDBD00DF7173 /* Muli-Light.ttf in Resources */,
@@ -2372,6 +2381,7 @@
 				4FF415542307E05D0013BF49 /* ConfigApp.m in Sources */,
 				4F5F44F12318D7FB00D58817 /* FMPageDetailModel.m in Sources */,
 				5C5E9164229F507300E9DFE9 /* FZHeaderSearchTableViewCell.m in Sources */,
+				4F205FBA231F22E900F1C6E1 /* FMMenuHomeCategoryCell.m in Sources */,
 				4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */,
 				5C435918229F656000844AA0 /* FZHeaderItemCollectionViewCell.m in Sources */,
 				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,

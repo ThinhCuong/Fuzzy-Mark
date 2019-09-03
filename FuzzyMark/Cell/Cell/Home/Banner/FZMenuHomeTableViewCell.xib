@@ -458,9 +458,21 @@
                             <constraint firstItem="bUv-kM-D6k" firstAttribute="height" secondItem="hiZ-Vq-u55" secondAttribute="height" multiplier="1:2" id="yi7-AK-4hq"/>
                         </constraints>
                     </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="l8k-sO-3M9">
+                        <rect key="frame" x="0.0" y="250" width="320" height="145"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t50-76-KhE">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="hiZ-Vq-u55" firstAttribute="trailing" secondItem="l58-LW-4gp" secondAttribute="trailing" id="3Gp-vm-G9h"/>
+                    <constraint firstItem="hiZ-Vq-u55" firstAttribute="trailing" secondItem="l8k-sO-3M9" secondAttribute="trailing" id="4QD-P1-pUQ"/>
+                    <constraint firstItem="hiZ-Vq-u55" firstAttribute="top" secondItem="l8k-sO-3M9" secondAttribute="top" id="4aX-RE-iDr"/>
                     <constraint firstItem="aGI-05-BiU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5VZ-fd-RF3"/>
                     <constraint firstItem="aGI-05-BiU" firstAttribute="top" secondItem="l58-LW-4gp" secondAttribute="bottom" constant="8" id="7v7-FK-Oj4"/>
                     <constraint firstItem="l58-LW-4gp" firstAttribute="top" secondItem="eIk-43-iEa" secondAttribute="bottom" id="Bxq-e2-geZ"/>
@@ -468,11 +480,13 @@
                     <constraint firstItem="eIk-43-iEa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="R7R-YY-7MG"/>
                     <constraint firstAttribute="bottom" secondItem="hiZ-Vq-u55" secondAttribute="bottom" constant="7.5" id="T4u-is-CL5"/>
                     <constraint firstAttribute="trailing" secondItem="eIk-43-iEa" secondAttribute="trailing" id="VcN-s2-9MX"/>
+                    <constraint firstItem="hiZ-Vq-u55" firstAttribute="bottom" secondItem="l8k-sO-3M9" secondAttribute="bottom" id="We0-la-k6U"/>
                     <constraint firstItem="hiZ-Vq-u55" firstAttribute="top" secondItem="aGI-05-BiU" secondAttribute="bottom" constant="5" id="fi3-Md-UzX"/>
                     <constraint firstItem="l58-LW-4gp" firstAttribute="leading" secondItem="eIk-43-iEa" secondAttribute="leading" id="j23-nw-fbZ"/>
                     <constraint firstItem="l58-LW-4gp" firstAttribute="trailing" secondItem="eIk-43-iEa" secondAttribute="trailing" id="kk3-fs-wWT"/>
                     <constraint firstItem="aeO-ho-VAu" firstAttribute="centerX" secondItem="eIk-43-iEa" secondAttribute="centerX" id="lff-GP-LrR"/>
                     <constraint firstItem="aeO-ho-VAu" firstAttribute="bottom" secondItem="eIk-43-iEa" secondAttribute="bottom" id="oAH-n5-MXM"/>
+                    <constraint firstItem="hiZ-Vq-u55" firstAttribute="leading" secondItem="l8k-sO-3M9" secondAttribute="leading" id="tu9-kY-vEO"/>
                     <constraint firstItem="aGI-05-BiU" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-32" id="xQU-0H-Ghk"/>
                     <constraint firstItem="eIk-43-iEa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="xrB-Wx-79S"/>
                 </constraints>
