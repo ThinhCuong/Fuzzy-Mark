@@ -55,6 +55,10 @@
                 <constraint firstAttribute="bottom" secondItem="ocy-er-hkC" secondAttribute="bottom" id="TqM-ro-R4d"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <connections>
+                <outlet property="imvCategory" destination="1Bb-GV-kPN" id="nVd-WW-4nf"/>
+                <outlet property="lbCategory" destination="hM1-TU-7I6" id="lBS-CL-QU7"/>
+            </connections>
         </collectionViewCell>
     </objects>
     <resources>

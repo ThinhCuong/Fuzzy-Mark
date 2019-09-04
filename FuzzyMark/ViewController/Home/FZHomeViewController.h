@@ -19,7 +19,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FZHomeViewController : FMBaseViewController <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
+@interface FZHomeViewController : FMBaseViewController <UITableViewDataSource, UITableViewDelegate, FZHomeHeaderDelegate>
 
 @end
 

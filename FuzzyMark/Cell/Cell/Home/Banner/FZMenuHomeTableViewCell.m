@@ -7,108 +7,114 @@
 //
 
 #import "FZMenuHomeTableViewCell.h"
-#import "FZBannerCollectionViewCell.h"
+#import "FuzzyMark-Swift.h"
+#import <FSPagerView-Swift.h>
+#import "FSPagerViewObjcCompat.h"
+#import "FMMenuHomeCategoryCell.h"
 
-@interface FZMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
-    NSArray<BannerObject *> *_listBanner;
-    
-}
+@interface FZMenuHomeTableViewCell() <FSPagerViewDataSource, FSPagerViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *bannerCollectionView;
-@property (nonatomic, weak) NSTimer *timer;
-@property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
-@property (strong, nonatomic) IBOutlet UIImageView *fixadImage;
+@property (weak, nonatomic) IBOutlet FSPagerView *bannerView;
+@property (weak, nonatomic) IBOutlet FSPageControl *pageControl;
+@property (weak, nonatomic) IBOutlet FSPagerView *fixedView;
+@property (weak, nonatomic) IBOutlet UICollectionView *categoryCollectionView;
 
 @end
 
-@implementation FZMenuHomeTableViewCell
+@implementation FZMenuHomeTableViewCell {
+    NSArray<BannerObject *> *_listBanner;
+    NSArray<FixedAdsObject *> *_listFixed;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    [self.bannerCollectionView registerNib:[UINib nibWithNibName:@"FZBannerCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FZBannerCollectionViewCell"];
-    
-    self.bannerCollectionView.dataSource = self;
-    self.bannerCollectionView.delegate = self;
-    
-    self.fixadImage.layer.cornerRadius = 5;
-    self.fixadImage.layer.masksToBounds = YES;
+    [self initUI];
+    [self initData];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
+- (void)initUI {
+    
+}
 
-    // Configure the view for the selected state
+- (void)initData {
+    [self setDataBannerView];
+    [self setDataFixedView];
+    [self setDataCollectionView];
+}
+
+- (void)setDataBannerView {
+    _bannerView.itemSize = FSPagerViewAutomaticSize;
+    _bannerView.automaticSlidingInterval = 4;
+    _bannerView.isInfinite = YES;
+    [_bannerView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
+    
+    _pageControl.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+}
+
+- (void)setDataFixedView {
+    _fixedView.itemSize = FSPagerViewAutomaticSize;
+    _fixedView.layer.cornerRadius = 5;
+    _fixedView.clipsToBounds = YES;
+    _fixedView.automaticSlidingInterval = 3;
+    _fixedView.isInfinite = YES;
+    _fixedView.transformer = [[FSPagerViewTransformer alloc] initWithType:FSPagerViewTransformerTypeCrossFading];
+    [_fixedView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
+}
+
+- (void)setDataCollectionView {
+    [_categoryCollectionView registerNib:[UINib nibWithNibName:@"FMMenuHomeCategoryCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
 }
 
 - (void)bindData:(FZHomeObject *)homeData {
     _listBanner = homeData.banners;
-    FixedAdsObject *temp = homeData.fixedAds[0];
-    [self.fixadImage sd_setImageWithURL:[NSURL URLWithString:temp.imageAds]];
-    [self.bannerCollectionView reloadData];
-    [self stopTimer];
-    [self startTimer];
-}
-- (void)stopTimer {
-    [self.timer invalidate];
-    self.timer = nil;
+    _listFixed = homeData.fixedAds;
+    _pageControl.numberOfPages = _listBanner.count;
+    _pageControl.currentPage = 0;
+    [_bannerView reloadData];
+    [_fixedView reloadData];
 }
 
-- (void)startTimer {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(nextImage) userInfo:nil repeats:YES];
-}
-
-- (void)nextImage {
-    CGPoint offset = CGPointMake(self.bannerCollectionView.contentOffset.x + self.bannerCollectionView.bounds.size.width, self.bannerCollectionView.contentOffset.y);
-    [self.bannerCollectionView setContentOffset:offset animated:YES];
-}
-
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return _listBanner.count ? 100000 : 0;
-}
-
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    FZBannerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FZBannerCollectionViewCell" forIndexPath:indexPath];
-    [cell bindData:_listBanner[indexPath.row % _listBanner.count]];
-    return cell;
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize cellSize = CGSizeMake(collectionView.bounds.size.width, collectionView.bounds.size.height);
-    return cellSize;
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    [self scrollViewDidEndScrollingAnimation:scrollView];
-}
-
-- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
-    CGFloat currentContentOffset = scrollView.contentOffset.x;
-    CGFloat widthCell = self.bannerCollectionView.bounds.size.width;
-    int pageIndexTemp = currentContentOffset/widthCell;
-    if (_listBanner.count > 0) {
-        [self.pageControl setCurrentPage:pageIndexTemp % _listBanner.count];
+#pragma mark - FSPagerViewDataSource
+- (NSInteger)numberOfItemsInPagerView:(FSPagerView *)pagerView {
+    if ([pagerView isEqual:_bannerView]) {
+        return _listBanner.count;
+    } else {
+        return _listFixed.count;
     }
 }
 
-- (IBAction)didSelectChooseListSuport:(UIButton *)sender {
-    [self.delegate didSelectSuportList:sender.tag];
+- (FSPagerViewCell *)pagerView:(FSPagerView *)pagerView cellForItemAtIndex:(NSInteger)index {
+    FSPagerViewCell *cell = [pagerView dequeueReusableCellWithReuseIdentifier:@"cell" atIndex:index];
+    cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    if ([pagerView isEqual:_bannerView]) {
+        BannerObject *obj = _listBanner[index];
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:obj.image]];
+    } else {
+        FixedAdsObject *obj = _listFixed[index];
+        [cell.imageView sd_setImageWithURL:[NSURL URLWithString:obj.imageAds]];
+    }
+    return cell;
 }
 
-- (IBAction)didSelectChooseCategory:(UIButton *)sender {
-    [self.delegate didSelectCategoryList:sender.tag];
+#pragma mark - FSPagerView Delegate
+- (void)pagerView:(FSPagerView *)pagerView didSelectItemAtIndex:(NSInteger)index {
+    if ([pagerView isEqual:_bannerView]) {
+        [pagerView deselectItemAtIndex:index animated:YES];
+        [pagerView scrollToItemAtIndex:index animated:YES];
+    }
 }
 
-- (IBAction)clickToHoline:(UIButton *)sender {
-    [self.delegate clickToHotline];
+- (void)pagerViewWillEndDragging:(FSPagerView *)pagerView targetIndex:(NSInteger)targetIndex {
+    if ([pagerView isEqual:_bannerView]) {
+        self.pageControl.currentPage = targetIndex;
+    }
 }
 
-- (IBAction)clickRewardAction:(UIButton *)sender {
-    [self.delegate clickReward];
-}
-
-- (IBAction)clickNewsAction:(UIButton *)sender {
-    [self.delegate clickNews];
+- (void)pagerViewDidEndScrollAnimation:(FSPagerView *)pagerView {
+    if ([pagerView isEqual:_bannerView]) {
+        self.pageControl.currentPage = pagerView.currentIndex;
+    }
 }
 
 @end

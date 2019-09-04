@@ -26,20 +26,9 @@ typedef NS_ENUM(NSUInteger, CategoryList) {
 };
 
 NS_ASSUME_NONNULL_BEGIN
-@protocol FZMenuHomeTableViewDelegate <NSObject>
-
-- (void)didSelectSuportList:(SuportList ) indexChoose;
-- (void)didSelectCategoryList:(CategoryList ) indexChoose;
-- (void)clickToHotline;
-- (void)clickReward;
-- (void)clickNews;
-
-@end
-
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
-@property (assign, nonatomic) id<FZMenuHomeTableViewDelegate> delegate;
 - (void)bindData:(FZHomeObject *)homeData;
 
 @end

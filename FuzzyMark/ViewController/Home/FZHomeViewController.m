@@ -21,7 +21,7 @@
 #import "FMNewsViewController.h"
 #import "FZSearchViewController.h"
 
-@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZMenuHomeTableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
+@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
