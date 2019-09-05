@@ -11,9 +11,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol MVUtilSearchViewControllerDelegate <NSObject>
+
+- (void)reloadData;
+
+@end
+
 @class WrapService;
 @interface MVUtilSearchViewController : FMBaseViewController
 
+@property (assign, nonatomic) id <MVUtilSearchViewControllerDelegate> delegate;
 - (instancetype)initWith:(FMVouchersObjecRequest *) objRequest;
 
 @end

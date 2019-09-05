@@ -9,26 +9,27 @@
 #import <UIKit/UIKit.h>
 #import "FZHomeObject.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, SuportList) {
     Category_Suport = 0,
-    Sale_Suport,
-    Hotline_Suport,
-    SNews_Suport
+    Sale_Suport = 1,
+    Hotline_Suport = 2,
+    SNews_Suport = 3
 };
 
-typedef NS_ENUM(NSUInteger, CategoryList) {
-    Restaurant_Category = 0,
-    Hotel_Category,
-    Travel_Category,
-    Store_Category,
-    News_Category,
-    Map_Category
-};
+@protocol FZMenuHomeTableViewCellDelegate  <NSObject>
 
-NS_ASSUME_NONNULL_BEGIN
+- (void)didSelectVoucherID:(NSInteger) voucherID;
+- (void)didSelectSearchCategoryID:(NSInteger) categoryID;
+- (void)didSelectSuportList:(SuportList) suportList;
+- (void)didSelectWebviewWithLink:(NSString *) link andTitle:(NSString *) title;
+
+@end
 
 @interface FZMenuHomeTableViewCell : UITableViewCell
 
+@property (nonatomic, assign) id<FZMenuHomeTableViewCellDelegate> delegate;
 - (void)bindData:(FZHomeObject *)homeData;
 
 @end

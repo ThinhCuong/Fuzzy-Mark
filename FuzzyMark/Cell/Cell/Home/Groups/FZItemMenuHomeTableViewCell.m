@@ -13,6 +13,7 @@
 @interface FZItemMenuHomeTableViewCell() <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITableViewDataSource, UITableViewDelegate> {
     NSArray<RewardObject *> *_listVoucherVertical;
     NSArray<RewardObject *> *_listVoucherHorizontal;
+    GroupInfoObject * _groupInfoObject;
 }
 
 @property (strong, nonatomic) IBOutlet UICollectionView *menuCollectionView;
@@ -38,10 +39,11 @@
     self.tableView.delegate = self;
 }
 
-- (void)bindData:(NSArray<RewardObject *> *)listVoucherVertical listVoucherHorizontal:(NSArray<RewardObject *> *)listVoucherHorizontal {
-    _listVoucherVertical = listVoucherVertical;
-    _listVoucherHorizontal = listVoucherHorizontal;
-    _heightOfTableView.constant = 95 * listVoucherVertical.count;
+- (void)bindData:(GroupInfoObject *) groupInfoObject {
+    _listVoucherVertical = groupInfoObject.vouchersVertical;
+    _listVoucherHorizontal = groupInfoObject.vouchersHorizontal;
+    _groupInfoObject = groupInfoObject;
+    _heightOfTableView.constant = 95 * _listVoucherVertical.count;
     [self.menuCollectionView reloadData];
 }
 
@@ -87,6 +89,12 @@
 
 - (void)didSelectChooseItemWithVoucher:(NSInteger)voucherID {
     [self.delegate didSelectChooseItemWithIDVoucher:voucherID];
+}
+
+- (IBAction)showAllVoucher:(id)sender {
+    if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryID:)]) {
+        [self.delegate didSelectSearchCategoryID:_groupInfoObject.groupId];
+    }
 }
 
 @end

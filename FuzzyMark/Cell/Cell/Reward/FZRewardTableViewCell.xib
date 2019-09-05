@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Muli-Black.ttf">
+            <string>Muli-Black</string>
+        </array>
         <array key="Muli.ttf">
             <string>Muli</string>
         </array>
@@ -20,7 +23,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="135" id="KGk-i7-Jjw" customClass="FZRewardTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="134.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -54,11 +57,20 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pamelia Hanoi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vB-c0-OkE">
+                        <rect key="frame" x="20" y="89" width="102" height="18"/>
+                        <fontDescription key="fontDescription" name="Muli-Black" family="Muli" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="4vB-c0-OkE" firstAttribute="leading" secondItem="2rI-v4-4zh" secondAttribute="leading" constant="10" id="IBn-RM-dDv"/>
                     <constraint firstItem="j26-fS-kgl" firstAttribute="trailing" secondItem="2rI-v4-4zh" secondAttribute="trailing" id="KRQ-VD-8JE"/>
                     <constraint firstItem="2rI-v4-4zh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KTw-1o-Tro"/>
+                    <constraint firstItem="j26-fS-kgl" firstAttribute="centerY" secondItem="4vB-c0-OkE" secondAttribute="centerY" id="Snl-mW-3u0"/>
                     <constraint firstAttribute="bottom" secondItem="2rI-v4-4zh" secondAttribute="bottom" constant="10" id="Yxo-wG-ibe"/>
+                    <constraint firstItem="j26-fS-kgl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4vB-c0-OkE" secondAttribute="trailing" constant="20" id="bl0-Ew-uU1"/>
                     <constraint firstItem="j26-fS-kgl" firstAttribute="bottom" secondItem="2rI-v4-4zh" secondAttribute="bottom" constant="-10" id="d10-2X-qft"/>
                     <constraint firstAttribute="trailing" secondItem="2rI-v4-4zh" secondAttribute="trailing" constant="10" id="dhl-8b-a34"/>
                     <constraint firstItem="2rI-v4-4zh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ux6-eh-WXo"/>
@@ -69,6 +81,7 @@
                 <outlet property="backGroundView" destination="j26-fS-kgl" id="Y5K-0Y-IIa"/>
                 <outlet property="discountLabel" destination="r7B-Pl-10j" id="sKy-Ag-voD"/>
                 <outlet property="image" destination="2rI-v4-4zh" id="bUR-hf-dFv"/>
+                <outlet property="titleLabel" destination="4vB-c0-OkE" id="uBk-XQ-hLc"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="120.20089285714285"/>
         </tableViewCell>

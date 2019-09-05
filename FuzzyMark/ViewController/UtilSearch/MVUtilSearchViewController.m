@@ -90,6 +90,9 @@
             [_objRequest removeSeviceID:wrap.service.idService];
         }
     }
+    if ([self.delegate respondsToSelector:@selector(reloadData)]) {
+        [self.delegate reloadData];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 

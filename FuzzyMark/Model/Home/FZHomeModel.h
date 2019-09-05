@@ -12,9 +12,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class FZHomeViewController;
 @interface FZHomeModel : NSObject
 
-@property (weak, nonatomic) FMBaseViewController *homeViewController;
+@property (weak, nonatomic) FZHomeViewController *homeViewController;
 
 - (void)registerCellForTableView:(UITableView *)tableView;
 - (NSInteger )numberOfSectionsInTableView;

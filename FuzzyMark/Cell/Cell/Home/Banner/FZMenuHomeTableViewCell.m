@@ -12,18 +12,21 @@
 #import "FSPagerViewObjcCompat.h"
 #import "FMMenuHomeCategoryCell.h"
 
-@interface FZMenuHomeTableViewCell() <FSPagerViewDataSource, FSPagerViewDelegate>
+@interface FZMenuHomeTableViewCell() <FSPagerViewDataSource, FSPagerViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet FSPagerView *bannerView;
 @property (weak, nonatomic) IBOutlet FSPageControl *pageControl;
 @property (weak, nonatomic) IBOutlet FSPagerView *fixedView;
 @property (weak, nonatomic) IBOutlet UICollectionView *categoryCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintHeightCollectionView;
 
 @end
 
 @implementation FZMenuHomeTableViewCell {
     NSArray<BannerObject *> *_listBanner;
     NSArray<FixedAdsObject *> *_listFixed;
+    NSArray<IConObject *> *_lisIcon;
+    NSArray<IConObject *> *_lisIconFix;
 }
 
 - (void)awakeFromNib {
@@ -34,16 +37,12 @@
 }
 
 - (void)initUI {
-    
+    [self setBannerView];
+    [self setFixedView];
+    [self setCollectionView];
 }
 
-- (void)initData {
-    [self setDataBannerView];
-    [self setDataFixedView];
-    [self setDataCollectionView];
-}
-
-- (void)setDataBannerView {
+- (void)setBannerView {
     _bannerView.itemSize = FSPagerViewAutomaticSize;
     _bannerView.automaticSlidingInterval = 4;
     _bannerView.isInfinite = YES;
@@ -52,7 +51,7 @@
     _pageControl.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 }
 
-- (void)setDataFixedView {
+- (void)setFixedView {
     _fixedView.itemSize = FSPagerViewAutomaticSize;
     _fixedView.layer.cornerRadius = 5;
     _fixedView.clipsToBounds = YES;
@@ -62,17 +61,35 @@
     [_fixedView registerClass:[FSPagerViewCell class] forCellWithReuseIdentifier:@"cell"];
 }
 
-- (void)setDataCollectionView {
+- (void)setCollectionView {
     [_categoryCollectionView registerNib:[UINib nibWithNibName:@"FMMenuHomeCategoryCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
 }
 
+- (void)initData {
+    IConObject *iconNew = [[IConObject alloc] init];
+    iconNew.image = @"icon_home_news";
+    iconNew.title = @"Tin tức";
+    
+    IConObject *iconMap = [[IConObject alloc] init];
+    iconMap.image = @"icon_home_map";
+    iconMap.title = @"Bản đồ";
+    
+    NSMutableArray *listIcon = [NSMutableArray arrayWithObjects:iconNew, iconMap, nil];
+    _lisIconFix = listIcon.copy;
+}
+
 - (void)bindData:(FZHomeObject *)homeData {
-    _listBanner = homeData.banners;
-    _listFixed = homeData.fixedAds;
+    _listBanner = homeData.banners.copy;
+    _listFixed = homeData.fixedAds.copy;
+    NSMutableArray *arr = [NSMutableArray new];
+    [arr addObjectsFromArray:homeData.iconGroups];
+    [arr addObjectsFromArray:_lisIconFix];
+    _lisIcon = arr.copy;
     _pageControl.numberOfPages = _listBanner.count;
     _pageControl.currentPage = 0;
     [_bannerView reloadData];
     [_fixedView reloadData];
+    [_categoryCollectionView reloadData];
 }
 
 #pragma mark - FSPagerViewDataSource
@@ -99,9 +116,31 @@
 
 #pragma mark - FSPagerView Delegate
 - (void)pagerView:(FSPagerView *)pagerView didSelectItemAtIndex:(NSInteger)index {
+    [pagerView deselectItemAtIndex:index animated:YES];
+    [pagerView scrollToItemAtIndex:index animated:YES];
     if ([pagerView isEqual:_bannerView]) {
-        [pagerView deselectItemAtIndex:index animated:YES];
-        [pagerView scrollToItemAtIndex:index animated:YES];
+        BannerObject *obj;
+        obj = _listBanner[index];
+        if (obj.bannerType == 0) {
+            if ([self.delegate respondsToSelector:@selector(didSelectVoucherID:)]) {
+                [self.delegate didSelectVoucherID:obj.voucherId];
+            }
+        } else {
+            if ([self.delegate respondsToSelector:@selector(didSelectWebviewWithLink:andTitle:)]) {
+                [self.delegate didSelectWebviewWithLink:obj.urlAds andTitle:@""];
+            }
+        }
+    } else {
+        FixedAdsObject *obj = _listFixed[index];
+        if (obj.adType == 0) {
+            if ([self.delegate respondsToSelector:@selector(didSelectVoucherID:)]) {
+                [self.delegate didSelectVoucherID:obj.voucherId];
+            }
+        } else {
+            if ([self.delegate respondsToSelector:@selector(didSelectWebviewWithLink:andTitle:)]) {
+                [self.delegate didSelectWebviewWithLink:obj.urlAds andTitle:@""];
+            }
+        }
     }
 }
 
@@ -114,6 +153,57 @@
 - (void)pagerViewDidEndScrollAnimation:(FSPagerView *)pagerView {
     if ([pagerView isEqual:_bannerView]) {
         self.pageControl.currentPage = pagerView.currentIndex;
+    }
+}
+
+#pragma mark = UICollectionViewDataSource
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _lisIcon.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    FMMenuHomeCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    [cell binDataWithIconGroup:_lisIcon[indexPath.row]];
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    if([indexPath row] == ((NSIndexPath*)[[collectionView indexPathsForVisibleItems] lastObject]).row){
+        if (collectionView.contentSize.height > 148) {
+            self.constraintHeightCollectionView.constant = 148;
+        } else if (collectionView.contentSize.height > 74) {
+            self.constraintHeightCollectionView.constant = 148;
+        } else {
+            self.constraintHeightCollectionView.constant = 74;
+        }
+    }
+}
+
+#pragma mark - UICollectionViewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CGFloat value = [UIScreen mainScreen].bounds.size.width/3;
+    return CGSizeMake(value, 74);
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    IConObject *icon = _lisIcon[indexPath.row];
+    if ([icon.title isEqualToString:@"Bản đồ"] || [icon.title isEqualToString:@"Tin tức"]) {
+        NSLog(@"Chưa có");
+    } else {
+        if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryID:)]) {
+            [self.delegate didSelectSearchCategoryID:icon.adId];
+        }
+    }
+}
+
+- (IBAction)didSelectListSuport:(UIButton *)sender {
+    if ([self.delegate respondsToSelector:@selector(didSelectSuportList:)]) {
+        [self.delegate didSelectSuportList:sender.tag];
     }
 }
 

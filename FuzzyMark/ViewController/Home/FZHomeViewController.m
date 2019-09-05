@@ -20,8 +20,9 @@
 #import "AppDelegate.h"
 #import "FMNewsViewController.h"
 #import "FZSearchViewController.h"
+#import "FMWebViewController.h"
 
-@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, FZItemMenuHomeTableViewDelegate, FZHomeHeaderDelegate>
+@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
@@ -41,7 +42,10 @@
     self.dataModel = [[FZHomeModel alloc] init];
     self.dataModel.homeViewController = self;
     [self.dataModel registerCellForTableView:self.tableView];
-    
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -93,6 +97,7 @@
     return;
 }
 
+#pragma mark - private
 - (void)getDataHome {
     NSDictionary *params = @{};
     [CommonFunction showLoadingView];
@@ -121,62 +126,55 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)didSelectSuportList:(SuportList )indexChoose {
-    switch (indexChoose) {
-        case 0: {
-            FZSearchViewController *searchViewController = [[FZSearchViewController alloc] initWithNibName:@"FZSearchViewController" bundle:nil];
-            [self.navigationController pushViewController:searchViewController animated:YES];
+#pragma mark - FZMenuHomeTableViewCellDelegate
+- (void)didSelectSuportList:(SuportList) suportList {
+    switch (suportList) {
+        case Category_Suport: {
+            [appDelegate selectTabWithIndex:1];
             break;
         }
-        case 1:
-            
+        case Sale_Suport:{
+            FZRewardViewController *rewardViewController = [[FZRewardViewController alloc] initWithNibName:@"FZRewardViewController" bundle:nil];
+            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:rewardViewController];
+            navi.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+            [appDelegate.tabbarController presentViewController:navi animated:YES completion:nil];
             break;
-        case 2:
-            
+        }
+        case Hotline_Suport: {
+            FZHotlineViewController *hotlineViewController = [[FZHotlineViewController alloc] init];
+            hotlineViewController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:hotlineViewController animated:YES];
             break;
-        case 3:
-            
+        }
+        case SNews_Suport: {
+            FMNewsViewController *newsViewController = [[FMNewsViewController alloc] initWithNibName:@"FMNewsViewController" bundle:nil];
+            newsViewController.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:newsViewController animated:YES];
             break;
+        }
         default:
             break;
     }
 }
 
-- (void)didSelectCategoryList:(CategoryList ) indexChoose {
-    NSString *category;
-    switch (indexChoose) {
-        case Restaurant_Category:
-            category = @"Restaurant";
-            break;
-        case Hotel_Category:
-            category = @"Hotel";
-            break;
-        case Travel_Category:
-            category = @"Travel";
-            break;
-        case Store_Category:
-            category = @"Store";
-            break;
-        case News_Category:
-            category = @"News";
-            break;
-        case Map_Category:
-            category = @"Map";
-            break;
-        default:
-            break;
-    }
+- (void)didSelectWebviewWithLink:(NSString *)link andTitle:(NSString *)title {
+    FMWebViewController *vc = [[FMWebViewController alloc] initWithLink:link andTitle:title];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)didSelectVoucherID:(NSInteger)voucherID {
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:voucherID];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)didSelectSearchCategoryID:(NSInteger)categoryID {
     FMVouchersObjecRequest *obj = [[FMVouchersObjecRequest alloc] init];
-    [obj addCategoryID:1];
-    FZVourchersSearchViewController *rewardInfoVC = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
-    rewardInfoVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:rewardInfoVC animated:YES];
-}
-
-- (void)clickToHotline {
-    FZHotlineViewController *hotlineViewController = [[FZHotlineViewController alloc] initWithNibName:@"FZHotlineViewController" bundle:nil];
-    hotlineViewController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:hotlineViewController animated:YES];
+    [obj addCategoryID:categoryID];
+    FZVourchersSearchViewController *vc = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - FZHomeHeaderDelegate
@@ -185,16 +183,11 @@
 }
 
 - (void)clickReward {
-    FZRewardViewController *rewardViewController = [[FZRewardViewController alloc] initWithNibName:@"FZRewardViewController" bundle:nil];
-    rewardViewController.hidesBottomBarWhenPushed = YES;
-//    rewardViewController.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-    [self.navigationController pushViewController:rewardViewController animated:YES];
+    
 }
 
 - (void)clickNews {
-    FMNewsViewController *newsViewController = [[FMNewsViewController alloc] initWithNibName:@"FMNewsViewController" bundle:nil];
-    newsViewController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:newsViewController animated:YES];
+    
 }
 
 @end

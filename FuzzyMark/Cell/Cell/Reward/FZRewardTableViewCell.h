@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (weak, nonatomic) IBOutlet UIView *backGroundView;
 @property (weak, nonatomic) IBOutlet UILabel *discountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 - (void)bindData:(Promotion *)reward;
 

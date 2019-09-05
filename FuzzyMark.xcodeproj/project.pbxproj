@@ -84,6 +84,8 @@
 		4F569FFB231CC9C500901AA1 /* MVUtilSearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F569FF9231CC9C500901AA1 /* MVUtilSearchCell.xib */; };
 		4F569FFD231CD96300901AA1 /* UtilSearch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F569FFC231CD96300901AA1 /* UtilSearch.xcassets */; };
 		4F56A001231D0CE400901AA1 /* FMVouchersObjecRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F56A000231D0CE400901AA1 /* FMVouchersObjecRequest.m */; };
+		4F592F0923216F3900287AE8 /* FMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F592F0723216F3900287AE8 /* FMWebViewController.m */; };
+		4F592F0A23216F3900287AE8 /* FMWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F592F0823216F3900287AE8 /* FMWebViewController.xib */; };
 		4F59B22C231CBD01007A8EB0 /* MVUtilSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F59B22A231CBD01007A8EB0 /* MVUtilSearchViewController.m */; };
 		4F59B22D231CBD01007A8EB0 /* MVUtilSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F59B22B231CBD01007A8EB0 /* MVUtilSearchViewController.xib */; };
 		4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5AD98F22BBF5BB007537A4 /* FMBaseListItemVC.m */; };
@@ -404,6 +406,9 @@
 		4F569FFC231CD96300901AA1 /* UtilSearch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = UtilSearch.xcassets; sourceTree = "<group>"; };
 		4F569FFF231D0CE400901AA1 /* FMVouchersObjecRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMVouchersObjecRequest.h; sourceTree = "<group>"; };
 		4F56A000231D0CE400901AA1 /* FMVouchersObjecRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMVouchersObjecRequest.m; sourceTree = "<group>"; };
+		4F592F0623216F3900287AE8 /* FMWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMWebViewController.h; sourceTree = "<group>"; };
+		4F592F0723216F3900287AE8 /* FMWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMWebViewController.m; sourceTree = "<group>"; };
+		4F592F0823216F3900287AE8 /* FMWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMWebViewController.xib; sourceTree = "<group>"; };
 		4F59B229231CBD01007A8EB0 /* MVUtilSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MVUtilSearchViewController.h; sourceTree = "<group>"; };
 		4F59B22A231CBD01007A8EB0 /* MVUtilSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVUtilSearchViewController.m; sourceTree = "<group>"; };
 		4F59B22B231CBD01007A8EB0 /* MVUtilSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVUtilSearchViewController.xib; sourceTree = "<group>"; };
@@ -980,6 +985,16 @@
 				4F569FF9231CC9C500901AA1 /* MVUtilSearchCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4F592F0523216F1100287AE8 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				4F592F0623216F3900287AE8 /* FMWebViewController.h */,
+				4F592F0723216F3900287AE8 /* FMWebViewController.m */,
+				4F592F0823216F3900287AE8 /* FMWebViewController.xib */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		4F5F44EA2318D71100D58817 /* PageInfoDetail */ = {
@@ -1757,6 +1772,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4F592F0523216F1100287AE8 /* WebView */,
 				4FE8E98C231CB88E008769C3 /* UtilSearch */,
 				5C5D08D02310540E0017942B /* Rewards */,
 				4FFB57072308FD7F00B67057 /* Popup */,
@@ -2163,6 +2179,7 @@
 				5C39102B2263492A008BEA62 /* README.md in Resources */,
 				4F50F4052276EDBC00DF7173 /* Muli-Italic.ttf in Resources */,
 				4F59B22D231CBD01007A8EB0 /* MVUtilSearchViewController.xib in Resources */,
+				4F592F0A23216F3900287AE8 /* FMWebViewController.xib in Resources */,
 				4FF9C3C82291397500D3AD81 /* DetailHistoryBill.xcassets in Resources */,
 				5C9862AE2264E45D00545DCC /* FZMenuHomeTableViewCell.xib in Resources */,
 				4FF7280822EDA70E000C8AB8 /* FMForgotPasswordVC.xib in Resources */,
@@ -2306,6 +2323,7 @@
 				4FF9C3D52291A2E300D3AD81 /* FMRegisterPromotionModel.m in Sources */,
 				4F472D4B229083CB00F93D39 /* FMChangePhoneNumberViewController.m in Sources */,
 				4FF9C3BA2290F31F00D3AD81 /* FMBaseTableViewModel.m in Sources */,
+				4F592F0923216F3900287AE8 /* FMWebViewController.m in Sources */,
 				5C6BFAE3225D668600A26400 /* FuzzyMark.xcdatamodeld in Sources */,
 				4F50F3192276E8F300DF7173 /* AppDelegate.m in Sources */,
 				4F25D6EA22BAEF3C00C27190 /* FMListItemGiftVC.m in Sources */,

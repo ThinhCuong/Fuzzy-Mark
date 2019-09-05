@@ -24,6 +24,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.imgIcon.layer.cornerRadius = self.imgIcon.frame.size.height/2;
 }
 
 - (void)binDataWithVoucher:(Voucher *) model {

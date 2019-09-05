@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.hideNav = YES;
     [self.tableView registerNib:[UINib nibWithNibName:@"FZRewardTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZRewardTableViewCell"];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
@@ -43,7 +44,7 @@
 }
 
 - (IBAction)closePopupAction:(UIButton *)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -17,7 +17,7 @@
 #import "FMPageDetailVC.h"
 #import "MVUtilSearchViewController.h"
 
-@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell, UISearchBarDelegate>
+@interface FZVourchersSearchViewController ()<UITableViewDataSource, UITableViewDelegate, FMUpdateTableDataProtocol, LocationFavoriteTableViewCell, UISearchBarDelegate, MVUtilSearchViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -206,6 +206,7 @@
 #pragma mark - IBAction
 - (IBAction)didSelectFilter:(id)sender {
     MVUtilSearchViewController *vc = [[MVUtilSearchViewController alloc] initWith:self.model.objRequest];
+    vc.delegate = self;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -222,6 +223,12 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [_searchBar endEditing:YES];
+}
+
+#pragma - mark - MVUtilSearchViewControllerDelegate
+- (void)reloadData {
+    [CommonFunction showLoadingView];
+    [self callDataRefresh];
 }
 
 @end

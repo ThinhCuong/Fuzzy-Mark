@@ -16,7 +16,11 @@
 }
 
 - (void)binDataWithIconGroup:(IConObject *) obj {
-    [self.imvCategory sd_setImageWithURL:obj.image];
+    if (![obj.image isEqualToString:@"icon_home_news"] && ![obj.image isEqualToString:@"icon_home_map"]) {
+        [self.imvCategory sd_setImageWithURL:[NSURL URLWithString:obj.image]];
+    } else {
+        self.imvCategory.image = [UIImage imageNamed:obj.image];
+    }
     self.lbCategory.text = obj.title?:@"";
 }
 

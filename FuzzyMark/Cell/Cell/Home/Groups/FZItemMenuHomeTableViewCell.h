@@ -14,13 +14,15 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FZItemMenuHomeTableViewDelegate <NSObject>
 
 - (void)didSelectChooseItemWithIDVoucher:(NSInteger )idVoucher;
+- (void)didSelectSearchCategoryID:(NSInteger)categoryID;
 
 @end
 
 @interface FZItemMenuHomeTableViewCell : UITableViewCell
 
 @property (assign, nonatomic) id<FZItemMenuHomeTableViewDelegate> delegate;
-- (void)bindData:(NSArray<RewardObject *> *)listVoucherVertical listVoucherHorizontal:(NSArray<RewardObject *> *)listVoucherHorizontal;
+
+- (void)bindData:(GroupInfoObject *) groupInfoObject;
 
 @end
 

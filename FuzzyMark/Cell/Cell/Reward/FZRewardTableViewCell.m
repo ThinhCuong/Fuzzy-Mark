@@ -19,19 +19,13 @@
     [self setBackgroundGradient:self.backGroundView color1Red:128 color1Green:216 color1Blue:255 color2Red:234 color2Green:128 color2Blue:252 alpha:0.9];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 - (void)bindData:(Promotion *)reward {
     [self.image sd_setImageWithURL: [NSURL URLWithString:reward.image]];
     self.discountLabel.text = [NSString stringWithFormat:@"Hoàn tiền %ld %s", (long)reward.percentDiscount, "%"];
+    self.titleLabel.text = reward.name?:@"";
 }
 
-- (void)setBackgroundGradient:(UIView *)mainView color1Red:(float)colorR1 color1Green:(float)colorG1 color1Blue:(float)colorB1 color2Red:(float)colorR2 color2Green:(float)colorG2 color2Blue:(float)colorB2 alpha:(float)alpha
-{
+- (void)setBackgroundGradient:(UIView *)mainView color1Red:(float)colorR1 color1Green:(float)colorG1 color1Blue:(float)colorB1 color2Red:(float)colorR2 color2Green:(float)colorG2 color2Blue:(float)colorB2 alpha:(float)alpha {
     
     [mainView setBackgroundColor:[UIColor clearColor]];
     CAGradientLayer *grad = [CAGradientLayer layer];

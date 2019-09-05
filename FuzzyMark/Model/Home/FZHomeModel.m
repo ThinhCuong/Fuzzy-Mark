@@ -55,11 +55,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FZMenuHomeTableViewCell *menuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZMenuHomeTableViewCell"];
+        menuHomeCell.delegate = self.homeViewController;
         [menuHomeCell bindData:_homeData];
         return menuHomeCell;
     } else {
         FZItemMenuHomeTableViewCell *itemMenuHomeCell = [tableView dequeueReusableCellWithIdentifier:@"FZItemMenuHomeTableViewCell"];
-        [itemMenuHomeCell bindData:_homeData.groups[indexPath.row].vouchersVertical listVoucherHorizontal:_homeData.groups[indexPath.row].vouchersHorizontal];
+        itemMenuHomeCell.delegate = self.homeViewController;
+        [itemMenuHomeCell bindData:_homeData.groups[indexPath.row]];
         return itemMenuHomeCell;
     }
 }
