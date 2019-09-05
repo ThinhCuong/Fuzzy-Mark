@@ -58,8 +58,30 @@
     }
     
     _idPage = groupInfo.page.pageId;
-
 }
+
+- (void)bindDataPage:(PageObject *)pageObject currentLocation:(CLLocationCoordinate2D)currentLocation {
+    [self.imgLogo sd_setImageWithURL: [NSURL URLWithString:pageObject.image]];
+    self.lblName.text = pageObject.name;
+    self.lblMoney.text = [NSString stringWithFormat:@"Hoàn tiền %ld%@", (long)pageObject.discount, @"%"];
+    self.lblLocation.text = pageObject.address;
+    self.lblNumberRate.text = [NSString stringWithFormat:@"%ld", (long)pageObject.total_rate];
+    self.lblNumberComment.text = [NSString stringWithFormat:@"(%ld)", (long)pageObject.rate_count];
+    
+    CLLocation *locA = [[CLLocation alloc] initWithLatitude:currentLocation.latitude longitude:currentLocation.longitude];
+    CLLocation *locB = [[CLLocation alloc] initWithLatitude:[pageObject.location.lat doubleValue] longitude:[pageObject.location.lng doubleValue]];
+    CLLocationDistance distance = [locA distanceFromLocation:locB];
+    
+    if (distance < 1000) {
+        self.lblDistance.text = [NSString stringWithFormat:@"%.1f m", distance];
+    } else {
+        self.lblDistance.text = [NSString stringWithFormat:@"%.1f km", distance / 1000];
+    }
+    
+    _idPage = pageObject.pageId;
+}
+
+
 - (IBAction)didSelectShowPage:(id)sender {
     if ([self.delegate respondsToSelector:@selector(showDetailPageWithID:)]) {
         [self.delegate showDetailPageWithID:_idPage];

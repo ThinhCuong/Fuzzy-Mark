@@ -209,6 +209,37 @@ constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))b
     [self.listTask addObject:task];
 }
 
+- (void)deleteDataWithPath:(NSString * _Nullable)path
+                 bodyParam:(NSDictionary * _Nullable)bodyParam
+               isSendToken:(BOOL)isSendToken
+        isShowfailureAlert:(BOOL)isShowfailureAlert
+          withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+             withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock {
+    
+    self.requestSerializer.HTTPMethodsEncodingParametersInURI = [NSSet setWithObjects:@"GET", @"HEAD", nil];
+    
+    // init param with common param
+    NSDictionary *newParams = [self createCommonParam:bodyParam];
+    
+    // send token
+    if (isSendToken) {
+        [self.requestSerializer setValue:[UserInfo getUserToken] forHTTPHeaderField:@"Authorization"];
+    } else {
+        [self.requestSerializer clearAuthorizationHeader];
+    }
+    
+    NSURLSessionDataTask *task = [self DELETE:path parameters:newParams success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        self.requestSerializer.HTTPMethodsEncodingParametersInURI = [NSSet setWithObjects:@"GET", @"HEAD", @"DELETE", nil];
+        successBlock ? successBlock(responseObject) : 0;
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        self.requestSerializer.HTTPMethodsEncodingParametersInURI = [NSSet setWithObjects:@"GET", @"HEAD", @"DELETE", nil];
+        failureBlock ? failureBlock(error) : nil;
+    }];
+    
+    [self.listTask addObject:task];
+    
+}
+
 - (NSDictionary *)createCommonParam:(NSDictionary *)commonParam {
     NSMutableDictionary *listParam = commonParam.mutableCopy;
     return listParam;

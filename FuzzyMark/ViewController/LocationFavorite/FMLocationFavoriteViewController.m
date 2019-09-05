@@ -9,14 +9,21 @@
 #import "FMLocationFavoriteViewController.h"
 #import "LocationFavoriteTableViewCell.h"
 #import "FMLocationFavoriteModel.h"
+#import "FMPageDetailVC.h"
 
-@interface FMLocationFavoriteViewController () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol>
+@interface FMLocationFavoriteViewController () <UITableViewDelegate, UITableViewDataSource, FMUpdateTableDataProtocol, CLLocationManagerDelegate, LocationFavoriteTableViewCell>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) FMLocationFavoriteModel *model;
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
+
+
 @end
 
 @implementation FMLocationFavoriteViewController {
-    NSArray *_listData;
+    NSArray <PageObject*>*_listData;
     UIRefreshControl *_topRFControl;
     UIRefreshControl *_bottomRFControl;
     BOOL _isRefresh;
@@ -38,8 +45,9 @@
     [super viewDidLoad];
     self.navTitle = @"Địa điểm quan tâm";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ic_filter"] style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightBarButtonItem)];
+    [self setLocationManager];
     [self setTableView];
-//    [self callDataRefresh];
+    [self callDataRefresh];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -50,6 +58,18 @@
 }
 
 #pragma mark - private
+- (void)setLocationManager {
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    
+    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+        [_locationManager requestWhenInUseAuthorization];
+    }else{
+        [_locationManager startUpdatingLocation];
+    }
+}
+
 - (void)setTableView {
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -94,6 +114,21 @@
     _isRefresh = NO;
 }
 
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        [_locationManager startUpdatingLocation];
+        _coordinate = [[_locationManager location] coordinate];
+    } else if (status == kCLAuthorizationStatusDenied) {
+        [CommonFunction showToast:@"Bạn cần vào cài đặt cấp quyền vị trí cho ứng dụng"];
+    } else if (status == kCLAuthorizationStatusNotDetermined) {
+        if ([manager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [manager requestWhenInUseAuthorization];
+            [_locationManager startUpdatingLocation];
+        }
+    }
+}
+
 #pragma mark - FMUpdateDataProtocol
 - (void)updateViewDataSuccess:(NSMutableArray *) listData {
     [self stopAnimationRefresh];
@@ -115,17 +150,27 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return _listData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    PageObject *obj = _listData[indexPath.row];
     LocationFavoriteTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.delegate = self;
+    [cell bindDataPage:obj currentLocation:_coordinate];
     return cell;
 }
 
 #pragma mark - TableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - LocationFavoriteTableViewCell
+- (void)showDetailPageWithID:(NSInteger)idPage {
+    FMPageDetailVC *vc = [[FMPageDetailVC alloc] initWithIDPage:idPage];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

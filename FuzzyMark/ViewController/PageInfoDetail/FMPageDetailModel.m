@@ -65,13 +65,10 @@
     }];
 }
 
-- (void)deletePageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock {
-    NSDictionary *param = @{@"id": @(idPage),
-                            @"page_name": pageName?:@""
-                            };
+- (void)deletePageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) successBlock {
+    NSDictionary *param = @{@"id": @(idPage)};
     [CommonFunction showLoadingView];
-    [_httpClient deleteDataWithPath:DELETE_PAGES_DELETE_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
-    [_httpClient deleteDataWithPath:DELETE_PAGES_DELETE_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+    [_httpClient deleteDataWithPath:DELETE_PAGES_DELETE_INTERESTED bodyParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
         [CommonFunction hideLoadingView];
         if ([success isKindOfClass:NSDictionary.class]) {
             if ([success codeForKey:@"error_code"] == 0) {

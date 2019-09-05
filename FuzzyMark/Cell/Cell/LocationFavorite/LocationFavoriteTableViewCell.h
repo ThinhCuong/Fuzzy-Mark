@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) id<LocationFavoriteTableViewCell>delegate;
 
 - (void)bindData:(RewardObject *)groupInfo currentLocation:(CLLocationCoordinate2D)currentLocation;
+- (void)bindDataPage:(PageObject *)pageObject currentLocation:(CLLocationCoordinate2D)currentLocation;
+
 
 @end
 

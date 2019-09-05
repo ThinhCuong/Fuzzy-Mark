@@ -242,7 +242,7 @@
 - (IBAction)didSelectLikeAction:(id)sender {
     __block FMPageDetailVC *blockSelf = self;
     if (self.btLike.selected) {
-        [self.model deletePageInterested:_idPage pageName:_pageInfo.page_view.name withSuccessBlock:^(BOOL success) {
+        [self.model deletePageInterested:_idPage withSuccessBlock:^(BOOL success) {
             if (success) {
                 blockSelf.btLike.selected = !blockSelf.btLike.selected;
             } else {

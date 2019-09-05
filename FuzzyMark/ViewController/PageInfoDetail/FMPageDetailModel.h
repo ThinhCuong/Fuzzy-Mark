@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)getPageInfoWithIDPage:(NSInteger)idPage;
 - (void)addPageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock;
-- (void)deletePageInterested:(NSInteger) idPage pageName:(NSString *) pageName withSuccessBlock:(void (^) (BOOL)) successBlock;
+- (void)deletePageInterested:(NSInteger) idPage withSuccessBlock:(void (^) (BOOL)) successBlock;
 
 @end
 

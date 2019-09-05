@@ -70,4 +70,12 @@ constructingBodyWithBlock:(nullable void (^)(id<AFMultipartFormData> _Nonnull))b
           withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
              withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
 
+- (void)deleteDataWithPath:(NSString * _Nullable)path
+                 bodyParam:(NSDictionary * _Nullable)bodyParam
+               isSendToken:(BOOL)isSendToken
+        isShowfailureAlert:(BOOL)isShowfailureAlert
+          withSuccessBlock:(void(^ _Nullable)(id _Nullable))successBlock
+             withFailBlock:(void(^ _Nullable)(id _Nullable))failureBlock;
+
+
 @end
