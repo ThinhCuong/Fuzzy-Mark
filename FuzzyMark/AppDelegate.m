@@ -176,7 +176,7 @@
                     successBlock(NO);
                 }
             };
-            UIViewController *topVC = [self getTopViewController];
+            UIViewController *topVC = self.tabbarController.presentedViewController? [self getTopViewController]:self.tabbarController;
             [topVC presentViewController:navi animated:YES completion:nil];
         };
         
@@ -184,7 +184,7 @@
             successBlock(NO);
         };
         
-        UIViewController *topVC = [self getTopViewController];
+        UIViewController *topVC = self.tabbarController.presentedViewController? [self getTopViewController]:self.tabbarController;
         [topVC presentViewController:vc animated:YES completion:nil];
         
         return;
