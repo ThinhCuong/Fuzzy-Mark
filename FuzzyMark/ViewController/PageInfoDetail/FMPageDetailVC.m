@@ -220,18 +220,6 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (IBAction)didSelectTakePhoto:(id)sender {
-    __block FMPageDetailVC *_blockSelf = self;
-    [appDelegate loginRequiredWithSuccessBlock:^(BOOL isSuccess) {
-        if(!isSuccess) {
-            return;
-        }
-        FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_blockSelf->_idPage];
-        vc.hidesBottomBarWhenPushed = YES;
-        [_blockSelf.navigationController pushViewController:vc animated:YES];
-    }];
-}
-
 -(IBAction)didSelectShareAction:(id)sender {
     NSArray* sharedObjects=[NSArray arrayWithObjects:@"sharecontent",  nil];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:sharedObjects applicationActivities:nil];
@@ -241,23 +229,28 @@
 
 - (IBAction)didSelectLikeAction:(id)sender {
     __block FMPageDetailVC *blockSelf = self;
-    if (self.btLike.selected) {
-        [self.model deletePageInterested:_idPage withSuccessBlock:^(BOOL success) {
-            if (success) {
-                blockSelf.btLike.selected = !blockSelf.btLike.selected;
-            } else {
-                [CommonFunction showToast:kMessageError];
-            }
-        }];
-    } else {
-        [self.model addPageInterested:_idPage pageName:_pageInfo.page_view.name withSuccessBlock:^(BOOL success) {
-            if (success) {
-                blockSelf.btLike.selected = !blockSelf.btLike.selected;
-            } else {
-                [CommonFunction showToast:kMessageError];
-            }
-        }];
-    }
+    [appDelegate loginRequiredWithSuccessBlock:^(BOOL isSuccess) {
+        if(!isSuccess) {
+            return;
+        }
+        if (self.btLike.selected) {
+            [self.model deletePageInterested:blockSelf->_idPage withSuccessBlock:^(BOOL success) {
+                if (success) {
+                    blockSelf.btLike.selected = !blockSelf.btLike.selected;
+                } else {
+                    [CommonFunction showToast:kMessageError];
+                }
+            }];
+        } else {
+            [self.model addPageInterested:blockSelf->_idPage pageName:blockSelf->_pageInfo.page_view.name withSuccessBlock:^(BOOL success) {
+                if (success) {
+                    blockSelf.btLike.selected = !blockSelf.btLike.selected;
+                } else {
+                    [CommonFunction showToast:kMessageError];
+                }
+            }];
+        }
+    }];
 }
 
 #pragma mark - UIPageViewControllerDataSource
