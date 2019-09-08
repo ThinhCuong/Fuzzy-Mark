@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FZNewsContentTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
-- (void)bindData:(NSString *)content;
+- (void)bindData:(NSString *)content title:(NSString *) title;
 
 @end
 

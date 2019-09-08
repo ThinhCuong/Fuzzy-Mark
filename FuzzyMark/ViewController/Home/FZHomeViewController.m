@@ -22,12 +22,14 @@
 #import "FZSearchViewController.h"
 #import "FMWebViewController.h"
 
-@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) FZHomeModel *dataModel;
 @property (strong, nonatomic) NSArray *listBanner;
 @property (nonatomic, strong) NSMutableArray<GroupInfoObject *> *groups;
+@property (strong, nonatomic) CLLocationManager *locationManager;
+@property (assign, nonatomic) CLLocationCoordinate2D coordinate;
 
 @end
 
@@ -42,10 +44,38 @@
     self.dataModel = [[FZHomeModel alloc] init];
     self.dataModel.homeViewController = self;
     [self.dataModel registerCellForTableView:self.tableView];
+    [self setLocationCurren];
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)setLocationCurren {
+    _locationManager = [[CLLocationManager alloc] init];
+    _locationManager.delegate = self;
+    
+    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
+    if([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]){
+        [_locationManager requestWhenInUseAuthorization];
+    }else{
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+#pragma mark - CLLocationManagerDelegate
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusAuthorizedAlways) {
+        [_locationManager startUpdatingLocation];
+        _coordinate = [[_locationManager location] coordinate];
+    } else if (status == kCLAuthorizationStatusDenied) {
+        [CommonFunction showToast:@"Bạn cần vào cài đặt cấp quyền vị trí cho ứng dụng"];
+    } else if (status == kCLAuthorizationStatusNotDetermined) {
+        if ([manager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [manager requestWhenInUseAuthorization];
+            [_locationManager startUpdatingLocation];
+        }
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -147,7 +177,7 @@
             break;
         }
         case SNews_Suport: {
-            FMNewsViewController *newsViewController = [[FMNewsViewController alloc] initWithNibName:@"FMNewsViewController" bundle:nil];
+            FMNewsViewController *newsViewController = [[FMNewsViewController alloc] init];
             newsViewController.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:newsViewController animated:YES];
             break;
@@ -175,6 +205,33 @@
     FZVourchersSearchViewController *vc = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)didSelectSearchCategoryNew {
+    
+}
+
+- (void)didSelectSearchCategoryMap {
+    
+    NSURL *appleURL = [NSURL URLWithString:@"http://maps.apple.com/?daddr=311+East+Buckfield+Road+Buckfield+Maine"];
+    
+    NSURL *googleURL = [[NSURL alloc]
+                        initWithString:[NSString stringWithFormat:@"comgooglemaps://?daddr=%@", @"44.294349,-70.326973"]];
+    
+    NSURL *googleWebURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://www.maps.google.com/maps?daddr=%@",
+                                   @"44.294349,-70.326973"]];
+    
+    if ([[UIApplication sharedApplication] canOpenURL:appleURL]) {
+        [[UIApplication sharedApplication] openURL:appleURL options:@{} completionHandler:nil];
+        return;
+    }
+
+    if ([[UIApplication sharedApplication] canOpenURL:googleURL]) {
+        [[UIApplication sharedApplication] openURL:googleURL options:@{} completionHandler:nil];
+        return;
+    } else {
+        [[UIApplication sharedApplication] openURL:googleWebURL options:@{} completionHandler:nil];
+    }
 }
 
 #pragma mark - FZHomeHeaderDelegate

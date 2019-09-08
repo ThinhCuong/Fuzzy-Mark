@@ -76,6 +76,7 @@ typedef NS_ENUM(NSInteger, StatusType) {
 #define DELETE_PAGES_DELETE_INTERESTED              @"pages/delete-interested"
 #define GET_PAGES_RATES_PAGE                        @"pages/rates-page"
 #define POST_PAGES_RATE                             @"pages/rate"
+#define GET_NEWS_FULL_NEWS                          @"news/full-news"
 
 /* Value */
 #define NUMBER_ITEM_CALL_API                        @50

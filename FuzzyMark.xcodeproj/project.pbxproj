@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F00C821227A246C0073B583 /* FMUserInforModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C820227A246C0073B583 /* FMUserInforModel.m */; };
 		4F00C824227A2D580073B583 /* FMCellBlockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F00C823227A2D580073B583 /* FMCellBlockObject.m */; };
+		4F0B5D922323FF2F00A0FF3F /* FMNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0B5D912323FF2F00A0FF3F /* FMNewsModel.m */; };
 		4F0FB59B231175060094F211 /* TransactionInfoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0FB59A231175060094F211 /* TransactionInfoObject.m */; };
 		4F10755D2306E4D70029FC91 /* HistoryCaptureObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F10755C2306E4D70029FC91 /* HistoryCaptureObject.m */; };
 		4F1BCBD822ECB88100466B51 /* UIImage+Support.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F1BCBD722ECB88100466B51 /* UIImage+Support.m */; };
@@ -105,6 +106,8 @@
 		4F6D65BC228F02430092CA53 /* ChangeUserInfor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BB228F02430092CA53 /* ChangeUserInfor.xcassets */; };
 		4F6D65C0228FC9520092CA53 /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F6D65BE228FC9520092CA53 /* DatePickerViewController.m */; };
 		4F6D65C1228FC9520092CA53 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BF228FC9520092CA53 /* DatePickerViewController.xib */; };
+		4F7027E123240EEA0054538A /* FMNewsViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7027DF23240EEA0054538A /* FMNewsViewTableViewCell.m */; };
+		4F7027E223240EEA0054538A /* FMNewsViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7027E023240EEA0054538A /* FMNewsViewTableViewCell.xib */; };
 		4FA08BD1231A683B006BEE4E /* FMPageDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */; };
 		4FB0B27922B9A63700487D66 /* FMPromotionLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0B27722B9A63700487D66 /* FMPromotionLocationCell.m */; };
 		4FB0B27A22B9A63700487D66 /* FMPromotionLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0B27822B9A63700487D66 /* FMPromotionLocationCell.xib */; };
@@ -290,6 +293,8 @@
 		4F00C820227A246C0073B583 /* FMUserInforModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMUserInforModel.m; sourceTree = "<group>"; };
 		4F00C822227A2D580073B583 /* FMCellBlockObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMCellBlockObject.h; sourceTree = "<group>"; };
 		4F00C823227A2D580073B583 /* FMCellBlockObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMCellBlockObject.m; sourceTree = "<group>"; };
+		4F0B5D902323FF2F00A0FF3F /* FMNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMNewsModel.h; sourceTree = "<group>"; };
+		4F0B5D912323FF2F00A0FF3F /* FMNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNewsModel.m; sourceTree = "<group>"; };
 		4F0FB599231175060094F211 /* TransactionInfoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionInfoObject.h; sourceTree = "<group>"; };
 		4F0FB59A231175060094F211 /* TransactionInfoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionInfoObject.m; sourceTree = "<group>"; };
 		4F10755B2306E4D70029FC91 /* HistoryCaptureObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCaptureObject.h; sourceTree = "<group>"; };
@@ -438,6 +443,9 @@
 		4F6D65BD228FC9520092CA53 /* DatePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		4F6D65BE228FC9520092CA53 /* DatePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
 		4F6D65BF228FC9520092CA53 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		4F7027DE23240EEA0054538A /* FMNewsViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMNewsViewTableViewCell.h; sourceTree = "<group>"; };
+		4F7027DF23240EEA0054538A /* FMNewsViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNewsViewTableViewCell.m; sourceTree = "<group>"; };
+		4F7027E023240EEA0054538A /* FMNewsViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMNewsViewTableViewCell.xib; sourceTree = "<group>"; };
 		4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FMPageDetail.xcassets; sourceTree = "<group>"; };
 		4FB0B27622B9A63700487D66 /* FMPromotionLocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPromotionLocationCell.h; sourceTree = "<group>"; };
 		4FB0B27722B9A63700487D66 /* FMPromotionLocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionLocationCell.m; sourceTree = "<group>"; };
@@ -864,6 +872,8 @@
 				5CFE50222312F0CC00FC7B66 /* FZNewsInfoDetailViewController.h */,
 				5CFE50232312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m */,
 				5CFE50242312F0CC00FC7B66 /* FZNewsInfoDetailViewController.xib */,
+				4F0B5D902323FF2F00A0FF3F /* FMNewsModel.h */,
+				4F0B5D912323FF2F00A0FF3F /* FMNewsModel.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -908,18 +918,21 @@
 		4F50F3A92276EA9400DF7173 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				4F50F3782276E9A700DF7173 /* FMSecondsNewsTableViewCell.m */,
-				4F50F3792276E9A700DF7173 /* FMFirstNewsTableViewCell.m */,
-				4F50F37A2276E9A700DF7173 /* FMNewsCollectionViewCell.h */,
-				4F50F37B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib */,
-				4F50F37C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib */,
 				4F50F37D2276E9A700DF7173 /* FMFirstNewsTableViewCell.h */,
+				4F50F3792276E9A700DF7173 /* FMFirstNewsTableViewCell.m */,
+				4F50F37C2276E9A700DF7173 /* FMFirstNewsTableViewCell.xib */,
 				4F50F37E2276E9A700DF7173 /* FMSecondsNewsTableViewCell.h */,
+				4F50F3782276E9A700DF7173 /* FMSecondsNewsTableViewCell.m */,
+				4F50F37B2276E9A700DF7173 /* FMSecondsNewsTableViewCell.xib */,
+				4F50F37A2276E9A700DF7173 /* FMNewsCollectionViewCell.h */,
 				4F50F37F2276E9A700DF7173 /* FMNewsCollectionViewCell.m */,
 				4F50F3802276E9A700DF7173 /* FMNewsCollectionViewCell.xib */,
 				5CFC074F23134B4D009F4E6D /* FZNewsContentTableViewCell.h */,
 				5CFC075023134B4D009F4E6D /* FZNewsContentTableViewCell.m */,
 				5CFC075123134B4D009F4E6D /* FZNewsContentTableViewCell.xib */,
+				4F7027DE23240EEA0054538A /* FMNewsViewTableViewCell.h */,
+				4F7027DF23240EEA0054538A /* FMNewsViewTableViewCell.m */,
+				4F7027E023240EEA0054538A /* FMNewsViewTableViewCell.xib */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -2151,6 +2164,7 @@
 				4F472D34229076C900F93D39 /* FMOTPViewController.xib in Resources */,
 				4F25D6EB22BAEF3C00C27190 /* FMListItemGiftVC.xib in Resources */,
 				5C87BDD5227F4A4F00EE6929 /* FZItemMenuVerticalTableViewCell.xib in Resources */,
+				4F7027E223240EEA0054538A /* FMNewsViewTableViewCell.xib in Resources */,
 				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
 				4FBD3D84228D974300E76E2A /* FMHistoryPointViewController.xib in Resources */,
 				4F569FFB231CC9C500901AA1 /* MVUtilSearchCell.xib in Resources */,
@@ -2317,6 +2331,7 @@
 				4F50F3A42276E9A700DF7173 /* FMTabBarController.m in Sources */,
 				4F50F3A82276EA5C00DF7173 /* CommonFunction.m in Sources */,
 				4F5AD99022BBF5BB007537A4 /* FMBaseListItemVC.m in Sources */,
+				4F0B5D922323FF2F00A0FF3F /* FMNewsModel.m in Sources */,
 				5CFE50252312F0CC00FC7B66 /* FZNewsInfoDetailViewController.m in Sources */,
 				4F50F38F2276E9A700DF7173 /* FMUserInforTableViewCell.m in Sources */,
 				4F25D6E522BAE64800C27190 /* FMListItemIntroduceVC.m in Sources */,
@@ -2394,6 +2409,7 @@
 				4FDACD14227F67F100A8571E /* FMItemHistoryBillModel.m in Sources */,
 				5C435918229F656000844AA0 /* FZHeaderItemCollectionViewCell.m in Sources */,
 				4FF0149F227EEDAB0063093C /* Voucher.m in Sources */,
+				4F7027E123240EEA0054538A /* FMNewsViewTableViewCell.m in Sources */,
 				5C6BFAEB225D668800A26400 /* main.m in Sources */,
 				5C563DD622B16F28006AB186 /* FZVourchersSearchViewController.m in Sources */,
 				5CFC075223134B4D009F4E6D /* FZNewsContentTableViewCell.m in Sources */,

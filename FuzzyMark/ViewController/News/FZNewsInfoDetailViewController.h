@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface FZNewsInfoDetailViewController : FMBaseViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 - (void)callNewsFullNews:(NSString *)newsId;
 

@@ -21,7 +21,8 @@
     // Configure the view for the selected state
 }
 
-- (void)bindData:(NSString *)content {
+- (void)bindData:(NSString *)content title:(NSString *) title {
     self.contentLabel.attributedText = [CommonFunction convertHTMLString:content?:@""];
+    self.titleLabel.text = title;
 }
 @end

@@ -69,10 +69,12 @@
     IConObject *iconNew = [[IConObject alloc] init];
     iconNew.image = @"icon_home_news";
     iconNew.title = @"Tin tức";
+    iconNew.adId =  CategoryNew;
     
     IConObject *iconMap = [[IConObject alloc] init];
     iconMap.image = @"icon_home_map";
     iconMap.title = @"Bản đồ";
+    iconMap.adId = CategoryMap;
     
     NSMutableArray *listIcon = [NSMutableArray arrayWithObjects:iconNew, iconMap, nil];
     _lisIconFix = listIcon.copy;
@@ -192,8 +194,14 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     IConObject *icon = _lisIcon[indexPath.row];
-    if ([icon.title isEqualToString:@"Bản đồ"] || [icon.title isEqualToString:@"Tin tức"]) {
-        NSLog(@"Chưa có");
+    if (icon.adId == CategoryNew) {
+        if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryNew)]) {
+            [self.delegate didSelectSearchCategoryNew];
+        }
+    } else if (icon.adId == CategoryMap) {
+        if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryMap)]) {
+            [self.delegate didSelectSearchCategoryMap];
+        }
     } else {
         if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryID:)]) {
             [self.delegate didSelectSearchCategoryID:icon.adId];

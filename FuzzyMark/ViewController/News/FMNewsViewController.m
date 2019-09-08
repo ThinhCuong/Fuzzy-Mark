@@ -11,64 +11,126 @@
 #import "FMFirstNewsTableViewCell.h"
 #import "FMSecondsNewsTableViewCell.h"
 #import "FZNewsInfoDetailViewController.h"
+#import "FMNewsModel.h"
+#import <CCBottomRefreshControl-umbrella.h>
 
-@interface FMNewsViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FMNewsViewController () <UITableViewDataSource, UITableViewDelegate, FMUpdateTableDataProtocol>
 
-@property(strong, nonatomic) NSArray <FZNewsObject *> *listNews;
-@property(strong, nonatomic) NSArray <FZNewsObject *> *listNewsRemovedFirstItem;
+@property (strong, nonatomic) FMNewsModel *model;
+
 @end
 
-@implementation FMNewsViewController
+@implementation FMNewsViewController {
+    NSArray <FZNewsObject*>*_listNews;
+    NSMutableArray <FZNewsObject*>*_listNewsRemovedFirstItem;
+    UIRefreshControl *_topRFControl;
+    UIRefreshControl *_bottomRFControl;
+    BOOL _isRefresh;
+}
+
+#pragma mark - life cyvle
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _model = [[FMNewsModel alloc] init];
+        _model.delegate = self;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navTitle = @"Tin tức";
+    [self setTableViewContent];
+    [self callDataRefresh];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if(_isRefresh) {
+        [CommonFunction showLoadingView];
+    }
+}
+
+#pragma mark - private
+- (void)setTableViewContent {
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     [self.tableView registerNib:[UINib nibWithNibName:@"FMFirstNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMFirstNewsTableViewCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FMSecondsNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMSecondsNewsTableViewCell"];
-    self.tableView.dataSource = self;
+    
+    _topRFControl = [[UIRefreshControl alloc] init];
+    [_topRFControl addTarget:self action:@selector(callDataRefresh) forControlEvents:UIControlEventValueChanged];
+    if (@available(iOS 10.0, *)) {
+        self.tableView.refreshControl = _topRFControl;
+    } else {
+        [self.tableView addSubview:_topRFControl];
+    }
+    
+    _bottomRFControl = [UIRefreshControl new];
+    [_bottomRFControl addTarget:self action:@selector(callDataLoadMore) forControlEvents:UIControlEventValueChanged];
+    self.tableView.bottomRefreshControl = _bottomRFControl;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
+    
     self.tableView.delegate = self;
-    self.navTitle = @"Tin tức";
-    [self callGetNewsApi];
-    
+    self.tableView.dataSource = self;
 }
 
-- (void)callGetNewsApi {
-    NSDictionary *params = @{
-                             @"limit": @"50",
-                             @"offset": @"0"
-                             };
-    
-    [CommonFunction showLoadingView];
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_NEWS_GET_NEWS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id dataResponse) {
-        [CommonFunction hideLoadingView];
-        if (dataResponse) {
-            NSInteger errorCode = [dataResponse codeForKey:@"error_code"];
-            NSString *message = [dataResponse stringForKey:@"message"];
-            self.listNews = [NSArray new];
-            self.listNewsRemovedFirstItem = [NSArray new];
-            if (errorCode == 0) {
-                NSArray *data = [dataResponse arrayForKey:@"data"];
-                NSMutableArray *temp = [NSMutableArray new];
-                NSMutableArray *tempRemove = [NSMutableArray new];
-                for (NSDictionary *dict in data) {
-                    FZNewsObject *newsInfo = [[FZNewsObject alloc] initWithDataDictionary:dict];
-                    [temp addObject:newsInfo];
-                }
-                self.listNews = temp.copy;
-                tempRemove = temp;
-                [tempRemove removeObjectAtIndex:0];
-                self.listNewsRemovedFirstItem = tempRemove.copy;
-            } else {
-                [CommonFunction showToast:message];
-            }
-            [self.tableView reloadData];
-        }
-    } withFailBlock:^(id responseError) {
-        [CommonFunction hideLoadingView];
-        [self.tableView reloadData];
-    }];
+- (void)callDataLoadMore {
+    if([self checkIsRefresh]) {
+        [self stopAnimationRefresh];
+        return;
+    }
+    _isRefresh = YES;
+    [self.model actionLoadMoreData];
 }
 
+- (void)callDataRefresh {
+    if([self checkIsRefresh]) {
+        [self stopAnimationRefresh];
+        return;
+    }
+    _isRefresh = YES;
+    [self.model actionPullToRefreshData];
+}
+
+- (BOOL)checkIsRefresh {
+    return _isRefresh;
+}
+
+- (void)stopAnimationRefresh {
+    if(_topRFControl.isRefreshing) {
+        [_topRFControl endRefreshing];
+    }
+    if(_bottomRFControl.isRefreshing) {
+        [_bottomRFControl endRefreshing];
+    }
+    [CommonFunction hideLoadingView];
+    _isRefresh = NO;
+}
+
+#pragma mark - FMUpdateDataProtocol
+- (void)updateViewDataSuccess:(NSMutableArray *) listData {
+    [self stopAnimationRefresh];
+    _listNews = listData.copy;
+    if (listData.count > 0) {
+        _listNewsRemovedFirstItem = listData.mutableCopy;
+        [_listNewsRemovedFirstItem removeObjectAtIndex:0];
+    }
+    [self.tableView reloadData];
+}
+
+- (void)updateViewDataEmpty {
+    [self stopAnimationRefresh];
+}
+
+- (void)updateViewDataError {
+    [self stopAnimationRefresh];
+}
+
+#pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 2;
 }
@@ -77,32 +139,37 @@
     if (section == 0) {
         return 1;
     } else {
-        return self.listNewsRemovedFirstItem.count;
+        return _listNewsRemovedFirstItem.count;
     }
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         FMFirstNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMFirstNewsTableViewCell"];
-        [cell bindData:self.listNews.firstObject isNewsDetail:NO];
+        [cell bindData:_listNews.firstObject isNewsDetail:NO];
          return cell;
     } else {
         FMSecondsNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMSecondsNewsTableViewCell"];
-        [cell bindData:self.listNewsRemovedFirstItem[indexPath.row]];
+        [cell bindData:_listNewsRemovedFirstItem[indexPath.row]];
          return cell;
     }
 }
 
+#pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     FZNewsInfoDetailViewController *newsInfoViewController = [[FZNewsInfoDetailViewController alloc] initWithNibName:@"FZNewsInfoDetailViewController" bundle:nil];
     newsInfoViewController.hidesBottomBarWhenPushed = YES;
     if (indexPath.section == 0) {
-        [newsInfoViewController callNewsFullNews:[NSString stringWithFormat:@"%ld", self.listNews.firstObject.newsId]];
+        [newsInfoViewController callNewsFullNews:[NSString stringWithFormat:@"%ld", _listNews.firstObject.newsId]];
     } else {
-        [newsInfoViewController callNewsFullNews:[NSString stringWithFormat:@"%ld", self.listNewsRemovedFirstItem[indexPath.row].newsId]];
+        [newsInfoViewController callNewsFullNews:[NSString stringWithFormat:@"%ld", _listNewsRemovedFirstItem[indexPath.row].newsId]];
     }
     
     [self.navigationController pushViewController:newsInfoViewController animated:YES];
 }
 
 @end
+
+

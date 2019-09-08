@@ -18,10 +18,17 @@ typedef NS_ENUM(NSUInteger, SuportList) {
     SNews_Suport = 3
 };
 
+typedef NS_ENUM(NSInteger, FixCategory) {
+    CategoryMap = -1,
+    CategoryNew = -2
+};
+
 @protocol FZMenuHomeTableViewCellDelegate  <NSObject>
 
 - (void)didSelectVoucherID:(NSInteger) voucherID;
 - (void)didSelectSearchCategoryID:(NSInteger) categoryID;
+- (void)didSelectSearchCategoryMap;
+- (void)didSelectSearchCategoryNew;
 - (void)didSelectSuportList:(SuportList) suportList;
 - (void)didSelectWebviewWithLink:(NSString *) link andTitle:(NSString *) title;
 

@@ -11,8 +11,9 @@
 #import "FMFirstNewsTableViewCell.h"
 #import "FMNewsCollectionViewCell.h"
 #import "FZNewsContentTableViewCell.h"
+#import "FMNewsViewTableViewCell.h"
 
-@interface FZNewsInfoDetailViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface FZNewsInfoDetailViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property(strong, nonatomic) FZNewsObject *newsInfoDetail;
 @property(strong, nonatomic) NSArray *listNewsRelate;
@@ -26,33 +27,23 @@
     // Do any additional setup after loading the view from its nib.
     [self.tableview registerNib:[UINib nibWithNibName:@"FMFirstNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMFirstNewsTableViewCell"];
     [self.tableview registerNib:[UINib nibWithNibName:@"FZNewsContentTableViewCell" bundle:nil] forCellReuseIdentifier:@"FZNewsContentTableViewCell"];
+    [self.tableview registerNib:[UINib nibWithNibName:@"FMNewsViewTableViewCell" bundle:nil] forCellReuseIdentifier:@"FMNewsViewTableViewCell"];
     
     self.tableview.dataSource = self;
     self.tableview.delegate = self;
     self.hideNav = YES;
-    
-    [self.collectionView registerNib:[UINib nibWithNibName:@"FMNewsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"FMNewsCollectionViewCell"];
-        
-    self.collectionView.dataSource = self;
-    self.collectionView.delegate = self;
 }
 
 - (void)callNewsFullNews:(NSString *)newsId {
     NSDictionary *params = @{
-                             @"id": newsId,
+                             @"id": newsId
                              };
-    
-    [SVProgressHUD setContainerView:self.view];
-    [SVProgressHUD show];
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:@"news/full-news" andParam:params isShowfailureAlert:YES withSuccessBlock:^(id dataResponse) {
-        [SVProgressHUD dismiss];
-        [SVProgressHUD setBackgroundLayerColor:UIColor.redColor];
-        if (dataResponse) {
-            NSInteger errorCode = [dataResponse codeForKey:@"error_code"];
-            NSString *message = [dataResponse stringForKey:@"message"];
-            
-            if (errorCode == 0) {
-                NSDictionary *data = [dataResponse dictionaryForKey:@"data"];
+    [CommonFunction showLoadingView];
+    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_NEWS_FULL_NEWS andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        [CommonFunction hideLoadingView];
+        if ([responseData isKindOfClass:NSDictionary.class]) {
+            if ([responseData codeForKey:@"error_code"] == 0) {
+                NSDictionary *data = [responseData dictionaryForKey:@"data"];
                 self.newsInfoDetail = [[FZNewsObject alloc] initWithDataDictionary:[data dictionaryForKey:@"news_view"]];
                 NSMutableArray *temp = [NSMutableArray new];
                 for (NSDictionary *dict in [data arrayForKey:@"news_relate"]) {
@@ -61,20 +52,22 @@
                 }
                 self.listNewsRelate = temp.copy;
                 self.contentHtml = [data stringForKey:@"content"];
+                [self.tableview reloadData];
             } else {
-                [CommonFunction showToast:message];
+                [CommonFunction showToast:[responseData stringForKey:@"message"]];
             }
-            [self.tableview reloadData];
-            [self.collectionView reloadData];
+        } else {
+            [CommonFunction showToast:kMessageError];
         }
     } withFailBlock:^(id responseError) {
-        [SVProgressHUD dismiss];
-        [self.tableview reloadData];
+        [CommonFunction hideLoadingView];
+        [CommonFunction showToast:kMessageError];
     }];
+    
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -90,26 +83,16 @@
         FMFirstNewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMFirstNewsTableViewCell"];
         [cell bindData:self.newsInfoDetail isNewsDetail:YES];
         return cell;
-    } else {
+    } else if (indexPath.section == 1) {
         FZNewsContentTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZNewsContentTableViewCell"];
-        [cell bindData:self.contentHtml];
+        [cell bindData:self.contentHtml title:self.newsInfoDetail.newsDescription];
+        return cell;
+    } else if (indexPath.section == 2) {
+        FMNewsViewTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FMNewsViewTableViewCell"];
+        [cell binDataWithListNewRelate:self.listNewsRelate];
         return cell;
     }
-}
-
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.listNewsRelate.count;
-}
-
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    FMNewsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FMNewsCollectionViewCell" forIndexPath:indexPath];
-    [cell bindData:self.listNewsRelate[indexPath.row]];
-    return cell;
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGSize cellSize = CGSizeMake((collectionView.bounds.size.width - 50) / 2, 130);
-    return cellSize;
+    return [UITableViewCell new];
 }
 
 - (IBAction)backAction:(UIButton *)sender {
