@@ -20,6 +20,8 @@
 #import "FMChoicePictureModel.h"
 #import "FMChangePasswordViewController.h"
 #import "FMIntroChangePhoneNumber.h"
+#import "FMPopupNotifiViewController.h"
+#import "AppDelegate.h"
 
 @interface FMUserInforViewController () <UITableViewDelegate, UITableViewDataSource, FMUserInforTableViewCellProtocol, FMUserInforDelegate, FMLoginCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableViewContent;
@@ -210,8 +212,7 @@
             
             break;
         case FMTableViewCellBlockLogOut:
-            [UserInfo resetUserData];
-            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+            [self logOut];
             break;
         default:
             break;
@@ -302,15 +303,33 @@
 }
 
 - (void)showViewChangePassword {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
     FMChangePasswordViewController *vc = [[FMChangePasswordViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)showViewChangePhoneNumber {
+    if (!isLoggedIn) {
+        [self showToastInviteLogin];
+        return;
+    }
     FMIntroChangePhoneNumber *vc = [[FMIntroChangePhoneNumber alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)logOut {
+    FMPopupNotifiViewController *vc = [[FMPopupNotifiViewController alloc] initWithTitle:@"Bạn muốn đăng xuất khỏi tài khoản này"];
+    vc.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    vc.didSelectChooseSuccessBlock = ^{
+        [UserInfo resetUserData];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterChangeStatusUser object:nil];
+    };
+    [appDelegate.tabbarController presentViewController:vc animated:YES completion:nil];
 }
 
 @end
