@@ -34,11 +34,21 @@
     
     self.lblUserName.text = userInfo.user_view.name ?: @"---";
     
-    self.lblPhone.text = userInfo.phone ?: @"Chưa cập nhật";
-    self.lblPhone.textColor = klineColorNormal;
+    if (userInfo.phone.length > 0) {
+        self.lblPhone.text = userInfo.phone;
+        self.lblPhone.textColor = klineColorNormal;
+    } else {
+        self.lblPhone.text = @"Chưa cập nhật";
+        self.lblPhone.textColor = klineColorError;
+    }
     
-    self.lblEmail.text = userInfo.email ?: @"Chưa cập nhật";
-    self.lblEmail.textColor = klineColorNormal;
+    if (userInfo.email.length > 0) {
+        self.lblEmail.text = userInfo.email;
+        self.lblEmail.textColor = klineColorNormal;
+    } else {
+        self.lblEmail.text = @"Chưa cập nhật";
+        self.lblEmail.textColor = klineColorError;
+    }
     
     self.lblNumberBill.text = [@(userInfo.history_count) stringValue];
     self.lblPoint.text = [@(userInfo.point_reward) stringValue];
