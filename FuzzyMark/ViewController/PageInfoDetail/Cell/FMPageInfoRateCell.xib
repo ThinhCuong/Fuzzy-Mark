@@ -42,7 +42,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                     " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za4-Pb-knc">
-                        <rect key="frame" x="62" y="16" width="130.5" height="18"/>
+                        <rect key="frame" x="62" y="16" width="131" height="18"/>
                         <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>

@@ -7,6 +7,8 @@
 //
 
 #import "FMListItemRateVC.h"
+#import "FMRateViewController.h"
+#import "Appdelegate.h"
 
 @interface FMListItemRateVC ()
 
@@ -54,6 +56,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+}
+
+- (IBAction)didSelectRate:(id)sender {
+    FMRateViewController *vc = [[FMRateViewController alloc] initWithIDPage:_pageInfo.page_view.pageId];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

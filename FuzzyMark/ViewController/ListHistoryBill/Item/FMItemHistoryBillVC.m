@@ -177,7 +177,7 @@
 #pragma mark - HistoryBillHeaderCellDelegate
 - (void)didSelectShowDetail:(HistoryBillHeaderCell *)cell {
     HistoryBill *bill = _listData[cell.tag];
-    FMDetailHistoryViewController *vc = [[FMDetailHistoryViewController alloc] initWithID:bill.voucher.idVoucher];
+    FMDetailHistoryViewController *vc = [[FMDetailHistoryViewController alloc] initWithID:bill.transaction_id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

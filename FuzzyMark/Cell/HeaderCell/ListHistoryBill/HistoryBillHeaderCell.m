@@ -16,7 +16,7 @@
 @implementation HistoryBillHeaderCell
 
 - (void)binData:(HistoryBill *) model {
-    self.lblCode.text = model.transaction_id;
+    self.lblCode.text = [@(model.transaction_id) stringValue];
 }
 
 - (IBAction)didSlectDetail:(id)sender {

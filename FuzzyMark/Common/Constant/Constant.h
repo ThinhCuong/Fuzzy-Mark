@@ -44,6 +44,12 @@ typedef NS_ENUM(NSInteger, StatusType) {
     StausTypeDENY = 3
 };
 
+typedef NS_ENUM(NSInteger, RateConfigsFlag) {
+    RateConfigsFlagLow,
+    RateConfigsFlagMedium,
+    RateConfigsFlagHigh
+};
+
 /* Name API */
 #define GET_HISTORIES_CAPTURE                       @"user/histories-capture"
 #define GET_USER_NOTIFICATIONS                      @"user/notifications"

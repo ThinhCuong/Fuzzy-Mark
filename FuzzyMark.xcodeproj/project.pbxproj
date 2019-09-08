@@ -25,6 +25,9 @@
 		4F27544522931E870086A46C /* FMCameraModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F27544422931E870086A46C /* FMCameraModel.m */; };
 		4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B50229C496C0029F188 /* UITabBar+FMMiddleButton.m */; };
 		4F2F5B55229C615F0029F188 /* FMButtonNext.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2F5B54229C615F0029F188 /* FMButtonNext.m */; };
+		4F306F7B2324A7DA00DA662E /* Rate.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F306F7A2324A7DA00DA662E /* Rate.xcassets */; };
+		4F306F802324AB8200DA662E /* FMRateCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F306F7E2324AB8200DA662E /* FMRateCommentCell.m */; };
+		4F306F812324AB8200DA662E /* FMRateCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F306F7F2324AB8200DA662E /* FMRateCommentCell.xib */; };
 		4F35FDCC22EF478B00F79B45 /* FMLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */; };
 		4F35FDCD22EF478B00F79B45 /* FMLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */; };
 		4F35FDD222EF8A3B00F79B45 /* FMChoicePictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDD022EF8A3B00F79B45 /* FMChoicePictureModel.m */; };
@@ -108,6 +111,8 @@
 		4F6D65C1228FC9520092CA53 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6D65BF228FC9520092CA53 /* DatePickerViewController.xib */; };
 		4F7027E123240EEA0054538A /* FMNewsViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7027DF23240EEA0054538A /* FMNewsViewTableViewCell.m */; };
 		4F7027E223240EEA0054538A /* FMNewsViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7027E023240EEA0054538A /* FMNewsViewTableViewCell.xib */; };
+		4F7027EC23249CB70054538A /* FMRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7027EA23249CB70054538A /* FMRateViewController.m */; };
+		4F7027ED23249CB70054538A /* FMRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F7027EB23249CB70054538A /* FMRateViewController.xib */; };
 		4FA08BD1231A683B006BEE4E /* FMPageDetail.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */; };
 		4FB0B27922B9A63700487D66 /* FMPromotionLocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FB0B27722B9A63700487D66 /* FMPromotionLocationCell.m */; };
 		4FB0B27A22B9A63700487D66 /* FMPromotionLocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FB0B27822B9A63700487D66 /* FMPromotionLocationCell.xib */; };
@@ -322,6 +327,10 @@
 		4F2F5B52229C56C50029F188 /* FuzzyMark-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FuzzyMark-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F2F5B53229C615F0029F188 /* FMButtonNext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMButtonNext.h; sourceTree = "<group>"; };
 		4F2F5B54229C615F0029F188 /* FMButtonNext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMButtonNext.m; sourceTree = "<group>"; };
+		4F306F7A2324A7DA00DA662E /* Rate.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Rate.xcassets; sourceTree = "<group>"; };
+		4F306F7D2324AB8200DA662E /* FMRateCommentCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRateCommentCell.h; sourceTree = "<group>"; };
+		4F306F7E2324AB8200DA662E /* FMRateCommentCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRateCommentCell.m; sourceTree = "<group>"; };
+		4F306F7F2324AB8200DA662E /* FMRateCommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMRateCommentCell.xib; sourceTree = "<group>"; };
 		4F35FDC922EF478B00F79B45 /* FMLoginCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMLoginCell.h; sourceTree = "<group>"; };
 		4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMLoginCell.m; sourceTree = "<group>"; };
 		4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMLoginCell.xib; sourceTree = "<group>"; };
@@ -446,6 +455,9 @@
 		4F7027DE23240EEA0054538A /* FMNewsViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMNewsViewTableViewCell.h; sourceTree = "<group>"; };
 		4F7027DF23240EEA0054538A /* FMNewsViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMNewsViewTableViewCell.m; sourceTree = "<group>"; };
 		4F7027E023240EEA0054538A /* FMNewsViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMNewsViewTableViewCell.xib; sourceTree = "<group>"; };
+		4F7027E923249CB70054538A /* FMRateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMRateViewController.h; sourceTree = "<group>"; };
+		4F7027EA23249CB70054538A /* FMRateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMRateViewController.m; sourceTree = "<group>"; };
+		4F7027EB23249CB70054538A /* FMRateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMRateViewController.xib; sourceTree = "<group>"; };
 		4FA08BD0231A683B006BEE4E /* FMPageDetail.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = FMPageDetail.xcassets; sourceTree = "<group>"; };
 		4FB0B27622B9A63700487D66 /* FMPromotionLocationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPromotionLocationCell.h; sourceTree = "<group>"; };
 		4FB0B27722B9A63700487D66 /* FMPromotionLocationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPromotionLocationCell.m; sourceTree = "<group>"; };
@@ -768,6 +780,16 @@
 			path = TransactionInfo;
 			sourceTree = "<group>";
 		};
+		4F306F7C2324AB5D00DA662E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F306F7D2324AB8200DA662E /* FMRateCommentCell.h */,
+				4F306F7E2324AB8200DA662E /* FMRateCommentCell.m */,
+				4F306F7F2324AB8200DA662E /* FMRateCommentCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4F35FDCF22EF8A1000F79B45 /* ChooseImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1068,6 +1090,18 @@
 				4F6D65BF228FC9520092CA53 /* DatePickerViewController.xib */,
 			);
 			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		4F7027E323249C6D0054538A /* Rate */ = {
+			isa = PBXGroup;
+			children = (
+				4F306F7C2324AB5D00DA662E /* Cell */,
+				4F7027E923249CB70054538A /* FMRateViewController.h */,
+				4F7027EA23249CB70054538A /* FMRateViewController.m */,
+				4F7027EB23249CB70054538A /* FMRateViewController.xib */,
+				4F306F7A2324A7DA00DA662E /* Rate.xcassets */,
+			);
+			path = Rate;
 			sourceTree = "<group>";
 		};
 		4F7A57C8229A72C5008AE602 /* Intro */ = {
@@ -1785,6 +1819,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4F7027E323249C6D0054538A /* Rate */,
 				4F592F0523216F1100287AE8 /* WebView */,
 				4FE8E98C231CB88E008769C3 /* UtilSearch */,
 				5C5D08D02310540E0017942B /* Rewards */,
@@ -2118,10 +2153,12 @@
 				5C5E9160229F4DE700E9DFE9 /* FZTitleHeaderCollectionReusableView.xib in Resources */,
 				4F50F4062276EDBD00DF7173 /* Muli-SemiBold.ttf in Resources */,
 				5C76FBCB22BFDB080006D59D /* FZHotlineViewController.xib in Resources */,
+				4F306F812324AB8200DA662E /* FMRateCommentCell.xib in Resources */,
 				4F50F39F2276E9A700DF7173 /* FMNotifiViewController.xib in Resources */,
 				4F50F3AB2276EB0900DF7173 /* UserInfor.xcassets in Resources */,
 				4F5F44F02318D7FB00D58817 /* FMPageDetailVC.xib in Resources */,
 				4F25D6E622BAE64800C27190 /* FMListItemIntroduceVC.xib in Resources */,
+				4F306F7B2324A7DA00DA662E /* Rate.xcassets in Resources */,
 				5C5D08DB231061960017942B /* FZRewardTableViewCell.xib in Resources */,
 				5CF6184E2268BEAB00E31155 /* FZMenuHomeCollectionViewCell.xib in Resources */,
 				4FDACCF7227F577200A8571E /* FMHistoryBillViewController.xib in Resources */,
@@ -2167,6 +2204,7 @@
 				4F7027E223240EEA0054538A /* FMNewsViewTableViewCell.xib in Resources */,
 				4F50F40A2276EDBD00DF7173 /* sharefonts.net.txt in Resources */,
 				4FBD3D84228D974300E76E2A /* FMHistoryPointViewController.xib in Resources */,
+				4F7027ED23249CB70054538A /* FMRateViewController.xib in Resources */,
 				4F569FFB231CC9C500901AA1 /* MVUtilSearchCell.xib in Resources */,
 				4FBD3DA3228DDA5C00E76E2A /* LocationFavoriteTableViewCell.xib in Resources */,
 				4FB0B27F22B9AA9E00487D66 /* FMPromotionIntroCell.xib in Resources */,
@@ -2321,6 +2359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F306F802324AB8200DA662E /* FMRateCommentCell.m in Sources */,
 				4FD09E9123125842005A0E2F /* FZVouchersSearchModel.m in Sources */,
 				4F472D33229076C900F93D39 /* FMOTPViewController.m in Sources */,
 				4FDEEA3F22E45AFC00A72BC1 /* UserInformation.m in Sources */,
@@ -2458,6 +2497,7 @@
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
 				4F5F44F92318E03D00D58817 /* FMListItemImageVC.m in Sources */,
 				5C5D08D42310549A0017942B /* FZRewardViewController.m in Sources */,
+				4F7027EC23249CB70054538A /* FMRateViewController.m in Sources */,
 				5C39102C2263492A008BEA62 /* UIProgressView+AFNetworking.m in Sources */,
 				5C76FBD122BFE1870006D59D /* MVHotlineCollectionViewCell.m in Sources */,
 				4F5F45032319011D00D58817 /* PageInfo.m in Sources */,

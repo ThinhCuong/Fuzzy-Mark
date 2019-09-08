@@ -17,7 +17,7 @@
 #import "FMListItemRateVC.h"
 #import "FzVourcherInfoObject.h"
 #import "AppDelegate.h"
-
+#import "FMRateViewController.h"
 
 @interface FMPageDetailVC () <FMPageDetailModelDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imgBanner;

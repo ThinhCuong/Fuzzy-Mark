@@ -61,11 +61,13 @@
         self.lblStatus.text = @"Chấp nhận";
     }
     self.lblContent.text = model.transaction_view.voucher.descriptionVoucher ?:@"";
-    self.lblCode.text = model.transaction_view.transaction_id;
+    self.lblCode.text = [@(model.transaction_view.transaction_id) stringValue];
     self.lblTimeGive.text = model.time_take_voucher;
     self.lblRequest.text = model.time_send_request;
     self.lblAccep.text = model.time_check;
-    [self.imgBill sd_setImageWithURL:[NSURL URLWithString:model.transaction_view.voucher.image]];
+    if (model.images.count > 0) {
+        [self.imgBill sd_setImageWithURL:[NSURL URLWithString:model.images.firstObject.url?:@""]];
+    }
 }
 
 - (void)getUserBillDetail {

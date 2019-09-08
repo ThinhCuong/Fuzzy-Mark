@@ -81,6 +81,12 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDZ-uB-RNR">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="83"/>
+                            <connections>
+                                <action selector="didSelectRate:" destination="-1" eventType="touchUpInside" id="J8V-0N-70g"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -90,8 +96,12 @@
                         <constraint firstItem="arD-ck-pM5" firstAttribute="top" secondItem="b2K-zW-u5y" secondAttribute="bottom" id="NC9-zc-8Tf"/>
                         <constraint firstAttribute="trailing" secondItem="8ER-ci-O2l" secondAttribute="trailing" constant="14" id="YvS-Ed-QhK"/>
                         <constraint firstItem="zfr-3U-rBP" firstAttribute="centerY" secondItem="b2K-zW-u5y" secondAttribute="centerY" id="ZZ2-JO-EQL"/>
+                        <constraint firstAttribute="bottom" secondItem="VDZ-uB-RNR" secondAttribute="bottom" id="aL7-W3-jAk"/>
+                        <constraint firstItem="VDZ-uB-RNR" firstAttribute="top" secondItem="x9i-Gv-hZZ" secondAttribute="top" id="bV0-C4-8QN"/>
+                        <constraint firstItem="VDZ-uB-RNR" firstAttribute="leading" secondItem="x9i-Gv-hZZ" secondAttribute="leading" id="gP5-sS-XhL"/>
                         <constraint firstAttribute="bottom" secondItem="arD-ck-pM5" secondAttribute="bottom" constant="10" id="gZq-f8-1KZ"/>
                         <constraint firstItem="b2K-zW-u5y" firstAttribute="leading" secondItem="arD-ck-pM5" secondAttribute="leading" id="lOF-xj-hMf"/>
+                        <constraint firstAttribute="trailing" secondItem="VDZ-uB-RNR" secondAttribute="trailing" id="thB-bR-QTS"/>
                         <constraint firstItem="zfr-3U-rBP" firstAttribute="leading" secondItem="b2K-zW-u5y" secondAttribute="trailing" constant="8" id="zTj-y3-7ny"/>
                     </constraints>
                 </view>
@@ -107,7 +117,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="au4-IB-VDm" secondAttribute="bottom" id="xIN-CU-u3p"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="50.724637681159422" y="35.491071428571423"/>
+            <point key="canvasLocation" x="50.625" y="34.859154929577464"/>
         </view>
     </objects>
     <resources>

@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HistoryBill : NSObject
 
-@property (nonatomic) NSString *transaction_id;
+@property (nonatomic) NSInteger transaction_id;
 @property (nonatomic) NSInteger status;
 @property (nonatomic) Voucher *voucher;
 @property (nonatomic) NSString *time;
