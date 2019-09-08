@@ -18,7 +18,7 @@
 }
 
 + (void)showLoadingView {
-    [self showLoadingViewInView:appDelegate.window];
+    [self showLoadingViewInView:[appDelegate getTopViewController].view];
 }
 
 + (void)showLoadingViewInView:(UIView *) view {

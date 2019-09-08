@@ -27,7 +27,7 @@
 
 - (void)binData:(HistoryBill *) model {
     [self.imgBanner sd_setImageWithURL:[NSURL URLWithString:model.voucher.image] placeholderImage:nil];
-    self.lblName.text = model.voucher.page.name ?: @"";
+    self.lblName.text = model.voucher.name ?: @"";
     self.lblLocation.text = model.voucher.page.address ?:@"";
     self.lblMoney.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", (long)model.voucher.percent_discount];
 }

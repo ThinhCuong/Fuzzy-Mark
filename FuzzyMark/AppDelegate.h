@@ -43,6 +43,7 @@
 
 - (void)loginRequiredWithSuccessBlock:(void(^)(BOOL)) successBlock;
 - (void)selectTabWithIndex:(NSInteger) index;
+- (UIViewController *)getTopViewController;
 
 @end
 
