@@ -32,12 +32,12 @@
        [self.imgUser sd_setImageWithURL:[NSURL URLWithString:userInfo.user_view.avatar] placeholderImage:kUserPlaceholderImage];
     }];
     
-    self.lblUserName.text = userInfo.user_view.name ?: @"";
+    self.lblUserName.text = userInfo.user_view.name ?: @"---";
     
-    self.lblPhone.text = userInfo.phone ?: @"";
+    self.lblPhone.text = userInfo.phone ?: @"Chưa cập nhật";
     self.lblPhone.textColor = klineColorNormal;
     
-    self.lblEmail.text = userInfo.email ?: @"";
+    self.lblEmail.text = userInfo.email ?: @"Chưa cập nhật";
     self.lblEmail.textColor = klineColorNormal;
     
     self.lblNumberBill.text = [@(userInfo.history_count) stringValue];
