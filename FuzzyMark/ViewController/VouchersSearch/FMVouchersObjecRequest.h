@@ -16,10 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString *keyword;
 @property (strong, nonatomic) NSArray <NSNumber*> *categoriesID;
 @property (strong, nonatomic) NSArray <NSNumber*> *servicesID;
+@property (strong, nonatomic) NSArray <NSNumber*> *groupsID;
 - (void)addCategoryID:(NSInteger) categoryID;
 - (void)removeCategoryID:(NSInteger) categoryID;
 - (void)addSeviceID:(NSInteger) serviceID;
 - (void)removeSeviceID:(NSInteger) serviceID;
+- (void)addGroupsID:(NSInteger) groupsID;
+- (void)removeGroupsID:(NSInteger) groupsID;
 - (BOOL)checkServiceIsExistList:(NSInteger) serviceID;
 - (BOOL)checkCategoryIsExistList:(NSInteger) categoryID;
 - (NSDictionary *)getParamRequestWithLocation:(CLLocationCoordinate2D)currentLocation;

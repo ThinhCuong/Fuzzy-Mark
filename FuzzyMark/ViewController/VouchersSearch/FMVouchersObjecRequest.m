@@ -11,6 +11,7 @@
 @implementation FMVouchersObjecRequest {
     NSMutableArray *_categoriesID;
     NSMutableArray *_servicesID;
+    NSMutableArray *_groupsID;
 }
 
 - (instancetype)init
@@ -19,6 +20,7 @@
     if (self) {
         _servicesID = [NSMutableArray new];
         _categoriesID = [NSMutableArray new];
+        _groupsID = [NSMutableArray new];
     }
     return self;
 }
@@ -57,6 +59,25 @@
     }
 }
 
+- (void)addGroupsID:(NSInteger) groupsID {
+    NSNumber *value = [NSNumber numberWithInteger:groupsID];
+    if (![_groupsID containsObject:value]) {
+        [self willChangeValueForKey:@"countService"];
+        [_groupsID addObject:value];
+        [self didChangeValueForKey:@"countService"];
+    }
+}
+
+- (void)removeGroupsID:(NSInteger) groupsID {
+    NSNumber *value = [NSNumber numberWithInteger:groupsID];
+    NSInteger index = [_groupsID indexOfObject:value];
+    if (index != NSNotFound) {
+        [self willChangeValueForKey:@"countService"];
+        [_groupsID removeObjectAtIndex:index];
+        [self didChangeValueForKey:@"countService"];
+    }
+}
+
 - (NSDictionary *)getParamRequestWithLocation:(CLLocationCoordinate2D)currentLocation {
     
     NSString *lat = [[NSNumber numberWithDouble:currentLocation.latitude] stringValue];
@@ -86,11 +107,24 @@
         categoriesStr = [servicesStr stringByAppendingString:string];
     }
     
+    NSString *groupsStr = @"";
+    for (int i = 0; i<_groupsID.count; i++) {
+        NSNumber *number = _groupsID[i];
+        NSString *string;
+        if (i != _groupsID.count - 1) {
+            string = [[number stringValue] stringByAppendingString:@","];
+        } else {
+            string = [number stringValue];
+        }
+        groupsStr = [servicesStr stringByAppendingString:string];
+    }
+    
     NSDictionary *params = @{@"keyword": _keyword?:@"",
                              @"lat": lat?:@"",
                              @"lng": lng?:@"",
                              @"categories": categoriesStr?:@"",
-                             @"services": servicesStr?:@""
+                             @"services": servicesStr?:@"",
+                             @"groups": groupsStr?:@""
                              };
     return params;
 }
@@ -123,8 +157,11 @@
     return _servicesID.copy;
 }
 
+- (NSArray<NSNumber *> *)groupsID {
+    return _groupsID.copy;
+}
+
 - (NSInteger)countService {
     return _servicesID.count;
 }
-
 @end

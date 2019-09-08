@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)didSelectChooseItemWithIDVoucher:(NSInteger )idVoucher;
 - (void)didSelectSearchCategoryID:(NSInteger)categoryID;
+- (void)didSelectSearchGroupsID:(NSInteger)groupsID;
 
 @end
 

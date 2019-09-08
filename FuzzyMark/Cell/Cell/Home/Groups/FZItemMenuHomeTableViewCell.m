@@ -92,8 +92,8 @@
 }
 
 - (IBAction)showAllVoucher:(id)sender {
-    if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryID:)]) {
-        [self.delegate didSelectSearchCategoryID:_groupInfoObject.groupId];
+    if ([self.delegate respondsToSelector:@selector(didSelectSearchGroupsID:)]) {
+        [self.delegate didSelectSearchGroupsID:_groupInfoObject.groupId];
     }
 }
 

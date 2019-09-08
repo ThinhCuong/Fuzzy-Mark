@@ -199,6 +199,14 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)didSelectSearchGroupsID:(NSInteger)groupsID {
+    FMVouchersObjecRequest *obj = [[FMVouchersObjecRequest alloc] init];
+    [obj addGroupsID:groupsID];
+    FZVourchersSearchViewController *vc = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)didSelectSearchCategoryID:(NSInteger)categoryID {
     FMVouchersObjecRequest *obj = [[FMVouchersObjecRequest alloc] init];
     [obj addCategoryID:categoryID];
