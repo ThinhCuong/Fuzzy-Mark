@@ -253,10 +253,11 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
-- (void)didSelectSearchGroupsID:(NSInteger)groupsID {
+- (void)didSelectSearchGroupsID:(NSInteger)groupsID placeholder:(NSString *) placeholder {
     FMVouchersObjecRequest *obj = [[FMVouchersObjecRequest alloc] init];
     [obj addGroupsID:groupsID];
     FZVourchersSearchViewController *vc = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
+    vc.placeholderSearchBar = placeholder;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }

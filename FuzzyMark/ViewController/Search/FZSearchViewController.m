@@ -11,9 +11,10 @@
 #import "FZTitleHeaderCollectionReusableView.h"
 #import "FZHeaderSearchTableViewCell.h"
 #import "FZFooterCollectionReusableView.h"
-#import "FMPromotionDetailVC.h"
+#import "FMVouchersObjecRequest.h"
+#import "FZVourchersSearchViewController.h"
 
-@interface FZSearchViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout> {
+@interface FZSearchViewController () <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, FZHeaderSearchTableViewCellDelegate, UISearchBarDelegate> {
     NSInteger _selectedIndex;
     NSInteger _willSectionIndex;
     NSInteger _didSectionIndex;
@@ -22,15 +23,18 @@
 }
 
 @property(nonatomic) NSArray<Group *> *listGroup;
-@property(nonatomic) NSArray<Group *> *listCategory;
+@property(nonatomic) NSArray<Group *> *listFilterGroup;
 
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (nonatomic) CGFloat lastContentOffset;
 
 @end
 
-@implementation FZSearchViewController
+@implementation FZSearchViewController  {
+    NSString *_keySearch;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,6 +58,16 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     
+    @try {
+        UITextField *tfSearch = [_searchBar valueForKey:@"_searchField"];
+        [tfSearch setFont:[UIFont fontWithName:@"Muli-Light" size:12.0]];
+        [tfSearch setReturnKeyType:UIReturnKeyDone];
+    }
+    @catch (NSException * e) {
+    }
+    
+    self.searchBar.delegate = self;
+    
     [self getDataModel];
     
 }
@@ -63,28 +77,46 @@
     self.collectionView.contentInset = UIEdgeInsetsMake(0, 0, self.collectionView.contentSize.height / 2.3, 0);
     self.collectionView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 180, 0);
 }
+
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FZHeaderSearchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FZHeaderSearchTableViewCell"];
-    [cell bindData:self.listGroup];
+    cell.delegate = self;
+    if (_keySearch.length > 0) {
+        [cell bindData:self.listFilterGroup];
+    } else {
+        [cell bindData:self.listGroup];
+    }
     cell.sectionIndex = _selectedIndex;
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return _listGroup.count;
+    if (_keySearch.length > 0) {
+        return _listFilterGroup.count;
+    } else {
+        return _listGroup.count;
+    }
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.listGroup[section].categories.count;
+    if (_keySearch.length > 0) {
+        return self.listFilterGroup[section].categories.count;
+    } else {
+        return self.listGroup[section].categories.count;
+    }
 }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     FZItemSearchCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FZItemSearchCollectionViewCell" forIndexPath:indexPath];
-    [cell bindData:self.listGroup[indexPath.section].categories[indexPath.row]];
+    if (_keySearch.length > 0) {
+        [cell bindData:self.listFilterGroup[indexPath.section].categories[indexPath.row]];
+    } else {
+        [cell bindData:self.listGroup[indexPath.section].categories[indexPath.row]];
+    }
     return cell;
 }
 
@@ -92,7 +124,11 @@
     if(kind == UICollectionElementKindSectionHeader)
     {
         FZTitleHeaderCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionHeader withReuseIdentifier:@"FZTitleHeaderCollectionReusableView" forIndexPath:indexPath];
-        [headerView bindData:self.listGroup[indexPath.section].title];
+        if (_keySearch.length > 0) {
+            [headerView bindData:self.listFilterGroup[indexPath.section].title];
+        } else {
+            [headerView bindData:self.listGroup[indexPath.section].title];
+        }
         return headerView;
     } else {
         FZFooterCollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind: UICollectionElementKindSectionFooter withReuseIdentifier:@"FZFooterCollectionReusableView" forIndexPath:indexPath];
@@ -116,10 +152,22 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSInteger idGroup = _listGroup[indexPath.section].idGroup;
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:idGroup];
+    Group *group;
+    Category *category;
+    if (_keySearch.length > 0) {
+        group = _listFilterGroup[indexPath.section];
+    } else {
+        group = _listGroup[indexPath.section];
+    }
+    category = group.categories[indexPath.row];
+    FMVouchersObjecRequest *obj = [[FMVouchersObjecRequest alloc] init];
+    [obj addGroupsID:group.idGroup];
+    [obj addCategoryID:category.idCategory];
+    FZVourchersSearchViewController *vc = [[FZVourchersSearchViewController alloc] initWithObjectRequest:obj];
+    vc.placeholderSearchBar = group.title;
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -150,5 +198,39 @@
     self.listGroup = [ConfigApp getListGroups];
     [self.tableView reloadData];
 }
+
+#pragma mark - FZHeaderSearchTableViewCellDelegate
+- (void)didSelectItemCollectionViewAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - UISearchBarDelegate
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    _keySearch = searchText;
+    NSPredicate *searchGroupPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.title CONTAINS[cd] '%@'", _keySearch]];
+    NSPredicate *searchCategoriesPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.name CONTAINS[cd] '%@'", _keySearch]];
+    NSMutableArray *array = [NSMutableArray new];
+    for (Group *group in _listGroup) {
+        
+        if ([searchGroupPredicate evaluateWithObject:group]) {
+            [array addObject:group];
+        } else {
+            NSArray *listCategories = [group.categories filteredArrayUsingPredicate:searchCategoriesPredicate];
+            if (listCategories.count > 0) {
+                Group *groupCopy = [group copy];
+                groupCopy.categories = listCategories;
+                [array addObject:groupCopy];
+            }
+        }
+    }
+    _listFilterGroup = array?:@[];
+    [self.tableView reloadData];
+    [self.collectionView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar endEditing:YES];
+}
+
 
 @end

@@ -19,6 +19,7 @@
 
 @implementation FZHeaderSearchTableViewCell
 
+#pragma mark - life cycle
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -34,10 +35,14 @@
 
     // Configure the view for the selected state
 }
+
+#pragma mark - public
 - (void)bindData:(NSArray *)listGroup {
     _listGroup = listGroup;
     [self.collectionView reloadData];
 }
+
+#pragma mark - UICollectionViewDatasource
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return _listGroup.count;
 }
@@ -53,6 +58,13 @@
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGSize cellSize = CGSizeMake(48, 50);
     return cellSize;
+}
+
+#pragma mark - UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(didSelectItemCollectionViewAtIndexPath:)]) {
+        [self.delegate didSelectItemCollectionViewAtIndexPath:indexPath];
+    }
 }
 
 @end

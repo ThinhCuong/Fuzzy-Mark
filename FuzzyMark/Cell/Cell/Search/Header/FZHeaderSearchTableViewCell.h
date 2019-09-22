@@ -11,11 +11,17 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol FZHeaderSearchTableViewCellDelegate <NSObject>
+
+- (void)didSelectItemCollectionViewAtIndexPath:(NSIndexPath *) indexPath;
+
+@end
 @interface FZHeaderSearchTableViewCell : UITableViewCell
 
 - (void)bindData:(NSArray *)listGroup;
 
 @property (assign, nonatomic) NSInteger sectionIndex;
+@property (assign, nonatomic) id<FZHeaderSearchTableViewCellDelegate> delegate;
 
 @end
 

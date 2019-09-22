@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface Group : NSObject
+@interface Group : NSObject <NSCopying>
 
 @property (assign, nonatomic) NSInteger idGroup;
 @property (strong, nonatomic) NSString *title;

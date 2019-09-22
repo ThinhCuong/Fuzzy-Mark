@@ -56,6 +56,15 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone {
+    Group *groupCopy = [[Group allocWithZone:zone] init];
+    [groupCopy setIcon:self.icon];
+    [groupCopy setTitle:self.title];
+    [groupCopy setIdGroup:self.idGroup];
+    [groupCopy setCategories:self.categories];
+    return groupCopy;
+}
+
 @end
 
 @implementation Category

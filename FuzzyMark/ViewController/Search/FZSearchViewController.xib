@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FZSearchViewController">
             <connections>
                 <outlet property="collectionView" destination="Od6-Mx-X2p" id="fdj-CO-rEo"/>
+                <outlet property="searchBar" destination="FGl-SH-0a1" id="YL4-Jf-Ezi"/>
                 <outlet property="tableView" destination="eGf-fF-1JF" id="2lf-DX-buv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
