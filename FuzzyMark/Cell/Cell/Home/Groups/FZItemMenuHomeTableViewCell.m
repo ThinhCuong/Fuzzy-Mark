@@ -16,10 +16,11 @@
     GroupInfoObject * _groupInfoObject;
 }
 
-@property (strong, nonatomic) IBOutlet UICollectionView *menuCollectionView;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *heightOfColectionView;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
-@property (strong, nonatomic) IBOutlet NSLayoutConstraint *heightOfTableView;
+@property (weak, nonatomic) IBOutlet UICollectionView *menuCollectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightOfColectionView;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightOfTableView;
+@property (weak, nonatomic) IBOutlet UILabel *lbTitle;
 
 @end
 
@@ -44,12 +45,10 @@
     _listVoucherHorizontal = groupInfoObject.vouchersHorizontal;
     _groupInfoObject = groupInfoObject;
     _heightOfTableView.constant = 95 * _listVoucherVertical.count;
+    _heightOfColectionView.constant = _listVoucherHorizontal.count > 0 ? 191 : 0;
+    _lbTitle.text = groupInfoObject.title?:@"";
     [self.menuCollectionView reloadData];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-    // Configure the view for the selected state
+    [self.tableView reloadData];
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {

@@ -21,6 +21,7 @@
 #import "FMNewsViewController.h"
 #import "FZSearchViewController.h"
 #import "FMWebViewController.h"
+#import <CCBottomRefreshControl-umbrella.h>
 
 @interface FZHomeViewController () <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
@@ -33,22 +34,51 @@
 
 @end
 
-@implementation FZHomeViewController
+@implementation FZHomeViewController {
+    UIRefreshControl *_topRFControl;
+    BOOL _isRefresh;
+    BOOL _firstShowSaleSuport;
+}
 
+#pragma mark - life cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.hideNav = YES;
-    self.tableView.dataSource = self;
-    self.tableView.delegate = self;
-    [self getDataHome];
-    self.dataModel = [[FZHomeModel alloc] init];
-    self.dataModel.homeViewController = self;
-    [self.dataModel registerCellForTableView:self.tableView];
+    [self setupModel];
+    [self setTableView];
     [self setLocationCurren];
+    [self reloadData];
+    _firstShowSaleSuport = YES;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    if(_isRefresh) {
+        [CommonFunction showLoadingView];
+    }
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - private/setup
+- (void)setupModel {
+    self.dataModel = [[FZHomeModel alloc] init];
+    self.dataModel.homeViewController = self;
+}
+
+- (void)setTableView {
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.dataModel registerCellForTableView:self.tableView];
+    _topRFControl = [[UIRefreshControl alloc] init];
+    [_topRFControl addTarget:self action:@selector(callDataRefresh) forControlEvents:UIControlEventValueChanged];
+    if (@available(iOS 10.0, *)) {
+        self.tableView.refreshControl = _topRFControl;
+    } else {
+        [self.tableView addSubview:_topRFControl];
+    }
 }
 
 - (void)setLocationCurren {
@@ -61,6 +91,60 @@
     }else{
         [_locationManager startUpdatingLocation];
     }
+}
+
+#pragma mark - private/getData
+- (void)callDataRefresh {
+    if([self checkIsRefresh]) {
+        [self stopAnimationRefresh];
+        return;
+    }
+    _isRefresh = YES;
+    [self reloadData];
+}
+
+- (BOOL)checkIsRefresh {
+    return _isRefresh;
+}
+
+- (void)stopAnimationRefresh {
+    if(_topRFControl.isRefreshing) {
+        [_topRFControl endRefreshing];
+    }
+    [CommonFunction hideLoadingView];
+    _isRefresh = NO;
+}
+
+#pragma mark - public
+- (void)reloadData {
+    __block FZHomeViewController *blockSelf = self;
+    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_HOME_DATA andParam:@{} isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
+        [blockSelf stopAnimationRefresh];
+        if ([responseData isKindOfClass:NSDictionary.class]) {
+            if ([responseData codeForKey:@"error_code"] == 0) {
+                FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
+                [self.dataModel bindData:data];
+                [self.tableView reloadData];
+                if (blockSelf->_firstShowSaleSuport) {
+                    blockSelf->_firstShowSaleSuport = NO;
+                    [blockSelf showSaleSuport];
+                }
+            } else {
+                [CommonFunction showToast:[responseData stringForKey:@"message"]];
+            }
+        } else {
+            [CommonFunction showToast:kMessageError];
+        }
+    } withFailBlock:^(id responseError) {
+        [blockSelf stopAnimationRefresh];
+        [CommonFunction showToast:kMessageError];
+    }];
+}
+
+- (void)didSelectChooseItemWithIDVoucher:(NSInteger)idVoucher {
+    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:idVoucher];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - CLLocationManagerDelegate
@@ -78,6 +162,7 @@
     }
 }
 
+#pragma mark - UITableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.dataModel numberOfSectionsInTableView];
 }
@@ -127,35 +212,6 @@
     return;
 }
 
-#pragma mark - private
-- (void)getDataHome {
-    NSDictionary *params = @{};
-    [CommonFunction showLoadingView];
-    [[BaseCallApi defaultInitWithBaseURL] getDataWithPath:GET_HOME_DATA andParam:params isShowfailureAlert:YES withSuccessBlock:^(id responseData) {
-        [CommonFunction hideLoadingView];
-        if ([responseData isKindOfClass:NSDictionary.class]) {
-            if ([responseData codeForKey:@"error_code"] == 0) {
-                FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
-                [self.dataModel bindData:data];
-                [self.tableView reloadData];
-            } else {
-                [CommonFunction showToast:[responseData stringForKey:@"message"]];
-            }
-        } else {
-            [CommonFunction showToast:kMessageError];
-        }
-    } withFailBlock:^(id responseError) {
-        [CommonFunction hideLoadingView];
-        [CommonFunction showToast:kMessageError];
-    }];
-}
-
-- (void)didSelectChooseItemWithIDVoucher:(NSInteger)idVoucher {
-    FMPromotionDetailVC *vc = [[FMPromotionDetailVC alloc] initWithIDVoucher:idVoucher];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 #pragma mark - FZMenuHomeTableViewCellDelegate
 - (void)didSelectSuportList:(SuportList) suportList {
     switch (suportList) {
@@ -164,10 +220,7 @@
             break;
         }
         case Sale_Suport:{
-            FZRewardViewController *rewardViewController = [[FZRewardViewController alloc] initWithNibName:@"FZRewardViewController" bundle:nil];
-            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:rewardViewController];
-            navi.modalPresentationStyle = UIModalPresentationOverCurrentContext;
-            [appDelegate.tabbarController presentViewController:navi animated:YES completion:nil];
+            [self showSaleSuport];
             break;
         }
         case Hotline_Suport: {
@@ -187,6 +240,7 @@
     }
 }
 
+#pragma mark - nextViewController
 - (void)didSelectWebviewWithLink:(NSString *)link andTitle:(NSString *)title {
     FMWebViewController *vc = [[FMWebViewController alloc] initWithLink:link andTitle:title];
     vc.hidesBottomBarWhenPushed = YES;
@@ -240,6 +294,13 @@
     } else {
         [[UIApplication sharedApplication] openURL:googleWebURL options:@{} completionHandler:nil];
     }
+}
+
+- (void)showSaleSuport {
+    FZRewardViewController *rewardViewController = [[FZRewardViewController alloc] initWithNibName:@"FZRewardViewController" bundle:nil];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:rewardViewController];
+    navi.modalPresentationStyle = UIModalPresentationOverCurrentContext;
+    [appDelegate.tabbarController presentViewController:navi animated:YES completion:nil];
 }
 
 #pragma mark - FZHomeHeaderDelegate

@@ -29,6 +29,7 @@
     NSArray<IConObject *> *_lisIconFix;
 }
 
+#pragma mark - life cycle
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -36,6 +37,7 @@
     [self initData];
 }
 
+#pragma mark - private
 - (void)initUI {
     [self setBannerView];
     [self setFixedView];
@@ -80,15 +82,26 @@
     _lisIconFix = listIcon.copy;
 }
 
+#pragma mark - public
 - (void)bindData:(FZHomeObject *)homeData {
+    
     _listBanner = homeData.banners.copy;
     _listFixed = homeData.fixedAds.copy;
+    
     NSMutableArray *arr = [NSMutableArray new];
     [arr addObjectsFromArray:homeData.iconGroups];
     [arr addObjectsFromArray:_lisIconFix];
     _lisIcon = arr.copy;
+    
     _pageControl.numberOfPages = _listBanner.count;
     _pageControl.currentPage = 0;
+    
+    if (_lisIcon.count > 3) {
+        self.constraintHeightCollectionView.constant = 148;
+    } else {
+        self.constraintHeightCollectionView.constant = 74;
+    }
+    
     [_bannerView reloadData];
     [_fixedView reloadData];
     [_categoryCollectionView reloadData];
@@ -171,18 +184,6 @@
     FMMenuHomeCategoryCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     [cell binDataWithIconGroup:_lisIcon[indexPath.row]];
     return cell;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    if([indexPath row] == ((NSIndexPath*)[[collectionView indexPathsForVisibleItems] lastObject]).row){
-        if (collectionView.contentSize.height > 148) {
-            self.constraintHeightCollectionView.constant = 148;
-        } else if (collectionView.contentSize.height > 74) {
-            self.constraintHeightCollectionView.constant = 148;
-        } else {
-            self.constraintHeightCollectionView.constant = 74;
-        }
-    }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout

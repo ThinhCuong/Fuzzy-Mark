@@ -90,6 +90,7 @@
             <connections>
                 <outlet property="heightOfColectionView" destination="CcD-7p-QCG" id="Cs5-ZC-ihT"/>
                 <outlet property="heightOfTableView" destination="9qi-cp-1jv" id="eVO-ny-QMz"/>
+                <outlet property="lbTitle" destination="VV1-GG-99g" id="f1w-eh-yxo"/>
                 <outlet property="menuCollectionView" destination="r8D-Xa-wm6" id="ShG-SA-QQb"/>
                 <outlet property="tableView" destination="X5N-ef-RfY" id="z8l-yd-9BB"/>
             </connections>
