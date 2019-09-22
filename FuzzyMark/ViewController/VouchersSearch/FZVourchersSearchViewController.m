@@ -56,6 +56,11 @@
     [self setSearchBar];
     [self setTableViewContent];
     [self callDataRefresh];
+    if (self.placeholderSearchBar.length > 0) {
+        self.searchBar.placeholder = [NSString stringWithFormat:@"%@ gần đây", self.placeholderSearchBar];
+    } else {
+        self.searchBar.placeholder = @"";
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -213,15 +218,17 @@
 
 #pragma mark - UISearchBarDelegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    _keySearch = searchText;
-    NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.name CONTAINS[cd] '%@'", _keySearch]];
-    NSArray *arr = [_listVourcher filteredArrayUsingPredicate:searchPredicate];
-    _filterServices = arr?:@[];
-    
-    [self.tableView reloadData];
+//    _keySearch = searchText;
+//    NSPredicate *searchPredicate = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"SELF.name CONTAINS[cd] '%@'", _keySearch]];
+//    NSArray *arr = [_listVourcher filteredArrayUsingPredicate:searchPredicate];
+//    _filterServices = arr?:@[];
+//
+//    [self.tableView reloadData];
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    self.model.objRequest.keyword = searchBar.text;
+    [self callDataRefresh];
     [_searchBar endEditing:YES];
 }
 

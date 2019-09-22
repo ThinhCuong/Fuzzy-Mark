@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FZItemMenuHomeTableViewDelegate <NSObject>
 
 - (void)didSelectChooseItemWithIDVoucher:(NSInteger )idVoucher;
-- (void)didSelectSearchCategoryID:(NSInteger)categoryID;
+- (void)didSelectSearchCategoryID:(NSInteger)categoryID placeholder:(NSString *) placeholder;
 - (void)didSelectSearchGroupsID:(NSInteger)groupsID;
 
 @end

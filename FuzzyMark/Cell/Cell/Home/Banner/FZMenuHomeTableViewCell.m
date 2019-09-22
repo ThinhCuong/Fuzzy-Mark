@@ -204,8 +204,8 @@
             [self.delegate didSelectSearchCategoryMap];
         }
     } else {
-        if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryID:)]) {
-            [self.delegate didSelectSearchCategoryID:icon.adId];
+        if ([self.delegate respondsToSelector:@selector(didSelectSearchCategoryID:placeholder:)]) {
+            [self.delegate didSelectSearchCategoryID:icon.adId placeholder:icon.title];
         }
     }
 }

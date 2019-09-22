@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, FixCategory) {
 @protocol FZMenuHomeTableViewCellDelegate  <NSObject>
 
 - (void)didSelectVoucherID:(NSInteger) voucherID;
-- (void)didSelectSearchCategoryID:(NSInteger) categoryID;
+- (void)didSelectSearchCategoryID:(NSInteger)categoryID placeholder:(NSString *) placeholder;
 - (void)didSelectSearchCategoryMap;
 - (void)didSelectSearchCategoryNew;
 - (void)didSelectSuportList:(SuportList) suportList;

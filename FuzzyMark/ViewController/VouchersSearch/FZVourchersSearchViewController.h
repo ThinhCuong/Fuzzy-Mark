@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FZVourchersSearchViewController : FMBaseViewController
 
+@property (strong, nonatomic) NSString *placeholderSearchBar;
 - (instancetype)initWithObjectRequest:(FMVouchersObjecRequest *) objRequest;
 
 @end
