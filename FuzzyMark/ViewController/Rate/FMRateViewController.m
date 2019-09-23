@@ -41,7 +41,6 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.rateView removeObserver:self forKeyPath:@"rating"];
 }
 
 #pragma mark - private
@@ -49,33 +48,33 @@
     self.navTitle = @"Đánh giá ưu đãi";
     [self addRightButtonNavigationBar];
     [self.collectionView registerNib:[UINib nibWithNibName:@"FMRateCommentCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    [self setupRateView];
+    self.textView.placeholder = @"Viết đánh giá của bạn về địa điểm hoặc bạn có thể dùng những đánh giá mà app gợi ý sẵn";
+    self.textView.placeholderColor = [UIColor colorWithRed:0.59 green:0.59 blue:0.59 alpha:1.0];
+}
+
+- (void)setupRateView {
+    [CosmosSettingsObjCBridge setDidTouchCosmos:^(double rate) {
+        [self setFlagRateView:rate];
+    } cosmosView:self.rateView];
 }
 
 - (void)setData {
-    [self.rateView addObserver:self forKeyPath:@"rating" options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:nil];
+    _httpClient = [BaseCallApi defaultInitWithBaseURL];
+    
     _rateConfigs = [ConfigApp getRateConfig];
     _lowArr =_rateConfigs.low;
     _mediumArr = _rateConfigs.medium;
     _highArr = _rateConfigs.high;
+    
+    self.rateView.rating = 3;
+    [self setFlagRateView:3];
 }
 
 - (void)addRightButtonNavigationBar {
-    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Gửi" style:UIBarButtonItemStylePlain target:self action:@selector(didSelectRightButton)];
+    UIBarButtonItem *rightBarButton = [[UIBarButtonItem alloc] initWithTitle:@"Gửi" style:UIBarButtonItemStylePlain target:self action:@selector(didSelectSent:)];
     [rightBarButton setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Muli-Bold" size:14]} forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = rightBarButton;
-}
-
-- (void)didSelectRightButton {
-    
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if (context == @"rating") {
-        CosmosView *rateView = (CosmosView*) object;
-        [self setFlagRateView:rateView.rating];
-    } else {
-        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
-    }
 }
 
 - (void)setFlagRateView:(double) value {
@@ -125,6 +124,19 @@
     return cell;
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *text;
+    if (_flag == RateConfigsFlagLow) {
+        text = _lowArr[indexPath.row];
+    } else if (_flag == RateConfigsFlagMedium) {
+        text = _mediumArr[indexPath.row];
+    } else {
+        text = _highArr[indexPath.row];
+    }
+    CGSize textSize = [text sizeWithAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Muli" size:12]}];
+    return CGSizeMake(textSize.width + 40, 32);
+}
+
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSString *text;
@@ -143,15 +155,31 @@
     NSString *idPage = [@(_idPage) stringValue];
     NSString *point = [@(_rateView.rating) stringValue];
     NSString *comment = _textView.text?:@"";
-    NSDictionary *params = @{@"id": idPage,
-                             @"point" : point,
-                             @"comment" : comment
-                                 };
-    [_httpClient postDataWithPath:POST_PAGES_RATE andParam:params isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
-        
+    NSDictionary *params = @{@"id": idPage?:@"",
+                             @"point" : point?:@"",
+                             @"comment" : comment?:@""
+                             };
+    
+    [CommonFunction showLoadingView];
+    [_httpClient postDataWithPath:POST_PAGES_RATE andParam:params isSendToken:YES isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        [CommonFunction hideLoadingView];
+        if ([success isKindOfClass:NSDictionary.class]) {
+            if ([success codeForKey:@"error_code"] != 0) {
+                [CommonFunction showToast:[success stringForKey:@"message"]];
+            } else {
+                [CommonFunction showToast:@"Đánh giá thành công cảm ơn bạn đã sử dụng dịch vụ"];
+                double delayInSeconds = 3.0;
+                dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+                dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                    [self.navigationController popViewControllerAnimated:YES];
+                });
+            }
+        }
     } withFailBlock:^(id _Nullable fail) {
-        
+        [CommonFunction hideLoadingView];
+        [CommonFunction showToast:kMessageError];
     }];
+    
 }
 
 @end

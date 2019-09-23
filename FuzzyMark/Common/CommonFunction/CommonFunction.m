@@ -54,6 +54,7 @@
         if ([success isKindOfClass:NSDictionary.class]) {
             ConfigAppObject *config = [[ConfigAppObject alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];
             [ConfigApp setConfigAppWithConfigObject:config];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationCenterConfigAppSuccess object:nil];
         }
     } withFailBlock:^(id fail) {
         

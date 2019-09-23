@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Cosmos-Swift.h>
+#import "FuzzyMark-Swift.h"
+#import "UTPlaceholderTextView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet CosmosView *rateView;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UTPlaceholderTextView *textView;
 - (instancetype)initWithIDPage:(NSInteger) idPage;
 
 @end

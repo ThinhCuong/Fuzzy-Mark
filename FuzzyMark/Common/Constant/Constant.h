@@ -96,6 +96,7 @@ typedef NS_ENUM(NSInteger, RateConfigsFlag) {
 
 /* Notication */
 #define kNotificationCenterChangeStatusUser         @"NotificationCenterChangeStatusUser"
+#define kNotificationCenterConfigAppSuccess         @"kNotificationCenterConfigAppSuccess"
 
 /* String */
 #define kMessageError                               @"Có lỗi xẩy ra, vui lòng thử lại sau"

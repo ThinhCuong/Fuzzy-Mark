@@ -37,7 +37,6 @@
 @implementation FZHomeViewController {
     UIRefreshControl *_topRFControl;
     BOOL _isRefresh;
-    BOOL _firstShowSaleSuport;
 }
 
 #pragma mark - life cycle
@@ -48,7 +47,7 @@
     [self setTableView];
     [self setLocationCurren];
     [self reloadData];
-    _firstShowSaleSuport = YES;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showSaleSuport) name:kNotificationCenterConfigAppSuccess object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -125,10 +124,6 @@
                 FZHomeObject *data = [[FZHomeObject alloc] initWithDataDictionary:responseData[@"data"]];
                 [self.dataModel bindData:data];
                 [self.tableView reloadData];
-                if (blockSelf->_firstShowSaleSuport) {
-                    blockSelf->_firstShowSaleSuport = NO;
-                    [blockSelf showSaleSuport];
-                }
             } else {
                 [CommonFunction showToast:[responseData stringForKey:@"message"]];
             }

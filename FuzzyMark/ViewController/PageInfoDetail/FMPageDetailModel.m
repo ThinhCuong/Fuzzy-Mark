@@ -29,16 +29,23 @@
         if(success) {
             if([success[@"errorCode"] integerValue] == 0) {
                 PageInfo *pageInfo = [[PageInfo alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];
-                
-                [self.delegate getDataSuccess:pageInfo];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.delegate getDataSuccess:pageInfo];
+                });
             } else {
-                [self.delegate getDataError];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.delegate getDataError];
+                });
             }
         } else {
-            [self.delegate getDataFail];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.delegate getDataFail];
+            });
         }
     } withFailBlock:^(id fail) {
-        [self.delegate getDataFail];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.delegate getDataFail];
+        });
     }];
 }
 
