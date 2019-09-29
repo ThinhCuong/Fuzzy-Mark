@@ -31,6 +31,13 @@
 		4F35FDCC22EF478B00F79B45 /* FMLoginCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDCA22EF478B00F79B45 /* FMLoginCell.m */; };
 		4F35FDCD22EF478B00F79B45 /* FMLoginCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F35FDCB22EF478B00F79B45 /* FMLoginCell.xib */; };
 		4F35FDD222EF8A3B00F79B45 /* FMChoicePictureModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F35FDD022EF8A3B00F79B45 /* FMChoicePictureModel.m */; };
+		4F40243B2339289E00E180FD /* FMPageInfoAllRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4024392339289E00E180FD /* FMPageInfoAllRateCell.m */; };
+		4F40243C2339289E00E180FD /* FMPageInfoAllRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F40243A2339289E00E180FD /* FMPageInfoAllRateCell.xib */; };
+		4F40244123392EA800E180FD /* FMAllRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F40243F23392EA800E180FD /* FMAllRateViewController.m */; };
+		4F40244223392EA800E180FD /* FMAllRateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F40244023392EA800E180FD /* FMAllRateViewController.xib */; };
+		4F40244A23392FB000E180FD /* FMAllRateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F40244923392FB000E180FD /* FMAllRateModel.m */; };
+		4F40244F2339333A00E180FD /* FMAllRateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F40244D2339333A00E180FD /* FMAllRateCell.m */; };
+		4F4024502339333A00E180FD /* FMAllRateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F40244E2339333A00E180FD /* FMAllRateCell.xib */; };
 		4F45EEFB229EADBA004556F9 /* FMIntroCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */; };
 		4F45EEFC229EADBA004556F9 /* FMIntroCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */; };
 		4F45EF01229EB22B004556F9 /* FMIntroCameraCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F45EEFF229EB22B004556F9 /* FMIntroCameraCell.m */; };
@@ -339,6 +346,17 @@
 		4F35FDCE22EF849100F79B45 /* FuzzyMark.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FuzzyMark.entitlements; sourceTree = "<group>"; };
 		4F35FDD022EF8A3B00F79B45 /* FMChoicePictureModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMChoicePictureModel.m; sourceTree = "<group>"; };
 		4F35FDD122EF8A3B00F79B45 /* FMChoicePictureModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMChoicePictureModel.h; sourceTree = "<group>"; };
+		4F4024382339289E00E180FD /* FMPageInfoAllRateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMPageInfoAllRateCell.h; sourceTree = "<group>"; };
+		4F4024392339289E00E180FD /* FMPageInfoAllRateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMPageInfoAllRateCell.m; sourceTree = "<group>"; };
+		4F40243A2339289E00E180FD /* FMPageInfoAllRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMPageInfoAllRateCell.xib; sourceTree = "<group>"; };
+		4F40243E23392EA800E180FD /* FMAllRateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMAllRateViewController.h; sourceTree = "<group>"; };
+		4F40243F23392EA800E180FD /* FMAllRateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMAllRateViewController.m; sourceTree = "<group>"; };
+		4F40244023392EA800E180FD /* FMAllRateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMAllRateViewController.xib; sourceTree = "<group>"; };
+		4F40244823392FB000E180FD /* FMAllRateModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMAllRateModel.h; sourceTree = "<group>"; };
+		4F40244923392FB000E180FD /* FMAllRateModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMAllRateModel.m; sourceTree = "<group>"; };
+		4F40244C2339333A00E180FD /* FMAllRateCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMAllRateCell.h; sourceTree = "<group>"; };
+		4F40244D2339333A00E180FD /* FMAllRateCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMAllRateCell.m; sourceTree = "<group>"; };
+		4F40244E2339333A00E180FD /* FMAllRateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMAllRateCell.xib; sourceTree = "<group>"; };
 		4F45EEF8229EADBA004556F9 /* FMIntroCameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMIntroCameraViewController.h; sourceTree = SOURCE_ROOT; };
 		4F45EEF9229EADBA004556F9 /* FMIntroCameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMIntroCameraViewController.m; sourceTree = SOURCE_ROOT; };
 		4F45EEFA229EADBA004556F9 /* FMIntroCameraViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FMIntroCameraViewController.xib; sourceTree = SOURCE_ROOT; };
@@ -804,6 +822,29 @@
 			path = ChooseImage;
 			sourceTree = "<group>";
 		};
+		4F40243D23392E7C00E180FD /* AllRate */ = {
+			isa = PBXGroup;
+			children = (
+				4F40244B2339331200E180FD /* Cell */,
+				4F40243E23392EA800E180FD /* FMAllRateViewController.h */,
+				4F40243F23392EA800E180FD /* FMAllRateViewController.m */,
+				4F40244023392EA800E180FD /* FMAllRateViewController.xib */,
+				4F40244823392FB000E180FD /* FMAllRateModel.h */,
+				4F40244923392FB000E180FD /* FMAllRateModel.m */,
+			);
+			path = AllRate;
+			sourceTree = "<group>";
+		};
+		4F40244B2339331200E180FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F40244C2339333A00E180FD /* FMAllRateCell.h */,
+				4F40244D2339333A00E180FD /* FMAllRateCell.m */,
+				4F40244E2339333A00E180FD /* FMAllRateCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4F45EEFD229EB1F7004556F9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1083,6 +1124,9 @@
 				4F5F4514231917FC00D58817 /* FMPageInfoRateCell.h */,
 				4F5F4515231917FC00D58817 /* FMPageInfoRateCell.m */,
 				4F5F4516231917FC00D58817 /* FMPageInfoRateCell.xib */,
+				4F4024382339289E00E180FD /* FMPageInfoAllRateCell.h */,
+				4F4024392339289E00E180FD /* FMPageInfoAllRateCell.m */,
+				4F40243A2339289E00E180FD /* FMPageInfoAllRateCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1824,6 +1868,7 @@
 		5C8EC29B2263614C00C124CE /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4F40243D23392E7C00E180FD /* AllRate */,
 				4F7027E323249C6D0054538A /* Rate */,
 				4F592F0523216F1100287AE8 /* WebView */,
 				4FE8E98C231CB88E008769C3 /* UtilSearch */,
@@ -2182,6 +2227,8 @@
 				5C5BA89B229E24400090AE7B /* FZHeaderItemCollectionViewCell.xib in Resources */,
 				4F50F39E2276E9A700DF7173 /* FMNewsCollectionViewCell.xib in Resources */,
 				5C5BA896229E1DFC0090AE7B /* FZHeaderSearchTableViewCell.xib in Resources */,
+				4F4024502339333A00E180FD /* FMAllRateCell.xib in Resources */,
+				4F40244223392EA800E180FD /* FMAllRateViewController.xib in Resources */,
 				4FFB570C2308FEFF00B67057 /* FMPopupNotifiViewController.xib in Resources */,
 				5C9862A02264D8FB00545DCC /* FZHomeHeaderView.xib in Resources */,
 				4F472D3B22907A9300F93D39 /* FMChangePasswordViewController.xib in Resources */,
@@ -2190,6 +2237,7 @@
 				4FBD3D97228DBC7E00E76E2A /* HistoryPoint.xcassets in Resources */,
 				4FF2BD88227BEC230008BA69 /* Camera.xcassets in Resources */,
 				4F50F4042276EDBC00DF7173 /* Muli-Bold.ttf in Resources */,
+				4F40243C2339289E00E180FD /* FMPageInfoAllRateCell.xib in Resources */,
 				5C6BFAE8225D668800A26400 /* LaunchScreen.storyboard in Resources */,
 				4F6D65C1228FC9520092CA53 /* DatePickerViewController.xib in Resources */,
 				5C6BFAE5225D668800A26400 /* Assets.xcassets in Resources */,
@@ -2434,11 +2482,14 @@
 				4F25D6E022BAE15300C27190 /* FMListItemLocationVC.m in Sources */,
 				4F2F5B51229C496C0029F188 /* UITabBar+FMMiddleButton.m in Sources */,
 				5C9862892264CBE700545DCC /* FZHomeModel.m in Sources */,
+				4F40244123392EA800E180FD /* FMAllRateViewController.m in Sources */,
 				4F569FFA231CC9C500901AA1 /* MVUtilSearchCell.m in Sources */,
 				5C39103E226349F8008BEA62 /* BaseCallApi.m in Sources */,
 				4FDACCFC227F5A0100A8571E /* FMItemHistoryBillVC.m in Sources */,
 				4F472D3A22907A9300F93D39 /* FMChangePasswordViewController.m in Sources */,
 				4FF27DB322D529A70077A36E /* FMCheckBoxGroup.m in Sources */,
+				4F40244A23392FB000E180FD /* FMAllRateModel.m in Sources */,
+				4F40244F2339333A00E180FD /* FMAllRateCell.m in Sources */,
 				4F50F3A22276E9A700DF7173 /* FMNotifiTableViewCell.m in Sources */,
 				4FBF8ACC228E6136001C7B9C /* FMChangeUserInforViewController.m in Sources */,
 				5CC572C3229D8E1200E613AE /* FZItemSearchCollectionViewCell.m in Sources */,
@@ -2505,6 +2556,7 @@
 				5C9862AD2264E45D00545DCC /* FZMenuHomeTableViewCell.m in Sources */,
 				4FB0B27E22B9AA9E00487D66 /* FMPromotionIntroCell.m in Sources */,
 				5C3910352263492A008BEA62 /* AFURLResponseSerialization.m in Sources */,
+				4F40243B2339289E00E180FD /* FMPageInfoAllRateCell.m in Sources */,
 				4F5F44F92318E03D00D58817 /* FMListItemImageVC.m in Sources */,
 				5C5D08D42310549A0017942B /* FZRewardViewController.m in Sources */,
 				4F7027EC23249CB70054538A /* FMRateViewController.m in Sources */,

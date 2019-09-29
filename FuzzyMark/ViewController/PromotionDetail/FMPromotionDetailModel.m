@@ -31,7 +31,6 @@
                 FzVourcherInfoObject *voucher = [[FzVourcherInfoObject alloc] initWithDataDictionary:[success dictionaryForKey:@"data"]];
                 
                 [self.delegate getDataSuccess:voucher];
-                [self addVoucherInterested:idVoucher];
             } else {
                 [self.delegate getDataError];
             }
@@ -43,9 +42,22 @@
     }];
 }
 
-- (void)addVoucherInterested:(NSInteger) idVoucher {
+- (void)addVoucherInterested:(NSInteger) idVoucher withComplete:(void (^) (BOOL)) completion {
     NSDictionary *param = @{@"id": @(idVoucher)};
     [_httpClient postDataWithPath:POST_VOUCHERS_ADD_INTERESTED andParam:param isSendToken:YES isShowfailureAlert:YES withSuccessBlock:nil withFailBlock:nil];
+    [_httpClient postDataWithPath:POST_VOUCHERS_ADD_INTERESTED andParam:param isShowfailureAlert:YES withSuccessBlock:^(id _Nullable success) {
+        if(success) {
+            if([success[@"errorCode"] integerValue] == 0) {
+                completion?completion(YES):0;
+            } else {
+                completion?completion(NO):0;
+            }
+        } else {
+            completion?completion(NO):0;
+        }
+    } withFailBlock:^(id _Nullable fail) {
+        completion?completion(NO):0;
+    }];
 }
 
 @end

@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIView *contentPageView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintHeightPageView;
 
+@property (assign, nonatomic) BOOL isSale;
 @property (strong, nonatomic) FMPromotionDetailModel *model;
 
 @end
@@ -153,10 +154,20 @@
     [self.imgVoucher sd_setImageWithURL:[NSURL URLWithString:_voucherInfo.voucher.logo]];
     self.lblName.text = _voucherInfo.voucher.name ?: @"";
     self.lblSale.text = [NSString stringWithFormat:@"Hoàn tiền %@%ld", @"%", (long)_voucherInfo.voucher.percentDiscount] ?: @"";
-    [self.btnSaleTop setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percentDiscount, @"%"] forState:UIControlStateNormal];
-    [self.btnSaleBottom setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percentDiscount, @"%"] forState:UIControlStateNormal];
-    self.lblDesc.text = _voucherInfo.voucher.rewardDescription ?: @"";
-    self.lblTitle.text = [NSString stringWithFormat:@"Hiện đã có %ld người sử dụng voucher này", (long)_voucherInfo.countReceived];
+    if (_voucherInfo.voucher.page.is_bookmark) {
+        [self.btnSaleTop setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percentDiscount, @"%"] forState:UIControlStateNormal];
+        [self.btnSaleBottom setTitle:[NSString stringWithFormat:@"-%ld%@", (long)_voucherInfo.voucher.percentDiscount, @"%"] forState:UIControlStateNormal];
+    } else {
+        [self.btnSaleTop setTitle:@"Nhận ưu đãi" forState:UIControlStateNormal];
+        [self.btnSaleBottom setTitle:@"Nhận ưu đãi" forState:UIControlStateNormal];
+    }
+    
+    self.lblDesc.attributedText = [CommonFunction convertHTMLString:_voucherInfo.voucher.rewardDescription];
+    if (_voucherInfo.countReceived > 0) {
+        self.lblTitle.text = [NSString stringWithFormat:@"Hiện đã có %ld người sử dụng voucher này", (long)_voucherInfo.countReceived];
+    } else {
+        self.lblTitle.text = @"Ưu đãi đặc biệt dành cho người đầu tiên";
+    }
     _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateLabelWithCountdownTime) userInfo:nil repeats: YES];
     
     //bin Data listView
@@ -205,6 +216,7 @@
             [_timer invalidate];
         }
         _timer = nil;
+        self.isSale = NO;
     }
     NSInteger miniSeconds = totalMiniSeconds/1000;
     _voucherInfo.voucher.countDown--;
@@ -265,6 +277,12 @@
     [_pageViewController setViewControllers:@[_childTableVCs[segmentCon.selectedSegmentIndex]] direction:direction animated:YES completion:nil];
 }
 
+- (void)setIsSale:(BOOL)isSale {
+    _isSale = isSale;
+    self.btnSaleBottom.hidden = !isSale;
+    self.btnSaleTop.hidden = !isSale;
+}
+
 #pragma mark - MVPromotionDetailModelDelegate
 - (void)getDataSuccess:(FzVourcherInfoObject *) voucherInfo {
     [self stopAnimationLoading];
@@ -289,14 +307,24 @@
 
 - (IBAction)didSelectTakePhoto:(id)sender {
     __block FMPromotionDetailVC *_blockSelf = self;
-    [appDelegate loginRequiredWithSuccessBlock:^(BOOL isSuccess) {
-        if(!isSuccess) {
-            return;
-        }
-        FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_blockSelf->_idVoucher];
-        vc.hidesBottomBarWhenPushed = YES;
-        [_blockSelf.navigationController pushViewController:vc animated:YES];
-    }];
+    if (!_voucherInfo.voucher.page.is_bookmark) {
+        [self.model addVoucherInterested:_idVoucher withComplete:^(BOOL success) {
+            if (success) {
+                [_blockSelf viewWillAppear:YES];
+            } else {
+                [CommonFunction showToast:@"Có lỗi xẩy ra vui lòng thử lại sau"];
+            }
+        }];
+    } else {
+        [appDelegate loginRequiredWithSuccessBlock:^(BOOL isSuccess) {
+            if(!isSuccess) {
+                return;
+            }
+            FMCameraViewController *vc = [[FMCameraViewController alloc] initWithVoucherID:_blockSelf->_idVoucher];
+            vc.hidesBottomBarWhenPushed = YES;
+            [_blockSelf.navigationController pushViewController:vc animated:YES];
+        }];
+    }
 }
 
 #pragma mark - UIPageViewControllerDataSource

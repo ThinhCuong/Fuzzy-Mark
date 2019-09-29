@@ -53,7 +53,7 @@
                             </constraints>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axA-1Y-Wbu">
-                            <rect key="frame" x="0.0" y="131.5" width="320" height="128"/>
+                            <rect key="frame" x="0.0" y="131.5" width="320" height="145.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5sN-Dz-pZF">
                                     <rect key="frame" x="16" y="12" width="52" height="52"/>
@@ -63,41 +63,41 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                      " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eaf-cw-kRF">
-                                    <rect key="frame" x="78" y="12" width="148" height="16.5"/>
+                                    <rect key="frame" x="78" y="12" width="154.5" height="18"/>
                                     <fontDescription key="fontDescription" name="Muli-Black" family="Muli" pointSize="14"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                          " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akK-lg-iCL">
-                                    <rect key="frame" x="94" y="28.5" width="216" height="14"/>
+                                    <rect key="frame" x="94" y="30" width="216" height="18"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                     <color key="textColor" red="1" green="0.34299346260000002" blue="0.30969085829999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_coupon" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-ai-CWy" customClass="ic_clock">
-                                    <rect key="frame" x="78" y="47.5" width="14" height="14"/>
+                                    <rect key="frame" x="78" y="53" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="14" id="EGn-FM-4vv"/>
                                     </constraints>
                                 </imageView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5d5-Mn-TBE" userLabel="line">
-                                    <rect key="frame" x="16" y="70.5" width="288" height="0.5"/>
+                                    <rect key="frame" x="16" y="80" width="288" height="0.5"/>
                                     <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="0.5" id="pYr-Ii-HFc"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5a-s1-x8M">
-                                    <rect key="frame" x="17" y="77" width="287" height="39"/>
+                                    <rect key="frame" x="17" y="86.5" width="287" height="47"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                          " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEu-YN-qy4">
-                                            <rect key="frame" x="0.0" y="6" width="220" height="14"/>
+                                            <rect key="frame" x="0.0" y="6" width="220" height="18"/>
                                             <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="12"/>
                                             <color key="textColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NqQ-Qe-pHm">
-                                            <rect key="frame" x="0.0" y="25" width="287" height="14"/>
+                                            <rect key="frame" x="0.0" y="29" width="287" height="18"/>
                                             <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -114,14 +114,15 @@
                                         <constraint firstAttribute="trailing" secondItem="wEu-YN-qy4" secondAttribute="trailing" constant="67" id="s9Y-Bg-Xi7"/>
                                     </constraints>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WX6-ec-CWU">
-                                    <rect key="frame" x="254" y="46" width="50" height="50"/>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WX6-ec-CWU">
+                                    <rect key="frame" x="244" y="50.5" width="60" height="60"/>
                                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="50" id="lLk-Bd-Bjd"/>
+                                        <constraint firstAttribute="height" constant="60" id="lLk-Bd-Bjd"/>
                                         <constraint firstAttribute="width" secondItem="WX6-ec-CWU" secondAttribute="height" multiplier="1:1" id="uDR-42-WrD"/>
                                     </constraints>
-                                    <state key="normal" title="     ">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <state key="normal">
                                         <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
                                     <connections>
@@ -129,13 +130,13 @@
                                     </connections>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clock" translatesAutoresizingMaskIntoConstraints="NO" id="46O-q3-dDT" customClass="ic_clock">
-                                    <rect key="frame" x="78" y="33.5" width="10" height="10"/>
+                                    <rect key="frame" x="78" y="35" width="10" height="10"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="10" id="Z33-MW-d4s"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="                                                 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uan-Qs-pKX">
-                                    <rect key="frame" x="96" y="44.5" width="153" height="14"/>
+                                    <rect key="frame" x="96" y="50" width="143" height="18"/>
                                     <fontDescription key="fontDescription" name="Muli" family="Muli" pointSize="12"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -168,28 +169,28 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-Tp-sna" userLabel="line">
-                            <rect key="frame" x="0.0" y="259.5" width="320" height="8"/>
+                            <rect key="frame" x="0.0" y="277" width="320" height="8"/>
                             <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="8" id="Ie4-gZ-xCg"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hx-yn-SZf">
-                            <rect key="frame" x="0.0" y="267.5" width="320" height="36"/>
+                            <rect key="frame" x="0.0" y="285" width="320" height="36"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="36" id="fh7-jh-RUg"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKe-4b-7oP" userLabel="line">
-                            <rect key="frame" x="18" y="303.5" width="284" height="0.5"/>
+                            <rect key="frame" x="18" y="321" width="284" height="0.5"/>
                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="Rd0-n1-5Sa"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C0Y-U8-Sqe">
-                            <rect key="frame" x="0.0" y="304" width="320" height="338"/>
+                            <rect key="frame" x="0.0" y="321.5" width="320" height="338"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="338" id="3uc-Rz-enS"/>
@@ -234,13 +235,14 @@
                         <outlet property="delegate" destination="-1" id="xha-30-EJI"/>
                     </connections>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-8i-qfg">
-                    <rect key="frame" x="254" y="498" width="50" height="50"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="eDX-8i-qfg">
+                    <rect key="frame" x="244" y="488" width="60" height="60"/>
                     <color key="backgroundColor" red="0.20392156859999999" green="0.59607843140000005" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="eDX-8i-qfg" secondAttribute="height" multiplier="1:1" id="FBv-Gk-CEF"/>
-                        <constraint firstAttribute="height" constant="50" id="bfx-Pa-m6A"/>
+                        <constraint firstAttribute="height" constant="60" id="bfx-Pa-m6A"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="                  ">
                         <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
