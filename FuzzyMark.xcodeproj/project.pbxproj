@@ -2091,6 +2091,7 @@
 				5C6BFAD2225D668600A26400 /* Frameworks */,
 				5C6BFAD3225D668600A26400 /* Resources */,
 				84FF4B7DD4D07BF0E4D770FE /* [CP] Embed Pods Frameworks */,
+				178BACAEEF4C088C5EDCF92E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2325,6 +2326,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		178BACAEEF4C088C5EDCF92E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FuzzyMark/Pods-FuzzyMark-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7203D1D1F60BEF7D88432505 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
