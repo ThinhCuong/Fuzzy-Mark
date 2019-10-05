@@ -105,3 +105,6 @@ typedef NS_ENUM(NSInteger, RateConfigsFlag) {
 #define kLogoPlaceholderImage                       [UIImage imageNamed:@"logo_placeholder"]
 #define kUserPlaceholderImage                       [UIImage imageNamed:@"ic_user"]
 
+/* GoogleMap Key */
+#define kGoogleMapKey                               @"AIzaSyBFFvxyCSDIGTF8qPf-cOJP6726wCqyunk"
+

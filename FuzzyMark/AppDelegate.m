@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FMPopupNotifiViewController.h"
 #import "FMLoginAccountViewController.h"
+@import GoogleMaps;
 
 @interface AppDelegate ()
 
@@ -19,12 +20,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setupFramwork];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = UIColor.whiteColor;
     [self callAPIconfigApp];
     [self gotoTabbarController];
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (void)setupFramwork {
+    [GMSServices provideAPIKey:@"AIzaSyDd-P8BuTatH4hBJDsQB0iLy8a8tezfl7g"];
 }
 
 - (void)callAPIconfigApp {

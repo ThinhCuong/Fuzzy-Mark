@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "FzVourcherInfoObject.h"
 #import "PageInfo.h"
+#import <CoreLocation/CoreLocation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FMPromotionIntroCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView* mapImage;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint* heightMapImage;
 - (void)binData:(FzVourcherInfoObject *) model;
 - (void)binDataWithPageInfo:(PageInfo *)model;
 

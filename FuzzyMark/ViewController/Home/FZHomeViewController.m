@@ -291,6 +291,7 @@
     } else {
         [[UIApplication sharedApplication] openURL:googleWebURL options:@{} completionHandler:nil];
     }
+    
 }
 
 - (void)showSaleSuport {
